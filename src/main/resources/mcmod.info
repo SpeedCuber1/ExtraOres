@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ExtraOres",
+  "name": "Extra Ores",
+  "description": "Adds extra ores to the game",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SpeedCuber1"],
+  "credits": "The Forge and FML guys, for making this possible",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
