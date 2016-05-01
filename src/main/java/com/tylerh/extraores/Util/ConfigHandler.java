@@ -25,14 +25,14 @@ public class ConfigHandler
         try
         {
             config.load();
-            InitBlocks.registerCopper = config.get("ores","Copper",true,"Set true to enable world gen and smelting").getBoolean(true);
+            InitBlocks.registerCopper = config.get("ores","Copper",true).getBoolean(true);
             InitBlocks.registerTin = config.get("ores","Tin",true).getBoolean(true);
             InitBlocks.registerChromium = config.get("ores","Chromium",true).getBoolean(true);
             InitBlocks.registerCobalt = config.get("ores","Cobalt",true).getBoolean(true);
             InitBlocks.registerUnobtainium = config.get("ores","Unobtainium",true).getBoolean(true);
             InitBlocks.registerManganese = config.get("ores","Manganese",true).getBoolean(true);
             InitBlocks.registerMolybdenum = config.get("ores","Molybdenum",true).getBoolean(true);
-            InitBlocks.registerAluminum = config.get("ores","Aluminum",true).getBoolean(true);
+            InitBlocks.registerAluminum = config.get("ores","Aluminum",true,"Set true to enable world gen and smelting").getBoolean(true);
             InitBlocks.registerSilver = config.get("ores","Silver",true).getBoolean(true);
             InitBlocks.registerLead = config.get("ores","Lead",true).getBoolean(true);
             InitBlocks.registerPlatinum = config.get("ores","Platinum",true).getBoolean(true);

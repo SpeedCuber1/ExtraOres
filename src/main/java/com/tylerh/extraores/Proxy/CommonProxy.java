@@ -16,7 +16,6 @@ public class CommonProxy
     public void preInit(FMLPreInitializationEvent event)
     {
         InitBlocks.init();
-        Recipes.init();
     }
     public void init(FMLInitializationEvent event)
     {

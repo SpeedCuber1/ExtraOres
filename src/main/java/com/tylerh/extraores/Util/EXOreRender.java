@@ -15,81 +15,120 @@ public class EXOreRender
     {
         if(InitBlocks.registerCopper)
         {
-            Item itemBlockOreCopper = Item.getItemFromBlock(InitBlocks.blockOreCopper);
+            Item itemBlockCopper = Item.getItemFromBlock(InitBlocks.blockOreCopper);
             ResourceLocation location = new ResourceLocation("extraores:copperOre");
-            Register(itemBlockOreCopper,location.toString());
+            Register(itemBlockCopper,location.toString());
+            itemBlockCopper = Item.getItemFromBlock(InitBlocks.blockCopper);
+            location = new ResourceLocation("extraores:copperBlock");
+            Register(itemBlockCopper,location.toString());
         }
         if(InitBlocks.registerTin)
         {
-            Item itemBlockOreTin = Item.getItemFromBlock(InitBlocks.blockOreTin);
+            Item itemBlockTin = Item.getItemFromBlock(InitBlocks.blockOreTin);
             ResourceLocation location = new ResourceLocation("extraores:tinOre");
-            Register(itemBlockOreTin,location.toString());
+            Register(itemBlockTin,location.toString());
+            itemBlockTin = Item.getItemFromBlock(InitBlocks.blockTin);
+            location = new ResourceLocation("extraores:tinBlock");
+            Register(itemBlockTin,location.toString());
         }
         if(InitBlocks.registerChromium)
         {
-            Item itemBlockOreChromium = Item.getItemFromBlock(InitBlocks.blockOreChromium);
+            Item itemBlockChromium = Item.getItemFromBlock(InitBlocks.blockOreChromium);
             ResourceLocation location = new ResourceLocation("extraores:chromiumOre");
-            Register(itemBlockOreChromium,location.toString());
+            Register(itemBlockChromium,location.toString());
+            itemBlockChromium = Item.getItemFromBlock(InitBlocks.blockChromium);
+            location = new ResourceLocation("extraores:chromiumBlock");
+            Register(itemBlockChromium,location.toString());
         }
         if(InitBlocks.registerCobalt)
         {
-            Item itemBlockOreCobalt = Item.getItemFromBlock(InitBlocks.blockOreCobalt);
+            Item itemBlockCobalt = Item.getItemFromBlock(InitBlocks.blockOreCobalt);
             ResourceLocation location = new ResourceLocation("extraores:cobaltOre");
-            Register(itemBlockOreCobalt,location.toString());
+            Register(itemBlockCobalt,location.toString());
+            itemBlockCobalt = Item.getItemFromBlock(InitBlocks.blockCobalt);
+            location = new ResourceLocation("extraores:cobaltBlock");
+            Register(itemBlockCobalt,location.toString());
         }
         if(InitBlocks.registerUnobtainium)
         {
-            Item itemBlockOreUnobtainium = Item.getItemFromBlock(InitBlocks.blockOreUnobtainium);
+            Item itemBlockUnobtainium = Item.getItemFromBlock(InitBlocks.blockOreUnobtainium);
             ResourceLocation location = new ResourceLocation("extraores:unobtainiumOre");
-            Register(itemBlockOreUnobtainium,location.toString());
+            Register(itemBlockUnobtainium,location.toString());
+            itemBlockUnobtainium = Item.getItemFromBlock(InitBlocks.blockUnobtainium);
+            location = new ResourceLocation("extraores:unobtainiumBlock");
+            Register(itemBlockUnobtainium,location.toString());
         }
         if(InitBlocks.registerManganese)
         {
-            Item itemBlockOreManganese = Item.getItemFromBlock(InitBlocks.blockOreManganese);
+            Item itemBlockManganese = Item.getItemFromBlock(InitBlocks.blockOreManganese);
             ResourceLocation location = new ResourceLocation("extraores:manganeseOre");
-            Register(itemBlockOreManganese,location.toString());
+            Register(itemBlockManganese,location.toString());
+            itemBlockManganese = Item.getItemFromBlock(InitBlocks.blockManganese);
+            location = new ResourceLocation("extraores:manganeseBlock");
+            Register(itemBlockManganese,location.toString());
         }
         if(InitBlocks.registerMolybdenum)
         {
-            Item itemBlockOreMolybdenum = Item.getItemFromBlock(InitBlocks.blockOreMolybdenum);
+            Item itemBlockMolybdenum = Item.getItemFromBlock(InitBlocks.blockOreMolybdenum);
             ResourceLocation location = new ResourceLocation("extraores:molybdenumOre");
-            Register(itemBlockOreMolybdenum,location.toString());
+            Register(itemBlockMolybdenum,location.toString());
+            itemBlockMolybdenum = Item.getItemFromBlock(InitBlocks.blockMolybdenum);
+            location = new ResourceLocation("extraores:molybdenumBlock");
+            Register(itemBlockMolybdenum,location.toString());
         }
         if(InitBlocks.registerAluminum)
         {
-            Item itemBlockOreAluminum = Item.getItemFromBlock(InitBlocks.blockOreAluminum);
+            Item itemBlockAluminum = Item.getItemFromBlock(InitBlocks.blockOreAluminum);
             ResourceLocation location = new ResourceLocation("extraores:aluminumOre");
-            Register(itemBlockOreAluminum,location.toString());
+            Register(itemBlockAluminum,location.toString());
+            itemBlockAluminum = Item.getItemFromBlock(InitBlocks.blockAluminum);
+            location = new ResourceLocation("extraores:aluminumBlock");
+            Register(itemBlockAluminum,location.toString());
         }
         if(InitBlocks.registerSilver)
         {
-            Item itemBlockOreSilver = Item.getItemFromBlock(InitBlocks.blockOreSilver);
+            Item itemBlockSilver = Item.getItemFromBlock(InitBlocks.blockOreSilver);
             ResourceLocation location = new ResourceLocation("extraores:silverOre");
-            Register(itemBlockOreSilver,location.toString());
+            Register(itemBlockSilver,location.toString());
+            itemBlockSilver = Item.getItemFromBlock(InitBlocks.blockSilver);
+            location = new ResourceLocation("extraores:silverBlock");
+            Register(itemBlockSilver,location.toString());
         }
         if(InitBlocks.registerLead)
         {
-            Item itemBlockOreLead = Item.getItemFromBlock(InitBlocks.blockOreLead);
+            Item itemBlockLead = Item.getItemFromBlock(InitBlocks.blockOreLead);
             ResourceLocation location = new ResourceLocation("extraores:leadOre");
-            Register(itemBlockOreLead,location.toString());
+            Register(itemBlockLead,location.toString());
+            itemBlockLead = Item.getItemFromBlock(InitBlocks.blockLead);
+            location = new ResourceLocation("extraores:leadBlock");
+            Register(itemBlockLead,location.toString());
         }
         if(InitBlocks.registerPlatinum)
         {
-            Item itemBlockOrePlatinum = Item.getItemFromBlock(InitBlocks.blockOrePlatinum);
+            Item itemBlockPlatinum = Item.getItemFromBlock(InitBlocks.blockOrePlatinum);
             ResourceLocation location = new ResourceLocation("extraores:platinumOre");
-            Register(itemBlockOrePlatinum,location.toString());
+            Register(itemBlockPlatinum,location.toString());
+            itemBlockPlatinum = Item.getItemFromBlock(InitBlocks.blockPlatinum);
+            location = new ResourceLocation("extraores:platinumBlock");
+            Register(itemBlockPlatinum,location.toString());
         }
         if(InitBlocks.registerTungsten)
         {
-            Item itemBlockOreTungsten = Item.getItemFromBlock(InitBlocks.blockOreTungsten);
+            Item itemBlockTungsten = Item.getItemFromBlock(InitBlocks.blockOreTungsten);
             ResourceLocation location = new ResourceLocation("extraores:tungstenOre");
-            Register(itemBlockOreTungsten,location.toString());
+            Register(itemBlockTungsten,location.toString());
+            itemBlockTungsten = Item.getItemFromBlock(InitBlocks.blockTungsten);
+            location = new ResourceLocation("extraores:tungstenBlock");
+            Register(itemBlockTungsten,location.toString());
         }
         if(InitBlocks.registerVanadium)
         {
-            Item itemBlockOreVanadium = Item.getItemFromBlock(InitBlocks.blockOreVanadium);
+            Item itemBlockVanadium = Item.getItemFromBlock(InitBlocks.blockOreVanadium);
             ResourceLocation location = new ResourceLocation("extraores:vanadiumOre");
-            Register(itemBlockOreVanadium,location.toString());
+            Register(itemBlockVanadium,location.toString());
+            itemBlockVanadium = Item.getItemFromBlock(InitBlocks.blockVanadium);
+            location = new ResourceLocation("extraores:vanadiumBlock");
+            Register(itemBlockVanadium,location.toString());
         }
     }
     public static void initItemRender()

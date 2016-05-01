@@ -1,5 +1,6 @@
 package com.tylerh.extraores.Proxy;
 
+import com.tylerh.extraores.Init.Recipes;
 import com.tylerh.extraores.Util.EXOreRender;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -19,6 +20,7 @@ public class ClientProxy extends CommonProxy
         super.init(event);
         EXOreRender.initBlockRender();
         EXOreRender.initItemRender();
+        Recipes.init();
     }
     public void postInit(FMLPostInitializationEvent event)
     {
