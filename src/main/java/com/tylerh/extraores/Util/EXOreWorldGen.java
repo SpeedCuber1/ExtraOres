@@ -95,7 +95,7 @@ public class EXOreWorldGen implements IWorldGenerator
             }
             if(InitBlocks.registerTin)
             {
-                runGenerator(this.tinOre, world, random, chunkX, chunkZ, 20, 0, 80);
+                runGenerator(this.tinOre, world, random, chunkX, chunkZ, 20, 0, 100);
             }
             if(InitBlocks.registerChromium)
             {
