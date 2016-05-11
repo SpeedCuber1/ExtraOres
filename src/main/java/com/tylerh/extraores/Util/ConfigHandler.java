@@ -38,6 +38,21 @@ public class ConfigHandler
             InitBlocks.registerPlatinum = config.get("ores","Platinum",true).getBoolean(true);
             InitBlocks.registerTungsten = config.get("ores","Tungsten",true).getBoolean(true);
             InitBlocks.registerVanadium = config.get("ores","Vanadium",true).getBoolean(true);
+            InitBlocks.registerZinc = config.get("ores","Zinc",true).getBoolean(true);
+            InitBlocks.registerZirconium = config.get("ores","Zirconium",true).getBoolean(true);
+            InitBlocks.registerNiobium = config.get("ores","Niobium",true).getBoolean(true);
+            InitBlocks.registerTechnetium = config.get("ores","Technetium",true).getBoolean(true);
+            InitBlocks.registerRuthenium = config.get("ores","Ruthenium",true).getBoolean(true);
+            InitBlocks.registerRhodium = config.get("ores","Rhodium",true).getBoolean(true);
+            InitBlocks.registerPalladium = config.get("ores","Palladium",true).getBoolean(true);
+            InitBlocks.registerCadmium = config.get("ores","Cadmium",true).getBoolean(true);
+            InitBlocks.registerNeodymium = config.get("ores","Neodymium",true).getBoolean(true);
+            InitBlocks.registerBismuth = config.get("ores","Bismuth",true).getBoolean(true);
+            InitBlocks.registerGallium = config.get("ores","Gallium",true).getBoolean(true);
+            InitBlocks.registerIndium = config.get("ores","Indium",true).getBoolean(true);
+            InitBlocks.registerThallium = config.get("ores","Thallium",true).getBoolean(true);
+            InitBlocks.registerTitanium = config.get("ores","Titanium",true).getBoolean(true);
+            InitBlocks.registerNickel = config.get("ores","Nickel",true).getBoolean(true);
         }
         catch(Exception e)
         {
