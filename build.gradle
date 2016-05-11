@@ -25,7 +25,7 @@ group= "com.tylerh.extraores" // http://maven.apache.org/guides/mini/guide-namin
 archivesBaseName = "ExtraOres"
 
 minecraft {
-    version = "1.8.9-11.15.1.1855"
+    version = "1.8.9-11.15.1.1890-1.8.9"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -53,7 +53,9 @@ dependencies {
     // the deobf configurations:  'deobfCompile' and 'deobfProvided' are the same as the normal compile and provided,
     // except that these dependencies get remapped to your current MCP mappings
     //deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-    deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
+    //deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
+
+
 
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
