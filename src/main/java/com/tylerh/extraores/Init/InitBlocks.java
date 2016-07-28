@@ -5,6 +5,7 @@ import com.tylerh.extraores.Items.ItemEXOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -133,6 +134,65 @@ public class InitBlocks
     public static Block blockTitanium;
     public static Block blockNickel;
 
+    //ItemBlocks Ores
+    public static ItemBlock itemBlockOreCopper;
+    public static ItemBlock itemBlockOreTin;
+    public static ItemBlock itemBlockOreChromium;
+    public static ItemBlock itemBlockOreCobalt;
+    public static ItemBlock itemBlockOreUnobtainium;
+    public static ItemBlock itemBlockOreManganese;
+    public static ItemBlock itemBlockOreMolybdenum;
+    public static ItemBlock itemBlockOreAluminum;
+    public static ItemBlock itemBlockOreSilver;
+    public static ItemBlock itemBlockOreLead;
+    public static ItemBlock itemBlockOrePlatinum;
+    public static ItemBlock itemBlockOreTungsten;
+    public static ItemBlock itemBlockOreVanadium;
+    public static ItemBlock itemBlockOreZinc;
+    public static ItemBlock itemBlockOreZirconium;
+    public static ItemBlock itemBlockOreNiobium;
+    public static ItemBlock itemBlockOreTechnetium;
+    public static ItemBlock itemBlockOreRuthenium;
+    public static ItemBlock itemBlockOreRhodium;
+    public static ItemBlock itemBlockOrePalladium;
+    public static ItemBlock itemBlockOreCadmium;
+    public static ItemBlock itemBlockOreNeodymium;
+    public static ItemBlock itemBlockOreBismuth;
+    public static ItemBlock itemBlockOreGallium;
+    public static ItemBlock itemBlockOreIndium;
+    public static ItemBlock itemBlockOreThallium;
+    public static ItemBlock itemBlockOreTitanium;
+    public static ItemBlock itemBlockOreNickel;
+    //ItemBlocks Blocks
+    public static ItemBlock itemBlockCopper;
+    public static ItemBlock itemBlockTin;
+    public static ItemBlock itemBlockChromium;
+    public static ItemBlock itemBlockCobalt;
+    public static ItemBlock itemBlockUnobtainium;
+    public static ItemBlock itemBlockManganese;
+    public static ItemBlock itemBlockMolybdenum;
+    public static ItemBlock itemBlockAluminum;
+    public static ItemBlock itemBlockSilver;
+    public static ItemBlock itemBlockLead;
+    public static ItemBlock itemBlockPlatinum;
+    public static ItemBlock itemBlockTungsten;
+    public static ItemBlock itemBlockVanadium;
+    public static ItemBlock itemBlockZinc;
+    public static ItemBlock itemBlockZirconium;
+    public static ItemBlock itemBlockNiobium;
+    public static ItemBlock itemBlockTechnetium;
+    public static ItemBlock itemBlockRuthenium;
+    public static ItemBlock itemBlockRhodium;
+    public static ItemBlock itemBlockPalladium;
+    public static ItemBlock itemBlockCadmium;
+    public static ItemBlock itemBlockNeodymium;
+    public static ItemBlock itemBlockBismuth;
+    public static ItemBlock itemBlockGallium;
+    public static ItemBlock itemBlockIndium;
+    public static ItemBlock itemBlockThallium;
+    public static ItemBlock itemBlockTitanium;
+    public static ItemBlock itemBlockNickel;
+
     //Dusts
     public static Item itemDustCopper;
     public static Item itemDustTin;
@@ -167,14 +227,22 @@ public class InitBlocks
     {
         if(registerCopper)
         {
-            blockOreCopper = new BlockEXOre(Material.rock,3.0f,5.0f,"copperOre");
-            blockCopper = new BlockEXOre(Material.iron,3.0f,5.0f,"copperBlock");
+            blockOreCopper = new BlockEXOre(Material.ROCK,3.0f,5.0f,"copperOre");
+            itemBlockOreCopper = new ItemBlock(blockOreCopper);
+            blockCopper = new BlockEXOre(Material.IRON,3.0f,5.0f,"copperBlock");
+            itemBlockCopper = new ItemBlock(blockCopper);
             itemIngotCopper = new ItemEXOre("copperIngot");
             itemDustCopper = new ItemEXOre("copperDust");
-            GameRegistry.registerBlock(blockOreCopper,"copperOre");
-            GameRegistry.registerBlock(blockCopper,"copperBlock");
-            GameRegistry.registerItem(itemIngotCopper,"copperIngot");
-            GameRegistry.registerItem(itemDustCopper,"copperDust");
+            createRegistry(blockOreCopper,itemBlockOreCopper,"copperOre");
+            createRegistry(blockCopper,itemBlockCopper,"copperBlock");
+            createRegistry(itemIngotCopper,"copperIngot");
+            createRegistry(itemDustCopper,"copperDust");
+            GameRegistry.register(blockOreCopper);
+            GameRegistry.register(itemBlockOreCopper);
+            GameRegistry.register(blockCopper);
+            GameRegistry.register(itemBlockCopper);
+            GameRegistry.register(itemIngotCopper);
+            GameRegistry.register(itemDustCopper);
             initOreDict(blockOreCopper,"oreCopper");
             initOreDict(blockCopper,"blockCopper");
             initOreDict(itemIngotCopper,"ingotCopper");
@@ -182,14 +250,22 @@ public class InitBlocks
         }
         if(registerTin)
         {
-            blockOreTin = new BlockEXOre(Material.rock,3.0f,5.0f,"tinOre");
-            blockTin = new BlockEXOre(Material.iron,3.0f,5.0f,"tinBlock");
+            blockOreTin = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tinOre");
+            itemBlockOreTin = new ItemBlock(blockOreTin);
+            blockTin = new BlockEXOre(Material.IRON,3.0f,5.0f,"tinBlock");
+            itemBlockTin = new ItemBlock(blockTin);
             itemIngotTin = new ItemEXOre("tinIngot");
             itemDustTin = new ItemEXOre("tinDust");
-            GameRegistry.registerBlock(blockOreTin,"tinOre");
-            GameRegistry.registerBlock(blockTin,"tinBlock");
-            GameRegistry.registerItem(itemIngotTin,"tinIngot");
-            GameRegistry.registerItem(itemDustTin,"tinDust");
+            createRegistry(blockOreTin,itemBlockOreTin,"tinOre");
+            createRegistry(blockTin,itemBlockTin,"tinBlock");
+            createRegistry(itemIngotTin,"tinIngot");
+            createRegistry(itemDustTin,"tinDust");
+            GameRegistry.register(blockOreTin);
+            GameRegistry.register(itemBlockOreTin);
+            GameRegistry.register(blockTin);
+            GameRegistry.register(itemBlockTin);
+            GameRegistry.register(itemIngotTin);
+            GameRegistry.register(itemDustTin);
             initOreDict(blockOreTin,"oreTin");
             initOreDict(blockTin,"blockTin");
             initOreDict(itemIngotTin,"ingotTin");
@@ -197,14 +273,22 @@ public class InitBlocks
         }
         if(registerChromium)
         {
-            blockOreChromium = new BlockEXOre(Material.rock,3.0f,5.0f,"chromiumOre");
-            blockChromium = new BlockEXOre(Material.iron,3.0f,5.0f,"chromiumBlock");
+            blockOreChromium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"chromiumOre");
+            itemBlockOreChromium = new ItemBlock(blockOreChromium);
+            blockChromium = new BlockEXOre(Material.IRON,3.0f,5.0f,"chromiumBlock");
+            itemBlockChromium = new ItemBlock(blockChromium);
             itemIngotChromium = new ItemEXOre("chromiumIngot");
             itemDustChromium = new ItemEXOre("chromiumDust");
-            GameRegistry.registerBlock(blockOreChromium,"chromiumOre");
-            GameRegistry.registerBlock(blockChromium,"chromiumBlock");
-            GameRegistry.registerItem(itemIngotChromium,"chromiumIngot");
-            GameRegistry.registerItem(itemDustChromium,"chromiumDust");
+            createRegistry(blockOreChromium,itemBlockOreChromium,"chromiumOre");
+            createRegistry(blockChromium,itemBlockChromium,"chromiumBlock");
+            createRegistry(itemIngotChromium,"chromiumIngot");
+            createRegistry(itemDustChromium,"chromiumDust");
+            GameRegistry.register(blockOreChromium);
+            GameRegistry.register(itemBlockOreChromium);
+            GameRegistry.register(blockChromium);
+            GameRegistry.register(itemBlockChromium);
+            GameRegistry.register(itemIngotChromium);
+            GameRegistry.register(itemDustChromium);
             initOreDict(blockOreChromium,"oreChromium");
             initOreDict(blockChromium,"blockChromium");
             initOreDict(itemIngotChromium,"ingotChromium");
@@ -212,14 +296,22 @@ public class InitBlocks
         }
         if(registerCobalt)
         {
-            blockOreCobalt = new BlockEXOre(Material.rock,3.0f,5.0f,"cobaltOre");
-            blockCobalt = new BlockEXOre(Material.iron,3.0f,5.0f,"cobaltBlock");
+            blockOreCobalt = new BlockEXOre(Material.ROCK,3.0f,5.0f,"cobaltOre");
+            itemBlockOreCobalt = new ItemBlock(blockOreCobalt);
+            blockCobalt = new BlockEXOre(Material.IRON,3.0f,5.0f,"cobaltBlock");
+            itemBlockCobalt = new ItemBlock(blockCobalt);
             itemIngotCobalt = new ItemEXOre("cobaltIngot");
             itemDustCobalt = new ItemEXOre("cobaltDust");
-            GameRegistry.registerBlock(blockOreCobalt,"cobaltOre");
-            GameRegistry.registerBlock(blockCobalt,"cobaltBlock");
-            GameRegistry.registerItem(itemIngotCobalt,"cobaltIngot");
-            GameRegistry.registerItem(itemDustCobalt,"cobaltDust");
+            createRegistry(blockOreCobalt,itemBlockOreCobalt,"cobaltOre");
+            createRegistry(blockCobalt,itemBlockCobalt,"cobaltBlock");
+            createRegistry(itemIngotCobalt,"cobaltIngot");
+            createRegistry(itemDustCobalt,"cobaltDust");
+            GameRegistry.register(blockOreCobalt);
+            GameRegistry.register(itemBlockOreCobalt);
+            GameRegistry.register(blockCobalt);
+            GameRegistry.register(itemBlockCobalt);
+            GameRegistry.register(itemIngotCobalt);
+            GameRegistry.register(itemDustCobalt);
             initOreDict(blockOreCobalt,"oreCobalt");
             initOreDict(blockCobalt,"blockCobalt");
             initOreDict(itemIngotCobalt,"ingotCobalt");
@@ -227,14 +319,22 @@ public class InitBlocks
         }
         if(registerUnobtainium)
         {
-            blockOreUnobtainium = new BlockEXOre(Material.rock,3.0f,5.0f,"unobtainiumOre");
-            blockUnobtainium = new BlockEXOre(Material.iron,3.0f,5.0f,"unobtainiumBlock");
+            blockOreUnobtainium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"unobtainiumOre");
+            itemBlockOreUnobtainium = new ItemBlock(blockOreUnobtainium);
+            blockUnobtainium = new BlockEXOre(Material.IRON,3.0f,5.0f,"unobtainiumBlock");
+            itemBlockUnobtainium = new ItemBlock(blockUnobtainium);
             itemIngotUnobtainium = new ItemEXOre("unobtainiumIngot");
             itemDustUnobtainium = new ItemEXOre("unobtainiumDust");
-            GameRegistry.registerBlock(blockOreUnobtainium,"unobtainiumOre");
-            GameRegistry.registerBlock(blockUnobtainium,"unobtainiumBlock");
-            GameRegistry.registerItem(itemIngotUnobtainium,"unobtainiumIngot");
-            GameRegistry.registerItem(itemDustUnobtainium,"unobtainiumDust");
+            createRegistry(blockOreUnobtainium,itemBlockOreUnobtainium,"unobtainiumOre");
+            createRegistry(blockUnobtainium,itemBlockUnobtainium,"unobtainiumBlock");
+            createRegistry(itemIngotUnobtainium,"unobtainiumIngot");
+            createRegistry(itemDustUnobtainium,"unobtainiumDust");
+            GameRegistry.register(blockOreUnobtainium);
+            GameRegistry.register(itemBlockOreUnobtainium);
+            GameRegistry.register(blockUnobtainium);
+            GameRegistry.register(itemBlockUnobtainium);
+            GameRegistry.register(itemIngotUnobtainium);
+            GameRegistry.register(itemDustUnobtainium);
             initOreDict(blockOreUnobtainium,"oreUnobtainium");
             initOreDict(blockUnobtainium,"blockUnobtainium");
             initOreDict(itemIngotUnobtainium,"ingotUnobtainium");
@@ -242,14 +342,22 @@ public class InitBlocks
         }
         if(registerManganese)
         {
-            blockOreManganese = new BlockEXOre(Material.rock,3.0f,5.0f,"manganeseOre");
-            blockManganese = new BlockEXOre(Material.iron,3.0f,5.0f,"manganeseBlock");
+            blockOreManganese = new BlockEXOre(Material.ROCK,3.0f,5.0f,"manganeseOre");
+            itemBlockOreManganese = new ItemBlock(blockOreManganese);
+            blockManganese = new BlockEXOre(Material.IRON,3.0f,5.0f,"manganeseBlock");
+            itemBlockManganese = new ItemBlock(blockManganese);
             itemIngotManganese = new ItemEXOre("manganeseIngot");
             itemDustManganese = new ItemEXOre("manganeseDust");
-            GameRegistry.registerBlock(blockOreManganese,"manganeseOre");
-            GameRegistry.registerBlock(blockManganese,"manganeseBlock");
-            GameRegistry.registerItem(itemIngotManganese,"manganeseIngot");
-            GameRegistry.registerItem(itemDustManganese,"manganeseDust");
+            createRegistry(blockOreManganese,itemBlockOreManganese,"manganeseOre");
+            createRegistry(blockManganese,itemBlockManganese,"manganeseBlock");
+            createRegistry(itemIngotManganese,"manganeseIngot");
+            createRegistry(itemDustManganese,"manganeseDust");
+            GameRegistry.register(blockOreManganese);
+            GameRegistry.register(itemBlockOreManganese);
+            GameRegistry.register(blockManganese);
+            GameRegistry.register(itemBlockManganese);
+            GameRegistry.register(itemIngotManganese);
+            GameRegistry.register(itemDustManganese);
             initOreDict(blockOreManganese,"oreManganese");
             initOreDict(blockManganese,"blockManganese");
             initOreDict(itemIngotManganese,"ingotManganese");
@@ -257,14 +365,22 @@ public class InitBlocks
         }
         if(registerMolybdenum)
         {
-            blockOreMolybdenum = new BlockEXOre(Material.rock,3.0f,5.0f,"molybdenumOre");
-            blockMolybdenum = new BlockEXOre(Material.iron,3.0f,5.0f,"molybdenumBlock");
+            blockOreMolybdenum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"molybdenumOre");
+            itemBlockOreMolybdenum = new ItemBlock(blockOreMolybdenum);
+            blockMolybdenum = new BlockEXOre(Material.IRON,3.0f,5.0f,"molybdenumBlock");
+            itemBlockMolybdenum = new ItemBlock(blockMolybdenum);
             itemIngotMolybdenum = new ItemEXOre("molybdenumIngot");
             itemDustMolybdenum = new ItemEXOre("molybdenumDust");
-            GameRegistry.registerBlock(blockOreMolybdenum,"molybdenumOre");
-            GameRegistry.registerBlock(blockMolybdenum,"molybdenumBlock");
-            GameRegistry.registerItem(itemIngotMolybdenum,"molybdenumIngot");
-            GameRegistry.registerItem(itemDustMolybdenum,"molybdenumDust");
+            createRegistry(blockOreMolybdenum,itemBlockOreMolybdenum,"molybdenumOre");
+            createRegistry(blockMolybdenum,itemBlockMolybdenum,"molybdenumBlock");
+            createRegistry(itemIngotMolybdenum,"molybdenumIngot");
+            createRegistry(itemDustMolybdenum,"molybdenumDust");
+            GameRegistry.register(blockOreMolybdenum);
+            GameRegistry.register(itemBlockOreMolybdenum);
+            GameRegistry.register(blockMolybdenum);
+            GameRegistry.register(itemBlockMolybdenum);
+            GameRegistry.register(itemIngotMolybdenum);
+            GameRegistry.register(itemDustMolybdenum);
             initOreDict(blockOreMolybdenum,"oreMolybdenum");
             initOreDict(blockMolybdenum,"blockMolybdenum");
             initOreDict(itemIngotMolybdenum,"ingotMolybdenum");
@@ -272,14 +388,22 @@ public class InitBlocks
         }
         if(registerAluminum)
         {
-            blockOreAluminum = new BlockEXOre(Material.rock,3.0f,5.0f,"aluminumOre");
-            blockAluminum = new BlockEXOre(Material.iron,3.0f,5.0f,"aluminumBlock");
+            blockOreAluminum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"aluminumOre");
+            itemBlockOreAluminum = new ItemBlock(blockOreAluminum);
+            blockAluminum = new BlockEXOre(Material.IRON,3.0f,5.0f,"aluminumBlock");
+            itemBlockAluminum = new ItemBlock(blockAluminum);
             itemIngotAluminum = new ItemEXOre("aluminumIngot");
             itemDustAluminum = new ItemEXOre("aluminumDust");
-            GameRegistry.registerBlock(blockOreAluminum,"aluminumOre");
-            GameRegistry.registerBlock(blockAluminum,"aluminumBlock");
-            GameRegistry.registerItem(itemIngotAluminum,"aluminumIngot");
-            GameRegistry.registerItem(itemDustAluminum,"aluminumDust");
+            createRegistry(blockOreAluminum,itemBlockOreAluminum,"aluminumOre");
+            createRegistry(blockAluminum,itemBlockAluminum,"aluminumBlock");
+            createRegistry(itemIngotAluminum,"aluminumIngot");
+            createRegistry(itemDustAluminum,"aluminumDust");
+            GameRegistry.register(blockOreAluminum);
+            GameRegistry.register(itemBlockOreAluminum);
+            GameRegistry.register(blockAluminum);
+            GameRegistry.register(itemBlockAluminum);
+            GameRegistry.register(itemIngotAluminum);
+            GameRegistry.register(itemDustAluminum);
             initOreDict(blockOreAluminum,"oreAluminum");
             initOreDict(blockAluminum,"blockAluminum");
             initOreDict(itemIngotAluminum,"ingotAluminum");
@@ -287,14 +411,22 @@ public class InitBlocks
         }
         if(registerSilver)
         {
-            blockOreSilver = new BlockEXOre(Material.rock,3.0f,5.0f,"silverOre");
-            blockSilver = new BlockEXOre(Material.iron,3.0f,5.0f,"silverBlock");
+            blockOreSilver = new BlockEXOre(Material.ROCK,3.0f,5.0f,"silverOre");
+            itemBlockOreSilver = new ItemBlock(blockOreSilver);
+            blockSilver = new BlockEXOre(Material.IRON,3.0f,5.0f,"silverBlock");
+            itemBlockSilver = new ItemBlock(blockSilver);
             itemIngotSilver = new ItemEXOre("silverIngot");
             itemDustSilver = new ItemEXOre("silverDust");
-            GameRegistry.registerBlock(blockOreSilver,"silverOre");
-            GameRegistry.registerBlock(blockSilver,"silverBlock");
-            GameRegistry.registerItem(itemIngotSilver,"silverIngot");
-            GameRegistry.registerItem(itemDustSilver,"silverDust");
+            createRegistry(blockOreSilver,itemBlockOreSilver,"silverOre");
+            createRegistry(blockSilver,itemBlockSilver,"silverBlock");
+            createRegistry(itemIngotSilver,"silverIngot");
+            createRegistry(itemDustSilver,"silverDust");
+            GameRegistry.register(blockOreSilver);
+            GameRegistry.register(itemBlockOreSilver);
+            GameRegistry.register(blockSilver);
+            GameRegistry.register(itemBlockSilver);
+            GameRegistry.register(itemIngotSilver);
+            GameRegistry.register(itemDustSilver);
             initOreDict(blockOreSilver,"oreSilver");
             initOreDict(blockSilver,"blockSilver");
             initOreDict(itemIngotSilver,"ingotSilver");
@@ -302,14 +434,22 @@ public class InitBlocks
         }
         if(registerLead)
         {
-            blockOreLead = new BlockEXOre(Material.rock,3.0f,5.0f,"leadOre");
-            blockLead = new BlockEXOre(Material.iron,3.0f,5.0f,"leadBlock");
+            blockOreLead = new BlockEXOre(Material.ROCK,3.0f,5.0f,"leadOre");
+            itemBlockOreLead = new ItemBlock(blockOreLead);
+            blockLead = new BlockEXOre(Material.IRON,3.0f,5.0f,"leadBlock");
+            itemBlockLead = new ItemBlock(blockLead);
             itemIngotLead = new ItemEXOre("leadIngot");
             itemDustLead = new ItemEXOre("leadDust");
-            GameRegistry.registerBlock(blockOreLead,"leadOre");
-            GameRegistry.registerBlock(blockLead,"leadBlock");
-            GameRegistry.registerItem(itemIngotLead,"leadIngot");
-            GameRegistry.registerItem(itemDustLead,"leadDust");
+            createRegistry(blockOreLead,itemBlockOreLead,"leadOre");
+            createRegistry(blockLead,itemBlockLead,"leadBlock");
+            createRegistry(itemIngotLead,"leadIngot");
+            createRegistry(itemDustLead,"leadDust");
+            GameRegistry.register(blockOreLead);
+            GameRegistry.register(itemBlockOreLead);
+            GameRegistry.register(blockLead);
+            GameRegistry.register(itemBlockLead);
+            GameRegistry.register(itemIngotLead);
+            GameRegistry.register(itemDustLead);
             initOreDict(blockOreLead,"oreLead");
             initOreDict(blockLead,"blockLead");
             initOreDict(itemIngotLead,"ingotLead");
@@ -317,14 +457,22 @@ public class InitBlocks
         }
         if(registerPlatinum)
         {
-            blockOrePlatinum = new BlockEXOre(Material.rock,3.0f,5.0f,"platinumOre");
-            blockPlatinum = new BlockEXOre(Material.iron,3.0f,5.0f,"platinumBlock");
+            blockOrePlatinum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"platinumOre");
+            itemBlockOrePlatinum = new ItemBlock(blockOrePlatinum);
+            blockPlatinum = new BlockEXOre(Material.IRON,3.0f,5.0f,"platinumBlock");
+            itemBlockPlatinum = new ItemBlock(blockPlatinum);
             itemIngotPlatinum = new ItemEXOre("platinumIngot");
             itemDustPlatinum = new ItemEXOre("platinumDust");
-            GameRegistry.registerBlock(blockOrePlatinum,"platinumOre");
-            GameRegistry.registerBlock(blockPlatinum,"platinumBlock");
-            GameRegistry.registerItem(itemIngotPlatinum,"platinumIngot");
-            GameRegistry.registerItem(itemDustPlatinum,"platinumDust");
+            createRegistry(blockOrePlatinum,itemBlockOrePlatinum,"platinumOre");
+            createRegistry(blockPlatinum,itemBlockPlatinum,"platinumBlock");
+            createRegistry(itemIngotPlatinum,"platinumIngot");
+            createRegistry(itemDustPlatinum,"platinumDust");
+            GameRegistry.register(blockOrePlatinum);
+            GameRegistry.register(itemBlockOrePlatinum);
+            GameRegistry.register(blockPlatinum);
+            GameRegistry.register(itemBlockPlatinum);
+            GameRegistry.register(itemIngotPlatinum);
+            GameRegistry.register(itemDustPlatinum);
             initOreDict(blockOrePlatinum,"orePlatinum");
             initOreDict(blockPlatinum,"blockPlatinum");
             initOreDict(itemIngotPlatinum,"ingotPlatinum");
@@ -332,14 +480,22 @@ public class InitBlocks
         }
         if(registerTungsten)
         {
-            blockOreTungsten = new BlockEXOre(Material.rock,3.0f,5.0f,"tungstenOre");
-            blockTungsten = new BlockEXOre(Material.iron,3.0f,5.0f,"tungstenBlock");
+            blockOreTungsten = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tungstenOre");
+            itemBlockOreTungsten = new ItemBlock(blockOreTungsten);
+            blockTungsten = new BlockEXOre(Material.IRON,3.0f,5.0f,"tungstenBlock");
+            itemBlockTungsten = new ItemBlock(blockTungsten);
             itemIngotTungsten = new ItemEXOre("tungstenIngot");
             itemDustTungsten = new ItemEXOre("tungstenDust");
-            GameRegistry.registerBlock(blockOreTungsten,"tungstenOre");
-            GameRegistry.registerBlock(blockTungsten,"tungstenBlock");
-            GameRegistry.registerItem(itemIngotTungsten,"tungstenIngot");
-            GameRegistry.registerItem(itemDustTungsten,"tungstenDust");
+            createRegistry(blockOreTungsten,itemBlockOreTungsten,"tungstenOre");
+            createRegistry(blockTungsten,itemBlockTungsten,"tungstenBlock");
+            createRegistry(itemIngotTungsten,"tungstenIngot");
+            createRegistry(itemDustTungsten,"tungstenDust");
+            GameRegistry.register(blockOreTungsten);
+            GameRegistry.register(itemBlockOreTungsten);
+            GameRegistry.register(blockTungsten);
+            GameRegistry.register(itemBlockTungsten);
+            GameRegistry.register(itemIngotTungsten);
+            GameRegistry.register(itemDustTungsten);
             initOreDict(blockOreTungsten,"oreTungsten");
             initOreDict(blockTungsten,"blockTungsten");
             initOreDict(itemIngotTungsten,"ingotTungsten");
@@ -347,14 +503,22 @@ public class InitBlocks
         }
         if(registerVanadium)
         {
-            blockOreVanadium = new BlockEXOre(Material.rock,3.0f,5.0f,"vanadiumOre");
-            blockVanadium = new BlockEXOre(Material.iron,3.0f,5.0f,"vanadiumBlock");
+            blockOreVanadium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"vanadiumOre");
+            itemBlockOreVanadium = new ItemBlock(blockOreVanadium);
+            blockVanadium = new BlockEXOre(Material.IRON,3.0f,5.0f,"vanadiumBlock");
+            itemBlockVanadium = new ItemBlock(blockVanadium);
             itemIngotVanadium = new ItemEXOre("vanadiumIngot");
             itemDustVanadium = new ItemEXOre("vanadiumDust");
-            GameRegistry.registerBlock(blockOreVanadium,"vanadiumOre");
-            GameRegistry.registerBlock(blockVanadium,"vanadiumBlock");
-            GameRegistry.registerItem(itemIngotVanadium,"vanadiumIngot");
-            GameRegistry.registerItem(itemDustVanadium,"vanadiumDust");
+            createRegistry(blockOreVanadium,itemBlockOreVanadium,"vanadiumOre");
+            createRegistry(blockVanadium,itemBlockVanadium,"vanadiumBlock");
+            createRegistry(itemIngotVanadium,"vanadiumIngot");
+            createRegistry(itemDustVanadium,"vanadiumDust");
+            GameRegistry.register(blockOreVanadium);
+            GameRegistry.register(itemBlockOreVanadium);
+            GameRegistry.register(blockVanadium);
+            GameRegistry.register(itemBlockVanadium);
+            GameRegistry.register(itemIngotVanadium);
+            GameRegistry.register(itemDustVanadium);
             initOreDict(blockOreVanadium,"oreVanadium");
             initOreDict(blockVanadium,"blockVanadium");
             initOreDict(itemIngotVanadium,"ingotVanadium");
@@ -362,14 +526,22 @@ public class InitBlocks
         }
         if(registerZinc)
         {
-            blockOreZinc = new BlockEXOre(Material.rock,3.0f,5.0f,"zincOre");
-            blockZinc = new BlockEXOre(Material.iron,3.0f,5.0f,"zincBlock");
+            blockOreZinc = new BlockEXOre(Material.ROCK,3.0f,5.0f,"zincOre");
+            itemBlockOreZinc = new ItemBlock(blockOreZinc);
+            blockZinc = new BlockEXOre(Material.IRON,3.0f,5.0f,"zincBlock");
+            itemBlockZinc = new ItemBlock(blockZinc);
             itemIngotZinc = new ItemEXOre("zincIngot");
             itemDustZinc = new ItemEXOre("zincDust");
-            GameRegistry.registerBlock(blockOreZinc,"zincOre");
-            GameRegistry.registerBlock(blockZinc,"zincBlock");
-            GameRegistry.registerItem(itemIngotZinc,"zincIngot");
-            GameRegistry.registerItem(itemDustZinc,"zincDust");
+            createRegistry(blockOreZinc,itemBlockOreZinc,"zincOre");
+            createRegistry(blockZinc,itemBlockZinc,"zincBlock");
+            createRegistry(itemIngotZinc,"zincIngot");
+            createRegistry(itemDustZinc,"zincDust");
+            GameRegistry.register(blockOreZinc);
+            GameRegistry.register(itemBlockOreZinc);
+            GameRegistry.register(blockZinc);
+            GameRegistry.register(itemBlockZinc);
+            GameRegistry.register(itemIngotZinc);
+            GameRegistry.register(itemDustZinc);
             initOreDict(blockOreZinc,"oreZinc");
             initOreDict(blockZinc,"blockZinc");
             initOreDict(itemIngotZinc,"ingotZinc");
@@ -377,14 +549,22 @@ public class InitBlocks
         }
         if(registerZirconium)
         {
-            blockOreZirconium = new BlockEXOre(Material.rock,3.0f,5.0f,"zirconiumOre");
-            blockZirconium = new BlockEXOre(Material.iron,3.0f,5.0f,"zirconiumBlock");
+            blockOreZirconium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"zirconiumOre");
+            itemBlockOreZirconium = new ItemBlock(blockOreZirconium);
+            blockZirconium = new BlockEXOre(Material.IRON,3.0f,5.0f,"zirconiumBlock");
+            itemBlockZirconium = new ItemBlock(blockZirconium);
             itemIngotZirconium = new ItemEXOre("zirconiumIngot");
             itemDustZirconium = new ItemEXOre("zirconiumDust");
-            GameRegistry.registerBlock(blockOreZirconium,"zirconiumOre");
-            GameRegistry.registerBlock(blockZirconium,"zirconiumBlock");
-            GameRegistry.registerItem(itemIngotZirconium,"zirconiumIngot");
-            GameRegistry.registerItem(itemDustZirconium,"zirconiumDust");
+            createRegistry(blockOreZirconium,itemBlockOreZirconium,"zirconiumOre");
+            createRegistry(blockZirconium,itemBlockZirconium,"zirconiumBlock");
+            createRegistry(itemIngotZirconium,"zirconiumIngot");
+            createRegistry(itemDustZirconium,"zirconiumDust");
+            GameRegistry.register(blockOreZirconium);
+            GameRegistry.register(itemBlockOreZirconium);
+            GameRegistry.register(blockZirconium);
+            GameRegistry.register(itemBlockZirconium);
+            GameRegistry.register(itemIngotZirconium);
+            GameRegistry.register(itemDustZirconium);
             initOreDict(blockOreZirconium,"oreZirconium");
             initOreDict(blockZirconium,"blockZirconium");
             initOreDict(itemIngotZirconium,"ingotZirconium");
@@ -392,14 +572,22 @@ public class InitBlocks
         }
         if(registerNiobium)
         {
-            blockOreNiobium = new BlockEXOre(Material.rock,3.0f,5.0f,"niobiumOre");
-            blockNiobium = new BlockEXOre(Material.iron,3.0f,5.0f,"niobiumBlock");
+            blockOreNiobium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"niobiumOre");
+            itemBlockOreNiobium = new ItemBlock(blockOreNiobium);
+            blockNiobium = new BlockEXOre(Material.IRON,3.0f,5.0f,"niobiumBlock");
+            itemBlockNiobium = new ItemBlock(blockNiobium);
             itemIngotNiobium = new ItemEXOre("niobiumIngot");
             itemDustNiobium = new ItemEXOre("niobiumDust");
-            GameRegistry.registerBlock(blockOreNiobium,"niobiumOre");
-            GameRegistry.registerBlock(blockNiobium,"niobiumBlock");
-            GameRegistry.registerItem(itemIngotNiobium,"niobiumIngot");
-            GameRegistry.registerItem(itemDustNiobium,"niobiumDust");
+            createRegistry(blockOreNiobium,itemBlockOreNiobium,"niobiumOre");
+            createRegistry(blockNiobium,itemBlockNiobium,"niobiumBlock");
+            createRegistry(itemIngotNiobium,"niobiumIngot");
+            createRegistry(itemDustNiobium,"niobiumDust");
+            GameRegistry.register(blockOreNiobium);
+            GameRegistry.register(itemBlockOreNiobium);
+            GameRegistry.register(blockNiobium);
+            GameRegistry.register(itemBlockNiobium);
+            GameRegistry.register(itemIngotNiobium);
+            GameRegistry.register(itemDustNiobium);
             initOreDict(blockOreNiobium,"oreNiobium");
             initOreDict(blockNiobium,"blockNiobium");
             initOreDict(itemIngotNiobium,"ingotNiobium");
@@ -407,14 +595,22 @@ public class InitBlocks
         }
         if(registerTechnetium)
         {
-            blockOreTechnetium = new BlockEXOre(Material.rock,3.0f,5.0f,"technetiumOre");
-            blockTechnetium = new BlockEXOre(Material.iron,3.0f,5.0f,"technetiumBlock");
+            blockOreTechnetium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"technetiumOre");
+            itemBlockOreTechnetium = new ItemBlock(blockOreTechnetium);
+            blockTechnetium = new BlockEXOre(Material.IRON,3.0f,5.0f,"technetiumBlock");
+            itemBlockTechnetium = new ItemBlock(blockTechnetium);
             itemIngotTechnetium = new ItemEXOre("technetiumIngot");
             itemDustTechnetium = new ItemEXOre("technetiumDust");
-            GameRegistry.registerBlock(blockOreTechnetium,"technetiumOre");
-            GameRegistry.registerBlock(blockTechnetium,"technetiumBlock");
-            GameRegistry.registerItem(itemIngotTechnetium,"technetiumIngot");
-            GameRegistry.registerItem(itemDustTechnetium,"technetiumDust");
+            createRegistry(blockOreTechnetium,itemBlockOreTechnetium,"technetiumOre");
+            createRegistry(blockTechnetium,itemBlockTechnetium,"technetiumBlock");
+            createRegistry(itemIngotTechnetium,"technetiumIngot");
+            createRegistry(itemDustTechnetium,"technetiumDust");
+            GameRegistry.register(blockOreTechnetium);
+            GameRegistry.register(itemBlockOreTechnetium);
+            GameRegistry.register(blockTechnetium);
+            GameRegistry.register(itemBlockTechnetium);
+            GameRegistry.register(itemIngotTechnetium);
+            GameRegistry.register(itemDustTechnetium);
             initOreDict(blockOreTechnetium,"oreTechnetium");
             initOreDict(blockTechnetium,"blockTechnetium");
             initOreDict(itemIngotTechnetium,"ingotTechnetium");
@@ -422,14 +618,22 @@ public class InitBlocks
         }
         if(registerRuthenium)
         {
-            blockOreRuthenium = new BlockEXOre(Material.rock,3.0f,5.0f,"rutheniumOre");
-            blockRuthenium = new BlockEXOre(Material.iron,3.0f,5.0f,"rutheniumBlock");
+            blockOreRuthenium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rutheniumOre");
+            itemBlockOreRuthenium = new ItemBlock(blockOreRuthenium);
+            blockRuthenium = new BlockEXOre(Material.IRON,3.0f,5.0f,"rutheniumBlock");
+            itemBlockRuthenium = new ItemBlock(blockRuthenium);
             itemIngotRuthenium = new ItemEXOre("rutheniumIngot");
             itemDustRuthenium = new ItemEXOre("rutheniumDust");
-            GameRegistry.registerBlock(blockOreRuthenium,"rutheniumOre");
-            GameRegistry.registerBlock(blockRuthenium,"rutheniumBlock");
-            GameRegistry.registerItem(itemIngotRuthenium,"rutheniumIngot");
-            GameRegistry.registerItem(itemDustRuthenium,"rutheniumDust");
+            createRegistry(blockOreRuthenium,itemBlockOreRuthenium,"rutheniumOre");
+            createRegistry(blockRuthenium,itemBlockRuthenium,"rutheniumBlock");
+            createRegistry(itemIngotRuthenium,"rutheniumIngot");
+            createRegistry(itemDustRuthenium,"rutheniumDust");
+            GameRegistry.register(blockOreRuthenium);
+            GameRegistry.register(itemBlockOreRuthenium);
+            GameRegistry.register(blockRuthenium);
+            GameRegistry.register(itemBlockRuthenium);
+            GameRegistry.register(itemIngotRuthenium);
+            GameRegistry.register(itemDustRuthenium);
             initOreDict(blockOreRuthenium,"oreRuthenium");
             initOreDict(blockRuthenium,"blockRuthenium");
             initOreDict(itemIngotRuthenium,"ingotRuthenium");
@@ -437,14 +641,22 @@ public class InitBlocks
         }
         if(registerRhodium)
         {
-            blockOreRhodium = new BlockEXOre(Material.rock,3.0f,5.0f,"rhodiumOre");
-            blockRhodium = new BlockEXOre(Material.iron,3.0f,5.0f,"rhodiumBlock");
+            blockOreRhodium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rhodiumOre");
+            itemBlockOreRhodium = new ItemBlock(blockOreRhodium);
+            blockRhodium = new BlockEXOre(Material.IRON,3.0f,5.0f,"rhodiumBlock");
+            itemBlockRhodium = new ItemBlock(blockRhodium);
             itemIngotRhodium = new ItemEXOre("rhodiumIngot");
             itemDustRhodium = new ItemEXOre("rhodiumDust");
-            GameRegistry.registerBlock(blockOreRhodium,"rhodiumOre");
-            GameRegistry.registerBlock(blockRhodium,"rhodiumBlock");
-            GameRegistry.registerItem(itemIngotRhodium,"rhodiumIngot");
-            GameRegistry.registerItem(itemDustRhodium,"rhodiumDust");
+            createRegistry(blockOreRhodium,itemBlockOreRhodium,"rhodiumOre");
+            createRegistry(blockRhodium,itemBlockRhodium,"rhodiumBlock");
+            createRegistry(itemIngotRhodium,"rhodiumIngot");
+            createRegistry(itemDustRhodium,"rhodiumDust");
+            GameRegistry.register(blockOreRhodium);
+            GameRegistry.register(itemBlockOreRhodium);
+            GameRegistry.register(blockRhodium);
+            GameRegistry.register(itemBlockRhodium);
+            GameRegistry.register(itemIngotRhodium);
+            GameRegistry.register(itemDustRhodium);
             initOreDict(blockOreRhodium,"oreRhodium");
             initOreDict(blockRhodium,"blockRhodium");
             initOreDict(itemIngotRhodium,"ingotRhodium");
@@ -452,14 +664,22 @@ public class InitBlocks
         }
         if(registerPalladium)
         {
-            blockOrePalladium = new BlockEXOre(Material.rock,3.0f,5.0f,"palladiumOre");
-            blockPalladium = new BlockEXOre(Material.iron,3.0f,5.0f,"palladiumBlock");
+            blockOrePalladium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"palladiumOre");
+            itemBlockOrePalladium = new ItemBlock(blockOrePalladium);
+            blockPalladium = new BlockEXOre(Material.IRON,3.0f,5.0f,"palladiumBlock");
+            itemBlockPalladium = new ItemBlock(blockPalladium);
             itemIngotPalladium = new ItemEXOre("palladiumIngot");
             itemDustPalladium = new ItemEXOre("palladiumDust");
-            GameRegistry.registerBlock(blockOrePalladium,"palladiumOre");
-            GameRegistry.registerBlock(blockPalladium,"palladiumBlock");
-            GameRegistry.registerItem(itemIngotPalladium,"palladiumIngot");
-            GameRegistry.registerItem(itemDustPalladium,"palladiumDust");
+            createRegistry(blockOrePalladium,itemBlockOrePalladium,"palladiumOre");
+            createRegistry(blockPalladium,itemBlockPalladium,"palladiumBlock");
+            createRegistry(itemIngotPalladium,"palladiumIngot");
+            createRegistry(itemDustPalladium,"palladiumDust");
+            GameRegistry.register(blockOrePalladium);
+            GameRegistry.register(itemBlockOrePalladium);
+            GameRegistry.register(blockPalladium);
+            GameRegistry.register(itemBlockPalladium);
+            GameRegistry.register(itemIngotPalladium);
+            GameRegistry.register(itemDustPalladium);
             initOreDict(blockOrePalladium,"orePalladium");
             initOreDict(blockPalladium,"blockPalladium");
             initOreDict(itemIngotPalladium,"ingotPalladium");
@@ -467,14 +687,22 @@ public class InitBlocks
         }
         if(registerCadmium)
         {
-            blockOreCadmium = new BlockEXOre(Material.rock,3.0f,5.0f,"cadmiumOre");
-            blockCadmium = new BlockEXOre(Material.iron,3.0f,5.0f,"cadmiumBlock");
+            blockOreCadmium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"cadmiumOre");
+            itemBlockOreCadmium = new ItemBlock(blockOreCadmium);
+            blockCadmium = new BlockEXOre(Material.IRON,3.0f,5.0f,"cadmiumBlock");
+            itemBlockCadmium = new ItemBlock(blockCadmium);
             itemIngotCadmium = new ItemEXOre("cadmiumIngot");
             itemDustCadmium = new ItemEXOre("cadmiumDust");
-            GameRegistry.registerBlock(blockOreCadmium,"cadmiumOre");
-            GameRegistry.registerBlock(blockCadmium,"cadmiumBlock");
-            GameRegistry.registerItem(itemIngotCadmium,"cadmiumIngot");
-            GameRegistry.registerItem(itemDustCadmium,"cadmiumDust");
+            createRegistry(blockOreCadmium,itemBlockOreCadmium,"cadmiumOre");
+            createRegistry(blockCadmium,itemBlockCadmium,"cadmiumBlock");
+            createRegistry(itemIngotCadmium,"cadmiumIngot");
+            createRegistry(itemDustCadmium,"cadmiumDust");
+            GameRegistry.register(blockOreCadmium);
+            GameRegistry.register(itemBlockOreCadmium);
+            GameRegistry.register(blockCadmium);
+            GameRegistry.register(itemBlockCadmium);
+            GameRegistry.register(itemIngotCadmium);
+            GameRegistry.register(itemDustCadmium);
             initOreDict(blockOreCadmium,"oreCadmium");
             initOreDict(blockCadmium,"blockCadmium");
             initOreDict(itemIngotCadmium,"ingotCadmium");
@@ -482,14 +710,22 @@ public class InitBlocks
         }
         if(registerNeodymium)
         {
-            blockOreNeodymium = new BlockEXOre(Material.rock,3.0f,5.0f,"neodymiumOre");
-            blockNeodymium = new BlockEXOre(Material.iron,3.0f,5.0f,"neodymiumBlock");
+            blockOreNeodymium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"neodymiumOre");
+            itemBlockOreNeodymium = new ItemBlock(blockOreNeodymium);
+            blockNeodymium = new BlockEXOre(Material.IRON,3.0f,5.0f,"neodymiumBlock");
+            itemBlockNeodymium = new ItemBlock(blockNeodymium);
             itemIngotNeodymium = new ItemEXOre("neodymiumIngot");
             itemDustNeodymium = new ItemEXOre("neodymiumDust");
-            GameRegistry.registerBlock(blockOreNeodymium,"neodymiumOre");
-            GameRegistry.registerBlock(blockNeodymium,"neodymiumBlock");
-            GameRegistry.registerItem(itemIngotNeodymium,"neodymiumIngot");
-            GameRegistry.registerItem(itemDustNeodymium,"neodymiumDust");
+            createRegistry(blockOreNeodymium,itemBlockOreNeodymium,"neodymiumOre");
+            createRegistry(blockNeodymium,itemBlockNeodymium,"neodymiumBlock");
+            createRegistry(itemIngotNeodymium,"neodymiumIngot");
+            createRegistry(itemDustNeodymium,"neodymiumDust");
+            GameRegistry.register(blockOreNeodymium);
+            GameRegistry.register(itemBlockOreNeodymium);
+            GameRegistry.register(blockNeodymium);
+            GameRegistry.register(itemBlockNeodymium);
+            GameRegistry.register(itemIngotNeodymium);
+            GameRegistry.register(itemDustNeodymium);
             initOreDict(blockOreNeodymium,"oreNeodymium");
             initOreDict(blockNeodymium,"blockNeodymium");
             initOreDict(itemIngotNeodymium,"ingotNeodymium");
@@ -497,14 +733,22 @@ public class InitBlocks
         }
         if(registerBismuth)
         {
-            blockOreBismuth = new BlockEXOre(Material.rock,3.0f,5.0f,"bismuthOre");
-            blockBismuth = new BlockEXOre(Material.iron,3.0f,5.0f,"bismuthBlock");
+            blockOreBismuth = new BlockEXOre(Material.ROCK,3.0f,5.0f,"bismuthOre");
+            itemBlockOreBismuth = new ItemBlock(blockOreBismuth);
+            blockBismuth = new BlockEXOre(Material.IRON,3.0f,5.0f,"bismuthBlock");
+            itemBlockBismuth = new ItemBlock(blockBismuth);
             itemIngotBismuth = new ItemEXOre("bismuthIngot");
             itemDustBismuth = new ItemEXOre("bismuthDust");
-            GameRegistry.registerBlock(blockOreBismuth,"bismuthOre");
-            GameRegistry.registerBlock(blockBismuth,"bismuthBlock");
-            GameRegistry.registerItem(itemIngotBismuth,"bismuthIngot");
-            GameRegistry.registerItem(itemDustBismuth,"bismuthDust");
+            createRegistry(blockOreBismuth,itemBlockOreBismuth,"bismuthOre");
+            createRegistry(blockBismuth,itemBlockBismuth,"bismuthBlock");
+            createRegistry(itemIngotBismuth,"bismuthIngot");
+            createRegistry(itemDustBismuth,"bismuthDust");
+            GameRegistry.register(blockOreBismuth);
+            GameRegistry.register(itemBlockOreBismuth);
+            GameRegistry.register(blockBismuth);
+            GameRegistry.register(itemBlockBismuth);
+            GameRegistry.register(itemIngotBismuth);
+            GameRegistry.register(itemDustBismuth);
             initOreDict(blockOreBismuth,"oreBismuth");
             initOreDict(blockBismuth,"blockBismuth");
             initOreDict(itemIngotBismuth,"ingotBismuth");
@@ -512,14 +756,22 @@ public class InitBlocks
         }
         if(registerGallium)
         {
-            blockOreGallium = new BlockEXOre(Material.rock,3.0f,5.0f,"galliumOre");
-            blockGallium = new BlockEXOre(Material.iron,3.0f,5.0f,"galliumBlock");
+            blockOreGallium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"galliumOre");
+            itemBlockOreGallium = new ItemBlock(blockOreGallium);
+            blockGallium = new BlockEXOre(Material.IRON,3.0f,5.0f,"galliumBlock");
+            itemBlockGallium = new ItemBlock(blockGallium);
             itemIngotGallium = new ItemEXOre("galliumIngot");
             itemDustGallium = new ItemEXOre("galliumDust");
-            GameRegistry.registerBlock(blockOreGallium,"galliumOre");
-            GameRegistry.registerBlock(blockGallium,"galliumBlock");
-            GameRegistry.registerItem(itemIngotGallium,"galliumIngot");
-            GameRegistry.registerItem(itemDustGallium,"galliumDust");
+            createRegistry(blockOreGallium,itemBlockOreGallium,"galliumOre");
+            createRegistry(blockGallium,itemBlockGallium,"galliumBlock");
+            createRegistry(itemIngotGallium,"galliumIngot");
+            createRegistry(itemDustGallium,"galliumDust");
+            GameRegistry.register(blockOreGallium);
+            GameRegistry.register(itemBlockOreGallium);
+            GameRegistry.register(blockGallium);
+            GameRegistry.register(itemBlockGallium);
+            GameRegistry.register(itemIngotGallium);
+            GameRegistry.register(itemDustGallium);
             initOreDict(blockOreGallium,"oreGallium");
             initOreDict(blockGallium,"blockGallium");
             initOreDict(itemIngotGallium,"ingotGallium");
@@ -527,14 +779,22 @@ public class InitBlocks
         }
         if(registerIndium)
         {
-            blockOreIndium = new BlockEXOre(Material.rock,3.0f,5.0f,"indiumOre");
-            blockIndium = new BlockEXOre(Material.iron,3.0f,5.0f,"indiumBlock");
+            blockOreIndium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"indiumOre");
+            itemBlockOreIndium = new ItemBlock(blockOreIndium);
+            blockIndium = new BlockEXOre(Material.IRON,3.0f,5.0f,"indiumBlock");
+            itemBlockIndium = new ItemBlock(blockIndium);
             itemIngotIndium = new ItemEXOre("indiumIngot");
             itemDustIndium = new ItemEXOre("indiumDust");
-            GameRegistry.registerBlock(blockOreIndium,"indiumOre");
-            GameRegistry.registerBlock(blockIndium,"indiumBlock");
-            GameRegistry.registerItem(itemIngotIndium,"indiumIngot");
-            GameRegistry.registerItem(itemDustIndium,"indiumDust");
+            createRegistry(blockOreIndium,itemBlockOreIndium,"indiumOre");
+            createRegistry(blockIndium,itemBlockIndium,"indiumBlock");
+            createRegistry(itemIngotIndium,"indiumIngot");
+            createRegistry(itemDustIndium,"indiumDust");
+            GameRegistry.register(blockOreIndium);
+            GameRegistry.register(itemBlockOreIndium);
+            GameRegistry.register(blockIndium);
+            GameRegistry.register(itemBlockIndium);
+            GameRegistry.register(itemIngotIndium);
+            GameRegistry.register(itemDustIndium);
             initOreDict(blockOreIndium,"oreIndium");
             initOreDict(blockIndium,"blockIndium");
             initOreDict(itemIngotIndium,"ingotIndium");
@@ -542,14 +802,22 @@ public class InitBlocks
         }
         if(registerThallium)
         {
-            blockOreThallium = new BlockEXOre(Material.rock,3.0f,5.0f,"thalliumOre");
-            blockThallium = new BlockEXOre(Material.iron,3.0f,5.0f,"thalliumBlock");
+            blockOreThallium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"thalliumOre");
+            itemBlockOreThallium = new ItemBlock(blockOreThallium);
+            blockThallium = new BlockEXOre(Material.IRON,3.0f,5.0f,"thalliumBlock");
+            itemBlockThallium = new ItemBlock(blockThallium);
             itemIngotThallium = new ItemEXOre("thalliumIngot");
             itemDustThallium = new ItemEXOre("thalliumDust");
-            GameRegistry.registerBlock(blockOreThallium,"thalliumOre");
-            GameRegistry.registerBlock(blockThallium,"thalliumBlock");
-            GameRegistry.registerItem(itemIngotThallium,"thalliumIngot");
-            GameRegistry.registerItem(itemDustThallium,"thalliumDust");
+            createRegistry(blockOreThallium,itemBlockOreThallium,"thalliumOre");
+            createRegistry(blockThallium,itemBlockThallium,"thalliumBlock");
+            createRegistry(itemIngotThallium,"thalliumIngot");
+            createRegistry(itemDustThallium,"thalliumDust");
+            GameRegistry.register(blockOreThallium);
+            GameRegistry.register(itemBlockOreThallium);
+            GameRegistry.register(blockThallium);
+            GameRegistry.register(itemBlockThallium);
+            GameRegistry.register(itemIngotThallium);
+            GameRegistry.register(itemDustThallium);
             initOreDict(blockOreThallium,"oreThallium");
             initOreDict(blockThallium,"blockThallium");
             initOreDict(itemIngotThallium,"ingotThallium");
@@ -557,14 +825,22 @@ public class InitBlocks
         }
         if(registerTitanium)
         {
-            blockOreTitanium = new BlockEXOre(Material.rock,3.0f,5.0f,"titaniumOre");
-            blockTitanium = new BlockEXOre(Material.iron,3.0f,5.0f,"titaniumBlock");
+            blockOreTitanium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"titaniumOre");
+            itemBlockOreTitanium = new ItemBlock(blockOreTitanium);
+            blockTitanium = new BlockEXOre(Material.IRON,3.0f,5.0f,"titaniumBlock");
+            itemBlockTitanium = new ItemBlock(blockTitanium);
             itemIngotTitanium = new ItemEXOre("titaniumIngot");
             itemDustTitanium = new ItemEXOre("titaniumDust");
-            GameRegistry.registerBlock(blockOreTitanium,"titaniumOre");
-            GameRegistry.registerBlock(blockTitanium,"titaniumBlock");
-            GameRegistry.registerItem(itemIngotTitanium,"titaniumIngot");
-            GameRegistry.registerItem(itemDustTitanium,"titaniumDust");
+            createRegistry(blockOreTitanium,itemBlockOreTitanium,"titaniumOre");
+            createRegistry(blockTitanium,itemBlockTitanium,"titaniumBlock");
+            createRegistry(itemIngotTitanium,"titaniumIngot");
+            createRegistry(itemDustTitanium,"titaniumDust");
+            GameRegistry.register(blockOreTitanium);
+            GameRegistry.register(itemBlockOreTitanium);
+            GameRegistry.register(blockTitanium);
+            GameRegistry.register(itemBlockTitanium);
+            GameRegistry.register(itemIngotTitanium);
+            GameRegistry.register(itemDustTitanium);
             initOreDict(blockOreTitanium,"oreTitanium");
             initOreDict(blockTitanium,"blockTitanium");
             initOreDict(itemIngotTitanium,"ingotTitanium");
@@ -572,14 +848,22 @@ public class InitBlocks
         }
         if(registerNickel)
         {
-            blockOreNickel = new BlockEXOre(Material.rock,3.0f,5.0f,"nickelOre");
-            blockNickel = new BlockEXOre(Material.iron,3.0f,5.0f,"nickelBlock");
+            blockOreNickel = new BlockEXOre(Material.ROCK,3.0f,5.0f,"nickelOre");
+            itemBlockOreNickel = new ItemBlock(blockOreNickel);
+            blockNickel = new BlockEXOre(Material.IRON,3.0f,5.0f,"nickelBlock");
+            itemBlockNickel = new ItemBlock(blockNickel);
             itemIngotNickel = new ItemEXOre("nickelIngot");
             itemDustNickel = new ItemEXOre("nickelDust");
-            GameRegistry.registerBlock(blockOreNickel,"nickelOre");
-            GameRegistry.registerBlock(blockNickel,"nickelBlock");
-            GameRegistry.registerItem(itemIngotNickel,"nickelIngot");
-            GameRegistry.registerItem(itemDustNickel,"nickelDust");
+            createRegistry(blockOreNickel,itemBlockOreNickel,"nickelOre");
+            createRegistry(blockNickel,itemBlockNickel,"nickelBlock");
+            createRegistry(itemIngotNickel,"nickelIngot");
+            createRegistry(itemDustNickel,"nickelDust");
+            GameRegistry.register(blockOreNickel);
+            GameRegistry.register(itemBlockOreNickel);
+            GameRegistry.register(blockNickel);
+            GameRegistry.register(itemBlockNickel);
+            GameRegistry.register(itemIngotNickel);
+            GameRegistry.register(itemDustNickel);
             initOreDict(blockOreNickel,"oreNickel");
             initOreDict(blockNickel,"blockNickel");
             initOreDict(itemIngotNickel,"ingotNickel");
@@ -595,5 +879,18 @@ public class InitBlocks
     {
         ItemStack stack = new ItemStack(item,1);
         OreDictionary.registerOre(name,stack);
+    }
+    public static void createRegistry(Block block,ItemBlock itemBlock, String name)
+    {
+        block.setRegistryName("extraores",name);
+        createRegitstry(itemBlock,block.getRegistryName().toString());
+    }
+    public static void createRegistry(Item item, String name)
+    {
+        item.setRegistryName("extraores",name);
+    }
+    public static void createRegitstry(ItemBlock itemBlock, String name)
+    {
+        itemBlock.setRegistryName(name);
     }
 }
