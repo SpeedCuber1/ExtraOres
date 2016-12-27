@@ -36,7 +36,11 @@ minecraft {
     mappings = "snapshot_20161209"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
-
+repositories {
+    maven {
+        url = "http://dvs1.progwml6.com/files/maven"
+    }
+}
 dependencies {
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
@@ -54,9 +58,6 @@ dependencies {
     // except that these dependencies get remapped to your current MCP mappings
     //deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
     //deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-
-
-
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
