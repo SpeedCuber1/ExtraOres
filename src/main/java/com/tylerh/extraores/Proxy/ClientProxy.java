@@ -1,6 +1,7 @@
 package com.tylerh.extraores.Proxy;
 
 import com.tylerh.extraores.Init.Recipes;
+import com.tylerh.extraores.Util.ConfigHandler;
 import com.tylerh.extraores.Util.EXOreRender;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -14,6 +15,7 @@ public class ClientProxy extends CommonProxy
     public void preInit(FMLPreInitializationEvent event)
     {
         super.preInit(event);
+        ConfigHandler.clientPreInit();
     }
     public void init(FMLInitializationEvent event)
     {
