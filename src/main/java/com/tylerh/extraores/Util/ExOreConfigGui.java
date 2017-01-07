@@ -16,7 +16,7 @@ public class ExOreConfigGui extends GuiConfig
 {
     public ExOreConfigGui(GuiScreen parentScreen)
     {
-        super(parentScreen,properties,ModInfo.MOD_ID,ModInfo.GUI_CATEGORY,false,true, I18n.format("gui.extraores.mainTitle"));
+        super(parentScreen,properties,ModInfo.MOD_ID,ModInfo.GUI_CATEGORY,false,true,"Extra Ores");
     }
     private static Configuration config = ConfigHandler.getConfig();
     private static ConfigElement category_ore = new ConfigElement(config.getCategory(ModInfo.GUI_CATEGORY));
