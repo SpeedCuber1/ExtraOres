@@ -7,7 +7,7 @@ public class ModInfo
 {
     public static final String MOD_ID = "extraores";
     public static final String MOD_NAME = "Extra Ores";
-    public static final String MOD_VERSION = "1.4";
+    public static final String MOD_VERSION = "1.5";
     public static final String CLIENT_PROXY = "com.tylerh.extraores.Proxy.ClientProxy";
     public static final String COMMON_PROXY = "com.tylerh.extraores.Proxy.CommonProxy";
     public static final String GUI_FACTORY = "com.tylerh.extraores.Util.EXOreGUIFactory";
