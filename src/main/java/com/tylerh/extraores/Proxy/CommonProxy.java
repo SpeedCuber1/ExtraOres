@@ -18,6 +18,7 @@ public class CommonProxy
     {
         ConfigHandler.preInit();
         InitBlocks.init();
+        Recipes.init();
     }
     public void init(FMLInitializationEvent event)
     {

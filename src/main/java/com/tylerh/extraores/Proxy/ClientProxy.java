@@ -22,7 +22,6 @@ public class ClientProxy extends CommonProxy
         super.init(event);
         EXOreRender.initBlockRender();
         EXOreRender.initItemRender();
-        Recipes.init();
     }
     public void postInit(FMLPostInitializationEvent event)
     {
