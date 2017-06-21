@@ -28,7 +28,16 @@ public class EXOreGUIFactory implements IModGuiFactory
     {
         return ExOreConfigGui.class;
     }
-
+    @Override
+    public GuiScreen createConfigGui(GuiScreen parentSceen)
+    {
+        return null;
+    }
+    @Override
+    public boolean hasConfigGui()
+    {
+        return false;
+    }
     @Override
     public Set<RuntimeOptionCategoryElement> runtimeGuiCategories()
     {
