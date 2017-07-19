@@ -136,63 +136,63 @@ public class InitBlocks
     public static Block blockNickel;
 
     //ItemBlocks Ores
-    public static ItemBlock itemBlockOreCopper;
-    public static ItemBlock itemBlockOreTin;
-    public static ItemBlock itemBlockOreChromium;
-    public static ItemBlock itemBlockOreCobalt;
-    public static ItemBlock itemBlockOreUnobtainium;
-    public static ItemBlock itemBlockOreManganese;
-    public static ItemBlock itemBlockOreMolybdenum;
-    public static ItemBlock itemBlockOreAluminum;
-    public static ItemBlock itemBlockOreSilver;
-    public static ItemBlock itemBlockOreLead;
-    public static ItemBlock itemBlockOrePlatinum;
-    public static ItemBlock itemBlockOreTungsten;
-    public static ItemBlock itemBlockOreVanadium;
-    public static ItemBlock itemBlockOreZinc;
-    public static ItemBlock itemBlockOreZirconium;
-    public static ItemBlock itemBlockOreNiobium;
-    public static ItemBlock itemBlockOreTechnetium;
-    public static ItemBlock itemBlockOreRuthenium;
-    public static ItemBlock itemBlockOreRhodium;
-    public static ItemBlock itemBlockOrePalladium;
-    public static ItemBlock itemBlockOreCadmium;
-    public static ItemBlock itemBlockOreNeodymium;
-    public static ItemBlock itemBlockOreBismuth;
-    public static ItemBlock itemBlockOreGallium;
-    public static ItemBlock itemBlockOreIndium;
-    public static ItemBlock itemBlockOreThallium;
-    public static ItemBlock itemBlockOreTitanium;
-    public static ItemBlock itemBlockOreNickel;
+    private static ItemBlock itemBlockOreCopper;
+    private static ItemBlock itemBlockOreTin;
+    private static ItemBlock itemBlockOreChromium;
+    private static ItemBlock itemBlockOreCobalt;
+    private static ItemBlock itemBlockOreUnobtainium;
+    private static ItemBlock itemBlockOreManganese;
+    private static ItemBlock itemBlockOreMolybdenum;
+    private static ItemBlock itemBlockOreAluminum;
+    private static ItemBlock itemBlockOreSilver;
+    private static ItemBlock itemBlockOreLead;
+    private static ItemBlock itemBlockOrePlatinum;
+    private static ItemBlock itemBlockOreTungsten;
+    private static ItemBlock itemBlockOreVanadium;
+    private static ItemBlock itemBlockOreZinc;
+    private static ItemBlock itemBlockOreZirconium;
+    private static ItemBlock itemBlockOreNiobium;
+    private static ItemBlock itemBlockOreTechnetium;
+    private static ItemBlock itemBlockOreRuthenium;
+    private static ItemBlock itemBlockOreRhodium;
+    private static ItemBlock itemBlockOrePalladium;
+    private static ItemBlock itemBlockOreCadmium;
+    private static ItemBlock itemBlockOreNeodymium;
+    private static ItemBlock itemBlockOreBismuth;
+    private static ItemBlock itemBlockOreGallium;
+    private static ItemBlock itemBlockOreIndium;
+    private static ItemBlock itemBlockOreThallium;
+    private static ItemBlock itemBlockOreTitanium;
+    private static ItemBlock itemBlockOreNickel;
     //ItemBlocks Blocks
-    public static ItemBlock itemBlockCopper;
-    public static ItemBlock itemBlockTin;
-    public static ItemBlock itemBlockChromium;
-    public static ItemBlock itemBlockCobalt;
-    public static ItemBlock itemBlockUnobtainium;
-    public static ItemBlock itemBlockManganese;
-    public static ItemBlock itemBlockMolybdenum;
-    public static ItemBlock itemBlockAluminum;
-    public static ItemBlock itemBlockSilver;
-    public static ItemBlock itemBlockLead;
-    public static ItemBlock itemBlockPlatinum;
-    public static ItemBlock itemBlockTungsten;
-    public static ItemBlock itemBlockVanadium;
-    public static ItemBlock itemBlockZinc;
-    public static ItemBlock itemBlockZirconium;
-    public static ItemBlock itemBlockNiobium;
-    public static ItemBlock itemBlockTechnetium;
-    public static ItemBlock itemBlockRuthenium;
-    public static ItemBlock itemBlockRhodium;
-    public static ItemBlock itemBlockPalladium;
-    public static ItemBlock itemBlockCadmium;
-    public static ItemBlock itemBlockNeodymium;
-    public static ItemBlock itemBlockBismuth;
-    public static ItemBlock itemBlockGallium;
-    public static ItemBlock itemBlockIndium;
-    public static ItemBlock itemBlockThallium;
-    public static ItemBlock itemBlockTitanium;
-    public static ItemBlock itemBlockNickel;
+    private static ItemBlock itemBlockCopper;
+    private static ItemBlock itemBlockTin;
+    private static ItemBlock itemBlockChromium;
+    private static ItemBlock itemBlockCobalt;
+    private static ItemBlock itemBlockUnobtainium;
+    private static ItemBlock itemBlockManganese;
+    private static ItemBlock itemBlockMolybdenum;
+    private static ItemBlock itemBlockAluminum;
+    private static ItemBlock itemBlockSilver;
+    private static ItemBlock itemBlockLead;
+    private static ItemBlock itemBlockPlatinum;
+    private static ItemBlock itemBlockTungsten;
+    private static ItemBlock itemBlockVanadium;
+    private static ItemBlock itemBlockZinc;
+    private static ItemBlock itemBlockZirconium;
+    private static ItemBlock itemBlockNiobium;
+    private static ItemBlock itemBlockTechnetium;
+    private static ItemBlock itemBlockRuthenium;
+    private static ItemBlock itemBlockRhodium;
+    private static ItemBlock itemBlockPalladium;
+    private static ItemBlock itemBlockCadmium;
+    private static ItemBlock itemBlockNeodymium;
+    private static ItemBlock itemBlockBismuth;
+    private static ItemBlock itemBlockGallium;
+    private static ItemBlock itemBlockIndium;
+    private static ItemBlock itemBlockThallium;
+    private static ItemBlock itemBlockTitanium;
+    private static ItemBlock itemBlockNickel;
 
     //Dusts
     public static Item itemDustCopper;
@@ -871,26 +871,26 @@ public class InitBlocks
             initOreDict(itemDustNickel,"dustNickel");
         }
     }
-    public static void initOreDict(Block block, String name)
+    private static void initOreDict(Block block, String name)
     {
         ItemStack stack = new ItemStack(block,1);
         OreDictionary.registerOre(name,stack);
     }
-    public static void initOreDict(Item item, String name)
+    private static void initOreDict(Item item, String name)
     {
         ItemStack stack = new ItemStack(item,1);
         OreDictionary.registerOre(name,stack);
     }
-    public static void createRegistry(Block block,ItemBlock itemBlock, String name)
+    private static void createRegistry(Block block,ItemBlock itemBlock, String name)
     {
         block.setRegistryName("extraores",name);
         createRegitstry(itemBlock,block.getRegistryName().toString());
     }
-    public static void createRegistry(Item item, String name)
+    private static void createRegistry(Item item, String name)
     {
         item.setRegistryName("extraores",name);
     }
-    public static void createRegitstry(ItemBlock itemBlock, String name)
+    private static void createRegitstry(ItemBlock itemBlock, String name)
     {
         itemBlock.setRegistryName(name);
     }
