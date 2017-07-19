@@ -1,19 +1,29 @@
 package com.tylerh.extraores.Init;
 
+import com.google.gson.JsonObject;
+import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.common.crafting.IRecipeFactory;
+import net.minecraftforge.common.crafting.JsonContext;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+
+import java.rmi.MarshalledObject;
 
 /**
  * Created by Tyler on 4/29/2016.
  */
 public class Recipes
 {
-    public static boolean registerDusts;
+    private static boolean registerDusts;
     public static void init()
     {
+        String location;
         if(Loader.isModLoaded("EnderIO"))
         {
             registerDusts = true;
@@ -28,6 +38,9 @@ public class Recipes
             GameRegistry.addSmelting(InitBlocks.blockOreCopper,new ItemStack(InitBlocks.itemIngotCopper,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustCopper,new ItemStack(InitBlocks.itemIngotCopper,1),0);
             //Normal Crafting
+            location = ModInfo.MOD_ID + ":copperblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -611,6 +624,34 @@ public class Recipes
                         "</recipeGroup>";
                 FMLInterModComms.sendMessage("EnderIO","recipe:sagmill",recipe);
             }
+        }
+    }
+    public static void registerHelper(String resource,String mode)
+    {
+        ResourceLocation resourceLocation;
+        if(mode == "Compress")
+        {
+            resourceLocation = new ResourceLocation(resource + ".compressed.json");
+            CraftingHelper.register(resourceLocation, new IRecipeFactory()
+            {
+                @Override
+                public IRecipe parse(JsonContext context, JsonObject json)
+                {
+                    return CraftingHelper.getRecipe(json, context);
+                }
+            });
+        }
+        else if (mode == "Decompress")
+        {
+            resourceLocation = new ResourceLocation(resource + ".decompressed.json");
+            CraftingHelper.register(resourceLocation, new IRecipeFactory()
+            {
+                @Override
+                public IRecipe parse(JsonContext context, JsonObject json)
+                {
+                    return CraftingHelper.getRecipe(json, context);
+                }
+            });
         }
     }
 }
