@@ -1,0 +1,18 @@
+{
+  "group": "Extra Ores",
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "extraores:blockPlatinum"
+  },
+  "pattern": [
+    "ppp",
+    "ppp",
+    "ppp"
+  ],
+  "key": {
+    "p": {
+      "type": "forge:ore_dict",
+      "ore": "ingotPlatinum"
+    }
+  }
+}

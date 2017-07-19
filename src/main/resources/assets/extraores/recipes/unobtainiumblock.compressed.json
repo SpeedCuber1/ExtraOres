@@ -1,0 +1,18 @@
+{
+  "group": "Extra Ores",
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "extraores:blockUnobtainium"
+  },
+  "pattern": [
+    "uuu",
+    "uuu",
+    "uuu"
+  ],
+  "key": {
+    "u": {
+      "type": "forge:ore_dict",
+      "ore": "ingotUnobtainium"
+    }
+  }
+}

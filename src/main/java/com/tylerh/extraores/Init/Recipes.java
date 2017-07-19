@@ -63,6 +63,9 @@ public class Recipes
             GameRegistry.addSmelting(InitBlocks.blockOreTin,new ItemStack(InitBlocks.itemIngotTin,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustTin,new ItemStack(InitBlocks.itemIngotTin,1),0);
             //Normal Crafting
+            location = ModInfo.MOD_ID + ":tinblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -84,6 +87,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreChromium,new ItemStack(InitBlocks.itemIngotChromium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustChromium,new ItemStack(InitBlocks.itemIngotChromium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":chromiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -105,6 +112,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreCobalt,new ItemStack(InitBlocks.itemIngotCobalt,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustCobalt,new ItemStack(InitBlocks.itemIngotCobalt,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":cobaltblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -126,6 +137,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreUnobtainium,new ItemStack(InitBlocks.itemIngotUnobtainium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustUnobtainium,new ItemStack(InitBlocks.itemIngotUnobtainium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":unobtainiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -147,6 +162,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreManganese,new ItemStack(InitBlocks.itemIngotManganese,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustManganese,new ItemStack(InitBlocks.itemIngotManganese,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":manganeseblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -168,6 +187,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreMolybdenum,new ItemStack(InitBlocks.itemIngotMolybdenum,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustMolybdenum,new ItemStack(InitBlocks.itemIngotMolybdenum,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":molybdenumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -189,6 +212,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreAluminum,new ItemStack(InitBlocks.itemIngotAluminum,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustAluminum,new ItemStack(InitBlocks.itemIngotAluminum,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":aluminumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -210,6 +237,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreSilver,new ItemStack(InitBlocks.itemIngotSilver,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustSilver,new ItemStack(InitBlocks.itemIngotSilver,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":silverblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -231,6 +262,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreLead,new ItemStack(InitBlocks.itemIngotLead,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustLead,new ItemStack(InitBlocks.itemIngotLead,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":leadblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -252,6 +287,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOrePlatinum,new ItemStack(InitBlocks.itemIngotPlatinum,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustPlatinum,new ItemStack(InitBlocks.itemIngotPlatinum,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":platinumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -273,6 +312,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreTungsten,new ItemStack(InitBlocks.itemIngotTungsten,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustTungsten,new ItemStack(InitBlocks.itemIngotTungsten,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":tungstenblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -294,6 +337,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreVanadium,new ItemStack(InitBlocks.itemIngotVanadium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustVanadium,new ItemStack(InitBlocks.itemIngotVanadium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":vanadiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -315,6 +362,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreZinc,new ItemStack(InitBlocks.itemIngotZinc,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustZinc,new ItemStack(InitBlocks.itemIngotZinc,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":zincblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -336,6 +387,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreZirconium,new ItemStack(InitBlocks.itemIngotZirconium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustZirconium,new ItemStack(InitBlocks.itemIngotZirconium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":zirconiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -357,6 +412,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreNiobium,new ItemStack(InitBlocks.itemIngotNiobium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustNiobium,new ItemStack(InitBlocks.itemIngotNiobium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":niobiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -378,6 +437,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreTechnetium,new ItemStack(InitBlocks.itemIngotTechnetium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustTechnetium,new ItemStack(InitBlocks.itemIngotTechnetium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":technetiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -399,6 +462,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreRuthenium,new ItemStack(InitBlocks.itemIngotRuthenium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustRuthenium,new ItemStack(InitBlocks.itemIngotRuthenium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":rutheniumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -420,6 +487,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreRhodium,new ItemStack(InitBlocks.itemIngotRhodium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustRhodium,new ItemStack(InitBlocks.itemIngotRhodium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":rhodiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -441,6 +512,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOrePalladium,new ItemStack(InitBlocks.itemIngotPalladium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustPalladium,new ItemStack(InitBlocks.itemIngotPalladium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":palladiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -462,6 +537,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreCadmium,new ItemStack(InitBlocks.itemIngotCadmium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustCadmium,new ItemStack(InitBlocks.itemIngotCadmium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":cadmiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -483,6 +562,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreNeodymium,new ItemStack(InitBlocks.itemIngotNeodymium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustNeodymium,new ItemStack(InitBlocks.itemIngotNeodymium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":neodymiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -504,6 +587,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreBismuth,new ItemStack(InitBlocks.itemIngotBismuth,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustBismuth,new ItemStack(InitBlocks.itemIngotBismuth,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":bismuthblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -525,6 +612,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreGallium,new ItemStack(InitBlocks.itemIngotGallium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustGallium,new ItemStack(InitBlocks.itemIngotGallium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":galliumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -546,6 +637,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreIndium,new ItemStack(InitBlocks.itemIngotIndium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustIndium,new ItemStack(InitBlocks.itemIngotIndium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":indiumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -567,6 +662,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreThallium,new ItemStack(InitBlocks.itemIngotThallium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustThallium,new ItemStack(InitBlocks.itemIngotThallium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":thalliumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -588,6 +687,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreTitanium,new ItemStack(InitBlocks.itemIngotTitanium,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustTitanium,new ItemStack(InitBlocks.itemIngotTitanium,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":titaniumblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {
@@ -609,6 +712,10 @@ public class Recipes
             //Smelting
             GameRegistry.addSmelting(InitBlocks.blockOreNickel,new ItemStack(InitBlocks.itemIngotNickel,1),1.0f);
             GameRegistry.addSmelting(InitBlocks.itemDustNickel,new ItemStack(InitBlocks.itemIngotNickel,1),0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":nickelblock";
+            registerHelper(location,"Compress");
+            registerHelper(location, "Decompress");
             //Pulverizing("EnderIO Req'd")
             if(registerDusts)
             {

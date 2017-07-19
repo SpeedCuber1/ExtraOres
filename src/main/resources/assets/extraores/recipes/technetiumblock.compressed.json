@@ -1,0 +1,18 @@
+{
+  "group": "Extra Ores",
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "extraores:blockTechnetium"
+  },
+  "pattern": [
+    "ttt",
+    "ttt",
+    "ttt"
+  ],
+  "key": {
+    "t": {
+      "type": "forge:ore_dict",
+      "ore": "ingotTechnetium"
+    }
+  }
+}
