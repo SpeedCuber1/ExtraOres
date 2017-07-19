@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "extraores:itemIngotLead",
+    "item": "extraores:leadIngot",
     "count": 9
   },
   "ingredients": [

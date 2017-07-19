@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "extraores:itemIngotVanadium",
+    "item": "extraores:vanadiumIngot",
     "count": 9
   },
   "ingredients": [

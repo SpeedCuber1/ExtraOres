@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "extraores:itemIngotZirconium",
+    "item": "extraores:zirconiumIngot",
     "count": 9
   },
   "ingredients": [

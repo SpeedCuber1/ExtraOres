@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "extraores:itemIngotTechnetium",
+    "item": "extraores:technetiumIngot",
     "count": 9
   },
   "ingredients": [

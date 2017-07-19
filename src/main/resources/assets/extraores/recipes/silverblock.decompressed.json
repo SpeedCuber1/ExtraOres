@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "extraores:itemIngotSilver",
+    "item": "extraores:silverIngot",
     "count": 9
   },
   "ingredients": [

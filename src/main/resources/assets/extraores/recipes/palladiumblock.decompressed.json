@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "extraores:itemIngotPalladium",
+    "item": "extraores:palladiumIngot",
     "count": 9
   },
   "ingredients": [
