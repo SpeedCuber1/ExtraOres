@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shaped",
   "result": {
-    "item": "extraores:blockPalladium"
+    "item": "extraores:palladiumBlock"
   },
   "pattern": [
     "ppp",

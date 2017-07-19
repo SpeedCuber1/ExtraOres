@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shaped",
   "result": {
-    "item": "extraores:blockGallium"
+    "item": "extraores:galliumBlock"
   },
   "pattern": [
     "ggg",

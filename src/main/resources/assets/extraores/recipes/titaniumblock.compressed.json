@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shaped",
   "result": {
-    "item": "extraores:blockTitanium"
+    "item": "extraores:titaniumBlock"
   },
   "pattern": [
     "ttt",
