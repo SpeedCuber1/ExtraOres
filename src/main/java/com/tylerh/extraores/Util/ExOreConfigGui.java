@@ -7,6 +7,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.client.config.IConfigElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
