@@ -58,7 +58,7 @@ public class ConfigHandler
         Property propSilver = config.get(ModInfo.GUI_CATEGORY,"Silver",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
         Property propLead = config.get(ModInfo.GUI_CATEGORY,"Lead",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
         Property propPlatinum = config.get(ModInfo.GUI_CATEGORY,"Platinum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propTungsten = config.get(ModInfo.GUI_CATEGORY,"Tungstem",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
+        Property propTungsten = config.get(ModInfo.GUI_CATEGORY,"Tungsten",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
         Property propVanadium = config.get(ModInfo.GUI_CATEGORY,"Vanadium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
         Property propZinc = config.get(ModInfo.GUI_CATEGORY,"Zinc",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
         Property propZirconium = config.get(ModInfo.GUI_CATEGORY,"Zirconium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
