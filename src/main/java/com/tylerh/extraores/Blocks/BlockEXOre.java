@@ -12,9 +12,10 @@ public class BlockEXOre extends Block
     public BlockEXOre(Material mat, float hardness, float resistance, String uName)
     {
         super(mat);
-        this.setHardness(hardness);
-        this.setResistance(resistance);
-        this.setUnlocalizedName(uName);
-        this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
+        setHardness(hardness);
+        setResistance(resistance);
+        setUnlocalizedName(uName);
+        setHarvestLevel("pickaxe", 2);
+        setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
     }
 }

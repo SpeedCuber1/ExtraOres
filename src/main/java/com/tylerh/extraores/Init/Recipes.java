@@ -21,6 +21,7 @@ import java.rmi.MarshalledObject;
 public class Recipes
 {
     private static boolean registerDusts;
+    private static boolean registerMek;
     public static void init()
     {
         String location;
@@ -31,6 +32,14 @@ public class Recipes
         else
         {
             registerDusts = false;
+        }
+        if(Loader.isModLoaded("Mekanism"))
+        {
+            registerMek = true;
+        }
+        else
+        {
+            registerMek = false;
         }
         if(InitBlocks.registerCopper)
         {
@@ -733,10 +742,10 @@ public class Recipes
             }
         }
     }
-    public static void registerHelper(String resource,String mode)
+    private static void registerHelper(String resource,String mode)
     {
         ResourceLocation resourceLocation;
-        if(mode == "Compress")
+        if(mode.equals("Compress"))
         {
             resourceLocation = new ResourceLocation(resource + ".compressed.json");
             CraftingHelper.register(resourceLocation, new IRecipeFactory()
@@ -748,7 +757,7 @@ public class Recipes
                 }
             });
         }
-        else if (mode == "Decompress")
+        else if (mode.equals("Decompress"))
         {
             resourceLocation = new ResourceLocation(resource + ".decompressed.json");
             CraftingHelper.register(resourceLocation, new IRecipeFactory()

@@ -10,71 +10,109 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Tyler on 4/29/2016.
- */
 public class ConfigHandler
 {
+    private static Configuration config = null;
+
     public static void preInit()
     {
-        File configFile = new File(Loader.instance().getConfigDir(),"ExtraOres.cfg");
+        File configFile = new File(Loader.instance().getConfigDir(), "ExtraOres.cfg");
         config = new Configuration(configFile);
         syncFromFile();
     }
+
     public static void clientPreInit()
     {
         MinecraftForge.EVENT_BUS.register(new ExOreEventHandler());
     }
+
     public static Configuration getConfig()
     {
         return config;
     }
+
     public static void syncFromFile()
     {
-        syncConfig(true,true);
+        syncConfig(true, true);
     }
+
     public static void syncFromGUI()
     {
-        syncConfig(false,true);
+        syncConfig(false, true);
     }
+
     public static void syncFromFields()
     {
-        syncConfig(false,false);
+        syncConfig(false, false);
     }
+
     private static void syncConfig(boolean loadConfigFromFile, boolean readFieldsFromConfig)
     {
-        if(loadConfigFromFile)
+        if (loadConfigFromFile)
         {
             config.load();
         }
-        Property propCopper = config.get(ModInfo.GUI_CATEGORY,"Copper",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propTin = config.get(ModInfo.GUI_CATEGORY,"Tin",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propChromium = config.get(ModInfo.GUI_CATEGORY,"Chromium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propCobalt = config.get(ModInfo.GUI_CATEGORY,"Cobalt",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propUnobtainium = config.get(ModInfo.GUI_CATEGORY,"Unobtainium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propManganese = config.get(ModInfo.GUI_CATEGORY,"Manganese",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propMolybdenum = config.get(ModInfo.GUI_CATEGORY,"Molybdenum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propAluminum = config.get(ModInfo.GUI_CATEGORY,"Aluminum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propSilver = config.get(ModInfo.GUI_CATEGORY,"Silver",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propLead = config.get(ModInfo.GUI_CATEGORY,"Lead",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propPlatinum = config.get(ModInfo.GUI_CATEGORY,"Platinum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propTungsten = config.get(ModInfo.GUI_CATEGORY,"Tungsten",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propVanadium = config.get(ModInfo.GUI_CATEGORY,"Vanadium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propZinc = config.get(ModInfo.GUI_CATEGORY,"Zinc",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propZirconium = config.get(ModInfo.GUI_CATEGORY,"Zirconium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propNiobium = config.get(ModInfo.GUI_CATEGORY,"Niobium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propTechnetium = config.get(ModInfo.GUI_CATEGORY,"Technetium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propRuthenium = config.get(ModInfo.GUI_CATEGORY,"Ruthenium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propRhodium = config.get(ModInfo.GUI_CATEGORY,"Rhodium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propPalladium = config.get(ModInfo.GUI_CATEGORY,"Palladium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propCadmium = config.get(ModInfo.GUI_CATEGORY,"Cadmium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propNeodymium = config.get(ModInfo.GUI_CATEGORY,"Neodymium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propBismuth = config.get(ModInfo.GUI_CATEGORY,"Bismuth",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propGallium = config.get(ModInfo.GUI_CATEGORY,"Gallium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propIndium = config.get(ModInfo.GUI_CATEGORY,"Indium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propThallium = config.get(ModInfo.GUI_CATEGORY,"Thallium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propTitanium = config.get(ModInfo.GUI_CATEGORY,"Titanium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
-        Property propNickel = config.get(ModInfo.GUI_CATEGORY,"Nickel",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(true);
+        Property propCopper = config.get(ModInfo.GUI_CATEGORY, "Copper", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propTin = config.get(ModInfo.GUI_CATEGORY, "Tin", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propChromium = config.get(ModInfo.GUI_CATEGORY, "Chromium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propCobalt = config.get(ModInfo.GUI_CATEGORY, "Cobalt", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propUnobtainium = config.get(ModInfo.GUI_CATEGORY, "Unobtainium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propManganese = config.get(ModInfo.GUI_CATEGORY, "Manganese", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propMolybdenum = config.get(ModInfo.GUI_CATEGORY, "Molybdenum", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propAluminum = config.get(ModInfo.GUI_CATEGORY, "Aluminum", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propSilver = config.get(ModInfo.GUI_CATEGORY, "Silver", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propLead = config.get(ModInfo.GUI_CATEGORY, "Lead", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propPlatinum = config.get(ModInfo.GUI_CATEGORY, "Platinum", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propTungsten = config.get(ModInfo.GUI_CATEGORY, "Tungsten", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propVanadium = config.get(ModInfo.GUI_CATEGORY, "Vanadium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propZinc = config.get(ModInfo.GUI_CATEGORY, "Zinc", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propZirconium = config.get(ModInfo.GUI_CATEGORY, "Zirconium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propNiobium = config.get(ModInfo.GUI_CATEGORY, "Niobium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propTechnetium = config.get(ModInfo.GUI_CATEGORY, "Technetium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propRuthenium = config.get(ModInfo.GUI_CATEGORY, "Ruthenium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propRhodium = config.get(ModInfo.GUI_CATEGORY, "Rhodium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propPalladium = config.get(ModInfo.GUI_CATEGORY, "Palladium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propCadmium = config.get(ModInfo.GUI_CATEGORY, "Cadmium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propNeodymium = config.get(ModInfo.GUI_CATEGORY, "Neodymium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propBismuth = config.get(ModInfo.GUI_CATEGORY, "Bismuth", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propGallium = config.get(ModInfo.GUI_CATEGORY, "Gallium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propIndium = config.get(ModInfo.GUI_CATEGORY, "Indium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propThallium = config.get(ModInfo.GUI_CATEGORY, "Thallium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propTitanium = config.get(ModInfo.GUI_CATEGORY, "Titanium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propNickel = config.get(ModInfo.GUI_CATEGORY, "Nickel", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propAdamantine = config.get(ModInfo.GUI_CATEGORY,"Adamantine",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propAldourite = config.get(ModInfo.GUI_CATEGORY,"Aldourite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propAstralSilver = config.get(ModInfo.GUI_CATEGORY,"Astral_Silver",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propAtlarus = config.get(ModInfo.GUI_CATEGORY,"Atlarus",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propCarmot = config.get(ModInfo.GUI_CATEGORY,"Carmot",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propCeruclase = config.get(ModInfo.GUI_CATEGORY,"Ceruclase",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propDeepIron = config.get(ModInfo.GUI_CATEGORY,"Deep_Iron",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propIgnatius = config.get(ModInfo.GUI_CATEGORY,"Ignatius",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propInfuscolium = config.get(ModInfo.GUI_CATEGORY,"Infuscolium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propKalendrite = config.get(ModInfo.GUI_CATEGORY,"Kalendrite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propLemurite = config.get(ModInfo.GUI_CATEGORY,"Lemurite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propMidasium = config.get(ModInfo.GUI_CATEGORY,"Midasium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propMithril = config.get(ModInfo.GUI_CATEGORY,"Mithril",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propOrichalcum = config.get(ModInfo.GUI_CATEGORY,"Orichalcum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propOureclase = config.get(ModInfo.GUI_CATEGORY,"Oureclase",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propPrometheum = config.get(ModInfo.GUI_CATEGORY,"Prometheum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propRubracium = config.get(ModInfo.GUI_CATEGORY,"Rubracium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propSanguinite = config.get(ModInfo.GUI_CATEGORY,"Sanguinite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propShadowIron = config.get(ModInfo.GUI_CATEGORY,"Shadow_Iron",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propVulcanite = config. get(ModInfo.GUI_CATEGORY,"Vulcanite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propVyroxeres = config.get(ModInfo.GUI_CATEGORY,"Vyroxeres",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propAmordrine = config.get(ModInfo.GUI_CATEGORY, "Amordrine",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propAngmallen = config.get(ModInfo.GUI_CATEGORY,"Angmallen",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propBlackSteel = config.get(ModInfo.GUI_CATEGORY,"Black_Steel",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propCelenegil = config.get(ModInfo.GUI_CATEGORY,"Celenegil",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propDesichalkos = config.get(ModInfo.GUI_CATEGORY,"Desichalkos",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propEximite = config.get(ModInfo.GUI_CATEGORY,"Eximite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propHaderoth = config.get(ModInfo.GUI_CATEGORY,"Haderoth",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propHepatizon = config.get(ModInfo.GUI_CATEGORY,"Hepatizon",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propInolashite = config.get(ModInfo.GUI_CATEGORY,"Inolashite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propMeutoite = config.get(ModInfo.GUI_CATEGORY,"Meutoite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propQuicksilver = config.get(ModInfo.GUI_CATEGORY,"Quicksilver",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propTartarite = config.get(ModInfo.GUI_CATEGORY,"Tartarite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
 
         List<String> propOrder = new ArrayList<String>();
         propOrder.add(propCopper.getName());
@@ -105,9 +143,30 @@ public class ConfigHandler
         propOrder.add(propThallium.getName());
         propOrder.add(propTitanium.getName());
         propOrder.add(propNickel.getName());
+        propOrder.add(propAdamantine.getName());
+        propOrder.add(propAldourite.getName());
+        propOrder.add(propAstralSilver.getName());
+        propOrder.add(propAtlarus.getName());
+        propOrder.add(propCarmot.getName());
+        propOrder.add(propCeruclase.getName());
+        propOrder.add(propDeepIron.getName());
+        propOrder.add(propIgnatius.getName());
+        propOrder.add(propInfuscolium.getName());
+        propOrder.add(propKalendrite.getName());
+        propOrder.add(propLemurite.getName());
+        propOrder.add(propMidasium.getName());
+        propOrder.add(propMithril.getName());
+        propOrder.add(propOrichalcum.getName());
+        propOrder.add(propOureclase.getName());
+        propOrder.add(propPrometheum.getName());
+        propOrder.add(propRubracium.getName());
+        propOrder.add(propSanguinite.getName());
+        propOrder.add(propShadowIron.getName());
+        propOrder.add(propVulcanite.getName());
+        propOrder.add(propVyroxeres.getName());
 
-        config.setCategoryPropertyOrder(ModInfo.GUI_CATEGORY,propOrder);
-        if(readFieldsFromConfig)
+        config.setCategoryPropertyOrder(ModInfo.GUI_CATEGORY, propOrder);
+        if (readFieldsFromConfig)
         {
             InitBlocks.registerCopper = propCopper.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTin = propTin.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -137,6 +196,27 @@ public class ConfigHandler
             InitBlocks.registerThallium = propThallium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTitanium = propTitanium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerNickel = propNickel.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerAdamantine = propAdamantine.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerAldourite = propAldourite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerAstralSilver = propAstralSilver.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerAtlarus = propAtlarus.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerCarmot = propCarmot.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerCeruclase = propCeruclase.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerDeepIron = propDeepIron.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerIgnatius = propIgnatius.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerInfuscolium = propInfuscolium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerKalendrite = propKalendrite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerLemurite = propLemurite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerMidasium = propMidasium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerMithril = propMithril.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerOrichalcum = propOrichalcum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerOureclase = propOureclase.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerPrometheum = propPrometheum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerRubracium = propRubracium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerSanguinite = propSanguinite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerShadowIron = propShadowIron.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerVulcanite = propVulcanite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerVyroxeres = propVyroxeres.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
         }
         propCopper.set(InitBlocks.registerCopper);
         propTin.set(InitBlocks.registerTin);
@@ -166,10 +246,31 @@ public class ConfigHandler
         propThallium.set(InitBlocks.registerThallium);
         propTitanium.set(InitBlocks.registerTitanium);
         propNickel.set(InitBlocks.registerNickel);
-        if(config.hasChanged())
+        propAdamantine.set(InitBlocks.registerAdamantine);
+        propAldourite.set(InitBlocks.registerAldourite);
+        propAstralSilver.set(InitBlocks.registerAstralSilver);
+        propAtlarus.set(InitBlocks.registerAtlarus);
+        propCarmot.set(InitBlocks.registerCarmot);
+        propCeruclase.set(InitBlocks.registerCeruclase);
+        propDeepIron.set(InitBlocks.registerDeepIron);
+        propIgnatius.set(InitBlocks.registerIgnatius);
+        propInfuscolium.set(InitBlocks.registerInfuscolium);
+        propKalendrite.set(InitBlocks.registerKalendrite);
+        propLemurite.set(InitBlocks.registerLemurite);
+        propMidasium.set(InitBlocks.registerMidasium);
+        propMithril.set(InitBlocks.registerMithril);
+        propOrichalcum.set(InitBlocks.registerOrichalcum);
+        propOureclase.set(InitBlocks.registerOureclase);
+        propPrometheum.set(InitBlocks.registerPrometheum);
+        propRubracium.set(InitBlocks.registerRubracium);
+        propSanguinite.set(InitBlocks.registerSanguinite);
+        propShadowIron.set(InitBlocks.registerShadowIron);
+        propVulcanite.set(InitBlocks.registerVulcanite);
+        propVyroxeres.set(InitBlocks.registerVyroxeres);
+
+        if (config.hasChanged())
         {
             config.save();
         }
     }
-    private static Configuration config = null;
 }

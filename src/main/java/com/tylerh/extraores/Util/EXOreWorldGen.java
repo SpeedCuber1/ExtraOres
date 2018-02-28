@@ -43,7 +43,27 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator thalliumOre;
     private WorldGenerator titaniumOre;
     private WorldGenerator nickelOre;
-
+    private WorldGenerator adamantineOre;
+    private WorldGenerator aldouriteOre;
+    private WorldGenerator astralSilverOre;
+    private WorldGenerator atlarusOre;
+    private WorldGenerator carmotOre;
+    private WorldGenerator ceruclaseOre;
+    private WorldGenerator deepIronOre;
+    private WorldGenerator ignatiusOre;
+    private WorldGenerator infuscoliumOre;
+    private WorldGenerator kalendriteOre;
+    private WorldGenerator lemuriteOre;
+    private WorldGenerator midasiumOre;
+    private WorldGenerator mithrilOre;
+    private WorldGenerator orichalcumOre;
+    private WorldGenerator oureclaseOre;
+    private WorldGenerator prometheumOre;
+    private WorldGenerator rubraciumOre;
+    private WorldGenerator sanguiniteOre;
+    private WorldGenerator shadowIronOre;
+    private WorldGenerator vulcaniteOre;
+    private WorldGenerator vyroxeresOre;
     public EXOreWorldGen()
     {
         if(InitBlocks.registerCopper)
@@ -158,11 +178,95 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.nickelOre = new EXOreWorldGenMinable(InitBlocks.blockOreNickel.getDefaultState(), 4);
         }
+        if(InitBlocks.registerAdamantine)
+        {
+            this.adamantineOre = new EXOreWorldGenMinable(InitBlocks.blockOreAdamantine.getDefaultState(),4);
+        }
+        if(InitBlocks.registerAldourite)
+        {
+            this.aldouriteOre = new EXOreWorldGenMinable(InitBlocks.blockOreAldourite.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerAstralSilver)
+        {
+            this.astralSilverOre = new EXOreWorldGenMinable(InitBlocks.blockOreAstralSilver.getDefaultState(),4);
+        }
+        if(InitBlocks.registerAtlarus)
+        {
+            this.atlarusOre = new EXOreWorldGenMinable(InitBlocks.blockOreAtlarus.getDefaultState(),4);
+        }
+        if(InitBlocks.registerCarmot)
+        {
+            this.carmotOre = new EXOreWorldGenMinable(InitBlocks.blockOreCarmot.getDefaultState(),4);
+        }
+        if(InitBlocks.registerCeruclase)
+        {
+            this.ceruclaseOre = new EXOreWorldGenMinable(InitBlocks.blockOreCeruclase.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerDeepIron)
+        {
+            this.deepIronOre = new EXOreWorldGenMinable(InitBlocks.blockOreDeepIron.getDefaultState(),4);
+        }
+        if(InitBlocks.registerIgnatius)
+        {
+            this.ignatiusOre = new EXOreWorldGenMinable(InitBlocks.blockOreIgnatius.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerInfuscolium)
+        {
+            this.infuscoliumOre = new EXOreWorldGenMinable(InitBlocks.blockOreInfuscolium.getDefaultState(),4);
+        }
+        if(InitBlocks.registerKalendrite)
+        {
+            this.kalendriteOre = new EXOreWorldGenMinable(InitBlocks.blockOreKalendrite.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerLemurite)
+        {
+            this.lemuriteOre = new EXOreWorldGenMinable(InitBlocks.blockOreLemurite.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerMidasium)
+        {
+            this.midasiumOre = new EXOreWorldGenMinable(InitBlocks.blockOreMidasium.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerMithril)
+        {
+            this.mithrilOre = new EXOreWorldGenMinable(InitBlocks.blockOreMithril.getDefaultState(),4);
+        }
+        if(InitBlocks.registerOrichalcum)
+        {
+            this.orichalcumOre = new EXOreWorldGenMinable(InitBlocks.blockOreOrichalcum.getDefaultState(),4);
+        }
+        if(InitBlocks.registerOureclase)
+        {
+            this.oureclaseOre = new EXOreWorldGenMinable(InitBlocks.blockOreOureclase.getDefaultState(),4);
+        }
+        if(InitBlocks.registerPrometheum)
+        {
+            this.prometheumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePrometheum.getDefaultState(),4);
+        }
+        if(InitBlocks.registerRubracium)
+        {
+            this.rubraciumOre = new EXOreWorldGenMinable(InitBlocks.blockOreRubracium.getDefaultState(),4);
+        }
+        if(InitBlocks.registerSanguinite)
+        {
+            this.sanguiniteOre = new EXOreWorldGenMinable(InitBlocks.blockOreSanguinite.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerShadowIron)
+        {
+            this.shadowIronOre = new EXOreWorldGenMinable(InitBlocks.blockOreShadowIron.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerVulcanite)
+        {
+            this.vulcaniteOre = new EXOreWorldGenMinable(InitBlocks.blockOreVulcanite.getDefaultState(),4,new NetherPredicate());
+        }
+        if(InitBlocks.registerVyroxeres)
+        {
+            this.vyroxeresOre = new EXOreWorldGenMinable(InitBlocks.blockOreVyroxeres.getDefaultState(),4,new NetherPredicate());
+        }
     }
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        if(world.provider.getDimension() == 0)
+        if(world.provider.getDimension() == 0 || world.provider.getDimension() == -100)
         {
             if(InitBlocks.registerCopper)
             {
@@ -275,6 +379,93 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerNickel)
             {
                 runGenerator(this.nickelOre, world, random, chunkX, chunkZ, 20, 0, 100);
+            }
+            if(InitBlocks.registerAdamantine)
+            {
+                runGenerator(this.adamantineOre,world,random,chunkX,chunkZ,20,0,20);
+            }
+            if(InitBlocks.registerAstralSilver)
+            {
+                runGenerator(this.astralSilverOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerAtlarus)
+            {
+                runGenerator(this.atlarusOre,world,random,chunkX,chunkZ,20,0,20);
+            }
+            if(InitBlocks.registerCarmot)
+            {
+                runGenerator(this.carmotOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerDeepIron)
+            {
+                runGenerator(this.deepIronOre,world,random,chunkX,chunkZ,20,0,30);
+            }
+            if(InitBlocks.registerInfuscolium)
+            {
+                runGenerator(this.infuscoliumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerMithril)
+            {
+                runGenerator(this.mithrilOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerOrichalcum)
+            {
+                runGenerator(this.orichalcumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerOureclase)
+            {
+                runGenerator(this.oureclaseOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerPrometheum)
+            {
+                runGenerator(this.prometheumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerRubracium)
+            {
+                runGenerator(this.rubraciumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+        }
+        else if (world.provider.getDimension() == -1)
+        {
+            if(InitBlocks.registerAldourite)
+            {
+                runGenerator(this.aldouriteOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerCeruclase)
+            {
+                runGenerator(this.ceruclaseOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerIgnatius)
+            {
+                runGenerator(this.ignatiusOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerKalendrite)
+            {
+                runGenerator(this.kalendriteOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerLemurite)
+            {
+                runGenerator(this.lemuriteOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerMidasium)
+            {
+                runGenerator(this.midasiumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerSanguinite)
+            {
+                runGenerator(this.sanguiniteOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerShadowIron)
+            {
+                runGenerator(this.shadowIronOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerVulcanite)
+            {
+                runGenerator(this.vulcaniteOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerVyroxeres)
+            {
+                runGenerator(this.vyroxeresOre,world,random,chunkX,chunkZ,20,0,100);
             }
         }
     }
