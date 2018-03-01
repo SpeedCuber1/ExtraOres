@@ -1,0 +1,18 @@
+{
+  "group": "Extra Ores",
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "extraores:vyroxeresBlock"
+  },
+  "pattern": [
+    "vvv",
+    "vvv",
+    "vvv"
+  ],
+  "key": {
+    "v": {
+      "type": "forge:ore_dict",
+      "ore": "ingotVyroxeres"
+    }
+  }
+}

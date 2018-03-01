@@ -1,0 +1,18 @@
+{
+  "group": "Extra Ores",
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "extraores:lemuriteBlock"
+  },
+  "pattern": [
+    "lll",
+    "lll",
+    "lll"
+  ],
+  "key": {
+    "l": {
+      "type": "forge:ore_dict",
+      "ore": "ingotLemurite"
+    }
+  }
+}
