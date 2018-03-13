@@ -33,7 +33,7 @@ public class Recipes
         {
             registerDusts = false;
         }
-        if (Loader.isModLoaded("Mekanism"))
+        if (Loader.isModLoaded("mekanism"))
         {
             registerMek = true;
         }
@@ -70,7 +70,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreCopper).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustCopper, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerTin)
@@ -102,7 +102,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreTin).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustTin, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerChromium)
@@ -134,7 +134,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreChromium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustChromium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerCobalt)
@@ -166,7 +166,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreCobalt).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustCobalt, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerUnobtainium)
@@ -198,7 +198,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreUnobtainium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustUnobtainium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerManganese)
@@ -230,7 +230,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreManganese).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustManganese, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerMolybdenum)
@@ -262,7 +262,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreMolybdenum).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustMolybdenum, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerAluminum)
@@ -294,7 +294,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreAluminum).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustAluminum, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerSilver)
@@ -326,7 +326,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreSilver).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustSilver, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerLead)
@@ -358,7 +358,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreLead).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustLead, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerPlatinum)
@@ -390,7 +390,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOrePlatinum).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustPlatinum, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerTungsten)
@@ -422,7 +422,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreTungsten).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustTungsten, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerVanadium)
@@ -454,7 +454,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreVanadium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustVanadium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerZinc)
@@ -486,7 +486,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreZinc).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustZinc, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerZirconium)
@@ -518,7 +518,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreZirconium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustZirconium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerNiobium)
@@ -550,7 +550,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreNiobium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustNiobium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerTechnetium)
@@ -582,7 +582,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreTechnetium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustTechnetium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerRuthenium)
@@ -614,7 +614,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreRuthenium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustRuthenium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerRhodium)
@@ -646,7 +646,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreRhodium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustRhodium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerPalladium)
@@ -678,7 +678,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOrePalladium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustPalladium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerCadmium)
@@ -710,7 +710,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreCadmium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustCadmium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerNeodymium)
@@ -742,7 +742,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreNeodymium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustNeodymium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerBismuth)
@@ -774,7 +774,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreBismuth).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustBismuth, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerGallium)
@@ -806,7 +806,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreGallium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustGallium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerIndium)
@@ -838,7 +838,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreIndium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustIndium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerThallium)
@@ -870,7 +870,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreThallium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustThallium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerTitanium)
@@ -902,7 +902,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreTitanium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustTitanium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerNickel)
@@ -934,7 +934,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreNickel).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustNickel, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerAdamantine)
@@ -966,7 +966,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreAdamantine).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustAdamantine, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerAldourite)
@@ -998,7 +998,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreAldourite).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustAldourite, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerAstralSilver)
@@ -1030,7 +1030,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreAstralSilver).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustAstralSilver, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerAtlarus)
@@ -1062,7 +1062,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreAtlarus).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustAtlarus, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerCarmot)
@@ -1094,7 +1094,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreCarmot).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustCarmot, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerCeruclase)
@@ -1126,7 +1126,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreCeruclase).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustCeruclase, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerDeepIron)
@@ -1158,7 +1158,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreDeepIron).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustDeepIron, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerIgnatius)
@@ -1190,7 +1190,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreIgnatius).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustIgnatius, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerInfuscolium)
@@ -1222,7 +1222,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreInfuscolium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustInfuscolium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerKalendrite)
@@ -1254,7 +1254,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreKalendrite).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustKalendrite, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerLemurite)
@@ -1286,7 +1286,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreLemurite).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustLemurite, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerMidasium)
@@ -1318,7 +1318,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreMidasium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustMidasium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerMithril)
@@ -1350,7 +1350,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreMithril).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustMithril, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerOrichalcum)
@@ -1382,7 +1382,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreOrichalcum).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustOrichalcum, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerOureclase)
@@ -1414,7 +1414,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreOureclase).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustOureclase, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerPrometheum)
@@ -1446,7 +1446,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOrePrometheum).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustPrometheum, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerRubracium)
@@ -1478,7 +1478,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreRubracium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustRubracium, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerSanguinite)
@@ -1510,7 +1510,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreSanguinite).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustSanguinite, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerShadowIron)
@@ -1542,7 +1542,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreShadowIron).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustShadowIron, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerVulcanite)
@@ -1574,7 +1574,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreVulcanite).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustVulcanite, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
         }
         if (InitBlocks.registerVyroxeres)
@@ -1606,7 +1606,7 @@ public class Recipes
                 NBTTagCompound tag = new NBTTagCompound();
                 tag.setTag("input", new ItemStack(InitBlocks.blockOreVyroxeres).writeToNBT(new NBTTagCompound()));
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustVyroxeres, 2).writeToNBT(new NBTTagCompound()));
-                FMLInterModComms.sendMessage("Mekanism", "EnrichmentChamberRecipe", tag);
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
             }
 
         }
