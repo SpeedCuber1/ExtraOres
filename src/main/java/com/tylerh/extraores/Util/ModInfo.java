@@ -13,6 +13,6 @@ public class ModInfo
     public static final String GUI_FACTORY = "com.tylerh.extraores.Gui.EXOreGUIFactory";
     public static final String GUI_CATEGORY = "ores";
     public static final boolean GUI_DEFAULT_VALUE = true;
-    public static final String[] blockNames = {"Aluminum", "Bismuth", "Cadmium", "Chromium", "Cobalt", "Copper", "Gallium", "Indium", "Lead", "Manganese", "Molybdenum", "Neodymium", "Nickel", "Niobium", "Palladium", "Rhodium", "Ruthenium", "Silver", "Technetium", "Thallium", "Tin", "Titanium", "Tungsten", "Unobtainium", "Vanadium", "Zinc", "Zirconium"};
-    public static final String[] symbols = {"Al", "Bi", "Cd", "Cr", "Co", "Cu", "Ga", "In", "Pb", "Mn", "Mo", "Nd", "Ni", "Nb", "Pd", "Rh", "Ru", "Ag", "Tc", "Tl", "Sn", "Ti", "W", "Un", "V", "Zn", "Zr"};
+    public static final String[] blockNames = {"Aluminum", "Bismuth", "Cadmium", "Chromium", "Cobalt", "Copper", "Gallium", "Indium", "Lead", "Manganese", "Molybdenum", "Neodymium", "Nickel", "Niobium", "Palladium","Platinum", "Rhodium", "Ruthenium", "Silver", "Technetium", "Thallium", "Tin", "Titanium", "Tungsten", "Unobtainium", "Vanadium", "Zinc", "Zirconium"};
+    public static final String[] symbols = {"Al", "Bi", "Cd", "Cr", "Co", "Cu", "Ga", "In", "Pb", "Mn", "Mo", "Nd", "Ni", "Nb", "Pd", "Pt", "Rh", "Ru", "Ag", "Tc", "Tl", "Sn", "Ti", "W", "Un", "V", "Zn", "Zr"};
 }
