@@ -266,7 +266,7 @@ public class EXOreWorldGen implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        if(world.provider.getDimensionType().getName().equals("Overworld") || world.provider.getDimensionType().getName().equals("Deep Dark"))
+        if(world.provider.getDimensionType().getName().equals("overworld") || world.provider.getDimensionType().getName().equals("Deep Dark"))
         {
             if(InitBlocks.registerCopper)
             {
@@ -425,8 +425,9 @@ public class EXOreWorldGen implements IWorldGenerator
                 runGenerator(this.rubraciumOre,world,random,chunkX,chunkZ,20,0,100);
             }
         }
-        else if (world.provider.getDimensionType().getName().equals("Nether"))
+        else if (world.provider.getDimensionType().getName().equals("the_nether"))
         {
+            LogHelper.info(world.provider.getDimensionType().getName());
             if(InitBlocks.registerAldourite)
             {
                 runGenerator(this.aldouriteOre,world,random,chunkX,chunkZ,20,0,100);
