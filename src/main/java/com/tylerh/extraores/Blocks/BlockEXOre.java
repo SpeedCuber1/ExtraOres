@@ -9,13 +9,13 @@ import net.minecraft.block.material.Material;
  */
 public class BlockEXOre extends Block
 {
-    public BlockEXOre(Material mat, float hardness, float resistance, String uName)
+    public BlockEXOre(Material mat,float hardness,float resistance,String uName)
     {
         super(mat);
-        setHardness(hardness);
-        setResistance(resistance);
-        setUnlocalizedName(uName);
+        this.func_149647_a(CreativeTabExtraOres.EXTRA_ORES_TAB);
+        this.blockHardness = hardness;
+        this.blockResistance = resistance;
+        this.func_149663_c(uName);
         setHarvestLevel("pickaxe", 2);
-        setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
     }
 }

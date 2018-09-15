@@ -13,14 +13,13 @@ public class CreativeTabExtraOres
     public static final CreativeTabs EXTRA_ORES_TAB = new CreativeTabs(ModInfo.MOD_ID)
     {
         @Override
-        public ItemStack getTabIconItem()
-        {
+        public ItemStack createIcon() {
             return new ItemStack(Item.getItemFromBlock(InitBlocks.blockOreCopper));
         }
+
         @Override
-        public String getTranslatedTabLabel()
-        {
-            return "Extra Ores";
+        public String getTranslationKey() {
+            return ModInfo.MOD_NAME;
         }
     };
 }

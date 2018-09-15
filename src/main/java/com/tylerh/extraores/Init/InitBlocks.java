@@ -3,6 +3,7 @@ package com.tylerh.extraores.Init;
 import com.tylerh.extraores.Blocks.BlockEXOre;
 import com.tylerh.extraores.Items.ItemBlockExOre;
 import com.tylerh.extraores.Items.ItemEXOre;
+import com.tylerh.extraores.Util.CreativeTabExtraOres;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
