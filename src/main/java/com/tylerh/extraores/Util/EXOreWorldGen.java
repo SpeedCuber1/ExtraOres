@@ -266,7 +266,7 @@ public class EXOreWorldGen implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        if(world.dimension.getType().name().equalsIgnoreCase("overworld")|| world.dimension.getType().name().equalsIgnoreCase("deep dark")|| world.dimension.getType().name().equalsIgnoreCase("rftools_dimension"))
+        if(world.dimension.getType().name().equalsIgnoreCase("overworld")|| world.dimension.getType().name().equalsIgnoreCase("deep dark")|| world.dimension.getType().getId() == 2 || world.dimension.getType().name().equalsIgnoreCase("rftools_dimension"))
         {
             if(InitBlocks.registerCopper)
             {
