@@ -425,7 +425,7 @@ public class EXOreWorldGen implements IWorldGenerator
                 runGenerator(this.rubraciumOre,world,random,chunkX,chunkZ,20,0,100);
             }
         }
-        else if (world.dimension.getType().name().equalsIgnoreCase("the_nether"))
+        else if (world.dimension.getType().getName().equalsIgnoreCase("the_nether") || world.dimension.getType().getId() == -1)
         {
             if(InitBlocks.registerAldourite)
             {
