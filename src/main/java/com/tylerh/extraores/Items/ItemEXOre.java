@@ -19,15 +19,16 @@ public class ItemEXOre extends Item
     public ItemEXOre(String uName)
     {
         super();
-        this.func_77655_b(uName);
-        this.func_77637_a(CreativeTabExtraOres.EXTRA_ORES_TAB);
+        this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
+        this.setUnlocalizedName(uName);
     }
+
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<String> list, ITooltipFlag flag)
     {
         for (int i = 0; i < ModInfo.blockNames.length; i++)
         {
-            if(stack.getTranslationKey().contains(ModInfo.blockNames[i].toLowerCase()) && !stack.getTranslationKey().startsWith("Astral Silver"))
+            if(stack.getDisplayName().contains(ModInfo.blockNames[i]) && !stack.getDisplayName().startsWith("Astral Silver"))
             {
                 list.add("Atomic Symbol: " + ModInfo.symbols[i]);
                 break;

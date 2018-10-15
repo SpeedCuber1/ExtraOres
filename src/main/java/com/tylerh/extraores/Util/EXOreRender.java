@@ -804,6 +804,6 @@ public class EXOreRender
     public static void Register(Item item, String resource)
     {
         ModelResourceLocation location = new ModelResourceLocation(resource,"inventory");
-        Minecraft.getInstance().getItemRenderer().getItemModelMesher().func_178086_a(item,0,location);
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item,0,location);
     }
 }

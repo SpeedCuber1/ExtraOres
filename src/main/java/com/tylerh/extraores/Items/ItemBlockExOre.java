@@ -21,7 +21,7 @@ public class ItemBlockExOre extends ItemBlock
     {
         for(int i = 0; i < ModInfo.blockNames.length; i++)
         {
-            if(stack.getTranslationKey().contains(ModInfo.blockNames[i].toLowerCase()) && !stack.getTranslationKey().startsWith("Astral Silver"))
+            if(stack.getDisplayName().contains(ModInfo.blockNames[i]) && !stack.getDisplayName().startsWith("Astral Silver"))
             {
                 list.add("Atomic Symbol: " + ModInfo.symbols[i]);
                 break;

@@ -28,8 +28,7 @@ public class EXOreWorldGenMinable extends WorldGenerator
         this.numberOfBlocks = blockCount;
         this.predicate = p_i45631_3_;
     }
-
-    public boolean func_180709_b(World worldIn, Random rand, BlockPos position)
+    public boolean generate(World worldIn, Random rand, BlockPos position)
     {
         float f = rand.nextFloat() * (float)Math.PI;
         double d0 = (double)((float)(position.getX() + 8) + MathHelper.sin(f) * (float)this.numberOfBlocks / 8.0F);

@@ -266,7 +266,7 @@ public class EXOreWorldGen implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        if(world.dimension.getType().name().equalsIgnoreCase("overworld")|| world.dimension.getType().name().equalsIgnoreCase("deep dark")|| world.dimension.getType().getId() == 2 || world.dimension.getType().name().equalsIgnoreCase("rftools_dimension"))
+        if(world.provider.getDimensionType().getName().equalsIgnoreCase("Overworld") || world.provider.getDimensionType().getName().equalsIgnoreCase("Deep Dark") || world.provider.getDimensionType().getName().equalsIgnoreCase("rftools_dimesion"))
         {
             if(InitBlocks.registerCopper)
             {
@@ -425,7 +425,7 @@ public class EXOreWorldGen implements IWorldGenerator
                 runGenerator(this.rubraciumOre,world,random,chunkX,chunkZ,20,0,100);
             }
         }
-        else if (world.dimension.getType().getName().equalsIgnoreCase("the_nether") || world.dimension.getType().getId() == -1)
+        else if (world.provider.getDimensionType().getName().equalsIgnoreCase("the_nether"))
         {
             if(InitBlocks.registerAldourite)
             {
@@ -482,7 +482,7 @@ public class EXOreWorldGen implements IWorldGenerator
             int y = minHeight + rand.nextInt(heightDiff);
             int z = chunkZ * 16 + rand.nextInt(16);
             BlockPos pos = new BlockPos(x,y,z);
-            generator.func_180709_b(world,rand,pos);
+            generator.generate(world,rand,pos);
         }
     }
 }
