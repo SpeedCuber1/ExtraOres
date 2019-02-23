@@ -25,7 +25,7 @@ group= "com.tylerh.extraores" // http://maven.apache.org/guides/mini/guide-namin
 archivesBaseName = "ExtraOres"
 
 minecraft {
-    version = "1.12.2-14.23.5.2770"
+    version = "1.12.2-14.23.5.2815"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
