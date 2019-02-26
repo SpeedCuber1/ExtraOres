@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "Mine Adamantine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:adamantineOre",
+            "data": 0
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Adamantine"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "item": "extraores:adamantineore",
+      "data": 0
+    },
+    "title": "It Really DOES Exist",
+    "description":"Mine Adamantine Ore",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "extraores:root"
+}

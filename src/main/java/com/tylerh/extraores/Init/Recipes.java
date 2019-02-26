@@ -41,6 +41,38 @@ public class Recipes
         {
             registerMek = false;
         }
+        if(InitBlocks.registerAmordrine)
+        {
+            //Smelting
+            GameRegistry.addSmelting(InitBlocks.blockOreAmordrine, new ItemStack(InitBlocks.itemIngotAmordrine, 1), 1.0f);
+            GameRegistry.addSmelting(InitBlocks.itemDustAmordrine, new ItemStack(InitBlocks.itemIngotAmordrine, 1), 0);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":amordrineblock";
+            registerHelper(location, "Compress");
+            registerHelper(location, "Decompress");
+            //Pulverizing("EnderIO Req'd")
+            if (registerDusts)
+            {
+                String recipe = "<recipeGroup name=\"ExtraOres\" >" +
+                        "<recipe name=\"Amordrine to Dust\" energyCost=\"3600\" >" +
+                        "<input>" +
+                        "<itemStack oreDictionary=\"oreAmordrine\" />" +
+                        "</input>" +
+                        "<output>" +
+                        "<itemStack oreDictionary=\"dustAmordrine\" number=\"2\" />" +
+                        "</output>" +
+                        "</recipe>" +
+                        "</recipeGroup>";
+                FMLInterModComms.sendMessage("EnderIO", "recipe:sagmill", recipe);
+            }
+            if (registerMek)
+            {
+                NBTTagCompound tag = new NBTTagCompound();
+                tag.setTag("input", new ItemStack(InitBlocks.blockOreAmordrine).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemDustAmordrine, 2).writeToNBT(new NBTTagCompound()));
+                FMLInterModComms.sendMessage("mekanism", "EnrichmentChamberRecipe", tag);
+            }
+        }
         if (InitBlocks.registerCopper)
         {
             //Smelting

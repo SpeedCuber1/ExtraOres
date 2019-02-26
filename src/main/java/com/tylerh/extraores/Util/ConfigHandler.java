@@ -105,16 +105,12 @@ public class ConfigHandler
         Property propAngmallen = config.get(ModInfo.GUI_CATEGORY,"Angmallen",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propBlackSteel = config.get(ModInfo.GUI_CATEGORY,"Black_Steel",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propCelenegil = config.get(ModInfo.GUI_CATEGORY,"Celenegil",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
-        Property propDesichalkos = config.get(ModInfo.GUI_CATEGORY,"Desichalkos",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
-        Property propEximite = config.get(ModInfo.GUI_CATEGORY,"Eximite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propHaderoth = config.get(ModInfo.GUI_CATEGORY,"Haderoth",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propHepatizon = config.get(ModInfo.GUI_CATEGORY,"Hepatizon",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propInolashite = config.get(ModInfo.GUI_CATEGORY,"Inolashite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
-        Property propMeutoite = config.get(ModInfo.GUI_CATEGORY,"Meutoite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
-        Property propQuicksilver = config.get(ModInfo.GUI_CATEGORY,"Quicksilver",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
-        Property propTartarite = config.get(ModInfo.GUI_CATEGORY,"Tartarite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
 
         List<String> propOrder = new ArrayList<String>();
+        propOrder.add(propAmordrine.getName());
         propOrder.add(propCopper.getName());
         propOrder.add(propTin.getName());
         propOrder.add(propChromium.getName());
@@ -168,6 +164,7 @@ public class ConfigHandler
         config.setCategoryPropertyOrder(ModInfo.GUI_CATEGORY, propOrder);
         if (readFieldsFromConfig)
         {
+            InitBlocks.registerAmordrine = propAmordrine.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerCopper = propCopper.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTin = propTin.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerChromium = propChromium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -218,6 +215,7 @@ public class ConfigHandler
             InitBlocks.registerVulcanite = propVulcanite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerVyroxeres = propVyroxeres.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
         }
+        propAmordrine.set(InitBlocks.registerAmordrine);
         propCopper.set(InitBlocks.registerCopper);
         propTin.set(InitBlocks.registerTin);
         propChromium.set(InitBlocks.registerChromium);

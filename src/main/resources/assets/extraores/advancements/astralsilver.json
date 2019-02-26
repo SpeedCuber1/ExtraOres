@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "Mine Astral Silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:astralSilverOre",
+            "data": 0
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Astral Silver"
+    ]
+  ],
+  "display": {
+    "icon":{
+      "item": "extraores:astralSilverOre",
+      "data": 0
+    },
+    "title": "By the Power of the Stars",
+    "description": "Mine Astral Silver Ore",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "extraores:adamantine"
+}

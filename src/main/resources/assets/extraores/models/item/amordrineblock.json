@@ -1,5 +1,5 @@
 {
-    "parent": "extraores:block/adamantineore",
+    "parent": "extraores:block/amordrineblock",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

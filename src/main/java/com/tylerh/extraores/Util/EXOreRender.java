@@ -13,6 +13,15 @@ public class EXOreRender
 {
     public static void initBlockRender()
     {
+        if(InitBlocks.registerAmordrine)
+        {
+            Item itemBlockAmordrine = Item.getItemFromBlock(InitBlocks.blockOreAmordrine);
+            ResourceLocation location = new ResourceLocation("extraores:amordrineOre");
+            Register(itemBlockAmordrine,location.toString());
+            itemBlockAmordrine = Item.getItemFromBlock(InitBlocks.blockAmordrine);
+            location = new ResourceLocation("extraores:amordrineBlock");
+            Register(itemBlockAmordrine,location.toString());
+        }
         if(InitBlocks.registerCopper)
         {
             Item itemBlockCopper = Item.getItemFromBlock(InitBlocks.blockOreCopper);
@@ -457,6 +466,13 @@ public class EXOreRender
     }
     public static void initItemRender()
     {
+        if(InitBlocks.registerAmordrine)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:amordrineIngot");
+            Register(InitBlocks.itemIngotAmordrine,location.toString());
+            location = new ResourceLocation("extraores:amordrineDust");
+            Register(InitBlocks.itemDustAmordrine,location.toString());
+        }
         if(InitBlocks.registerCopper)
         {
             ResourceLocation location = new ResourceLocation("extraores:copperIngot");

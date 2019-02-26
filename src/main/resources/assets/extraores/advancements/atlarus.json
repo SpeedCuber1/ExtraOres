@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "Mine Atlarus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:atlarusOre",
+            "data": 0
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Atlarus"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "item": "extraores:atlarusOre",
+      "data": 0
+    },
+    "title": "Let Me Map the World",
+    "description": "Mine Atlarus Ore",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "extraores:astralsilver"
+}

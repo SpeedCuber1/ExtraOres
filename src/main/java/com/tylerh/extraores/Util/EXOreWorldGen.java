@@ -15,6 +15,7 @@ import java.util.Random;
  */
 public class EXOreWorldGen implements IWorldGenerator
 {
+    private WorldGenerator amordrineOre;
     private WorldGenerator copperOre;
     private WorldGenerator tinOre;
     private WorldGenerator chromiumOre;
@@ -66,6 +67,10 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator vyroxeresOre;
     public EXOreWorldGen()
     {
+        if(InitBlocks.registerAmordrine)
+        {
+            this.amordrineOre = new EXOreWorldGenMinable(InitBlocks.blockOreAmordrine.getDefaultState(),4);
+        }
         if(InitBlocks.registerCopper)
         {
             this.copperOre = new EXOreWorldGenMinable(InitBlocks.blockOreCopper.getDefaultState(), 4);
@@ -266,8 +271,12 @@ public class EXOreWorldGen implements IWorldGenerator
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
     {
-        if(world.provider.getDimensionType().getName().equalsIgnoreCase("Overworld") || world.provider.getDimensionType().getName().equalsIgnoreCase("Deep Dark") || world.provider.getDimensionType().getName().equalsIgnoreCase("rftools_dimesion") || world.provider.getDimension() == 2)
+        if(world.provider.getDimensionType().getName().equalsIgnoreCase("Overworld") || world.provider.getDimensionType().getName().equalsIgnoreCase("Deep Dark") || world.provider.getDimensionType().getName().equalsIgnoreCase("rftools_dimension"))
         {
+            if(InitBlocks.registerAmordrine)
+            {
+                runGenerator(this.amordrineOre,world,random,chunkX,chunkZ,20,0,100);
+            }
             if(InitBlocks.registerCopper)
             {
                 runGenerator(this.copperOre, world, random, chunkX, chunkZ, 20, 0, 100);

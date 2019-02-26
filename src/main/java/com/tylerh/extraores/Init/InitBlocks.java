@@ -16,6 +16,13 @@ import net.minecraftforge.oredict.OreDictionary;
  */
 public class InitBlocks
 {
+    public static boolean registerAmordrine;
+    public static boolean registerAngmallen;
+    public static boolean registerBlackSteel;
+    public static boolean registerCelenegil;
+    public static boolean registerHaderoth;
+    public static boolean regiserHepatizon;
+    public static boolean registerInolashite;
     public static boolean registerCopper;
     public static boolean registerTin;
     public static boolean registerChromium;
@@ -67,6 +74,7 @@ public class InitBlocks
     public static boolean registerVyroxeres;
 
     //Ores
+    public static Block blockOreAmordrine;
     public static Block blockOreCopper;
     public static Block blockOreTin;
     public static Block blockOreChromium;
@@ -118,6 +126,7 @@ public class InitBlocks
     public static Block blockOreVyroxeres;
 
     //Ingots
+    public static Item itemIngotAmordrine;
     public static Item itemIngotCopper;
     public static Item itemIngotTin;
     public static Item itemIngotChromium;
@@ -169,6 +178,7 @@ public class InitBlocks
     public static Item itemIngotVyroxeres;
     
     //Blocks
+    public static Block blockAmordrine;
     public static Block blockCopper;
     public static Block blockTin;
     public static Block blockChromium;
@@ -220,6 +230,7 @@ public class InitBlocks
     public static Block blockVyroxeres;
 
     //ItemBlocks Ores
+    private static ItemBlock itemBlockOreAmordrine;
     private static ItemBlock itemBlockOreCopper;
     private static ItemBlock itemBlockOreTin;
     private static ItemBlock itemBlockOreChromium;
@@ -269,7 +280,9 @@ public class InitBlocks
     private static ItemBlock itemBlockOreShadowIron;
     private static ItemBlock itemBlockOreVulcanite;
     private static ItemBlock itemBlockOreVyroxeres;
+
     //ItemBlocks Blocks
+    private static ItemBlock itemBlockAmordrine;
     private static ItemBlock itemBlockCopper;
     private static ItemBlock itemBlockTin;
     private static ItemBlock itemBlockChromium;
@@ -321,6 +334,7 @@ public class InitBlocks
     private static ItemBlock itemBlockVyroxeres;
 
     //Dusts
+    public static Item itemDustAmordrine;
     public static Item itemDustCopper;
     public static Item itemDustTin;
     public static Item itemDustChromium;
@@ -373,6 +387,29 @@ public class InitBlocks
 
     public static void init()
     {
+        if(registerAmordrine)
+        {
+            blockOreAmordrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"amordrineOre");
+            itemBlockOreAmordrine = new ItemBlockExOre(blockOreAmordrine);
+            blockAmordrine = new BlockEXOre(Material.IRON,3.0f,5.0f,"amordrineBlock");
+            itemBlockAmordrine = new ItemBlockExOre(blockAmordrine);
+            itemIngotAmordrine = new ItemEXOre("amordrineIngot");
+            itemDustAmordrine = new ItemEXOre("amordrineDust");
+            createRegistry(blockOreAmordrine,itemBlockOreAmordrine,"amordrineOre");
+            createRegistry(blockAmordrine,itemBlockAmordrine,"amordrineBlock");
+            createRegistry(itemIngotAmordrine,"amordrineIngot");
+            createRegistry(itemDustAmordrine,"amordrineDust");
+            ForgeRegistries.BLOCKS.register(blockOreAmordrine);
+            ForgeRegistries.ITEMS.register(itemBlockOreAmordrine);
+            ForgeRegistries.BLOCKS.register(blockAmordrine);
+            ForgeRegistries.ITEMS.register(itemBlockAmordrine);
+            ForgeRegistries.ITEMS.register(itemIngotAmordrine);
+            ForgeRegistries.ITEMS.register(itemDustAmordrine);
+            initOreDict(blockOreAmordrine,"oreAmordrine");
+            initOreDict(blockAmordrine,"blockAmordrine");
+            initOreDict(itemIngotAmordrine,"ingotAmordrine");
+            initOreDict(itemDustAmordrine,"dustAmordrine");
+        }
         if(registerCopper)
         {
             blockOreCopper = new BlockEXOre(Material.ROCK,3.0f,5.0f,"copperOre");
