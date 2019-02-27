@@ -111,6 +111,12 @@ public class ConfigHandler
 
         List<String> propOrder = new ArrayList<String>();
         propOrder.add(propAmordrine.getName());
+        propOrder.add(propAngmallen.getName());
+        propOrder.add(propBlackSteel.getName());
+        propOrder.add(propCelenegil.getName());
+        propOrder.add(propHaderoth.getName());
+        propOrder.add(propHepatizon.getName());
+        propOrder.add(propInolashite.getName());
         propOrder.add(propCopper.getName());
         propOrder.add(propTin.getName());
         propOrder.add(propChromium.getName());
@@ -165,6 +171,12 @@ public class ConfigHandler
         if (readFieldsFromConfig)
         {
             InitBlocks.registerAmordrine = propAmordrine.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerAngmallen = propAngmallen.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerBlackSteel = propBlackSteel.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerCelenegil = propCelenegil.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerHaderoth = propHaderoth.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerHepatizon = propHepatizon.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerInolashite = propInolashite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerCopper = propCopper.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTin = propTin.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerChromium = propChromium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -216,6 +228,12 @@ public class ConfigHandler
             InitBlocks.registerVyroxeres = propVyroxeres.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
         }
         propAmordrine.set(InitBlocks.registerAmordrine);
+        propAngmallen.set(InitBlocks.registerAngmallen);
+        propBlackSteel.set(InitBlocks.registerBlackSteel);
+        propCelenegil.set(InitBlocks.registerCelenegil);
+        propHaderoth.set(InitBlocks.registerHaderoth);
+        propHepatizon.set(InitBlocks.registerHepatizon);
+        propInolashite.set(InitBlocks.registerInolashite);
         propCopper.set(InitBlocks.registerCopper);
         propTin.set(InitBlocks.registerTin);
         propChromium.set(InitBlocks.registerChromium);

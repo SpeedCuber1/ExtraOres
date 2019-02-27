@@ -22,6 +22,60 @@ public class EXOreRender
             location = new ResourceLocation("extraores:amordrineBlock");
             Register(itemBlockAmordrine,location.toString());
         }
+        if(InitBlocks.registerAngmallen)
+        {
+            Item itemBlockAngmallen = Item.getItemFromBlock(InitBlocks.blockOreAngmallen);
+            ResourceLocation location = new ResourceLocation("extraores:angmallenOre");
+            Register(itemBlockAngmallen,location.toString());
+            itemBlockAngmallen = Item.getItemFromBlock(InitBlocks.blockAngmallen);
+            location = new ResourceLocation("extraores:angmallenBlock");
+            Register(itemBlockAngmallen,location.toString());
+        }
+        if(InitBlocks.registerBlackSteel)
+        {
+            Item itemBlockBlackSteel = Item.getItemFromBlock(InitBlocks.blockOreBlackSteel);
+            ResourceLocation location = new ResourceLocation("extraores:blackSteelOre");
+            Register(itemBlockBlackSteel,location.toString());
+            itemBlockBlackSteel = Item.getItemFromBlock(InitBlocks.blockBlackSteel);
+            location = new ResourceLocation("extraores:blackSteelBlock");
+            Register(itemBlockBlackSteel,location.toString());
+        }
+        if(InitBlocks.registerCelenegil)
+        {
+            Item itemBlockCelenegil = Item.getItemFromBlock(InitBlocks.blockOreCelenegil);
+            ResourceLocation location = new ResourceLocation("extraores:celenegilOre");
+            Register(itemBlockCelenegil,location.toString());
+            itemBlockCelenegil = Item.getItemFromBlock(InitBlocks.blockCelenegil);
+            location = new ResourceLocation("extraores:celenegilBlock");
+            Register(itemBlockCelenegil,location.toString());
+        }
+        if(InitBlocks.registerHaderoth)
+        {
+            Item itemBlockHaderoth = Item.getItemFromBlock(InitBlocks.blockOreHaderoth);
+            ResourceLocation location = new ResourceLocation("extraores:haderothOre");
+            Register(itemBlockHaderoth,location.toString());
+            itemBlockHaderoth = Item.getItemFromBlock(InitBlocks.blockHaderoth);
+            location = new ResourceLocation("extraores:haderothBlock");
+            Register(itemBlockHaderoth,location.toString());
+        }
+        if(InitBlocks.registerHepatizon)
+        {
+            Item itemBlockHepatizon = Item.getItemFromBlock(InitBlocks.blockOreHepatizon);
+            ResourceLocation location = new ResourceLocation("extraores:hepatizonOre");
+            Register(itemBlockHepatizon,location.toString());
+            itemBlockHepatizon = Item.getItemFromBlock(InitBlocks.blockHepatizon);
+            location = new ResourceLocation("extraores:hepatizonBlock");
+            Register(itemBlockHepatizon,location.toString());
+        }
+        if(InitBlocks.registerInolashite)
+        {
+            Item itemBlockInolashite = Item.getItemFromBlock(InitBlocks.blockOreInolashite);
+            ResourceLocation location = new ResourceLocation("extraores:inolashiteOre");
+            Register(itemBlockInolashite,location.toString());
+            itemBlockInolashite = Item.getItemFromBlock(InitBlocks.blockInolashite);
+            location = new ResourceLocation("extraores:inolashiteBlock");
+            Register(itemBlockInolashite,location.toString());
+        }
         if(InitBlocks.registerCopper)
         {
             Item itemBlockCopper = Item.getItemFromBlock(InitBlocks.blockOreCopper);
@@ -473,6 +527,48 @@ public class EXOreRender
             location = new ResourceLocation("extraores:amordrineDust");
             Register(InitBlocks.itemDustAmordrine,location.toString());
         }
+        if(InitBlocks.registerAngmallen)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:angmallenIngot");
+            Register(InitBlocks.itemIngotAngmallen,location.toString());
+            location = new ResourceLocation("extraores:angmallenDust");
+            Register(InitBlocks.itemDustAngmallen,location.toString());
+        }
+        if(InitBlocks.registerBlackSteel)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:blackSteelIngot");
+            Register(InitBlocks.itemIngotBlackSteel,location.toString());
+            location = new ResourceLocation("extraores:blackSteelDust");
+            Register(InitBlocks.itemDustBlackSteel,location.toString());
+        }
+        if(InitBlocks.registerCelenegil)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:celenegilIngot");
+            Register(InitBlocks.itemIngotCelenegil,location.toString());
+            location = new ResourceLocation("extraores:celenegilDust");
+            Register(InitBlocks.itemDustCelenegil,location.toString());
+        }
+        if(InitBlocks.registerHaderoth)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:haderothIngot");
+            Register(InitBlocks.itemIngotHaderoth,location.toString());
+            location = new ResourceLocation("extraores:haderothDust");
+            Register(InitBlocks.itemDustHaderoth,location.toString());
+        }
+        if(InitBlocks.registerHepatizon)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:hepatizonIngot");
+            Register(InitBlocks.itemIngotHepatizon,location.toString());
+            location = new ResourceLocation("extraores:hepatizonDust");
+            Register(InitBlocks.itemDustHepatizon,location.toString());
+        }
+        if(InitBlocks.registerInolashite)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:inolashiteIngot");
+            Register(InitBlocks.itemIngotInolashite,location.toString());
+            location = new ResourceLocation("extraores:inolashiteDust");
+            Register(InitBlocks.itemDustInolashite,location.toString());
+        }
         if(InitBlocks.registerCopper)
         {
             ResourceLocation location = new ResourceLocation("extraores:copperIngot");
@@ -817,7 +913,7 @@ public class EXOreRender
             Register(InitBlocks.itemDustVyroxeres,location.toString());
         }
     }
-    public static void Register(Item item, String resource)
+    private static void Register(Item item, String resource)
     {
         ModelResourceLocation location = new ModelResourceLocation(resource,"inventory");
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item,0,location);
