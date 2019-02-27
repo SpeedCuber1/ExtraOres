@@ -16,6 +16,12 @@ import java.util.Random;
 public class EXOreWorldGen implements IWorldGenerator
 {
     private WorldGenerator amordrineOre;
+    private WorldGenerator angmallenOre;
+    private WorldGenerator blackSteelOre;
+    private WorldGenerator celenegilOre;
+    private WorldGenerator haderothOre;
+    private WorldGenerator hepatizonOre;
+    private WorldGenerator inolashiteOre;
     private WorldGenerator copperOre;
     private WorldGenerator tinOre;
     private WorldGenerator chromiumOre;
@@ -70,6 +76,30 @@ public class EXOreWorldGen implements IWorldGenerator
         if(InitBlocks.registerAmordrine)
         {
             this.amordrineOre = new EXOreWorldGenMinable(InitBlocks.blockOreAmordrine.getDefaultState(),4);
+        }
+        if(InitBlocks.registerAngmallen)
+        {
+            this.angmallenOre = new EXOreWorldGenMinable(InitBlocks.blockOreAngmallen.getDefaultState(),4);
+        }
+        if(InitBlocks.registerBlackSteel)
+        {
+            this.blackSteelOre = new EXOreWorldGenMinable(InitBlocks.blockOreBlackSteel.getDefaultState(),4);
+        }
+        if(InitBlocks.registerCelenegil)
+        {
+            this.celenegilOre = new EXOreWorldGenMinable(InitBlocks.blockOreCelenegil.getDefaultState(),4);
+        }
+        if(InitBlocks.registerHaderoth)
+        {
+            this.haderothOre = new EXOreWorldGenMinable(InitBlocks.blockOreHaderoth.getDefaultState(),4);
+        }
+        if(InitBlocks.registerHepatizon)
+        {
+            this.hepatizonOre = new EXOreWorldGenMinable(InitBlocks.blockOreHepatizon.getDefaultState(),4);
+        }
+        if(InitBlocks.registerInolashite)
+        {
+            this.inolashiteOre = new EXOreWorldGenMinable(InitBlocks.blockOreInolashite.getDefaultState(),4);
         }
         if(InitBlocks.registerCopper)
         {
@@ -276,6 +306,30 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerAmordrine)
             {
                 runGenerator(this.amordrineOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerAngmallen)
+            {
+                runGenerator(this.angmallenOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerBlackSteel)
+            {
+                runGenerator(this.blackSteelOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerCelenegil)
+            {
+                runGenerator(this.celenegilOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerHaderoth)
+            {
+                runGenerator(this.haderothOre,world,random,chunkX,chunkZ,20,0,20);
+            }
+            if(InitBlocks.registerHepatizon)
+            {
+                runGenerator(this.hepatizonOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerInolashite)
+            {
+                runGenerator(this.inolashiteOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerCopper)
             {
