@@ -20,7 +20,7 @@ public class ExtraOres
     @Instance
     public static ExtraOres instance;
    @SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.COMMON_PROXY)
-    public static CommonProxy proxy;
+    private static CommonProxy proxy;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
