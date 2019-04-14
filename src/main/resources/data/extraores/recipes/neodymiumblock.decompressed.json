@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":[
+    "I"
+  ],
+  "key": {
+    "I": {
+      "item": "extraores:neodymiumblock"
+    }
+  },
+  "result": {
+    "item": "extraores:neodymiumingot"
+  },
+  "count": 9
+}
