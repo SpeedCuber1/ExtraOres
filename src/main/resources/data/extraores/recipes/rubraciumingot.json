@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rubraciumore"
+  },
+  "result": "extraores:rubraciumingot"
+}
