@@ -2,6 +2,7 @@ package com.tylerh.extraores;
 
 import com.tylerh.extraores.Util.ConfigHandler;
 import com.tylerh.extraores.Util.ModInfo;
+import com.tylerh.extraores.World.ExOreWorldGen;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -24,6 +25,7 @@ public class ExtraOres
     }
     private void setup(FMLCommonSetupEvent event)
     {
+        ExOreWorldGen.initWorldGen();
     }
     private void clientRegistries(FMLClientSetupEvent event)
     {

@@ -342,6 +342,13 @@ public class InitBlocks
             blockRegistry(BlockList.blockOreTechnetium,event);
             blockRegistry(BlockList.blockTechnetium,event);
         }
+        if(ConfigRegistryList.registerThallium.get())
+        {
+            BlockList.blockOreThallium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"thalliumore");
+            BlockList.blockThallium = new BlockEXOre(Material.IRON,3.0f,5.0f,"thalliumblock");
+            blockRegistry(BlockList.blockOreThallium,event);
+            blockRegistry(BlockList.blockThallium,event);
+        }
         if(ConfigRegistryList.registerTin.get())
         {
             BlockList.blockOreTin = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tinore");

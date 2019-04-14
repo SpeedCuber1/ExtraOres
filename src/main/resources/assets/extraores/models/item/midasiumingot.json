@@ -1,7 +1,7 @@
 {
   "parent": "builtin/generated",
   "textures": {
-	"layer0": "extraores:items/midasiumIngot"
+	"layer0": "extraores:items/midasiumingot"
   },
   "display": {
 	"thirdperson": {
