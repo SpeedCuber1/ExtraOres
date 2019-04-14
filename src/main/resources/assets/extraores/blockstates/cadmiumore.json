@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:cadmiumore"}
+        "":{"model":"extraores:block/cadmiumore"}
     }
 }

@@ -40,6 +40,27 @@ public class InitBlocks
             blockRegistry(BlockList.blockOreAluminum,event);
             blockRegistry(BlockList.blockAluminum,event);
         }
+        if(ConfigRegistryList.registerAmordrine.get())
+        {
+            BlockList.blockOreAmordrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"amordrineore");
+            BlockList.blockAmordrine = new BlockEXOre(Material.IRON,3.0f,5.0f,"amordrineblock");
+            blockRegistry(BlockList.blockOreAmordrine,event);
+            blockRegistry(BlockList.blockAmordrine,event);
+        }
+        if(ConfigRegistryList.registerAngmallen.get())
+        {
+            BlockList.blockOreAngmallen = new BlockEXOre(Material.ROCK,3.0f,5.0f,"angmallenore");
+            BlockList.blockAngmallen = new BlockEXOre(Material.IRON,3.0f,5.0f,"angmallenblock");
+            blockRegistry(BlockList.blockOreAngmallen,event);
+            blockRegistry(BlockList.blockAngmallen,event);
+        }
+        if(ConfigRegistryList.registerAstralSilver.get())
+        {
+            BlockList.blockOreAstralSilver = new BlockEXOre(Material.ROCK,3.0f,5.0f,"astralsilverore");
+            BlockList.blockAstralSilver = new BlockEXOre(Material.IRON,3.0f,5.0f,"astralsilverblock");
+            blockRegistry(BlockList.blockOreAstralSilver,event);
+            blockRegistry(BlockList.blockAstralSilver,event);
+        }
     }
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> event)
@@ -76,6 +97,39 @@ public class InitBlocks
             itemRegistry(ItemList.itemDustAluminum,event);
             itemRegistry(ItemBlockList.itemBlockOreAluminum,event);
             itemRegistry(ItemBlockList.itemBlockAluminum,event);
+        }
+        if(ConfigRegistryList.registerAmordrine.get())
+        {
+            ItemList.itemIngotAmordrine = new ItemEXOre(EXORES,"amordrineingot");
+            ItemList.itemDustAmordrine = new ItemEXOre(EXORES,"amordrinedust");
+            ItemBlockList.itemBlockOreAmordrine = new ItemBlockExOre(BlockList.blockOreAmordrine,EXORES);
+            ItemBlockList.itemBlockAmordrine = new ItemBlockExOre(BlockList.blockAmordrine,EXORES);
+            itemRegistry(ItemList.itemIngotAmordrine,event);
+            itemRegistry(ItemList.itemDustAmordrine,event);
+            itemRegistry(ItemBlockList.itemBlockOreAmordrine,event);
+            itemRegistry(ItemBlockList.itemBlockAmordrine,event);
+        }
+        if(ConfigRegistryList.registerAngmallen.get())
+        {
+            ItemList.itemIngotAngmallen = new ItemEXOre(EXORES,"angmalleningot");
+            ItemList.itemDustAngmallen = new ItemEXOre(EXORES,"angmallendust");
+            ItemBlockList.itemBlockOreAngmallen = new ItemBlockExOre(BlockList.blockOreAngmallen,EXORES);
+            ItemBlockList.itemBlockAngmallen = new ItemBlockExOre(BlockList.blockAngmallen,EXORES);
+            itemRegistry(ItemList.itemIngotAngmallen,event);
+            itemRegistry(ItemList.itemDustAngmallen,event);
+            itemRegistry(ItemBlockList.itemBlockOreAngmallen,event);
+            itemRegistry(ItemBlockList.itemBlockAngmallen,event);
+        }
+        if(ConfigRegistryList.registerAstralSilver.get())
+        {
+            ItemList.itemIngotAstralSilver = new ItemEXOre(EXORES,"astralsilveringot");
+            ItemList.itemDustAstralSilver = new ItemEXOre(EXORES,"astralsilverdust");
+            ItemBlockList.itemBlockOreAstralSilver = new ItemBlockExOre(BlockList.blockOreAstralSilver,EXORES);
+            ItemBlockList.itemBlockAstralSilver = new ItemBlockExOre(BlockList.blockAstralSilver,EXORES);
+            itemRegistry(ItemList.itemIngotAstralSilver,event);
+            itemRegistry(ItemList.itemDustAstralSilver,event);
+            itemRegistry(ItemBlockList.itemBlockOreAstralSilver,event);
+            itemRegistry(ItemBlockList.itemBlockAstralSilver,event);
         }
     }
     private static void blockRegistry(Block block, RegistryEvent.Register<Block> regEvent)

@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:blacksteelore"}
+        "":{"model":"extraores:block/blacksteelore"}
     }
 }
