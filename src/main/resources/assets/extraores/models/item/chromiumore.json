@@ -1,5 +1,5 @@
 {
-    "parent": "extraores:block/chromiumOre",
+    "parent": "extraores:block/chromiumore",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

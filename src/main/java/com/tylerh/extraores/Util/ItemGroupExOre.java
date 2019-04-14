@@ -15,6 +15,6 @@ public class ItemGroupExOre extends ItemGroup
     @Override
     public ItemStack createIcon()
     {
-        return new ItemStack(BlockList.blockOreAdamantine);
+        return new ItemStack(BlockList.blockOreCopper);
     }
 }
