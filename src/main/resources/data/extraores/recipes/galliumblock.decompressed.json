@@ -5,11 +5,11 @@
   ],
   "key": {
     "I": {
-      "item": "extraores:adamantineblock"
+      "item": "extraores:galliumblock"
     }
   },
   "result": {
-    "item": "extraores:adamantineingot"
+    "item": "extraores:galliumingot"
   },
   "count": 9
 }

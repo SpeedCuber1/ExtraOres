@@ -7,11 +7,11 @@
   ],
   "key": {
     "i": {
-      "item": "extraores:adamantineingot"
+      "item": "extraores:indiumingot"
     }
   },
   "result": {
-    "item": "extraores:adamantineblock"
+    "item": "extraores:indiumblock"
   },
   "count": 1
 }

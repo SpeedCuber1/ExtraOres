@@ -7,11 +7,11 @@
   ],
   "key": {
     "i": {
-      "item": "extraores:adamantineingot"
+      "item": "extraores:blacksteelingot"
     }
   },
   "result": {
-    "item": "extraores:adamantineblock"
+    "item": "extraores:blacksteelblock"
   },
   "count": 1
 }

@@ -7,11 +7,11 @@
   ],
   "key": {
     "i": {
-      "item": "extraores:adamantineingot"
+      "item": "extraores:haderothingot"
     }
   },
   "result": {
-    "item": "extraores:adamantineblock"
+    "item": "extraores:haderothblock"
   },
   "count": 1
 }

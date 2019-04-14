@@ -7,11 +7,11 @@
   ],
   "key": {
     "i": {
-      "item": "extraores:adamantineingot"
+      "item": "extraores:ceruclaseingot"
     }
   },
   "result": {
-    "item": "extraores:adamantineblock"
+    "item": "extraores:ceruclaseblock"
   },
   "count": 1
 }

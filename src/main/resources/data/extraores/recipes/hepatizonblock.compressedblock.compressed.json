@@ -7,11 +7,11 @@
   ],
   "key": {
     "i": {
-      "item": "extraores:adamantineingot"
+      "item": "extraores:hepatizoningot"
     }
   },
   "result": {
-    "item": "extraores:adamantineblock"
+    "item": "extraores:hepatizonblock"
   },
   "count": 1
 }

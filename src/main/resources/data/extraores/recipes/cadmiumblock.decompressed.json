@@ -5,11 +5,11 @@
   ],
   "key": {
     "I": {
-      "item": "extraores:adamantineblock"
+      "item": "extraores:cadmiumblock"
     }
   },
   "result": {
-    "item": "extraores:adamantineingot"
+    "item": "extraores:cadmiumingot"
   },
   "count": 9
 }

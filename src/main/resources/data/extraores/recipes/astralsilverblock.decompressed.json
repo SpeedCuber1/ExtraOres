@@ -5,11 +5,11 @@
   ],
   "key": {
     "I": {
-      "item": "extraores:adamantineblock"
+      "item": "extraores:astralsilverblock"
     }
   },
   "result": {
-    "item": "extraores:adamantineingot"
+    "item": "extraores:astralsilveringot"
   },
   "count": 9
 }

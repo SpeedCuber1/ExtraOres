@@ -7,11 +7,11 @@
   ],
   "key": {
     "i": {
-      "item": "extraores:adamantineingot"
+      "item": "extraores:copperingot"
     }
   },
   "result": {
-    "item": "extraores:adamantineblock"
+    "item": "extraores:copperblock"
   },
   "count": 1
 }

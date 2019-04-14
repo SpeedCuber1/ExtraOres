@@ -5,11 +5,11 @@
   ],
   "key": {
     "I": {
-      "item": "extraores:adamantineblock"
+      "item": "extraores:bismuthblock"
     }
   },
   "result": {
-    "item": "extraores:adamantineingot"
+    "item": "extraores:bismuthingot"
   },
   "count": 9
 }
