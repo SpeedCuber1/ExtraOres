@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "extraores:inolashiteblock"
+    }
+  },
+  "result": {
+    "item": "extraores:inolashiteingot"
+  },
+  "count": 9
+}

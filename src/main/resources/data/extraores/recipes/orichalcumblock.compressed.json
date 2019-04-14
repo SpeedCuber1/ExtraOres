@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "item": "extraores:orichalcumingot"
+    }
+  },
+  "result": {
+    "item": "extraores:orichalcumblock"
+  },
+  "count": 1
+}
