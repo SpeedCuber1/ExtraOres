@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:deepironore"}
+        "":{"model":"extraores:block/deepironore"}
     }
 }

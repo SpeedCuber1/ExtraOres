@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:shadowironore"}
+        "":{"model":"extraores:block/shadowironore"}
     }
 }

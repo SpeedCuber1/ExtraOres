@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:nickelore"}
+        "":{"model":"extraores:block/nickelore"}
     }
 }

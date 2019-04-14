@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:tinore"}
+        "":{"model":"extraores:block/tinore"}
     }
 }

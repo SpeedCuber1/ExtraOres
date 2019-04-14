@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:celenegilore"}
+        "":{"model":"extraores:block/celenegilore"}
     }
 }

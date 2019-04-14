@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:kalendriteblock"}
+        "":{"model":"extraores:block/kalendriteblock"}
     }
 }

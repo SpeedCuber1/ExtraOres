@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:thalliumore"}
+        "":{"model":"extraores:block/thalliumore"}
     }
 }

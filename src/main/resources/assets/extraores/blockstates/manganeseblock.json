@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:manganeseblock"}
+        "":{"model":"extraores:block/manganeseblock"}
     }
 }

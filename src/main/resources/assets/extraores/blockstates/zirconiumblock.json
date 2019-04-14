@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:zirconiumblock"}
+        "":{"model":"extraores:block/zirconiumblock"}
     }
 }

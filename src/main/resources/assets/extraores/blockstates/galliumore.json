@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:galliumore"}
+        "":{"model":"extraores:block/galliumore"}
     }
 }

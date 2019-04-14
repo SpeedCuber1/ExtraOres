@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:haderothore"}
+        "":{"model":"extraores:block/haderothore"}
     }
 }

@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:silverore"}
+        "":{"model":"extraores:block/silverore"}
     }
 }

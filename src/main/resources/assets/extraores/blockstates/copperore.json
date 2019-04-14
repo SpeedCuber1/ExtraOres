@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:copperore"}
+        "":{"model":"extraores:block/copperore"}
     }
 }

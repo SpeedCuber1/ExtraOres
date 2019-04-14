@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:cobaltore"}
+        "":{"model":"extraores:block/cobaltore"}
     }
 }

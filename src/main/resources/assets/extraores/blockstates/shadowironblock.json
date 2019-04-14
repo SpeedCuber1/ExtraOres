@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:shadowironblock"}
+        "":{"model":"extraores:block/shadowironblock"}
     }
 }

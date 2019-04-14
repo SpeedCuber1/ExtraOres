@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:niobiumblock"}
+        "":{"model":"extraores:block/niobiumblock"}
     }
 }

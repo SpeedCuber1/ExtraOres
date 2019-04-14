@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:mithrilore"}
+        "":{"model":"extraores:block/mithrilore"}
     }
 }

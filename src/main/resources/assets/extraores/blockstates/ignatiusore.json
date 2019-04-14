@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:ignatiusore"}
+        "":{"model":"extraores:block/ignatiusore"}
     }
 }

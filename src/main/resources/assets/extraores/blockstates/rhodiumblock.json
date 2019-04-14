@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:rhodiumblock"}
+        "":{"model":"extraores:block/rhodiumblock"}
     }
 }

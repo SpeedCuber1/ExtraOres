@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:orichalcumore"}
+        "":{"model":"extraores:block/orichalcumore"}
     }
 }
