@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:adamantineblock"}
+        "":{"model":"extraores:block/adamantineblock"}
     }
 }

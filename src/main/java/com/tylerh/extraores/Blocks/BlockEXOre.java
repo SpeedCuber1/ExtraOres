@@ -1,6 +1,6 @@
 package com.tylerh.extraores.Blocks;
 
-import com.tylerh.extraores.Util.CreativeTabExtraOres;
+import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -11,11 +11,12 @@ public class BlockEXOre extends Block
 {
     public BlockEXOre(Material mat,float hardness,float resistance,String uName)
     {
-        super(mat);
-        this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
+        super(Block.Properties.create(mat).hardnessAndResistance(hardness,resistance));
+        setRegistryName(ModInfo.MOD_ID,uName);
+        /*this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
         setHardness(hardness);
         setResistance(resistance);
         setUnlocalizedName(uName);
-        setHarvestLevel("pickaxe", 2);
+        setHarvestLevel("pickaxe", 2);*/
     }
 }

@@ -1,12 +1,13 @@
 package com.tylerh.extraores.Items;
-
-import com.tylerh.extraores.Util.CreativeTabExtraOres;
-import com.tylerh.extraores.Util.LogHelper;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,21 +17,20 @@ import java.util.List;
  */
 public class ItemEXOre extends Item
 {
-    public ItemEXOre(String uName)
+    public ItemEXOre(ItemGroup group,String uName)
     {
-        super();
-        this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
-        this.setUnlocalizedName(uName);
+        super(new Item.Properties().addToolType(ToolType.PICKAXE,2).group(group));
+        setRegistryName(ModInfo.MOD_ID,uName);
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World world, List<String> list, ITooltipFlag flag)
+    public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag flag)
     {
-        for (int i = 0; i < ModInfo.blockNames.length; i++)
+        for(int i = 0; i < ModInfo.blockNames.length; i++)
         {
-            if(stack.getDisplayName().contains(ModInfo.blockNames[i]) && !stack.getDisplayName().startsWith("Astral Silver"))
+            if(stack.getDisplayName().getFormattedText().startsWith(ModInfo.blockNames[i]))
             {
-                list.add("Atomic Symbol: " + ModInfo.symbols[i]);
+                list.add(new TextComponentTranslation("Atomic Symbol: " + ModInfo.symbols[i]));
                 break;
             }
         }

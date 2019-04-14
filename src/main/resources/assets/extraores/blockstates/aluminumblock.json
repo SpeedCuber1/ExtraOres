@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:aluminumblock"}
+        "":{"model":"extraores:block/aluminumblock"}
     }
 }

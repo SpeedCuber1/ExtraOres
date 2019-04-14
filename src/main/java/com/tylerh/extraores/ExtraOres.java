@@ -1,43 +1,31 @@
 package com.tylerh.extraores;
 
-import com.tylerh.extraores.Proxy.CommonProxy;
-import com.tylerh.extraores.Util.LogHelper;
+import com.tylerh.extraores.Util.ConfigHandler;
 import com.tylerh.extraores.Util.ModInfo;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 
-/**
- * Created by Tyler on 4/29/2016.
- */
-@Mod(modid = ModInfo.MOD_ID, name = ModInfo.MOD_NAME, version = ModInfo.MOD_VERSION, guiFactory = ModInfo.GUI_FACTORY)
+@Mod(ModInfo.MOD_ID)
 public class ExtraOres
 {
-    @Instance
-    public static ExtraOres instance;
-   @SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.COMMON_PROXY)
-    private static CommonProxy proxy;
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
+    public ExtraOres()
     {
-        proxy.preInit(event);
-        LogHelper.info("Extra Ores has finished Pre-Initialization");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.spec);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
+        ConfigHandler.loadConfig(ConfigHandler.spec, FMLPaths.CONFIGDIR.get().resolve("extraores-common.toml"));
+        MinecraftForge.EVENT_BUS.register(this);
     }
-    @EventHandler
-    public void init(FMLInitializationEvent event)
+    private void setup(FMLCommonSetupEvent event)
     {
-        proxy.init(event);
-        LogHelper.info("Extra Ores has finished Initialization");
     }
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent event)
+    private void clientRegistries(FMLClientSetupEvent event)
     {
-        proxy.postInit(event);
-        LogHelper.info("Extra Ores has finished Post-Initialization");
     }
 }

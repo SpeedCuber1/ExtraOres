@@ -1,5 +1,5 @@
 {
     "variants":{
-        "normal":{"model":"extraores:amordrineore"}
+        "":{"model":"extraores:block/amordrineore"}
     }
 }
