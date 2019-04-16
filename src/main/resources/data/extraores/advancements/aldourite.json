@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "Mine Aldourite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions":{
+        "items": [
+          {
+            "item": "extraores:aldouriteore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Aldourite"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "item": "extraores:aldouriteore"
+    },
+    "title": "They're Here Too",
+    "description": "Mine Aldourite Ore",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "extraores:root"
+}

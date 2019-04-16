@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "Mine Aluminum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:aluminumore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Aluminum"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "item": "extraores:aluminumore"
+    },
+    "title": "Sody Anyone?",
+    "description": "Mine Aluminum Ore",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "extraores:root"
+}

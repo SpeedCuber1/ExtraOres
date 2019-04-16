@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "Mine Iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:iron_ore"
+          }
+        ]
+      }
+    },
+    "Mine Gold": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gold_ore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Iron",
+      "Mine Gold"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "item": "extraores:copperore"
+    },
+    "title": "The World Is Full Of It",
+    "description": "Mine Iron Or Gold Ore",
+    "background": "minecraft:textures/guis/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  }
+}
