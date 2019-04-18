@@ -5,11 +5,11 @@
   ],
   "key": {
     "I": {
-      "item": "extraores:lemuriteblock"
+      "item": "extraores:unobtainiumblock"
     }
   },
   "result": {
-    "item": "extraores:lemuriteingot",
+    "item": "extraores:unobtainiumingot",
     "count": 9
   }
 }
