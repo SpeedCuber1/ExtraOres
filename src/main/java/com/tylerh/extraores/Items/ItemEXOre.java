@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 
@@ -30,7 +30,7 @@ public class ItemEXOre extends Item
         {
             if(stack.getDisplayName().getFormattedText().startsWith(ModInfo.blockNames[i]))
             {
-                list.add(new TextComponentTranslation("Atomic Symbol: " + ModInfo.symbols[i]));
+                list.add(new TranslationTextComponent("Atomic Symbol: " + ModInfo.symbols[i]));
                 break;
             }
         }

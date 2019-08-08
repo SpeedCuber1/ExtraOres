@@ -13,10 +13,6 @@ public class BlockEXOre extends Block
     {
         super(Block.Properties.create(mat).hardnessAndResistance(hardness,resistance));
         setRegistryName(ModInfo.MOD_ID,uName);
-        /*this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
-        setHardness(hardness);
-        setResistance(resistance);
-        setUnlocalizedName(uName);
-        setHarvestLevel("pickaxe", 2);*/
     }
+
 }
