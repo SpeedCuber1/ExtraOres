@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:haderothore"
   },
-  "result": "extraores:haderothingot"
+  "result": "extraores:haderothingot",
+  "cookingtime": 20
 }

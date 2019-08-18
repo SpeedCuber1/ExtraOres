@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:infuscoliumore"
   },
-  "result": "extraores:infuscoliumingot"
+  "result": "extraores:infuscoliumingot",
+  "cookingtime": 20
 }

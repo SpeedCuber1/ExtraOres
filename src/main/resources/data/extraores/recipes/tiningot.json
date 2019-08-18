@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:tinore"
   },
-  "result": "extraores:tiningot"
+  "result": "extraores:tiningot",
+  "cookingtime": 20
 }

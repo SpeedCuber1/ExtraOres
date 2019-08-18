@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:rutheniumore"
   },
-  "result": "extraores:rutheniumingot"
+  "result": "extraores:rutheniumingot",
+  "cookingtime": 20
 }

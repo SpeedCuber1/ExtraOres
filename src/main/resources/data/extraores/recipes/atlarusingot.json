@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:atlarusore"
   },
-  "result": "extraores:atlarusingot"
+  "result": "extraores:atlarusingot",
+  "cookingtime": 20
 }

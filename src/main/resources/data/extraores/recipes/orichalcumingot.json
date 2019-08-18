@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:orichalcumore"
   },
-  "result": "extraores:orichalcumingot"
+  "result": "extraores:orichalcumingot",
+  "cookingtime": 20
 }

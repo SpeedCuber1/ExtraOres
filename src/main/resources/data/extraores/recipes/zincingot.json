@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:zincore"
   },
-  "result": "extraores:zincingot"
+  "result": "extraores:zincingot",
+  "cookingtime": 20
 }

@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:zirconiumore"
   },
-  "result": "extraores:zirconiumingot"
+  "result": "extraores:zirconiumingot",
+  "cookingtime": 20
 }

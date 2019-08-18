@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:neodymiumore"
   },
-  "result": "extraores:neodymiumingot"
+  "result": "extraores:neodymiumingot",
+  "cookingtime": 20
 }

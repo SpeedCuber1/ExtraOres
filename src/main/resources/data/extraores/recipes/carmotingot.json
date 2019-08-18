@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:carmotore"
   },
-  "result": "extraores:carmotingot"
+  "result": "extraores:carmotingot",
+  "cookingtime": 20
 }

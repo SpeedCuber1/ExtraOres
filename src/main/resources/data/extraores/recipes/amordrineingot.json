@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:amordrineore"
   },
-  "result": "extraores:amordrineingot"
+  "result": "extraores:amordrineingot",
+  "cookingtime": 20
 }

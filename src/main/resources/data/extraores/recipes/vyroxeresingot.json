@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:vyroxeresore"
   },
-  "result": "extraores:vyroxeresingot"
+  "result": "extraores:vyroxeresingot",
+  "cookingtime": 20
 }

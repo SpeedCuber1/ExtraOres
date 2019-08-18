@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:nickelore"
   },
-  "result": "extraores:nickelingot"
+  "result": "extraores:nickelingot",
+  "cookingtime": 20
 }

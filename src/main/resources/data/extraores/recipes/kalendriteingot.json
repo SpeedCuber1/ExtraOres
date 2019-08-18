@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:kalendriteore"
   },
-  "result": "extraores:kalendriteingot"
+  "result": "extraores:kalendriteingot",
+  "cookingtime": 20
 }

@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:inolashiteore"
   },
-  "result": "extraores:inolashiteingot"
+  "result": "extraores:inolashiteingot",
+  "cookingtime": 20
 }

@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:lemuriteore"
   },
-  "result": "extraores:lemuriteingot"
+  "result": "extraores:lemuriteingot",
+  "cookingtime": 20
 }

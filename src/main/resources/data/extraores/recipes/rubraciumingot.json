@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:rubraciumore"
   },
-  "result": "extraores:rubraciumingot"
+  "result": "extraores:rubraciumingot",
+  "cookingtime": 20
 }

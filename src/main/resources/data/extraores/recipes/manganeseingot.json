@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:manganeseore"
   },
-  "result": "extraores:manganeseingot"
+  "result": "extraores:manganeseingot",
+  "cookingtime": 20
 }

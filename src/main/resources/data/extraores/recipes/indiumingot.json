@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:indiumore"
   },
-  "result": "extraores:indiumingot"
+  "result": "extraores:indiumingot",
+  "cookingtime": 20
 }

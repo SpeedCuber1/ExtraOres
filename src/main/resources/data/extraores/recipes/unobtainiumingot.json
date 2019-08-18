@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:unobtainiumore"
   },
-  "result": "extraores:unobtainiumingot"
+  "result": "extraores:unobtainiumingot",
+  "cookingtime": 20
 }

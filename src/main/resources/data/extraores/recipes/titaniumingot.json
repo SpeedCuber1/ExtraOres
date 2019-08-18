@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:titaniumore"
   },
-  "result": "extraores:titaniumingot"
+  "result": "extraores:titaniumingot",
+  "cookingtime": 20
 }

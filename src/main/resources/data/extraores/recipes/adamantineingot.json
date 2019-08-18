@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:adamantineore"
   },
-  "result": "extraores:adamantineingot"
+  "result": "extraores:adamantineingot",
+  "cookingtime": 20
 }

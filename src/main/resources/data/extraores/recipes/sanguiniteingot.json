@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:sanguiniteore"
   },
-  "result": "extraores:sanguiniteingot"
+  "result": "extraores:sanguiniteingot",
+  "cookingtime": 20
 }

@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:chromiumore"
   },
-  "result": "extraores:chromiumingot"
+  "result": "extraores:chromiumingot",
+  "cookingtime": 20
 }

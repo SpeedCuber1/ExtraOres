@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:prometheumore"
   },
-  "result": "extraores:prometheumingot"
+  "result": "extraores:prometheumingot",
+  "cookingtime": 20
 }

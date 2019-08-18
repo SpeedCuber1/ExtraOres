@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:hepatizonore"
   },
-  "result": "extraores:hepatizoningot"
+  "result": "extraores:hepatizoningot",
+  "cookingtime": 20
 }

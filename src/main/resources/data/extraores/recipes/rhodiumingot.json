@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:rhodiumore"
   },
-  "result": "extraores:rhodiumingot"
+  "result": "extraores:rhodiumingot",
+  "cookingtime": 20
 }

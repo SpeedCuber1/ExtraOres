@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:astralsilverore"
   },
-  "result": "extraores:astralsilveringot"
+  "result": "extraores:astralsilveringot",
+  "cookingtime": 20
 }

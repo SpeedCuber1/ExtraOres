@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:blacksteelore"
   },
-  "result": "extraores:blacksteelingot"
+  "result": "extraores:blacksteelingot",
+  "cookingtime": 20
 }

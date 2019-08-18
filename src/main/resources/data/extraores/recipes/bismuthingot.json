@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:bismuthore"
   },
-  "result": "extraores:bismuthingot"
+  "result": "extraores:bismuthingot",
+  "coookingtime": 20
 }

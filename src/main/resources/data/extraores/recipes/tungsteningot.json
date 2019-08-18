@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:tungstenore"
   },
-  "result": "extraores:tungsteningot"
+  "result": "extraores:tungsteningot",
+  "cookingtime": 20
 }

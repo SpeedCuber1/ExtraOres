@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:celenegilore"
   },
-  "result": "extraores:celenegilingot"
+  "result": "extraores:celenegilingot",
+  "cookingtime": 20
 }

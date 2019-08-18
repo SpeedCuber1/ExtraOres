@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:leadore"
   },
-  "result": "extraores:leadingot"
+  "result": "extraores:leadingot",
+  "cookingtime": 20
 }

@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:thalliumore"
   },
-  "result": "extraores:thalliumingot"
+  "result": "extraores:thalliumingot",
+  "cookingtime": 20
 }

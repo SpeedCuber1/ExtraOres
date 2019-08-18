@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:cadmiumore"
   },
-  "result": "extraores:cadmiumingot"
+  "result": "extraores:cadmiumingot",
+  "cookingtime": 20
 }

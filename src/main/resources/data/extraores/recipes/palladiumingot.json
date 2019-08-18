@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:palladiumore"
   },
-  "result": "extraores:palladiumingot"
+  "result": "extraores:palladiumingot",
+  "cookingtime": 20
 }

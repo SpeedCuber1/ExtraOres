@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:mithrilore"
   },
-  "result": "extraores:mithrilingot"
+  "result": "extraores:mithrilingot",
+  "cookingtime": 20
 }

@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:angmallenore"
   },
-  "result": "extraores:angmalleningot"
+  "result": "extraores:angmalleningot",
+  "cookingtime": 20
 }

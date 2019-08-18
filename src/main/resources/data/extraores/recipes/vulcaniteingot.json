@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:vulcaniteore"
   },
-  "result": "extraores:vulcaniteingot"
+  "result": "extraores:vulcaniteingot",
+  "cookingtime": 20
 }

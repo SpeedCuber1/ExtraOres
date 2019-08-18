@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:copperore"
   },
-  "result": "extraores:copperingot"
+  "result": "extraores:copperingot",
+  "cookingtime": 20
 }

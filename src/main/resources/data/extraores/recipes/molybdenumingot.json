@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:molybdenumore"
   },
-  "result": "extraores:molybdenumingot"
+  "result": "extraores:molybdenumingot",
+  "cookingtime": 20
 }

@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:deepironore"
   },
-  "result": "extraores:deepironingot"
+  "result": "extraores:deepironingot",
+  "cookingtime": 20
 }

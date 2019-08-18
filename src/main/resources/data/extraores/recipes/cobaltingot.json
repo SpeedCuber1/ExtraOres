@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:cobaltore"
   },
-  "result": "extraores:cobaltingot"
+  "result": "extraores:cobaltingot",
+  "cookingtime": 20
 }

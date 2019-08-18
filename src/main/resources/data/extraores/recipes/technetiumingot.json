@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:technetiumore"
   },
-  "result": "extraores:technetiumingot"
+  "result": "extraores:technetiumingot",
+  "cookingtime": 20
 }

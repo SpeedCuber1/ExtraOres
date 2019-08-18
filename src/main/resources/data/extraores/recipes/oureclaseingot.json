@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:oureclaseore"
   },
-  "result": "extraores:oureclaseingot"
+  "result": "extraores:oureclaseingot",
+  "cookingtime": 20
 }

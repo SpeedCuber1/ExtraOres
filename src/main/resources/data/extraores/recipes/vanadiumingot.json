@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:vanadiumore"
   },
-  "result": "extraores:vanadiumingot"
+  "result": "extraores:vanadiumingot",
+  "cookingtime": 20
 }

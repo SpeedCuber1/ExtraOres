@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:aluminumore"
   },
-  "result": "extraores:aluminumingot"
+  "result": "extraores:aluminumingot",
+  "cookingtime": 20
 }

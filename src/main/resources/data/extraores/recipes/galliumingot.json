@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:galliumore"
   },
-  "result": "extraores:galliumingot"
+  "result": "extraores:galliumingot",
+  "cookingtime": 20
 }

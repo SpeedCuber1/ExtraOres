@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:midasiumore"
   },
-  "result": "extraores:midasiumingot"
+  "result": "extraores:midasiumingot",
+  "cookingtime": 20
 }

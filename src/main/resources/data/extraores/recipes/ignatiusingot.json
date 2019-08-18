@@ -3,5 +3,6 @@
   "ingredient": {
     "item": "extraores:ignatiusore"
   },
-  "result": "extraores:ignatiusingot"
+  "result": "extraores:ignatiusingot",
+  "cookingtime": 20
 }
