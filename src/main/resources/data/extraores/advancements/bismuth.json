@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "Mine Bismuth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:bismuthore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Bismuth"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "item": "extraores:bismuthore"
+    },
+    "title": "Taking Care of Bismuth",
+    "description": "Mine Bismuth Ore",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "extraores:aluminum"
+}

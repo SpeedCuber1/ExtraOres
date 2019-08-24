@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "Mine Black Steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:blacksteelore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Black Steel"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "item": "extraores:blacksteelore"
+    },
+    "title": "It's Like Steel but Black",
+    "description": "Mine Black Steel Ore",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "extraores:atlarus"
+}

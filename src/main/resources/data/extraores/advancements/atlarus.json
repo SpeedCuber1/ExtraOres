@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "Mine Atlarus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:atlarusore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Mine Atlarus"
+    ]
+  ],
+  "display": {
+    "icon": {
+      "item": "extraores:atlarusore"
+    },
+    "title": "Mapping the World One Block at a Time",
+    "description": "Mine Atlarus Ore",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "extraores:astralsilver"
+}
