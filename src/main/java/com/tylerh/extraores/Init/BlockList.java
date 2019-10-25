@@ -102,8 +102,8 @@ public class BlockList
     public static Block blockPlatinum;
     public static Block blockPrometheum;
     public static Block blockRhodium;
-    public static Block blockRuthenium;
     public static Block blockRubracium;
+    public static Block blockRuthenium;
     public static Block blockSanguinite;
     public static Block blockShadowIron;
     public static Block blockSilver;
