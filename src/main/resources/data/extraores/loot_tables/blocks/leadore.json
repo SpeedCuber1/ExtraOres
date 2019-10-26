@@ -2,16 +2,38 @@
   "type": "minecraft:block",
   "pools": [
     {
+      "name": "leadore",
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "inv",
+                  "target": "BlockEntityTag.inv",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_contents",
+              "entries": [
+                {
+                  "type": "minecraft:dynamic",
+                  "name": "minecraft:extraores"
+                }
+              ]
+            }
+          ],
           "name": "extraores:leadore"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
         }
       ]
     }

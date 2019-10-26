@@ -13,11 +13,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ExOreWorldGen
 {
-    private static final CountRangeConfig ORE_NORMAL = new CountRangeConfig(20,0,1,100);
-    private static final CountRangeConfig ORE_RARE = new CountRangeConfig(20,0,1,32);
+    private static final CountRangeConfig ORE_NORMAL = new CountRangeConfig(20, 0, 1, 100);
+    private static final CountRangeConfig ORE_RARE = new CountRangeConfig(20, 0, 1, 32);
+
     public static void initWorldGen()
     {
-        for(Biome biome : ForgeRegistries.BIOMES)
+        for (Biome biome : ForgeRegistries.BIOMES)
         {
             if (ConfigRegistryList.registerAdamantine.get())
             {
@@ -221,7 +222,7 @@ public class ExOreWorldGen
             }
             if (ConfigRegistryList.registerUnobtainium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreUnobtainium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE,ORE_RARE));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreUnobtainium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_RARE));
             }
             if (ConfigRegistryList.registerVanadium.get())
             {

@@ -23,10 +23,12 @@ public class ExtraOres
         ConfigHandler.loadConfig(ConfigHandler.spec, FMLPaths.CONFIGDIR.get().resolve("extraores-common.toml"));
         MinecraftForge.EVENT_BUS.register(this);
     }
+
     private void setup(FMLCommonSetupEvent event)
     {
         ExOreWorldGen.initWorldGen();
     }
+
     private void clientRegistries(FMLClientSetupEvent event)
     {
     }

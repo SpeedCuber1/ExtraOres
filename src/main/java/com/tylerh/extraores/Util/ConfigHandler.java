@@ -15,12 +15,14 @@ public class ConfigHandler
     private static final ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
 
     public static final ForgeConfigSpec spec;
+
     static
     {
         ConfigRegistryList.initConfig(builder);
         ExOreWorldGenConfig.init(builder);
         spec = builder.build();
     }
+
     public static void loadConfig(ForgeConfigSpec configSpec, Path path)
     {
         final CommentedFileConfig config = CommentedFileConfig.builder(path).sync().autosave().writingMode(WritingMode.REPLACE).build();

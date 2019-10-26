@@ -1,4 +1,5 @@
 package com.tylerh.extraores.Items;
+
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
@@ -17,18 +18,18 @@ import java.util.List;
  */
 public class ItemEXOre extends Item
 {
-    public ItemEXOre(ItemGroup group,String uName)
+    public ItemEXOre(ItemGroup group, String uName)
     {
-        super(new Item.Properties().addToolType(ToolType.PICKAXE,2).group(group));
-        setRegistryName(ModInfo.MOD_ID,uName);
+        super(new Item.Properties().addToolType(ToolType.PICKAXE, 2).group(group));
+        setRegistryName(ModInfo.MOD_ID, uName);
     }
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag flag)
     {
-        for(int i = 0; i < ModInfo.blockNames.length; i++)
+        for (int i = 0; i < ModInfo.blockNames.length; i++)
         {
-            if(stack.getDisplayName().getFormattedText().startsWith(ModInfo.blockNames[i]))
+            if (stack.getDisplayName().getFormattedText().startsWith(ModInfo.blockNames[i]))
             {
                 list.add(new TranslationTextComponent("Atomic Symbol: " + ModInfo.symbols[i]));
                 break;

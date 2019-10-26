@@ -19,15 +19,16 @@ public class ItemBlockExOre extends BlockItem
 {
     public ItemBlockExOre(Block block, ItemGroup group)
     {
-        super(block,new Item.Properties().addToolType(ToolType.PICKAXE,2).group(group));
+        super(block, new Item.Properties().addToolType(ToolType.PICKAXE, 2).group(group));
         setRegistryName(block.getRegistryName());
     }
+
     @Override
     public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag flag)
     {
-        for(int i = 0; i < ModInfo.blockNames.length;i++)
+        for (int i = 0; i < ModInfo.blockNames.length; i++)
         {
-            if(stack.getDisplayName().getFormattedText().startsWith(ModInfo.blockNames[i]))
+            if (stack.getDisplayName().getFormattedText().startsWith(ModInfo.blockNames[i]))
             {
                 list.add(new TranslationTextComponent("Atomic Symbol: " + ModInfo.symbols[i]));
                 break;

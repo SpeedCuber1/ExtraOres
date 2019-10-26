@@ -10,10 +10,10 @@ import net.minecraftforge.common.ToolType;
  */
 public class BlockEXOre extends Block
 {
-    public BlockEXOre(Material mat,float hardness,float resistance,String uName)
+    public BlockEXOre(Material mat, float hardness, float resistance, String uName)
     {
-        super(Block.Properties.create(mat).hardnessAndResistance(hardness,resistance).harvestLevel(2).harvestTool(ToolType.PICKAXE));
-        setRegistryName(ModInfo.MOD_ID,uName);
+        super(Block.Properties.create(mat).hardnessAndResistance(hardness, resistance).harvestLevel(2).harvestTool(ToolType.PICKAXE));
+        setRegistryName(ModInfo.MOD_ID, uName);
     }
 
 }
