@@ -1,8 +1,8 @@
 {
   "criteria": {
-    "Mine Aldourite": {
+    "aldourite": {
       "trigger": "minecraft:inventory_changed",
-      "conditions":{
+      "conditions": {
         "items": [
           {
             "item": "extraores:aldouriteore"
@@ -13,14 +13,14 @@
   },
   "requirements": [
     [
-      "Mine Aldourite"
+      "aldourite"
     ]
   ],
   "display": {
     "icon": {
       "item": "extraores:aldouriteore"
     },
-    "title": "They're Here Too",
+    "title": "They're HERE TOO!?",
     "description": "Mine Aldourite Ore",
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "frame": "task",

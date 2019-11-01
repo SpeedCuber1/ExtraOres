@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "Mine Adamantine": {
+    "adamantine": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -13,7 +13,7 @@
   },
   "requirements": [
     [
-      "Mine Adamantine"
+      "adamantine"
     ]
   ],
   "display": {
@@ -25,8 +25,8 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": "false"
+    "announce_to_chest": true,
+    "hidden": false
   },
   "parent": "extraores:root"
 }

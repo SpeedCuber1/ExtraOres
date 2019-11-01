@@ -9,7 +9,7 @@ public class ItemGroupExOre extends ItemGroup
 {
     public ItemGroupExOre()
     {
-        super(ModInfo.MOD_NAME);
+        super("Extra Ores");
     }
 
     @Override

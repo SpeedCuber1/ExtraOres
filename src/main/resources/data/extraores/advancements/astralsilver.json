@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "Mine Astral Silver": {
+    "astralsilver": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -13,7 +13,7 @@
   },
   "requirements": [
     [
-      "Mine Astral Silver"
+      "astralsilver"
     ]
   ],
   "display": {
@@ -28,5 +28,5 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "extraores:angmallen"
+  "parent": "extraores:astralsilver"
 }

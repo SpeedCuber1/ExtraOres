@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "Mine Atlarus": {
+    "atlarus": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -13,7 +13,7 @@
   },
   "requirements": [
     [
-      "Mine Atlarus"
+      "atlarus"
     ]
   ],
   "display": {
@@ -23,10 +23,9 @@
     "title": "Mapping the World One Block at a Time",
     "description": "Mine Atlarus Ore",
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "extraores:astralsilver"
+  "parent": "extraores:atlarus"
 }

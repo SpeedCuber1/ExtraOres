@@ -1,6 +1,6 @@
 {
-  "criteria": {
-    "Mine Aluminum": {
+  "criteria":{
+    "aluminum": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -13,14 +13,14 @@
   },
   "requirements": [
     [
-      "Mine Aluminum"
+      "aluminum"
     ]
   ],
   "display": {
     "icon": {
       "item": "extraores:aluminumore"
     },
-    "title": "Sody Anyone?",
+    "title": "Soda Anyone?",
     "description": "Mine Aluminum Ore",
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "frame": "task",

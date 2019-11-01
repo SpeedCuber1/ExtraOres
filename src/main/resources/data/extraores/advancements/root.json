@@ -1,21 +1,11 @@
 {
   "criteria": {
-    "Mine Iron": {
+    "cobble": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:iron_ore"
-          }
-        ]
-      }
-    },
-    "Mine Gold": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:gold_ore"
+            "item": "minecraft:cobblestone"
           }
         ]
       }
@@ -23,16 +13,15 @@
   },
   "requirements": [
     [
-      "Mine Iron",
-      "Mine Gold"
+      "cobble"
     ]
   ],
   "display": {
     "icon": {
-      "item": "extraores:copperore"
+      "item": "minecraft:iron_ore"
     },
-    "title": "The World Is Full Of It",
-    "description": "Mine Iron Or Gold Ore",
+    "title": "Extra Ores",
+    "description": "Start Mining Resources",
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "frame": "task",
     "show_toast": false,

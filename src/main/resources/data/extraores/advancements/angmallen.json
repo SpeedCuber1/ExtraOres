@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "Mine Angmallen": {
+    "angmallen": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -13,7 +13,7 @@
   },
   "requirements": [
     [
-      "Mine Angmallen"
+      "angmallen"
     ]
   ],
   "display": {

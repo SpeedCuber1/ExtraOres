@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "Mine Amordrine": {
+    "amordrine": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -13,7 +13,7 @@
   },
   "requirements": [
     [
-      "Mine Amordrine"
+      "amordrine"
     ]
   ],
   "display": {
@@ -24,7 +24,7 @@
     "description": "Mine Amordrine Ore",
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "frame": "task",
-    "show_toast":true,
+    "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },

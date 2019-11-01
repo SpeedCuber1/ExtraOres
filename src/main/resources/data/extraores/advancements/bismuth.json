@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "Mine Bismuth": {
+    "bismuth": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -13,7 +13,7 @@
   },
   "requirements": [
     [
-      "Mine Bismuth"
+      "bismuth"
     ]
   ],
   "display": {

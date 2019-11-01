@@ -1,8 +1,7 @@
 package com.tylerh.extraores.Init;
 
 import com.tylerh.extraores.Blocks.BlockEXOre;
-import com.tylerh.extraores.Items.ItemBlockExOre;
-import com.tylerh.extraores.Items.ItemEXOre;
+import com.tylerh.extraores.Items.*;
 import com.tylerh.extraores.Util.ItemGroupExOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,11 +11,13 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.function.Supplier;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InitBlocks
 {
     private static final ItemGroup EXORES = new ItemGroupExOre();
-
+    private static final ItemTierExOre EX_ORE_TIER = new ItemTierExOre(2,500,6.0f,5.0f,5);
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event)
     {
@@ -421,10 +422,22 @@ public class InitBlocks
         {
             ItemList.itemIngotAdamantine = new ItemEXOre(EXORES, "adamantineingot");
             ItemList.itemDustAdamantine = new ItemEXOre(EXORES, "adamantinedust");
+            ToolList.itemPickaxeAdamantine = new PickaxeExOre(EX_ORE_TIER,3,5.0f,EXORES,"adamantinepickaxe");
+            ToolList.itemAxeAdamantine = new AxeExOre(EX_ORE_TIER,3.0f,5.0f,EXORES,"adamantineaxe");
+            ToolList.itemHoeAdamantine = new HoeExOre(EX_ORE_TIER,5.0f,EXORES,"adamantinehoe");
+            ToolList.itemShearsAdamantine = new ShearsExOre(EXORES,"adamantineshears");
+            ToolList.itemShovelAdamantine = new ShovelExOre(EX_ORE_TIER,3.0f,5.0f,EXORES,"adamantineshovel");
+            ToolList.itemSwordAdamantine = new SwordExOre(EX_ORE_TIER,3,5.0f,EXORES,"adamantinesword");
             ItemBlockList.itemBlockOreAdamantine = new ItemBlockExOre(BlockList.blockOreAdamantine, EXORES);
             ItemBlockList.itemBlockAdamantine = new ItemBlockExOre(BlockList.blockAdamantine, EXORES);
             itemRegistry(ItemList.itemIngotAdamantine, event);
             itemRegistry(ItemList.itemDustAdamantine, event);
+            itemRegistry(ToolList.itemPickaxeAdamantine,event);
+            itemRegistry(ToolList.itemAxeAdamantine,event);
+            itemRegistry(ToolList.itemHoeAdamantine,event);
+            itemRegistry(ToolList.itemShearsAdamantine,event);
+            itemRegistry(ToolList.itemShovelAdamantine,event);
+            itemRegistry(ToolList.itemSwordAdamantine,event);
             itemRegistry(ItemBlockList.itemBlockOreAdamantine, event);
             itemRegistry(ItemBlockList.itemBlockAdamantine, event);
         }

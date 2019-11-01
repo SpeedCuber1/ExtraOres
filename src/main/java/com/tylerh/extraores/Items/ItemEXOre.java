@@ -20,7 +20,7 @@ public class ItemEXOre extends Item
 {
     public ItemEXOre(ItemGroup group, String uName)
     {
-        super(new Item.Properties().addToolType(ToolType.PICKAXE, 2).group(group));
+        super(new Item.Properties().addToolType(ToolType.PICKAXE, 2).group(group).maxStackSize(64));
         setRegistryName(ModInfo.MOD_ID, uName);
     }
 

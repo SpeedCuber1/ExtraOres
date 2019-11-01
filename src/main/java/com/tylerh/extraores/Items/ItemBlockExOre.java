@@ -19,7 +19,7 @@ public class ItemBlockExOre extends BlockItem
 {
     public ItemBlockExOre(Block block, ItemGroup group)
     {
-        super(block, new Item.Properties().addToolType(ToolType.PICKAXE, 2).group(group));
+        super(block, new Item.Properties().addToolType(ToolType.PICKAXE, 2).group(group).maxStackSize(64));
         setRegistryName(block.getRegistryName());
     }
 
