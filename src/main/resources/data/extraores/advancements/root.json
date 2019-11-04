@@ -1,11 +1,27 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_ore"
+    },
+    "title": {
+      "translate": "Extra Ores"
+    },
+    "description": {
+      "translate": "Start Mining Resources"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
   "criteria": {
-    "cobble": {
+    "iron": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:cobblestone"
+            "item": "minecraft:iron_ore"
           }
         ]
       }
@@ -13,19 +29,7 @@
   },
   "requirements": [
     [
-      "cobble"
+      "iron"
     ]
-  ],
-  "display": {
-    "icon": {
-      "item": "minecraft:iron_ore"
-    },
-    "title": "Extra Ores",
-    "description": "Start Mining Resources",
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": false
-  }
+  ]
 }

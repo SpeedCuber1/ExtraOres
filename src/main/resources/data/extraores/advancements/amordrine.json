@@ -1,4 +1,21 @@
 {
+  "parent": "extraores:adamantine",
+  "display": {
+    "icon": {
+      "item": "extraores:amordrineore"
+    },
+    "title": {
+      "translate": "That\u0027s Amordrine"
+    },
+    "description": {
+      "translate": "Mine Amordrine Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
   "criteria": {
     "amordrine": {
       "trigger": "minecraft:inventory_changed",
@@ -15,18 +32,5 @@
     [
       "amordrine"
     ]
-  ],
-  "display": {
-    "icon": {
-      "item": "extraores:amordrineore"
-    },
-    "title": "That's Amordrine",
-    "description": "Mine Amordrine Ore",
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "parent": "extraores:adamantine"
+  ]
 }

@@ -13,5 +13,6 @@ public class EXOreDataGen
     {
         DataGenerator generator = event.getGenerator();
         generator.addProvider(new LootTables(generator));
+        generator.addProvider(new Advancements(generator));
     }
 }

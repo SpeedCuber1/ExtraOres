@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:angmallen",
+  "parent": "extraores:chromium",
   "display": {
     "icon": {
-      "item": "extraores:astralsilverore"
+      "item": "extraores:cobaltore"
     },
     "title": {
-      "translate": "By the Power of the Stars"
+      "translate": "Tough as Nails"
     },
     "description": {
-      "translate": "Mine Astral Silver Ore"
+      "translate": "Mine Cobalt Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "astralsilver": {
+    "cobalt": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:astralsilverore"
+            "item": "extraores:cobaltore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "astralsilver"
+      "cobalt"
     ]
   ]
 }

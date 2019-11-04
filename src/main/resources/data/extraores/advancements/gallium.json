@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:angmallen",
+  "parent": "extraores:copper",
   "display": {
     "icon": {
-      "item": "extraores:astralsilverore"
+      "item": "extraores:galliumore"
     },
     "title": {
-      "translate": "By the Power of the Stars"
+      "translate": "Not A Kitchen"
     },
     "description": {
-      "translate": "Mine Astral Silver Ore"
+      "translate": "Mine Gallium Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "astralsilver": {
+    "gallium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:astralsilverore"
+            "item": "extraores:galliumore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "astralsilver"
+      "gallium"
     ]
   ]
 }

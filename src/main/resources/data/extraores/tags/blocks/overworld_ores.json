@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "#extraores:ores/overworld/adamantine",
+    "#extraores:ores/overworld/aluminum",
+    "#extraores:ores/overworld/amordrine",
+    "#extraores:ores/overworld/angmallen",
+    "#extraores:ores/overworld/astralsilver",
+    "#extraores:ores/overworld/atlarus",
+    "#extraores:ores/overworld/bismuth",
+    "#extraores:ores/overworld/blacksteel",
+    "#extraores:ores/overworld/cadmium",
+    "#extraores:ores/overworld/carmot",
+    "#extraores:ores/overworld/celenegil",
+    "#extraores:ores/overworld/chromium",
+    "#extraores:ores/overworld/cobalt",
+    "#extraores:ores/overworld/copper",
+    "#extraores:ores/overworld/deepiron",
+    "#extraores:ores/overworld/gallium",
+    "#extraores:ores/overworld/haderoth",
+    "#extraores:ores/overworld/hepatizon",
+    "#extraores:ores/overworld/indium",
+    "#extraores:ores/overworld/infuscolium",
+    "#extraores:ores/overworld/inolashite"
+  ]
+}

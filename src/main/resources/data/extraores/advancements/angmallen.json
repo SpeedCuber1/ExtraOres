@@ -1,4 +1,21 @@
 {
+  "parent": "extraores:amordrine",
+  "display": {
+    "icon": {
+      "item": "extraores:angmallenore"
+    },
+    "title": {
+      "translate": "It\u0027s Angelic"
+    },
+    "description": {
+      "translate": "Mine Angmallen Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
   "criteria": {
     "angmallen": {
       "trigger": "minecraft:inventory_changed",
@@ -15,18 +32,5 @@
     [
       "angmallen"
     ]
-  ],
-  "display": {
-    "icon": {
-      "item": "extraores:angmallenore"
-    },
-    "title": "It's Angelic",
-    "description": "Mine Angmallen Ore",
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
-  "parent": "extraores:amordrine"
+  ]
 }

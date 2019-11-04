@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#extraores:ores/nether/aldourite",
+    "#extraores:ores/nether/ceruclase",
+    "#extraores:ores/nether/ignatius",
+    "#extraores:ores/nether/kalendrite"
+  ]
+}
