@@ -21,6 +21,12 @@
     "#extraores:ores/overworld/hepatizon",
     "#extraores:ores/overworld/indium",
     "#extraores:ores/overworld/infuscolium",
-    "#extraores:ores/overworld/inolashite"
+    "#extraores:ores/overworld/inolashite",
+    "#extraores:ores/overworld/lead",
+    "#extraores:ores/overworld/manganese",
+    "#extraores:ores/overworld/mithril",
+    "#extraores:ores/overworld/molybdenum",
+    "#extraores:ores/overworld/neodymium",
+    "#extraores:ores/overworld/nickel"
   ]
 }
