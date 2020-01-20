@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:inolashite",
+  "display": {
+    "icon": {
+      "item": "extraores:mithrilore"
+    },
+    "title": {
+      "translate": "Are We Playing Minecraft or Runescape?"
+    },
+    "description": {
+      "translate": "Mine Mithril Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "mithril": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:mithrilore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mithril"
+    ]
+  ]
+}

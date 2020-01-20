@@ -3,7 +3,6 @@ package com.tylerh.extraores.World;
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Init.ConfigRegistryList;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
@@ -22,227 +21,227 @@ public class ExOreWorldGen
         {
             if (ConfigRegistryList.registerAdamantine.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreAdamantine.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_RARE));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAdamantine.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_RARE)));
             }
-            if (ConfigRegistryList.registerAldourite.get())
+            if(ConfigRegistryList.registerAldourite.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreAldourite.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreAldourite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerAluminum.get())
+            if(ConfigRegistryList.registerAluminum.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreAluminum.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAluminum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerAmordrine.get())
+            if(ConfigRegistryList.registerAmordrine.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreAmordrine.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAmordrine.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerAngmallen.get())
+            if(ConfigRegistryList.registerAngmallen.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreAngmallen.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAngmallen.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerAstralSilver.get())
+            if(ConfigRegistryList.registerAstralSilver.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreAstralSilver.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_RARE));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAstralSilver.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_RARE)));
             }
-            if (ConfigRegistryList.registerAtlarus.get())
+            if(ConfigRegistryList.registerAtlarus.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreAtlarus.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_RARE));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAtlarus.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_RARE)));
             }
-            if (ConfigRegistryList.registerBismuth.get())
+            if(ConfigRegistryList.registerBismuth.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreBismuth.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreBismuth.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerBlackSteel.get())
+            if(ConfigRegistryList.registerBlackSteel.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreBlackSteel.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreBlackSteel.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerCadmium.get())
+            if(ConfigRegistryList.registerCadmium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreCadmium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCadmium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerCarmot.get())
+            if(ConfigRegistryList.registerCarmot.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreCarmot.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCarmot.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerCelenegil.get())
+            if(ConfigRegistryList.registerCelenegil.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreCelenegil.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCelenegil.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerCeruclase.get())
+            if(ConfigRegistryList.registerCeruclase.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreCeruclase.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreCeruclase.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerChromium.get())
+            if(ConfigRegistryList.registerChromium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreChromium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreChromium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerCobalt.get())
+            if(ConfigRegistryList.registerCobalt.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreCobalt.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCobalt.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerCopper.get())
+            if(ConfigRegistryList.registerCopper.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreCopper.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCopper.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerDeepIron.get())
+            if(ConfigRegistryList.registerDeepIron.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreDeepIron.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_RARE));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreDeepIron.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_RARE)));
             }
-            if (ConfigRegistryList.registerGallium.get())
+            if(ConfigRegistryList.registerGallium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreGallium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreGallium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerHaderoth.get())
+            if(ConfigRegistryList.registerHaderoth.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreHaderoth.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreHaderoth.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerHepatizon.get())
+            if(ConfigRegistryList.registerHepatizon.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreHepatizon.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreHepatizon.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerIgnatius.get())
+            if(ConfigRegistryList.registerIgnatius.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreIgnatius.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreIgnatius.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerIndium.get())
+            if(ConfigRegistryList.registerIndium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreIndium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreIndium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerInfuscolium.get())
+            if(ConfigRegistryList.registerInfuscolium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreInfuscolium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreInfuscolium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerInolashite.get())
+            if(ConfigRegistryList.registerInolashite.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreInolashite.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreInolashite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerKalendrite.get())
+            if(ConfigRegistryList.registerKalendrite.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreKalendrite.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreKalendrite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerLead.get())
+            if(ConfigRegistryList.registerLead.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreLead.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreLead.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerLemurite.get())
+            if(ConfigRegistryList.registerLemurite.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreLemurite.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreLemurite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerManganese.get())
+            if(ConfigRegistryList.registerManganese.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreManganese.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreManganese.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerMidasium.get())
+            if(ConfigRegistryList.registerMidasium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreMidasium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreMidasium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerMithril.get())
+            if(ConfigRegistryList.registerMithril.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreMithril.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreMithril.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerMolybdenum.get())
+            if(ConfigRegistryList.registerMolybdenum.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreMolybdenum.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreMolybdenum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerNeodymium.get())
+            if(ConfigRegistryList.registerNeodymium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreNeodymium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreNeodymium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerNickel.get())
+            if(ConfigRegistryList.registerNickel.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreNickel.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreNickel.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerNiobium.get())
+            if(ConfigRegistryList.registerNiobium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreNiobium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreNiobium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerOrichalcum.get())
+            if(ConfigRegistryList.registerOrichalcum.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreOrichalcum.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreOrichalcum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerOureclase.get())
+            if(ConfigRegistryList.registerOureclase.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreOureclase.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreOureclase.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerPalladium.get())
+            if(ConfigRegistryList.registerPalladium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOrePalladium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOrePalladium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerPlatinum.get())
+            if(ConfigRegistryList.registerPlatinum.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOrePlatinum.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOrePlatinum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerPrometheum.get())
+            if(ConfigRegistryList.registerPrometheum.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOrePrometheum.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOrePrometheum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerRhodium.get())
+            if(ConfigRegistryList.registerRhodium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreRhodium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreRhodium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerRubracium.get())
+            if(ConfigRegistryList.registerRubracium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreRubracium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreRubracium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerRuthenium.get())
+            if(ConfigRegistryList.registerRuthenium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreRuthenium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreRuthenium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerSanguinite.get())
+            if(ConfigRegistryList.registerSanguinite.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreSanguinite.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreSanguinite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerShadowIron.get())
+            if(ConfigRegistryList.registerShadowIron.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreShadowIron.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreShadowIron.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerSilver.get())
+            if(ConfigRegistryList.registerSilver.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreSilver.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreSilver.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerTechnetium.get())
+            if(ConfigRegistryList.registerTechnetium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreTechnetium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreTechnetium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerThallium.get())
+            if(ConfigRegistryList.registerThallium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreThallium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreThallium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerTin.get())
+            if(ConfigRegistryList.registerTin.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreTin.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreTin.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerTitanium.get())
+            if(ConfigRegistryList.registerTitanium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreTitanium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreTitanium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerTungsten.get())
+            if(ConfigRegistryList.registerTungsten.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreTungsten.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreTungsten.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerUnobtainium.get())
+            if(ConfigRegistryList.registerUnobtainium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreUnobtainium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_RARE));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreUnobtainium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_RARE)));
             }
-            if (ConfigRegistryList.registerVanadium.get())
+            if(ConfigRegistryList.registerVanadium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreVanadium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreVanadium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerVulcanite.get())
+            if(ConfigRegistryList.registerVulcanite.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreVulcanite.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreVulcanite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerVyroxeres.get())
+            if(ConfigRegistryList.registerVyroxeres.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, BlockList.blockOreVyroxeres.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreVyroxeres.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerZinc.get())
+            if(ConfigRegistryList.registerZinc.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreZinc.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreZinc.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
-            if (ConfigRegistryList.registerZirconium.get())
+            if(ConfigRegistryList.registerZirconium.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreZirconium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreZirconium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(ORE_NORMAL)));
             }
         }
     }

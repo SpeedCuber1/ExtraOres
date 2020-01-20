@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:shadowiron",
+  "display": {
+    "icon": {
+      "item": "extraores:vyroxeresore"
+    },
+    "title": {
+      "translate": "Sounds Toxic"
+    },
+    "description": {
+      "translate": "Mine Vyroxeres Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "vyroxeres": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:vyroxeresore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "vyroxeres"
+    ]
+  ]
+}
