@@ -1,12 +1,28 @@
 {
+  "parent": "extraores:root",
+  "display": {
+    "icon": {
+      "item": "extraores:adamantineore"
+    },
+    "title": {
+      "translate": "It Really DOES Exist"
+    },
+    "description": {
+      "translate": "Mine Adamantine Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
   "criteria": {
-    "Mine Adamantine": {
+    "adamantine": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:adamantineOre",
-            "data": 0
+            "item": "extraores:adamantineore"
           }
         ]
       }
@@ -14,20 +30,7 @@
   },
   "requirements": [
     [
-      "Mine Adamantine"
+      "adamantine"
     ]
-  ],
-  "display": {
-    "icon": {
-      "item": "extraores:adamantineore",
-      "data": 0
-    },
-    "title": "It Really DOES Exist",
-    "description":"Mine Adamantine Ore",
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true
-  },
-  "parent": "extraores:root"
+  ]
 }

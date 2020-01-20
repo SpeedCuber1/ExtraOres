@@ -1,23 +1,27 @@
 {
-  "criteria": {
-    "Mine Gold": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "item": "minecraft:gold_ore",
-            "data": 0
-          }
-        ]
-      }
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_ore"
     },
-    "Mine Iron": {
+    "title": {
+      "translate": "Extra Ores"
+    },
+    "description": {
+      "translate": "Start Mining Resources"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "iron": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:iron_ore",
-            "data": 0
+            "item": "minecraft:iron_ore"
           }
         ]
       }
@@ -25,19 +29,7 @@
   },
   "requirements": [
     [
-      "Mine Gold",
-      "Mine Iron"
+      "iron"
     ]
-  ],
-  "display": {
-    "icon": {
-      "item": "minecraft:iron_ore",
-      "data": 0
-    },
-    "title": "Extra Ores",
-    "description": "There really are a lot of them aren't there",
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
-    "show_toast": false,
-    "announce_to_chat": false
-  }
+  ]
 }
