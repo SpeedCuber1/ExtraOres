@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:vanadium",
+  "display": {
+    "icon": {
+      "item": "extraores:zincore"
+    },
+    "title": {
+      "translate": "Great Nutritional Value"
+    },
+    "description": {
+      "translate": "Mine Zinc Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "zinc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:zincore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "zinc"
+    ]
+  ]
+}

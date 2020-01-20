@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:celenegil",
+  "display": {
+    "icon": {
+      "item": "extraores:deepironore"
+    },
+    "title": {
+      "translate": "We Need to go EVEN Deeper"
+    },
+    "description": {
+      "translate": "Mine Deep Iron Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "deepiron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:deepironore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "deepiron"
+    ]
+  ]
+}

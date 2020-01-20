@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:copper",
+  "display": {
+    "icon": {
+      "item": "extraores:galliumore"
+    },
+    "title": {
+      "translate": "Not A Kitchen"
+    },
+    "description": {
+      "translate": "Mine Gallium Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "gallium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:galliumore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gallium"
+    ]
+  ]
+}

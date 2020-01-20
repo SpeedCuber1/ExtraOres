@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:blacksteel",
+  "display": {
+    "icon": {
+      "item": "extraores:carmotore"
+    },
+    "title": {
+      "translate": "It\u0027s Carm-OH not Carm-OT"
+    },
+    "description": {
+      "translate": "Mine Carmot Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "carmot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:carmotore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "carmot"
+    ]
+  ]
+}

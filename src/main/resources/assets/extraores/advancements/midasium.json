@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:lemurite",
+  "display": {
+    "icon": {
+      "item": "extraores:midasiumore"
+    },
+    "title": {
+      "translate": "Everything Turns to Gold"
+    },
+    "description": {
+      "translate": "Mine Midasium Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "midasium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:midasiumore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "midasium"
+    ]
+  ]
+}

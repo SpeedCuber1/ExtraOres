@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:carmot",
+  "display": {
+    "icon": {
+      "item": "extraores:celenegilore"
+    },
+    "title": {
+      "translate": "What EVEN is This!?"
+    },
+    "description": {
+      "translate": "Mine Celenegil Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "celenegil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:celenegilore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "celenegil"
+    ]
+  ]
+}
