@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:vulcanite",
+  "parent": "extraores:shadowiron",
   "display": {
     "icon": {
-      "item": "extraores:vyroxeresore"
+      "item": "extraores:vulcaniteore"
     },
     "title": {
-      "translate": "Sounds Toxic"
+      "translate": "Ores From the Planet Vulcan"
     },
     "description": {
-      "translate": "Mine Vyroxeres Ore"
+      "translate": "Mine Vulcanite Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "vyroxeres": {
+    "vulcanite": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:vyroxeresore"
+            "item": "extraores:vulcaniteore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "vyroxeres"
+      "vulcanite"
     ]
   ]
 }
