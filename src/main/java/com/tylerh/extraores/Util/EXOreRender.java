@@ -166,6 +166,24 @@ public class EXOreRender
             location = new ResourceLocation("extraores:deepIronBlock");
             Register(itemBlockDeepIron,location.toString());
         }
+        if(InitBlocks.registerDesichalkos)
+        {
+            Item itemBlockDesichalkos = Item.getItemFromBlock(InitBlocks.blockOreDesichalkos);
+            ResourceLocation location = new ResourceLocation("extraores:desichalkosOre");
+            Register(itemBlockDesichalkos,location.toString());
+            itemBlockDesichalkos = Item.getItemFromBlock(InitBlocks.blockDesichalkos);
+            location = new ResourceLocation("extraores:desichalkosBlock");
+            Register(itemBlockDesichalkos,location.toString());
+        }
+        if(InitBlocks.registerEximite)
+        {
+            Item itemBlockEximite = Item.getItemFromBlock(InitBlocks.blockOreEximite);
+            ResourceLocation location = new ResourceLocation("extraores:eximiteOre");
+            Register(itemBlockEximite,location.toString());
+            itemBlockEximite = Item.getItemFromBlock(InitBlocks.blockEximite);
+            location = new ResourceLocation("extraores:eximiteBlock");
+            Register(itemBlockEximite,location.toString());
+        }
         if(InitBlocks.registerGallium)
         {
             Item itemBlockGallium = Item.getItemFromBlock(InitBlocks.blockOreGallium);
@@ -264,6 +282,15 @@ public class EXOreRender
             itemBlockManganese = Item.getItemFromBlock(InitBlocks.blockManganese);
             location = new ResourceLocation("extraores:manganeseBlock");
             Register(itemBlockManganese,location.toString());
+        }
+        if(InitBlocks.registerMeutoite)
+        {
+            Item itemBlockMeutoite = Item.getItemFromBlock(InitBlocks.blockOreMeutoite);
+            ResourceLocation location = new ResourceLocation("extraores:meutoiteOre");
+            Register(itemBlockMeutoite,location.toString());
+            itemBlockMeutoite = Item.getItemFromBlock(InitBlocks.blockMeutoite);
+            location = new ResourceLocation("extraores:meutoiteBlock");
+            Register(itemBlockMeutoite,location.toString());
         }
         if(InitBlocks.registerMidasium)
         {
@@ -741,6 +768,32 @@ public class EXOreRender
             location = new ResourceLocation("extraores:deepIrondirtydust");
             Register(InitBlocks.itemDirtyDustDeepIron,location.toString());
         }
+        if(InitBlocks.registerDesichalkos)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:desichalkosIngot");
+            Register(InitBlocks.itemIngotDesichalkos,location.toString());
+            location = new ResourceLocation("extraores:desichalkosDust");
+            Register(InitBlocks.itemDustDesichalkos,location.toString());
+            location = new ResourceLocation("extraores:desichalkosclump");
+            Register(InitBlocks.itemClumpDesichalkos,location.toString());
+            location = new ResourceLocation("extraores:desichalkosshard");
+            Register(InitBlocks.itemShardDesichalkos,location.toString());
+            location = new ResourceLocation("extraores:desichalkosdirtydust");
+            Register(InitBlocks.itemDirtyDustDesichalkos,location.toString());
+        }
+        if(InitBlocks.registerEximite)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:eximiteIngot");
+            Register(InitBlocks.itemIngotEximite,location.toString());
+            location = new ResourceLocation("extraores:eximiteDust");
+            Register(InitBlocks.itemDustEximite,location.toString());
+            location = new ResourceLocation("extraores:eximiteclump");
+            Register(InitBlocks.itemClumpEximite,location.toString());
+            location = new ResourceLocation("extraores:eximiteshard");
+            Register(InitBlocks.itemShardEximite,location.toString());
+            location = new ResourceLocation("extraores:eximitedirtydust");
+            Register(InitBlocks.itemDirtyDustEximite,location.toString());
+        }
         if(InitBlocks.registerGallium)
         {
             ResourceLocation location = new ResourceLocation("extraores:galliumIngot");
@@ -883,6 +936,19 @@ public class EXOreRender
             Register(InitBlocks.itemShardManganese,location.toString());
             location = new ResourceLocation("extraores:manganesedirtydust");
             Register(InitBlocks.itemDirtyDustManganese,location.toString());
+        }
+        if(InitBlocks.registerMeutoite)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:meutoiteIngot");
+            Register(InitBlocks.itemIngotMeutoite,location.toString());
+            location = new ResourceLocation("extraores:meutoiteDust");
+            Register(InitBlocks.itemDustMeutoite,location.toString());
+            location = new ResourceLocation("extraores:meutoiteclump");
+            Register(InitBlocks.itemClumpMeutoite,location.toString());
+            location = new ResourceLocation("extraores:meutoiteshard");
+            Register(InitBlocks.itemShardMeutoite,location.toString());
+            location = new ResourceLocation("extraores:meutoitedirtydust");
+            Register(InitBlocks.itemDirtyDustMeutoite,location.toString());
         }
         if(InitBlocks.registerMidasium)
         {
