@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:platinumore"
-  },
-  "result": "extraores:platinumingot",
-  "cookingtime": 20
-}

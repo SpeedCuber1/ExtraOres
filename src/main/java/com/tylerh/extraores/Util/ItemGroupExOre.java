@@ -9,7 +9,7 @@ public class ItemGroupExOre extends ItemGroup
 {
     public ItemGroupExOre()
     {
-        super("Extra Ores");
+        super("extraores");
     }
 
     @Override

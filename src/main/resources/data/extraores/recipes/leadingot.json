@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:leadore"
-  },
-  "result": "extraores:leadingot",
-  "cookingtime": 20
-}

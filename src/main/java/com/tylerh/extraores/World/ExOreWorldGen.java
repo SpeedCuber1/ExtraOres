@@ -88,6 +88,14 @@ public class ExOreWorldGen
             {
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreDeepIron.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_RARE));
             }
+            if(ConfigRegistryList.registerDesichalkos.get())
+            {
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,biome.createDecoratedFeature(Feature.ORE,new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreDesichalkos.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get()),Placement.COUNT_RANGE,ORE_NORMAL));
+            }
+            if(ConfigRegistryList.registerEximite.get())
+            {
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,biome.createDecoratedFeature(Feature.ORE,new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreEximite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get()),Placement.COUNT_RANGE,ORE_NORMAL));
+            }
             if (ConfigRegistryList.registerGallium.get())
             {
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreGallium.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
@@ -131,6 +139,10 @@ public class ExOreWorldGen
             if (ConfigRegistryList.registerManganese.get())
             {
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.blockOreManganese.getDefaultState(), ExOreWorldGenConfig.chanceToSpawn.get()), Placement.COUNT_RANGE, ORE_NORMAL));
+            }
+            if(ConfigRegistryList.registerMeutoite.get())
+            {
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,biome.createDecoratedFeature(Feature.ORE,new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreMeutoite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get()),Placement.COUNT_RANGE,ORE_NORMAL));
             }
             if (ConfigRegistryList.registerMidasium.get())
             {

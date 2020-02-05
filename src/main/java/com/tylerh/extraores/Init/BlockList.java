@@ -22,6 +22,8 @@ public class BlockList
     public static Block blockOreCobalt;
     public static Block blockOreCopper;
     public static Block blockOreDeepIron;
+    public static Block blockOreDesichalkos;
+    public static Block blockOreEximite;
     public static Block blockOreGallium;
     public static Block blockOreHaderoth;
     public static Block blockOreHepatizon;
@@ -33,6 +35,7 @@ public class BlockList
     public static Block blockOreLead;
     public static Block blockOreLemurite;
     public static Block blockOreManganese;
+    public static Block blockOreMeutoite;
     public static Block blockOreMidasium;
     public static Block blockOreMithril;
     public static Block blockOreMolybdenum;
@@ -79,6 +82,8 @@ public class BlockList
     public static Block blockCobalt;
     public static Block blockCopper;
     public static Block blockDeepIron;
+    public static Block blockDesichalkos;
+    public static Block blockEximite;
     public static Block blockGallium;
     public static Block blockHaderoth;
     public static Block blockHepatizon;
@@ -90,6 +95,7 @@ public class BlockList
     public static Block blockLead;
     public static Block blockLemurite;
     public static Block blockManganese;
+    public static Block blockMeutoite;
     public static Block blockMidasium;
     public static Block blockMithril;
     public static Block blockMolybdenum;

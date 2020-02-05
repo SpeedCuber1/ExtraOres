@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:copperore"
-  },
-  "result": "extraores:copperingot",
-  "cookingtime": 20
-}

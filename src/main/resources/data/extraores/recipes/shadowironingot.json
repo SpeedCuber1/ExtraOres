@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:shadowironore"
-  },
-  "result": "extraores:shadowironingot",
-  "cookingtime": 20
-}

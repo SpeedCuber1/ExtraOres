@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:aluminumore"
-  },
-  "result": "extraores:aluminumingot",
-  "cookingtime": 20
-}

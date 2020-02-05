@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:bismuthore"
-  },
-  "result": "extraores:bismuthingot",
-  "coookingtime": 20
-}

@@ -22,6 +22,8 @@ public class ItemBlockList
     public static Item itemBlockOreCobalt;
     public static Item itemBlockOreCopper;
     public static Item itemBlockOreDeepIron;
+    public static Item itemBlockOreDesichalkos;
+    public static Item itemBlockOreEximite;
     public static Item itemBlockOreGallium;
     public static Item itemBlockOreHaderoth;
     public static Item itemBlockOreHepatizon;
@@ -33,6 +35,7 @@ public class ItemBlockList
     public static Item itemBlockOreLead;
     public static Item itemBlockOreLemurite;
     public static Item itemBlockOreManganese;
+    public static Item itemBlockOreMeutoite;
     public static Item itemBlockOreMidasium;
     public static Item itemBlockOreMithril;
     public static Item itemBlockOreMolybdenum;
@@ -79,6 +82,8 @@ public class ItemBlockList
     public static Item itemBlockCobalt;
     public static Item itemBlockCopper;
     public static Item itemBlockDeepIron;
+    public static Item itemBlockDesichalkos;
+    public static Item itemBlockEximite;
     public static Item itemBlockGallium;
     public static Item itemBlockHaderoth;
     public static Item itemBlockHepatizon;
@@ -90,6 +95,7 @@ public class ItemBlockList
     public static Item itemBlockLead;
     public static Item itemBlockLemurite;
     public static Item itemBlockManganese;
+    public static Item itemBlockMeutoite;
     public static Item itemBlockMidasium;
     public static Item itemBlockMithril;
     public static Item itemBlockMolybdenum;

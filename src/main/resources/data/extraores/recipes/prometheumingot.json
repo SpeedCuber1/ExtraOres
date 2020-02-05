@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:prometheumore"
-  },
-  "result": "extraores:prometheumingot",
-  "cookingtime": 20
-}

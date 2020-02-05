@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:titaniumore"
-  },
-  "result": "extraores:titaniumingot",
-  "cookingtime": 20
-}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:astralsilverore"
-  },
-  "result": "extraores:astralsilveringot",
-  "cookingtime": 20
-}
