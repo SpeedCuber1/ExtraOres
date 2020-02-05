@@ -196,6 +196,10 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.manganeseOre = new EXOreWorldGenMinable(InitBlocks.blockOreManganese.getDefaultState(), 4);
         }
+        if(InitBlocks.registerMeutoite)
+        {
+            this.meutoiteOre = new EXOreWorldGenMinable(InitBlocks.blockOreMeutoite.getDefaultState(),4);
+        }
         if(InitBlocks.registerMidasium)
         {
             this.midasiumOre = new EXOreWorldGenMinable(InitBlocks.blockOreMidasium.getDefaultState(),4,new NetherPredicate());
@@ -416,7 +420,7 @@ public class EXOreWorldGen implements IWorldGenerator
             }
             if(InitBlocks.registerMeutoite)
             {
-                runGenerator(this.manganeseOre,world,random,chunkX,chunkZ,20,0,100);
+                runGenerator(this.meutoiteOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerMithril)
             {
