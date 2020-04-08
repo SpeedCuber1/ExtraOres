@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:molybdenumore"
-  },
-  "result": "extraores:molybdenumingot",
-  "cookingtime": 20
-}

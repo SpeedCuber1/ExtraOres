@@ -11,13 +11,11 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InitBlocks
 {
     private static final ItemGroup EXORES = new ItemGroupExOre();
-    private static final ItemTierExOre EX_ORE_TIER = new ItemTierExOre(2,500,6.0f,5.0f,5);
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event)
     {
@@ -140,6 +138,20 @@ public class InitBlocks
             blockRegistry(BlockList.blockOreDeepIron, event);
             blockRegistry(BlockList.blockDeepIron, event);
         }
+        if(ConfigRegistryList.registerDesichalkos.get())
+        {
+            BlockList.blockOreDesichalkos = new BlockEXOre(Material.ROCK,3.0f,5.0f,"desichalkosore");
+            BlockList.blockDesichalkos = new BlockEXOre(Material.IRON,3.0f,5.0f,"desichalkosblock");
+            blockRegistry(BlockList.blockOreDesichalkos,event);
+            blockRegistry(BlockList.blockDesichalkos,event);
+        }
+        if(ConfigRegistryList.registerEximite.get())
+        {
+            BlockList.blockOreEximite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"eximiteore");
+            BlockList.blockEximite = new BlockEXOre(Material.IRON,3.0f,5.0f,"eximiteblock");
+            blockRegistry(BlockList.blockOreEximite,event);
+            blockRegistry(BlockList.blockEximite,event);
+        }
         if (ConfigRegistryList.registerGallium.get())
         {
             BlockList.blockOreGallium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "galliumore");
@@ -216,6 +228,13 @@ public class InitBlocks
             BlockList.blockManganese = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "manganeseblock");
             blockRegistry(BlockList.blockOreManganese, event);
             blockRegistry(BlockList.blockManganese, event);
+        }
+        if(ConfigRegistryList.registerMeutoite.get())
+        {
+            BlockList.blockOreMeutoite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"meutoiteore");
+            BlockList.blockMeutoite = new BlockEXOre(Material.IRON,3.0f,5.0f,"meutoiteblock");
+            blockRegistry(BlockList.blockOreMeutoite,event);
+            blockRegistry(BlockList.blockMeutoite,event);
         }
         if (ConfigRegistryList.registerMidasium.get())
         {
@@ -422,22 +441,10 @@ public class InitBlocks
         {
             ItemList.itemIngotAdamantine = new ItemEXOre(EXORES, "adamantineingot");
             ItemList.itemDustAdamantine = new ItemEXOre(EXORES, "adamantinedust");
-            ToolList.itemPickaxeAdamantine = new PickaxeExOre(EX_ORE_TIER,3,5.0f,EXORES,"adamantinepickaxe");
-            ToolList.itemAxeAdamantine = new AxeExOre(EX_ORE_TIER,3.0f,5.0f,EXORES,"adamantineaxe");
-            ToolList.itemHoeAdamantine = new HoeExOre(EX_ORE_TIER,5.0f,EXORES,"adamantinehoe");
-            ToolList.itemShearsAdamantine = new ShearsExOre(EXORES,"adamantineshears");
-            ToolList.itemShovelAdamantine = new ShovelExOre(EX_ORE_TIER,3.0f,5.0f,EXORES,"adamantineshovel");
-            ToolList.itemSwordAdamantine = new SwordExOre(EX_ORE_TIER,3,5.0f,EXORES,"adamantinesword");
             ItemBlockList.itemBlockOreAdamantine = new ItemBlockExOre(BlockList.blockOreAdamantine, EXORES);
             ItemBlockList.itemBlockAdamantine = new ItemBlockExOre(BlockList.blockAdamantine, EXORES);
             itemRegistry(ItemList.itemIngotAdamantine, event);
             itemRegistry(ItemList.itemDustAdamantine, event);
-            itemRegistry(ToolList.itemPickaxeAdamantine,event);
-            itemRegistry(ToolList.itemAxeAdamantine,event);
-            itemRegistry(ToolList.itemHoeAdamantine,event);
-            itemRegistry(ToolList.itemShearsAdamantine,event);
-            itemRegistry(ToolList.itemShovelAdamantine,event);
-            itemRegistry(ToolList.itemSwordAdamantine,event);
             itemRegistry(ItemBlockList.itemBlockOreAdamantine, event);
             itemRegistry(ItemBlockList.itemBlockAdamantine, event);
         }
@@ -617,6 +624,28 @@ public class InitBlocks
             itemRegistry(ItemBlockList.itemBlockOreDeepIron, event);
             itemRegistry(ItemBlockList.itemBlockDeepIron, event);
         }
+        if(ConfigRegistryList.registerDesichalkos.get())
+        {
+            ItemList.itemIngotDesichalkos = new ItemEXOre(EXORES,"desichalkosingot");
+            ItemList.itemDustDesichalkos = new ItemEXOre(EXORES,"desichalkosdust");
+            ItemBlockList.itemBlockOreDesichalkos = new ItemBlockExOre(BlockList.blockOreDesichalkos,EXORES);
+            ItemBlockList.itemBlockDesichalkos = new ItemBlockExOre(BlockList.blockDesichalkos,EXORES);
+            itemRegistry(ItemList.itemIngotDesichalkos,event);
+            itemRegistry(ItemList.itemDustDesichalkos,event);
+            itemRegistry(ItemBlockList.itemBlockOreDesichalkos,event);
+            itemRegistry(ItemBlockList.itemBlockDesichalkos,event);
+        }
+        if(ConfigRegistryList.registerEximite.get())
+        {
+            ItemList.itemIngotEximite = new ItemEXOre(EXORES,"eximiteingot");
+            ItemList.itemDustEximite = new ItemEXOre(EXORES,"eximitedust");
+            ItemBlockList.itemBlockOreEximite = new ItemBlockExOre(BlockList.blockOreEximite,EXORES);
+            ItemBlockList.itemBlockEximite = new ItemBlockExOre(BlockList.blockEximite,EXORES);
+            itemRegistry(ItemList.itemIngotEximite,event);
+            itemRegistry(ItemList.itemDustEximite,event);
+            itemRegistry(ItemBlockList.itemBlockOreEximite,event);
+            itemRegistry(ItemBlockList.itemBlockEximite,event);
+        }
         if (ConfigRegistryList.registerGallium.get())
         {
             ItemList.itemIngotGallium = new ItemEXOre(EXORES, "galliumingot");
@@ -737,6 +766,17 @@ public class InitBlocks
             itemRegistry(ItemList.itemDustManganese, event);
             itemRegistry(ItemBlockList.itemBlockOreManganese, event);
             itemRegistry(ItemBlockList.itemBlockManganese, event);
+        }
+        if(ConfigRegistryList.registerMeutoite.get())
+        {
+            ItemList.itemIngotMeutoite = new ItemEXOre(EXORES,"meutoiteingot");
+            ItemList.itemDustMeutoite = new ItemEXOre(EXORES,"meutoitedust");
+            ItemBlockList.itemBlockOreMeutoite = new ItemBlockExOre(BlockList.blockOreMeutoite,EXORES);
+            ItemBlockList.itemBlockMeutoite = new ItemBlockExOre(BlockList.blockMeutoite,EXORES);
+            itemRegistry(ItemList.itemIngotMeutoite,event);
+            itemRegistry(ItemList.itemDustMeutoite,event);
+            itemRegistry(ItemBlockList.itemBlockOreMeutoite,event);
+            itemRegistry(ItemBlockList.itemBlockMeutoite,event);
         }
         if (ConfigRegistryList.registerMidasium.get())
         {

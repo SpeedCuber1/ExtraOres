@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:rubraciumore"
-  },
-  "result": "extraores:rubraciumingot",
-  "cookingtime": 20
-}

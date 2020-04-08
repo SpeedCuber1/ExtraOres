@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:zincore"
-  },
-  "result": "extraores:zincingot",
-  "cookingtime": 20
-}

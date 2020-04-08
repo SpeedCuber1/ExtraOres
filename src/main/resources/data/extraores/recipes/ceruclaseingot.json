@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:ceruclaseore"
-  },
-  "result": "extraores:ceruclaseingot",
-  "cookingtime": 20
-}

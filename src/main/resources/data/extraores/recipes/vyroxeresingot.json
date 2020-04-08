@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:vyroxeresore"
-  },
-  "result": "extraores:vyroxeresingot",
-  "cookingtime": 20
-}

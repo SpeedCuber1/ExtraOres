@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:neodymiumore"
-  },
-  "result": "extraores:neodymiumingot",
-  "cookingtime": 20
-}

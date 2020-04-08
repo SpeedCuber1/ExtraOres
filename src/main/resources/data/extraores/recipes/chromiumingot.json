@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:chromiumore"
-  },
-  "result": "extraores:chromiumingot",
-  "cookingtime": 20
-}

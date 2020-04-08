@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:hepatizonore"
-  },
-  "result": "extraores:hepatizoningot",
-  "cookingtime": 20
-}

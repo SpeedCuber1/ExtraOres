@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:haderothore"
-  },
-  "result": "extraores:haderothingot",
-  "cookingtime": 20
-}

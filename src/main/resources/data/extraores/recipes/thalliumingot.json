@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:thalliumore"
-  },
-  "result": "extraores:thalliumingot",
-  "cookingtime": 20
-}

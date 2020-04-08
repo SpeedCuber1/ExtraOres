@@ -22,6 +22,8 @@ public class ItemList
     public static Item itemIngotCobalt;
     public static Item itemIngotCopper;
     public static Item itemIngotDeepIron;
+    public static Item itemIngotDesichalkos;
+    public static Item itemIngotEximite;
     public static Item itemIngotGallium;
     public static Item itemIngotHaderoth;
     public static Item itemIngotHepatizon;
@@ -33,6 +35,7 @@ public class ItemList
     public static Item itemIngotLead;
     public static Item itemIngotLemurite;
     public static Item itemIngotManganese;
+    public static Item itemIngotMeutoite;
     public static Item itemIngotMidasium;
     public static Item itemIngotMithril;
     public static Item itemIngotMolybdenum;
@@ -79,6 +82,8 @@ public class ItemList
     public static Item itemDustCobalt;
     public static Item itemDustCopper;
     public static Item itemDustDeepIron;
+    public static Item itemDustDesichalkos;
+    public static Item itemDustEximite;
     public static Item itemDustGallium;
     public static Item itemDustHaderoth;
     public static Item itemDustHepatizon;
@@ -90,6 +95,7 @@ public class ItemList
     public static Item itemDustLead;
     public static Item itemDustLemurite;
     public static Item itemDustManganese;
+    public static Item itemDustMeutoite;
     public static Item itemDustMidasium;
     public static Item itemDustMithril;
     public static Item itemDustMolybdenum;

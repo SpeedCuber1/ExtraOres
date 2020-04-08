@@ -22,6 +22,8 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerCobalt;
     public static ForgeConfigSpec.BooleanValue registerCopper;
     public static ForgeConfigSpec.BooleanValue registerDeepIron;
+    public static ForgeConfigSpec.BooleanValue registerDesichalkos;
+    public static ForgeConfigSpec.BooleanValue registerEximite;
     public static ForgeConfigSpec.BooleanValue registerGallium;
     public static ForgeConfigSpec.BooleanValue registerHaderoth;
     public static ForgeConfigSpec.BooleanValue registerHepatizon;
@@ -33,6 +35,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerLead;
     public static ForgeConfigSpec.BooleanValue registerLemurite;
     public static ForgeConfigSpec.BooleanValue registerManganese;
+    public static ForgeConfigSpec.BooleanValue registerMeutoite;
     public static ForgeConfigSpec.BooleanValue registerMidasium;
     public static ForgeConfigSpec.BooleanValue registerMithril;
     public static ForgeConfigSpec.BooleanValue registerMolybdenum;
@@ -81,6 +84,8 @@ public class ConfigRegistryList
         registerCobalt = builder.comment("Enable/Disable Cobalt").define("Cobalt", ModInfo.GUI_DEFAULT_VALUE);
         registerCopper = builder.comment("Enable/Disable Copper").define("Copper", ModInfo.GUI_DEFAULT_VALUE);
         registerDeepIron = builder.comment("Enable/Disable Deep Iron").define("Deep Iron", ModInfo.GUI_DEFAULT_VALUE);
+        registerDesichalkos = builder.comment("Enable/Disable Desichalkos").define("Desichalkos",ModInfo.GUI_DEFAULT_VALUE);
+        registerEximite = builder.comment("Enable/Disable Eximite").define("Eximite",ModInfo.GUI_DEFAULT_VALUE);
         registerGallium = builder.comment("Enable/Disable Gallium").define("Gallium", ModInfo.GUI_DEFAULT_VALUE);
         registerHaderoth = builder.comment("Enable/Disable Haderoth").define("Haderoth", ModInfo.GUI_DEFAULT_VALUE);
         registerHepatizon = builder.comment("Enable/Disable Hepatizon").define("Hepatizon", ModInfo.GUI_DEFAULT_VALUE);
@@ -92,6 +97,7 @@ public class ConfigRegistryList
         registerLead = builder.comment("Enable/Disable Lead").define("Lead", ModInfo.GUI_DEFAULT_VALUE);
         registerLemurite = builder.comment("Enable/Disable Lemurite").define("Lemurite", ModInfo.GUI_DEFAULT_VALUE);
         registerManganese = builder.comment("Enable/Disable Manganese").define("Manganese", ModInfo.GUI_DEFAULT_VALUE);
+        registerMeutoite = builder.comment("Enable/Disable Meutoite").define("Meutoite",ModInfo.GUI_DEFAULT_VALUE);
         registerMidasium = builder.comment("Enable/Disable Midasium").define("Midasium", ModInfo.GUI_DEFAULT_VALUE);
         registerMithril = builder.comment("Enable/Disable Mithril").define("Mithril", ModInfo.GUI_DEFAULT_VALUE);
         registerMolybdenum = builder.comment("Enable/Disable Molybdenum").define("Molybdenum", ModInfo.GUI_DEFAULT_VALUE);
