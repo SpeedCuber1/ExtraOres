@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:copperblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:copperingot",
+    "count": 9
+  }
+}

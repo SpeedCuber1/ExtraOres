@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:midasiumblock"
+    ]
+  },
+  "criteria": {
+    "midasiumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:midasiumblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:midasiumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "midasiumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:nickelblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:nickelingot",
+    "count": 9
+  }
+}

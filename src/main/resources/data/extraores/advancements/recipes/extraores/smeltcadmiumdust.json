@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltcadmiumdust"
+    ]
+  },
+  "criteria": {
+    "smeltcadmiumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:cadmiumdust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltcadmiumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltcadmiumdust",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:tungsteningot"
+    ]
+  },
+  "criteria": {
+    "tungsteningot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:tungsteningot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:tungsteningot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tungsteningot",
+      "has_the_recipe"
+    ]
+  ]
+}

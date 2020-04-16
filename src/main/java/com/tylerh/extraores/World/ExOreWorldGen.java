@@ -204,7 +204,7 @@ public class ExOreWorldGen
             }
             if(ConfigRegistryList.registerShadowIron.get())
             {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreShadowIron.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreShadowIron.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
             }
             if(ConfigRegistryList.registerSilver.get())
             {

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:cobaltore"
+  },
+  "result": "extraores:cobaltingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

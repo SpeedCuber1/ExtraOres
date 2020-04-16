@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:ceruclaseore"
+  },
+  "result": "extraores:ceruclasedust",
+  "count": 2
+}

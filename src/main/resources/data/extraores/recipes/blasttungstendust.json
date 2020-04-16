@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:tungstendust"
+  },
+  "result": "extraores:tungsteningot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

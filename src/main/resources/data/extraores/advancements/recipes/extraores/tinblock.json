@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:tinblock"
+    ]
+  },
+  "criteria": {
+    "tinblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:tinblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:tinblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tinblock",
+      "has_the_recipe"
+    ]
+  ]
+}

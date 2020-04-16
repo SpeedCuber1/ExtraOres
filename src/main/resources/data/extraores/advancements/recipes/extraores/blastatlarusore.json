@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastatlarusore"
+    ]
+  },
+  "criteria": {
+    "blastatlarusore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:atlarusingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastatlarusore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastatlarusore",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:amordrineore"
+  },
+  "result": "extraores:amordrineingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

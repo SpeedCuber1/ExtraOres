@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltvyroxeresdust"
+    ]
+  },
+  "criteria": {
+    "smeltvyroxeresdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:vyroxeresdust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltvyroxeresdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltvyroxeresdust",
+      "has_the_recipe"
+    ]
+  ]
+}

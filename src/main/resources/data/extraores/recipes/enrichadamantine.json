@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "item": "extraores:adamantineore"
+    }
+  },
+  "output": {
+    "item": "extraores:adamantinedust",
+    "count": 2
+  }
+}

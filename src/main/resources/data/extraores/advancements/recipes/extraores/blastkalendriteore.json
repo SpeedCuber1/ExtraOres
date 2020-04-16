@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastkalendriteore"
+    ]
+  },
+  "criteria": {
+    "blastkalendriteore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:kalendriteingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastkalendriteore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastkalendriteore",
+      "has_the_recipe"
+    ]
+  ]
+}

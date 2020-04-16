@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cutshadowironore"
+    ]
+  },
+  "criteria": {
+    "cutshadowironore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:shadowirondust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cutshadowironore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cutshadowironore",
+      "has_the_recipe"
+    ]
+  ]
+}
