@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:eximitedust"
+  },
+  "result": "extraores:eximiteingot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

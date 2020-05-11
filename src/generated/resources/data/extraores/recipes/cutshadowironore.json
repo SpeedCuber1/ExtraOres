@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:shadowironore"
+  },
+  "result": "extraores:shadowirondust",
+  "count": 2
+}

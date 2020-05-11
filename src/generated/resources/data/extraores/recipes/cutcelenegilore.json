@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:celenegilore"
+  },
+  "result": "extraores:celenegildust",
+  "count": 2
+}

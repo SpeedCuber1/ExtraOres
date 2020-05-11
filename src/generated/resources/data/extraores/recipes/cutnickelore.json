@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:nickelore"
+  },
+  "result": "extraores:nickeldust",
+  "count": 2
+}
