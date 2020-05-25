@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/aluminum"
     }
   },
   "gasInput": {
@@ -10,7 +10,7 @@
     "gas": "mekanism:hydrogen_chloride"
   },
   "output": {
-    "item": "extraores:adamantineshard",
+    "item": "extraores:aluminumshard",
     "count": 4
   }
 }

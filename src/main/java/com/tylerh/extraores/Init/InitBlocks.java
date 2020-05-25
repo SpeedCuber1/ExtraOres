@@ -577,7 +577,7 @@ public class InitBlocks
         {
             ItemList.itemIngotBlackSteel = new ItemEXOre(EXORES, "blacksteelingot");
             ItemList.itemDustBlackSteel = new ItemEXOre(EXORES, "blacksteeldust");
-            ItemList.itemShardBlackSteel = new ItemEXOre(EXORES,"blackteelshard");
+            ItemList.itemShardBlackSteel = new ItemEXOre(EXORES,"blacksteelshard");
             ItemList.itemClumpBlackSteel = new ItemEXOre(EXORES,"blacksteelclump");
             ItemList.itemDirtyDustBlackSteel = new ItemEXOre(EXORES,"blacksteeldirtydust");
             ItemBlockList.itemBlockOreBlackSteel = new ItemBlockExOre(BlockList.blockOreBlackSteel, EXORES);

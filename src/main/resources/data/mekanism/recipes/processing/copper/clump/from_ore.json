@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/copper"
     }
   },
   "gasInput": {
@@ -10,7 +10,7 @@
     "gas": "mekanism:oxygen"
   },
   "output": {
-    "item": "extraores:adamantineclump",
+    "item": "extraores:copperclump",
     "count": 3
   }
 }

@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "item": "extraores:adamantineshard"
+      "item": "extraores:meutoiteshard"
     }
   },
   "gasInput": {
@@ -10,6 +10,6 @@
     "gas": "mekanism:oxygen"
   },
   "output": {
-    "item": "extraores:adamantineclump"
+    "item": "extraores:meutoiteclump"
   }
 }
