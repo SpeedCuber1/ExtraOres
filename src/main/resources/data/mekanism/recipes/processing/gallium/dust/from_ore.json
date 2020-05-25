@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/gallium"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:galliumdust",
     "count": "2"
   }
 }

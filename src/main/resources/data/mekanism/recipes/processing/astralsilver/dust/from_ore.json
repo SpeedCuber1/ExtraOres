@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/astralsilver"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:astralsilverdust",
     "count": "2"
   }
 }

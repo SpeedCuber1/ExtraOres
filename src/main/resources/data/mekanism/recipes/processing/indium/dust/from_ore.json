@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/indium"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:indiumdust",
     "count": "2"
   }
 }

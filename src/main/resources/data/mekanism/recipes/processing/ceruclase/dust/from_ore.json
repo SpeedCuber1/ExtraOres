@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/ceruclase"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:ceruclasedust",
     "count": "2"
   }
 }

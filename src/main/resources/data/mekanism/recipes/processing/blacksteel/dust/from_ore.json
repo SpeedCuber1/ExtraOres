@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/blacksteel"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:blacksteeldust",
     "count": "2"
   }
 }

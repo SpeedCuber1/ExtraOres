@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/hepatizon"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:hepatizondust",
     "count": "2"
   }
 }

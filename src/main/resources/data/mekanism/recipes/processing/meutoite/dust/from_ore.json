@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/meutoite"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:meutoitedust",
     "count": "2"
   }
 }
