@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/shadowiron"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:shadowirondust",
     "count": "2"
   }
 }

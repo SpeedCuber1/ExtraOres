@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/vulcanite"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:vulcanitedust",
     "count": "2"
   }
 }
