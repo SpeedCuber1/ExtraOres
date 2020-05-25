@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:platinumore"
-  },
-  "result": "extraores:platinumingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

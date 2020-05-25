@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:sanguiniteore"
-  },
-  "result": "extraores:sanguiniteingot",
-  "experience": 0.75,
-  "cookingtime": 40
-}

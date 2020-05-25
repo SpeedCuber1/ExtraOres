@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:desichalkosore"
-  },
-  "result": "extraores:desichalkosdust",
-  "count": 2
-}

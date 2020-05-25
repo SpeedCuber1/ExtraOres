@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:sanguinitedust"
-  },
-  "result": "extraores:sanguiniteingot",
-  "experience": 0.75,
-  "cookingtime": 10
-}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:adamantinedust"
-  },
-  "result": "extraores:adamantineingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}
