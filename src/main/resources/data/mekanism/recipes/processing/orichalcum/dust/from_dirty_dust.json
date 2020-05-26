@@ -2,10 +2,10 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "item": "extraores:adamantinedirtydust"
+      "item": "extraores:orichalcumdirtydust"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust"
+    "item": "extraores:orichalcumdust"
   }
 }

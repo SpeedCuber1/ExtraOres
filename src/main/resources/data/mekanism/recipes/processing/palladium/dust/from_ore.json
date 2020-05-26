@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/palladium"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:palladiumdust",
     "count": "2"
   }
 }

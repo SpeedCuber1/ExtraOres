@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/adamantine"
+      "tag": "forge:ores/mithril"
     }
   },
   "output": {
-    "item": "extraores:adamantinedust",
+    "item": "extraores:mithrildust",
     "count": "2"
   }
 }
