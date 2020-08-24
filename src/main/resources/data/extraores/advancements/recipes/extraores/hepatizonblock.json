@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:hepatizonblock"
+    ]
+  },
+  "criteria": {
+    "hepatizonblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:hepatizonblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:hepatizonblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hepatizonblock",
+      "has_the_recipe"
+    ]
+  ]
+}

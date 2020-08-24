@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltaldouritedust"
+    ]
+  },
+  "criteria": {
+    "smeltaldouritedust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:aldouritedust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltaldouritedust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltaldouritedust",
+      "has_the_recipe"
+    ]
+  ]
+}

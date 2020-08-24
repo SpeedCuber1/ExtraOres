@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:deepironore"
+  },
+  "result": "extraores:deepirondust",
+  "count": 2
+}

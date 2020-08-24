@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cutcopperore"
+    ]
+  },
+  "criteria": {
+    "cutcopperore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:copperdust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cutcopperore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cutcopperore",
+      "has_the_recipe"
+    ]
+  ]
+}

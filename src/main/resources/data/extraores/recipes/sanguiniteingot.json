@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:sanguiniteblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:sanguiniteingot",
+    "count": 9
+  }
+}

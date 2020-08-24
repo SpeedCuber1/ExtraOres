@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cutcelenegilore"
+    ]
+  },
+  "criteria": {
+    "cutcelenegilore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:celenegildust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cutcelenegilore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cutcelenegilore",
+      "has_the_recipe"
+    ]
+  ]
+}

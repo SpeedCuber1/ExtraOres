@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastorichalcumore"
+    ]
+  },
+  "criteria": {
+    "blastorichalcumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:orichalcumingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastorichalcumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastorichalcumore",
+      "has_the_recipe"
+    ]
+  ]
+}

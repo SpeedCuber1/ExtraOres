@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:infuscoliumblock"
+    ]
+  },
+  "criteria": {
+    "infuscoliumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:infuscoliumblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:infuscoliumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "infuscoliumblock",
+      "has_the_recipe"
+    ]
+  ]
+}
