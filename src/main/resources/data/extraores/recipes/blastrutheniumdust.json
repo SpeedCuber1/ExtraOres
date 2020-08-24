@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:rutheniumdust"
-  },
-  "result": "extraores:rutheniumingot",
-  "experience": 0.75,
-  "cookingtime": 10
-}

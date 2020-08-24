@@ -29,7 +29,7 @@ public class ExOreRecipe extends RecipeProvider
                 .patternLine("iii")
                 .patternLine("iii")
                 .patternLine("iii")
-                .key('i',ItemList.itemIngotAdamantine)
+                .key('i',ItemList.itemIngotAldourite)
                 .addCriterion("aldouriteblock",hasItem(BlockList.blockAldourite))
                 .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockAluminum)

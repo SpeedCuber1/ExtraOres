@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:amordrineore"
-  },
-  "result": "extraores:amordrinedust",
-  "count": 2
-}

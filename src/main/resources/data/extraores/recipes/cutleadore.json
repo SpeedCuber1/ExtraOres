@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:leadore"
-  },
-  "result": "extraores:leaddust",
-  "count": 2
-}
