@@ -59,6 +59,7 @@ public class BlockList
     public static Block blockOreTitanium;
     public static Block blockOreTungsten;
     public static Block blockOreUnobtainium;
+    public static Block blockOreUranium;
     public static Block blockOreVanadium;
     public static Block blockOreVulcanite;
     public static Block blockOreVyroxeres;
@@ -119,6 +120,7 @@ public class BlockList
     public static Block blockTitanium;
     public static Block blockTungsten;
     public static Block blockUnobtainium;
+    public static Block blockUranium;
     public static Block blockVanadium;
     public static Block blockVulcanite;
     public static Block blockVyroxeres;

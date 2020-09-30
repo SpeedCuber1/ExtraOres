@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:midasiumdust"
-  },
-  "result": "extraores:midasiumingot",
-  "experience": 0.75,
-  "cookingtime": 10
-}

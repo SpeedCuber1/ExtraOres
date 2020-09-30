@@ -59,6 +59,7 @@ public class ItemList
     public static Item itemIngotTitanium;
     public static Item itemIngotTungsten;
     public static Item itemIngotUnobtainium;
+    public static Item itemIngotUranium;
     public static Item itemIngotVanadium;
     public static Item itemIngotVulcanite;
     public static Item itemIngotVyroxeres;
@@ -119,6 +120,7 @@ public class ItemList
     public static Item itemDustTitanium;
     public static Item itemDustTungsten;
     public static Item itemDustUnobtainium;
+    public static Item itemDustUranium;
     public static Item itemDustVanadium;
     public static Item itemDustVulcanite;
     public static Item itemDustVyroxeres;
@@ -179,6 +181,7 @@ public class ItemList
     public static Item itemShardTitanium;
     public static Item itemShardTungsten;
     public static Item itemShardUnobtainium;
+    public static Item itemShardUranium;
     public static Item itemShardVanadium;
     public static Item itemShardVulcanite;
     public static Item itemShardVyroxeres;
@@ -239,6 +242,7 @@ public class ItemList
     public static Item itemClumpTitanium;
     public static Item itemClumpTungsten;
     public static Item itemClumpUnobtainium;
+    public static Item itemClumpUranium;
     public static Item itemClumpVanadium;
     public static Item itemClumpVulcanite;
     public static Item itemClumpVyroxeres;
@@ -299,6 +303,7 @@ public class ItemList
     public static Item itemDirtyDustTitanium;
     public static Item itemDirtyDustTungsten;
     public static Item itemDirtyDustUnobtainium;
+    public static Item itemDirtyDustUranium;
     public static Item itemDirtyDustVanadium;
     public static Item itemDirtyDustVulcanite;
     public static Item itemDirtyDustVyroxeres;

@@ -396,6 +396,13 @@ public class ExOreRecipe extends RecipeProvider
                 .key('i', ItemList.itemIngotUnobtainium)
                 .addCriterion("unobtainiumblock",hasItem(BlockList.blockUnobtainium))
                 .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BlockList.blockUranium)
+                .patternLine("iii")
+                .patternLine("iii")
+                .patternLine("iii")
+                .key('i',ItemList.itemIngotUranium)
+                .addCriterion("uraniumblock",hasItem(BlockList.blockUranium))
+                .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockVanadium)
                 .patternLine("iii")
                 .patternLine("iii")
@@ -648,6 +655,10 @@ public class ExOreRecipe extends RecipeProvider
                 .addIngredient(Ingredient.fromItems(BlockList.blockUnobtainium.asItem()))
                 .addCriterion("unobtainiumingot",hasItem(ItemList.itemIngotUnobtainium))
                 .build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotUranium,9)
+                .addIngredient(Ingredient.fromItems(BlockList.blockUranium.asItem()))
+                .addCriterion("uraniumingot",hasItem(ItemList.itemIngotUranium))
+                .build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotVanadium,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockVanadium.asItem()))
                 .addCriterion("vanadiumingot",hasItem(ItemList.itemIngotVanadium))
@@ -831,6 +842,9 @@ public class ExOreRecipe extends RecipeProvider
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlockList.blockOreUnobtainium.asItem()),ItemList.itemIngotUnobtainium,0.75F,40)
                 .addCriterion("smeltunobtainiumore",hasItem(ItemList.itemIngotUnobtainium))
                 .build(consumer,new ResourceLocation("extraores:smeltunobtainiumore"));
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlockList.blockOreUranium.asItem()),ItemList.itemIngotUranium,0.75f,40)
+                .addCriterion("smelturaniumore",hasItem(ItemList.itemIngotUranium))
+                .build(consumer,new ResourceLocation("extraores:smelturaniumore"));
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(BlockList.blockOreVanadium.asItem()),ItemList.itemIngotVanadium,0.75F,40)
                 .addCriterion("smeltvanadiumore",hasItem(ItemList.itemIngotVanadium))
                 .build(consumer,new ResourceLocation("extraores:smeltvanadiumore"));
@@ -1009,6 +1023,9 @@ public class ExOreRecipe extends RecipeProvider
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(ItemList.itemDustUnobtainium),ItemList.itemIngotUnobtainium,0.75F,20)
                 .addCriterion("smeltunobtainiumdust",hasItem(ItemList.itemDustUnobtainium))
                 .build(consumer,new ResourceLocation("extraores:smeltunobtainiumdust"));
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(ItemList.itemDustUranium),ItemList.itemIngotUranium,0.75f,20)
+                .addCriterion("smelturaniumdust",hasItem(ItemList.itemDustUranium))
+                .build(consumer,new ResourceLocation("extraores:smelturaniumdust"));
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(ItemList.itemDustVanadium),ItemList.itemIngotVanadium,0.75F,20)
                 .addCriterion("smeltvanadiumdust",hasItem(ItemList.itemDustVanadium))
                 .build(consumer,new ResourceLocation("extraores:smeltvanadiumdust"));
@@ -1187,6 +1204,9 @@ public class ExOreRecipe extends RecipeProvider
         CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlockList.blockOreUnobtainium.asItem()),ItemList.itemIngotUnobtainium,0.75F,20)
                 .addCriterion("blastunobtainiumore",hasItem(ItemList.itemIngotUnobtainium))
                 .build(consumer,new ResourceLocation("extraores:blastunobtainiumore"));
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlockList.blockOreUranium.asItem()),ItemList.itemIngotUranium,0.75F,20)
+                .addCriterion("blasturaniumore",hasItem(ItemList.itemIngotUranium))
+                .build(consumer,new ResourceLocation("extraores:blasturaniumore"));
         CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(BlockList.blockOreVanadium.asItem()),ItemList.itemIngotVanadium,0.75F,20)
                 .addCriterion("blastvanadiumore",hasItem(ItemList.itemIngotVanadium))
                 .build(consumer,new ResourceLocation("extraores:blastvanadiumore"));
@@ -1365,6 +1385,9 @@ public class ExOreRecipe extends RecipeProvider
         CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(ItemList.itemDustUnobtainium),ItemList.itemIngotUnobtainium,0.75F,10)
                 .addCriterion("blastunobtainiumdust",hasItem(ItemList.itemDustUnobtainium))
                 .build(consumer,new ResourceLocation("extraores:blastunobtainiumdust"));
+        CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(ItemList.itemDustUranium),ItemList.itemIngotUranium,0.75F,10)
+                .addCriterion("blasturaniumdust",hasItem(ItemList.itemDustUranium))
+                .build(consumer,new ResourceLocation("extraores:blasturaniumdust"));
         CookingRecipeBuilder.blastingRecipe(Ingredient.fromItems(ItemList.itemDustVanadium),ItemList.itemIngotVanadium,0.75F,10)
                 .addCriterion("blastvanadiumdust",hasItem(ItemList.itemDustVanadium))
                 .build(consumer,new ResourceLocation("extraores:blastvanadiumdust"));
@@ -1543,6 +1566,9 @@ public class ExOreRecipe extends RecipeProvider
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(BlockList.blockOreUnobtainium.asItem()),ItemList.itemDustUnobtainium,2)
                 .addCriterion("cutunobtainiumore",hasItem(ItemList.itemDustUnobtainium))
                 .build(consumer,new ResourceLocation("extraores:cutunobtainiumore"));
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(BlockList.blockOreUranium.asItem()),ItemList.itemDustUranium,2)
+                .addCriterion("cuturaniumore",hasItem(ItemList.itemDustUranium))
+                .build(consumer,new ResourceLocation("extraores:cuturaniumore"));
         SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(BlockList.blockOreVanadium.asItem()),ItemList.itemDustVanadium,2)
                 .addCriterion("cutvanadiumore",hasItem(ItemList.itemDustVanadium))
                 .build(consumer,new ResourceLocation("extraores:cutvanadiumore"));

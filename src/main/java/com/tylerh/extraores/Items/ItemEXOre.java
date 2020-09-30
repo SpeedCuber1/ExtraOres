@@ -34,6 +34,11 @@ public class ItemEXOre extends Item
                 list.add(new TranslationTextComponent("Atomic Symbol: " + ModInfo.symbols[i]));
                 break;
             }
+            else if (stack.getDisplayName().getFormattedText().contains(ModInfo.blockNames[i]))
+            {
+                list.add(new TranslationTextComponent("Atomic Symbol: " + ModInfo.symbols[i]));
+                break;
+            }
         }
     }
 }

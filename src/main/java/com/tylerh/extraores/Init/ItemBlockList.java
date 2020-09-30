@@ -59,6 +59,7 @@ public class ItemBlockList
     public static Item itemBlockOreTitanium;
     public static Item itemBlockOreTungsten;
     public static Item itemBlockOreUnobtainium;
+    public static Item itemBlockOreUranium;
     public static Item itemBlockOreVanadium;
     public static Item itemBlockOreVulcanite;
     public static Item itemBlockOreVyroxeres;
@@ -119,6 +120,7 @@ public class ItemBlockList
     public static Item itemBlockTitanium;
     public static Item itemBlockTungsten;
     public static Item itemBlockUnobtainium;
+    public static Item itemBlockUranium;
     public static Item itemBlockVanadium;
     public static Item itemBlockVulcanite;
     public static Item itemBlockVyroxeres;

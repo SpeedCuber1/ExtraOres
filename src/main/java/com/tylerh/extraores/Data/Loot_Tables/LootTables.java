@@ -70,6 +70,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreTitanium,createStandardTable("titaniumore",BlockList.blockOreTitanium));
         lootTables.put(BlockList.blockOreTungsten,createStandardTable("tungstenore",BlockList.blockOreTungsten));
         lootTables.put(BlockList.blockOreUnobtainium,createStandardTable("unobtainiumore",BlockList.blockOreUnobtainium));
+        lootTables.put(BlockList.blockOreUranium,createStandardTable("uraniumore",BlockList.blockOreUranium));
         lootTables.put(BlockList.blockOreVanadium,createStandardTable("vanadiumore",BlockList.blockOreVanadium));
         lootTables.put(BlockList.blockOreVulcanite,createStandardTable("vulcaniteore",BlockList.blockOreVulcanite));
         lootTables.put(BlockList.blockOreVyroxeres,createStandardTable("vyroxeresore",BlockList.blockOreVyroxeres));
@@ -130,6 +131,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockTitanium,createStandardTable("titaniumblock",BlockList.blockTitanium));
         lootTables.put(BlockList.blockTungsten,createStandardTable("tungstenblock",BlockList.blockTungsten));
         lootTables.put(BlockList.blockUnobtainium,createStandardTable("unobtainiumblock",BlockList.blockUnobtainium));
+        lootTables.put(BlockList.blockUranium,createStandardTable("uraniumnblock",BlockList.blockUranium));
         lootTables.put(BlockList.blockVanadium,createStandardTable("vanadiumblock",BlockList.blockVanadium));
         lootTables.put(BlockList.blockVulcanite,createStandardTable("vulcaniteblock",BlockList.blockVulcanite));
         lootTables.put(BlockList.blockVyroxeres,createStandardTable("vyroxeresblock",BlockList.blockVyroxeres));

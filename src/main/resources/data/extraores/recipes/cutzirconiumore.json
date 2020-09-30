@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:zirconiumore"
-  },
-  "result": "extraores:zirconiumdust",
-  "count": 2
-}

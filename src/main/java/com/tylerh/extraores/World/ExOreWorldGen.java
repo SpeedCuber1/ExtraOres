@@ -234,6 +234,10 @@ public class ExOreWorldGen
             {
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreUnobtainium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_RARE)));
             }
+            if(ConfigRegistryList.registerUranium.get())
+            {
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreUranium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
+            }
             if(ConfigRegistryList.registerVanadium.get())
             {
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreVanadium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:palladiumore"
-  },
-  "result": "extraores:palladiumingot",
-  "experience": 0.75,
-  "cookingtime": 40
-}

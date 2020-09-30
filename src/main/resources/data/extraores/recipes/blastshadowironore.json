@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:shadowironore"
-  },
-  "result": "extraores:shadowironingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

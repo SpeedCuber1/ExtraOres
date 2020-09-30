@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:deepirondust"
-  },
-  "result": "extraores:deepironingot",
-  "experience": 0.75,
-  "cookingtime": 10
-}

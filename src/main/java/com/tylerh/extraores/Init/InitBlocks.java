@@ -397,6 +397,13 @@ public class InitBlocks
             blockRegistry(BlockList.blockOreUnobtainium, event);
             blockRegistry(BlockList.blockUnobtainium, event);
         }
+        if (ConfigRegistryList.registerUranium.get())
+        {
+            BlockList.blockOreUranium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"uraniumore");
+            BlockList.blockUranium = new BlockEXOre(Material.IRON,3.0f,5.0f,"uraniumblock");
+            blockRegistry(BlockList.blockOreUranium,event);
+            blockRegistry(BlockList.blockUranium,event);
+        }
         if (ConfigRegistryList.registerVanadium.get())
         {
             BlockList.blockOreVanadium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "vanadiumore");
@@ -1354,6 +1361,23 @@ public class InitBlocks
             itemRegistry(ItemList.itemDirtyDustUnobtainium,event);
             itemRegistry(ItemBlockList.itemBlockOreUnobtainium, event);
             itemRegistry(ItemBlockList.itemBlockUnobtainium, event);
+        }
+        if (ConfigRegistryList.registerUranium.get())
+        {
+            ItemList.itemIngotUranium = new ItemEXOre(EXORES,"uraniumingot");
+            ItemList.itemDustUranium = new ItemEXOre(EXORES,"uraniumdust");
+            ItemList.itemShardUranium = new ItemEXOre(EXORES,"uraniumshard");
+            ItemList.itemClumpUranium = new ItemEXOre(EXORES,"uraniumclump");
+            ItemList.itemDirtyDustUranium = new ItemEXOre(EXORES,"uraniumdirtydust");
+            ItemBlockList.itemBlockOreUranium = new ItemBlockExOre(BlockList.blockOreUranium,EXORES);
+            ItemBlockList.itemBlockUranium = new ItemBlockExOre(BlockList.blockUranium,EXORES);
+            itemRegistry(ItemList.itemIngotUranium,event);
+            itemRegistry(ItemList.itemDustUranium,event);
+            itemRegistry(ItemList.itemShardUranium,event);
+            itemRegistry(ItemList.itemClumpUranium,event);
+            itemRegistry(ItemList.itemDirtyDustUranium,event);
+            itemRegistry(ItemBlockList.itemBlockOreUranium,event);
+            itemRegistry(ItemBlockList.itemBlockUranium,event);
         }
         if (ConfigRegistryList.registerVanadium.get())
         {

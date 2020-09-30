@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:molybdenumdust"
-  },
-  "result": "extraores:molybdenumingot",
-  "experience": 0.75,
-  "cookingtime": 10
-}

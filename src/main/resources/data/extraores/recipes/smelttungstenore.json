@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:tungstenore"
-  },
-  "result": "extraores:tungsteningot",
-  "experience": 0.75,
-  "cookingtime": 40
-}

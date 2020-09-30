@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:blacksteeldust"
-  },
-  "result": "extraores:blacksteelingot",
-  "experience": 0.75,
-  "cookingtime": 10
-}

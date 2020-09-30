@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:hepatizonore"
-  },
-  "result": "extraores:hepatizondust",
-  "count": 2
-}

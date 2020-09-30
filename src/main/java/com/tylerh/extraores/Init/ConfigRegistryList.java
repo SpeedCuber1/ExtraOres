@@ -59,6 +59,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerTitanium;
     public static ForgeConfigSpec.BooleanValue registerTungsten;
     public static ForgeConfigSpec.BooleanValue registerUnobtainium;
+    public static ForgeConfigSpec.BooleanValue registerUranium;
     public static ForgeConfigSpec.BooleanValue registerVanadium;
     public static ForgeConfigSpec.BooleanValue registerVulcanite;
     public static ForgeConfigSpec.BooleanValue registerVyroxeres;
@@ -121,6 +122,7 @@ public class ConfigRegistryList
         registerTitanium = builder.comment("Enable/Disable Titanium").define("Titanium", ModInfo.GUI_DEFAULT_VALUE);
         registerTungsten = builder.comment("Enable/Disable Tungsten").define("Tungsten", ModInfo.GUI_DEFAULT_VALUE);
         registerUnobtainium = builder.comment("Enable/Disable Unobtainium").define("Unobtainium", ModInfo.GUI_DEFAULT_VALUE);
+        registerUranium = builder.comment("Enable/Disable Uranium").define("Uranium",ModInfo.GUI_DEFAULT_VALUE);
         registerVanadium = builder.comment("Enable/Disable Vanadium").define("Vanadium", ModInfo.GUI_DEFAULT_VALUE);
         registerVulcanite = builder.comment("Enable/Disable Vulcanite").define("Vulcanite", ModInfo.GUI_DEFAULT_VALUE);
         registerVyroxeres = builder.comment("Enable/Disable Vyroxeres").define("Vyroxeres", ModInfo.GUI_DEFAULT_VALUE);
