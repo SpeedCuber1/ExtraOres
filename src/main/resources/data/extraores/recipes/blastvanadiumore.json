@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:vanadiumore"
+  },
+  "result": "extraores:vanadiumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

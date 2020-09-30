@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:rhodiumdust"
+  },
+  "result": "extraores:rhodiumingot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

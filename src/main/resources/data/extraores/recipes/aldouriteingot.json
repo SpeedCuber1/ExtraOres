@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:aldouriteblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:aldouriteingot",
+    "count": 9
+  }
+}

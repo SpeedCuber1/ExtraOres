@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:technetiumblock"
+    ]
+  },
+  "criteria": {
+    "technetiumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:technetiumblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:technetiumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "technetiumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

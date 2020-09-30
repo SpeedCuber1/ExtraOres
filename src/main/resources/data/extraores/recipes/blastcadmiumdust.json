@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:cadmiumdust"
+  },
+  "result": "extraores:cadmiumingot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

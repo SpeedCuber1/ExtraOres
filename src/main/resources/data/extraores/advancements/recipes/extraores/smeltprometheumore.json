@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltprometheumore"
+    ]
+  },
+  "criteria": {
+    "smeltprometheumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:prometheumingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltprometheumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltprometheumore",
+      "has_the_recipe"
+    ]
+  ]
+}

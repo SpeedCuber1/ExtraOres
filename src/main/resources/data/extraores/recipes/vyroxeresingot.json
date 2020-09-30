@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:vyroxeresblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:vyroxeresingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastzincdust"
+    ]
+  },
+  "criteria": {
+    "blastzincdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:zincdust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastzincdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastzincdust",
+      "has_the_recipe"
+    ]
+  ]
+}

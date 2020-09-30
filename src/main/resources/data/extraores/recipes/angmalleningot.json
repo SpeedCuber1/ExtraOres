@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:angmallenblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:angmalleningot",
+    "count": 9
+  }
+}

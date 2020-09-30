@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:bismuthore"
+  },
+  "result": "extraores:bismuthingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}
