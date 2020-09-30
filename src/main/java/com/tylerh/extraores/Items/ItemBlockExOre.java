@@ -28,7 +28,7 @@ public class ItemBlockExOre extends BlockItem
     {
         for (int i = 0; i < ModInfo.blockNames.length; i++)
         {
-            if (stack.getDisplayName().getFormattedText().startsWith(ModInfo.blockNames[i]))
+            if (stack.getDisplayName().getString().startsWith(ModInfo.blockNames[i]))
             {
                 list.add(new TranslationTextComponent("Atomic Symbol: " + ModInfo.symbols[i]));
                 break;

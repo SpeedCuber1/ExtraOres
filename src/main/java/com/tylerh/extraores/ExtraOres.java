@@ -17,16 +17,16 @@ public class ExtraOres
 {
     public ExtraOres()
     {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.spec);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.spec);
+        MinecraftForge.EVENT_BUS.register(new ExOreWorldGen());
         ConfigHandler.loadConfig(ConfigHandler.spec, FMLPaths.CONFIGDIR.get().resolve("extraores-common.toml"));
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(FMLCommonSetupEvent event)
     {
-        ExOreWorldGen.initWorldGen();
     }
 
     private void clientRegistries(FMLClientSetupEvent event)

@@ -1,263 +1,565 @@
 package com.tylerh.extraores.World;
+
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Init.ConfigRegistryList;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placement.CountRangeConfig;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraftforge.registries.ForgeRegistries;
-
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ExOreWorldGen
 {
-    private static final CountRangeConfig ORE_NORMAL = new CountRangeConfig(20, 0, 0, 100);
-    private static final CountRangeConfig ORE_RARE = new CountRangeConfig(20, 0, 0, 32);
-
-    public static void initWorldGen()
+    private static Logger LOGGER = LogManager.getLogger();
+    @SubscribeEvent
+    public void onBiomesLoading(BiomeLoadingEvent event)
     {
-        for (Biome biome : ForgeRegistries.BIOMES)
+        BiomeGenerationSettingsBuilder builder = event.getGeneration();
+        OreFeatureConfig config;
+        int size = ExOreWorldGenConfig.veinSize.get();
+        int rate = ExOreWorldGenConfig.spawnRate.get();
+        int height;
+        if (ConfigRegistryList.registerAdamantine.get())
         {
-            if (ConfigRegistryList.registerAdamantine.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAdamantine.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_RARE)));
-            }
-            if(ConfigRegistryList.registerAldourite.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreAldourite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerAluminum.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAluminum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerAmordrine.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAmordrine.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerAngmallen.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAngmallen.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerAstralSilver.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAstralSilver.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerAtlarus.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreAtlarus.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_RARE)));
-            }
-            if(ConfigRegistryList.registerBismuth.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreBismuth.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerBlackSteel.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreBlackSteel.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerCadmium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCadmium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerCarmot.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCarmot.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerCelenegil.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCelenegil.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerCeruclase.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreCeruclase.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerChromium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreChromium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerCobalt.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCobalt.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerCopper.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreCopper.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerDeepIron.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreDeepIron.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_RARE)));
-            }
-            if(ConfigRegistryList.registerDesichalkos.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreDesichalkos.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerEximite.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreEximite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerGallium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreGallium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerHaderoth.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreHaderoth.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerHepatizon.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreHepatizon.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerIgnatius.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreIgnatius.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerIndium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreIndium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerInfuscolium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreInfuscolium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerInolashite.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreInolashite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerKalendrite.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreKalendrite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerLead.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreLead.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerLemurite.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreLemurite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerManganese.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreManganese.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerMeutoite.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreMeutoite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerMidasium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreMidasium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerMithril.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreMithril.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_RARE)));
-            }
-            if(ConfigRegistryList.registerMolybdenum.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreMithril.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerNeodymium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreNeodymium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerNickel.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreNickel.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerNiobium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreNiobium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerOrichalcum.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreOrichalcum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerOureclase.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreOureclase.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerPalladium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOrePalladium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerPlatinum.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOrePlatinum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_RARE)));
-            }
-            if(ConfigRegistryList.registerPrometheum.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOrePrometheum.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerRhodium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreRhodium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerRubracium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreRubracium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerRuthenium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreRuthenium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerSanguinite.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreSanguinite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerShadowIron.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreShadowIron.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerSilver.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreSilver.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerTechnetium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreTechnetium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerThallium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreThallium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerTin.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreTin.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerTitanium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreTitanium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerTungsten.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreTungsten.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_RARE)));
-            }
-            if(ConfigRegistryList.registerUnobtainium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreUnobtainium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_RARE)));
-            }
-            if(ConfigRegistryList.registerUranium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreUranium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerVanadium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreVanadium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerVulcanite.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreVulcanite.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerVyroxeres.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK,BlockList.blockOreVyroxeres.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerZinc.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreZinc.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
-            if(ConfigRegistryList.registerZirconium.get())
-            {
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,BlockList.blockOreZirconium.getDefaultState(),ExOreWorldGenConfig.chanceToSpawn.get())).withPlacement(Placement.COUNT_RANGE.configure(ORE_NORMAL)));
-            }
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreAdamantine.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+            .func_242733_d(height)
+            .func_242728_a()
+            .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerAldourite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b,BlockList.blockOreAldourite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+            .func_242733_d(height)
+            .func_242728_a().func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerAluminum.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreAluminum.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerAmordrine.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreAmordrine.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerAngmallen.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreAngmallen.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerAstralSilver.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreAstralSilver.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerAtlarus.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreAtlarus.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerBismuth.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreBismuth.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerBlackSteel.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreBlackSteel.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerCadmium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreCadmium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerCarmot.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreCarmot.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerCelenegil.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreCelenegil.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerCeruclase.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreCeruclase.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerChromium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreChromium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerCobalt.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreCobalt.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerCopper.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreCopper.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerDeepIron.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreDeepIron.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerDesichalkos.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreDesichalkos.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerEximite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreEximite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerGallium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreGallium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerHaderoth.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreHaderoth.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerHepatizon.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreHepatizon.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerIgnatius.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreIgnatius.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerIndium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreIndium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerInfuscolium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreInfuscolium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerInolashite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreInolashite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerKalendrite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreKalendrite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerLead.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreLead.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerLemurite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreLemurite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerManganese.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreManganese.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerMeutoite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreMeutoite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerMidasium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreMidasium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerMithril.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreMithril.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerMolybdenum.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreMolybdenum.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerNeodymium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreNeodymium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerNickel.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreNickel.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerNiobium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreNiobium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerOrichalcum.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreOrichalcum.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerOureclase.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreOureclase.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerPalladium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOrePalladium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerPlatinum.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOrePlatinum.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerPrometheum.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOrePrometheum.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerRhodium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreRhodium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerRubracium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreRubracium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerRuthenium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreRuthenium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerSanguinite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreSanguinite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerShadowIron.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreShadowIron.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerSilver.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreSilver.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerTechnetium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreTechnetium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerThallium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreThallium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerTin.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreTin.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerTitanium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreTitanium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerTungsten.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreTungsten.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerUnobtainium.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreUnobtainium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerUranium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreUranium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerVanadium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreVanadium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerVulcanite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreVulcanite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerVyroxeres.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreVyroxeres.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerZinc.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreZinc.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if (ConfigRegistryList.registerZirconium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreZirconium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
         }
     }
 }

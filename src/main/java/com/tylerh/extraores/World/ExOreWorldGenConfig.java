@@ -4,11 +4,12 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 public class ExOreWorldGenConfig
 {
-    public static ForgeConfigSpec.IntValue chanceToSpawn;
-
+    public static ForgeConfigSpec.IntValue veinSize;
+    public static ForgeConfigSpec.IntValue spawnRate;
     public static void init(ForgeConfigSpec.Builder builder)
     {
         builder.comment("Ore Gen Config");
-        chanceToSpawn = builder.comment("Maximum Ore In Vein").defineInRange("Chance To Spawn", 10, 1, 10);
+        veinSize = builder.comment("Size of Ore Veins").defineInRange("Vein Size",10,1,20);
+        spawnRate = builder.comment("Ore Spawn Rate").defineInRange("Spawn Rate",500,100,1000);
     }
 }
