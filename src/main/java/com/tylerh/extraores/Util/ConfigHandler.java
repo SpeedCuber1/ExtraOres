@@ -106,6 +106,7 @@ public class ConfigHandler
         Property propTitanium = config.get(ModInfo.GUI_CATEGORY, "Titanium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propTungsten = config.get(ModInfo.GUI_CATEGORY, "Tungsten", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propUnobtainium = config.get(ModInfo.GUI_CATEGORY, "Unobtainium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propUranium = config.get(ModInfo.GUI_CATEGORY,"Uranium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propVanadium = config.get(ModInfo.GUI_CATEGORY, "Vanadium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propVulcanite = config. get(ModInfo.GUI_CATEGORY,"Vulcanite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propVyroxeres = config.get(ModInfo.GUI_CATEGORY,"Vyroxeres",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
@@ -167,6 +168,7 @@ public class ConfigHandler
         propOrder.add(propTitanium.getName());
         propOrder.add(propTungsten.getName());
         propOrder.add(propUnobtainium.getName());
+        propOrder.add(propUranium.getName());
         propOrder.add(propVanadium.getName());
         propOrder.add(propVulcanite.getName());
         propOrder.add(propVyroxeres.getName());
@@ -230,6 +232,7 @@ public class ConfigHandler
             InitBlocks.registerTitanium = propTitanium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTungsten = propTungsten.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerUnobtainium = propUnobtainium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerUranium = propUranium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerVanadium = propVanadium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerVulcanite = propVulcanite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerVyroxeres = propVyroxeres.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -290,6 +293,7 @@ public class ConfigHandler
         propTitanium.set(InitBlocks.registerTitanium);
         propTungsten.set(InitBlocks.registerTungsten);
         propUnobtainium.set(InitBlocks.registerUnobtainium);
+        propUranium.set(InitBlocks.registerUranium);
         propVanadium.set(InitBlocks.registerVanadium);
         propVulcanite.set(InitBlocks.registerVulcanite);
         propVyroxeres.set(InitBlocks.registerVyroxeres);

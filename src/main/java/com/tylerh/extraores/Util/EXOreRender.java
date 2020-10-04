@@ -499,6 +499,15 @@ public class EXOreRender
             location = new ResourceLocation("extraores:unobtainiumBlock");
             Register(itemBlockUnobtainium,location.toString());
         }
+        if(InitBlocks.registerUranium)
+        {
+            Item itemBlockUranium = Item.getItemFromBlock(InitBlocks.blockOreUranium);
+            ResourceLocation location = new ResourceLocation("extraores:uraniumOre");
+            Register(itemBlockUranium,location.toString());
+            itemBlockUranium = Item.getItemFromBlock(InitBlocks.blockUranium);
+            location = new ResourceLocation("extraores:uraniumBlock");
+            Register(itemBlockUranium,location.toString());
+        }
         if(InitBlocks.registerVanadium)
         {
             Item itemBlockVanadium = Item.getItemFromBlock(InitBlocks.blockOreVanadium);
@@ -1248,6 +1257,19 @@ public class EXOreRender
             Register(InitBlocks.itemShardUnobtainium,location.toString());
             location = new ResourceLocation("extraores:unobtainiumdirtydust");
             Register(InitBlocks.itemDirtyDustUnobtainium,location.toString());
+        }
+        if(InitBlocks.registerUranium)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:uraniumIngot");
+            Register(InitBlocks.itemIngotUranium,location.toString());
+            location = new ResourceLocation("extraores:uraniumDust");
+            Register(InitBlocks.itemDustUranium,location.toString());
+            location = new ResourceLocation("extraores:uraniumclump");
+            Register(InitBlocks.itemClumpUranium,location.toString());
+            location = new ResourceLocation("extraores:uraniumshard");
+            Register(InitBlocks.itemShardUranium,location.toString());
+            location = new ResourceLocation("extraores:uraniumdirtydust");
+            Register(InitBlocks.itemDirtyDustUranium,location.toString());
         }
         if(InitBlocks.registerVanadium)
         {

@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:uranium",
+  "parent": "extraores:tungsten",
   "display": {
     "icon": {
-      "item": "extraores:vanadiumore"
+      "item": "extraores:uraniumore"
     },
     "title": {
-      "translate": "Hand Me That Impact Gun"
+      "translate": "Time to go Nuclear"
     },
     "description": {
-      "translate": "Mine Vanadium Ore"
+      "translate": "Mine Uranium Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "vanadium": {
+    "unobtainium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:vanadiumore"
+            "item": "extraores:uraniumore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "vanadium"
+      "uranium"
     ]
   ]
 }

@@ -69,6 +69,7 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator titaniumOre;
     private WorldGenerator tungstenOre;
     private WorldGenerator unobtainiumOre;
+    private WorldGenerator uraniumOre;
     private WorldGenerator vanadiumOre;
     private WorldGenerator vulcaniteOre;
     private WorldGenerator vyroxeresOre;
@@ -292,6 +293,10 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.unobtainiumOre = new EXOreWorldGenMinable(InitBlocks.blockOreUnobtainium.getDefaultState(), 4);
         }
+        if(InitBlocks.registerUranium)
+        {
+            this.uraniumOre = new EXOreWorldGenMinable(InitBlocks.blockOreUranium.getDefaultState(),4);
+        }
         if(InitBlocks.registerVanadium)
         {
             this.vanadiumOre = new EXOreWorldGenMinable(InitBlocks.blockOreVanadium.getDefaultState(), 4);
@@ -501,6 +506,10 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerUnobtainium)
             {
                 runGenerator(this.unobtainiumOre, world, random, chunkX, chunkZ, 20, 0, 100);
+            }
+            if(InitBlocks.registerUranium)
+            {
+                runGenerator(this.uraniumOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerVanadium)
             {

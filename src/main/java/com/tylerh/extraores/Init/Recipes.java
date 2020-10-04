@@ -3500,6 +3500,70 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerUranium)
+        {
+            //Smelting
+            GameRegistry.addSmelting(InitBlocks.blockOreUranium, new ItemStack(InitBlocks.itemIngotUranium, 1), 1.0f);
+            GameRegistry.addSmelting(InitBlocks.itemDustUranium, new ItemStack(InitBlocks.itemIngotUranium, 1), 1.0f);
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":uraniumBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+            //Pulverizing("EnderIO Req'd")
+            if (registerDusts)
+            {
+                String recipe = "<recipeGroup name=\"ExtraOres\" >" +
+                        "<recipe name=\"Uranium to Dust\" energyCost=\"3600\" >" +
+                        "<input>" +
+                        "<itemStack oreDictionary=\"oreUranium\" />" +
+                        "</input>" +
+                        "<output>" +
+                        "<itemStack oreDictionary=\"dustUranium\" number=\"2\" />" +
+                        "</output>" +
+                        "</recipe>" +
+                        "</recipeGroup>";
+                FMLInterModComms.sendMessage("EnderIO", "recipe:sagmill", recipe);
+            }
+            //Ore Quadrupling (Mekanism Req'd)
+            if (registerMek)
+            {
+                //Chemical Injection Chamber
+                tag = new NBTTagCompound();
+                tag.setTag("input", new ItemStack(InitBlocks.blockOreUranium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("gasType", new GasStack(GasRegistry.getGas("hydrogenChloride"),500).write(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemShardUranium,4).writeToNBT(new NBTTagCompound()));
+                FMLInterModComms.sendMessage("mekanism","ChemicalInjectionChamberRecipe",tag);
+                //Purification Chamber
+                //Raw Ore
+                tag = new NBTTagCompound();
+                tag.setTag("input", new ItemStack(InitBlocks.blockOreUranium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("gasType", new GasStack(GasRegistry.getGas("oxygen"),500).write(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemClumpUranium,3).writeToNBT(new NBTTagCompound()));
+                FMLInterModComms.sendMessage("mekanism","PurificationChamberRecipe",tag);
+                //Shard
+                tag = new NBTTagCompound();
+                tag.setTag("input", new ItemStack(InitBlocks.itemShardUranium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("gasType", new GasStack(GasRegistry.getGas("oxygen"),500).write(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemClumpUranium).writeToNBT(new NBTTagCompound()));
+                FMLInterModComms.sendMessage("mekanism","PurificationChamberRecipe",tag);
+                //Crusher
+                tag = new NBTTagCompound();
+                tag.setTag("input", new ItemStack(InitBlocks.itemClumpUranium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemDirtyDustUranium).writeToNBT(new NBTTagCompound()));
+                FMLInterModComms.sendMessage("mekanism","CrusherRecipe",tag);
+                //EnrichmentChamber
+                //Raw Ore
+                tag = new NBTTagCompound();
+                tag.setTag("input", new ItemStack(InitBlocks.blockOreUranium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemDustUranium,2).writeToNBT(new NBTTagCompound()));
+                FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
+                //Dirty Dust
+                tag = new NBTTagCompound();
+                tag.setTag("input", new ItemStack(InitBlocks.itemDirtyDustUranium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemDustUranium).writeToNBT(new NBTTagCompound()));
+                FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
+            }
+        }
         if (InitBlocks.registerVanadium)
         {
             //Smelting

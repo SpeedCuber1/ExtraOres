@@ -70,6 +70,7 @@ public class InitBlocks
     public static boolean registerTitanium;
     public static boolean registerTungsten;
     public static boolean registerUnobtainium;
+    public static boolean registerUranium;
     public static boolean registerVanadium;
     public static boolean registerVulcanite;
     public static boolean registerVyroxeres;
@@ -130,6 +131,7 @@ public class InitBlocks
     public static Block blockOreTitanium;
     public static Block blockOreTungsten;
     public static Block blockOreUnobtainium;
+    public static Block blockOreUranium;
     public static Block blockOreVanadium;
     public static Block blockOreVulcanite;
     public static Block blockOreVyroxeres;
@@ -190,6 +192,7 @@ public class InitBlocks
     public static Block blockTitanium;
     public static Block blockTungsten;
     public static Block blockUnobtainium;
+    public static Block blockUranium;
     public static Block blockVanadium;
     public static Block blockVulcanite;
     public static Block blockVyroxeres;
@@ -250,6 +253,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOreTitanium;
     public static ItemBlock itemBlockOreTungsten;
     public static ItemBlock itemBlockOreUnobtainium;
+    public static ItemBlock itemBlockOreUranium;
     public static ItemBlock itemBlockOreVanadium;
     public static ItemBlock itemBlockOreVulcanite;
     public static ItemBlock itemBlockOreVyroxeres;
@@ -310,6 +314,7 @@ public class InitBlocks
     public static ItemBlock itemBlockTitanium;
     public static ItemBlock itemBlockTungsten;
     public static ItemBlock itemBlockUnobtainium;
+    public static ItemBlock itemBlockUranium;
     public static ItemBlock itemBlockVanadium;
     public static ItemBlock itemBlockVulcanite;
     public static ItemBlock itemBlockVyroxeres;
@@ -370,6 +375,7 @@ public class InitBlocks
     public static Item itemIngotTitanium;
     public static Item itemIngotTungsten;
     public static Item itemIngotUnobtainium;
+    public static Item itemIngotUranium;
     public static Item itemIngotVanadium;
     public static Item itemIngotVulcanite;
     public static Item itemIngotVyroxeres;
@@ -430,6 +436,7 @@ public class InitBlocks
     public static Item itemDustTitanium;
     public static Item itemDustTungsten;
     public static Item itemDustUnobtainium;
+    public static Item itemDustUranium;
     public static Item itemDustVanadium;
     public static Item itemDustVulcanite;
     public static Item itemDustVyroxeres;
@@ -490,6 +497,7 @@ public class InitBlocks
     public static Item itemClumpTitanium;
     public static Item itemClumpTungsten;
     public static Item itemClumpUnobtainium;
+    public static Item itemClumpUranium;
     public static Item itemClumpVanadium;
     public static Item itemClumpVulcanite;
     public static Item itemClumpVyroxeres;
@@ -550,6 +558,7 @@ public class InitBlocks
     public static Item itemShardTitanium;
     public static Item itemShardTungsten;
     public static Item itemShardUnobtainium;
+    public static Item itemShardUranium;
     public static Item itemShardVanadium;
     public static Item itemShardVulcanite;
     public static Item itemShardVyroxeres;
@@ -610,6 +619,7 @@ public class InitBlocks
     public static Item itemDirtyDustTitanium;
     public static Item itemDirtyDustTungsten;
     public static Item itemDirtyDustUnobtainium;
+    public static Item itemDirtyDustUranium;
     public static Item itemDirtyDustVanadium;
     public static Item itemDirtyDustVulcanite;
     public static Item itemDirtyDustVyroxeres;
@@ -2506,6 +2516,41 @@ public class InitBlocks
             initOreDict(itemClumpUnobtainium,"clumpUnobtainium");
             initOreDict(itemShardUnobtainium,"shardUnobtainium");
             initOreDict(itemDirtyDustUnobtainium,"dirtyDustUnobtainium");
+        }
+        if(registerUranium)
+        {
+            blockOreUranium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"uraniumOre");
+            itemBlockOreUranium = new ItemBlockExOre(blockOreUranium);
+            blockUranium = new BlockEXOre(Material.IRON,3.0f,5.0f,"uraniumBlock");
+            itemBlockUranium = new ItemBlockExOre(blockUranium);
+            itemIngotUranium = new ItemEXOre("uraniumIngot");
+            itemDustUranium = new ItemEXOre("uraniumDust");
+            itemClumpUranium = new ItemEXOre("uraniumClump");
+            itemShardUranium = new ItemEXOre("uraniumShard");
+            itemDirtyDustUranium = new ItemEXOre("uraniumDirtyDust");
+            createRegistry(blockOreUranium,itemBlockOreUranium,"uraniumOre");
+            createRegistry(blockUranium,itemBlockUranium,"uraniumBlock");
+            createRegistry(itemIngotUranium,"uraniumIngot");
+            createRegistry(itemDustUranium,"uraniumDust");
+            createRegistry(itemClumpUranium,"uraniumClump");
+            createRegistry(itemShardUranium,"uraniumShard");
+            createRegistry(itemDirtyDustUranium,"uraniumDirtyDust");
+            ForgeRegistries.BLOCKS.register(blockOreUranium);
+            ForgeRegistries.ITEMS.register(itemBlockOreUranium);
+            ForgeRegistries.BLOCKS.register(blockUranium);
+            ForgeRegistries.ITEMS.register(itemBlockUranium);
+            ForgeRegistries.ITEMS.register(itemIngotUranium);
+            ForgeRegistries.ITEMS.register(itemDustUranium);
+            ForgeRegistries.ITEMS.register(itemClumpUranium);
+            ForgeRegistries.ITEMS.register(itemShardUranium);
+            ForgeRegistries.ITEMS.register(itemDirtyDustUranium);
+            initOreDict(blockOreUranium,"oreUranium");
+            initOreDict(blockUranium,"blockUranium");
+            initOreDict(itemIngotUranium,"ingotUranium");
+            initOreDict(itemDustUranium,"dustUranium");
+            initOreDict(itemClumpUranium,"clumpUranium");
+            initOreDict(itemShardUranium,"shardUranium");
+            initOreDict(itemDirtyDustUranium,"dirtyDustUranium");
         }
         if(registerVanadium)
         {

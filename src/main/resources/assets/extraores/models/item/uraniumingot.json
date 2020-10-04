@@ -1,7 +1,7 @@
 {
   "parent": "builtin/generated",
   "textures": {
-	"layer0": "extraores:items/midasiumingot"
+	"layer0": "extraores:items/uraniumingot"
   },
   "display": {
 	"thirdperson": {
