@@ -46,6 +46,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerOureclase;
     public static ForgeConfigSpec.BooleanValue registerPalladium;
     public static ForgeConfigSpec.BooleanValue registerPlatinum;
+    public static ForgeConfigSpec.BooleanValue registerPlutonium;
     public static ForgeConfigSpec.BooleanValue registerPrometheum;
     public static ForgeConfigSpec.BooleanValue registerRhodium;
     public static ForgeConfigSpec.BooleanValue registerRuthenium;
@@ -53,6 +54,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerSanguinite;
     public static ForgeConfigSpec.BooleanValue registerShadowIron;
     public static ForgeConfigSpec.BooleanValue registerSilver;
+    public static ForgeConfigSpec.BooleanValue registerTartarite;
     public static ForgeConfigSpec.BooleanValue registerTechnetium;
     public static ForgeConfigSpec.BooleanValue registerThallium;
     public static ForgeConfigSpec.BooleanValue registerTin;
@@ -109,6 +111,7 @@ public class ConfigRegistryList
         registerOureclase = builder.comment("Enable/Disable Oureclase").define("Oureclase", ModInfo.GUI_DEFAULT_VALUE);
         registerPalladium = builder.comment("Enable/Disable Palladium").define("Palladium", ModInfo.GUI_DEFAULT_VALUE);
         registerPlatinum = builder.comment("Enable/Disable Platinum").define("Platinum", ModInfo.GUI_DEFAULT_VALUE);
+        registerPlutonium = builder.comment("Enable/Disable Plutonium").define("Plutonium",ModInfo.GUI_DEFAULT_VALUE);
         registerPrometheum = builder.comment("Enable/Disable Prometheum").define("Prometheum", ModInfo.GUI_DEFAULT_VALUE);
         registerRhodium = builder.comment("Enable/Disable Rhodium").define("Rhodium", ModInfo.GUI_DEFAULT_VALUE);
         registerRubracium = builder.comment("Enable/Disable Rubracium").define("Rubracium", ModInfo.GUI_DEFAULT_VALUE);
@@ -116,6 +119,7 @@ public class ConfigRegistryList
         registerSanguinite = builder.comment("Enable/Disable Sanguinite").define("Sanguinite", ModInfo.GUI_DEFAULT_VALUE);
         registerShadowIron = builder.comment("Enable/Disable Shadow Iron").define("Shadow Iron", ModInfo.GUI_DEFAULT_VALUE);
         registerSilver = builder.comment("Enable/Disable Silver").define("Silver", ModInfo.GUI_DEFAULT_VALUE);
+        registerTartarite = builder.comment("Enable/Disable Tartarite").define("Tartarite",ModInfo.GUI_DEFAULT_VALUE);
         registerTechnetium = builder.comment("Enable/Disable Technetium").define("Technetium", ModInfo.GUI_DEFAULT_VALUE);
         registerThallium = builder.comment("Enable/Disable Thallium").define("Thallium", ModInfo.GUI_DEFAULT_VALUE);
         registerTin = builder.comment("Enable/Disable Tin").define("Tin", ModInfo.GUI_DEFAULT_VALUE);

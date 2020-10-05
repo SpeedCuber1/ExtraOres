@@ -390,6 +390,15 @@ public class ExOreWorldGen
                     .func_242728_a()
                     .func_242732_c(rate));
         }
+        if(ConfigRegistryList.registerPlutonium.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOrePlutonium.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
         if (ConfigRegistryList.registerPrometheum.get())
         {
             height = 100;
@@ -448,6 +457,15 @@ public class ExOreWorldGen
         {
             height = 100;
             config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreSilver.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerTartarite.get())
+        {
+            height = 100;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreTartarite.getDefaultState(),size);
             builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
                     .func_242733_d(height)
                     .func_242728_a()

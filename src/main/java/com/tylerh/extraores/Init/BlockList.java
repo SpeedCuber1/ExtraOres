@@ -46,6 +46,7 @@ public class BlockList
     public static Block blockOreOureclase;
     public static Block blockOrePalladium;
     public static Block blockOrePlatinum;
+    public static Block blockOrePlutonium;
     public static Block blockOrePrometheum;
     public static Block blockOreRhodium;
     public static Block blockOreRuthenium;
@@ -53,6 +54,7 @@ public class BlockList
     public static Block blockOreSanguinite;
     public static Block blockOreShadowIron;
     public static Block blockOreSilver;
+    public static Block blockOreTartarite;
     public static Block blockOreTechnetium;
     public static Block blockOreThallium;
     public static Block blockOreTin;
@@ -107,6 +109,7 @@ public class BlockList
     public static Block blockOureclase;
     public static Block blockPalladium;
     public static Block blockPlatinum;
+    public static Block blockPlutonium;
     public static Block blockPrometheum;
     public static Block blockRhodium;
     public static Block blockRubracium;
@@ -114,6 +117,7 @@ public class BlockList
     public static Block blockSanguinite;
     public static Block blockShadowIron;
     public static Block blockSilver;
+    public static Block blockTartarite;
     public static Block blockTechnetium;
     public static Block blockThallium;
     public static Block blockTin;

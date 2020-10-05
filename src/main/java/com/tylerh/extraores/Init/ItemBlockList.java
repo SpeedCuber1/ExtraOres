@@ -46,6 +46,7 @@ public class ItemBlockList
     public static Item itemBlockOreOureclase;
     public static Item itemBlockOrePalladium;
     public static Item itemBlockOrePlatinum;
+    public static Item itemBlockOrePlutonium;
     public static Item itemBlockOrePrometheum;
     public static Item itemBlockOreRhodium;
     public static Item itemBlockOreRuthenium;
@@ -53,6 +54,7 @@ public class ItemBlockList
     public static Item itemBlockOreSanguinite;
     public static Item itemBlockOreShadowIron;
     public static Item itemBlockOreSilver;
+    public static Item itemBlockOreTartarite;
     public static Item itemBlockOreTechnetium;
     public static Item itemBlockOreThallium;
     public static Item itemBlockOreTin;
@@ -107,6 +109,7 @@ public class ItemBlockList
     public static Item itemBlockOureclase;
     public static Item itemBlockPalladium;
     public static Item itemBlockPlatinum;
+    public static Item itemBlockPlutonium;
     public static Item itemBlockPrometheum;
     public static Item itemBlockRhodium;
     public static Item itemBlockRuthenium;
@@ -114,6 +117,7 @@ public class ItemBlockList
     public static Item itemBlockSanguinite;
     public static Item itemBlockShadowIron;
     public static Item itemBlockSilver;
+    public static Item itemBlockTartarite;
     public static Item itemBlockTechnetium;
     public static Item itemBlockThallium;
     public static Item itemBlockTin;

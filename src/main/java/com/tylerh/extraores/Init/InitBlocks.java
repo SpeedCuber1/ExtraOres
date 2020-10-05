@@ -306,6 +306,13 @@ public class InitBlocks
             blockRegistry(BlockList.blockOrePlatinum, event);
             blockRegistry(BlockList.blockPlatinum, event);
         }
+        if(ConfigRegistryList.registerPlutonium.get())
+        {
+            BlockList.blockOrePlutonium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "plutoniumore");
+            BlockList.blockPlutonium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "plutoniumblock");
+            blockRegistry(BlockList.blockOrePlutonium, event);
+            blockRegistry(BlockList.blockPlutonium, event);
+        }
         if (ConfigRegistryList.registerPrometheum.get())
         {
             BlockList.blockOrePrometheum = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "prometheumore");
@@ -354,6 +361,13 @@ public class InitBlocks
             BlockList.blockSilver = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "silverblock");
             blockRegistry(BlockList.blockOreSilver, event);
             blockRegistry(BlockList.blockSilver, event);
+        }
+        if(ConfigRegistryList.registerTartarite.get())
+        {
+            BlockList.blockOreTartarite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "tartariteore");
+            BlockList.blockTartarite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "tartariteblock");
+            blockRegistry(BlockList.blockOreTartarite, event);
+            blockRegistry(BlockList.blockTartarite, event);
         }
         if (ConfigRegistryList.registerTechnetium.get())
         {
@@ -1141,6 +1155,23 @@ public class InitBlocks
             itemRegistry(ItemBlockList.itemBlockOrePlatinum, event);
             itemRegistry(ItemBlockList.itemBlockPlatinum, event);
         }
+        if(ConfigRegistryList.registerPlutonium.get())
+        {
+            ItemList.itemIngotPlutonium = new ItemEXOre(EXORES, "plutoniumingot");
+            ItemList.itemDustPlutonium = new ItemEXOre(EXORES, "plutoniumdust");
+            ItemList.itemShardPlutonium = new ItemEXOre(EXORES,"plutoniumshard");
+            ItemList.itemClumpPlutonium = new ItemEXOre(EXORES,"plutoniumclump");
+            ItemList.itemDirtyDustPlutonium = new ItemEXOre(EXORES,"plutoniumdirtydust");
+            ItemBlockList.itemBlockOrePlutonium = new ItemBlockExOre(BlockList.blockOrePlutonium, EXORES);
+            ItemBlockList.itemBlockPlutonium = new ItemBlockExOre(BlockList.blockPlutonium, EXORES);
+            itemRegistry(ItemList.itemIngotPlutonium, event);
+            itemRegistry(ItemList.itemDustPlutonium, event);
+            itemRegistry(ItemList.itemShardPlutonium,event);
+            itemRegistry(ItemList.itemClumpPlutonium,event);
+            itemRegistry(ItemList.itemDirtyDustPlutonium,event);
+            itemRegistry(ItemBlockList.itemBlockOrePlutonium, event);
+            itemRegistry(ItemBlockList.itemBlockPlutonium, event);
+        }
         if (ConfigRegistryList.registerPrometheum.get())
         {
             ItemList.itemIngotPrometheum = new ItemEXOre(EXORES, "prometheumingot");
@@ -1259,6 +1290,23 @@ public class InitBlocks
             itemRegistry(ItemList.itemDirtyDustSilver,event);
             itemRegistry(ItemBlockList.itemBlockOreSilver, event);
             itemRegistry(ItemBlockList.itemBlockSilver, event);
+        }
+        if(ConfigRegistryList.registerTartarite.get())
+        {
+            ItemList.itemIngotTartarite = new ItemEXOre(EXORES, "tartariteingot");
+            ItemList.itemDustTartarite = new ItemEXOre(EXORES, "tartaritedust");
+            ItemList.itemShardTartarite = new ItemEXOre(EXORES,"tartariteshard");
+            ItemList.itemClumpTartarite = new ItemEXOre(EXORES,"tartariteclump");
+            ItemList.itemDirtyDustTartarite = new ItemEXOre(EXORES,"tartaritedirtydust");
+            ItemBlockList.itemBlockOreTartarite = new ItemBlockExOre(BlockList.blockOreTartarite, EXORES);
+            ItemBlockList.itemBlockTartarite = new ItemBlockExOre(BlockList.blockTartarite, EXORES);
+            itemRegistry(ItemList.itemIngotTartarite, event);
+            itemRegistry(ItemList.itemDustTartarite, event);
+            itemRegistry(ItemList.itemShardTartarite,event);
+            itemRegistry(ItemList.itemClumpTartarite,event);
+            itemRegistry(ItemList.itemDirtyDustTartarite,event);
+            itemRegistry(ItemBlockList.itemBlockOreTartarite, event);
+            itemRegistry(ItemBlockList.itemBlockTartarite, event);
         }
         if (ConfigRegistryList.registerTechnetium.get())
         {

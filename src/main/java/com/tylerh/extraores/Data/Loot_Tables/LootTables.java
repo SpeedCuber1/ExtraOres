@@ -57,6 +57,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreOureclase,createStandardTable("ourecolaseore",BlockList.blockOreOureclase));
         lootTables.put(BlockList.blockOrePalladium,createStandardTable("palladiumore",BlockList.blockOrePalladium));
         lootTables.put(BlockList.blockOrePlatinum,createStandardTable("platinumore",BlockList.blockOrePlatinum));
+        lootTables.put(BlockList.blockOrePlutonium,createStandardTable("plutoniumore",BlockList.blockOrePlutonium));
         lootTables.put(BlockList.blockOrePrometheum,createStandardTable("prometheumore",BlockList.blockOrePrometheum));
         lootTables.put(BlockList.blockOreRhodium,createStandardTable("rhodiumore",BlockList.blockOreRhodium));
         lootTables.put(BlockList.blockOreRubracium,createStandardTable("rubraciumore",BlockList.blockOreRubracium));
@@ -64,6 +65,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreSanguinite,createStandardTable("sanguiniteore",BlockList.blockOreSanguinite));
         lootTables.put(BlockList.blockOreShadowIron,createStandardTable("shadowironore",BlockList.blockOreShadowIron));
         lootTables.put(BlockList.blockOreSilver,createStandardTable("silverore",BlockList.blockOreSilver));
+        lootTables.put(BlockList.blockOreTartarite,createStandardTable("tartariteore",BlockList.blockOreTartarite));
         lootTables.put(BlockList.blockOreTechnetium,createStandardTable("technetiumore",BlockList.blockOreTechnetium));
         lootTables.put(BlockList.blockOreThallium,createStandardTable("thalliumore",BlockList.blockOreThallium));
         lootTables.put(BlockList.blockOreTin,createStandardTable("tinore",BlockList.blockOreTin));
@@ -118,6 +120,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOureclase,createStandardTable("ourecolaseblock",BlockList.blockOureclase));
         lootTables.put(BlockList.blockPalladium,createStandardTable("palladiumblock",BlockList.blockPalladium));
         lootTables.put(BlockList.blockPlatinum,createStandardTable("platinumblock",BlockList.blockPlatinum));
+        lootTables.put(BlockList.blockPlutonium,createStandardTable("plutoniumblock",BlockList.blockPlutonium));
         lootTables.put(BlockList.blockPrometheum,createStandardTable("prometheumblock",BlockList.blockPrometheum));
         lootTables.put(BlockList.blockRhodium,createStandardTable("rhodiumblock",BlockList.blockRhodium));
         lootTables.put(BlockList.blockRubracium,createStandardTable("rubraciumblock",BlockList.blockRubracium));
@@ -125,6 +128,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockSanguinite,createStandardTable("sanguiniteblock",BlockList.blockSanguinite));
         lootTables.put(BlockList.blockShadowIron,createStandardTable("shadowironblock",BlockList.blockShadowIron));
         lootTables.put(BlockList.blockSilver,createStandardTable("silverblock",BlockList.blockSilver));
+        lootTables.put(BlockList.blockTartarite,createStandardTable("tartariteblock",BlockList.blockTartarite));
         lootTables.put(BlockList.blockTechnetium,createStandardTable("technetiumblock",BlockList.blockTechnetium));
         lootTables.put(BlockList.blockThallium,createStandardTable("thalliumblock",BlockList.blockThallium));
         lootTables.put(BlockList.blockTin,createStandardTable("tinblock",BlockList.blockTin));

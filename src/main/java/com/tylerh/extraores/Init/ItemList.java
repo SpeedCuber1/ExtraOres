@@ -46,6 +46,7 @@ public class ItemList
     public static Item itemIngotOureclase;
     public static Item itemIngotPalladium;
     public static Item itemIngotPlatinum;
+    public static Item itemIngotPlutonium;
     public static Item itemIngotPrometheum;
     public static Item itemIngotRhodium;
     public static Item itemIngotRuthenium;
@@ -53,6 +54,7 @@ public class ItemList
     public static Item itemIngotSanguinite;
     public static Item itemIngotShadowIron;
     public static Item itemIngotSilver;
+    public static Item itemIngotTartarite;
     public static Item itemIngotTechnetium;
     public static Item itemIngotThallium;
     public static Item itemIngotTin;
@@ -107,6 +109,7 @@ public class ItemList
     public static Item itemDustOureclase;
     public static Item itemDustPalladium;
     public static Item itemDustPlatinum;
+    public static Item itemDustPlutonium;
     public static Item itemDustPrometheum;
     public static Item itemDustRhodium;
     public static Item itemDustRuthenium;
@@ -114,6 +117,7 @@ public class ItemList
     public static Item itemDustSanguinite;
     public static Item itemDustShadowIron;
     public static Item itemDustSilver;
+    public static Item itemDustTartarite;
     public static Item itemDustTechnetium;
     public static Item itemDustThallium;
     public static Item itemDustTin;
@@ -168,6 +172,7 @@ public class ItemList
     public static Item itemShardOureclase;
     public static Item itemShardPalladium;
     public static Item itemShardPlatinum;
+    public static Item itemShardPlutonium;
     public static Item itemShardPrometheum;
     public static Item itemShardRhodium;
     public static Item itemShardRuthenium;
@@ -175,6 +180,7 @@ public class ItemList
     public static Item itemShardSanguinite;
     public static Item itemShardShadowIron;
     public static Item itemShardSilver;
+    public static Item itemShardTartarite;
     public static Item itemShardTechnetium;
     public static Item itemShardThallium;
     public static Item itemShardTin;
@@ -229,6 +235,7 @@ public class ItemList
     public static Item itemClumpOureclase;
     public static Item itemClumpPalladium;
     public static Item itemClumpPlatinum;
+    public static Item itemClumpPlutonium;
     public static Item itemClumpPrometheum;
     public static Item itemClumpRhodium;
     public static Item itemClumpRuthenium;
@@ -236,6 +243,7 @@ public class ItemList
     public static Item itemClumpSanguinite;
     public static Item itemClumpShadowIron;
     public static Item itemClumpSilver;
+    public static Item itemClumpTartarite;
     public static Item itemClumpTechnetium;
     public static Item itemClumpThallium;
     public static Item itemClumpTin;
@@ -290,6 +298,7 @@ public class ItemList
     public static Item itemDirtyDustOureclase;
     public static Item itemDirtyDustPalladium;
     public static Item itemDirtyDustPlatinum;
+    public static Item itemDirtyDustPlutonium;
     public static Item itemDirtyDustPrometheum;
     public static Item itemDirtyDustRhodium;
     public static Item itemDirtyDustRuthenium;
@@ -297,6 +306,7 @@ public class ItemList
     public static Item itemDirtyDustSanguinite;
     public static Item itemDirtyDustShadowIron;
     public static Item itemDirtyDustSilver;
+    public static Item itemDirtyDustTartarite;
     public static Item itemDirtyDustTechnetium;
     public static Item itemDirtyDustThallium;
     public static Item itemDirtyDustTin;
