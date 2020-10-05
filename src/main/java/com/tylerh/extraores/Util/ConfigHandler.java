@@ -93,6 +93,7 @@ public class ConfigHandler
         Property propOureclase = config.get(ModInfo.GUI_CATEGORY,"Oureclase",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPalladium = config.get(ModInfo.GUI_CATEGORY, "Palladium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPlatinum = config.get(ModInfo.GUI_CATEGORY, "Platinum", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propPlutonium = config.get(ModInfo.GUI_CATEGORY,"Plutonium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPrometheum = config.get(ModInfo.GUI_CATEGORY,"Prometheum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propRhodium = config.get(ModInfo.GUI_CATEGORY, "Rhodium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propRubracium = config.get(ModInfo.GUI_CATEGORY,"Rubracium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
@@ -100,6 +101,7 @@ public class ConfigHandler
         Property propSanguinite = config.get(ModInfo.GUI_CATEGORY,"Sanguinite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propShadowIron = config.get(ModInfo.GUI_CATEGORY,"Shadow_Iron",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propSilver = config.get(ModInfo.GUI_CATEGORY, "Silver", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propTartarite = config.get(ModInfo.GUI_CATEGORY,"Tartarite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propTechnetium = config.get(ModInfo.GUI_CATEGORY, "Technetium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propThallium = config.get(ModInfo.GUI_CATEGORY, "Thallium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propTin = config.get(ModInfo.GUI_CATEGORY, "Tin", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
@@ -155,6 +157,7 @@ public class ConfigHandler
         propOrder.add(propOureclase.getName());
         propOrder.add(propPalladium.getName());
         propOrder.add(propPlatinum.getName());
+        propOrder.add(propPlutonium.getName());
         propOrder.add(propPrometheum.getName());
         propOrder.add(propRhodium.getName());
         propOrder.add(propRubracium.getName());
@@ -162,6 +165,7 @@ public class ConfigHandler
         propOrder.add(propSanguinite.getName());
         propOrder.add(propShadowIron.getName());
         propOrder.add(propSilver.getName());
+        propOrder.add(propTartarite.getName());
         propOrder.add(propTechnetium.getName());
         propOrder.add(propThallium.getName());
         propOrder.add(propTin.getName());
@@ -219,6 +223,7 @@ public class ConfigHandler
             InitBlocks.registerOureclase = propOureclase.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPalladium = propPalladium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPlatinum = propPlatinum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerPlutonium = propPlutonium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPrometheum = propPrometheum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerRhodium = propRhodium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerRubracium = propRubracium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -226,6 +231,7 @@ public class ConfigHandler
             InitBlocks.registerSanguinite = propSanguinite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerShadowIron = propShadowIron.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerSilver = propSilver.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerTartarite = propTartarite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTechnetium = propTechnetium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerThallium = propThallium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTin = propTin.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -280,6 +286,7 @@ public class ConfigHandler
         propOureclase.set(InitBlocks.registerOureclase);
         propPalladium.set(InitBlocks.registerPalladium);
         propPlatinum.set(InitBlocks.registerPlatinum);
+        propPlutonium.set(InitBlocks.registerPlutonium);
         propPrometheum.set(InitBlocks.registerPrometheum);
         propRhodium.set(InitBlocks.registerRhodium);
         propRubracium.set(InitBlocks.registerRubracium);
@@ -287,6 +294,7 @@ public class ConfigHandler
         propSanguinite.set(InitBlocks.registerSanguinite);
         propShadowIron.set(InitBlocks.registerShadowIron);
         propSilver.set(InitBlocks.registerSilver);
+        propTartarite.set(InitBlocks.registerTartarite);
         propTechnetium.set(InitBlocks.registerTechnetium);
         propThallium.set(InitBlocks.registerThallium);
         propTin.set(InitBlocks.registerTin);

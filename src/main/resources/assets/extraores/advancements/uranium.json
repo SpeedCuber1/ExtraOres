@@ -17,7 +17,7 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "unobtainium": {
+    "uranium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

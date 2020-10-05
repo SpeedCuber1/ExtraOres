@@ -56,6 +56,7 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator oureclaseOre;
     private WorldGenerator palladiumOre;
     private WorldGenerator platinumOre;
+    private WorldGenerator plutoniumOre;
     private WorldGenerator prometheumOre;
     private WorldGenerator rhodiumOre;
     private WorldGenerator rubraciumOre;
@@ -63,6 +64,7 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator sanguiniteOre;
     private WorldGenerator shadowIronOre;
     private WorldGenerator silverOre;
+    private WorldGenerator tartariteOre;
     private WorldGenerator technetiumOre;
     private WorldGenerator thalliumOre;
     private WorldGenerator tinOre;
@@ -241,6 +243,10 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.platinumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePlatinum.getDefaultState(), 4);
         }
+        if(InitBlocks.registerPlutonium)
+        {
+            this.plutoniumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePlutonium.getDefaultState(),4);
+        }
         if(InitBlocks.registerPrometheum)
         {
             this.prometheumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePrometheum.getDefaultState(),4);
@@ -268,6 +274,10 @@ public class EXOreWorldGen implements IWorldGenerator
         if(InitBlocks.registerSilver)
         {
             this.silverOre = new EXOreWorldGenMinable(InitBlocks.blockOreSilver.getDefaultState(), 4);
+        }
+        if(InitBlocks.registerTartarite)
+        {
+            this.tartariteOre = new EXOreWorldGenMinable(InitBlocks.blockOreTartarite.getDefaultState(),4);
         }
         if(InitBlocks.registerTechnetium)
         {
@@ -325,7 +335,7 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             if(InitBlocks.registerAdamantine)
             {
-                runGenerator(this.adamantineOre,world,random,chunkX,chunkZ,20,0,20);
+                runGenerator(this.adamantineOre,world,random,chunkX,chunkZ,20,0,32);
             }
             if(InitBlocks.registerAluminum)
             {
@@ -345,7 +355,7 @@ public class EXOreWorldGen implements IWorldGenerator
             }
             if(InitBlocks.registerAtlarus)
             {
-                runGenerator(this.atlarusOre,world,random,chunkX,chunkZ,20,0,20);
+                runGenerator(this.atlarusOre,world,random,chunkX,chunkZ,20,0,32);
             }
             if(InitBlocks.registerBismuth)
             {
@@ -381,7 +391,7 @@ public class EXOreWorldGen implements IWorldGenerator
             }
             if(InitBlocks.registerDeepIron)
             {
-                runGenerator(this.deepIronOre,world,random,chunkX,chunkZ,20,0,30);
+                runGenerator(this.deepIronOre,world,random,chunkX,chunkZ,20,0,32);
             }
             if(InitBlocks.registerDesichalkos)
             {
@@ -397,7 +407,7 @@ public class EXOreWorldGen implements IWorldGenerator
             }
             if(InitBlocks.registerHaderoth)
             {
-                runGenerator(this.haderothOre,world,random,chunkX,chunkZ,20,0,20);
+                runGenerator(this.haderothOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerHepatizon)
             {
@@ -463,6 +473,10 @@ public class EXOreWorldGen implements IWorldGenerator
             {
                 runGenerator(this.platinumOre, world, random, chunkX, chunkZ, 20, 0, 100);
             }
+            if(InitBlocks.registerPlutonium)
+            {
+                runGenerator(this.plutoniumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
             if(InitBlocks.registerPrometheum)
             {
                 runGenerator(this.prometheumOre,world,random,chunkX,chunkZ,20,0,100);
@@ -482,6 +496,10 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerSilver)
             {
                 runGenerator(this.silverOre, world, random, chunkX, chunkZ, 20, 0, 100);
+            }
+            if(InitBlocks.registerTartarite)
+            {
+                runGenerator(this.tartariteOre,world,random,chunkX,chunkZ,20,0,32);
             }
             if(InitBlocks.registerTechnetium)
             {

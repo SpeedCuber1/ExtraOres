@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:plutonium",
+  "parent": "extraores:platinum",
   "display": {
     "icon": {
-      "item": "extraores:rhodiumore"
+      "item": "extraores:plutoniumore"
     },
     "title": {
-      "translate": "On the Rhodium"
+      "translate": "Not Responsible for Base Evisceration"
     },
     "description": {
-      "translate": "Mine Rhodium Ore"
+      "translate": "Mine Plutonium Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "rhodium": {
+    "plutonium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:rhodiumore"
+            "item": "extraores:plutoniumore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "rhodium"
+      "plutonium"
     ]
   ]
 }

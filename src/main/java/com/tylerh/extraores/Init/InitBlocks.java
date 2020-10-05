@@ -57,6 +57,7 @@ public class InitBlocks
     public static boolean registerOureclase;
     public static boolean registerPalladium;
     public static boolean registerPlatinum;
+    public static boolean registerPlutonium;
     public static boolean registerPrometheum;
     public static boolean registerRhodium;
     public static boolean registerRubracium;
@@ -64,6 +65,7 @@ public class InitBlocks
     public static boolean registerSanguinite;
     public static boolean registerShadowIron;
     public static boolean registerSilver;
+    public static boolean registerTartarite;
     public static boolean registerTechnetium;
     public static boolean registerThallium;
     public static boolean registerTin;
@@ -118,6 +120,7 @@ public class InitBlocks
     public static Block blockOreOureclase;
     public static Block blockOrePalladium;
     public static Block blockOrePlatinum;
+    public static Block blockOrePlutonium;
     public static Block blockOrePrometheum;
     public static Block blockOreRhodium;
     public static Block blockOreRubracium;
@@ -125,6 +128,7 @@ public class InitBlocks
     public static Block blockOreSanguinite;
     public static Block blockOreShadowIron;
     public static Block blockOreSilver;
+    public static Block blockOreTartarite;
     public static Block blockOreTechnetium;
     public static Block blockOreThallium;
     public static Block blockOreTin;
@@ -179,6 +183,7 @@ public class InitBlocks
     public static Block blockOureclase;
     public static Block blockPalladium;
     public static Block blockPlatinum;
+    public static Block blockPlutonium;
     public static Block blockPrometheum;
     public static Block blockRhodium;
     public static Block blockRubracium;
@@ -186,6 +191,7 @@ public class InitBlocks
     public static Block blockSanguinite;
     public static Block blockShadowIron;
     public static Block blockSilver;
+    public static Block blockTartarite;
     public static Block blockTechnetium;
     public static Block blockThallium;
     public static Block blockTin;
@@ -240,6 +246,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOreOureclase;
     public static ItemBlock itemBlockOrePalladium;
     public static ItemBlock itemBlockOrePlatinum;
+    public static ItemBlock itemBlockOrePlutonium;
     public static ItemBlock itemBlockOrePrometheum;
     public static ItemBlock itemBlockOreRhodium;
     public static ItemBlock itemBlockOreRubracium;
@@ -247,6 +254,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOreSanguinite;
     public static ItemBlock itemBlockOreShadowIron;
     public static ItemBlock itemBlockOreSilver;
+    public static ItemBlock itemBlockOreTartarite;
     public static ItemBlock itemBlockOreTechnetium;
     public static ItemBlock itemBlockOreThallium;
     public static ItemBlock itemBlockOreTin;
@@ -301,6 +309,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOureclase;
     public static ItemBlock itemBlockPalladium;
     public static ItemBlock itemBlockPlatinum;
+    public static ItemBlock itemBlockPlutonium;
     public static ItemBlock itemBlockPrometheum;
     public static ItemBlock itemBlockRhodium;
     public static ItemBlock itemBlockRubracium;
@@ -308,6 +317,7 @@ public class InitBlocks
     public static ItemBlock itemBlockSanguinite;
     public static ItemBlock itemBlockShadowIron;
     public static ItemBlock itemBlockSilver;
+    public static ItemBlock itemBlockTartarite;
     public static ItemBlock itemBlockTechnetium;
     public static ItemBlock itemBlockThallium;
     public static ItemBlock itemBlockTin;
@@ -362,6 +372,7 @@ public class InitBlocks
     public static Item itemIngotOureclase;
     public static Item itemIngotPalladium;
     public static Item itemIngotPlatinum;
+    public static Item itemIngotPlutonium;
     public static Item itemIngotPrometheum;
     public static Item itemIngotRhodium;
     public static Item itemIngotRubracium;
@@ -369,6 +380,7 @@ public class InitBlocks
     public static Item itemIngotSanguinite;
     public static Item itemIngotShadowIron;
     public static Item itemIngotSilver;
+    public static Item itemIngotTartarite;
     public static Item itemIngotTechnetium;
     public static Item itemIngotThallium;
     public static Item itemIngotTin;
@@ -423,6 +435,7 @@ public class InitBlocks
     public static Item itemDustOureclase;
     public static Item itemDustPalladium;
     public static Item itemDustPlatinum;
+    public static Item itemDustPlutonium;
     public static Item itemDustPrometheum;
     public static Item itemDustRhodium;
     public static Item itemDustRubracium;
@@ -430,6 +443,7 @@ public class InitBlocks
     public static Item itemDustSanguinite;
     public static Item itemDustShadowIron;
     public static Item itemDustSilver;
+    public static Item itemDustTartarite;
     public static Item itemDustTechnetium;
     public static Item itemDustThallium;
     public static Item itemDustTin;
@@ -484,6 +498,7 @@ public class InitBlocks
     public static Item itemClumpOureclase;
     public static Item itemClumpPalladium;
     public static Item itemClumpPlatinum;
+    public static Item itemClumpPlutonium;
     public static Item itemClumpPrometheum;
     public static Item itemClumpRhodium;
     public static Item itemClumpRubracium;
@@ -491,6 +506,7 @@ public class InitBlocks
     public static Item itemClumpSanguinite;
     public static Item itemClumpShadowIron;
     public static Item itemClumpSilver;
+    public static Item itemClumpTartarite;
     public static Item itemClumpTechnetium;
     public static Item itemClumpThallium;
     public static Item itemClumpTin;
@@ -545,6 +561,7 @@ public class InitBlocks
     public static Item itemShardOureclase;
     public static Item itemShardPalladium;
     public static Item itemShardPlatinum;
+    public static Item itemShardPlutonium;
     public static Item itemShardPrometheum;
     public static Item itemShardRhodium;
     public static Item itemShardRubracium;
@@ -552,6 +569,7 @@ public class InitBlocks
     public static Item itemShardSanguinite;
     public static Item itemShardShadowIron;
     public static Item itemShardSilver;
+    public static Item itemShardTartarite;
     public static Item itemShardTechnetium;
     public static Item itemShardThallium;
     public static Item itemShardTin;
@@ -606,6 +624,7 @@ public class InitBlocks
     public static Item itemDirtyDustOureclase;
     public static Item itemDirtyDustPalladium;
     public static Item itemDirtyDustPlatinum;
+    public static Item itemDirtyDustPlutonium;
     public static Item itemDirtyDustPrometheum;
     public static Item itemDirtyDustRhodium;
     public static Item itemDirtyDustRubracium;
@@ -613,6 +632,7 @@ public class InitBlocks
     public static Item itemDirtyDustSanguinite;
     public static Item itemDirtyDustShadowIron;
     public static Item itemDirtyDustSilver;
+    public static Item itemDirtyDustTartarite;
     public static Item itemDirtyDustTechnetium;
     public static Item itemDirtyDustThallium;
     public static Item itemDirtyDustTin;
@@ -2062,6 +2082,41 @@ public class InitBlocks
             initOreDict(itemShardPlatinum,"shardPlatinum");
             initOreDict(itemDirtyDustPlatinum,"dirtyDustPlatinum");
         }
+        if(registerPlutonium)
+        {
+            blockOrePlutonium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"plutoniumOre");
+            itemBlockOrePlutonium = new ItemBlockExOre(blockOrePlutonium);
+            blockPlutonium = new BlockEXOre(Material.IRON,3.0f,5.0f,"plutoniumBlock");
+            itemBlockPlutonium = new ItemBlockExOre(blockPlutonium);
+            itemIngotPlutonium = new ItemEXOre("plutoniumIngot");
+            itemDustPlutonium = new ItemEXOre("plutoniumDust");
+            itemClumpPlutonium = new ItemEXOre("plutoniumClump");
+            itemShardPlutonium = new ItemEXOre("plutoniumShard");
+            itemDirtyDustPlutonium = new ItemEXOre("plutoniumDirtyDust");
+            createRegistry(blockOrePlutonium,itemBlockOrePlutonium,"plutoniumOre");
+            createRegistry(blockPlutonium,itemBlockPlutonium,"plutoniumBlock");
+            createRegistry(itemIngotPlutonium,"plutoniumIngot");
+            createRegistry(itemDustPlutonium,"plutoniumDust");
+            createRegistry(itemClumpPlutonium,"plutoniumClump");
+            createRegistry(itemShardPlutonium,"plutoniumShard");
+            createRegistry(itemDirtyDustPlutonium,"plutoniumDirtyDust");
+            ForgeRegistries.BLOCKS.register(blockOrePlutonium);
+            ForgeRegistries.ITEMS.register(itemBlockOrePlutonium);
+            ForgeRegistries.BLOCKS.register(blockPlutonium);
+            ForgeRegistries.ITEMS.register(itemBlockPlutonium);
+            ForgeRegistries.ITEMS.register(itemIngotPlutonium);
+            ForgeRegistries.ITEMS.register(itemDustPlutonium);
+            ForgeRegistries.ITEMS.register(itemClumpPlutonium);
+            ForgeRegistries.ITEMS.register(itemShardPlutonium);
+            ForgeRegistries.ITEMS.register(itemDirtyDustPlutonium);
+            initOreDict(blockOrePlutonium,"orePlutonium");
+            initOreDict(blockPlutonium,"blockPlutonium");
+            initOreDict(itemIngotPlutonium,"ingotPlutonium");
+            initOreDict(itemDustPlutonium,"dustPlutonium");
+            initOreDict(itemClumpPlutonium,"clumpPlutonium");
+            initOreDict(itemShardPlutonium,"shardPlutonium");
+            initOreDict(itemDirtyDustPlutonium,"dirtyDustPlutonium");
+        }
         if(registerPrometheum)
         {
             blockOrePrometheum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"prometheumOre");
@@ -2306,6 +2361,41 @@ public class InitBlocks
             initOreDict(itemClumpSilver,"clumpSilver");
             initOreDict(itemShardSilver,"shardSilver");
             initOreDict(itemDirtyDustSilver,"dirtyDustSilver");
+        }
+        if(registerTartarite)
+        {
+            blockOreTartarite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tartariteOre");
+            itemBlockOreTartarite = new ItemBlockExOre(blockOreTartarite);
+            blockTartarite = new BlockEXOre(Material.IRON,3.0f,5.0f,"tartariteBlock");
+            itemBlockTartarite = new ItemBlockExOre(blockTartarite);
+            itemIngotTartarite = new ItemEXOre("tartariteIngot");
+            itemDustTartarite = new ItemEXOre("tartariteDust");
+            itemClumpTartarite = new ItemEXOre("tartariteClump");
+            itemShardTartarite = new ItemEXOre("tartariteShard");
+            itemDirtyDustTartarite = new ItemEXOre("tartariteDirtyDust");
+            createRegistry(blockOreTartarite,itemBlockOreTartarite,"tartariteOre");
+            createRegistry(blockTartarite,itemBlockTartarite,"tartariteBlock");
+            createRegistry(itemIngotTartarite,"tartariteIngot");
+            createRegistry(itemDustTartarite,"tartariteDust");
+            createRegistry(itemClumpTartarite,"tartariteClump");
+            createRegistry(itemShardTartarite,"tartariteShard");
+            createRegistry(itemDirtyDustTartarite,"tartariteDirtyDust");
+            ForgeRegistries.BLOCKS.register(blockOreTartarite);
+            ForgeRegistries.ITEMS.register(itemBlockOreTartarite);
+            ForgeRegistries.BLOCKS.register(blockTartarite);
+            ForgeRegistries.ITEMS.register(itemBlockTartarite);
+            ForgeRegistries.ITEMS.register(itemIngotTartarite);
+            ForgeRegistries.ITEMS.register(itemDustTartarite);
+            ForgeRegistries.ITEMS.register(itemClumpTartarite);
+            ForgeRegistries.ITEMS.register(itemShardTartarite);
+            ForgeRegistries.ITEMS.register(itemDirtyDustTartarite);
+            initOreDict(blockOreTartarite,"oreTartarite");
+            initOreDict(blockTartarite,"blockTartarite");
+            initOreDict(itemIngotTartarite,"ingotTartarite");
+            initOreDict(itemDustTartarite,"dustTartarite");
+            initOreDict(itemClumpTartarite,"clumpTartarite");
+            initOreDict(itemShardTartarite,"shardTartarite");
+            initOreDict(itemDirtyDustTartarite,"dirtyDustTartarite");
         }
         if(registerTechnetium)
         {

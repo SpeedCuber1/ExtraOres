@@ -2,13 +2,13 @@
   "group": "Extra Ores",
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "extraores:meutoiteIngot",
+    "item": "extraores:plutoniumIngot",
     "count": 9
   },
   "ingredients": [
     {
       "type": "forge:ore_dict",
-      "ore": "blockMeutoite"
+      "ore": "blockPlutonium"
     }
   ]
 }

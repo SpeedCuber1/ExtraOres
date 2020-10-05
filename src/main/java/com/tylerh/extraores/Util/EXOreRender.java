@@ -382,6 +382,15 @@ public class EXOreRender
             location = new ResourceLocation("extraores:platinumBlock");
             Register(itemBlockPlatinum,location.toString());
         }
+        if(InitBlocks.registerPlutonium)
+        {
+            Item itemBlockPlutonium = Item.getItemFromBlock(InitBlocks.blockOrePlutonium);
+            ResourceLocation location = new ResourceLocation("extraores:plutoniumOre");
+            Register(itemBlockPlutonium,location.toString());
+            itemBlockPlutonium = Item.getItemFromBlock(InitBlocks.blockPlutonium);
+            location = new ResourceLocation("extraores:plutoniumBlock");
+            Register(itemBlockPlutonium,location.toString());
+        }
         if(InitBlocks.registerPrometheum)
         {
             Item itemBlockPrometheum = Item.getItemFromBlock(InitBlocks.blockOrePrometheum);
@@ -444,6 +453,15 @@ public class EXOreRender
             itemBlockSilver = Item.getItemFromBlock(InitBlocks.blockSilver);
             location = new ResourceLocation("extraores:silverBlock");
             Register(itemBlockSilver,location.toString());
+        }
+        if(InitBlocks.registerTartarite)
+        {
+            Item itemBlockTartarite = Item.getItemFromBlock(InitBlocks.blockOreTartarite);
+            ResourceLocation location = new ResourceLocation("extraores:tartariteOre");
+            Register(itemBlockTartarite,location.toString());
+            itemBlockTartarite = Item.getItemFromBlock(InitBlocks.blockTartarite);
+            location = new ResourceLocation("extraores:tartariteBlock");
+            Register(itemBlockTartarite,location.toString());
         }
         if(InitBlocks.registerTechnetium)
         {
@@ -1089,6 +1107,19 @@ public class EXOreRender
             location = new ResourceLocation("extraores:platinumdirtydust");
             Register(InitBlocks.itemDirtyDustPlatinum,location.toString());
         }
+        if(InitBlocks.registerPlutonium)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:plutoniumIngot");
+            Register(InitBlocks.itemIngotPlutonium,location.toString());
+            location = new ResourceLocation("extraores:plutoniumDust");
+            Register(InitBlocks.itemDustPlutonium,location.toString());
+            location = new ResourceLocation("extraores:plutoniumclump");
+            Register(InitBlocks.itemClumpPlutonium,location.toString());
+            location = new ResourceLocation("extraores:plutoniumshard");
+            Register(InitBlocks.itemShardPlutonium,location.toString());
+            location = new ResourceLocation("extraores:plutoniumdirtydust");
+            Register(InitBlocks.itemDirtyDustPlutonium,location.toString());
+        }
         if(InitBlocks.registerPrometheum)
         {
             ResourceLocation location = new ResourceLocation("extraores:prometheumIngot");
@@ -1179,6 +1210,19 @@ public class EXOreRender
             Register(InitBlocks.itemShardSilver,location.toString());
             location = new ResourceLocation("extraores:silverdirtydust");
             Register(InitBlocks.itemDirtyDustSilver,location.toString());
+        }
+        if(InitBlocks.registerTartarite)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:tartariteIngot");
+            Register(InitBlocks.itemIngotTartarite,location.toString());
+            location = new ResourceLocation("extraores:tartariteDust");
+            Register(InitBlocks.itemDustTartarite,location.toString());
+            location = new ResourceLocation("extraores:tartariteclump");
+            Register(InitBlocks.itemClumpTartarite,location.toString());
+            location = new ResourceLocation("extraores:tartariteshard");
+            Register(InitBlocks.itemShardTartarite,location.toString());
+            location = new ResourceLocation("extraores:tartaritedirtydust");
+            Register(InitBlocks.itemDirtyDustTartarite,location.toString());
         }
         if(InitBlocks.registerTechnetium)
         {
