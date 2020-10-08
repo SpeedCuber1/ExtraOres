@@ -3052,25 +3052,25 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
-        if (InitBlocks.registerPrometheum)
+        if (InitBlocks.registerPromethium)
         {
             //Smelting
-            GameRegistry.addSmelting(InitBlocks.blockOrePrometheum, new ItemStack(InitBlocks.itemIngotPrometheum, 1), 1.0f);
-            GameRegistry.addSmelting(InitBlocks.itemDustPrometheum, new ItemStack(InitBlocks.itemIngotPrometheum, 1), 1.0f);
+            GameRegistry.addSmelting(InitBlocks.blockOrePromethium, new ItemStack(InitBlocks.itemIngotPromethium, 1), 1.0f);
+            GameRegistry.addSmelting(InitBlocks.itemDustPromethium, new ItemStack(InitBlocks.itemIngotPromethium, 1), 1.0f);
             //Normal Crafting
-            location = ModInfo.MOD_ID + ":prometheumBlock";
+            location = ModInfo.MOD_ID + ":promethiumBlock";
             registerHelper(location,"Compress");
             registerHelper(location,"Decompress");
             //Pulverizing("EnderIO Req'd")
             if (registerDusts)
             {
                 String recipe = "<recipeGroup name=\"ExtraOres\" >" +
-                        "<recipe name=\"Prometheum to Dust\" energyCost=\"3600\" >" +
+                        "<recipe name=\"Promethium to Dust\" energyCost=\"3600\" >" +
                         "<input>" +
-                        "<itemStack oreDictionary=\"orePrometheum\" />" +
+                        "<itemStack oreDictionary=\"orePromethium\" />" +
                         "</input>" +
                         "<output>" +
-                        "<itemStack oreDictionary=\"dustPrometheum\" number=\"2\" />" +
+                        "<itemStack oreDictionary=\"dustPromethium\" number=\"2\" />" +
                         "</output>" +
                         "</recipe>" +
                         "</recipeGroup>";
@@ -3081,38 +3081,38 @@ public class Recipes
             {
                 //Chemical Injection Chamber
                 tag = new NBTTagCompound();
-                tag.setTag("input", new ItemStack(InitBlocks.blockOrePrometheum).writeToNBT(new NBTTagCompound()));
+                tag.setTag("input", new ItemStack(InitBlocks.blockOrePromethium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("gasType", new GasStack(GasRegistry.getGas("hydrogenChloride"),500).write(new NBTTagCompound()));
-                tag.setTag("output", new ItemStack(InitBlocks.itemShardPrometheum,4).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemShardPromethium,4).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","ChemicalInjectionChamberRecipe",tag);
                 //Purification Chamber
                 //Raw Ore
                 tag = new NBTTagCompound();
-                tag.setTag("input", new ItemStack(InitBlocks.blockOrePrometheum).writeToNBT(new NBTTagCompound()));
+                tag.setTag("input", new ItemStack(InitBlocks.blockOrePromethium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("gasType", new GasStack(GasRegistry.getGas("oxygen"),500).write(new NBTTagCompound()));
-                tag.setTag("output", new ItemStack(InitBlocks.itemClumpPrometheum,3).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemClumpPromethium,3).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","PurificationChamberRecipe",tag);
                 //Shard
                 tag = new NBTTagCompound();
-                tag.setTag("input", new ItemStack(InitBlocks.itemShardPrometheum).writeToNBT(new NBTTagCompound()));
+                tag.setTag("input", new ItemStack(InitBlocks.itemShardPromethium).writeToNBT(new NBTTagCompound()));
                 tag.setTag("gasType", new GasStack(GasRegistry.getGas("oxygen"),500).write(new NBTTagCompound()));
-                tag.setTag("output", new ItemStack(InitBlocks.itemClumpPrometheum).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemClumpPromethium).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","PurificationChamberRecipe",tag);
                 //Crusher
                 tag = new NBTTagCompound();
-                tag.setTag("input", new ItemStack(InitBlocks.itemClumpPrometheum).writeToNBT(new NBTTagCompound()));
-                tag.setTag("output", new ItemStack(InitBlocks.itemDirtyDustPrometheum).writeToNBT(new NBTTagCompound()));
+                tag.setTag("input", new ItemStack(InitBlocks.itemClumpPromethium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemDirtyDustPromethium).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","CrusherRecipe",tag);
                 //EnrichmentChamber
                 //Raw Ore
                 tag = new NBTTagCompound();
-                tag.setTag("input", new ItemStack(InitBlocks.blockOrePrometheum).writeToNBT(new NBTTagCompound()));
-                tag.setTag("output", new ItemStack(InitBlocks.itemDustPrometheum,2).writeToNBT(new NBTTagCompound()));
+                tag.setTag("input", new ItemStack(InitBlocks.blockOrePromethium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemDustPromethium,2).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
                 //Dirty Dust
                 tag = new NBTTagCompound();
-                tag.setTag("input", new ItemStack(InitBlocks.itemDirtyDustPrometheum).writeToNBT(new NBTTagCompound()));
-                tag.setTag("output", new ItemStack(InitBlocks.itemDustPrometheum).writeToNBT(new NBTTagCompound()));
+                tag.setTag("input", new ItemStack(InitBlocks.itemDirtyDustPromethium).writeToNBT(new NBTTagCompound()));
+                tag.setTag("output", new ItemStack(InitBlocks.itemDustPromethium).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }

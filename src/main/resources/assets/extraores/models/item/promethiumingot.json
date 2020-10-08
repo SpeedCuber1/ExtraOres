@@ -1,7 +1,7 @@
 {
   "parent": "builtin/generated",
   "textures": {
-	"layer0": "extraores:items/prometheumingot"
+	"layer0": "extraores:items/promethiumingot"
   },
   "display": {
 	"thirdperson": {

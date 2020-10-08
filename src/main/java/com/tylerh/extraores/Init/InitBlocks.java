@@ -63,7 +63,7 @@ public class InitBlocks
     public static boolean registerPlatinum;
     public static boolean registerPlutonium;
     public static boolean registerPolonium;
-    public static boolean registerPrometheum;
+    public static boolean registerPromethium;
     public static boolean registerRhenium;
     public static boolean registerRhodium;
     public static boolean registerRubracium;
@@ -134,7 +134,7 @@ public class InitBlocks
     public static Block blockOrePlatinum;
     public static Block blockOrePlutonium;
     public static Block blockOrePolonium;
-    public static Block blockOrePrometheum;
+    public static Block blockOrePromethium;
     public static Block blockOreRhenium;
     public static Block blockOreRhodium;
     public static Block blockOreRubracium;
@@ -205,7 +205,7 @@ public class InitBlocks
     public static Block blockPlatinum;
     public static Block blockPlutonium;
     public static Block blockPolonium;
-    public static Block blockPrometheum;
+    public static Block blockPromethium;
     public static Block blockRhenium;
     public static Block blockRhodium;
     public static Block blockRubracium;
@@ -276,7 +276,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOrePlatinum;
     public static ItemBlock itemBlockOrePlutonium;
     public static ItemBlock itemBlockOrePolonium;
-    public static ItemBlock itemBlockOrePrometheum;
+    public static ItemBlock itemBlockOrePromethium;
     public static ItemBlock itemBlockOreRhenium;
     public static ItemBlock itemBlockOreRhodium;
     public static ItemBlock itemBlockOreRubracium;
@@ -347,7 +347,7 @@ public class InitBlocks
     public static ItemBlock itemBlockPlatinum;
     public static ItemBlock itemBlockPlutonium;
     public static ItemBlock itemBlockPolonium;
-    public static ItemBlock itemBlockPrometheum;
+    public static ItemBlock itemBlockPromethium;
     public static ItemBlock itemBlockRhenium;
     public static ItemBlock itemBlockRhodium;
     public static ItemBlock itemBlockRubracium;
@@ -418,7 +418,7 @@ public class InitBlocks
     public static Item itemIngotPlatinum;
     public static Item itemIngotPlutonium;
     public static Item itemIngotPolonium;
-    public static Item itemIngotPrometheum;
+    public static Item itemIngotPromethium;
     public static Item itemIngotRhenium;
     public static Item itemIngotRhodium;
     public static Item itemIngotRubracium;
@@ -489,7 +489,7 @@ public class InitBlocks
     public static Item itemDustPlatinum;
     public static Item itemDustPlutonium;
     public static Item itemDustPolonium;
-    public static Item itemDustPrometheum;
+    public static Item itemDustPromethium;
     public static Item itemDustRhenium;
     public static Item itemDustRhodium;
     public static Item itemDustRubracium;
@@ -560,7 +560,7 @@ public class InitBlocks
     public static Item itemClumpPlatinum;
     public static Item itemClumpPlutonium;
     public static Item itemClumpPolonium;
-    public static Item itemClumpPrometheum;
+    public static Item itemClumpPromethium;
     public static Item itemClumpRhenium;
     public static Item itemClumpRhodium;
     public static Item itemClumpRubracium;
@@ -631,7 +631,7 @@ public class InitBlocks
     public static Item itemShardPlatinum;
     public static Item itemShardPlutonium;
     public static Item itemShardPolonium;
-    public static Item itemShardPrometheum;
+    public static Item itemShardPromethium;
     public static Item itemShardRhenium;
     public static Item itemShardRhodium;
     public static Item itemShardRubracium;
@@ -702,7 +702,7 @@ public class InitBlocks
     public static Item itemDirtyDustPlatinum;
     public static Item itemDirtyDustPlutonium;
     public static Item itemDirtyDustPolonium;
-    public static Item itemDirtyDustPrometheum;
+    public static Item itemDirtyDustPromethium;
     public static Item itemDirtyDustRhenium;
     public static Item itemDirtyDustRhodium;
     public static Item itemDirtyDustRubracium;
@@ -2372,40 +2372,40 @@ public class InitBlocks
             initOreDict(itemShardPolonium,"shardPolonium");
             initOreDict(itemDirtyDustPolonium,"dirtyDustPolonium");
         }
-        if(registerPrometheum)
+        if(registerPromethium)
         {
-            blockOrePrometheum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"prometheumOre");
-            itemBlockOrePrometheum = new ItemBlockExOre(blockOrePrometheum);
-            blockPrometheum = new BlockEXOre(Material.IRON,3.0f,5.0f,"prometheumBlock");
-            itemBlockPrometheum = new ItemBlockExOre(blockPrometheum);
-            itemIngotPrometheum = new ItemEXOre("prometheumIngot");
-            itemDustPrometheum = new ItemEXOre("prometheumDust");
-            itemClumpPrometheum = new ItemEXOre("prometheumClump");
-            itemShardPrometheum = new ItemEXOre("prometheumShard");
-            itemDirtyDustPrometheum = new ItemEXOre("prometheumDirtyDust");
-            createRegistry(blockOrePrometheum,itemBlockOrePrometheum,"prometheumOre");
-            createRegistry(blockPrometheum,itemBlockPrometheum,"prometheumBlock");
-            createRegistry(itemIngotPrometheum,"prometheumIngot");
-            createRegistry(itemDustPrometheum,"prometheumDust");
-            createRegistry(itemClumpPrometheum,"prometheumClump");
-            createRegistry(itemShardPrometheum,"prometheumShard");
-            createRegistry(itemDirtyDustPrometheum,"prometheumDirtyDust");
-            ForgeRegistries.BLOCKS.register(blockOrePrometheum);
-            ForgeRegistries.ITEMS.register(itemBlockOrePrometheum);
-            ForgeRegistries.BLOCKS.register(blockPrometheum);
-            ForgeRegistries.ITEMS.register(itemBlockPrometheum);
-            ForgeRegistries.ITEMS.register(itemIngotPrometheum);
-            ForgeRegistries.ITEMS.register(itemDustPrometheum);
-            ForgeRegistries.ITEMS.register(itemClumpPrometheum);
-            ForgeRegistries.ITEMS.register(itemShardPrometheum);
-            ForgeRegistries.ITEMS.register(itemDirtyDustPrometheum);
-            initOreDict(blockOrePrometheum,"orePrometheum");
-            initOreDict(blockPrometheum,"blockPrometheum");
-            initOreDict(itemIngotPrometheum,"ingotPrometheum");
-            initOreDict(itemDustPrometheum,"dustPrometheum");
-            initOreDict(itemClumpPrometheum,"clumpPrometheum");
-            initOreDict(itemShardPrometheum,"shardPrometheum");
-            initOreDict(itemDirtyDustPrometheum,"dirtyDustPrometheum");
+            blockOrePromethium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"promethiumOre");
+            itemBlockOrePromethium = new ItemBlockExOre(blockOrePromethium);
+            blockPromethium = new BlockEXOre(Material.IRON,3.0f,5.0f,"promethiumBlock");
+            itemBlockPromethium = new ItemBlockExOre(blockPromethium);
+            itemIngotPromethium = new ItemEXOre("promethiumIngot");
+            itemDustPromethium = new ItemEXOre("promethiumDust");
+            itemClumpPromethium = new ItemEXOre("promethiumClump");
+            itemShardPromethium = new ItemEXOre("promethiumShard");
+            itemDirtyDustPromethium = new ItemEXOre("promethiumDirtyDust");
+            createRegistry(blockOrePromethium,itemBlockOrePromethium,"promethiumOre");
+            createRegistry(blockPromethium,itemBlockPromethium,"promethiumBlock");
+            createRegistry(itemIngotPromethium,"promethiumIngot");
+            createRegistry(itemDustPromethium,"promethiumDust");
+            createRegistry(itemClumpPromethium,"promethiumClump");
+            createRegistry(itemShardPromethium,"promethiumShard");
+            createRegistry(itemDirtyDustPromethium,"promethiumDirtyDust");
+            ForgeRegistries.BLOCKS.register(blockOrePromethium);
+            ForgeRegistries.ITEMS.register(itemBlockOrePromethium);
+            ForgeRegistries.BLOCKS.register(blockPromethium);
+            ForgeRegistries.ITEMS.register(itemBlockPromethium);
+            ForgeRegistries.ITEMS.register(itemIngotPromethium);
+            ForgeRegistries.ITEMS.register(itemDustPromethium);
+            ForgeRegistries.ITEMS.register(itemClumpPromethium);
+            ForgeRegistries.ITEMS.register(itemShardPromethium);
+            ForgeRegistries.ITEMS.register(itemDirtyDustPromethium);
+            initOreDict(blockOrePromethium,"orePromethium");
+            initOreDict(blockPromethium,"blockPromethium");
+            initOreDict(itemIngotPromethium,"ingotPromethium");
+            initOreDict(itemDustPromethium,"dustPromethium");
+            initOreDict(itemClumpPromethium,"clumpPromethium");
+            initOreDict(itemShardPromethium,"shardPromethium");
+            initOreDict(itemDirtyDustPromethium,"dirtyDustPromethium");
         }
         if(registerRhenium)
         {

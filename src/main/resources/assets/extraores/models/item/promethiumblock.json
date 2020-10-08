@@ -1,5 +1,5 @@
 {
-    "parent": "extraores:block/prometheumore",
+    "parent": "extraores:block/promethiumblock",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

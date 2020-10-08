@@ -1,7 +1,7 @@
 {
     "parent":"builtin/generated",
     "textures":{
-        "layer0":"extraores:items/prometheumclump"
+        "layer0":"extraores:items/promethiumdirtydust"
     },
     "display":{
         "thirdperson":{

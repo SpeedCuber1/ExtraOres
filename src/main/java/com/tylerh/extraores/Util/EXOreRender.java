@@ -436,14 +436,14 @@ public class EXOreRender
             location = new ResourceLocation("extraores:poloniumBlock");
             Register(itemBlockPolonium,location.toString());
         }
-        if(InitBlocks.registerPrometheum)
+        if(InitBlocks.registerPromethium)
         {
-            Item itemBlockPrometheum = Item.getItemFromBlock(InitBlocks.blockOrePrometheum);
-            ResourceLocation location = new ResourceLocation("extraores:prometheumOre");
-            Register(itemBlockPrometheum,location.toString());
-            itemBlockPrometheum = Item.getItemFromBlock(InitBlocks.blockPrometheum);
-            location = new ResourceLocation("extraores:prometheumBlock");
-            Register(itemBlockPrometheum,location.toString());
+            Item itemBlockPromethium = Item.getItemFromBlock(InitBlocks.blockOrePromethium);
+            ResourceLocation location = new ResourceLocation("extraores:promethiumOre");
+            Register(itemBlockPromethium,location.toString());
+            itemBlockPromethium = Item.getItemFromBlock(InitBlocks.blockPromethium);
+            location = new ResourceLocation("extraores:promethiumBlock");
+            Register(itemBlockPromethium,location.toString());
         }
         if(InitBlocks.registerRhenium)
         {
@@ -1257,18 +1257,18 @@ public class EXOreRender
             location = new ResourceLocation("extraores:poloniumdirtydust");
             Register(InitBlocks.itemDirtyDustPolonium,location.toString());
         }
-        if(InitBlocks.registerPrometheum)
+        if(InitBlocks.registerPromethium)
         {
-            ResourceLocation location = new ResourceLocation("extraores:prometheumIngot");
-            Register(InitBlocks.itemIngotPrometheum,location.toString());
-            location = new ResourceLocation("extraores:prometheumDust");
-            Register(InitBlocks.itemDustPrometheum,location.toString());
-            location = new ResourceLocation("extraores:prometheumclump");
-            Register(InitBlocks.itemClumpPrometheum,location.toString());
-            location = new ResourceLocation("extraores:prometheumshard");
-            Register(InitBlocks.itemShardPrometheum,location.toString());
-            location = new ResourceLocation("extraores:prometheumdirtydust");
-            Register(InitBlocks.itemDirtyDustPrometheum,location.toString());
+            ResourceLocation location = new ResourceLocation("extraores:promethiumIngot");
+            Register(InitBlocks.itemIngotPromethium,location.toString());
+            location = new ResourceLocation("extraores:promethiumDust");
+            Register(InitBlocks.itemDustPromethium,location.toString());
+            location = new ResourceLocation("extraores:promethiumclump");
+            Register(InitBlocks.itemClumpPromethium,location.toString());
+            location = new ResourceLocation("extraores:promethiumshard");
+            Register(InitBlocks.itemShardPromethium,location.toString());
+            location = new ResourceLocation("extraores:promethiumdirtydust");
+            Register(InitBlocks.itemDirtyDustPromethium,location.toString());
         }
         if(InitBlocks.registerRhenium)
         {

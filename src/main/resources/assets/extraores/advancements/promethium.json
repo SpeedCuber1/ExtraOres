@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:oureclase",
+  "parent": "extraores:polonium",
   "display": {
     "icon": {
-      "item": "extraores:prometheumore"
+      "item": "extraores:promethiumore"
     },
     "title": {
       "translate": "Prometheus Would Be Pleased"
     },
     "description": {
-      "translate": "Mine Prometheum Ore"
+      "translate": "Mine Promethium Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "prometheum": {
+    "promethium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:prometheumore"
+            "item": "extraores:promethiumore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "prometheum"
+      "promethium"
     ]
   ]
 }

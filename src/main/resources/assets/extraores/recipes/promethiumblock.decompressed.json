@@ -2,13 +2,13 @@
   "group": "Extra Ores",
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "extraores:prometheumIngot",
+    "item": "extraores:promethiumIngot",
     "count": 9
   },
   "ingredients": [
     {
       "type": "forge:ore_dict",
-      "ore": "blockPrometheum"
+      "ore": "blockPromethium"
     }
   ]
 }

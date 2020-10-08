@@ -62,7 +62,7 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator platinumOre;
     private WorldGenerator plutoniumOre;
     private WorldGenerator poloniumOre;
-    private WorldGenerator prometheumOre;
+    private WorldGenerator promethiumOre;
     private WorldGenerator rheniumOre;
     private WorldGenerator rhodiumOre;
     private WorldGenerator rubraciumOre;
@@ -275,9 +275,9 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.poloniumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePolonium.getDefaultState(), 4);
         }
-        if(InitBlocks.registerPrometheum)
+        if(InitBlocks.registerPromethium)
         {
-            this.prometheumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePrometheum.getDefaultState(),4);
+            this.promethiumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePromethium.getDefaultState(),4);
         }
         if(InitBlocks.registerRhenium)
         {
@@ -537,9 +537,9 @@ public class EXOreWorldGen implements IWorldGenerator
             {
                 runGenerator(this.poloniumOre,world,random,chunkX,chunkZ,20,0,100);
             }
-            if(InitBlocks.registerPrometheum)
+            if(InitBlocks.registerPromethium)
             {
-                runGenerator(this.prometheumOre,world,random,chunkX,chunkZ,20,0,100);
+                runGenerator(this.promethiumOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerRhenium)
             {

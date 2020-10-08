@@ -99,7 +99,7 @@ public class ConfigHandler
         Property propPlatinum = config.get(ModInfo.GUI_CATEGORY, "Platinum", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPlutonium = config.get(ModInfo.GUI_CATEGORY,"Plutonium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPolonium = config.get(ModInfo.GUI_CATEGORY,"Polonium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
-        Property propPrometheum = config.get(ModInfo.GUI_CATEGORY,"Prometheum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propPromethium = config.get(ModInfo.GUI_CATEGORY,"Promethium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propRhenium = config.get(ModInfo.GUI_CATEGORY,"Rhenium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propRhodium = config.get(ModInfo.GUI_CATEGORY, "Rhodium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propRubracium = config.get(ModInfo.GUI_CATEGORY,"Rubracium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
@@ -171,7 +171,7 @@ public class ConfigHandler
         propOrder.add(propPlatinum.getName());
         propOrder.add(propPlutonium.getName());
         propOrder.add(propPolonium.getName());
-        propOrder.add(propPrometheum.getName());
+        propOrder.add(propPromethium.getName());
         propOrder.add(propRhodium.getName());
         propOrder.add(propRubracium.getName());
         propOrder.add(propRuthenium.getName());
@@ -244,7 +244,7 @@ public class ConfigHandler
             InitBlocks.registerPlatinum = propPlatinum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPlutonium = propPlutonium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPolonium = propPolonium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
-            InitBlocks.registerPrometheum = propPrometheum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerPromethium = propPromethium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerRhodium = propRhodium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerRubracium = propRubracium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerRuthenium = propRuthenium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -314,7 +314,7 @@ public class ConfigHandler
         propPlatinum.set(InitBlocks.registerPlatinum);
         propPlutonium.set(InitBlocks.registerPlutonium);
         propPolonium.set(InitBlocks.registerPolonium);
-        propPrometheum.set(InitBlocks.registerPrometheum);
+        propPromethium.set(InitBlocks.registerPromethium);
         propRhodium.set(InitBlocks.registerRhodium);
         propRubracium.set(InitBlocks.registerRubracium);
         propRuthenium.set(InitBlocks.registerRuthenium);

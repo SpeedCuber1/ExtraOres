@@ -2,7 +2,7 @@
   "group": "Extra Ores",
   "type": "forge:ore_shaped",
   "result": {
-    "item": "extraores:prometheumBlock"
+    "item": "extraores:promethiumBlock"
   },
   "pattern": [
     "ppp",
@@ -12,7 +12,7 @@
   "key": {
     "p": {
       "type": "forge:ore_dict",
-      "ore": "ingotPrometheum"
+      "ore": "ingotPromethium"
     }
   }
 }

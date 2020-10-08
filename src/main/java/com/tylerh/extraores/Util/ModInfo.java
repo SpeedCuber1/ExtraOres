@@ -13,6 +13,6 @@ public class ModInfo
     public static final String GUI_FACTORY = "com.tylerh.extraores.Gui.EXOreGUIFactory";
     public static final String GUI_CATEGORY = "ores";
     public static final boolean GUI_DEFAULT_VALUE = true;
-    public static final String[] blockNames = {"Aluminum","Americium", "Bismuth", "Cadmium", "Chromium", "Cobalt", "Copper", "Gallium", "Indium","Iridium", "Lead", "Manganese", "Molybdenum", "Neodymium","Neptunium", "Nickel", "Niobium","Osmium", "Palladium","Platinum","Plutonium","Polonium","Rhenium", "Rhodium", "Ruthenium", "Silver","Tantalum", "Technetium", "Thallium", "Tin", "Titanium", "Tungsten","Uranium", "Vanadium", "Zinc", "Zirconium"};
-    public static final String[] symbols = {"Al","Am", "Bi", "Cd", "Cr", "Co", "Cu", "Ga", "In","Ir", "Pb", "Mn", "Mo", "Nd","Np", "Ni", "Nb","Os", "Pd", "Pt","Pu","Po","Re", "Rh", "Ru", "Ag","Ta", "Tc", "Tl", "Sn", "Ti", "W","U", "V", "Zn", "Zr"};
+    public static final String[] blockNames = {"Aluminum","Americium", "Bismuth", "Cadmium", "Chromium", "Cobalt", "Copper", "Gallium", "Indium","Iridium", "Lead", "Manganese", "Molybdenum", "Neodymium","Neptunium", "Nickel", "Niobium","Osmium", "Palladium","Platinum","Plutonium","Polonium","Promethium","Rhenium", "Rhodium", "Ruthenium", "Silver","Tantalum", "Technetium", "Thallium", "Tin", "Titanium", "Tungsten","Uranium", "Vanadium", "Zinc", "Zirconium"};
+    public static final String[] symbols = {"Al","Am", "Bi", "Cd", "Cr", "Co", "Cu", "Ga", "In","Ir", "Pb", "Mn", "Mo", "Nd","Np", "Ni", "Nb","Os", "Pd", "Pt","Pu","Po","Pm","Re", "Rh", "Ru", "Ag","Ta", "Tc", "Tl", "Sn", "Ti", "W","U", "V", "Zn", "Zr"};
 }
