@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:osmium",
+  "parent": "extraores:neodymium",
   "display": {
     "icon": {
-      "item": "extraores:palladiumore"
+      "item": "extraores:neptuniumore"
     },
     "title": {
-      "translate": "Now Showing at the Palladium"
+      "translate": "A Gift From Neptune Himself"
     },
     "description": {
-      "translate": "Mine Palladium Ore"
+      "translate": "Mine Neptunium Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "palladium": {
+    "neptunium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:palladiumore"
+            "item": "extraores:neptuniumore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "palladium"
+      "neptunium"
     ]
   ]
 }

@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:osmium",
+  "parent": "extraores:plutonium",
   "display": {
     "icon": {
-      "item": "extraores:palladiumore"
+      "item": "extraores:poloniumore"
     },
     "title": {
-      "translate": "Now Showing at the Palladium"
+      "translate": "Where's Marconium When You Need It"
     },
     "description": {
-      "translate": "Mine Palladium Ore"
+      "translate": "Mine Polonium Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "palladium": {
+    "polonium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:palladiumore"
+            "item": "extraores:poloniumore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "palladium"
+      "polonium"
     ]
   ]
 }

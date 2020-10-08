@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:osmium",
+  "parent": "extraores:indium",
   "display": {
     "icon": {
-      "item": "extraores:palladiumore"
+      "item": "extraores:iridiumore"
     },
     "title": {
-      "translate": "Now Showing at the Palladium"
+      "translate": "This Stuff Lasts Forever"
     },
     "description": {
-      "translate": "Mine Palladium Ore"
+      "translate": "Mine Iridium Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "palladium": {
+    "iridium": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:palladiumore"
+            "item": "extraores:iridiumore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "palladium"
+      "iridium"
     ]
   ]
 }

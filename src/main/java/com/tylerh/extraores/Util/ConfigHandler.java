@@ -55,6 +55,7 @@ public class ConfigHandler
         Property propAdamantine = config.get(ModInfo.GUI_CATEGORY,"Adamantine",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propAldourite = config.get(ModInfo.GUI_CATEGORY,"Aldourite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propAluminum = config.get(ModInfo.GUI_CATEGORY, "Aluminum", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propAmericium = config.get(ModInfo.GUI_CATEGORY,"Americium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propAmordrine = config.get(ModInfo.GUI_CATEGORY, "Amordrine",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propAngmallen = config.get(ModInfo.GUI_CATEGORY,"Angmallen",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propAstralSilver = config.get(ModInfo.GUI_CATEGORY,"Astral_Silver",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
@@ -78,6 +79,7 @@ public class ConfigHandler
         Property propIndium = config.get(ModInfo.GUI_CATEGORY, "Indium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propInfuscolium = config.get(ModInfo.GUI_CATEGORY,"Infuscolium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propInolashite = config.get(ModInfo.GUI_CATEGORY,"Inolashite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propIridium = config.get(ModInfo.GUI_CATEGORY,"Iridium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propKalendrite = config.get(ModInfo.GUI_CATEGORY,"Kalendrite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propLead = config.get(ModInfo.GUI_CATEGORY, "Lead", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propLemurite = config.get(ModInfo.GUI_CATEGORY,"Lemurite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
@@ -87,20 +89,25 @@ public class ConfigHandler
         Property propMithril = config.get(ModInfo.GUI_CATEGORY,"Mithril",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propMolybdenum = config.get(ModInfo.GUI_CATEGORY, "Molybdenum", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propNeodymium = config.get(ModInfo.GUI_CATEGORY, "Neodymium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propNeptunium = config.get(ModInfo.GUI_CATEGORY,"Neptunium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propNickel = config.get(ModInfo.GUI_CATEGORY, "Nickel", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propNiobium = config.get(ModInfo.GUI_CATEGORY, "Niobium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propOrichalcum = config.get(ModInfo.GUI_CATEGORY,"Orichalcum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propOsmium = config.get(ModInfo.GUI_CATEGORY,"Osmium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propOureclase = config.get(ModInfo.GUI_CATEGORY,"Oureclase",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPalladium = config.get(ModInfo.GUI_CATEGORY, "Palladium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPlatinum = config.get(ModInfo.GUI_CATEGORY, "Platinum", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPlutonium = config.get(ModInfo.GUI_CATEGORY,"Plutonium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propPolonium = config.get(ModInfo.GUI_CATEGORY,"Polonium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propPrometheum = config.get(ModInfo.GUI_CATEGORY,"Prometheum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propRhenium = config.get(ModInfo.GUI_CATEGORY,"Rhenium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propRhodium = config.get(ModInfo.GUI_CATEGORY, "Rhodium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propRubracium = config.get(ModInfo.GUI_CATEGORY,"Rubracium",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propRuthenium = config.get(ModInfo.GUI_CATEGORY, "Ruthenium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propSanguinite = config.get(ModInfo.GUI_CATEGORY,"Sanguinite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propShadowIron = config.get(ModInfo.GUI_CATEGORY,"Shadow_Iron",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propSilver = config.get(ModInfo.GUI_CATEGORY, "Silver", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propTantalum = config.get(ModInfo.GUI_CATEGORY,"Tantalum",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propTartarite = config.get(ModInfo.GUI_CATEGORY,"Tartarite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propTechnetium = config.get(ModInfo.GUI_CATEGORY, "Technetium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propThallium = config.get(ModInfo.GUI_CATEGORY, "Thallium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
@@ -112,6 +119,7 @@ public class ConfigHandler
         Property propVanadium = config.get(ModInfo.GUI_CATEGORY, "Vanadium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propVulcanite = config. get(ModInfo.GUI_CATEGORY,"Vulcanite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propVyroxeres = config.get(ModInfo.GUI_CATEGORY,"Vyroxeres",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
+        Property propYellorite = config.get(ModInfo.GUI_CATEGORY,"Yellorite",ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propZinc = config.get(ModInfo.GUI_CATEGORY, "Zinc", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
         Property propZirconium = config.get(ModInfo.GUI_CATEGORY, "Zirconium", ModInfo.GUI_DEFAULT_VALUE).setRequiresMcRestart(ModInfo.GUI_DEFAULT_VALUE);
 
@@ -119,6 +127,7 @@ public class ConfigHandler
         propOrder.add(propAdamantine.getName());
         propOrder.add(propAldourite.getName());
         propOrder.add(propAluminum.getName());
+        propOrder.add(propAmericium.getName());
         propOrder.add(propAmordrine.getName());
         propOrder.add(propAngmallen.getName());
         propOrder.add(propAstralSilver.getName());
@@ -142,6 +151,7 @@ public class ConfigHandler
         propOrder.add(propIndium.getName());
         propOrder.add(propInfuscolium.getName());
         propOrder.add(propInolashite.getName());
+        propOrder.add(propIridium.getName());
         propOrder.add(propKalendrite.getName());
         propOrder.add(propLead.getName());
         propOrder.add(propLemurite.getName());
@@ -151,13 +161,16 @@ public class ConfigHandler
         propOrder.add(propMithril.getName());
         propOrder.add(propMolybdenum.getName());
         propOrder.add(propNeodymium.getName());
+        propOrder.add(propNeptunium.getName());
         propOrder.add(propNickel.getName());
         propOrder.add(propNiobium.getName());
         propOrder.add(propOrichalcum.getName());
+        propOrder.add(propOsmium.getName());
         propOrder.add(propOureclase.getName());
         propOrder.add(propPalladium.getName());
         propOrder.add(propPlatinum.getName());
         propOrder.add(propPlutonium.getName());
+        propOrder.add(propPolonium.getName());
         propOrder.add(propPrometheum.getName());
         propOrder.add(propRhodium.getName());
         propOrder.add(propRubracium.getName());
@@ -165,6 +178,7 @@ public class ConfigHandler
         propOrder.add(propSanguinite.getName());
         propOrder.add(propShadowIron.getName());
         propOrder.add(propSilver.getName());
+        propOrder.add(propTantalum.getName());
         propOrder.add(propTartarite.getName());
         propOrder.add(propTechnetium.getName());
         propOrder.add(propThallium.getName());
@@ -176,6 +190,7 @@ public class ConfigHandler
         propOrder.add(propVanadium.getName());
         propOrder.add(propVulcanite.getName());
         propOrder.add(propVyroxeres.getName());
+        propOrder.add(propYellorite.getName());
         propOrder.add(propZinc.getName());
         propOrder.add(propZirconium.getName());
 
@@ -185,6 +200,7 @@ public class ConfigHandler
             InitBlocks.registerAdamantine = propAdamantine.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerAldourite = propAldourite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerAluminum = propAluminum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerAmericium = propAmericium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerAmordrine = propAmordrine.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerAngmallen = propAngmallen.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerAstralSilver = propAstralSilver.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -208,6 +224,7 @@ public class ConfigHandler
             InitBlocks.registerIndium = propIndium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerInfuscolium = propInfuscolium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerInolashite = propInolashite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerIridium = propIridium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerKalendrite = propKalendrite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerLead = propLead.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerLemurite = propLemurite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -217,13 +234,16 @@ public class ConfigHandler
             InitBlocks.registerMithril = propMithril.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerMolybdenum = propMolybdenum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerNeodymium = propNeodymium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerNeptunium = propNeptunium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerNickel = propNickel.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerNiobium = propNiobium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerOrichalcum = propOrichalcum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerOsmium = propOsmium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerOureclase = propOureclase.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPalladium = propPalladium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPlatinum = propPlatinum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPlutonium = propPlutonium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerPolonium = propPolonium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerPrometheum = propPrometheum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerRhodium = propRhodium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerRubracium = propRubracium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -231,6 +251,7 @@ public class ConfigHandler
             InitBlocks.registerSanguinite = propSanguinite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerShadowIron = propShadowIron.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerSilver = propSilver.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerTantalum = propTantalum.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTartarite = propTartarite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerTechnetium = propTechnetium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerThallium = propThallium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
@@ -242,12 +263,14 @@ public class ConfigHandler
             InitBlocks.registerVanadium = propVanadium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerVulcanite = propVulcanite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerVyroxeres = propVyroxeres.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
+            InitBlocks.registerYellorite = propYellorite.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerZinc = propZinc.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
             InitBlocks.registerZirconium = propZirconium.getBoolean(ModInfo.GUI_DEFAULT_VALUE);
         }
         propAdamantine.set(InitBlocks.registerAdamantine);
         propAldourite.set(InitBlocks.registerAldourite);
         propAluminum.set(InitBlocks.registerAluminum);
+        propAmericium.set(InitBlocks.registerAmericium);
         propAmordrine.set(InitBlocks.registerAmordrine);
         propAngmallen.set(InitBlocks.registerAngmallen);
         propAstralSilver.set(InitBlocks.registerAstralSilver);
@@ -271,6 +294,7 @@ public class ConfigHandler
         propIndium.set(InitBlocks.registerIndium);
         propInfuscolium.set(InitBlocks.registerInfuscolium);
         propInolashite.set(InitBlocks.registerInolashite);
+        propIridium.set(InitBlocks.registerIridium);
         propKalendrite.set(InitBlocks.registerKalendrite);
         propLead.set(InitBlocks.registerLead);
         propLemurite.set(InitBlocks.registerLemurite);
@@ -280,13 +304,16 @@ public class ConfigHandler
         propMithril.set(InitBlocks.registerMithril);
         propMolybdenum.set(InitBlocks.registerMolybdenum);
         propNeodymium.set(InitBlocks.registerNeodymium);
+        propNeptunium.set(InitBlocks.registerNeptunium);
         propNickel.set(InitBlocks.registerNickel);
         propNiobium.set(InitBlocks.registerNiobium);
         propOrichalcum.set(InitBlocks.registerOrichalcum);
+        propOsmium.set(InitBlocks.registerOsmium);
         propOureclase.set(InitBlocks.registerOureclase);
         propPalladium.set(InitBlocks.registerPalladium);
         propPlatinum.set(InitBlocks.registerPlatinum);
         propPlutonium.set(InitBlocks.registerPlutonium);
+        propPolonium.set(InitBlocks.registerPolonium);
         propPrometheum.set(InitBlocks.registerPrometheum);
         propRhodium.set(InitBlocks.registerRhodium);
         propRubracium.set(InitBlocks.registerRubracium);
@@ -294,6 +321,7 @@ public class ConfigHandler
         propSanguinite.set(InitBlocks.registerSanguinite);
         propShadowIron.set(InitBlocks.registerShadowIron);
         propSilver.set(InitBlocks.registerSilver);
+        propTantalum.set(InitBlocks.registerTantalum);
         propTartarite.set(InitBlocks.registerTartarite);
         propTechnetium.set(InitBlocks.registerTechnetium);
         propThallium.set(InitBlocks.registerThallium);
@@ -305,6 +333,7 @@ public class ConfigHandler
         propVanadium.set(InitBlocks.registerVanadium);
         propVulcanite.set(InitBlocks.registerVulcanite);
         propVyroxeres.set(InitBlocks.registerVyroxeres);
+        propYellorite.set(InitBlocks.registerYellorite);
         propZinc.set(InitBlocks.registerZinc);
         propZirconium.set(InitBlocks.registerZirconium);
 

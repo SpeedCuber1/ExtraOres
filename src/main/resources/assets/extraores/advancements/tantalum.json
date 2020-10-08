@@ -1,14 +1,14 @@
 {
-  "parent": "extraores:osmium",
+  "parent": "extraores:silver",
   "display": {
     "icon": {
-      "item": "extraores:palladiumore"
+      "item": "extraores:tantalumore"
     },
     "title": {
-      "translate": "Now Showing at the Palladium"
+      "translate": "Take a Moment and Reflect on Your Life"
     },
     "description": {
-      "translate": "Mine Palladium Ore"
+      "translate": "Mine Tantalum Ore"
     },
     "frame": "task",
     "show_toast": true,
@@ -17,12 +17,12 @@
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
   },
   "criteria": {
-    "palladium": {
+    "tantalum": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "extraores:palladiumore"
+            "item": "extraores:tantalumore"
           }
         ]
       }
@@ -30,7 +30,7 @@
   },
   "requirements": [
     [
-      "palladium"
+      "tantalum"
     ]
   ]
 }

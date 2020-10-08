@@ -18,6 +18,7 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator adamantineOre;
     private WorldGenerator aldouriteOre;
     private WorldGenerator aluminumOre;
+    private WorldGenerator americiumOre;
     private WorldGenerator amordrineOre;
     private WorldGenerator angmallenOre;
     private WorldGenerator astralSilverOre;
@@ -41,6 +42,7 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator indiumOre;
     private WorldGenerator infuscoliumOre;
     private WorldGenerator inolashiteOre;
+    private WorldGenerator iridiumOre;
     private WorldGenerator kalendriteOre;
     private WorldGenerator leadOre;
     private WorldGenerator lemuriteOre;
@@ -50,20 +52,25 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator mithrilOre;
     private WorldGenerator molybdenumOre;
     private WorldGenerator neodymiumOre;
+    private WorldGenerator neptuniumOre;
     private WorldGenerator nickelOre;
     private WorldGenerator niobiumOre;
     private WorldGenerator orichalcumOre;
+    private WorldGenerator osmiumOre;
     private WorldGenerator oureclaseOre;
     private WorldGenerator palladiumOre;
     private WorldGenerator platinumOre;
     private WorldGenerator plutoniumOre;
+    private WorldGenerator poloniumOre;
     private WorldGenerator prometheumOre;
+    private WorldGenerator rheniumOre;
     private WorldGenerator rhodiumOre;
     private WorldGenerator rubraciumOre;
     private WorldGenerator rutheniumOre;
     private WorldGenerator sanguiniteOre;
     private WorldGenerator shadowIronOre;
     private WorldGenerator silverOre;
+    private WorldGenerator tantalumOre;
     private WorldGenerator tartariteOre;
     private WorldGenerator technetiumOre;
     private WorldGenerator thalliumOre;
@@ -75,6 +82,7 @@ public class EXOreWorldGen implements IWorldGenerator
     private WorldGenerator vanadiumOre;
     private WorldGenerator vulcaniteOre;
     private WorldGenerator vyroxeresOre;
+    private WorldGenerator yelloriteOre;
     private WorldGenerator zincOre;
     private WorldGenerator zirconiumOre;
     public EXOreWorldGen()
@@ -90,6 +98,10 @@ public class EXOreWorldGen implements IWorldGenerator
         if(InitBlocks.registerAluminum)
         {
             this.aluminumOre = new EXOreWorldGenMinable(InitBlocks.blockOreAluminum.getDefaultState(), 4);
+        }
+        if(InitBlocks.registerAmericium)
+        {
+            this.americiumOre = new EXOreWorldGenMinable(InitBlocks.blockOreAmericium.getDefaultState(),4);
         }
         if(InitBlocks.registerAmordrine)
         {
@@ -183,6 +195,10 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.inolashiteOre = new EXOreWorldGenMinable(InitBlocks.blockOreInolashite.getDefaultState(),4);
         }
+        if(InitBlocks.registerIridium)
+        {
+            this.iridiumOre = new EXOreWorldGenMinable(InitBlocks.blockOreIridium.getDefaultState(), 4);
+        }
         if(InitBlocks.registerKalendrite)
         {
             this.kalendriteOre = new EXOreWorldGenMinable(InitBlocks.blockOreKalendrite.getDefaultState(),4,new NetherPredicate());
@@ -219,6 +235,10 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.neodymiumOre = new EXOreWorldGenMinable(InitBlocks.blockOreNeodymium.getDefaultState(), 4);
         }
+        if(InitBlocks.registerNeptunium)
+        {
+            this.neptuniumOre = new EXOreWorldGenMinable(InitBlocks.blockOreNeptunium.getDefaultState(), 4);
+        }
         if(InitBlocks.registerNickel)
         {
             this.nickelOre = new EXOreWorldGenMinable(InitBlocks.blockOreNickel.getDefaultState(), 4);
@@ -230,6 +250,10 @@ public class EXOreWorldGen implements IWorldGenerator
         if(InitBlocks.registerOrichalcum)
         {
             this.orichalcumOre = new EXOreWorldGenMinable(InitBlocks.blockOreOrichalcum.getDefaultState(),4);
+        }
+        if(InitBlocks.registerOsmium)
+        {
+            this.osmiumOre = new EXOreWorldGenMinable(InitBlocks.blockOreOsmium.getDefaultState(), 4);
         }
         if(InitBlocks.registerOureclase)
         {
@@ -247,9 +271,17 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.plutoniumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePlutonium.getDefaultState(),4);
         }
+        if(InitBlocks.registerPolonium)
+        {
+            this.poloniumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePolonium.getDefaultState(), 4);
+        }
         if(InitBlocks.registerPrometheum)
         {
             this.prometheumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePrometheum.getDefaultState(),4);
+        }
+        if(InitBlocks.registerRhenium)
+        {
+            this.rheniumOre = new EXOreWorldGenMinable(InitBlocks.blockOreRhenium.getDefaultState(), 4);
         }
         if(InitBlocks.registerRhodium)
         {
@@ -274,6 +306,10 @@ public class EXOreWorldGen implements IWorldGenerator
         if(InitBlocks.registerSilver)
         {
             this.silverOre = new EXOreWorldGenMinable(InitBlocks.blockOreSilver.getDefaultState(), 4);
+        }
+        if(InitBlocks.registerTantalum)
+        {
+            this.tantalumOre = new EXOreWorldGenMinable(InitBlocks.blockOreTantalum.getDefaultState(), 4);
         }
         if(InitBlocks.registerTartarite)
         {
@@ -319,6 +355,10 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.vyroxeresOre = new EXOreWorldGenMinable(InitBlocks.blockOreVyroxeres.getDefaultState(),4,new NetherPredicate());
         }
+        if(InitBlocks.registerYellorite)
+        {
+            this.yelloriteOre = new EXOreWorldGenMinable(InitBlocks.blockOreYellorite.getDefaultState(), 4);
+        }
         if(InitBlocks.registerZinc)
         {
             this.zincOre = new EXOreWorldGenMinable(InitBlocks.blockOreZinc.getDefaultState(), 4);
@@ -340,6 +380,10 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerAluminum)
             {
                 runGenerator(this.aluminumOre, world, random, chunkX, chunkZ, 20, 0, 100);
+            }
+            if(InitBlocks.registerAmericium)
+            {
+                runGenerator(this.americiumOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerAmordrine)
             {
@@ -425,6 +469,10 @@ public class EXOreWorldGen implements IWorldGenerator
             {
                 runGenerator(this.inolashiteOre,world,random,chunkX,chunkZ,20,0,100);
             }
+            if(InitBlocks.registerIridium)
+            {
+                runGenerator(this.iridiumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
             if(InitBlocks.registerLead)
             {
                 runGenerator(this.leadOre, world, random, chunkX, chunkZ, 20, 0, 100);
@@ -449,6 +497,10 @@ public class EXOreWorldGen implements IWorldGenerator
             {
                 runGenerator(this.neodymiumOre, world, random, chunkX, chunkZ, 20, 0, 100);
             }
+            if(InitBlocks.registerNeptunium)
+            {
+                runGenerator(this.neptuniumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
             if(InitBlocks.registerNickel)
             {
                 runGenerator(this.nickelOre, world, random, chunkX, chunkZ, 20, 0, 100);
@@ -460,6 +512,10 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerOrichalcum)
             {
                 runGenerator(this.orichalcumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerOsmium)
+            {
+                runGenerator(this.osmiumOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerOureclase)
             {
@@ -477,9 +533,17 @@ public class EXOreWorldGen implements IWorldGenerator
             {
                 runGenerator(this.plutoniumOre,world,random,chunkX,chunkZ,20,0,100);
             }
+            if(InitBlocks.registerPolonium)
+            {
+                runGenerator(this.poloniumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
             if(InitBlocks.registerPrometheum)
             {
                 runGenerator(this.prometheumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerRhenium)
+            {
+                runGenerator(this.rheniumOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerRhodium)
             {
@@ -496,6 +560,10 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerSilver)
             {
                 runGenerator(this.silverOre, world, random, chunkX, chunkZ, 20, 0, 100);
+            }
+            if(InitBlocks.registerTantalum)
+            {
+                runGenerator(this.tantalumOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerTartarite)
             {
@@ -532,6 +600,10 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerVanadium)
             {
                 runGenerator(this.vanadiumOre, world, random, chunkX, chunkZ, 20, 0, 100);
+            }
+            if(InitBlocks.registerYellorite)
+            {
+                runGenerator(this.yelloriteOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerZinc)
             {
