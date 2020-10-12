@@ -3100,12 +3100,19 @@ public class InitBlocks
             ForgeRegistries.ITEMS.register(itemShardYellorite);
             ForgeRegistries.ITEMS.register(itemDirtyDustYellorite);
             initOreDict(blockOreYellorite,"oreYellorite");
+            initOreDict(blockOreYellorite,"oreYellorium");
             initOreDict(blockYellorite,"blockYellorite");
+            initOreDict(blockYellorite,"blockYellorium");
             initOreDict(itemIngotYellorite,"ingotYellorite");
+            initOreDict(itemIngotYellorite,"ingotYellorium");
             initOreDict(itemDustYellorite,"dustYellorite");
+            initOreDict(itemDustYellorite,"dustYellorium");
             initOreDict(itemClumpYellorite,"clumpYellorite");
+            initOreDict(itemClumpYellorite,"clumpYellorium");
             initOreDict(itemShardYellorite,"shardYellorite");
+            initOreDict(itemShardYellorite,"shardYellorium");
             initOreDict(itemDirtyDustYellorite,"dirtyDustYellorite");
+            initOreDict(itemDirtyDustYellorite,"dirtyDustYellorium");
         }
         if(registerZinc)
         {
