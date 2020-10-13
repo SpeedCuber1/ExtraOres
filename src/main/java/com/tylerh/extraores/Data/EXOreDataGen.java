@@ -20,7 +20,7 @@ public class EXOreDataGen
         generator.addProvider(new LootTables(generator));
         generator.addProvider(new Advancements(generator));
         generator.addProvider(new ExOreRecipe(generator));
-        generator.addProvider(new ExOreBlockTag(generator,event.getExistingFileHelper()));
+        generator.addProvider(new ExOreBlockTag(generator, event.getExistingFileHelper()));
         generator.addProvider(new ExOreItemTag(generator,new ExOreBlockTag(generator, event.getExistingFileHelper()),event.getExistingFileHelper()));
     }
 }

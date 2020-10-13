@@ -14,7 +14,6 @@ import net.minecraft.loot.functions.SetContents;
 import net.minecraft.util.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.HashMap;

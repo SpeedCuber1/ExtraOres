@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/yellorite"
+    }
+  },
+  "output": {
+    "item": "extraores:yelloritedust",
+    "count": "2"
+  }
+}

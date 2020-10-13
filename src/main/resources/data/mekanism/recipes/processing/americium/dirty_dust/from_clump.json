@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "item": "extraores:americiumclump"
+    }
+  },
+  "output": {
+    "item": "extraores:americiumdirtydust"
+  }
+}

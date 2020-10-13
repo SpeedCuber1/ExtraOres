@@ -2,11 +2,11 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "forge:ores/platinum"
+      "tag": "forge:ores/plutonium"
     }
   },
   "output": {
-    "item": "extraores:platinumdust",
+    "item": "extraores:plutoniumdust",
     "count": "2"
   }
 }

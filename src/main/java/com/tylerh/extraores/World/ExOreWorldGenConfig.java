@@ -10,6 +10,6 @@ public class ExOreWorldGenConfig
     {
         builder.comment("Ore Gen Config");
         veinSize = builder.comment("Size of Ore Veins").defineInRange("Vein Size",10,1,20);
-        spawnRate = builder.comment("Ore Spawn Rate").defineInRange("Spawn Rate",500,100,1000);
+        spawnRate = builder.comment("Ore Spawn Rate").defineInRange("Spawn Rate",30,10,100);
     }
 }
