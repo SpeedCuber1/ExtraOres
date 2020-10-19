@@ -108,6 +108,13 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerAgate)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":agateBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if (InitBlocks.registerAldourite)
         {
             //Smelting
@@ -299,6 +306,20 @@ public class Recipes
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustAmericium).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
+        }
+        if(InitBlocks.registerAmethyst)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":amethystBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
+        if(InitBlocks.registerAmetrine)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":ametrineBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
         }
         if (InitBlocks.registerAmordrine)
         {
@@ -1004,6 +1025,20 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerChrysocolla)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":chrysocollaBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
+        if(InitBlocks.registerCitrine)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":citrineBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if (InitBlocks.registerCobalt)
         {
             //Smelting
@@ -1387,6 +1422,13 @@ public class Recipes
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustGallium).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
+        }
+        if(InitBlocks.registerGarnet)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":garnetBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
         }
         if (InitBlocks.registerHaderoth)
         {
@@ -1836,6 +1878,20 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerJade)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":jadeBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
+        if(InitBlocks.registerJasper)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":jasperBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if (InitBlocks.registerKalendrite)
         {
             //Smelting
@@ -2027,6 +2083,13 @@ public class Recipes
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustLemurite).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
+        }
+        if(InitBlocks.registerMalachite)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":malachiteBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
         }
         if (InitBlocks.registerManganese)
         {
@@ -2604,6 +2667,13 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerOnyx)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":onyxBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if (InitBlocks.registerOrichalcum)
         {
             //Smelting
@@ -2859,6 +2929,20 @@ public class Recipes
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustPalladium).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
+        }
+        if(InitBlocks.registerPeridot)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":peridotBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
+        if(InitBlocks.registerPhoenixite)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":phoenixiteBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
         }
         if (InitBlocks.registerPlatinum)
         {
@@ -3308,6 +3392,13 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerRuby)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":rubyBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if (InitBlocks.registerRuthenium)
         {
             //Smelting
@@ -3436,6 +3527,13 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerSapphire)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":sapphireBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if (InitBlocks.registerShadowIron)
         {
             //Smelting
@@ -3563,6 +3661,20 @@ public class Recipes
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustSilver).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
+        }
+        if(InitBlocks.registerSpinel)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":spinelBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
+        if(InitBlocks.registerSugilite)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":sugiliteBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
         }
         if(InitBlocks.registerTantalum)
         {
@@ -3947,6 +4059,20 @@ public class Recipes
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustTitanium).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
+        }
+        if(InitBlocks.registerTopaz)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":topazBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
+        if(InitBlocks.registerTourmaline)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":tourmalineBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
         }
         if (InitBlocks.registerTungsten)
         {
