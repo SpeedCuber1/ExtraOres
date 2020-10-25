@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastcelenegildust"
+    ]
+  },
+  "criteria": {
+    "blastcelenegildust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:celenegilingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastcelenegildust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastcelenegildust",
+      "has_the_recipe"
+    ]
+  ]
+}

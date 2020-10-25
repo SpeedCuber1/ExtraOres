@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:citrineblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:citrine",
+    "count": 9
+  }
+}

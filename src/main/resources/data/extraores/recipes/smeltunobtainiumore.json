@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:unobtainiumore"
+  },
+  "result": "extraores:unobtainiumingot",
+  "experience": 0.75,
+  "cookingtime": 40
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:vyroxeresore"
+  },
+  "result": "extraores:vyroxeresingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

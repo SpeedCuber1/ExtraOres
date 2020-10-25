@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:atlarusore"
+  },
+  "result": "extraores:atlarusingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltneptuniumore"
+    ]
+  },
+  "criteria": {
+    "smeltneptuniumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:neptuniumingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltneptuniumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltneptuniumore",
+      "has_the_recipe"
+    ]
+  ]
+}

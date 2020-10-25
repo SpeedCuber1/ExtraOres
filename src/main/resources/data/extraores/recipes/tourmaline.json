@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:tourmalineblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:tourmaline",
+    "count": 9
+  }
+}

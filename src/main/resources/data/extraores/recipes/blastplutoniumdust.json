@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:plutoniumdust"
+  },
+  "result": "extraores:plutoniumingot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

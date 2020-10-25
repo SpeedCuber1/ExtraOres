@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cutplatinumore"
+    ]
+  },
+  "criteria": {
+    "cutplatinumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:platinumdust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cutplatinumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cutplatinumore",
+      "has_the_recipe"
+    ]
+  ]
+}

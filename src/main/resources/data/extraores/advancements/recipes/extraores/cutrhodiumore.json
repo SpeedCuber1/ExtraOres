@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cutrhodiumore"
+    ]
+  },
+  "criteria": {
+    "cutrhodiumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:rhodiumdust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cutrhodiumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cutrhodiumore",
+      "has_the_recipe"
+    ]
+  ]
+}

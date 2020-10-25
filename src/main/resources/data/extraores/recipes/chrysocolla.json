@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:chrysocollablock"
+    }
+  ],
+  "result": {
+    "item": "extraores:chrysocolla",
+    "count": 9
+  }
+}

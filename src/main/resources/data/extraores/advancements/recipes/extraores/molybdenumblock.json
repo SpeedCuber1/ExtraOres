@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:molybdenumblock"
+    ]
+  },
+  "criteria": {
+    "molybdenumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:molybdenumblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:molybdenumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "molybdenumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

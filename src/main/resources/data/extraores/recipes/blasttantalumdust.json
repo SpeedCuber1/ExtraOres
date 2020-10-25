@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:tantalumdust"
+  },
+  "result": "extraores:tantalumingot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

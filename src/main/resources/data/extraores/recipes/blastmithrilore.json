@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:mithrilore"
+  },
+  "result": "extraores:mithrilingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

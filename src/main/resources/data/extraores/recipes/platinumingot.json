@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:platinumblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:platinumingot",
+    "count": 9
+  }
+}

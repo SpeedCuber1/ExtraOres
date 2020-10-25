@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:angmallenore"
+  },
+  "result": "extraores:angmallendust",
+  "count": 2
+}

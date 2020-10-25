@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:rubyblock"
+    ]
+  },
+  "criteria": {
+    "rubyblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:rubyblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:rubyblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "rubyblock",
+      "has_the_recipe"
+    ]
+  ]
+}

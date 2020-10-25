@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:copperdust"
+  },
+  "result": "extraores:copperingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}
