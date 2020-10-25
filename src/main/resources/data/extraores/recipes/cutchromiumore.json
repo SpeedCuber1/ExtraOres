@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:chromiumore"
-  },
-  "result": "extraores:chromiumdust",
-  "count": 2
-}

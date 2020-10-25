@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:tantalumore"
-  },
-  "result": "extraores:tantalumdust",
-  "count": 2
-}

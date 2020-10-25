@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:tinore"
-  },
-  "result": "extraores:tindust",
-  "count": 2
-}

@@ -31,6 +31,15 @@ public class ExOreWorldGen
             .func_242728_a()
             .func_242732_c(rate));
         }
+        if(ConfigRegistryList.registerAgate.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreAgate.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+            .func_242733_d(height)
+            .func_242728_a()
+            .func_242732_c(rate));
+        }
         if(ConfigRegistryList.registerAldourite.get())
         {
             height = 100;
@@ -56,6 +65,24 @@ public class ExOreWorldGen
             .func_242733_d(height)
             .func_242728_a()
             .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerAmethyst.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreAmethyst.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerAmetrine.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreAmetrine.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
         }
         if (ConfigRegistryList.registerAmordrine.get())
         {
@@ -156,6 +183,24 @@ public class ExOreWorldGen
                     .func_242728_a()
                     .func_242732_c(rate));
         }
+        if(ConfigRegistryList.registerChrysocolla.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreChrysocolla.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerCitrine.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreCitrine.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
         if (ConfigRegistryList.registerCobalt.get())
         {
             height = 100;
@@ -206,6 +251,15 @@ public class ExOreWorldGen
             height = 100;
             config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreGallium.getDefaultState(),size);
             builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerGarnet.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreGarnet.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
                     .func_242733_d(height)
                     .func_242728_a()
                     .func_242732_c(rate));
@@ -273,6 +327,24 @@ public class ExOreWorldGen
             .func_242728_a()
             .func_242732_c(rate));
         }
+        if(ConfigRegistryList.registerJade.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreJade.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerJasper.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreJasper.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
         if (ConfigRegistryList.registerKalendrite.get())
         {
             height = 100;
@@ -296,6 +368,15 @@ public class ExOreWorldGen
             height = 100;
             config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241883_b, BlockList.blockOreLemurite.getDefaultState(),size);
             builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerMalachite.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreMalachite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
                     .func_242733_d(height)
                     .func_242728_a()
                     .func_242732_c(rate));
@@ -381,6 +462,15 @@ public class ExOreWorldGen
                     .func_242728_a()
                     .func_242732_c(rate));
         }
+        if(ConfigRegistryList.registerOnyx.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreOnyx.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
         if (ConfigRegistryList.registerOrichalcum.get())
         {
             height = 100;
@@ -413,6 +503,24 @@ public class ExOreWorldGen
             height = 100;
             config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOrePalladium.getDefaultState(),size);
             builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerPeridot.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOrePeridot.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerPhoenixite.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOrePhoenixite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
                     .func_242733_d(height)
                     .func_242728_a()
                     .func_242732_c(rate));
@@ -480,6 +588,15 @@ public class ExOreWorldGen
                     .func_242728_a()
                     .func_242732_c(rate));
         }
+        if(ConfigRegistryList.registerRuby.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreRuby.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
         if (ConfigRegistryList.registerRuthenium.get())
         {
             height = 100;
@@ -498,6 +615,15 @@ public class ExOreWorldGen
                     .func_242728_a()
                     .func_242732_c(rate));
         }
+        if(ConfigRegistryList.registerSapphire.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreSapphire.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
         if (ConfigRegistryList.registerShadowIron.get())
         {
             height = 100;
@@ -512,6 +638,24 @@ public class ExOreWorldGen
             height = 100;
             config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreSilver.getDefaultState(),size);
             builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerSpinel.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreSpinel.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerSugilite.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreSugilite.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
                     .func_242733_d(height)
                     .func_242728_a()
                     .func_242732_c(rate));
@@ -566,6 +710,24 @@ public class ExOreWorldGen
             height = 100;
             config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a, BlockList.blockOreTitanium.getDefaultState(),size);
             builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerTopaz.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreTopaz.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                    .func_242733_d(height)
+                    .func_242728_a()
+                    .func_242732_c(rate));
+        }
+        if(ConfigRegistryList.registerTourmaline.get())
+        {
+            height = 32;
+            config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.field_241882_a,BlockList.blockOreTourmaline.getDefaultState(),size);
+            builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
                     .func_242733_d(height)
                     .func_242728_a()
                     .func_242732_c(rate));

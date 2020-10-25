@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:meutoiteore"
-  },
-  "result": "extraores:meutoitedust",
-  "count": 2
-}

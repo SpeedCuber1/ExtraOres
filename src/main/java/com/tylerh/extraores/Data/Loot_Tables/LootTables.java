@@ -1,7 +1,7 @@
 package com.tylerh.extraores.Data.Loot_Tables;
 
-import com.tylerh.extraores.Data.Loot_Tables.BaseLootTableProvider;
 import com.tylerh.extraores.Init.BlockList;
+import com.tylerh.extraores.Init.ItemList;
 import net.minecraft.data.DataGenerator;
 
 public class LootTables extends BaseLootTableProvider
@@ -17,9 +17,12 @@ public class LootTables extends BaseLootTableProvider
     {
         //Ores
         lootTables.put(BlockList.blockOreAdamantine,createStandardTable("adamantineore",BlockList.blockOreAdamantine));
+        lootTables.put(BlockList.blockOreAgate,createFortune("agateore",BlockList.blockOreAgate,ItemList.itemGemAgate));
         lootTables.put(BlockList.blockOreAldourite,createStandardTable("aldouriteore",BlockList.blockOreAldourite));
         lootTables.put(BlockList.blockOreAluminum,createStandardTable("aluminumore",BlockList.blockOreAluminum));
         lootTables.put(BlockList.blockOreAmericium,createStandardTable("americiumore",BlockList.blockOreAmericium));
+        lootTables.put(BlockList.blockOreAmethyst,createFortune("amethystore",BlockList.blockOreAmethyst,ItemList.itemGemAmethyst));
+        lootTables.put(BlockList.blockOreAmetrine,createFortune("ametrineore",BlockList.blockOreAmetrine,ItemList.itemGemAmetrine));
         lootTables.put(BlockList.blockOreAmordrine,createStandardTable("amordrineore",BlockList.blockOreAmordrine));
         lootTables.put(BlockList.blockOreAngmallen,createStandardTable("angmallenore",BlockList.blockOreAngmallen));
         lootTables.put(BlockList.blockOreAstralSilver,createStandardTable("astralsilverore",BlockList.blockOreAstralSilver));
@@ -31,12 +34,15 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreCelenegil,createStandardTable("celenegilore",BlockList.blockOreCelenegil));
         lootTables.put(BlockList.blockOreCeruclase,createStandardTable("ceruclaseore",BlockList.blockOreCeruclase));
         lootTables.put(BlockList.blockOreChromium,createStandardTable("chromiumore",BlockList.blockOreChromium));
+        lootTables.put(BlockList.blockOreChrysocolla,createFortune("chrysocollaore",BlockList.blockOreChrysocolla,ItemList.itemGemChrysocolla));
+        lootTables.put(BlockList.blockOreCitrine,createFortune("citrineore",BlockList.blockOreCitrine,ItemList.itemGemCitrine));
         lootTables.put(BlockList.blockOreCobalt,createStandardTable("cobaltore",BlockList.blockOreCobalt));
         lootTables.put(BlockList.blockOreCopper,createStandardTable("copperore",BlockList.blockOreCopper));
         lootTables.put(BlockList.blockOreDeepIron,createStandardTable("deepironore",BlockList.blockOreDeepIron));
         lootTables.put(BlockList.blockOreDesichalkos,createStandardTable("desichalkosore",BlockList.blockOreDesichalkos));
         lootTables.put(BlockList.blockOreEximite,createStandardTable("eximiteore",BlockList.blockOreEximite));
         lootTables.put(BlockList.blockOreGallium,createStandardTable("galliumore",BlockList.blockOreGallium));
+        lootTables.put(BlockList.blockOreGarnet,createFortune("garnetore",BlockList.blockOreGarnet,ItemList.itemGemGarnet));
         lootTables.put(BlockList.blockOreHaderoth,createStandardTable("haderothore",BlockList.blockOreHaderoth));
         lootTables.put(BlockList.blockOreHepatizon,createStandardTable("hepatizonore",BlockList.blockOreHepatizon));
         lootTables.put(BlockList.blockOreIgnatius,createStandardTable("ignatiusore",BlockList.blockOreIgnatius));
@@ -44,9 +50,12 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreInfuscolium,createStandardTable("infuscoliumore",BlockList.blockOreInfuscolium));
         lootTables.put(BlockList.blockOreInolashite,createStandardTable("inolashiteore",BlockList.blockOreInolashite));
         lootTables.put(BlockList.blockOreIridium,createStandardTable("iridiumore",BlockList.blockOreIridium));
+        lootTables.put(BlockList.blockOreJade,createFortune("jadeore",BlockList.blockOreJade,ItemList.itemGemJade));
+        lootTables.put(BlockList.blockOreJasper,createFortune("jasperore",BlockList.blockOreJasper,ItemList.itemGemJasper));
         lootTables.put(BlockList.blockOreKalendrite,createStandardTable("kalendriteore",BlockList.blockOreKalendrite));
         lootTables.put(BlockList.blockOreLead,createStandardTable("leadore",BlockList.blockOreLead));
         lootTables.put(BlockList.blockOreLemurite,createStandardTable("lemuriteore",BlockList.blockOreLemurite));
+        lootTables.put(BlockList.blockOreMalachite,createFortune("malachiteore",BlockList.blockOreMalachite,ItemList.itemGemMalachite));
         lootTables.put(BlockList.blockOreManganese,createStandardTable("manganeseore",BlockList.blockOreManganese));
         lootTables.put(BlockList.blockOreMeutoite,createStandardTable("meutoiteore",BlockList.blockOreMeutoite));
         lootTables.put(BlockList.blockOreMidasium,createStandardTable("midasiumore",BlockList.blockOreMidasium));
@@ -56,10 +65,13 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreNeptunium,createStandardTable("neptuniumore",BlockList.blockOreNeptunium));
         lootTables.put(BlockList.blockOreNickel,createStandardTable("nickelore",BlockList.blockOreNickel));
         lootTables.put(BlockList.blockOreNiobium,createStandardTable("niobiumore",BlockList.blockOreNiobium));
+        lootTables.put(BlockList.blockOreOnyx,createFortune("onyxore",BlockList.blockOreOnyx,ItemList.itemGemOnyx));
         lootTables.put(BlockList.blockOreOrichalcum,createStandardTable("orichalcumore",BlockList.blockOreOrichalcum));
         lootTables.put(BlockList.blockOreOsmium,createStandardTable("osmiumore",BlockList.blockOreOsmium));
         lootTables.put(BlockList.blockOreOureclase,createStandardTable("ourecolaseore",BlockList.blockOreOureclase));
         lootTables.put(BlockList.blockOrePalladium,createStandardTable("palladiumore",BlockList.blockOrePalladium));
+        lootTables.put(BlockList.blockOrePeridot,createFortune("peridotore",BlockList.blockOrePeridot,ItemList.itemGemPeridot));
+        lootTables.put(BlockList.blockOrePhoenixite,createFortune("phoenixiteore",BlockList.blockOrePhoenixite,ItemList.itemGemPhoenixite));
         lootTables.put(BlockList.blockOrePlatinum,createStandardTable("platinumore",BlockList.blockOrePlatinum));
         lootTables.put(BlockList.blockOrePlutonium,createStandardTable("plutoniumore",BlockList.blockOrePlutonium));
         lootTables.put(BlockList.blockOrePolonium,createStandardTable("poloniumore",BlockList.blockOrePolonium));
@@ -67,16 +79,22 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreRhenium,createStandardTable("rheniumore",BlockList.blockOreRhenium));
         lootTables.put(BlockList.blockOreRhodium,createStandardTable("rhodiumore",BlockList.blockOreRhodium));
         lootTables.put(BlockList.blockOreRubracium,createStandardTable("rubraciumore",BlockList.blockOreRubracium));
+        lootTables.put(BlockList.blockOreRuby,createFortune("rubyore",BlockList.blockOreRuby,ItemList.itemGemRuby));
         lootTables.put(BlockList.blockOreRuthenium,createStandardTable("rutheniumore",BlockList.blockOreRuthenium));
         lootTables.put(BlockList.blockOreSanguinite,createStandardTable("sanguiniteore",BlockList.blockOreSanguinite));
+        lootTables.put(BlockList.blockOreSapphire,createFortune("sapphireore",BlockList.blockOreSapphire,ItemList.itemGemSapphire));
         lootTables.put(BlockList.blockOreShadowIron,createStandardTable("shadowironore",BlockList.blockOreShadowIron));
         lootTables.put(BlockList.blockOreSilver,createStandardTable("silverore",BlockList.blockOreSilver));
+        lootTables.put(BlockList.blockOreSpinel,createFortune("spinelore",BlockList.blockOreSpinel,ItemList.itemGemSpinel));
+        lootTables.put(BlockList.blockOreSugilite,createFortune("sugiliteore",BlockList.blockOreSugilite,ItemList.itemGemSugilite));
         lootTables.put(BlockList.blockOreTantalum,createStandardTable("tantalumore",BlockList.blockOreTantalum));
         lootTables.put(BlockList.blockOreTartarite,createStandardTable("tartariteore",BlockList.blockOreTartarite));
         lootTables.put(BlockList.blockOreTechnetium,createStandardTable("technetiumore",BlockList.blockOreTechnetium));
         lootTables.put(BlockList.blockOreThallium,createStandardTable("thalliumore",BlockList.blockOreThallium));
         lootTables.put(BlockList.blockOreTin,createStandardTable("tinore",BlockList.blockOreTin));
         lootTables.put(BlockList.blockOreTitanium,createStandardTable("titaniumore",BlockList.blockOreTitanium));
+        lootTables.put(BlockList.blockOreTopaz,createFortune("topazore",BlockList.blockOreTopaz,ItemList.itemGemTopaz));
+        lootTables.put(BlockList.blockOreTourmaline,createFortune("tourmalineore",BlockList.blockOreTourmaline,ItemList.itemGemTourmaline));
         lootTables.put(BlockList.blockOreTungsten,createStandardTable("tungstenore",BlockList.blockOreTungsten));
         lootTables.put(BlockList.blockOreUnobtainium,createStandardTable("unobtainiumore",BlockList.blockOreUnobtainium));
         lootTables.put(BlockList.blockOreUranium,createStandardTable("uraniumore",BlockList.blockOreUranium));

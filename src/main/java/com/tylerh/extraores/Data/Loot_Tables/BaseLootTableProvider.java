@@ -2,15 +2,20 @@ package com.tylerh.extraores.Data.Loot_Tables;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import net.minecraft.advancements.criterion.EnchantmentPredicate;
+import net.minecraft.advancements.criterion.ItemPredicate;
+import net.minecraft.advancements.criterion.MinMaxBounds;
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DirectoryCache;
 import net.minecraft.data.IDataProvider;
 import net.minecraft.data.LootTableProvider;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.Item;
 import net.minecraft.loot.*;
-import net.minecraft.loot.functions.CopyName;
-import net.minecraft.loot.functions.CopyNbt;
-import net.minecraft.loot.functions.SetContents;
+import net.minecraft.loot.conditions.ILootCondition;
+import net.minecraft.loot.conditions.MatchTool;
+import net.minecraft.loot.functions.*;
 import net.minecraft.util.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,26 +24,47 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public abstract class BaseLootTableProvider extends LootTableProvider
 {
 
     private static final Logger LOGGER = LogManager.getLogger();
+    private static LootPool.Builder builder;
+    private static final ILootCondition.IBuilder SILK_TOUCH = MatchTool.builder(ItemPredicate.Builder.create().enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.IntBound.atLeast(1))));
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
-
     protected final Map<Block, LootTable.Builder> lootTables = new HashMap<>();
     private final DataGenerator generator;
-
     public BaseLootTableProvider(DataGenerator dataGeneratorIn)
     {
         super(dataGeneratorIn);
         this.generator = dataGeneratorIn;
     }
-
     protected abstract void addTables();
-
+    protected LootTable.Builder createFortune(String name,Block block,Item item)
+    {
+        return createSilkTouch(name,block,ItemLootEntry.builder(item).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE)));
+    }
+    protected LootTable.Builder createSilkTouch(String name,Block block,LootEntry.Builder<?> builder)
+    {
+        return createDropping(name,block,SILK_TOUCH,builder);
+    }
+    protected LootTable.Builder createDropping(String name,Block block,ILootCondition.IBuilder iBuilder,LootEntry.Builder<?> builder)
+    {
+        return createLootPool(name,block,iBuilder,builder);
+    }
+    protected LootTable.Builder createLootPool(String name,Block block,ILootCondition.IBuilder iBuilder,LootEntry.Builder<?> alt)
+    {
+        builder = LootPool.builder()
+                .name(name)
+                .rolls(ConstantRange.of(1))
+                .addEntry(ItemLootEntry.builder(block)
+                .acceptCondition(iBuilder)
+                .alternatively(alt));
+        return LootTable.builder().addLootPool(builder);
+    }
     protected LootTable.Builder createStandardTable(String name, Block block)
     {
-        LootPool.Builder builder = LootPool.builder()
+        builder = LootPool.builder()
                 .name(name)
                 .rolls(ConstantRange.of(1))
                 .addEntry(ItemLootEntry.builder(block)
@@ -51,7 +77,6 @@ public abstract class BaseLootTableProvider extends LootTableProvider
                 );
         return LootTable.builder().addLootPool(builder);
     }
-
     @Override
     public void act(DirectoryCache cache)
     {

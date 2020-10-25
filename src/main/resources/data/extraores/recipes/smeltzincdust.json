@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:zincdust"
-  },
-  "result": "extraores:zincingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}
