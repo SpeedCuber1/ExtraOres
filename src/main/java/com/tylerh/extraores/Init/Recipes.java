@@ -3200,6 +3200,13 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerQuartz)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":quartzBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if(InitBlocks.registerRhenium)
         {
             //Smelting
@@ -4657,26 +4664,12 @@ public class Recipes
         if(mode.equals("Compress"))
         {
             resourceLocation = new ResourceLocation(resource + ".compressed.json");
-            CraftingHelper.register(resourceLocation, new IRecipeFactory()
-            {
-                @Override
-                public IRecipe parse(JsonContext context, JsonObject json)
-                {
-                    return CraftingHelper.getRecipe(json, context);
-                }
-            });
+            CraftingHelper.register(resourceLocation, (IRecipeFactory) (context, json) -> CraftingHelper.getRecipe(json, context));
         }
         else if (mode.equals("Decompress"))
         {
             resourceLocation = new ResourceLocation(resource + ".decompressed.json");
-            CraftingHelper.register(resourceLocation, new IRecipeFactory()
-            {
-                @Override
-                public IRecipe parse(JsonContext context, JsonObject json)
-                {
-                    return CraftingHelper.getRecipe(json, context);
-                }
-            });
+            CraftingHelper.register(resourceLocation, (IRecipeFactory) (context, json) -> CraftingHelper.getRecipe(json, context));
         }
     }
 }

@@ -553,6 +553,15 @@ public class EXOreRender
             location = new ResourceLocation("extraores:promethiumBlock");
             Register(itemBlockPromethium,location.toString());
         }
+        if(InitBlocks.registerQuartz)
+        {
+            Item itemBlockQuartz = Item.getItemFromBlock(InitBlocks.blockOreQuartz);
+            ResourceLocation location = new ResourceLocation("extraores:quartzOre");
+            Register(itemBlockQuartz,location.toString());
+            itemBlockQuartz = Item.getItemFromBlock(InitBlocks.blockQuartz);
+            location = new ResourceLocation("extraores:quartzBlock");
+            Register(itemBlockQuartz,location.toString());
+        }
         if(InitBlocks.registerRhenium)
         {
             Item itemBlockRhenium = Item.getItemFromBlock(InitBlocks.blockOreRhenium);
@@ -1491,6 +1500,11 @@ public class EXOreRender
             Register(InitBlocks.itemShardPromethium,location.toString());
             location = new ResourceLocation("extraores:promethiumdirtydust");
             Register(InitBlocks.itemDirtyDustPromethium,location.toString());
+        }
+        if(InitBlocks.registerQuartz)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:quartz");
+            Register(InitBlocks.itemGemQuartz,location.toString());
         }
         if(InitBlocks.registerRhenium)
         {

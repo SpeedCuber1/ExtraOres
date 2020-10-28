@@ -346,6 +346,10 @@ public class EXOreWorldGen implements IWorldGenerator
         {
             this.promethiumOre = new EXOreWorldGenMinable(InitBlocks.blockOrePromethium.getDefaultState(),4);
         }
+        if(InitBlocks.registerQuartz)
+        {
+            this.quartzOre = new EXOreWorldGenMinable(InitBlocks.blockOreQuartz.getDefaultState(),4);
+        }
         if(InitBlocks.registerRhenium)
         {
             this.rheniumOre = new EXOreWorldGenMinable(InitBlocks.blockOreRhenium.getDefaultState(), 4);
@@ -679,6 +683,10 @@ public class EXOreWorldGen implements IWorldGenerator
             if(InitBlocks.registerPromethium)
             {
                 runGenerator(this.promethiumOre,world,random,chunkX,chunkZ,20,0,100);
+            }
+            if(InitBlocks.registerQuartz)
+            {
+                runGenerator(this.quartzOre,world,random,chunkX,chunkZ,20,0,100);
             }
             if(InitBlocks.registerRhenium)
             {

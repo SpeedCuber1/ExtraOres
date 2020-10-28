@@ -16,10 +16,10 @@ import java.util.Random;
 /**
  * Created by Tyler on 4/29/2016.
  */
-public class BlockEXOre extends Block
+public class BlockExOre extends Block
 {
     private boolean isGem;
-    public BlockEXOre(Material mat,float hardness,float resistance,String uName)
+    public BlockExOre(Material mat, float hardness, float resistance, String uName)
     {
         super(mat);
         this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
@@ -28,17 +28,16 @@ public class BlockEXOre extends Block
         setUnlocalizedName(uName);
         setHarvestLevel("pickaxe", 2);
     }
-    public BlockEXOre(Material mat,float hardness,float resistance,String uName,boolean gem)
+    public BlockExOre(Material mat, float hardness, float resistance, String uName, boolean gem)
     {
         super(mat);
         this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);
         setHardness(hardness);
         setResistance(resistance);
         setUnlocalizedName(uName);
-        setHarvestLevel("pickaxer",2);
+        setHarvestLevel("pickaxe",2);
         isGem = gem;
     }
-    @Override
     public Item getItemDropped(IBlockState state,Random rand,int fortune)
     {
         if(this == InitBlocks.blockOreAgate)
@@ -89,6 +88,10 @@ public class BlockEXOre extends Block
         {
             return InitBlocks.itemGemPhoenixite;
         }
+        else if(this ==  InitBlocks.blockOreQuartz)
+        {
+            return InitBlocks.itemGemQuartz;
+        }
         else if(this == InitBlocks.blockOreRuby)
         {
             return InitBlocks.itemGemRuby;
@@ -115,7 +118,7 @@ public class BlockEXOre extends Block
         }
         else
         {
-            return super.getItemDropped(state,rand,fortune);
+            return Item.getItemFromBlock(this);
         }
     }
     public int quantityDropped(Random rand)

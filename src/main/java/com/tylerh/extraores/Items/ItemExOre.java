@@ -14,9 +14,9 @@ import java.util.List;
 /**
  * Created by Tyler on 4/29/2016.
  */
-public class ItemEXOre extends Item
+public class ItemExOre extends Item
 {
-    public ItemEXOre(String uName)
+    public ItemExOre(String uName)
     {
         super();
         this.setCreativeTab(CreativeTabExtraOres.EXTRA_ORES_TAB);

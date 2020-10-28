@@ -1,8 +1,8 @@
 package com.tylerh.extraores.Init;
 
-import com.tylerh.extraores.Blocks.BlockEXOre;
+import com.tylerh.extraores.Blocks.BlockExOre;
 import com.tylerh.extraores.Items.ItemBlockExOre;
-import com.tylerh.extraores.Items.ItemEXOre;
+import com.tylerh.extraores.Items.ItemExOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -77,6 +77,7 @@ public class InitBlocks
     public static boolean registerPlutonium;
     public static boolean registerPolonium;
     public static boolean registerPromethium;
+    public static boolean registerQuartz;
     public static boolean registerRhenium;
     public static boolean registerRhodium;
     public static boolean registerRubracium;
@@ -166,6 +167,7 @@ public class InitBlocks
     public static Block blockOrePlutonium;
     public static Block blockOrePolonium;
     public static Block blockOrePromethium;
+    public static Block blockOreQuartz;
     public static Block blockOreRhenium;
     public static Block blockOreRhodium;
     public static Block blockOreRubracium;
@@ -255,6 +257,7 @@ public class InitBlocks
     public static Block blockPlutonium;
     public static Block blockPolonium;
     public static Block blockPromethium;
+    public static Block blockQuartz;
     public static Block blockRhenium;
     public static Block blockRhodium;
     public static Block blockRubracium;
@@ -344,6 +347,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOrePlutonium;
     public static ItemBlock itemBlockOrePolonium;
     public static ItemBlock itemBlockOrePromethium;
+    public static ItemBlock itemBlockOreQuartz;
     public static ItemBlock itemBlockOreRhenium;
     public static ItemBlock itemBlockOreRhodium;
     public static ItemBlock itemBlockOreRubracium;
@@ -433,6 +437,7 @@ public class InitBlocks
     public static ItemBlock itemBlockPlutonium;
     public static ItemBlock itemBlockPolonium;
     public static ItemBlock itemBlockPromethium;
+    public static ItemBlock itemBlockQuartz;
     public static ItemBlock itemBlockRhenium;
     public static ItemBlock itemBlockRhodium;
     public static ItemBlock itemBlockRubracium;
@@ -474,6 +479,7 @@ public class InitBlocks
     public static Item itemGemOnyx;
     public static Item itemGemPeridot;
     public static Item itemGemPhoenixite;
+    public static Item itemGemQuartz;
     public static Item itemGemRuby;
     public static Item itemGemSapphire;
     public static Item itemGemSpinel;
@@ -839,15 +845,15 @@ public class InitBlocks
     {
         if(registerAdamantine)
         {
-            blockOreAdamantine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"adamantineOre");
+            blockOreAdamantine = new BlockExOre(Material.ROCK,3.0f,5.0f,"adamantineOre");
             itemBlockOreAdamantine = new ItemBlockExOre(blockOreAdamantine);
-            blockAdamantine = new BlockEXOre(Material.IRON,3.0f,5.0f,"adamantineBlock");
+            blockAdamantine = new BlockExOre(Material.IRON,3.0f,5.0f,"adamantineBlock");
             itemBlockAdamantine = new ItemBlockExOre(blockAdamantine);
-            itemIngotAdamantine = new ItemEXOre("adamantineIngot");
-            itemDustAdamantine = new ItemEXOre("adamantineDust");
-            itemClumpAdamantine = new ItemEXOre("adamantineClump");
-            itemShardAdamantine = new ItemEXOre("adamantineShard");
-            itemDirtyDustAdamantine = new ItemEXOre("adamantineDirtyDust");
+            itemIngotAdamantine = new ItemExOre("adamantineIngot");
+            itemDustAdamantine = new ItemExOre("adamantineDust");
+            itemClumpAdamantine = new ItemExOre("adamantineClump");
+            itemShardAdamantine = new ItemExOre("adamantineShard");
+            itemDirtyDustAdamantine = new ItemExOre("adamantineDirtyDust");
             createRegistry(blockOreAdamantine,itemBlockOreAdamantine,"adamantineOre");
             createRegistry(blockAdamantine,itemBlockAdamantine,"adamantineBlock");
             createRegistry(itemIngotAdamantine,"adamantineIngot");
@@ -874,11 +880,11 @@ public class InitBlocks
         }
         if(registerAgate)
         {
-            blockOreAgate = new BlockEXOre(Material.ROCK,3.0f,5.0f,"agateOre",true);
+            blockOreAgate = new BlockExOre(Material.ROCK,3.0f,5.0f,"agateOre",true);
             itemBlockOreAgate = new ItemBlockExOre(blockOreAgate);
-            blockAgate = new BlockEXOre(Material.ROCK,3.0f,5.0f,"agateBlock");
+            blockAgate = new BlockExOre(Material.ROCK,3.0f,5.0f,"agateBlock");
             itemBlockAgate = new ItemBlockExOre(blockAgate);
-            itemGemAgate = new ItemEXOre("agate");
+            itemGemAgate = new ItemExOre("agate");
             createRegistry(blockOreAgate,itemBlockOreAgate,"agateOre");
             createRegistry(blockAgate,itemBlockAgate,"agateBlock");
             createRegistry(itemGemAgate,"agate");
@@ -893,15 +899,15 @@ public class InitBlocks
         }
         if(registerAldourite)
         {
-            blockOreAldourite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"aldouriteOre");
+            blockOreAldourite = new BlockExOre(Material.ROCK,3.0f,5.0f,"aldouriteOre");
             itemBlockOreAldourite = new ItemBlockExOre(blockOreAldourite);
-            blockAldourite = new BlockEXOre(Material.IRON,3.0f,5.0f,"aldouriteBlock");
+            blockAldourite = new BlockExOre(Material.IRON,3.0f,5.0f,"aldouriteBlock");
             itemBlockAldourite = new ItemBlockExOre(blockAldourite);
-            itemIngotAldourite = new ItemEXOre("aldouriteIngot");
-            itemDustAldourite = new ItemEXOre("aldouriteDust");
-            itemClumpAldourite = new ItemEXOre("aldouriteClump");
-            itemShardAldourite = new ItemEXOre("aldouriteShard");
-            itemDirtyDustAldourite = new ItemEXOre("aldouriteDirtyDust");
+            itemIngotAldourite = new ItemExOre("aldouriteIngot");
+            itemDustAldourite = new ItemExOre("aldouriteDust");
+            itemClumpAldourite = new ItemExOre("aldouriteClump");
+            itemShardAldourite = new ItemExOre("aldouriteShard");
+            itemDirtyDustAldourite = new ItemExOre("aldouriteDirtyDust");
             createRegistry(blockOreAldourite,itemBlockOreAldourite,"aldouriteOre");
             createRegistry(blockAldourite,itemBlockAldourite,"aldouriteBlock");
             createRegistry(itemIngotAldourite,"aldouriteIngot");
@@ -928,15 +934,15 @@ public class InitBlocks
         }
         if(registerAluminum)
         {
-            blockOreAluminum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"aluminumOre");
+            blockOreAluminum = new BlockExOre(Material.ROCK,3.0f,5.0f,"aluminumOre");
             itemBlockOreAluminum = new ItemBlockExOre(blockOreAluminum);
-            blockAluminum = new BlockEXOre(Material.IRON,3.0f,5.0f,"aluminumBlock");
+            blockAluminum = new BlockExOre(Material.IRON,3.0f,5.0f,"aluminumBlock");
             itemBlockAluminum = new ItemBlockExOre(blockAluminum);
-            itemIngotAluminum = new ItemEXOre("aluminumIngot");
-            itemDustAluminum = new ItemEXOre("aluminumDust");
-            itemClumpAluminum = new ItemEXOre("aluminumClump");
-            itemShardAluminum = new ItemEXOre("aluminumShard");
-            itemDirtyDustAluminum = new ItemEXOre("aluminumDirtyDust");
+            itemIngotAluminum = new ItemExOre("aluminumIngot");
+            itemDustAluminum = new ItemExOre("aluminumDust");
+            itemClumpAluminum = new ItemExOre("aluminumClump");
+            itemShardAluminum = new ItemExOre("aluminumShard");
+            itemDirtyDustAluminum = new ItemExOre("aluminumDirtyDust");
             createRegistry(blockOreAluminum,itemBlockOreAluminum,"aluminumOre");
             createRegistry(blockAluminum,itemBlockAluminum,"aluminumBlock");
             createRegistry(itemIngotAluminum,"aluminumIngot");
@@ -963,15 +969,15 @@ public class InitBlocks
         }
         if(registerAmericium)
         {
-            blockOreAmericium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"americiumOre");
+            blockOreAmericium = new BlockExOre(Material.ROCK,3.0f,5.0f,"americiumOre");
             itemBlockOreAmericium = new ItemBlockExOre(blockOreAmericium);
-            blockAmericium = new BlockEXOre(Material.IRON,3.0f,5.0f,"americiumBlock");
+            blockAmericium = new BlockExOre(Material.IRON,3.0f,5.0f,"americiumBlock");
             itemBlockAmericium = new ItemBlockExOre(blockAmericium);
-            itemIngotAmericium = new ItemEXOre("americiumIngot");
-            itemDustAmericium = new ItemEXOre("americiumDust");
-            itemClumpAmericium = new ItemEXOre("americiumClump");
-            itemShardAmericium = new ItemEXOre("americiumShard");
-            itemDirtyDustAmericium = new ItemEXOre("americiumDirtyDust");
+            itemIngotAmericium = new ItemExOre("americiumIngot");
+            itemDustAmericium = new ItemExOre("americiumDust");
+            itemClumpAmericium = new ItemExOre("americiumClump");
+            itemShardAmericium = new ItemExOre("americiumShard");
+            itemDirtyDustAmericium = new ItemExOre("americiumDirtyDust");
             createRegistry(blockOreAmericium,itemBlockOreAmericium,"americiumOre");
             createRegistry(blockAmericium,itemBlockAmericium,"americiumBlock");
             createRegistry(itemIngotAmericium,"americiumIngot");
@@ -998,11 +1004,11 @@ public class InitBlocks
         }
         if(registerAmethyst)
         {
-            blockOreAmethyst = new BlockEXOre(Material.ROCK,3.0f,5.0f,"amethystOre",true);
+            blockOreAmethyst = new BlockExOre(Material.ROCK,3.0f,5.0f,"amethystOre",true);
             itemBlockOreAmethyst = new ItemBlockExOre(blockOreAmethyst);
-            blockAmethyst = new BlockEXOre(Material.ROCK,3.0f,5.0f,"amethystBlock");
+            blockAmethyst = new BlockExOre(Material.ROCK,3.0f,5.0f,"amethystBlock");
             itemBlockAmethyst = new ItemBlockExOre(blockAmethyst);
-            itemGemAmethyst = new ItemEXOre("amethyst");
+            itemGemAmethyst = new ItemExOre("amethyst");
             createRegistry(blockOreAmethyst,itemBlockOreAmethyst,"amethystOre");
             createRegistry(blockAmethyst,itemBlockAmethyst,"amethystBlock");
             createRegistry(itemGemAmethyst,"amethyst");
@@ -1017,11 +1023,11 @@ public class InitBlocks
         }
         if(registerAmetrine)
         {
-            blockOreAmetrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ametrineOre",true);
+            blockOreAmetrine = new BlockExOre(Material.ROCK,3.0f,5.0f,"ametrineOre",true);
             itemBlockOreAmetrine = new ItemBlockExOre(blockOreAmetrine);
-            blockAmetrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ametrineBlock");
+            blockAmetrine = new BlockExOre(Material.ROCK,3.0f,5.0f,"ametrineBlock");
             itemBlockAmetrine = new ItemBlockExOre(blockAmetrine);
-            itemGemAmetrine = new ItemEXOre("ametrine");
+            itemGemAmetrine = new ItemExOre("ametrine");
             createRegistry(blockOreAmetrine,itemBlockOreAmetrine,"ametrineOre");
             createRegistry(blockAmetrine,itemBlockAmetrine,"ametrineBlock");
             createRegistry(itemGemAmetrine,"ametrine");
@@ -1036,15 +1042,15 @@ public class InitBlocks
         }
         if(registerAmordrine)
         {
-            blockOreAmordrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"amordrineOre");
+            blockOreAmordrine = new BlockExOre(Material.ROCK,3.0f,5.0f,"amordrineOre");
             itemBlockOreAmordrine = new ItemBlockExOre(blockOreAmordrine);
-            blockAmordrine = new BlockEXOre(Material.IRON,3.0f,5.0f,"amordrineBlock");
+            blockAmordrine = new BlockExOre(Material.IRON,3.0f,5.0f,"amordrineBlock");
             itemBlockAmordrine = new ItemBlockExOre(blockAmordrine);
-            itemIngotAmordrine = new ItemEXOre("amordrineIngot");
-            itemDustAmordrine = new ItemEXOre("amordrineDust");
-            itemClumpAmordrine = new ItemEXOre("amordrineClump");
-            itemShardAmordrine = new ItemEXOre("amordrineShard");
-            itemDirtyDustAmordrine = new ItemEXOre("amordrineDirtyDust");
+            itemIngotAmordrine = new ItemExOre("amordrineIngot");
+            itemDustAmordrine = new ItemExOre("amordrineDust");
+            itemClumpAmordrine = new ItemExOre("amordrineClump");
+            itemShardAmordrine = new ItemExOre("amordrineShard");
+            itemDirtyDustAmordrine = new ItemExOre("amordrineDirtyDust");
             createRegistry(blockOreAmordrine,itemBlockOreAmordrine,"amordrineOre");
             createRegistry(blockAmordrine,itemBlockAmordrine,"amordrineBlock");
             createRegistry(itemIngotAmordrine,"amordrineIngot");
@@ -1071,15 +1077,15 @@ public class InitBlocks
         }
         if(registerAngmallen)
         {
-            blockOreAngmallen = new BlockEXOre(Material.ROCK,3.0f,5.0f,"angmallenOre");
+            blockOreAngmallen = new BlockExOre(Material.ROCK,3.0f,5.0f,"angmallenOre");
             itemBlockOreAngmallen = new ItemBlockExOre(blockOreAngmallen);
-            blockAngmallen = new BlockEXOre(Material.IRON,3.0f,5.0f,"angmallenBlock");
+            blockAngmallen = new BlockExOre(Material.IRON,3.0f,5.0f,"angmallenBlock");
             itemBlockAngmallen = new ItemBlockExOre(blockAngmallen);
-            itemIngotAngmallen = new ItemEXOre("angmallenIngot");
-            itemDustAngmallen = new ItemEXOre("angmallenDust");
-            itemClumpAngmallen = new ItemEXOre("angmallenClump");
-            itemShardAngmallen = new ItemEXOre("angmallenShard");
-            itemDirtyDustAngmallen = new ItemEXOre("angmallenDirtyDust");
+            itemIngotAngmallen = new ItemExOre("angmallenIngot");
+            itemDustAngmallen = new ItemExOre("angmallenDust");
+            itemClumpAngmallen = new ItemExOre("angmallenClump");
+            itemShardAngmallen = new ItemExOre("angmallenShard");
+            itemDirtyDustAngmallen = new ItemExOre("angmallenDirtyDust");
             createRegistry(blockOreAngmallen,itemBlockOreAngmallen,"angmallenOre");
             createRegistry(blockAngmallen,itemBlockAngmallen,"angmallenBlock");
             createRegistry(itemIngotAngmallen,"angmallenIngot");
@@ -1106,15 +1112,15 @@ public class InitBlocks
         }
         if(registerAstralSilver)
         {
-            blockOreAstralSilver = new BlockEXOre(Material.ROCK,3.0f,5.0f,"astralSilverOre");
+            blockOreAstralSilver = new BlockExOre(Material.ROCK,3.0f,5.0f,"astralSilverOre");
             itemBlockOreAstralSilver = new ItemBlockExOre(blockOreAstralSilver);
-            blockAstralSilver = new BlockEXOre(Material.IRON,3.0f,5.0f,"astralSilverBlock");
+            blockAstralSilver = new BlockExOre(Material.IRON,3.0f,5.0f,"astralSilverBlock");
             itemBlockAstralSilver = new ItemBlockExOre(blockAstralSilver);
-            itemIngotAstralSilver = new ItemEXOre("astralSilverIngot");
-            itemDustAstralSilver = new ItemEXOre("astralSilverDust");
-            itemClumpAstralSilver = new ItemEXOre("astralSilverClump");
-            itemShardAstralSilver = new ItemEXOre("astralSilverShard");
-            itemDirtyDustAstralSilver = new ItemEXOre("astralSilverDirtyDust");
+            itemIngotAstralSilver = new ItemExOre("astralSilverIngot");
+            itemDustAstralSilver = new ItemExOre("astralSilverDust");
+            itemClumpAstralSilver = new ItemExOre("astralSilverClump");
+            itemShardAstralSilver = new ItemExOre("astralSilverShard");
+            itemDirtyDustAstralSilver = new ItemExOre("astralSilverDirtyDust");
             createRegistry(blockOreAstralSilver,itemBlockOreAstralSilver,"astralSilverOre");
             createRegistry(blockAstralSilver,itemBlockAstralSilver,"astralSilverBlock");
             createRegistry(itemIngotAstralSilver,"astralSilverIngot");
@@ -1141,15 +1147,15 @@ public class InitBlocks
         }
         if(registerAtlarus)
         {
-            blockOreAtlarus = new BlockEXOre(Material.ROCK,3.0f,5.0f,"atlarusOre");
+            blockOreAtlarus = new BlockExOre(Material.ROCK,3.0f,5.0f,"atlarusOre");
             itemBlockOreAtlarus = new ItemBlockExOre(blockOreAtlarus);
-            blockAtlarus = new BlockEXOre(Material.IRON,3.0f,5.0f,"atlarusBlock");
+            blockAtlarus = new BlockExOre(Material.IRON,3.0f,5.0f,"atlarusBlock");
             itemBlockAtlarus = new ItemBlockExOre(blockAtlarus);
-            itemIngotAtlarus = new ItemEXOre("atlarusIngot");
-            itemDustAtlarus = new ItemEXOre("atlarusDust");
-            itemClumpAtlarus = new ItemEXOre("atlarusClump");
-            itemShardAtlarus = new ItemEXOre("atlarusShard");
-            itemDirtyDustAtlarus = new ItemEXOre("atlarusDirtyDust");
+            itemIngotAtlarus = new ItemExOre("atlarusIngot");
+            itemDustAtlarus = new ItemExOre("atlarusDust");
+            itemClumpAtlarus = new ItemExOre("atlarusClump");
+            itemShardAtlarus = new ItemExOre("atlarusShard");
+            itemDirtyDustAtlarus = new ItemExOre("atlarusDirtyDust");
             createRegistry(blockOreAtlarus,itemBlockOreAtlarus,"atlarusOre");
             createRegistry(blockAtlarus,itemBlockAtlarus,"atlarusBlock");
             createRegistry(itemIngotAtlarus,"atlarusIngot");
@@ -1176,15 +1182,15 @@ public class InitBlocks
         }
         if(registerBismuth)
         {
-            blockOreBismuth = new BlockEXOre(Material.ROCK,3.0f,5.0f,"bismuthOre");
+            blockOreBismuth = new BlockExOre(Material.ROCK,3.0f,5.0f,"bismuthOre");
             itemBlockOreBismuth = new ItemBlockExOre(blockOreBismuth);
-            blockBismuth = new BlockEXOre(Material.IRON,3.0f,5.0f,"bismuthBlock");
+            blockBismuth = new BlockExOre(Material.IRON,3.0f,5.0f,"bismuthBlock");
             itemBlockBismuth = new ItemBlockExOre(blockBismuth);
-            itemIngotBismuth = new ItemEXOre("bismuthIngot");
-            itemDustBismuth = new ItemEXOre("bismuthDust");
-            itemClumpBismuth = new ItemEXOre("bismuthClump");
-            itemShardBismuth = new ItemEXOre("bismuthShard");
-            itemDirtyDustBismuth = new ItemEXOre("bismuthDirtyDust");
+            itemIngotBismuth = new ItemExOre("bismuthIngot");
+            itemDustBismuth = new ItemExOre("bismuthDust");
+            itemClumpBismuth = new ItemExOre("bismuthClump");
+            itemShardBismuth = new ItemExOre("bismuthShard");
+            itemDirtyDustBismuth = new ItemExOre("bismuthDirtyDust");
             createRegistry(blockOreBismuth,itemBlockOreBismuth,"bismuthOre");
             createRegistry(blockBismuth,itemBlockBismuth,"bismuthBlock");
             createRegistry(itemIngotBismuth,"bismuthIngot");
@@ -1211,15 +1217,15 @@ public class InitBlocks
         }
         if(registerBlackSteel)
         {
-            blockOreBlackSteel = new BlockEXOre(Material.ROCK,3.0f,5.0f,"blackSteelOre");
+            blockOreBlackSteel = new BlockExOre(Material.ROCK,3.0f,5.0f,"blackSteelOre");
             itemBlockOreBlackSteel = new ItemBlockExOre(blockOreBlackSteel);
-            blockBlackSteel = new BlockEXOre(Material.IRON,3.0f,5.0f,"blackSteelBlock");
+            blockBlackSteel = new BlockExOre(Material.IRON,3.0f,5.0f,"blackSteelBlock");
             itemBlockBlackSteel = new ItemBlockExOre(blockBlackSteel);
-            itemIngotBlackSteel = new ItemEXOre("blackSteelIngot");
-            itemDustBlackSteel = new ItemEXOre("blackSteelDust");
-            itemClumpBlackSteel = new ItemEXOre("blackSteelClump");
-            itemShardBlackSteel = new ItemEXOre("blackSteelShard");
-            itemDirtyDustBlackSteel = new ItemEXOre("blackSteelDirtyDust");
+            itemIngotBlackSteel = new ItemExOre("blackSteelIngot");
+            itemDustBlackSteel = new ItemExOre("blackSteelDust");
+            itemClumpBlackSteel = new ItemExOre("blackSteelClump");
+            itemShardBlackSteel = new ItemExOre("blackSteelShard");
+            itemDirtyDustBlackSteel = new ItemExOre("blackSteelDirtyDust");
             createRegistry(blockOreBlackSteel,itemBlockOreBlackSteel,"blackSteelOre");
             createRegistry(blockBlackSteel,itemBlockBlackSteel,"blackSteelBlock");
             createRegistry(itemIngotBlackSteel,"blackSteelIngot");
@@ -1246,15 +1252,15 @@ public class InitBlocks
         }
         if(registerCadmium)
         {
-            blockOreCadmium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"cadmiumOre");
+            blockOreCadmium = new BlockExOre(Material.ROCK,3.0f,5.0f,"cadmiumOre");
             itemBlockOreCadmium = new ItemBlockExOre(blockOreCadmium);
-            blockCadmium = new BlockEXOre(Material.IRON,3.0f,5.0f,"cadmiumBlock");
+            blockCadmium = new BlockExOre(Material.IRON,3.0f,5.0f,"cadmiumBlock");
             itemBlockCadmium = new ItemBlockExOre(blockCadmium);
-            itemIngotCadmium = new ItemEXOre("cadmiumIngot");
-            itemDustCadmium = new ItemEXOre("cadmiumDust");
-            itemClumpCadmium = new ItemEXOre("cadmiumClump");
-            itemShardCadmium = new ItemEXOre("cadmiumShard");
-            itemDirtyDustCadmium = new ItemEXOre("cadmiumDirtyDust");
+            itemIngotCadmium = new ItemExOre("cadmiumIngot");
+            itemDustCadmium = new ItemExOre("cadmiumDust");
+            itemClumpCadmium = new ItemExOre("cadmiumClump");
+            itemShardCadmium = new ItemExOre("cadmiumShard");
+            itemDirtyDustCadmium = new ItemExOre("cadmiumDirtyDust");
             createRegistry(blockOreCadmium,itemBlockOreCadmium,"cadmiumOre");
             createRegistry(blockCadmium,itemBlockCadmium,"cadmiumBlock");
             createRegistry(itemIngotCadmium,"cadmiumIngot");
@@ -1281,15 +1287,15 @@ public class InitBlocks
         }
         if(registerCarmot)
         {
-            blockOreCarmot = new BlockEXOre(Material.ROCK,3.0f,5.0f,"carmotOre");
+            blockOreCarmot = new BlockExOre(Material.ROCK,3.0f,5.0f,"carmotOre");
             itemBlockOreCarmot = new ItemBlockExOre(blockOreCarmot);
-            blockCarmot = new BlockEXOre(Material.IRON,3.0f,5.0f,"carmotBlock");
+            blockCarmot = new BlockExOre(Material.IRON,3.0f,5.0f,"carmotBlock");
             itemBlockCarmot = new ItemBlockExOre(blockCarmot);
-            itemIngotCarmot = new ItemEXOre("carmotIngot");
-            itemDustCarmot = new ItemEXOre("carmotDust");
-            itemClumpCarmot = new ItemEXOre("carmotClump");
-            itemShardCarmot = new ItemEXOre("carmotShard");
-            itemDirtyDustCarmot = new ItemEXOre("carmotDirtyDust");
+            itemIngotCarmot = new ItemExOre("carmotIngot");
+            itemDustCarmot = new ItemExOre("carmotDust");
+            itemClumpCarmot = new ItemExOre("carmotClump");
+            itemShardCarmot = new ItemExOre("carmotShard");
+            itemDirtyDustCarmot = new ItemExOre("carmotDirtyDust");
             createRegistry(blockOreCarmot,itemBlockOreCarmot,"carmotOre");
             createRegistry(blockCarmot,itemBlockCarmot,"carmotBlock");
             createRegistry(itemIngotCarmot,"carmotIngot");
@@ -1316,15 +1322,15 @@ public class InitBlocks
         }
         if(registerCelenegil)
         {
-            blockOreCelenegil = new BlockEXOre(Material.ROCK,3.0f,5.0f,"celenegilOre");
+            blockOreCelenegil = new BlockExOre(Material.ROCK,3.0f,5.0f,"celenegilOre");
             itemBlockOreCelenegil = new ItemBlockExOre(blockOreCelenegil);
-            blockCelenegil = new BlockEXOre(Material.IRON,3.0f,5.0f,"celenegilBlock");
+            blockCelenegil = new BlockExOre(Material.IRON,3.0f,5.0f,"celenegilBlock");
             itemBlockCelenegil = new ItemBlockExOre(blockCelenegil);
-            itemIngotCelenegil = new ItemEXOre("celenegilIngot");
-            itemDustCelenegil = new ItemEXOre("celenegilDust");
-            itemClumpCelenegil = new ItemEXOre("celenegilClump");
-            itemShardCelenegil = new ItemEXOre("celenegilShard");
-            itemDirtyDustCelenegil = new ItemEXOre("celenegilDirtyDust");
+            itemIngotCelenegil = new ItemExOre("celenegilIngot");
+            itemDustCelenegil = new ItemExOre("celenegilDust");
+            itemClumpCelenegil = new ItemExOre("celenegilClump");
+            itemShardCelenegil = new ItemExOre("celenegilShard");
+            itemDirtyDustCelenegil = new ItemExOre("celenegilDirtyDust");
             createRegistry(blockOreCelenegil,itemBlockOreCelenegil,"celenegilOre");
             createRegistry(blockCelenegil,itemBlockCelenegil,"celenegilBlock");
             createRegistry(itemIngotCelenegil,"celenegilIngot");
@@ -1351,15 +1357,15 @@ public class InitBlocks
         }
         if(registerCeruclase)
         {
-            blockOreCeruclase = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ceruclaseOre");
+            blockOreCeruclase = new BlockExOre(Material.ROCK,3.0f,5.0f,"ceruclaseOre");
             itemBlockOreCeruclase = new ItemBlockExOre(blockOreCeruclase);
-            blockCeruclase = new BlockEXOre(Material.IRON,3.0f,5.0f,"ceruclaseBlock");
+            blockCeruclase = new BlockExOre(Material.IRON,3.0f,5.0f,"ceruclaseBlock");
             itemBlockCeruclase = new ItemBlockExOre(blockCeruclase);
-            itemIngotCeruclase = new ItemEXOre("ceruclaseIngot");
-            itemDustCeruclase = new ItemEXOre("ceruclaseDust");
-            itemClumpCeruclase = new ItemEXOre("ceruclaseClump");
-            itemShardCeruclase = new ItemEXOre("ceruclaseShard");
-            itemDirtyDustCeruclase = new ItemEXOre("ceruclaseDirtyDust");
+            itemIngotCeruclase = new ItemExOre("ceruclaseIngot");
+            itemDustCeruclase = new ItemExOre("ceruclaseDust");
+            itemClumpCeruclase = new ItemExOre("ceruclaseClump");
+            itemShardCeruclase = new ItemExOre("ceruclaseShard");
+            itemDirtyDustCeruclase = new ItemExOre("ceruclaseDirtyDust");
             createRegistry(blockOreCeruclase,itemBlockOreCeruclase,"ceruclaseOre");
             createRegistry(blockCeruclase,itemBlockCeruclase,"ceruclaseBlock");
             createRegistry(itemIngotCeruclase,"ceruclaseIngot");
@@ -1386,15 +1392,15 @@ public class InitBlocks
         }
         if(registerChromium)
         {
-            blockOreChromium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"chromiumOre");
+            blockOreChromium = new BlockExOre(Material.ROCK,3.0f,5.0f,"chromiumOre");
             itemBlockOreChromium = new ItemBlockExOre(blockOreChromium);
-            blockChromium = new BlockEXOre(Material.IRON,3.0f,5.0f,"chromiumBlock");
+            blockChromium = new BlockExOre(Material.IRON,3.0f,5.0f,"chromiumBlock");
             itemBlockChromium = new ItemBlockExOre(blockChromium);
-            itemIngotChromium = new ItemEXOre("chromiumIngot");
-            itemDustChromium = new ItemEXOre("chromiumDust");
-            itemClumpChromium = new ItemEXOre("chromiumClump");
-            itemShardChromium = new ItemEXOre("chromiumShard");
-            itemDirtyDustChromium = new ItemEXOre("chromiumDirtyDust");
+            itemIngotChromium = new ItemExOre("chromiumIngot");
+            itemDustChromium = new ItemExOre("chromiumDust");
+            itemClumpChromium = new ItemExOre("chromiumClump");
+            itemShardChromium = new ItemExOre("chromiumShard");
+            itemDirtyDustChromium = new ItemExOre("chromiumDirtyDust");
             createRegistry(blockOreChromium,itemBlockOreChromium,"chromiumOre");
             createRegistry(blockChromium,itemBlockChromium,"chromiumBlock");
             createRegistry(itemIngotChromium,"chromiumIngot");
@@ -1421,11 +1427,11 @@ public class InitBlocks
         }
         if(registerChrysocolla)
         {
-            blockOreChrysocolla = new BlockEXOre(Material.ROCK,3.0f,5.0f,"chrysocollaOre",true);
+            blockOreChrysocolla = new BlockExOre(Material.ROCK,3.0f,5.0f,"chrysocollaOre",true);
             itemBlockOreChrysocolla = new ItemBlockExOre(blockOreChrysocolla);
-            blockChrysocolla = new BlockEXOre(Material.ROCK,3.0f,5.0f,"chrysocollaBlock");
+            blockChrysocolla = new BlockExOre(Material.ROCK,3.0f,5.0f,"chrysocollaBlock");
             itemBlockChrysocolla = new ItemBlockExOre(blockChrysocolla);
-            itemGemChrysocolla = new ItemEXOre("chrysocolla");
+            itemGemChrysocolla = new ItemExOre("chrysocolla");
             createRegistry(blockOreChrysocolla,itemBlockOreChrysocolla,"chrysocollaOre");
             createRegistry(blockChrysocolla,itemBlockChrysocolla,"chrysocollaBlock");
             createRegistry(itemGemChrysocolla,"chrysocolla");
@@ -1440,11 +1446,11 @@ public class InitBlocks
         }
         if(registerCitrine)
         {
-            blockOreCitrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"citrineOre",true);
+            blockOreCitrine = new BlockExOre(Material.ROCK,3.0f,5.0f,"citrineOre",true);
             itemBlockOreCitrine = new ItemBlockExOre(blockOreCitrine);
-            blockCitrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"citrineBlock");
+            blockCitrine = new BlockExOre(Material.ROCK,3.0f,5.0f,"citrineBlock");
             itemBlockCitrine = new ItemBlockExOre(blockCitrine);
-            itemGemCitrine = new ItemEXOre("citrine");
+            itemGemCitrine = new ItemExOre("citrine");
             createRegistry(blockOreCitrine,itemBlockOreCitrine,"citrineOre");
             createRegistry(blockCitrine,itemBlockCitrine,"citrineBlock");
             createRegistry(itemGemCitrine,"citrine");
@@ -1459,15 +1465,15 @@ public class InitBlocks
         }
         if(registerCobalt)
         {
-            blockOreCobalt = new BlockEXOre(Material.ROCK,3.0f,5.0f,"cobaltOre");
+            blockOreCobalt = new BlockExOre(Material.ROCK,3.0f,5.0f,"cobaltOre");
             itemBlockOreCobalt = new ItemBlockExOre(blockOreCobalt);
-            blockCobalt = new BlockEXOre(Material.IRON,3.0f,5.0f,"cobaltBlock");
+            blockCobalt = new BlockExOre(Material.IRON,3.0f,5.0f,"cobaltBlock");
             itemBlockCobalt = new ItemBlockExOre(blockCobalt);
-            itemIngotCobalt = new ItemEXOre("cobaltIngot");
-            itemDustCobalt = new ItemEXOre("cobaltDust");
-            itemClumpCobalt = new ItemEXOre("cobaltClump");
-            itemShardCobalt = new ItemEXOre("cobaltShard");
-            itemDirtyDustCobalt = new ItemEXOre("cobaltDirtyDust");
+            itemIngotCobalt = new ItemExOre("cobaltIngot");
+            itemDustCobalt = new ItemExOre("cobaltDust");
+            itemClumpCobalt = new ItemExOre("cobaltClump");
+            itemShardCobalt = new ItemExOre("cobaltShard");
+            itemDirtyDustCobalt = new ItemExOre("cobaltDirtyDust");
             createRegistry(blockOreCobalt,itemBlockOreCobalt,"cobaltOre");
             createRegistry(blockCobalt,itemBlockCobalt,"cobaltBlock");
             createRegistry(itemIngotCobalt,"cobaltIngot");
@@ -1494,15 +1500,15 @@ public class InitBlocks
         }
         if(registerCopper)
         {
-            blockOreCopper = new BlockEXOre(Material.ROCK,3.0f,5.0f,"copperOre");
+            blockOreCopper = new BlockExOre(Material.ROCK,3.0f,5.0f,"copperOre");
             itemBlockOreCopper = new ItemBlockExOre(blockOreCopper);
-            blockCopper = new BlockEXOre(Material.IRON,3.0f,5.0f,"copperBlock");
+            blockCopper = new BlockExOre(Material.IRON,3.0f,5.0f,"copperBlock");
             itemBlockCopper = new ItemBlockExOre(blockCopper);
-            itemIngotCopper = new ItemEXOre("copperIngot");
-            itemDustCopper = new ItemEXOre("copperDust");
-            itemClumpCopper = new ItemEXOre("copperClump");
-            itemShardCopper = new ItemEXOre("copperShard");
-            itemDirtyDustCopper = new ItemEXOre("copperDirtyDust");
+            itemIngotCopper = new ItemExOre("copperIngot");
+            itemDustCopper = new ItemExOre("copperDust");
+            itemClumpCopper = new ItemExOre("copperClump");
+            itemShardCopper = new ItemExOre("copperShard");
+            itemDirtyDustCopper = new ItemExOre("copperDirtyDust");
             createRegistry(blockOreCopper,itemBlockOreCopper,"copperOre");
             createRegistry(blockCopper,itemBlockCopper,"copperBlock");
             createRegistry(itemIngotCopper,"copperIngot");
@@ -1529,15 +1535,15 @@ public class InitBlocks
         }
         if(registerDeepIron)
         {
-            blockOreDeepIron = new BlockEXOre(Material.ROCK,3.0f,5.0f,"deepIronOre");
+            blockOreDeepIron = new BlockExOre(Material.ROCK,3.0f,5.0f,"deepIronOre");
             itemBlockOreDeepIron = new ItemBlockExOre(blockOreDeepIron);
-            blockDeepIron = new BlockEXOre(Material.IRON,3.0f,5.0f,"deepIronBlock");
+            blockDeepIron = new BlockExOre(Material.IRON,3.0f,5.0f,"deepIronBlock");
             itemBlockDeepIron = new ItemBlockExOre(blockDeepIron);
-            itemIngotDeepIron = new ItemEXOre("deepIronIngot");
-            itemDustDeepIron = new ItemEXOre("deepIronDust");
-            itemClumpDeepIron = new ItemEXOre("deepIronClump");
-            itemShardDeepIron = new ItemEXOre("deepIronShard");
-            itemDirtyDustDeepIron = new ItemEXOre("deepIronDirtyDust");
+            itemIngotDeepIron = new ItemExOre("deepIronIngot");
+            itemDustDeepIron = new ItemExOre("deepIronDust");
+            itemClumpDeepIron = new ItemExOre("deepIronClump");
+            itemShardDeepIron = new ItemExOre("deepIronShard");
+            itemDirtyDustDeepIron = new ItemExOre("deepIronDirtyDust");
             createRegistry(blockOreDeepIron,itemBlockOreDeepIron,"deepIronOre");
             createRegistry(blockDeepIron,itemBlockDeepIron,"deepIronBlock");
             createRegistry(itemIngotDeepIron,"deepIronIngot");
@@ -1564,15 +1570,15 @@ public class InitBlocks
         }
         if(registerDesichalkos)
         {
-            blockOreDesichalkos = new BlockEXOre(Material.ROCK,3.0f,5.0f,"desichalkosOre");
+            blockOreDesichalkos = new BlockExOre(Material.ROCK,3.0f,5.0f,"desichalkosOre");
             itemBlockOreDesichalkos = new ItemBlockExOre(blockOreDesichalkos);
-            blockDesichalkos = new BlockEXOre(Material.IRON,3.0f,5.0f,"desichalkosBlock");
+            blockDesichalkos = new BlockExOre(Material.IRON,3.0f,5.0f,"desichalkosBlock");
             itemBlockDesichalkos = new ItemBlockExOre(blockDesichalkos);
-            itemIngotDesichalkos = new ItemEXOre("desichalkosIngot");
-            itemDustDesichalkos = new ItemEXOre("desichalkosDust");
-            itemClumpDesichalkos = new ItemEXOre("desichalkosClump");
-            itemShardDesichalkos = new ItemEXOre("desichalkosShard");
-            itemDirtyDustDesichalkos = new ItemEXOre("desichalkosDirtyDust");
+            itemIngotDesichalkos = new ItemExOre("desichalkosIngot");
+            itemDustDesichalkos = new ItemExOre("desichalkosDust");
+            itemClumpDesichalkos = new ItemExOre("desichalkosClump");
+            itemShardDesichalkos = new ItemExOre("desichalkosShard");
+            itemDirtyDustDesichalkos = new ItemExOre("desichalkosDirtyDust");
             createRegistry(blockOreDesichalkos,itemBlockOreDesichalkos,"desichalkosOre");
             createRegistry(blockDesichalkos,itemBlockDesichalkos,"desichalkosBlock");
             createRegistry(itemIngotDesichalkos,"desichalkosIngot");
@@ -1599,15 +1605,15 @@ public class InitBlocks
         }
         if(registerEximite)
         {
-            blockOreEximite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"eximiteOre");
+            blockOreEximite = new BlockExOre(Material.ROCK,3.0f,5.0f,"eximiteOre");
             itemBlockOreEximite = new ItemBlockExOre(blockOreEximite);
-            blockEximite = new BlockEXOre(Material.IRON,3.0f,5.0f,"eximiteBlock");
+            blockEximite = new BlockExOre(Material.IRON,3.0f,5.0f,"eximiteBlock");
             itemBlockEximite = new ItemBlockExOre(blockEximite);
-            itemIngotEximite = new ItemEXOre("eximiteIngot");
-            itemDustEximite = new ItemEXOre("eximiteDust");
-            itemClumpEximite = new ItemEXOre("eximiteClump");
-            itemShardEximite = new ItemEXOre("eximiteShard");
-            itemDirtyDustEximite = new ItemEXOre("eximiteDirtyDust");
+            itemIngotEximite = new ItemExOre("eximiteIngot");
+            itemDustEximite = new ItemExOre("eximiteDust");
+            itemClumpEximite = new ItemExOre("eximiteClump");
+            itemShardEximite = new ItemExOre("eximiteShard");
+            itemDirtyDustEximite = new ItemExOre("eximiteDirtyDust");
             createRegistry(blockOreEximite,itemBlockOreEximite,"eximiteOre");
             createRegistry(blockEximite,itemBlockEximite,"eximiteBlock");
             createRegistry(itemIngotEximite,"eximiteIngot");
@@ -1634,15 +1640,15 @@ public class InitBlocks
         }
         if(registerGallium)
         {
-            blockOreGallium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"galliumOre");
+            blockOreGallium = new BlockExOre(Material.ROCK,3.0f,5.0f,"galliumOre");
             itemBlockOreGallium = new ItemBlockExOre(blockOreGallium);
-            blockGallium = new BlockEXOre(Material.IRON,3.0f,5.0f,"galliumBlock");
+            blockGallium = new BlockExOre(Material.IRON,3.0f,5.0f,"galliumBlock");
             itemBlockGallium = new ItemBlockExOre(blockGallium);
-            itemIngotGallium = new ItemEXOre("galliumIngot");
-            itemDustGallium = new ItemEXOre("galliumDust");
-            itemClumpGallium = new ItemEXOre("galliumClump");
-            itemShardGallium = new ItemEXOre("galliumShard");
-            itemDirtyDustGallium = new ItemEXOre("galliumDirtyDust");
+            itemIngotGallium = new ItemExOre("galliumIngot");
+            itemDustGallium = new ItemExOre("galliumDust");
+            itemClumpGallium = new ItemExOre("galliumClump");
+            itemShardGallium = new ItemExOre("galliumShard");
+            itemDirtyDustGallium = new ItemExOre("galliumDirtyDust");
             createRegistry(blockOreGallium,itemBlockOreGallium,"galliumOre");
             createRegistry(blockGallium,itemBlockGallium,"galliumBlock");
             createRegistry(itemIngotGallium,"galliumIngot");
@@ -1669,11 +1675,11 @@ public class InitBlocks
         }
         if(registerGarnet)
         {
-            blockOreGarnet = new BlockEXOre(Material.ROCK,3.0f,5.0f,"garnetOre",true);
+            blockOreGarnet = new BlockExOre(Material.ROCK,3.0f,5.0f,"garnetOre",true);
             itemBlockOreGarnet = new ItemBlockExOre(blockOreGarnet);
-            blockGarnet = new BlockEXOre(Material.ROCK,3.0f,5.0f,"garnetBlock");
+            blockGarnet = new BlockExOre(Material.ROCK,3.0f,5.0f,"garnetBlock");
             itemBlockGarnet = new ItemBlockExOre(blockGarnet);
-            itemGemGarnet = new ItemEXOre("garnet");
+            itemGemGarnet = new ItemExOre("garnet");
             createRegistry(blockOreGarnet,itemBlockOreGarnet,"garnetOre");
             createRegistry(blockGarnet,itemBlockGarnet,"garnetBlock");
             createRegistry(itemGemGarnet,"garnet");
@@ -1688,15 +1694,15 @@ public class InitBlocks
         }
         if(registerHaderoth)
         {
-            blockOreHaderoth = new BlockEXOre(Material.ROCK,3.0f,5.0f,"haderothOre");
+            blockOreHaderoth = new BlockExOre(Material.ROCK,3.0f,5.0f,"haderothOre");
             itemBlockOreHaderoth = new ItemBlockExOre(blockOreHaderoth);
-            blockHaderoth = new BlockEXOre(Material.IRON,3.0f,5.0f,"haderothBlock");
+            blockHaderoth = new BlockExOre(Material.IRON,3.0f,5.0f,"haderothBlock");
             itemBlockHaderoth = new ItemBlockExOre(blockHaderoth);
-            itemIngotHaderoth = new ItemEXOre("haderothIngot");
-            itemDustHaderoth = new ItemEXOre("haderothDust");
-            itemClumpHaderoth = new ItemEXOre("haderothClump");
-            itemShardHaderoth = new ItemEXOre("haderothShard");
-            itemDirtyDustHaderoth = new ItemEXOre("haderothDirtyDust");
+            itemIngotHaderoth = new ItemExOre("haderothIngot");
+            itemDustHaderoth = new ItemExOre("haderothDust");
+            itemClumpHaderoth = new ItemExOre("haderothClump");
+            itemShardHaderoth = new ItemExOre("haderothShard");
+            itemDirtyDustHaderoth = new ItemExOre("haderothDirtyDust");
             createRegistry(blockOreHaderoth,itemBlockOreHaderoth,"haderothOre");
             createRegistry(blockHaderoth,itemBlockHaderoth,"haderothBlock");
             createRegistry(itemIngotHaderoth,"haderothIngot");
@@ -1723,15 +1729,15 @@ public class InitBlocks
         }
         if(registerHepatizon)
         {
-            blockOreHepatizon = new BlockEXOre(Material.ROCK,3.0f,5.0f,"hepatizonOre");
+            blockOreHepatizon = new BlockExOre(Material.ROCK,3.0f,5.0f,"hepatizonOre");
             itemBlockOreHepatizon = new ItemBlockExOre(blockOreHepatizon);
-            blockHepatizon = new BlockEXOre(Material.IRON,3.0f,5.0f,"hepatizonBlock");
+            blockHepatizon = new BlockExOre(Material.IRON,3.0f,5.0f,"hepatizonBlock");
             itemBlockHepatizon = new ItemBlockExOre(blockHepatizon);
-            itemIngotHepatizon = new ItemEXOre("hepatizonIngot");
-            itemDustHepatizon = new ItemEXOre("hepatizonDust");
-            itemClumpHepatizon = new ItemEXOre("hepatizonClump");
-            itemShardHepatizon = new ItemEXOre("hepatizonShard");
-            itemDirtyDustHepatizon = new ItemEXOre("hepatizonDirtyDust");
+            itemIngotHepatizon = new ItemExOre("hepatizonIngot");
+            itemDustHepatizon = new ItemExOre("hepatizonDust");
+            itemClumpHepatizon = new ItemExOre("hepatizonClump");
+            itemShardHepatizon = new ItemExOre("hepatizonShard");
+            itemDirtyDustHepatizon = new ItemExOre("hepatizonDirtyDust");
             createRegistry(blockOreHepatizon,itemBlockOreHepatizon,"hepatizonOre");
             createRegistry(blockHepatizon,itemBlockHepatizon,"hepatizonBlock");
             createRegistry(itemIngotHepatizon,"hepatizonIngot");
@@ -1758,15 +1764,15 @@ public class InitBlocks
         }
         if(registerIgnatius)
         {
-            blockOreIgnatius = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ignatiusOre");
+            blockOreIgnatius = new BlockExOre(Material.ROCK,3.0f,5.0f,"ignatiusOre");
             itemBlockOreIgnatius = new ItemBlockExOre(blockOreIgnatius);
-            blockIgnatius = new BlockEXOre(Material.IRON,3.0f,5.0f,"ignatiusBlock");
+            blockIgnatius = new BlockExOre(Material.IRON,3.0f,5.0f,"ignatiusBlock");
             itemBlockIgnatius = new ItemBlockExOre(blockIgnatius);
-            itemIngotIgnatius = new ItemEXOre("ignatiusIngot");
-            itemDustIgnatius = new ItemEXOre("ignatiusDust");
-            itemClumpIgnatius = new ItemEXOre("ignatiusClump");
-            itemShardIgnatius = new ItemEXOre("ignatiusShard");
-            itemDirtyDustIgnatius = new ItemEXOre("ignatiusDirtyDust");
+            itemIngotIgnatius = new ItemExOre("ignatiusIngot");
+            itemDustIgnatius = new ItemExOre("ignatiusDust");
+            itemClumpIgnatius = new ItemExOre("ignatiusClump");
+            itemShardIgnatius = new ItemExOre("ignatiusShard");
+            itemDirtyDustIgnatius = new ItemExOre("ignatiusDirtyDust");
             createRegistry(blockOreIgnatius,itemBlockOreIgnatius,"ignatiusOre");
             createRegistry(blockIgnatius,itemBlockIgnatius,"ignatiusBlock");
             createRegistry(itemIngotIgnatius,"ignatiusIngot");
@@ -1793,15 +1799,15 @@ public class InitBlocks
         }
         if(registerIndium)
         {
-            blockOreIndium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"indiumOre");
+            blockOreIndium = new BlockExOre(Material.ROCK,3.0f,5.0f,"indiumOre");
             itemBlockOreIndium = new ItemBlockExOre(blockOreIndium);
-            blockIndium = new BlockEXOre(Material.IRON,3.0f,5.0f,"indiumBlock");
+            blockIndium = new BlockExOre(Material.IRON,3.0f,5.0f,"indiumBlock");
             itemBlockIndium = new ItemBlockExOre(blockIndium);
-            itemIngotIndium = new ItemEXOre("indiumIngot");
-            itemDustIndium = new ItemEXOre("indiumDust");
-            itemClumpIndium = new ItemEXOre("indiumClump");
-            itemShardIndium = new ItemEXOre("indiumShard");
-            itemDirtyDustIndium = new ItemEXOre("indiumDirtyDust");
+            itemIngotIndium = new ItemExOre("indiumIngot");
+            itemDustIndium = new ItemExOre("indiumDust");
+            itemClumpIndium = new ItemExOre("indiumClump");
+            itemShardIndium = new ItemExOre("indiumShard");
+            itemDirtyDustIndium = new ItemExOre("indiumDirtyDust");
             createRegistry(blockOreIndium,itemBlockOreIndium,"indiumOre");
             createRegistry(blockIndium,itemBlockIndium,"indiumBlock");
             createRegistry(itemIngotIndium,"indiumIngot");
@@ -1828,15 +1834,15 @@ public class InitBlocks
         }
         if(registerInfuscolium)
         {
-            blockOreInfuscolium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"infuscoliumOre");
+            blockOreInfuscolium = new BlockExOre(Material.ROCK,3.0f,5.0f,"infuscoliumOre");
             itemBlockOreInfuscolium = new ItemBlockExOre(blockOreInfuscolium);
-            blockInfuscolium = new BlockEXOre(Material.IRON,3.0f,5.0f,"infuscoliumBlock");
+            blockInfuscolium = new BlockExOre(Material.IRON,3.0f,5.0f,"infuscoliumBlock");
             itemBlockInfuscolium = new ItemBlockExOre(blockInfuscolium);
-            itemIngotInfuscolium = new ItemEXOre("infuscoliumIngot");
-            itemDustInfuscolium = new ItemEXOre("infuscoliumDust");
-            itemClumpInfuscolium = new ItemEXOre("infuscoliumClump");
-            itemShardInfuscolium = new ItemEXOre("infuscoliumShard");
-            itemDirtyDustInfuscolium = new ItemEXOre("infuscoliumDirtyDust");
+            itemIngotInfuscolium = new ItemExOre("infuscoliumIngot");
+            itemDustInfuscolium = new ItemExOre("infuscoliumDust");
+            itemClumpInfuscolium = new ItemExOre("infuscoliumClump");
+            itemShardInfuscolium = new ItemExOre("infuscoliumShard");
+            itemDirtyDustInfuscolium = new ItemExOre("infuscoliumDirtyDust");
             createRegistry(blockOreInfuscolium,itemBlockOreInfuscolium,"infuscoliumOre");
             createRegistry(blockInfuscolium,itemBlockInfuscolium,"infuscoliumBlock");
             createRegistry(itemIngotInfuscolium,"infuscoliumIngot");
@@ -1863,15 +1869,15 @@ public class InitBlocks
         }
         if(registerInolashite)
         {
-            blockOreInolashite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"inolashiteOre");
+            blockOreInolashite = new BlockExOre(Material.ROCK,3.0f,5.0f,"inolashiteOre");
             itemBlockOreInolashite = new ItemBlockExOre(blockOreInolashite);
-            blockInolashite = new BlockEXOre(Material.IRON,3.0f,5.0f,"inolashiteBlock");
+            blockInolashite = new BlockExOre(Material.IRON,3.0f,5.0f,"inolashiteBlock");
             itemBlockInolashite = new ItemBlockExOre(blockInolashite);
-            itemIngotInolashite = new ItemEXOre("inolashiteIngot");
-            itemDustInolashite = new ItemEXOre("inolashiteDust");
-            itemClumpInolashite = new ItemEXOre("inolashiteClump");
-            itemShardInolashite = new ItemEXOre("inolashiteShard");
-            itemDirtyDustInolashite = new ItemEXOre("inolashiteDirtyDust");
+            itemIngotInolashite = new ItemExOre("inolashiteIngot");
+            itemDustInolashite = new ItemExOre("inolashiteDust");
+            itemClumpInolashite = new ItemExOre("inolashiteClump");
+            itemShardInolashite = new ItemExOre("inolashiteShard");
+            itemDirtyDustInolashite = new ItemExOre("inolashiteDirtyDust");
             createRegistry(blockOreInolashite,itemBlockOreInolashite,"inolashiteOre");
             createRegistry(blockInolashite,itemBlockInolashite,"inolashiteBlock");
             createRegistry(itemIngotInolashite,"inolashiteIngot");
@@ -1898,15 +1904,15 @@ public class InitBlocks
         }
         if(registerIridium)
         {
-            blockOreIridium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"iridiumOre");
+            blockOreIridium = new BlockExOre(Material.ROCK,3.0f,5.0f,"iridiumOre");
             itemBlockOreIridium = new ItemBlockExOre(blockOreIridium);
-            blockIridium = new BlockEXOre(Material.IRON,3.0f,5.0f,"iridiumBlock");
+            blockIridium = new BlockExOre(Material.IRON,3.0f,5.0f,"iridiumBlock");
             itemBlockIridium = new ItemBlockExOre(blockIridium);
-            itemIngotIridium = new ItemEXOre("iridiumIngot");
-            itemDustIridium = new ItemEXOre("iridiumDust");
-            itemClumpIridium = new ItemEXOre("iridiumClump");
-            itemShardIridium = new ItemEXOre("iridiumShard");
-            itemDirtyDustIridium = new ItemEXOre("iridiumDirtyDust");
+            itemIngotIridium = new ItemExOre("iridiumIngot");
+            itemDustIridium = new ItemExOre("iridiumDust");
+            itemClumpIridium = new ItemExOre("iridiumClump");
+            itemShardIridium = new ItemExOre("iridiumShard");
+            itemDirtyDustIridium = new ItemExOre("iridiumDirtyDust");
             createRegistry(blockOreIridium,itemBlockOreIridium,"iridiumOre");
             createRegistry(blockIridium,itemBlockIridium,"iridiumBlock");
             createRegistry(itemIngotIridium,"iridiumIngot");
@@ -1933,11 +1939,11 @@ public class InitBlocks
         }
         if(registerJade)
         {
-            blockOreJade = new BlockEXOre(Material.ROCK,3.0f,5.0f,"jadeOre",true);
+            blockOreJade = new BlockExOre(Material.ROCK,3.0f,5.0f,"jadeOre",true);
             itemBlockOreJade = new ItemBlockExOre(blockOreJade);
-            blockJade = new BlockEXOre(Material.ROCK,3.0f,5.0f,"jadeBlock");
+            blockJade = new BlockExOre(Material.ROCK,3.0f,5.0f,"jadeBlock");
             itemBlockJade = new ItemBlockExOre(blockJade);
-            itemGemJade = new ItemEXOre("jade");
+            itemGemJade = new ItemExOre("jade");
             createRegistry(blockOreJade,itemBlockOreJade,"jadeOre");
             createRegistry(blockJade,itemBlockJade,"jadeBlock");
             createRegistry(itemGemJade,"jade");
@@ -1952,11 +1958,11 @@ public class InitBlocks
         }
         if(registerJasper)
         {
-            blockOreJasper = new BlockEXOre(Material.ROCK,3.0f,5.0f,"jasperOre",true);
+            blockOreJasper = new BlockExOre(Material.ROCK,3.0f,5.0f,"jasperOre",true);
             itemBlockOreJasper = new ItemBlockExOre(blockOreJasper);
-            blockJasper = new BlockEXOre(Material.ROCK,3.0f,5.0f,"jasperBlock");
+            blockJasper = new BlockExOre(Material.ROCK,3.0f,5.0f,"jasperBlock");
             itemBlockJasper = new ItemBlockExOre(blockJasper);
-            itemGemJasper = new ItemEXOre("jasper");
+            itemGemJasper = new ItemExOre("jasper");
             createRegistry(blockOreJasper,itemBlockOreJasper,"jasperOre");
             createRegistry(blockJasper,itemBlockJasper,"jasperBlock");
             createRegistry(itemGemJasper,"jasper");
@@ -1971,15 +1977,15 @@ public class InitBlocks
         }
         if(registerKalendrite)
         {
-            blockOreKalendrite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"kalendriteOre");
+            blockOreKalendrite = new BlockExOre(Material.ROCK,3.0f,5.0f,"kalendriteOre");
             itemBlockOreKalendrite = new ItemBlockExOre(blockOreKalendrite);
-            blockKalendrite = new BlockEXOre(Material.IRON,3.0f,5.0f,"kalendriteBlock");
+            blockKalendrite = new BlockExOre(Material.IRON,3.0f,5.0f,"kalendriteBlock");
             itemBlockKalendrite = new ItemBlockExOre(blockKalendrite);
-            itemIngotKalendrite = new ItemEXOre("kalendriteIngot");
-            itemDustKalendrite = new ItemEXOre("kalendriteDust");
-            itemClumpKalendrite = new ItemEXOre("kalendriteClump");
-            itemShardKalendrite = new ItemEXOre("kalendriteShard");
-            itemDirtyDustKalendrite = new ItemEXOre("kalendriteDirtyDust");
+            itemIngotKalendrite = new ItemExOre("kalendriteIngot");
+            itemDustKalendrite = new ItemExOre("kalendriteDust");
+            itemClumpKalendrite = new ItemExOre("kalendriteClump");
+            itemShardKalendrite = new ItemExOre("kalendriteShard");
+            itemDirtyDustKalendrite = new ItemExOre("kalendriteDirtyDust");
             createRegistry(blockOreKalendrite,itemBlockOreKalendrite,"kalendriteOre");
             createRegistry(blockKalendrite,itemBlockKalendrite,"kalendriteBlock");
             createRegistry(itemIngotKalendrite,"kalendriteIngot");
@@ -2006,15 +2012,15 @@ public class InitBlocks
         }
         if(registerLead)
         {
-            blockOreLead = new BlockEXOre(Material.ROCK,3.0f,5.0f,"leadOre");
+            blockOreLead = new BlockExOre(Material.ROCK,3.0f,5.0f,"leadOre");
             itemBlockOreLead = new ItemBlockExOre(blockOreLead);
-            blockLead = new BlockEXOre(Material.IRON,3.0f,5.0f,"leadBlock");
+            blockLead = new BlockExOre(Material.IRON,3.0f,5.0f,"leadBlock");
             itemBlockLead = new ItemBlockExOre(blockLead);
-            itemIngotLead = new ItemEXOre("leadIngot");
-            itemDustLead = new ItemEXOre("leadDust");
-            itemClumpLead = new ItemEXOre("leadClump");
-            itemShardLead = new ItemEXOre("leadShard");
-            itemDirtyDustLead = new ItemEXOre("leadDirtyDust");
+            itemIngotLead = new ItemExOre("leadIngot");
+            itemDustLead = new ItemExOre("leadDust");
+            itemClumpLead = new ItemExOre("leadClump");
+            itemShardLead = new ItemExOre("leadShard");
+            itemDirtyDustLead = new ItemExOre("leadDirtyDust");
             createRegistry(blockOreLead,itemBlockOreLead,"leadOre");
             createRegistry(blockLead,itemBlockLead,"leadBlock");
             createRegistry(itemIngotLead,"leadIngot");
@@ -2041,15 +2047,15 @@ public class InitBlocks
         }
         if(registerLemurite)
         {
-            blockOreLemurite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"lemuriteOre");
+            blockOreLemurite = new BlockExOre(Material.ROCK,3.0f,5.0f,"lemuriteOre");
             itemBlockOreLemurite = new ItemBlockExOre(blockOreLemurite);
-            blockLemurite = new BlockEXOre(Material.IRON,3.0f,5.0f,"lemuriteBlock");
+            blockLemurite = new BlockExOre(Material.IRON,3.0f,5.0f,"lemuriteBlock");
             itemBlockLemurite = new ItemBlockExOre(blockLemurite);
-            itemIngotLemurite = new ItemEXOre("lemuriteIngot");
-            itemDustLemurite = new ItemEXOre("lemuriteDust");
-            itemClumpLemurite = new ItemEXOre("lemuriteClump");
-            itemShardLemurite = new ItemEXOre("lemuriteShard");
-            itemDirtyDustLemurite = new ItemEXOre("lemuriteDirtyDust");
+            itemIngotLemurite = new ItemExOre("lemuriteIngot");
+            itemDustLemurite = new ItemExOre("lemuriteDust");
+            itemClumpLemurite = new ItemExOre("lemuriteClump");
+            itemShardLemurite = new ItemExOre("lemuriteShard");
+            itemDirtyDustLemurite = new ItemExOre("lemuriteDirtyDust");
             createRegistry(blockOreLemurite,itemBlockOreLemurite,"lemuriteOre");
             createRegistry(blockLemurite,itemBlockLemurite,"lemuriteBlock");
             createRegistry(itemIngotLemurite,"lemuriteIngot");
@@ -2076,11 +2082,11 @@ public class InitBlocks
         }
         if(registerMalachite)
         {
-            blockOreMalachite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"malachiteOre",true);
+            blockOreMalachite = new BlockExOre(Material.ROCK,3.0f,5.0f,"malachiteOre",true);
             itemBlockOreMalachite = new ItemBlockExOre(blockOreMalachite);
-            blockMalachite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"malachiteBlock");
+            blockMalachite = new BlockExOre(Material.ROCK,3.0f,5.0f,"malachiteBlock");
             itemBlockMalachite = new ItemBlockExOre(blockMalachite);
-            itemGemMalachite = new ItemEXOre("malachite");
+            itemGemMalachite = new ItemExOre("malachite");
             createRegistry(blockOreMalachite,itemBlockOreMalachite,"malachiteOre");
             createRegistry(blockMalachite,itemBlockMalachite,"malachiteBlock");
             createRegistry(itemGemMalachite,"malachite");
@@ -2095,15 +2101,15 @@ public class InitBlocks
         }
         if(registerManganese)
         {
-            blockOreManganese = new BlockEXOre(Material.ROCK,3.0f,5.0f,"manganeseOre");
+            blockOreManganese = new BlockExOre(Material.ROCK,3.0f,5.0f,"manganeseOre");
             itemBlockOreManganese = new ItemBlockExOre(blockOreManganese);
-            blockManganese = new BlockEXOre(Material.IRON,3.0f,5.0f,"manganeseBlock");
+            blockManganese = new BlockExOre(Material.IRON,3.0f,5.0f,"manganeseBlock");
             itemBlockManganese = new ItemBlockExOre(blockManganese);
-            itemIngotManganese = new ItemEXOre("manganeseIngot");
-            itemDustManganese = new ItemEXOre("manganeseDust");
-            itemClumpManganese = new ItemEXOre("manganeseClump");
-            itemShardManganese = new ItemEXOre("manganeseShard");
-            itemDirtyDustManganese = new ItemEXOre("manganeseDirtyDust");
+            itemIngotManganese = new ItemExOre("manganeseIngot");
+            itemDustManganese = new ItemExOre("manganeseDust");
+            itemClumpManganese = new ItemExOre("manganeseClump");
+            itemShardManganese = new ItemExOre("manganeseShard");
+            itemDirtyDustManganese = new ItemExOre("manganeseDirtyDust");
             createRegistry(blockOreManganese,itemBlockOreManganese,"manganeseOre");
             createRegistry(blockManganese,itemBlockManganese,"manganeseBlock");
             createRegistry(itemIngotManganese,"manganeseIngot");
@@ -2130,15 +2136,15 @@ public class InitBlocks
         }
         if(registerMeutoite)
         {
-            blockOreMeutoite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"meutoiteOre");
+            blockOreMeutoite = new BlockExOre(Material.ROCK,3.0f,5.0f,"meutoiteOre");
             itemBlockOreMeutoite = new ItemBlockExOre(blockOreMeutoite);
-            blockMeutoite = new BlockEXOre(Material.IRON,3.0f,5.0f,"meutoiteBlock");
+            blockMeutoite = new BlockExOre(Material.IRON,3.0f,5.0f,"meutoiteBlock");
             itemBlockMeutoite = new ItemBlockExOre(blockMeutoite);
-            itemIngotMeutoite = new ItemEXOre("meutoiteIngot");
-            itemDustMeutoite = new ItemEXOre("meutoiteDust");
-            itemClumpMeutoite = new ItemEXOre("meutoiteClump");
-            itemShardMeutoite = new ItemEXOre("meutoiteShard");
-            itemDirtyDustMeutoite = new ItemEXOre("meutoiteDirtyDust");
+            itemIngotMeutoite = new ItemExOre("meutoiteIngot");
+            itemDustMeutoite = new ItemExOre("meutoiteDust");
+            itemClumpMeutoite = new ItemExOre("meutoiteClump");
+            itemShardMeutoite = new ItemExOre("meutoiteShard");
+            itemDirtyDustMeutoite = new ItemExOre("meutoiteDirtyDust");
             createRegistry(blockOreMeutoite,itemBlockOreMeutoite,"meutoiteOre");
             createRegistry(blockMeutoite,itemBlockMeutoite,"meutoiteBlock");
             createRegistry(itemIngotMeutoite,"meutoiteIngot");
@@ -2165,15 +2171,15 @@ public class InitBlocks
         }
         if(registerMidasium)
         {
-            blockOreMidasium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"midasiumOre");
+            blockOreMidasium = new BlockExOre(Material.ROCK,3.0f,5.0f,"midasiumOre");
             itemBlockOreMidasium = new ItemBlockExOre(blockOreMidasium);
-            blockMidasium = new BlockEXOre(Material.IRON,3.0f,5.0f,"midasiumBlock");
+            blockMidasium = new BlockExOre(Material.IRON,3.0f,5.0f,"midasiumBlock");
             itemBlockMidasium = new ItemBlockExOre(blockMidasium);
-            itemIngotMidasium = new ItemEXOre("midasiumIngot");
-            itemDustMidasium = new ItemEXOre("midasiumDust");
-            itemClumpMidasium = new ItemEXOre("midasiumClump");
-            itemShardMidasium = new ItemEXOre("midasiumShard");
-            itemDirtyDustMidasium = new ItemEXOre("midasiumDirtyDust");
+            itemIngotMidasium = new ItemExOre("midasiumIngot");
+            itemDustMidasium = new ItemExOre("midasiumDust");
+            itemClumpMidasium = new ItemExOre("midasiumClump");
+            itemShardMidasium = new ItemExOre("midasiumShard");
+            itemDirtyDustMidasium = new ItemExOre("midasiumDirtyDust");
             createRegistry(blockOreMidasium,itemBlockOreMidasium,"midasiumOre");
             createRegistry(blockMidasium,itemBlockMidasium,"midasiumBlock");
             createRegistry(itemIngotMidasium,"midasiumIngot");
@@ -2200,15 +2206,15 @@ public class InitBlocks
         }
         if(registerMithril)
         {
-            blockOreMithril = new BlockEXOre(Material.ROCK,3.0f,5.0f,"mithrilOre");
+            blockOreMithril = new BlockExOre(Material.ROCK,3.0f,5.0f,"mithrilOre");
             itemBlockOreMithril = new ItemBlockExOre(blockOreMithril);
-            blockMithril = new BlockEXOre(Material.IRON,3.0f,5.0f,"mithrilBlock");
+            blockMithril = new BlockExOre(Material.IRON,3.0f,5.0f,"mithrilBlock");
             itemBlockMithril = new ItemBlockExOre(blockMithril);
-            itemIngotMithril = new ItemEXOre("mithrilIngot");
-            itemDustMithril = new ItemEXOre("mithrilDust");
-            itemClumpMithril = new ItemEXOre("mithrilClump");
-            itemShardMithril = new ItemEXOre("mithrilShard");
-            itemDirtyDustMithril = new ItemEXOre("mithrilDirtyDust");
+            itemIngotMithril = new ItemExOre("mithrilIngot");
+            itemDustMithril = new ItemExOre("mithrilDust");
+            itemClumpMithril = new ItemExOre("mithrilClump");
+            itemShardMithril = new ItemExOre("mithrilShard");
+            itemDirtyDustMithril = new ItemExOre("mithrilDirtyDust");
             createRegistry(blockOreMithril,itemBlockOreMithril,"mithrilOre");
             createRegistry(blockMithril,itemBlockMithril,"mithrilBlock");
             createRegistry(itemIngotMithril,"mithrilIngot");
@@ -2235,15 +2241,15 @@ public class InitBlocks
         }
         if(registerMolybdenum)
         {
-            blockOreMolybdenum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"molybdenumOre");
+            blockOreMolybdenum = new BlockExOre(Material.ROCK,3.0f,5.0f,"molybdenumOre");
             itemBlockOreMolybdenum = new ItemBlockExOre(blockOreMolybdenum);
-            blockMolybdenum = new BlockEXOre(Material.IRON,3.0f,5.0f,"molybdenumBlock");
+            blockMolybdenum = new BlockExOre(Material.IRON,3.0f,5.0f,"molybdenumBlock");
             itemBlockMolybdenum = new ItemBlockExOre(blockMolybdenum);
-            itemIngotMolybdenum = new ItemEXOre("molybdenumIngot");
-            itemDustMolybdenum = new ItemEXOre("molybdenumDust");
-            itemClumpMolybdenum = new ItemEXOre("molybdenumClump");
-            itemShardMolybdenum = new ItemEXOre("molybdenumShard");
-            itemDirtyDustMolybdenum = new ItemEXOre("molybdenumDirtyDust");
+            itemIngotMolybdenum = new ItemExOre("molybdenumIngot");
+            itemDustMolybdenum = new ItemExOre("molybdenumDust");
+            itemClumpMolybdenum = new ItemExOre("molybdenumClump");
+            itemShardMolybdenum = new ItemExOre("molybdenumShard");
+            itemDirtyDustMolybdenum = new ItemExOre("molybdenumDirtyDust");
             createRegistry(blockOreMolybdenum,itemBlockOreMolybdenum,"molybdenumOre");
             createRegistry(blockMolybdenum,itemBlockMolybdenum,"molybdenumBlock");
             createRegistry(itemIngotMolybdenum,"molybdenumIngot");
@@ -2270,15 +2276,15 @@ public class InitBlocks
         }
         if(registerNeodymium)
         {
-            blockOreNeodymium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"neodymiumOre");
+            blockOreNeodymium = new BlockExOre(Material.ROCK,3.0f,5.0f,"neodymiumOre");
             itemBlockOreNeodymium = new ItemBlockExOre(blockOreNeodymium);
-            blockNeodymium = new BlockEXOre(Material.IRON,3.0f,5.0f,"neodymiumBlock");
+            blockNeodymium = new BlockExOre(Material.IRON,3.0f,5.0f,"neodymiumBlock");
             itemBlockNeodymium = new ItemBlockExOre(blockNeodymium);
-            itemIngotNeodymium = new ItemEXOre("neodymiumIngot");
-            itemDustNeodymium = new ItemEXOre("neodymiumDust");
-            itemClumpNeodymium = new ItemEXOre("neodymiumClump");
-            itemShardNeodymium = new ItemEXOre("neodymiumShard");
-            itemDirtyDustNeodymium = new ItemEXOre("neodymiumDirtyDust");
+            itemIngotNeodymium = new ItemExOre("neodymiumIngot");
+            itemDustNeodymium = new ItemExOre("neodymiumDust");
+            itemClumpNeodymium = new ItemExOre("neodymiumClump");
+            itemShardNeodymium = new ItemExOre("neodymiumShard");
+            itemDirtyDustNeodymium = new ItemExOre("neodymiumDirtyDust");
             createRegistry(blockOreNeodymium,itemBlockOreNeodymium,"neodymiumOre");
             createRegistry(blockNeodymium,itemBlockNeodymium,"neodymiumBlock");
             createRegistry(itemIngotNeodymium,"neodymiumIngot");
@@ -2305,15 +2311,15 @@ public class InitBlocks
         }
         if(registerNeptunium)
         {
-            blockOreNeptunium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"neptuniumOre");
+            blockOreNeptunium = new BlockExOre(Material.ROCK,3.0f,5.0f,"neptuniumOre");
             itemBlockOreNeptunium = new ItemBlockExOre(blockOreNeptunium);
-            blockNeptunium = new BlockEXOre(Material.IRON,3.0f,5.0f,"neptuniumBlock");
+            blockNeptunium = new BlockExOre(Material.IRON,3.0f,5.0f,"neptuniumBlock");
             itemBlockNeptunium = new ItemBlockExOre(blockNeptunium);
-            itemIngotNeptunium = new ItemEXOre("neptuniumIngot");
-            itemDustNeptunium = new ItemEXOre("neptuniumDust");
-            itemClumpNeptunium = new ItemEXOre("neptuniumClump");
-            itemShardNeptunium = new ItemEXOre("neptuniumShard");
-            itemDirtyDustNeptunium = new ItemEXOre("neptuniumDirtyDust");
+            itemIngotNeptunium = new ItemExOre("neptuniumIngot");
+            itemDustNeptunium = new ItemExOre("neptuniumDust");
+            itemClumpNeptunium = new ItemExOre("neptuniumClump");
+            itemShardNeptunium = new ItemExOre("neptuniumShard");
+            itemDirtyDustNeptunium = new ItemExOre("neptuniumDirtyDust");
             createRegistry(blockOreNeptunium,itemBlockOreNeptunium,"neptuniumOre");
             createRegistry(blockNeptunium,itemBlockNeptunium,"neptuniumBlock");
             createRegistry(itemIngotNeptunium,"neptuniumIngot");
@@ -2340,15 +2346,15 @@ public class InitBlocks
         }
         if(registerNickel)
         {
-            blockOreNickel = new BlockEXOre(Material.ROCK,3.0f,5.0f,"nickelOre");
+            blockOreNickel = new BlockExOre(Material.ROCK,3.0f,5.0f,"nickelOre");
             itemBlockOreNickel = new ItemBlockExOre(blockOreNickel);
-            blockNickel = new BlockEXOre(Material.IRON,3.0f,5.0f,"nickelBlock");
+            blockNickel = new BlockExOre(Material.IRON,3.0f,5.0f,"nickelBlock");
             itemBlockNickel = new ItemBlockExOre(blockNickel);
-            itemIngotNickel = new ItemEXOre("nickelIngot");
-            itemDustNickel = new ItemEXOre("nickelDust");
-            itemClumpNickel = new ItemEXOre("nickelClump");
-            itemShardNickel = new ItemEXOre("nickelShard");
-            itemDirtyDustNickel = new ItemEXOre("nickelDirtyDust");
+            itemIngotNickel = new ItemExOre("nickelIngot");
+            itemDustNickel = new ItemExOre("nickelDust");
+            itemClumpNickel = new ItemExOre("nickelClump");
+            itemShardNickel = new ItemExOre("nickelShard");
+            itemDirtyDustNickel = new ItemExOre("nickelDirtyDust");
             createRegistry(blockOreNickel,itemBlockOreNickel,"nickelOre");
             createRegistry(blockNickel,itemBlockNickel,"nickelBlock");
             createRegistry(itemIngotNickel,"nickelIngot");
@@ -2375,15 +2381,15 @@ public class InitBlocks
         }
         if(registerNiobium)
         {
-            blockOreNiobium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"niobiumOre");
+            blockOreNiobium = new BlockExOre(Material.ROCK,3.0f,5.0f,"niobiumOre");
             itemBlockOreNiobium = new ItemBlockExOre(blockOreNiobium);
-            blockNiobium = new BlockEXOre(Material.IRON,3.0f,5.0f,"niobiumBlock");
+            blockNiobium = new BlockExOre(Material.IRON,3.0f,5.0f,"niobiumBlock");
             itemBlockNiobium = new ItemBlockExOre(blockNiobium);
-            itemIngotNiobium = new ItemEXOre("niobiumIngot");
-            itemDustNiobium = new ItemEXOre("niobiumDust");
-            itemClumpNiobium = new ItemEXOre("niobiumClump");
-            itemShardNiobium = new ItemEXOre("niobiumShard");
-            itemDirtyDustNiobium = new ItemEXOre("niobiumDirtyDust");
+            itemIngotNiobium = new ItemExOre("niobiumIngot");
+            itemDustNiobium = new ItemExOre("niobiumDust");
+            itemClumpNiobium = new ItemExOre("niobiumClump");
+            itemShardNiobium = new ItemExOre("niobiumShard");
+            itemDirtyDustNiobium = new ItemExOre("niobiumDirtyDust");
             createRegistry(blockOreNiobium,itemBlockOreNiobium,"niobiumOre");
             createRegistry(blockNiobium,itemBlockNiobium,"niobiumBlock");
             createRegistry(itemIngotNiobium,"niobiumIngot");
@@ -2410,11 +2416,11 @@ public class InitBlocks
         }
         if(registerOnyx)
         {
-            blockOreOnyx = new BlockEXOre(Material.ROCK,3.0f,5.0f,"onyxOre",true);
+            blockOreOnyx = new BlockExOre(Material.ROCK,3.0f,5.0f,"onyxOre",true);
             itemBlockOreOnyx = new ItemBlockExOre(blockOreOnyx);
-            blockOnyx = new BlockEXOre(Material.ROCK,3.0f,5.0f,"onyxBlock");
+            blockOnyx = new BlockExOre(Material.ROCK,3.0f,5.0f,"onyxBlock");
             itemBlockOnyx = new ItemBlockExOre(blockOnyx);
-            itemGemOnyx = new ItemEXOre("onyx");
+            itemGemOnyx = new ItemExOre("onyx");
             createRegistry(blockOreOnyx,itemBlockOreOnyx,"onyxOre");
             createRegistry(blockOnyx,itemBlockOnyx,"onyxBlock");
             createRegistry(itemGemOnyx,"onyx");
@@ -2429,15 +2435,15 @@ public class InitBlocks
         }
         if(registerOrichalcum)
         {
-            blockOreOrichalcum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"orichalcumOre");
+            blockOreOrichalcum = new BlockExOre(Material.ROCK,3.0f,5.0f,"orichalcumOre");
             itemBlockOreOrichalcum = new ItemBlockExOre(blockOreOrichalcum);
-            blockOrichalcum = new BlockEXOre(Material.IRON,3.0f,5.0f,"orichalcumBlock");
+            blockOrichalcum = new BlockExOre(Material.IRON,3.0f,5.0f,"orichalcumBlock");
             itemBlockOrichalcum = new ItemBlockExOre(blockOrichalcum);
-            itemIngotOrichalcum = new ItemEXOre("orichalcumIngot");
-            itemDustOrichalcum = new ItemEXOre("orichalcumDust");
-            itemClumpOrichalcum = new ItemEXOre("orichalcumClump");
-            itemShardOrichalcum = new ItemEXOre("orichalcumShard");
-            itemDirtyDustOrichalcum = new ItemEXOre("orichalcumDirtyDust");
+            itemIngotOrichalcum = new ItemExOre("orichalcumIngot");
+            itemDustOrichalcum = new ItemExOre("orichalcumDust");
+            itemClumpOrichalcum = new ItemExOre("orichalcumClump");
+            itemShardOrichalcum = new ItemExOre("orichalcumShard");
+            itemDirtyDustOrichalcum = new ItemExOre("orichalcumDirtyDust");
             createRegistry(blockOreOrichalcum,itemBlockOreOrichalcum,"orichalcumOre");
             createRegistry(blockOrichalcum,itemBlockOrichalcum,"orichalcumBlock");
             createRegistry(itemIngotOrichalcum,"orichalcumIngot");
@@ -2464,15 +2470,15 @@ public class InitBlocks
         }
         if(registerOsmium)
         {
-            blockOreOsmium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"osmiumOre");
+            blockOreOsmium = new BlockExOre(Material.ROCK,3.0f,5.0f,"osmiumOre");
             itemBlockOreOsmium = new ItemBlockExOre(blockOreOsmium);
-            blockOsmium = new BlockEXOre(Material.IRON,3.0f,5.0f,"osmiumBlock");
+            blockOsmium = new BlockExOre(Material.IRON,3.0f,5.0f,"osmiumBlock");
             itemBlockOsmium = new ItemBlockExOre(blockOsmium);
-            itemIngotOsmium = new ItemEXOre("osmiumIngot");
-            itemDustOsmium = new ItemEXOre("osmiumDust");
-            itemClumpOsmium = new ItemEXOre("osmiumClump");
-            itemShardOsmium = new ItemEXOre("osmiumShard");
-            itemDirtyDustOsmium = new ItemEXOre("osmiumDirtyDust");
+            itemIngotOsmium = new ItemExOre("osmiumIngot");
+            itemDustOsmium = new ItemExOre("osmiumDust");
+            itemClumpOsmium = new ItemExOre("osmiumClump");
+            itemShardOsmium = new ItemExOre("osmiumShard");
+            itemDirtyDustOsmium = new ItemExOre("osmiumDirtyDust");
             createRegistry(blockOreOsmium,itemBlockOreOsmium,"osmiumOre");
             createRegistry(blockOsmium,itemBlockOsmium,"osmiumBlock");
             createRegistry(itemIngotOsmium,"osmiumIngot");
@@ -2499,15 +2505,15 @@ public class InitBlocks
         }
         if(registerOureclase)
         {
-            blockOreOureclase = new BlockEXOre(Material.ROCK,3.0f,5.0f,"oureclaseOre");
+            blockOreOureclase = new BlockExOre(Material.ROCK,3.0f,5.0f,"oureclaseOre");
             itemBlockOreOureclase = new ItemBlockExOre(blockOreOureclase);
-            blockOureclase = new BlockEXOre(Material.IRON,3.0f,5.0f,"oureclaseBlock");
+            blockOureclase = new BlockExOre(Material.IRON,3.0f,5.0f,"oureclaseBlock");
             itemBlockOureclase = new ItemBlockExOre(blockOureclase);
-            itemIngotOureclase = new ItemEXOre("oureclaseIngot");
-            itemDustOureclase = new ItemEXOre("oureclaseDust");
-            itemClumpOureclase = new ItemEXOre("oureclaseClump");
-            itemShardOureclase = new ItemEXOre("oureclaseShard");
-            itemDirtyDustOureclase = new ItemEXOre("oureclaseDirtyDust");
+            itemIngotOureclase = new ItemExOre("oureclaseIngot");
+            itemDustOureclase = new ItemExOre("oureclaseDust");
+            itemClumpOureclase = new ItemExOre("oureclaseClump");
+            itemShardOureclase = new ItemExOre("oureclaseShard");
+            itemDirtyDustOureclase = new ItemExOre("oureclaseDirtyDust");
             createRegistry(blockOreOureclase,itemBlockOreOureclase,"oureclaseOre");
             createRegistry(blockOureclase,itemBlockOureclase,"oureclaseBlock");
             createRegistry(itemIngotOureclase,"oureclaseIngot");
@@ -2534,15 +2540,15 @@ public class InitBlocks
         }
         if(registerPalladium)
         {
-            blockOrePalladium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"palladiumOre");
+            blockOrePalladium = new BlockExOre(Material.ROCK,3.0f,5.0f,"palladiumOre");
             itemBlockOrePalladium = new ItemBlockExOre(blockOrePalladium);
-            blockPalladium = new BlockEXOre(Material.IRON,3.0f,5.0f,"palladiumBlock");
+            blockPalladium = new BlockExOre(Material.IRON,3.0f,5.0f,"palladiumBlock");
             itemBlockPalladium = new ItemBlockExOre(blockPalladium);
-            itemIngotPalladium = new ItemEXOre("palladiumIngot");
-            itemDustPalladium = new ItemEXOre("palladiumDust");
-            itemClumpPalladium = new ItemEXOre("palladiumClump");
-            itemShardPalladium = new ItemEXOre("palladiumShard");
-            itemDirtyDustPalladium = new ItemEXOre("palladiumDirtyDust");
+            itemIngotPalladium = new ItemExOre("palladiumIngot");
+            itemDustPalladium = new ItemExOre("palladiumDust");
+            itemClumpPalladium = new ItemExOre("palladiumClump");
+            itemShardPalladium = new ItemExOre("palladiumShard");
+            itemDirtyDustPalladium = new ItemExOre("palladiumDirtyDust");
             createRegistry(blockOrePalladium,itemBlockOrePalladium,"palladiumOre");
             createRegistry(blockPalladium,itemBlockPalladium,"palladiumBlock");
             createRegistry(itemIngotPalladium,"palladiumIngot");
@@ -2569,11 +2575,11 @@ public class InitBlocks
         }
         if(registerPeridot)
         {
-            blockOrePeridot = new BlockEXOre(Material.ROCK,3.0f,5.0f,"peridotOre",true);
+            blockOrePeridot = new BlockExOre(Material.ROCK,3.0f,5.0f,"peridotOre",true);
             itemBlockOrePeridot = new ItemBlockExOre(blockOrePeridot);
-            blockPeridot = new BlockEXOre(Material.ROCK,3.0f,5.0f,"peridotBlock");
+            blockPeridot = new BlockExOre(Material.ROCK,3.0f,5.0f,"peridotBlock");
             itemBlockPeridot = new ItemBlockExOre(blockPeridot);
-            itemGemPeridot = new ItemEXOre("peridot");
+            itemGemPeridot = new ItemExOre("peridot");
             createRegistry(blockOrePeridot,itemBlockOrePeridot,"peridotOre");
             createRegistry(blockPeridot,itemBlockPeridot,"peridotBlock");
             createRegistry(itemGemPeridot,"peridot");
@@ -2588,11 +2594,11 @@ public class InitBlocks
         }
         if(registerPhoenixite)
         {
-            blockOrePhoenixite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"phoenixiteOre",true);
+            blockOrePhoenixite = new BlockExOre(Material.ROCK,3.0f,5.0f,"phoenixiteOre",true);
             itemBlockOrePhoenixite = new ItemBlockExOre(blockOrePhoenixite);
-            blockPhoenixite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"phoenixiteBlock");
+            blockPhoenixite = new BlockExOre(Material.ROCK,3.0f,5.0f,"phoenixiteBlock");
             itemBlockPhoenixite = new ItemBlockExOre(blockPhoenixite);
-            itemGemPhoenixite = new ItemEXOre("phoenixite");
+            itemGemPhoenixite = new ItemExOre("phoenixite");
             createRegistry(blockOrePhoenixite,itemBlockOrePhoenixite,"phoenixiteOre");
             createRegistry(blockPhoenixite,itemBlockPhoenixite,"phoenixiteBlock");
             createRegistry(itemGemPhoenixite,"phoenixite");
@@ -2607,15 +2613,15 @@ public class InitBlocks
         }
         if(registerPlatinum)
         {
-            blockOrePlatinum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"platinumOre");
+            blockOrePlatinum = new BlockExOre(Material.ROCK,3.0f,5.0f,"platinumOre");
             itemBlockOrePlatinum = new ItemBlockExOre(blockOrePlatinum);
-            blockPlatinum = new BlockEXOre(Material.IRON,3.0f,5.0f,"platinumBlock");
+            blockPlatinum = new BlockExOre(Material.IRON,3.0f,5.0f,"platinumBlock");
             itemBlockPlatinum = new ItemBlockExOre(blockPlatinum);
-            itemIngotPlatinum = new ItemEXOre("platinumIngot");
-            itemDustPlatinum = new ItemEXOre("platinumDust");
-            itemClumpPlatinum = new ItemEXOre("platinumClump");
-            itemShardPlatinum = new ItemEXOre("platinumShard");
-            itemDirtyDustPlatinum = new ItemEXOre("platinumDirtyDust");
+            itemIngotPlatinum = new ItemExOre("platinumIngot");
+            itemDustPlatinum = new ItemExOre("platinumDust");
+            itemClumpPlatinum = new ItemExOre("platinumClump");
+            itemShardPlatinum = new ItemExOre("platinumShard");
+            itemDirtyDustPlatinum = new ItemExOre("platinumDirtyDust");
             createRegistry(blockOrePlatinum,itemBlockOrePlatinum,"platinumOre");
             createRegistry(blockPlatinum,itemBlockPlatinum,"platinumBlock");
             createRegistry(itemIngotPlatinum,"platinumIngot");
@@ -2642,15 +2648,15 @@ public class InitBlocks
         }
         if(registerPlutonium)
         {
-            blockOrePlutonium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"plutoniumOre");
+            blockOrePlutonium = new BlockExOre(Material.ROCK,3.0f,5.0f,"plutoniumOre");
             itemBlockOrePlutonium = new ItemBlockExOre(blockOrePlutonium);
-            blockPlutonium = new BlockEXOre(Material.IRON,3.0f,5.0f,"plutoniumBlock");
+            blockPlutonium = new BlockExOre(Material.IRON,3.0f,5.0f,"plutoniumBlock");
             itemBlockPlutonium = new ItemBlockExOre(blockPlutonium);
-            itemIngotPlutonium = new ItemEXOre("plutoniumIngot");
-            itemDustPlutonium = new ItemEXOre("plutoniumDust");
-            itemClumpPlutonium = new ItemEXOre("plutoniumClump");
-            itemShardPlutonium = new ItemEXOre("plutoniumShard");
-            itemDirtyDustPlutonium = new ItemEXOre("plutoniumDirtyDust");
+            itemIngotPlutonium = new ItemExOre("plutoniumIngot");
+            itemDustPlutonium = new ItemExOre("plutoniumDust");
+            itemClumpPlutonium = new ItemExOre("plutoniumClump");
+            itemShardPlutonium = new ItemExOre("plutoniumShard");
+            itemDirtyDustPlutonium = new ItemExOre("plutoniumDirtyDust");
             createRegistry(blockOrePlutonium,itemBlockOrePlutonium,"plutoniumOre");
             createRegistry(blockPlutonium,itemBlockPlutonium,"plutoniumBlock");
             createRegistry(itemIngotPlutonium,"plutoniumIngot");
@@ -2677,15 +2683,15 @@ public class InitBlocks
         }
         if(registerPolonium)
         {
-            blockOrePolonium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"poloniumOre");
+            blockOrePolonium = new BlockExOre(Material.ROCK,3.0f,5.0f,"poloniumOre");
             itemBlockOrePolonium = new ItemBlockExOre(blockOrePolonium);
-            blockPolonium = new BlockEXOre(Material.IRON,3.0f,5.0f,"poloniumBlock");
+            blockPolonium = new BlockExOre(Material.IRON,3.0f,5.0f,"poloniumBlock");
             itemBlockPolonium = new ItemBlockExOre(blockPolonium);
-            itemIngotPolonium = new ItemEXOre("poloniumIngot");
-            itemDustPolonium = new ItemEXOre("poloniumDust");
-            itemClumpPolonium = new ItemEXOre("poloniumClump");
-            itemShardPolonium = new ItemEXOre("poloniumShard");
-            itemDirtyDustPolonium = new ItemEXOre("poloniumDirtyDust");
+            itemIngotPolonium = new ItemExOre("poloniumIngot");
+            itemDustPolonium = new ItemExOre("poloniumDust");
+            itemClumpPolonium = new ItemExOre("poloniumClump");
+            itemShardPolonium = new ItemExOre("poloniumShard");
+            itemDirtyDustPolonium = new ItemExOre("poloniumDirtyDust");
             createRegistry(blockOrePolonium,itemBlockOrePolonium,"poloniumOre");
             createRegistry(blockPolonium,itemBlockPolonium,"poloniumBlock");
             createRegistry(itemIngotPolonium,"poloniumIngot");
@@ -2712,15 +2718,15 @@ public class InitBlocks
         }
         if(registerPromethium)
         {
-            blockOrePromethium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"promethiumOre");
+            blockOrePromethium = new BlockExOre(Material.ROCK,3.0f,5.0f,"promethiumOre");
             itemBlockOrePromethium = new ItemBlockExOre(blockOrePromethium);
-            blockPromethium = new BlockEXOre(Material.IRON,3.0f,5.0f,"promethiumBlock");
+            blockPromethium = new BlockExOre(Material.IRON,3.0f,5.0f,"promethiumBlock");
             itemBlockPromethium = new ItemBlockExOre(blockPromethium);
-            itemIngotPromethium = new ItemEXOre("promethiumIngot");
-            itemDustPromethium = new ItemEXOre("promethiumDust");
-            itemClumpPromethium = new ItemEXOre("promethiumClump");
-            itemShardPromethium = new ItemEXOre("promethiumShard");
-            itemDirtyDustPromethium = new ItemEXOre("promethiumDirtyDust");
+            itemIngotPromethium = new ItemExOre("promethiumIngot");
+            itemDustPromethium = new ItemExOre("promethiumDust");
+            itemClumpPromethium = new ItemExOre("promethiumClump");
+            itemShardPromethium = new ItemExOre("promethiumShard");
+            itemDirtyDustPromethium = new ItemExOre("promethiumDirtyDust");
             createRegistry(blockOrePromethium,itemBlockOrePromethium,"promethiumOre");
             createRegistry(blockPromethium,itemBlockPromethium,"promethiumBlock");
             createRegistry(itemIngotPromethium,"promethiumIngot");
@@ -2745,17 +2751,36 @@ public class InitBlocks
             initOreDict(itemShardPromethium,"shardPromethium");
             initOreDict(itemDirtyDustPromethium,"dirtyDustPromethium");
         }
+        if(registerQuartz)
+        {
+            blockOreQuartz = new BlockExOre(Material.ROCK,3.0f,5.0f,"quartzOre");
+            itemBlockOreQuartz = new ItemBlockExOre(blockOreQuartz);
+            blockQuartz = new BlockExOre(Material.ROCK,3.0f,5.0f,"quartzBlock");
+            itemBlockQuartz = new ItemBlockExOre(blockQuartz);
+            itemGemQuartz = new ItemExOre("quartz");
+            createRegistry(blockOreQuartz,itemBlockOreQuartz,"quartzOre");
+            createRegistry(blockQuartz,itemBlockQuartz,"quartzBlock");
+            createRegistry(itemGemQuartz,"quartz");
+            ForgeRegistries.BLOCKS.register(blockOreQuartz);
+            ForgeRegistries.ITEMS.register(itemBlockOreQuartz);
+            ForgeRegistries.BLOCKS.register(blockQuartz);
+            ForgeRegistries.ITEMS.register(itemBlockQuartz);
+            ForgeRegistries.ITEMS.register(itemGemQuartz);
+            initOreDict(blockOreQuartz,"oreQuartz");
+            initOreDict(blockQuartz,"blockQuartz");
+            initOreDict(itemGemQuartz,"gemQuartz");
+        }
         if(registerRhenium)
         {
-            blockOreRhenium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rheniumOre");
+            blockOreRhenium = new BlockExOre(Material.ROCK,3.0f,5.0f,"rheniumOre");
             itemBlockOreRhenium = new ItemBlockExOre(blockOreRhenium);
-            blockRhenium = new BlockEXOre(Material.IRON,3.0f,5.0f,"rheniumBlock");
+            blockRhenium = new BlockExOre(Material.IRON,3.0f,5.0f,"rheniumBlock");
             itemBlockRhenium = new ItemBlockExOre(blockRhenium);
-            itemIngotRhenium = new ItemEXOre("rheniumIngot");
-            itemDustRhenium = new ItemEXOre("rheniumDust");
-            itemClumpRhenium = new ItemEXOre("rheniumClump");
-            itemShardRhenium = new ItemEXOre("rheniumShard");
-            itemDirtyDustRhenium = new ItemEXOre("rheniumDirtyDust");
+            itemIngotRhenium = new ItemExOre("rheniumIngot");
+            itemDustRhenium = new ItemExOre("rheniumDust");
+            itemClumpRhenium = new ItemExOre("rheniumClump");
+            itemShardRhenium = new ItemExOre("rheniumShard");
+            itemDirtyDustRhenium = new ItemExOre("rheniumDirtyDust");
             createRegistry(blockOreRhenium,itemBlockOreRhenium,"rheniumOre");
             createRegistry(blockRhenium,itemBlockRhenium,"rheniumBlock");
             createRegistry(itemIngotRhenium,"rheniumIngot");
@@ -2782,15 +2807,15 @@ public class InitBlocks
         }
         if(registerRhodium)
         {
-            blockOreRhodium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rhodiumOre");
+            blockOreRhodium = new BlockExOre(Material.ROCK,3.0f,5.0f,"rhodiumOre");
             itemBlockOreRhodium = new ItemBlockExOre(blockOreRhodium);
-            blockRhodium = new BlockEXOre(Material.IRON,3.0f,5.0f,"rhodiumBlock");
+            blockRhodium = new BlockExOre(Material.IRON,3.0f,5.0f,"rhodiumBlock");
             itemBlockRhodium = new ItemBlockExOre(blockRhodium);
-            itemIngotRhodium = new ItemEXOre("rhodiumIngot");
-            itemDustRhodium = new ItemEXOre("rhodiumDust");
-            itemClumpRhodium = new ItemEXOre("rhodiumClump");
-            itemShardRhodium = new ItemEXOre("rhodiumShard");
-            itemDirtyDustRhodium = new ItemEXOre("rhodiumDirtyDust");
+            itemIngotRhodium = new ItemExOre("rhodiumIngot");
+            itemDustRhodium = new ItemExOre("rhodiumDust");
+            itemClumpRhodium = new ItemExOre("rhodiumClump");
+            itemShardRhodium = new ItemExOre("rhodiumShard");
+            itemDirtyDustRhodium = new ItemExOre("rhodiumDirtyDust");
             createRegistry(blockOreRhodium,itemBlockOreRhodium,"rhodiumOre");
             createRegistry(blockRhodium,itemBlockRhodium,"rhodiumBlock");
             createRegistry(itemIngotRhodium,"rhodiumIngot");
@@ -2817,15 +2842,15 @@ public class InitBlocks
         }
         if(registerRubracium)
         {
-            blockOreRubracium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rubraciumOre");
+            blockOreRubracium = new BlockExOre(Material.ROCK,3.0f,5.0f,"rubraciumOre");
             itemBlockOreRubracium = new ItemBlockExOre(blockOreRubracium);
-            blockRubracium = new BlockEXOre(Material.IRON,3.0f,5.0f,"rubraciumBlock");
+            blockRubracium = new BlockExOre(Material.IRON,3.0f,5.0f,"rubraciumBlock");
             itemBlockRubracium = new ItemBlockExOre(blockRubracium);
-            itemIngotRubracium = new ItemEXOre("rubraciumIngot");
-            itemDustRubracium = new ItemEXOre("rubraciumDust");
-            itemClumpRubracium = new ItemEXOre("rubraciumClump");
-            itemShardRubracium = new ItemEXOre("rubraciumShard");
-            itemDirtyDustRubracium = new ItemEXOre("rubraciumDirtyDust");
+            itemIngotRubracium = new ItemExOre("rubraciumIngot");
+            itemDustRubracium = new ItemExOre("rubraciumDust");
+            itemClumpRubracium = new ItemExOre("rubraciumClump");
+            itemShardRubracium = new ItemExOre("rubraciumShard");
+            itemDirtyDustRubracium = new ItemExOre("rubraciumDirtyDust");
             createRegistry(blockOreRubracium,itemBlockOreRubracium,"rubraciumOre");
             createRegistry(blockRubracium,itemBlockRubracium,"rubraciumBlock");
             createRegistry(itemIngotRubracium,"rubraciumIngot");
@@ -2852,11 +2877,11 @@ public class InitBlocks
         }
         if(registerRuby)
         {
-            blockOreRuby = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rubyOre",true);
+            blockOreRuby = new BlockExOre(Material.ROCK,3.0f,5.0f,"rubyOre",true);
             itemBlockOreRuby = new ItemBlockExOre(blockOreRuby);
-            blockRuby = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rubyBlock");
+            blockRuby = new BlockExOre(Material.ROCK,3.0f,5.0f,"rubyBlock");
             itemBlockRuby = new ItemBlockExOre(blockRuby);
-            itemGemRuby = new ItemEXOre("ruby");
+            itemGemRuby = new ItemExOre("ruby");
             createRegistry(blockOreRuby,itemBlockOreRuby,"rubyOre");
             createRegistry(blockRuby,itemBlockRuby,"rubyBlock");
             createRegistry(itemGemRuby,"ruby");
@@ -2871,15 +2896,15 @@ public class InitBlocks
         }
         if(registerRuthenium)
         {
-            blockOreRuthenium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rutheniumOre");
+            blockOreRuthenium = new BlockExOre(Material.ROCK,3.0f,5.0f,"rutheniumOre");
             itemBlockOreRuthenium = new ItemBlockExOre(blockOreRuthenium);
-            blockRuthenium = new BlockEXOre(Material.IRON,3.0f,5.0f,"rutheniumBlock");
+            blockRuthenium = new BlockExOre(Material.IRON,3.0f,5.0f,"rutheniumBlock");
             itemBlockRuthenium = new ItemBlockExOre(blockRuthenium);
-            itemIngotRuthenium = new ItemEXOre("rutheniumIngot");
-            itemDustRuthenium = new ItemEXOre("rutheniumDust");
-            itemClumpRuthenium = new ItemEXOre("rutheniumClump");
-            itemShardRuthenium = new ItemEXOre("rutheniumShard");
-            itemDirtyDustRuthenium = new ItemEXOre("rutheniumDirtyDust");
+            itemIngotRuthenium = new ItemExOre("rutheniumIngot");
+            itemDustRuthenium = new ItemExOre("rutheniumDust");
+            itemClumpRuthenium = new ItemExOre("rutheniumClump");
+            itemShardRuthenium = new ItemExOre("rutheniumShard");
+            itemDirtyDustRuthenium = new ItemExOre("rutheniumDirtyDust");
             createRegistry(blockOreRuthenium,itemBlockOreRuthenium,"rutheniumOre");
             createRegistry(blockRuthenium,itemBlockRuthenium,"rutheniumBlock");
             createRegistry(itemIngotRuthenium,"rutheniumIngot");
@@ -2906,15 +2931,15 @@ public class InitBlocks
         }
         if(registerSanguinite)
         {
-            blockOreSanguinite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sanguiniteOre");
+            blockOreSanguinite = new BlockExOre(Material.ROCK,3.0f,5.0f,"sanguiniteOre");
             itemBlockOreSanguinite = new ItemBlockExOre(blockOreSanguinite);
-            blockSanguinite = new BlockEXOre(Material.IRON,3.0f,5.0f,"sanguiniteBlock");
+            blockSanguinite = new BlockExOre(Material.IRON,3.0f,5.0f,"sanguiniteBlock");
             itemBlockSanguinite = new ItemBlockExOre(blockSanguinite);
-            itemIngotSanguinite = new ItemEXOre("sanguiniteIngot");
-            itemDustSanguinite = new ItemEXOre("sanguiniteDust");
-            itemClumpSanguinite = new ItemEXOre("sanguiniteClump");
-            itemShardSanguinite = new ItemEXOre("sanguiniteShard");
-            itemDirtyDustSanguinite = new ItemEXOre("sanguiniteDirtyDust");
+            itemIngotSanguinite = new ItemExOre("sanguiniteIngot");
+            itemDustSanguinite = new ItemExOre("sanguiniteDust");
+            itemClumpSanguinite = new ItemExOre("sanguiniteClump");
+            itemShardSanguinite = new ItemExOre("sanguiniteShard");
+            itemDirtyDustSanguinite = new ItemExOre("sanguiniteDirtyDust");
             createRegistry(blockOreSanguinite,itemBlockOreSanguinite,"sanguiniteOre");
             createRegistry(blockSanguinite,itemBlockSanguinite,"sanguiniteBlock");
             createRegistry(itemIngotSanguinite,"sanguiniteIngot");
@@ -2941,11 +2966,11 @@ public class InitBlocks
         }
         if(registerSapphire)
         {
-            blockOreSapphire = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sapphireOre",true);
+            blockOreSapphire = new BlockExOre(Material.ROCK,3.0f,5.0f,"sapphireOre",true);
             itemBlockOreSapphire = new ItemBlockExOre(blockOreSapphire);
-            blockSapphire = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sapphireBlock");
+            blockSapphire = new BlockExOre(Material.ROCK,3.0f,5.0f,"sapphireBlock");
             itemBlockSapphire = new ItemBlockExOre(blockSapphire);
-            itemGemSapphire = new ItemEXOre("sapphire");
+            itemGemSapphire = new ItemExOre("sapphire");
             createRegistry(blockOreSapphire,itemBlockOreSapphire,"sapphireOre");
             createRegistry(blockSapphire,itemBlockSapphire,"sapphireBlock");
             createRegistry(itemGemSapphire,"sapphire");
@@ -2960,15 +2985,15 @@ public class InitBlocks
         }
         if(registerShadowIron)
         {
-            blockOreShadowIron = new BlockEXOre(Material.ROCK,3.0f,5.0f,"shadowIronOre");
+            blockOreShadowIron = new BlockExOre(Material.ROCK,3.0f,5.0f,"shadowIronOre");
             itemBlockOreShadowIron = new ItemBlockExOre(blockOreShadowIron);
-            blockShadowIron = new BlockEXOre(Material.IRON,3.0f,5.0f,"shadowIronBlock");
+            blockShadowIron = new BlockExOre(Material.IRON,3.0f,5.0f,"shadowIronBlock");
             itemBlockShadowIron = new ItemBlockExOre(blockShadowIron);
-            itemIngotShadowIron = new ItemEXOre("shadowIronIngot");
-            itemDustShadowIron = new ItemEXOre("shadowIronDust");
-            itemClumpShadowIron = new ItemEXOre("shadowIronClump");
-            itemShardShadowIron = new ItemEXOre("shadowIronShard");
-            itemDirtyDustShadowIron = new ItemEXOre("shadowIronDirtyDust");
+            itemIngotShadowIron = new ItemExOre("shadowIronIngot");
+            itemDustShadowIron = new ItemExOre("shadowIronDust");
+            itemClumpShadowIron = new ItemExOre("shadowIronClump");
+            itemShardShadowIron = new ItemExOre("shadowIronShard");
+            itemDirtyDustShadowIron = new ItemExOre("shadowIronDirtyDust");
             createRegistry(blockOreShadowIron,itemBlockOreShadowIron,"shadowIronOre");
             createRegistry(blockShadowIron,itemBlockShadowIron,"shadowIronBlock");
             createRegistry(itemIngotShadowIron,"shadowIronIngot");
@@ -2995,15 +3020,15 @@ public class InitBlocks
         }
         if(registerSilver)
         {
-            blockOreSilver = new BlockEXOre(Material.ROCK,3.0f,5.0f,"silverOre");
+            blockOreSilver = new BlockExOre(Material.ROCK,3.0f,5.0f,"silverOre");
             itemBlockOreSilver = new ItemBlockExOre(blockOreSilver);
-            blockSilver = new BlockEXOre(Material.IRON,3.0f,5.0f,"silverBlock");
+            blockSilver = new BlockExOre(Material.IRON,3.0f,5.0f,"silverBlock");
             itemBlockSilver = new ItemBlockExOre(blockSilver);
-            itemIngotSilver = new ItemEXOre("silverIngot");
-            itemDustSilver = new ItemEXOre("silverDust");
-            itemClumpSilver = new ItemEXOre("silverClump");
-            itemShardSilver = new ItemEXOre("silverShard");
-            itemDirtyDustSilver = new ItemEXOre("silverDirtyDust");
+            itemIngotSilver = new ItemExOre("silverIngot");
+            itemDustSilver = new ItemExOre("silverDust");
+            itemClumpSilver = new ItemExOre("silverClump");
+            itemShardSilver = new ItemExOre("silverShard");
+            itemDirtyDustSilver = new ItemExOre("silverDirtyDust");
             createRegistry(blockOreSilver,itemBlockOreSilver,"silverOre");
             createRegistry(blockSilver,itemBlockSilver,"silverBlock");
             createRegistry(itemIngotSilver,"silverIngot");
@@ -3030,11 +3055,11 @@ public class InitBlocks
         }
         if(registerSpinel)
         {
-            blockOreSpinel = new BlockEXOre(Material.ROCK,3.0f,5.0f,"spinelOre",true);
+            blockOreSpinel = new BlockExOre(Material.ROCK,3.0f,5.0f,"spinelOre",true);
             itemBlockOreSpinel = new ItemBlockExOre(blockOreSpinel);
-            blockSpinel = new BlockEXOre(Material.ROCK,3.0f,5.0f,"spinelBlock");
+            blockSpinel = new BlockExOre(Material.ROCK,3.0f,5.0f,"spinelBlock");
             itemBlockSpinel = new ItemBlockExOre(blockSpinel);
-            itemGemSpinel = new ItemEXOre("spinel");
+            itemGemSpinel = new ItemExOre("spinel");
             createRegistry(blockOreSpinel,itemBlockOreSpinel,"spinelOre");
             createRegistry(blockSpinel,itemBlockSpinel,"spinelBlock");
             createRegistry(itemGemSpinel,"spinel");
@@ -3049,11 +3074,11 @@ public class InitBlocks
         }
         if(registerSugilite)
         {
-            blockOreSugilite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sugiliteOre",true);
+            blockOreSugilite = new BlockExOre(Material.ROCK,3.0f,5.0f,"sugiliteOre",true);
             itemBlockOreSugilite = new ItemBlockExOre(blockOreSugilite);
-            blockSugilite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sugiliteBlock");
+            blockSugilite = new BlockExOre(Material.ROCK,3.0f,5.0f,"sugiliteBlock");
             itemBlockSugilite = new ItemBlockExOre(blockSugilite);
-            itemGemSugilite = new ItemEXOre("sugilite");
+            itemGemSugilite = new ItemExOre("sugilite");
             createRegistry(blockOreSugilite,itemBlockOreSugilite,"sugiliteOre");
             createRegistry(blockSugilite,itemBlockSugilite,"sugiliteBlock");
             createRegistry(itemGemSugilite,"sugilite");
@@ -3068,15 +3093,15 @@ public class InitBlocks
         }
         if(registerTantalum)
         {
-            blockOreTantalum = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tantalumOre");
+            blockOreTantalum = new BlockExOre(Material.ROCK,3.0f,5.0f,"tantalumOre");
             itemBlockOreTantalum = new ItemBlockExOre(blockOreTantalum);
-            blockTantalum = new BlockEXOre(Material.IRON,3.0f,5.0f,"tantalumBlock");
+            blockTantalum = new BlockExOre(Material.IRON,3.0f,5.0f,"tantalumBlock");
             itemBlockTantalum = new ItemBlockExOre(blockTantalum);
-            itemIngotTantalum = new ItemEXOre("tantalumIngot");
-            itemDustTantalum = new ItemEXOre("tantalumDust");
-            itemClumpTantalum = new ItemEXOre("tantalumClump");
-            itemShardTantalum = new ItemEXOre("tantalumShard");
-            itemDirtyDustTantalum = new ItemEXOre("tantalumDirtyDust");
+            itemIngotTantalum = new ItemExOre("tantalumIngot");
+            itemDustTantalum = new ItemExOre("tantalumDust");
+            itemClumpTantalum = new ItemExOre("tantalumClump");
+            itemShardTantalum = new ItemExOre("tantalumShard");
+            itemDirtyDustTantalum = new ItemExOre("tantalumDirtyDust");
             createRegistry(blockOreTantalum,itemBlockOreTantalum,"tantalumOre");
             createRegistry(blockTantalum,itemBlockTantalum,"tantalumBlock");
             createRegistry(itemIngotTantalum,"tantalumIngot");
@@ -3103,15 +3128,15 @@ public class InitBlocks
         }
         if(registerTartarite)
         {
-            blockOreTartarite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tartariteOre");
+            blockOreTartarite = new BlockExOre(Material.ROCK,3.0f,5.0f,"tartariteOre");
             itemBlockOreTartarite = new ItemBlockExOre(blockOreTartarite);
-            blockTartarite = new BlockEXOre(Material.IRON,3.0f,5.0f,"tartariteBlock");
+            blockTartarite = new BlockExOre(Material.IRON,3.0f,5.0f,"tartariteBlock");
             itemBlockTartarite = new ItemBlockExOre(blockTartarite);
-            itemIngotTartarite = new ItemEXOre("tartariteIngot");
-            itemDustTartarite = new ItemEXOre("tartariteDust");
-            itemClumpTartarite = new ItemEXOre("tartariteClump");
-            itemShardTartarite = new ItemEXOre("tartariteShard");
-            itemDirtyDustTartarite = new ItemEXOre("tartariteDirtyDust");
+            itemIngotTartarite = new ItemExOre("tartariteIngot");
+            itemDustTartarite = new ItemExOre("tartariteDust");
+            itemClumpTartarite = new ItemExOre("tartariteClump");
+            itemShardTartarite = new ItemExOre("tartariteShard");
+            itemDirtyDustTartarite = new ItemExOre("tartariteDirtyDust");
             createRegistry(blockOreTartarite,itemBlockOreTartarite,"tartariteOre");
             createRegistry(blockTartarite,itemBlockTartarite,"tartariteBlock");
             createRegistry(itemIngotTartarite,"tartariteIngot");
@@ -3138,15 +3163,15 @@ public class InitBlocks
         }
         if(registerTechnetium)
         {
-            blockOreTechnetium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"technetiumOre");
+            blockOreTechnetium = new BlockExOre(Material.ROCK,3.0f,5.0f,"technetiumOre");
             itemBlockOreTechnetium = new ItemBlockExOre(blockOreTechnetium);
-            blockTechnetium = new BlockEXOre(Material.IRON,3.0f,5.0f,"technetiumBlock");
+            blockTechnetium = new BlockExOre(Material.IRON,3.0f,5.0f,"technetiumBlock");
             itemBlockTechnetium = new ItemBlockExOre(blockTechnetium);
-            itemIngotTechnetium = new ItemEXOre("technetiumIngot");
-            itemDustTechnetium = new ItemEXOre("technetiumDust");
-            itemClumpTechnetium = new ItemEXOre("technetiumClump");
-            itemShardTechnetium = new ItemEXOre("technetiumShard");
-            itemDirtyDustTechnetium = new ItemEXOre("technetiumDirtyDust");
+            itemIngotTechnetium = new ItemExOre("technetiumIngot");
+            itemDustTechnetium = new ItemExOre("technetiumDust");
+            itemClumpTechnetium = new ItemExOre("technetiumClump");
+            itemShardTechnetium = new ItemExOre("technetiumShard");
+            itemDirtyDustTechnetium = new ItemExOre("technetiumDirtyDust");
             createRegistry(blockOreTechnetium,itemBlockOreTechnetium,"technetiumOre");
             createRegistry(blockTechnetium,itemBlockTechnetium,"technetiumBlock");
             createRegistry(itemIngotTechnetium,"technetiumIngot");
@@ -3173,15 +3198,15 @@ public class InitBlocks
         }
         if(registerThallium)
         {
-            blockOreThallium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"thalliumOre");
+            blockOreThallium = new BlockExOre(Material.ROCK,3.0f,5.0f,"thalliumOre");
             itemBlockOreThallium = new ItemBlockExOre(blockOreThallium);
-            blockThallium = new BlockEXOre(Material.IRON,3.0f,5.0f,"thalliumBlock");
+            blockThallium = new BlockExOre(Material.IRON,3.0f,5.0f,"thalliumBlock");
             itemBlockThallium = new ItemBlockExOre(blockThallium);
-            itemIngotThallium = new ItemEXOre("thalliumIngot");
-            itemDustThallium = new ItemEXOre("thalliumDust");
-            itemClumpThallium = new ItemEXOre("thalliumClump");
-            itemShardThallium = new ItemEXOre("thalliumShard");
-            itemDirtyDustThallium = new ItemEXOre("thalliumDirtyDust");
+            itemIngotThallium = new ItemExOre("thalliumIngot");
+            itemDustThallium = new ItemExOre("thalliumDust");
+            itemClumpThallium = new ItemExOre("thalliumClump");
+            itemShardThallium = new ItemExOre("thalliumShard");
+            itemDirtyDustThallium = new ItemExOre("thalliumDirtyDust");
             createRegistry(blockOreThallium,itemBlockOreThallium,"thalliumOre");
             createRegistry(blockThallium,itemBlockThallium,"thalliumBlock");
             createRegistry(itemIngotThallium,"thalliumIngot");
@@ -3208,15 +3233,15 @@ public class InitBlocks
         }
         if(registerTin)
         {
-            blockOreTin = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tinOre");
+            blockOreTin = new BlockExOre(Material.ROCK,3.0f,5.0f,"tinOre");
             itemBlockOreTin = new ItemBlockExOre(blockOreTin);
-            blockTin = new BlockEXOre(Material.IRON,3.0f,5.0f,"tinBlock");
+            blockTin = new BlockExOre(Material.IRON,3.0f,5.0f,"tinBlock");
             itemBlockTin = new ItemBlockExOre(blockTin);
-            itemIngotTin = new ItemEXOre("tinIngot");
-            itemDustTin = new ItemEXOre("tinDust");
-            itemClumpTin = new ItemEXOre("tinClump");
-            itemShardTin = new ItemEXOre("tinShard");
-            itemDirtyDustTin = new ItemEXOre("tinDirtyDust");
+            itemIngotTin = new ItemExOre("tinIngot");
+            itemDustTin = new ItemExOre("tinDust");
+            itemClumpTin = new ItemExOre("tinClump");
+            itemShardTin = new ItemExOre("tinShard");
+            itemDirtyDustTin = new ItemExOre("tinDirtyDust");
             createRegistry(blockOreTin,itemBlockOreTin,"tinOre");
             createRegistry(blockTin,itemBlockTin,"tinBlock");
             createRegistry(itemIngotTin,"tinIngot");
@@ -3243,15 +3268,15 @@ public class InitBlocks
         }
         if(registerTitanium)
         {
-            blockOreTitanium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"titaniumOre");
+            blockOreTitanium = new BlockExOre(Material.ROCK,3.0f,5.0f,"titaniumOre");
             itemBlockOreTitanium = new ItemBlockExOre(blockOreTitanium);
-            blockTitanium = new BlockEXOre(Material.IRON,3.0f,5.0f,"titaniumBlock");
+            blockTitanium = new BlockExOre(Material.IRON,3.0f,5.0f,"titaniumBlock");
             itemBlockTitanium = new ItemBlockExOre(blockTitanium);
-            itemIngotTitanium = new ItemEXOre("titaniumIngot");
-            itemDustTitanium = new ItemEXOre("titaniumDust");
-            itemClumpTitanium = new ItemEXOre("titaniumClump");
-            itemShardTitanium = new ItemEXOre("titaniumShard");
-            itemDirtyDustTitanium = new ItemEXOre("titaniumDirtyDust");
+            itemIngotTitanium = new ItemExOre("titaniumIngot");
+            itemDustTitanium = new ItemExOre("titaniumDust");
+            itemClumpTitanium = new ItemExOre("titaniumClump");
+            itemShardTitanium = new ItemExOre("titaniumShard");
+            itemDirtyDustTitanium = new ItemExOre("titaniumDirtyDust");
             createRegistry(blockOreTitanium,itemBlockOreTitanium,"titaniumOre");
             createRegistry(blockTitanium,itemBlockTitanium,"titaniumBlock");
             createRegistry(itemIngotTitanium,"titaniumIngot");
@@ -3278,11 +3303,11 @@ public class InitBlocks
         }
         if(registerTopaz)
         {
-            blockOreTopaz = new BlockEXOre(Material.ROCK,3.0f,5.0f,"topazOre",true);
+            blockOreTopaz = new BlockExOre(Material.ROCK,3.0f,5.0f,"topazOre",true);
             itemBlockOreTopaz = new ItemBlockExOre(blockOreTopaz);
-            blockTopaz = new BlockEXOre(Material.ROCK,3.0f,5.0f,"topazBlock");
+            blockTopaz = new BlockExOre(Material.ROCK,3.0f,5.0f,"topazBlock");
             itemBlockTopaz = new ItemBlockExOre(blockTopaz);
-            itemGemTopaz = new ItemEXOre("topaz");
+            itemGemTopaz = new ItemExOre("topaz");
             createRegistry(blockOreTopaz,itemBlockOreTopaz,"topazOre");
             createRegistry(blockTopaz,itemBlockTopaz,"topazBlock");
             createRegistry(itemGemTopaz,"topaz");
@@ -3297,11 +3322,11 @@ public class InitBlocks
         }
         if(registerTourmaline)
         {
-            blockOreTourmaline = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tourmalineOre",true);
+            blockOreTourmaline = new BlockExOre(Material.ROCK,3.0f,5.0f,"tourmalineOre",true);
             itemBlockOreTourmaline = new ItemBlockExOre(blockOreTourmaline);
-            blockTourmaline = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tourmalineBlock");
+            blockTourmaline = new BlockExOre(Material.ROCK,3.0f,5.0f,"tourmalineBlock");
             itemBlockTourmaline = new ItemBlockExOre(blockTourmaline);
-            itemGemTourmaline = new ItemEXOre("tourmaline");
+            itemGemTourmaline = new ItemExOre("tourmaline");
             createRegistry(blockOreTourmaline,itemBlockOreTourmaline,"tourmalineOre");
             createRegistry(blockTourmaline,itemBlockTourmaline,"tourmalineBlock");
             createRegistry(itemGemTourmaline,"tourmaline");
@@ -3316,15 +3341,15 @@ public class InitBlocks
         }
         if(registerTungsten)
         {
-            blockOreTungsten = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tungstenOre");
+            blockOreTungsten = new BlockExOre(Material.ROCK,3.0f,5.0f,"tungstenOre");
             itemBlockOreTungsten = new ItemBlockExOre(blockOreTungsten);
-            blockTungsten = new BlockEXOre(Material.IRON,3.0f,5.0f,"tungstenBlock");
+            blockTungsten = new BlockExOre(Material.IRON,3.0f,5.0f,"tungstenBlock");
             itemBlockTungsten = new ItemBlockExOre(blockTungsten);
-            itemIngotTungsten = new ItemEXOre("tungstenIngot");
-            itemDustTungsten = new ItemEXOre("tungstenDust");
-            itemClumpTungsten = new ItemEXOre("tungstenClump");
-            itemShardTungsten = new ItemEXOre("tungstenShard");
-            itemDirtyDustTungsten = new ItemEXOre("tungstenDirtyDust");
+            itemIngotTungsten = new ItemExOre("tungstenIngot");
+            itemDustTungsten = new ItemExOre("tungstenDust");
+            itemClumpTungsten = new ItemExOre("tungstenClump");
+            itemShardTungsten = new ItemExOre("tungstenShard");
+            itemDirtyDustTungsten = new ItemExOre("tungstenDirtyDust");
             createRegistry(blockOreTungsten,itemBlockOreTungsten,"tungstenOre");
             createRegistry(blockTungsten,itemBlockTungsten,"tungstenBlock");
             createRegistry(itemIngotTungsten,"tungstenIngot");
@@ -3351,15 +3376,15 @@ public class InitBlocks
         }
         if(registerUnobtainium)
         {
-            blockOreUnobtainium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"unobtainiumOre");
+            blockOreUnobtainium = new BlockExOre(Material.ROCK,3.0f,5.0f,"unobtainiumOre");
             itemBlockOreUnobtainium = new ItemBlockExOre(blockOreUnobtainium);
-            blockUnobtainium = new BlockEXOre(Material.IRON,3.0f,5.0f,"unobtainiumBlock");
+            blockUnobtainium = new BlockExOre(Material.IRON,3.0f,5.0f,"unobtainiumBlock");
             itemBlockUnobtainium = new ItemBlockExOre(blockUnobtainium);
-            itemIngotUnobtainium = new ItemEXOre("unobtainiumIngot");
-            itemDustUnobtainium = new ItemEXOre("unobtainiumDust");
-            itemClumpUnobtainium = new ItemEXOre("unobtainiumClump");
-            itemShardUnobtainium = new ItemEXOre("unobtainiumShard");
-            itemDirtyDustUnobtainium = new ItemEXOre("unobtainiumDirtyDust");
+            itemIngotUnobtainium = new ItemExOre("unobtainiumIngot");
+            itemDustUnobtainium = new ItemExOre("unobtainiumDust");
+            itemClumpUnobtainium = new ItemExOre("unobtainiumClump");
+            itemShardUnobtainium = new ItemExOre("unobtainiumShard");
+            itemDirtyDustUnobtainium = new ItemExOre("unobtainiumDirtyDust");
             createRegistry(blockOreUnobtainium,itemBlockOreUnobtainium,"unobtainiumOre");
             createRegistry(blockUnobtainium,itemBlockUnobtainium,"unobtainiumBlock");
             createRegistry(itemIngotUnobtainium,"unobtainiumIngot");
@@ -3386,15 +3411,15 @@ public class InitBlocks
         }
         if(registerUranium)
         {
-            blockOreUranium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"uraniumOre");
+            blockOreUranium = new BlockExOre(Material.ROCK,3.0f,5.0f,"uraniumOre");
             itemBlockOreUranium = new ItemBlockExOre(blockOreUranium);
-            blockUranium = new BlockEXOre(Material.IRON,3.0f,5.0f,"uraniumBlock");
+            blockUranium = new BlockExOre(Material.IRON,3.0f,5.0f,"uraniumBlock");
             itemBlockUranium = new ItemBlockExOre(blockUranium);
-            itemIngotUranium = new ItemEXOre("uraniumIngot");
-            itemDustUranium = new ItemEXOre("uraniumDust");
-            itemClumpUranium = new ItemEXOre("uraniumClump");
-            itemShardUranium = new ItemEXOre("uraniumShard");
-            itemDirtyDustUranium = new ItemEXOre("uraniumDirtyDust");
+            itemIngotUranium = new ItemExOre("uraniumIngot");
+            itemDustUranium = new ItemExOre("uraniumDust");
+            itemClumpUranium = new ItemExOre("uraniumClump");
+            itemShardUranium = new ItemExOre("uraniumShard");
+            itemDirtyDustUranium = new ItemExOre("uraniumDirtyDust");
             createRegistry(blockOreUranium,itemBlockOreUranium,"uraniumOre");
             createRegistry(blockUranium,itemBlockUranium,"uraniumBlock");
             createRegistry(itemIngotUranium,"uraniumIngot");
@@ -3421,15 +3446,15 @@ public class InitBlocks
         }
         if(registerVanadium)
         {
-            blockOreVanadium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"vanadiumOre");
+            blockOreVanadium = new BlockExOre(Material.ROCK,3.0f,5.0f,"vanadiumOre");
             itemBlockOreVanadium = new ItemBlockExOre(blockOreVanadium);
-            blockVanadium = new BlockEXOre(Material.IRON,3.0f,5.0f,"vanadiumBlock");
+            blockVanadium = new BlockExOre(Material.IRON,3.0f,5.0f,"vanadiumBlock");
             itemBlockVanadium = new ItemBlockExOre(blockVanadium);
-            itemIngotVanadium = new ItemEXOre("vanadiumIngot");
-            itemDustVanadium = new ItemEXOre("vanadiumDust");
-            itemClumpVanadium = new ItemEXOre("vanadiumClump");
-            itemShardVanadium = new ItemEXOre("vanadiumShard");
-            itemDirtyDustVanadium = new ItemEXOre("vanadiumDirtyDust");
+            itemIngotVanadium = new ItemExOre("vanadiumIngot");
+            itemDustVanadium = new ItemExOre("vanadiumDust");
+            itemClumpVanadium = new ItemExOre("vanadiumClump");
+            itemShardVanadium = new ItemExOre("vanadiumShard");
+            itemDirtyDustVanadium = new ItemExOre("vanadiumDirtyDust");
             createRegistry(blockOreVanadium,itemBlockOreVanadium,"vanadiumOre");
             createRegistry(blockVanadium,itemBlockVanadium,"vanadiumBlock");
             createRegistry(itemIngotVanadium,"vanadiumIngot");
@@ -3456,15 +3481,15 @@ public class InitBlocks
         }
         if(registerVulcanite)
         {
-            blockOreVulcanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"vulcaniteOre");
+            blockOreVulcanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"vulcaniteOre");
             itemBlockOreVulcanite = new ItemBlockExOre(blockOreVulcanite);
-            blockVulcanite = new BlockEXOre(Material.IRON,3.0f,5.0f,"vulcaniteBlock");
+            blockVulcanite = new BlockExOre(Material.IRON,3.0f,5.0f,"vulcaniteBlock");
             itemBlockVulcanite = new ItemBlockExOre(blockVulcanite);
-            itemIngotVulcanite = new ItemEXOre("vulcaniteIngot");
-            itemDustVulcanite = new ItemEXOre("vulcaniteDust");
-            itemClumpVulcanite = new ItemEXOre("vulcaniteClump");
-            itemShardVulcanite = new ItemEXOre("vulcaniteShard");
-            itemDirtyDustVulcanite = new ItemEXOre("vulcaniteDirtyDust");
+            itemIngotVulcanite = new ItemExOre("vulcaniteIngot");
+            itemDustVulcanite = new ItemExOre("vulcaniteDust");
+            itemClumpVulcanite = new ItemExOre("vulcaniteClump");
+            itemShardVulcanite = new ItemExOre("vulcaniteShard");
+            itemDirtyDustVulcanite = new ItemExOre("vulcaniteDirtyDust");
             createRegistry(blockOreVulcanite,itemBlockOreVulcanite,"vulcaniteOre");
             createRegistry(blockVulcanite,itemBlockVulcanite,"vulcaniteBlock");
             createRegistry(itemIngotVulcanite,"vulcaniteIngot");
@@ -3491,15 +3516,15 @@ public class InitBlocks
         }
         if(registerVyroxeres)
         {
-            blockOreVyroxeres = new BlockEXOre(Material.ROCK,3.0f,5.0f,"vyroxeresOre");
+            blockOreVyroxeres = new BlockExOre(Material.ROCK,3.0f,5.0f,"vyroxeresOre");
             itemBlockOreVyroxeres = new ItemBlockExOre(blockOreVyroxeres);
-            blockVyroxeres = new BlockEXOre(Material.IRON,3.0f,5.0f,"vyroxeresBlock");
+            blockVyroxeres = new BlockExOre(Material.IRON,3.0f,5.0f,"vyroxeresBlock");
             itemBlockVyroxeres = new ItemBlockExOre(blockVyroxeres);
-            itemIngotVyroxeres = new ItemEXOre("vyroxeresIngot");
-            itemDustVyroxeres = new ItemEXOre("vyroxeresDust");
-            itemClumpVyroxeres = new ItemEXOre("vyroxeresClump");
-            itemShardVyroxeres = new ItemEXOre("vyroxeresShard");
-            itemDirtyDustVyroxeres = new ItemEXOre("vyroxeresDirtyDust");
+            itemIngotVyroxeres = new ItemExOre("vyroxeresIngot");
+            itemDustVyroxeres = new ItemExOre("vyroxeresDust");
+            itemClumpVyroxeres = new ItemExOre("vyroxeresClump");
+            itemShardVyroxeres = new ItemExOre("vyroxeresShard");
+            itemDirtyDustVyroxeres = new ItemExOre("vyroxeresDirtyDust");
             createRegistry(blockOreVyroxeres,itemBlockOreVyroxeres,"vyroxeresOre");
             createRegistry(blockVyroxeres,itemBlockVyroxeres,"vyroxeresBlock");
             createRegistry(itemIngotVyroxeres,"vyroxeresIngot");
@@ -3526,15 +3551,15 @@ public class InitBlocks
         }
         if(registerYellorite)
         {
-            blockOreYellorite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"yelloriteOre");
+            blockOreYellorite = new BlockExOre(Material.ROCK,3.0f,5.0f,"yelloriteOre");
             itemBlockOreYellorite = new ItemBlockExOre(blockOreYellorite);
-            blockYellorite = new BlockEXOre(Material.IRON,3.0f,5.0f,"yelloriteBlock");
+            blockYellorite = new BlockExOre(Material.IRON,3.0f,5.0f,"yelloriteBlock");
             itemBlockYellorite = new ItemBlockExOre(blockYellorite);
-            itemIngotYellorite = new ItemEXOre("yelloriteIngot");
-            itemDustYellorite = new ItemEXOre("yelloriteDust");
-            itemClumpYellorite = new ItemEXOre("yelloriteClump");
-            itemShardYellorite = new ItemEXOre("yelloriteShard");
-            itemDirtyDustYellorite = new ItemEXOre("yelloriteDirtyDust");
+            itemIngotYellorite = new ItemExOre("yelloriteIngot");
+            itemDustYellorite = new ItemExOre("yelloriteDust");
+            itemClumpYellorite = new ItemExOre("yelloriteClump");
+            itemShardYellorite = new ItemExOre("yelloriteShard");
+            itemDirtyDustYellorite = new ItemExOre("yelloriteDirtyDust");
             createRegistry(blockOreYellorite,itemBlockOreYellorite,"yelloriteOre");
             createRegistry(blockYellorite,itemBlockYellorite,"yelloriteBlock");
             createRegistry(itemIngotYellorite,"yelloriteIngot");
@@ -3568,15 +3593,15 @@ public class InitBlocks
         }
         if(registerZinc)
         {
-            blockOreZinc = new BlockEXOre(Material.ROCK,3.0f,5.0f,"zincOre");
+            blockOreZinc = new BlockExOre(Material.ROCK,3.0f,5.0f,"zincOre");
             itemBlockOreZinc = new ItemBlockExOre(blockOreZinc);
-            blockZinc = new BlockEXOre(Material.IRON,3.0f,5.0f,"zincBlock");
+            blockZinc = new BlockExOre(Material.IRON,3.0f,5.0f,"zincBlock");
             itemBlockZinc = new ItemBlockExOre(blockZinc);
-            itemIngotZinc = new ItemEXOre("zincIngot");
-            itemDustZinc = new ItemEXOre("zincDust");
-            itemClumpZinc = new ItemEXOre("zincClump");
-            itemShardZinc = new ItemEXOre("zincShard");
-            itemDirtyDustZinc = new ItemEXOre("zincDirtyDust");
+            itemIngotZinc = new ItemExOre("zincIngot");
+            itemDustZinc = new ItemExOre("zincDust");
+            itemClumpZinc = new ItemExOre("zincClump");
+            itemShardZinc = new ItemExOre("zincShard");
+            itemDirtyDustZinc = new ItemExOre("zincDirtyDust");
             createRegistry(blockOreZinc,itemBlockOreZinc,"zincOre");
             createRegistry(blockZinc,itemBlockZinc,"zincBlock");
             createRegistry(itemIngotZinc,"zincIngot");
@@ -3603,15 +3628,15 @@ public class InitBlocks
         }
         if(registerZirconium)
         {
-            blockOreZirconium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"zirconiumOre");
+            blockOreZirconium = new BlockExOre(Material.ROCK,3.0f,5.0f,"zirconiumOre");
             itemBlockOreZirconium = new ItemBlockExOre(blockOreZirconium);
-            blockZirconium = new BlockEXOre(Material.IRON,3.0f,5.0f,"zirconiumBlock");
+            blockZirconium = new BlockExOre(Material.IRON,3.0f,5.0f,"zirconiumBlock");
             itemBlockZirconium = new ItemBlockExOre(blockZirconium);
-            itemIngotZirconium = new ItemEXOre("zirconiumIngot");
-            itemDustZirconium = new ItemEXOre("zirconiumDust");
-            itemClumpZirconium = new ItemEXOre("zirconiumClump");
-            itemShardZirconium = new ItemEXOre("zirconiumShard");
-            itemDirtyDustZirconium = new ItemEXOre("zirconiumDirtyDust");
+            itemIngotZirconium = new ItemExOre("zirconiumIngot");
+            itemDustZirconium = new ItemExOre("zirconiumDust");
+            itemClumpZirconium = new ItemExOre("zirconiumClump");
+            itemShardZirconium = new ItemExOre("zirconiumShard");
+            itemDirtyDustZirconium = new ItemExOre("zirconiumDirtyDust");
             createRegistry(blockOreZirconium,itemBlockOreZirconium,"zirconiumOre");
             createRegistry(blockZirconium,itemBlockZirconium,"zirconiumBlock");
             createRegistry(itemIngotZirconium,"zirconiumIngot");
