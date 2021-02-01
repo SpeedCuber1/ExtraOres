@@ -9,7 +9,7 @@ public class ExOreWorldGenConfig
     public static void init(ForgeConfigSpec.Builder builder)
     {
         builder.comment("Ore Gen Config");
-        veinSize = builder.comment("Size of Ore Veins").defineInRange("Vein Size",10,1,20);
-        spawnRate = builder.comment("Ore Spawn Rate").defineInRange("Spawn Rate",30,10,100);
+        veinSize = builder.comment("Size of Ore Veins").defineInRange("Vein Size",8,1,20);
+        spawnRate = builder.comment("Ore Spawn Rate").defineInRange("Spawn Rate",20,10,100);
     }
 }
