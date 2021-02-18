@@ -95,6 +95,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> oreVulcanite = tag("ores/vulcanite");
     public static final Tags.IOptionalNamedTag<Item> oreVyroxeres = tag("ores/vyroxeres");
     public static final Tags.IOptionalNamedTag<Item> oreYellorite = tag("ores/yellorite");
+    public static final Tags.IOptionalNamedTag<Item> oreYellorium = tag("ores/yellorium");
     public static final Tags.IOptionalNamedTag<Item> oreZinc = tag("ores/zinc");
     public static final Tags.IOptionalNamedTag<Item> oreZirconium = tag("ores/zirconium");
     //Blocks
@@ -185,6 +186,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> blockVulcanite = tag("storage_blocks/vulcanite");
     public static final Tags.IOptionalNamedTag<Item> blockVyroxeres = tag("storage_blocks/vyroxeres");
     public static final Tags.IOptionalNamedTag<Item> blockYellorite = tag("storage_blocks/yellorite");
+    public static final Tags.IOptionalNamedTag<Item> blockYellorium = tag("storage_blocks/yellorium");
     public static final Tags.IOptionalNamedTag<Item> blockZinc = tag("storage_blocks/zinc");
     public static final Tags.IOptionalNamedTag<Item> blockZirconium = tag("storage_blocks/zirconium");
     //Ingots
@@ -257,6 +259,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> ingotVulcanite = tag("ingots/vulcanite");
     public static final Tags.IOptionalNamedTag<Item> ingotVyroxeres = tag("ingots/vyroxeres");
     public static final Tags.IOptionalNamedTag<Item> ingotYellorite = tag("ingots/yellorite");
+    public static final Tags.IOptionalNamedTag<Item> ingotYellorium = tag("ingots/yellorium");
     public static final Tags.IOptionalNamedTag<Item> ingotZinc = tag("ingots/zinc");
     public static final Tags.IOptionalNamedTag<Item> ingotZirconium = tag("ingots/zirconium");
     //Dusts

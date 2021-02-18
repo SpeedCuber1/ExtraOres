@@ -102,6 +102,7 @@ public class ExOreBlockTag extends ForgeBlockTagsProvider
         getOrCreateBuilder(BlockTagList.oreVulcanite).add(BlockList.blockOreVulcanite);
         getOrCreateBuilder(BlockTagList.oreVyroxeres).add(BlockList.blockOreVyroxeres);
         getOrCreateBuilder(BlockTagList.oreYellorite).add(BlockList.blockOreYellorite);
+        getOrCreateBuilder(BlockTagList.oreYellorium).add(BlockList.blockOreYellorite);
         getOrCreateBuilder(BlockTagList.oreZinc).add(BlockList.blockOreZinc);
         getOrCreateBuilder(BlockTagList.oreZirconium).add(BlockList.blockOreZirconium);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreAdamantine);
@@ -190,6 +191,7 @@ public class ExOreBlockTag extends ForgeBlockTagsProvider
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreVulcanite);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreVyroxeres);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreYellorite);
+        getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreYellorium);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreZinc);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreZirconium);
         //Blocks
@@ -279,6 +281,7 @@ public class ExOreBlockTag extends ForgeBlockTagsProvider
         getOrCreateBuilder(BlockTagList.blockVulcanite).add(BlockList.blockVulcanite);
         getOrCreateBuilder(BlockTagList.blockVyroxeres).add(BlockList.blockVyroxeres);
         getOrCreateBuilder(BlockTagList.blockYellorite).add(BlockList.blockYellorite);
+        getOrCreateBuilder(BlockTagList.blockYellorium).add(BlockList.blockYellorite);
         getOrCreateBuilder(BlockTagList.blockZinc).add(BlockList.blockZinc);
         getOrCreateBuilder(BlockTagList.blockZirconium).add(BlockList.blockZirconium);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockAdamantine);
@@ -367,6 +370,7 @@ public class ExOreBlockTag extends ForgeBlockTagsProvider
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockVulcanite);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockVyroxeres);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockYellorite);
+        getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockYellorium);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockZinc);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockZirconium);
     }
