@@ -422,7 +422,7 @@ public class EXOreWorldGen implements IWorldGenerator
         }
         if(InitBlocks.registerTanzanite)
         {
-            this.tanzaniteOre = new EXOreWorldGenMinable(InitBlocks.blockTanzanite.getDefaultState(), 4);
+            this.tanzaniteOre = new EXOreWorldGenMinable(InitBlocks.blockOreTanzanite.getDefaultState(), 4);
         }
         if(InitBlocks.registerTartarite)
         {
