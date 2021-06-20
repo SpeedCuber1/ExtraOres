@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:agate",
+  "display": {
+    "icon": {
+      "item": "extraores:amethystore"
+    },
+    "title": {
+      "translate": "Demystify Your Life"
+    },
+    "description": {
+      "translate": "Mine Amethyst Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "amethyst": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:amethyst"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "amethyst"
+    ]
+  ]
+}

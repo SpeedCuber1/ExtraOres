@@ -2,15 +2,21 @@ package com.tylerh.extraores.Util;
 
 import net.minecraftforge.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by Tyler on 4/29/2016.
  */
 public class LogHelper
 {
+    private static Logger logger;
+    public static void initLog(Logger log)
+    {
+        logger = log;
+    }
     public static void log(Level logLevel, Object object)
     {
-        FMLLog.log(ModInfo.MOD_NAME, logLevel, String.valueOf(object));
+        logger.log(logLevel,object);
     }
 
     public static void all(Object object)

@@ -26,6 +26,7 @@ public class ExtraOres
     public void preInit(FMLPreInitializationEvent event)
     {
         proxy.preInit(event);
+        LogHelper.initLog(event.getModLog());
         LogHelper.info("Extra Ores has finished Pre-Initialization");
     }
     @EventHandler

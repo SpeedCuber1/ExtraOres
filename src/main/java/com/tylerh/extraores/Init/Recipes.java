@@ -449,6 +449,13 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerAquamarine)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":aquamarineBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if (InitBlocks.registerAstralSilver)
         {
             //Smelting
@@ -1814,6 +1821,13 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerIolite)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":ioliteBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if(InitBlocks.registerIridium)
         {
             //Smelting
@@ -1955,6 +1969,13 @@ public class Recipes
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustKalendrite).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
+        }
+        if(InitBlocks.registerKyanite)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":kyaniteBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
         }
         if (InitBlocks.registerLead)
         {
@@ -2671,6 +2692,13 @@ public class Recipes
         {
             //Normal Crafting
             location = ModInfo.MOD_ID + ":onyxBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
+        if(InitBlocks.registerOpal)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":opalBlock";
             registerHelper(location,"Compress");
             registerHelper(location,"Decompress");
         }
@@ -3747,6 +3775,13 @@ public class Recipes
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
         }
+        if(InitBlocks.registerTanzanite)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":tanzaniteBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
+        }
         if(InitBlocks.registerTartarite)
         {
             //Smelting
@@ -4144,6 +4179,13 @@ public class Recipes
                 tag.setTag("output", new ItemStack(InitBlocks.itemDustTungsten).writeToNBT(new NBTTagCompound()));
                 FMLInterModComms.sendMessage("mekanism","EnrichmentChamberRecipe",tag);
             }
+        }
+        if(InitBlocks.registerTurquoise)
+        {
+            //Normal Crafting
+            location = ModInfo.MOD_ID + ":turquoiseBlock";
+            registerHelper(location,"Compress");
+            registerHelper(location,"Decompress");
         }
         if (InitBlocks.registerUnobtainium)
         {

@@ -94,6 +94,15 @@ public class EXOreRender
             location = new ResourceLocation("extraores:angmallenBlock");
             Register(itemBlockAngmallen,location.toString());
         }
+        if(InitBlocks.registerAquamarine)
+        {
+            Item itemBlockAquamarine = Item.getItemFromBlock(InitBlocks.blockOreAquamarine);
+            ResourceLocation location = new ResourceLocation("extraores:aquamarineOre");
+            Register(itemBlockAquamarine,location.toString());
+            itemBlockAquamarine = Item.getItemFromBlock(InitBlocks.blockAquamarine);
+            location = new ResourceLocation("extraores:aquamarineBlock");
+            Register(itemBlockAquamarine,location.toString());
+        }
         if(InitBlocks.registerAstralSilver)
         {
             Item itemBlockAstralSilver = Item.getItemFromBlock(InitBlocks.blockOreAstralSilver);
@@ -310,6 +319,15 @@ public class EXOreRender
             location = new ResourceLocation("extraores:inolashiteBlock");
             Register(itemBlockInolashite,location.toString());
         }
+        if(InitBlocks.registerIolite)
+        {
+            Item itemBlockIolite = Item.getItemFromBlock(InitBlocks.blockOreIolite);
+            ResourceLocation location = new ResourceLocation("extraores:ioliteOre");
+            Register(itemBlockIolite,location.toString());
+            itemBlockIolite = Item.getItemFromBlock(InitBlocks.blockIolite);
+            location = new ResourceLocation("extraores:ioliteBlock");
+            Register(itemBlockIolite,location.toString());
+        }
         if(InitBlocks.registerIridium)
         {
             Item itemBlockIridium = Item.getItemFromBlock(InitBlocks.blockOreIridium);
@@ -345,6 +363,15 @@ public class EXOreRender
             itemBlockKalendrite = Item.getItemFromBlock(InitBlocks.blockKalendrite);
             location = new ResourceLocation("extraores:kalendriteBlock");
             Register(itemBlockKalendrite,location.toString());
+        }
+        if(InitBlocks.registerKyanite)
+        {
+            Item itemBlockKyanite = Item.getItemFromBlock(InitBlocks.blockOreKyanite);
+            ResourceLocation location = new ResourceLocation("extraores:kyaniteOre");
+            Register(itemBlockKyanite,location.toString());
+            itemBlockKyanite = Item.getItemFromBlock(InitBlocks.blockKyanite);
+            location = new ResourceLocation("extraores:kyaniteBlock");
+            Register(itemBlockKyanite,location.toString());
         }
         if(InitBlocks.registerLead)
         {
@@ -462,6 +489,15 @@ public class EXOreRender
             itemBlockOnyx = Item.getItemFromBlock(InitBlocks.blockOnyx);
             location = new ResourceLocation("extraores:onyxBlock");
             Register(itemBlockOnyx,location.toString());
+        }
+        if(InitBlocks.registerOpal)
+        {
+            Item itemBlockOpal = Item.getItemFromBlock(InitBlocks.blockOreOpal);
+            ResourceLocation location = new ResourceLocation("extraores:opalOre");
+            Register(itemBlockOpal,location.toString());
+            itemBlockOpal = Item.getItemFromBlock(InitBlocks.blockOpal);
+            location = new ResourceLocation("extraores:opalBlock");
+            Register(itemBlockOpal,location.toString());
         }
         if(InitBlocks.registerOrichalcum)
         {
@@ -670,6 +706,15 @@ public class EXOreRender
             location = new ResourceLocation("extraores:tantalumBlock");
             Register(itemBlockTantalum,location.toString());
         }
+        if(InitBlocks.registerTanzanite)
+        {
+            Item itemBlockTanzanite = Item.getItemFromBlock(InitBlocks.blockOreTanzanite);
+            ResourceLocation location = new ResourceLocation("extraores:tanzaniteOre");
+            Register(itemBlockTanzanite,location.toString());
+            itemBlockTanzanite = Item.getItemFromBlock(InitBlocks.blockTanzanite);
+            location = new ResourceLocation("extraores:tanzaniteBlock");
+            Register(itemBlockTanzanite,location.toString());
+        }
         if(InitBlocks.registerTartarite)
         {
             Item itemBlockTartarite = Item.getItemFromBlock(InitBlocks.blockOreTartarite);
@@ -741,6 +786,15 @@ public class EXOreRender
             itemBlockTungsten = Item.getItemFromBlock(InitBlocks.blockTungsten);
             location = new ResourceLocation("extraores:tungstenBlock");
             Register(itemBlockTungsten,location.toString());
+        }
+        if(InitBlocks.registerTurquoise)
+        {
+            Item itemBlockTurquoise = Item.getItemFromBlock(InitBlocks.blockOreTurquoise);
+            ResourceLocation location = new ResourceLocation("extraores:turquoiseOre");
+            Register(itemBlockTurquoise,location.toString());
+            itemBlockTurquoise = Item.getItemFromBlock(InitBlocks.blockTurquoise);
+            location = new ResourceLocation("extraores:turquoiseBlock");
+            Register(itemBlockTurquoise,location.toString());
         }
         if(InitBlocks.registerUnobtainium)
         {
@@ -909,6 +963,11 @@ public class EXOreRender
             Register(InitBlocks.itemShardAngmallen,location.toString());
             location = new ResourceLocation("extraores:angmallendirtydust");
             Register(InitBlocks.itemDirtyDustAngmallen,location.toString());
+        }
+        if(InitBlocks.registerAquamarine)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:aquamarine");
+            Register(InitBlocks.itemGemAquamarine,location.toString());
         }
         if(InitBlocks.registerAstralSilver)
         {
@@ -1198,6 +1257,11 @@ public class EXOreRender
             location = new ResourceLocation("extraores:inolashitedirtydust");
             Register(InitBlocks.itemDirtyDustInolashite,location.toString());
         }
+        if(InitBlocks.registerIolite)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:iolite");
+            Register(InitBlocks.itemGemIolite,location.toString());
+        }
         if(InitBlocks.registerIridium)
         {
             ResourceLocation location = new ResourceLocation("extraores:iridiumIngot");
@@ -1233,6 +1297,11 @@ public class EXOreRender
             Register(InitBlocks.itemShardKalendrite,location.toString());
             location = new ResourceLocation("extraores:kalendritedirtydust");
             Register(InitBlocks.itemDirtyDustKalendrite,location.toString());
+        }
+        if(InitBlocks.registerKyanite)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:kyanite");
+            Register(InitBlocks.itemGemKyanite,location.toString());
         }
         if(InitBlocks.registerLead)
         {
@@ -1386,6 +1455,11 @@ public class EXOreRender
         {
             ResourceLocation location = new ResourceLocation("extraores:onyx");
             Register(InitBlocks.itemGemOnyx,location.toString());
+        }
+        if(InitBlocks.registerOpal)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:opal");
+            Register(InitBlocks.itemGemOpal,location.toString());
         }
         if(InitBlocks.registerOrichalcum)
         {
@@ -1630,6 +1704,11 @@ public class EXOreRender
             location = new ResourceLocation("extraores:tantalumdirtydust");
             Register(InitBlocks.itemDirtyDustTantalum,location.toString());
         }
+        if(InitBlocks.registerTanzanite)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:tanzanite");
+            Register(InitBlocks.itemGemTanzanite,location.toString());
+        }
         if(InitBlocks.registerTartarite)
         {
             ResourceLocation location = new ResourceLocation("extraores:tartariteIngot");
@@ -1717,6 +1796,11 @@ public class EXOreRender
             Register(InitBlocks.itemShardTungsten,location.toString());
             location = new ResourceLocation("extraores:tungstendirtydust");
             Register(InitBlocks.itemDirtyDustTungsten,location.toString());
+        }
+        if(InitBlocks.registerTurquoise)
+        {
+            ResourceLocation location = new ResourceLocation("extraores:turquoise");
+            Register(InitBlocks.itemGemTurquoise,location.toString());
         }
         if(InitBlocks.registerUnobtainium)
         {

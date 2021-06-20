@@ -26,6 +26,7 @@ public class InitBlocks
     public static boolean registerAmetrine;
     public static boolean registerAmordrine;
     public static boolean registerAngmallen;
+    public static boolean registerAquamarine;
     public static boolean registerAstralSilver;
     public static boolean registerAtlarus;
     public static boolean registerBismuth;
@@ -50,10 +51,12 @@ public class InitBlocks
     public static boolean registerIndium;
     public static boolean registerInfuscolium;
     public static boolean registerInolashite;
+    public static boolean registerIolite;
     public static boolean registerIridium;
     public static boolean registerJade;
     public static boolean registerJasper;
     public static boolean registerKalendrite;
+    public static boolean registerKyanite;
     public static boolean registerLead;
     public static boolean registerLemurite;
     public static boolean registerMalachite;
@@ -67,6 +70,7 @@ public class InitBlocks
     public static boolean registerNickel;
     public static boolean registerNiobium;
     public static boolean registerOnyx;
+    public static boolean registerOpal;
     public static boolean registerOrichalcum;
     public static boolean registerOsmium;
     public static boolean registerOureclase;
@@ -90,6 +94,7 @@ public class InitBlocks
     public static boolean registerSpinel;
     public static boolean registerSugilite;
     public static boolean registerTantalum;
+    public static boolean registerTanzanite;
     public static boolean registerTartarite;
     public static boolean registerTechnetium;
     public static boolean registerThallium;
@@ -98,6 +103,7 @@ public class InitBlocks
     public static boolean registerTopaz;
     public static boolean registerTourmaline;
     public static boolean registerTungsten;
+    public static boolean registerTurquoise;
     public static boolean registerUnobtainium;
     public static boolean registerUranium;
     public static boolean registerVanadium;
@@ -116,6 +122,7 @@ public class InitBlocks
     public static Block blockOreAmetrine;
     public static Block blockOreAmordrine;
     public static Block blockOreAngmallen;
+    public static Block blockOreAquamarine;
     public static Block blockOreAstralSilver;
     public static Block blockOreAtlarus;
     public static Block blockOreBismuth;
@@ -140,10 +147,12 @@ public class InitBlocks
     public static Block blockOreIndium;
     public static Block blockOreInfuscolium;
     public static Block blockOreInolashite;
+    public static Block blockOreIolite;
     public static Block blockOreIridium;
     public static Block blockOreJade;
     public static Block blockOreJasper;
     public static Block blockOreKalendrite;
+    public static Block blockOreKyanite;
     public static Block blockOreLead;
     public static Block blockOreLemurite;
     public static Block blockOreMalachite;
@@ -157,6 +166,7 @@ public class InitBlocks
     public static Block blockOreNickel;
     public static Block blockOreNiobium;
     public static Block blockOreOnyx;
+    public static Block blockOreOpal;
     public static Block blockOreOrichalcum;
     public static Block blockOreOsmium;
     public static Block blockOreOureclase;
@@ -180,6 +190,7 @@ public class InitBlocks
     public static Block blockOreSpinel;
     public static Block blockOreSugilite;
     public static Block blockOreTantalum;
+    public static Block blockOreTanzanite;
     public static Block blockOreTartarite;
     public static Block blockOreTechnetium;
     public static Block blockOreThallium;
@@ -188,6 +199,7 @@ public class InitBlocks
     public static Block blockOreTopaz;
     public static Block blockOreTourmaline;
     public static Block blockOreTungsten;
+    public static Block blockOreTurquoise;
     public static Block blockOreUnobtainium;
     public static Block blockOreUranium;
     public static Block blockOreVanadium;
@@ -206,6 +218,7 @@ public class InitBlocks
     public static Block blockAmetrine;
     public static Block blockAmordrine;
     public static Block blockAngmallen;
+    public static Block blockAquamarine;
     public static Block blockAstralSilver;
     public static Block blockAtlarus;
     public static Block blockBismuth;
@@ -230,10 +243,12 @@ public class InitBlocks
     public static Block blockIndium;
     public static Block blockInfuscolium;
     public static Block blockInolashite;
+    public static Block blockIolite;
     public static Block blockIridium;
     public static Block blockJade;
     public static Block blockJasper;
     public static Block blockKalendrite;
+    public static Block blockKyanite;
     public static Block blockLead;
     public static Block blockLemurite;
     public static Block blockMalachite;
@@ -247,6 +262,7 @@ public class InitBlocks
     public static Block blockNickel;
     public static Block blockNiobium;
     public static Block blockOnyx;
+    public static Block blockOpal;
     public static Block blockOrichalcum;
     public static Block blockOsmium;
     public static Block blockOureclase;
@@ -270,6 +286,7 @@ public class InitBlocks
     public static Block blockSpinel;
     public static Block blockSugilite;
     public static Block blockTantalum;
+    public static Block blockTanzanite;
     public static Block blockTartarite;
     public static Block blockTechnetium;
     public static Block blockThallium;
@@ -278,6 +295,7 @@ public class InitBlocks
     public static Block blockTopaz;
     public static Block blockTourmaline;
     public static Block blockTungsten;
+    public static Block blockTurquoise;
     public static Block blockUnobtainium;
     public static Block blockUranium;
     public static Block blockVanadium;
@@ -296,6 +314,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOreAmetrine;
     public static ItemBlock itemBlockOreAmordrine;
     public static ItemBlock itemBlockOreAngmallen;
+    public static ItemBlock itemBlockOreAquamarine;
     public static ItemBlock itemBlockOreAstralSilver;
     public static ItemBlock itemBlockOreAtlarus;
     public static ItemBlock itemBlockOreBismuth;
@@ -320,10 +339,12 @@ public class InitBlocks
     public static ItemBlock itemBlockOreIndium;
     public static ItemBlock itemBlockOreInfuscolium;
     public static ItemBlock itemBlockOreInolashite;
+    public static ItemBlock itemBlockOreIolite;
     public static ItemBlock itemBlockOreIridium;
     public static ItemBlock itemBlockOreJade;
     public static ItemBlock itemBlockOreJasper;
     public static ItemBlock itemBlockOreKalendrite;
+    public static ItemBlock itemBlockOreKyanite;
     public static ItemBlock itemBlockOreLead;
     public static ItemBlock itemBlockOreLemurite;
     public static ItemBlock itemBlockOreMalachite;
@@ -337,6 +358,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOreNickel;
     public static ItemBlock itemBlockOreNiobium;
     public static ItemBlock itemBlockOreOnyx;
+    public static ItemBlock itemBlockOreOpal;
     public static ItemBlock itemBlockOreOrichalcum;
     public static ItemBlock itemBlockOreOsmium;
     public static ItemBlock itemBlockOreOureclase;
@@ -360,6 +382,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOreSpinel;
     public static ItemBlock itemBlockOreSugilite;
     public static ItemBlock itemBlockOreTantalum;
+    public static ItemBlock itemBlockOreTanzanite;
     public static ItemBlock itemBlockOreTartarite;
     public static ItemBlock itemBlockOreTechnetium;
     public static ItemBlock itemBlockOreThallium;
@@ -368,6 +391,7 @@ public class InitBlocks
     public static ItemBlock itemBlockOreTopaz;
     public static ItemBlock itemBlockOreTourmaline;
     public static ItemBlock itemBlockOreTungsten;
+    public static ItemBlock itemBlockOreTurquoise;
     public static ItemBlock itemBlockOreUnobtainium;
     public static ItemBlock itemBlockOreUranium;
     public static ItemBlock itemBlockOreVanadium;
@@ -386,6 +410,7 @@ public class InitBlocks
     public static ItemBlock itemBlockAmetrine;
     public static ItemBlock itemBlockAmordrine;
     public static ItemBlock itemBlockAngmallen;
+    public static ItemBlock itemBlockAquamarine;
     public static ItemBlock itemBlockAstralSilver;
     public static ItemBlock itemBlockAtlarus;
     public static ItemBlock itemBlockBismuth;
@@ -410,10 +435,12 @@ public class InitBlocks
     public static ItemBlock itemBlockIndium;
     public static ItemBlock itemBlockInfuscolium;
     public static ItemBlock itemBlockInolashite;
+    public static ItemBlock itemBlockIolite;
     public static ItemBlock itemBlockIridium;
     public static ItemBlock itemBlockJade;
     public static ItemBlock itemBlockJasper;
     public static ItemBlock itemBlockKalendrite;
+    public static ItemBlock itemBlockKyanite;
     public static ItemBlock itemBlockLead;
     public static ItemBlock itemBlockLemurite;
     public static ItemBlock itemBlockMalachite;
@@ -427,6 +454,7 @@ public class InitBlocks
     public static ItemBlock itemBlockNickel;
     public static ItemBlock itemBlockNiobium;
     public static ItemBlock itemBlockOnyx;
+    public static ItemBlock itemBlockOpal;
     public static ItemBlock itemBlockOrichalcum;
     public static ItemBlock itemBlockOsmium;
     public static ItemBlock itemBlockOureclase;
@@ -450,6 +478,7 @@ public class InitBlocks
     public static ItemBlock itemBlockSpinel;
     public static ItemBlock itemBlockSugilite;
     public static ItemBlock itemBlockTantalum;
+    public static ItemBlock itemBlockTanzanite;
     public static ItemBlock itemBlockTartarite;
     public static ItemBlock itemBlockTechnetium;
     public static ItemBlock itemBlockThallium;
@@ -458,6 +487,7 @@ public class InitBlocks
     public static ItemBlock itemBlockTopaz;
     public static ItemBlock itemBlockTourmaline;
     public static ItemBlock itemBlockTungsten;
+    public static ItemBlock itemBlockTurquoise;
     public static ItemBlock itemBlockUnobtainium;
     public static ItemBlock itemBlockUranium;
     public static ItemBlock itemBlockVanadium;
@@ -470,13 +500,17 @@ public class InitBlocks
     public static Item itemGemAgate;
     public static Item itemGemAmethyst;
     public static Item itemGemAmetrine;
+    public static Item itemGemAquamarine;
     public static Item itemGemChrysocolla;
     public static Item itemGemCitrine;
     public static Item itemGemGarnet;
+    public static Item itemGemIolite;
     public static Item itemGemJade;
     public static Item itemGemJasper;
+    public static Item itemGemKyanite;
     public static Item itemGemMalachite;
     public static Item itemGemOnyx;
+    public static Item itemGemOpal;
     public static Item itemGemPeridot;
     public static Item itemGemPhoenixite;
     public static Item itemGemQuartz;
@@ -484,8 +518,10 @@ public class InitBlocks
     public static Item itemGemSapphire;
     public static Item itemGemSpinel;
     public static Item itemGemSugilite;
+    public static Item itemGemTanzanite;
     public static Item itemGemTopaz;
     public static Item itemGemTourmaline;
+    public static Item itemGemTurquoise;
     //Ingots
     public static Item itemIngotAdamantine;
     public static Item itemIngotAldourite;
@@ -1109,6 +1145,25 @@ public class InitBlocks
             initOreDict(itemClumpAngmallen,"clumpAngmallen");
             initOreDict(itemShardAngmallen,"shardAngmallen");
             initOreDict(itemDirtyDustAngmallen,"dirtyDustAngmallen");
+        }
+        if(registerAquamarine)
+        {
+            blockOreAquamarine = new BlockExOre(Material.ROCK,3.0f,5.0f,"aquamarineOre");
+            itemBlockOreAquamarine = new ItemBlockExOre(blockOreAquamarine);
+            blockAquamarine = new BlockExOre(Material.ROCK,3.0f,5.0f,"aquamarineBlock");
+            itemBlockAquamarine = new ItemBlockExOre(blockAquamarine);
+            itemGemAquamarine = new ItemExOre("aquamarine");
+            createRegistry(blockOreAquamarine,itemBlockOreAquamarine,"aquamarineOre");
+            createRegistry(blockAquamarine,itemBlockAquamarine,"aquamarineBlock");
+            createRegistry(itemGemAquamarine,"aquamarine");
+            ForgeRegistries.BLOCKS.register(blockOreAquamarine);
+            ForgeRegistries.ITEMS.register(itemBlockOreAquamarine);
+            ForgeRegistries.BLOCKS.register(blockAquamarine);
+            ForgeRegistries.ITEMS.register(itemBlockAquamarine);
+            ForgeRegistries.ITEMS.register(itemGemAquamarine);
+            initOreDict(blockOreAquamarine,"oreAquamarine");
+            initOreDict(blockAquamarine,"blockAquamarine");
+            initOreDict(itemGemAquamarine,"gemAquamarine");
         }
         if(registerAstralSilver)
         {
@@ -1902,6 +1957,25 @@ public class InitBlocks
             initOreDict(itemShardInolashite,"shardInolashite");
             initOreDict(itemDirtyDustInolashite,"dirtyDustInolashite");
         }
+        if(registerIolite)
+        {
+            blockOreIolite = new BlockExOre(Material.ROCK,3.0f,5.0f,"ioliteOre");
+            itemBlockOreIolite = new ItemBlockExOre(blockOreIolite);
+            blockIolite = new BlockExOre(Material.ROCK,3.0f,5.0f,"ioliteBlock");
+            itemBlockIolite = new ItemBlockExOre(blockIolite);
+            itemGemIolite = new ItemExOre("iolite");
+            createRegistry(blockOreIolite,itemBlockOreIolite,"ioliteOre");
+            createRegistry(blockIolite,itemBlockIolite,"ioliteBlock");
+            createRegistry(itemGemIolite,"iolite");
+            ForgeRegistries.BLOCKS.register(blockOreIolite);
+            ForgeRegistries.ITEMS.register(itemBlockOreIolite);
+            ForgeRegistries.BLOCKS.register(blockIolite);
+            ForgeRegistries.ITEMS.register(itemBlockIolite);
+            ForgeRegistries.ITEMS.register(itemGemIolite);
+            initOreDict(blockOreIolite,"oreIolite");
+            initOreDict(blockIolite,"blockIolite");
+            initOreDict(itemGemIolite,"gemIolite");
+        }
         if(registerIridium)
         {
             blockOreIridium = new BlockExOre(Material.ROCK,3.0f,5.0f,"iridiumOre");
@@ -2009,6 +2083,25 @@ public class InitBlocks
             initOreDict(itemClumpKalendrite,"clumpKalendrite");
             initOreDict(itemShardKalendrite,"shardKalendrite");
             initOreDict(itemDirtyDustKalendrite,"dirtyDustKalendrite");
+        }
+        if(registerKyanite)
+        {
+            blockOreKyanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"kyaniteOre");
+            itemBlockOreKyanite = new ItemBlockExOre(blockOreKyanite);
+            blockKyanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"kyaniteBlock");
+            itemBlockKyanite = new ItemBlockExOre(blockKyanite);
+            itemGemKyanite = new ItemExOre("kyanite");
+            createRegistry(blockOreKyanite,itemBlockOreKyanite,"kyaniteOre");
+            createRegistry(blockKyanite,itemBlockKyanite,"kyaniteBlock");
+            createRegistry(itemGemKyanite,"kyanite");
+            ForgeRegistries.BLOCKS.register(blockOreKyanite);
+            ForgeRegistries.ITEMS.register(itemBlockOreKyanite);
+            ForgeRegistries.BLOCKS.register(blockKyanite);
+            ForgeRegistries.ITEMS.register(itemBlockKyanite);
+            ForgeRegistries.ITEMS.register(itemGemKyanite);
+            initOreDict(blockOreKyanite,"oreKyanite");
+            initOreDict(blockKyanite,"blockKyanite");
+            initOreDict(itemGemKyanite,"gemKyanite");
         }
         if(registerLead)
         {
@@ -2432,6 +2525,25 @@ public class InitBlocks
             initOreDict(blockOreOnyx,"oreOnyx");
             initOreDict(blockOnyx,"blockOnyx");
             initOreDict(itemGemOnyx,"gemOnyx");
+        }
+        if(registerOpal)
+        {
+            blockOreOpal = new BlockExOre(Material.ROCK,3.0f,5.0f,"opalOre");
+            itemBlockOreOpal = new ItemBlockExOre(blockOreOpal);
+            blockOpal = new BlockExOre(Material.ROCK,3.0f,5.0f,"opalBlock");
+            itemBlockOpal = new ItemBlockExOre(blockOpal);
+            itemGemOpal = new ItemExOre("opal");
+            createRegistry(blockOreOpal,itemBlockOreOpal,"opalOre");
+            createRegistry(blockOpal,itemBlockOpal,"opalBlock");
+            createRegistry(itemGemOpal,"opal");
+            ForgeRegistries.BLOCKS.register(blockOreOpal);
+            ForgeRegistries.ITEMS.register(itemBlockOreOpal);
+            ForgeRegistries.BLOCKS.register(blockOpal);
+            ForgeRegistries.ITEMS.register(itemBlockOpal);
+            ForgeRegistries.ITEMS.register(itemGemOpal);
+            initOreDict(blockOreOpal,"oreOpal");
+            initOreDict(blockOpal,"blockOpal");
+            initOreDict(itemGemOpal,"gemOpal");
         }
         if(registerOrichalcum)
         {
@@ -3126,6 +3238,25 @@ public class InitBlocks
             initOreDict(itemShardTantalum,"shardTantalum");
             initOreDict(itemDirtyDustTantalum,"dirtyDustTantalum");
         }
+        if(registerTanzanite)
+        {
+            blockOreTanzanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"tanzaniteOre");
+            itemBlockOreTanzanite = new ItemBlockExOre(blockOreTanzanite);
+            blockTanzanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"tanzaniteBlock");
+            itemBlockTanzanite = new ItemBlockExOre(blockTanzanite);
+            itemGemTanzanite = new ItemExOre("tanzanite");
+            createRegistry(blockOreTanzanite,itemBlockOreTanzanite,"tanzaniteOre");
+            createRegistry(blockTanzanite,itemBlockTanzanite,"tanzaniteBlock");
+            createRegistry(itemGemTanzanite,"tanzanite");
+            ForgeRegistries.BLOCKS.register(blockOreTanzanite);
+            ForgeRegistries.ITEMS.register(itemBlockOreTanzanite);
+            ForgeRegistries.BLOCKS.register(blockTanzanite);
+            ForgeRegistries.ITEMS.register(itemBlockTanzanite);
+            ForgeRegistries.ITEMS.register(itemGemTanzanite);
+            initOreDict(blockOreTanzanite,"oreTanzanite");
+            initOreDict(blockTanzanite,"blockTanzanite");
+            initOreDict(itemGemTanzanite,"gemTanzanite");
+        }
         if(registerTartarite)
         {
             blockOreTartarite = new BlockExOre(Material.ROCK,3.0f,5.0f,"tartariteOre");
@@ -3373,6 +3504,25 @@ public class InitBlocks
             initOreDict(itemClumpTungsten,"clumpTungsten");
             initOreDict(itemShardTungsten,"shardTungsten");
             initOreDict(itemDirtyDustTungsten,"dirtyDustTungsten");
+        }
+        if(registerTurquoise)
+        {
+            blockOreTurquoise = new BlockExOre(Material.ROCK,3.0f,5.0f,"turquoiseOre");
+            itemBlockOreTurquoise = new ItemBlockExOre(blockOreTurquoise);
+            blockTurquoise = new BlockExOre(Material.ROCK,3.0f,5.0f,"turquoiseBlock");
+            itemBlockTurquoise = new ItemBlockExOre(blockTurquoise);
+            itemGemTurquoise = new ItemExOre("turquoise");
+            createRegistry(blockOreTurquoise,itemBlockOreTurquoise,"turquoiseOre");
+            createRegistry(blockTurquoise,itemBlockTurquoise,"turquoiseBlock");
+            createRegistry(itemGemTurquoise,"turquoise");
+            ForgeRegistries.BLOCKS.register(blockOreTurquoise);
+            ForgeRegistries.ITEMS.register(itemBlockOreTurquoise);
+            ForgeRegistries.BLOCKS.register(blockTurquoise);
+            ForgeRegistries.ITEMS.register(itemBlockTurquoise);
+            ForgeRegistries.ITEMS.register(itemGemTurquoise);
+            initOreDict(blockOreTurquoise,"oreTurquoise");
+            initOreDict(blockTurquoise,"blockTurquoise");
+            initOreDict(itemGemTurquoise,"gemTurquoise");
         }
         if(registerUnobtainium)
         {
