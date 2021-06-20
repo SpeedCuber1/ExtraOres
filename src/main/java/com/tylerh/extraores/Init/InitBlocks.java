@@ -1148,7 +1148,7 @@ public class InitBlocks
         }
         if(registerAquamarine)
         {
-            blockOreAquamarine = new BlockExOre(Material.ROCK,3.0f,5.0f,"aquamarineOre");
+            blockOreAquamarine = new BlockExOre(Material.ROCK,3.0f,5.0f,"aquamarineOre",true);
             itemBlockOreAquamarine = new ItemBlockExOre(blockOreAquamarine);
             blockAquamarine = new BlockExOre(Material.ROCK,3.0f,5.0f,"aquamarineBlock");
             itemBlockAquamarine = new ItemBlockExOre(blockAquamarine);
@@ -1959,7 +1959,7 @@ public class InitBlocks
         }
         if(registerIolite)
         {
-            blockOreIolite = new BlockExOre(Material.ROCK,3.0f,5.0f,"ioliteOre");
+            blockOreIolite = new BlockExOre(Material.ROCK,3.0f,5.0f,"ioliteOre",true);
             itemBlockOreIolite = new ItemBlockExOre(blockOreIolite);
             blockIolite = new BlockExOre(Material.ROCK,3.0f,5.0f,"ioliteBlock");
             itemBlockIolite = new ItemBlockExOre(blockIolite);
@@ -2086,7 +2086,7 @@ public class InitBlocks
         }
         if(registerKyanite)
         {
-            blockOreKyanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"kyaniteOre");
+            blockOreKyanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"kyaniteOre",true);
             itemBlockOreKyanite = new ItemBlockExOre(blockOreKyanite);
             blockKyanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"kyaniteBlock");
             itemBlockKyanite = new ItemBlockExOre(blockKyanite);
@@ -2528,7 +2528,7 @@ public class InitBlocks
         }
         if(registerOpal)
         {
-            blockOreOpal = new BlockExOre(Material.ROCK,3.0f,5.0f,"opalOre");
+            blockOreOpal = new BlockExOre(Material.ROCK,3.0f,5.0f,"opalOre",true);
             itemBlockOreOpal = new ItemBlockExOre(blockOreOpal);
             blockOpal = new BlockExOre(Material.ROCK,3.0f,5.0f,"opalBlock");
             itemBlockOpal = new ItemBlockExOre(blockOpal);
@@ -3240,7 +3240,7 @@ public class InitBlocks
         }
         if(registerTanzanite)
         {
-            blockOreTanzanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"tanzaniteOre");
+            blockOreTanzanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"tanzaniteOre",true);
             itemBlockOreTanzanite = new ItemBlockExOre(blockOreTanzanite);
             blockTanzanite = new BlockExOre(Material.ROCK,3.0f,5.0f,"tanzaniteBlock");
             itemBlockTanzanite = new ItemBlockExOre(blockTanzanite);
@@ -3507,7 +3507,7 @@ public class InitBlocks
         }
         if(registerTurquoise)
         {
-            blockOreTurquoise = new BlockExOre(Material.ROCK,3.0f,5.0f,"turquoiseOre");
+            blockOreTurquoise = new BlockExOre(Material.ROCK,3.0f,5.0f,"turquoiseOre",true);
             itemBlockOreTurquoise = new ItemBlockExOre(blockOreTurquoise);
             blockTurquoise = new BlockExOre(Material.ROCK,3.0f,5.0f,"turquoiseBlock");
             itemBlockTurquoise = new ItemBlockExOre(blockTurquoise);

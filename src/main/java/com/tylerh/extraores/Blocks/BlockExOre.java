@@ -52,6 +52,10 @@ public class BlockExOre extends Block
         {
             return InitBlocks.itemGemAmetrine;
         }
+        else if(this == InitBlocks.blockOreAquamarine)
+        {
+            return InitBlocks.itemGemAquamarine;
+        }
         else if(this == InitBlocks.blockOreChrysocolla)
         {
             return InitBlocks.itemGemChrysocolla;
@@ -64,6 +68,10 @@ public class BlockExOre extends Block
         {
             return InitBlocks.itemGemGarnet;
         }
+        else if (this == InitBlocks.blockOreIolite)
+        {
+            return InitBlocks.itemGemIolite;
+        }
         else if(this == InitBlocks.blockOreJade)
         {
             return InitBlocks.itemGemJade;
@@ -72,6 +80,10 @@ public class BlockExOre extends Block
         {
             return InitBlocks.itemGemJasper;
         }
+        else if (this == InitBlocks.blockOreKyanite)
+        {
+            return InitBlocks.itemGemKyanite;
+        }
         else if(this == InitBlocks.blockOreMalachite)
         {
             return InitBlocks.itemGemMalachite;
@@ -79,6 +91,10 @@ public class BlockExOre extends Block
         else if(this == InitBlocks.blockOreOnyx)
         {
             return InitBlocks.itemGemOnyx;
+        }
+        else if(this == InitBlocks.blockOreOpal)
+        {
+            return InitBlocks.itemGemOpal;
         }
         else if(this == InitBlocks.blockOrePeridot)
         {
@@ -108,6 +124,10 @@ public class BlockExOre extends Block
         {
             return InitBlocks.itemGemSugilite;
         }
+        else if (this == InitBlocks.blockOreTanzanite)
+        {
+            return InitBlocks.itemGemTanzanite;
+        }
         else if(this == InitBlocks.blockOreTopaz)
         {
             return InitBlocks.itemGemTopaz;
@@ -115,6 +135,10 @@ public class BlockExOre extends Block
         else if(this == InitBlocks.blockOreTourmaline)
         {
             return InitBlocks.itemGemTourmaline;
+        }
+        else if(this == InitBlocks.blockOreTurquoise)
+        {
+            return InitBlocks.itemGemTurquoise;
         }
         else
         {
