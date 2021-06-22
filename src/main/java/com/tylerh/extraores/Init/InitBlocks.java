@@ -82,6 +82,13 @@ public class InitBlocks
             blockRegistry(BlockList.blockOreAngmallen, event);
             blockRegistry(BlockList.blockAngmallen, event);
         }
+        if(ConfigRegistryList.registerAquamarine.get())
+        {
+            BlockList.blockOreAquamarine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"aquamarineore");
+            BlockList.blockAquamarine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"aquamarineblock");
+            blockRegistry(BlockList.blockOreAquamarine,event);
+            blockRegistry(BlockList.blockAquamarine,event);
+        }
         if (ConfigRegistryList.registerAstralSilver.get())
         {
             BlockList.blockOreAstralSilver = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "astralsilverore");
@@ -250,6 +257,13 @@ public class InitBlocks
             blockRegistry(BlockList.blockOreInolashite, event);
             blockRegistry(BlockList.blockInolashite, event);
         }
+        if(ConfigRegistryList.registerIolite.get())
+        {
+            BlockList.blockOreIolite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ioliteore");
+            BlockList.blockIolite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ioliteblock");
+            blockRegistry(BlockList.blockOreIolite,event);
+            blockRegistry(BlockList.blockIolite,event);
+        }
         if(ConfigRegistryList.registerIridium.get())
         {
             BlockList.blockOreIridium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "iridiumore");
@@ -277,6 +291,13 @@ public class InitBlocks
             BlockList.blockKalendrite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "kalendriteblock");
             blockRegistry(BlockList.blockOreKalendrite, event);
             blockRegistry(BlockList.blockKalendrite, event);
+        }
+        if(ConfigRegistryList.registerKyanite.get())
+        {
+            BlockList.blockOreKyanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"kyaniteore");
+            BlockList.blockKyanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"kyaniteblock");
+            blockRegistry(BlockList.blockOreKyanite,event);
+            blockRegistry(BlockList.blockKyanite,event);
         }
         if (ConfigRegistryList.registerLead.get())
         {
@@ -368,6 +389,13 @@ public class InitBlocks
             BlockList.blockOnyx = new BlockEXOre(Material.ROCK,3.0f,5.0f,"onyxblock");
             blockRegistry(BlockList.blockOreOnyx,event);
             blockRegistry(BlockList.blockOnyx,event);
+        }
+        if(ConfigRegistryList.registerOpal.get())
+        {
+            BlockList.blockOreOpal = new BlockEXOre(Material.ROCK,3.0f,5.0f,"opalore");
+            BlockList.blockOpal = new BlockEXOre(Material.ROCK,3.0f,5.0f,"opalblock");
+            blockRegistry(BlockList.blockOreOpal,event);
+            blockRegistry(BlockList.blockOpal,event);
         }
         if (ConfigRegistryList.registerOrichalcum.get())
         {
@@ -523,6 +551,13 @@ public class InitBlocks
             blockRegistry(BlockList.blockOreTantalum, event);
             blockRegistry(BlockList.blockTantalum, event);
         }
+        if(ConfigRegistryList.registerTanzanite.get())
+        {
+            BlockList.blockOreTanzanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tanzaniteore");
+            BlockList.blockTanzanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tanzaniteblock");
+            blockRegistry(BlockList.blockOreTanzanite,event);
+            blockRegistry(BlockList.blockTanzanite,event);
+        }
         if(ConfigRegistryList.registerTartarite.get())
         {
             BlockList.blockOreTartarite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "tartariteore");
@@ -578,6 +613,13 @@ public class InitBlocks
             BlockList.blockTungsten = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "tungstenblock");
             blockRegistry(BlockList.blockOreTungsten, event);
             blockRegistry(BlockList.blockTungsten, event);
+        }
+        if(ConfigRegistryList.registerTurquoise.get())
+        {
+            BlockList.blockOreTurquoise = new BlockEXOre(Material.ROCK,3.0f,5.0f,"turquoiseore");
+            BlockList.blockTurquoise = new BlockEXOre(Material.ROCK,3.0f,5.0f,"turquoiseblock");
+            blockRegistry(BlockList.blockOreTurquoise,event);
+            blockRegistry(BlockList.blockTurquoise,event);
         }
         if (ConfigRegistryList.registerUnobtainium.get())
         {
@@ -768,6 +810,15 @@ public class InitBlocks
             itemRegistry(ItemList.itemDirtyDustAngmallen,event);
             itemRegistry(ItemBlockList.itemBlockOreAngmallen, event);
             itemRegistry(ItemBlockList.itemBlockAngmallen, event);
+        }
+        if(ConfigRegistryList.registerAquamarine.get())
+        {
+            ItemList.itemGemAquamarine = new ItemEXOre(EXORES,"aquamarine");
+            ItemBlockList.itemBlockOreAquamarine = new ItemBlockExOre(BlockList.blockOreAquamarine,EXORES);
+            ItemBlockList.itemBlockAquamarine = new ItemBlockExOre(BlockList.blockAquamarine,EXORES);
+            itemRegistry(ItemBlockList.itemBlockOreAquamarine,event);
+            itemRegistry(ItemBlockList.itemBlockAquamarine,event);
+            itemRegistry(ItemList.itemGemAquamarine,event);
         }
         if (ConfigRegistryList.registerAstralSilver.get())
         {
@@ -1153,6 +1204,15 @@ public class InitBlocks
             itemRegistry(ItemBlockList.itemBlockOreInolashite, event);
             itemRegistry(ItemBlockList.itemBlockInolashite, event);
         }
+        if(ConfigRegistryList.registerIolite.get())
+        {
+            ItemList.itemGemIolite = new ItemEXOre(EXORES,"iolite");
+            ItemBlockList.itemBlockOreIolite = new ItemBlockExOre(BlockList.blockOreIolite,EXORES);
+            ItemBlockList.itemBlockIolite = new ItemBlockExOre(BlockList.blockIolite,EXORES);
+            itemRegistry(ItemBlockList.itemBlockOreIolite,event);
+            itemRegistry(ItemBlockList.itemBlockIolite,event);
+            itemRegistry(ItemList.itemGemIolite,event);
+        }
         if(ConfigRegistryList.registerIridium.get())
         {
             ItemList.itemIngotIridium = new ItemEXOre(EXORES, "iridiumingot");
@@ -1204,6 +1264,15 @@ public class InitBlocks
             itemRegistry(ItemList.itemDirtyDustKalendrite,event);
             itemRegistry(ItemBlockList.itemBlockOreKalendrite, event);
             itemRegistry(ItemBlockList.itemBlockKalendrite, event);
+        }
+        if(ConfigRegistryList.registerKyanite.get())
+        {
+            ItemList.itemGemKyanite = new ItemEXOre(EXORES,"kyanite");
+            ItemBlockList.itemBlockOreKyanite = new ItemBlockExOre(BlockList.blockOreKyanite,EXORES);
+            ItemBlockList.itemBlockKyanite = new ItemBlockExOre(BlockList.blockKyanite,EXORES);
+            itemRegistry(ItemBlockList.itemBlockOreKyanite,event);
+            itemRegistry(ItemBlockList.itemBlockKyanite,event);
+            itemRegistry(ItemList.itemGemKyanite,event);
         }
         if (ConfigRegistryList.registerLead.get())
         {
@@ -1409,6 +1478,15 @@ public class InitBlocks
             itemRegistry(ItemBlockList.itemBlockOreOnyx,event);
             itemRegistry(ItemBlockList.itemBlockOnyx,event);
             itemRegistry(ItemList.itemGemOnyx,event);
+        }
+        if(ConfigRegistryList.registerOpal.get())
+        {
+            ItemList.itemGemOpal = new ItemEXOre(EXORES,"opal");
+            ItemBlockList.itemBlockOreOpal = new ItemBlockExOre(BlockList.blockOreOpal,EXORES);
+            ItemBlockList.itemBlockOpal = new ItemBlockExOre(BlockList.blockOpal,EXORES);
+            itemRegistry(ItemBlockList.itemBlockOreOpal,event);
+            itemRegistry(ItemBlockList.itemBlockOpal,event);
+            itemRegistry(ItemList.itemGemOpal,event);
         }
         if (ConfigRegistryList.registerOrichalcum.get())
         {
@@ -1736,6 +1814,15 @@ public class InitBlocks
             itemRegistry(ItemBlockList.itemBlockOreTantalum, event);
             itemRegistry(ItemBlockList.itemBlockTantalum, event);
         }
+        if(ConfigRegistryList.registerTanzanite.get())
+        {
+            ItemList.itemGemTanzanite = new ItemEXOre(EXORES,"tanzanite");
+            ItemBlockList.itemBlockOreTanzanite = new ItemBlockExOre(BlockList.blockOreTanzanite,EXORES);
+            ItemBlockList.itemBlockTanzanite = new ItemBlockExOre(BlockList.blockTanzanite,EXORES);
+            itemRegistry(ItemBlockList.itemBlockOreTanzanite,event);
+            itemRegistry(ItemBlockList.itemBlockTanzanite,event);
+            itemRegistry(ItemList.itemGemTanzanite,event);
+        }
         if(ConfigRegistryList.registerTartarite.get())
         {
             ItemList.itemIngotTartarite = new ItemEXOre(EXORES, "tartariteingot");
@@ -1855,6 +1942,15 @@ public class InitBlocks
             itemRegistry(ItemList.itemDirtyDustTungsten,event);
             itemRegistry(ItemBlockList.itemBlockOreTungsten, event);
             itemRegistry(ItemBlockList.itemBlockTungsten, event);
+        }
+        if(ConfigRegistryList.registerTurquoise.get())
+        {
+            ItemList.itemGemTurquoise = new ItemEXOre(EXORES,"turquoise");
+            ItemBlockList.itemBlockOreTurquoise = new ItemBlockExOre(BlockList.blockOreTurquoise,EXORES);
+            ItemBlockList.itemBlockTurquoise = new ItemBlockExOre(BlockList.blockTurquoise,EXORES);
+            itemRegistry(ItemBlockList.itemBlockOreTurquoise,event);
+            itemRegistry(ItemBlockList.itemBlockTurquoise,event);
+            itemRegistry(ItemList.itemGemTurquoise,event);
         }
         if (ConfigRegistryList.registerUnobtainium.get())
         {

@@ -14,6 +14,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerAmetrine;
     public static ForgeConfigSpec.BooleanValue registerAmordrine;
     public static ForgeConfigSpec.BooleanValue registerAngmallen;
+    public static ForgeConfigSpec.BooleanValue registerAquamarine;
     public static ForgeConfigSpec.BooleanValue registerAstralSilver;
     public static ForgeConfigSpec.BooleanValue registerAtlarus;
     public static ForgeConfigSpec.BooleanValue registerBismuth;
@@ -38,10 +39,12 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerIndium;
     public static ForgeConfigSpec.BooleanValue registerInfuscolium;
     public static ForgeConfigSpec.BooleanValue registerInolashite;
+    public static ForgeConfigSpec.BooleanValue registerIolite;
     public static ForgeConfigSpec.BooleanValue registerIridium;
     public static ForgeConfigSpec.BooleanValue registerJade;
     public static ForgeConfigSpec.BooleanValue registerJasper;
     public static ForgeConfigSpec.BooleanValue registerKalendrite;
+    public static ForgeConfigSpec.BooleanValue registerKyanite;
     public static ForgeConfigSpec.BooleanValue registerLead;
     public static ForgeConfigSpec.BooleanValue registerLemurite;
     public static ForgeConfigSpec.BooleanValue registerMalachite;
@@ -55,6 +58,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerNickel;
     public static ForgeConfigSpec.BooleanValue registerNiobium;
     public static ForgeConfigSpec.BooleanValue registerOnyx;
+    public static ForgeConfigSpec.BooleanValue registerOpal;
     public static ForgeConfigSpec.BooleanValue registerOrichalcum;
     public static ForgeConfigSpec.BooleanValue registerOsmium;
     public static ForgeConfigSpec.BooleanValue registerOureclase;
@@ -77,6 +81,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerSpinel;
     public static ForgeConfigSpec.BooleanValue registerSugilite;
     public static ForgeConfigSpec.BooleanValue registerTantalum;
+    public static ForgeConfigSpec.BooleanValue registerTanzanite;
     public static ForgeConfigSpec.BooleanValue registerTartarite;
     public static ForgeConfigSpec.BooleanValue registerTechnetium;
     public static ForgeConfigSpec.BooleanValue registerThallium;
@@ -85,6 +90,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerTopaz;
     public static ForgeConfigSpec.BooleanValue registerTourmaline;
     public static ForgeConfigSpec.BooleanValue registerTungsten;
+    public static ForgeConfigSpec.BooleanValue registerTurquoise;
     public static ForgeConfigSpec.BooleanValue registerUnobtainium;
     public static ForgeConfigSpec.BooleanValue registerUranium;
     public static ForgeConfigSpec.BooleanValue registerVanadium;
@@ -105,6 +111,7 @@ public class ConfigRegistryList
         registerAmetrine = builder.comment("Enable/Disable Ametrine").define("Ametrine",ModInfo.GUI_DEFAULT_VALUE);
         registerAmordrine = builder.comment("Enable/Disable Amordrine").define("Amordrine", ModInfo.GUI_DEFAULT_VALUE);
         registerAngmallen = builder.comment("Enable/Disable Angmallen").define("Angmallen", ModInfo.GUI_DEFAULT_VALUE);
+        registerAquamarine = builder.comment("Enable/Disable Aquamarine").define("Aquamarine",ModInfo.GUI_DEFAULT_VALUE);
         registerAstralSilver = builder.comment("Enable/Disable Astral Silver").define("Astral Silver", ModInfo.GUI_DEFAULT_VALUE);
         registerAtlarus = builder.comment("Enable/Disable Atlarus").define("Atlarus", ModInfo.GUI_DEFAULT_VALUE);
         registerBismuth = builder.comment("Enable/Disable Bismuth").define("Bismuth", ModInfo.GUI_DEFAULT_VALUE);
@@ -129,10 +136,12 @@ public class ConfigRegistryList
         registerIndium = builder.comment("Enable/Disable Indium").define("Indium", ModInfo.GUI_DEFAULT_VALUE);
         registerInfuscolium = builder.comment("Enable/Disable Infuscolium").define("Infuscolium", ModInfo.GUI_DEFAULT_VALUE);
         registerInolashite = builder.comment("Enable/Disable Inolashite").define("Inolashite", ModInfo.GUI_DEFAULT_VALUE);
+        registerIolite = builder.comment("Enable/Disable Iolite").define("Iolite",ModInfo.GUI_DEFAULT_VALUE);
         registerIridium = builder.comment("Enable/Disable Iridium").define("Iridium",ModInfo.GUI_DEFAULT_VALUE);
         registerJade = builder.comment("Enable/Disable Jade").define("Jade",ModInfo.GUI_DEFAULT_VALUE);
         registerJasper = builder.comment("Enable/Disable Jasper").define("Jasper",ModInfo.GUI_DEFAULT_VALUE);
         registerKalendrite = builder.comment("Enable/Disable Kalendrite").define("Kalendrite", ModInfo.GUI_DEFAULT_VALUE);
+        registerKyanite = builder.comment("Enable/Disable Kyanite").define("Kyanite",ModInfo.GUI_DEFAULT_VALUE);
         registerLead = builder.comment("Enable/Disable Lead").define("Lead", ModInfo.GUI_DEFAULT_VALUE);
         registerLemurite = builder.comment("Enable/Disable Lemurite").define("Lemurite", ModInfo.GUI_DEFAULT_VALUE);
         registerMalachite = builder.comment("Enable/Disable Malachite").define("Malachite",ModInfo.GUI_DEFAULT_VALUE);
@@ -146,6 +155,7 @@ public class ConfigRegistryList
         registerNickel = builder.comment("Enable/Disable Nickel").define("Nickel", ModInfo.GUI_DEFAULT_VALUE);
         registerNiobium = builder.comment("Enable/Disable Niobium").define("Niobium", ModInfo.GUI_DEFAULT_VALUE);
         registerOnyx = builder.comment("Enable/Disable Onyx").define("Onyx",ModInfo.GUI_DEFAULT_VALUE);
+        registerOpal = builder.comment("Enable/Disable Opal").define("Opal",ModInfo.GUI_DEFAULT_VALUE);
         registerOrichalcum = builder.comment("Enable/Disable Orichalcum").define("Orichalcum", ModInfo.GUI_DEFAULT_VALUE);
         registerOsmium = builder.comment("Enable/Disable Osmium").define("Osmium",ModInfo.GUI_DEFAULT_VALUE);
         registerOureclase = builder.comment("Enable/Disable Oureclase").define("Oureclase", ModInfo.GUI_DEFAULT_VALUE);
@@ -168,6 +178,7 @@ public class ConfigRegistryList
         registerSpinel = builder.comment("Enable/Disable Spinel").define("Spinel",ModInfo.GUI_DEFAULT_VALUE);
         registerSugilite = builder.comment("Enable/Disable Sugilite").define("Sugilite",ModInfo.GUI_DEFAULT_VALUE);
         registerTantalum = builder.comment("Enable/Disable Tantalum").define("Tantalum",ModInfo.GUI_DEFAULT_VALUE);
+        registerTanzanite = builder.comment("Enable/Disable Tanzanite").define("Tanzanite",ModInfo.GUI_DEFAULT_VALUE);
         registerTartarite = builder.comment("Enable/Disable Tartarite").define("Tartarite",ModInfo.GUI_DEFAULT_VALUE);
         registerTechnetium = builder.comment("Enable/Disable Technetium").define("Technetium", ModInfo.GUI_DEFAULT_VALUE);
         registerThallium = builder.comment("Enable/Disable Thallium").define("Thallium", ModInfo.GUI_DEFAULT_VALUE);
@@ -176,6 +187,7 @@ public class ConfigRegistryList
         registerTopaz = builder.comment("Enable/Disable Topaz").define("Topaz",ModInfo.GUI_DEFAULT_VALUE);
         registerTourmaline = builder.comment("Enable/Disable Tourmaline").define("Tourmaline",ModInfo.GUI_DEFAULT_VALUE);
         registerTungsten = builder.comment("Enable/Disable Tungsten").define("Tungsten", ModInfo.GUI_DEFAULT_VALUE);
+        registerTurquoise = builder.comment("Enable/Disable Turquoise").define("Turquoise",ModInfo.GUI_DEFAULT_VALUE);
         registerUnobtainium = builder.comment("Enable/Disable Unobtainium").define("Unobtainium", ModInfo.GUI_DEFAULT_VALUE);
         registerUranium = builder.comment("Enable/Disable Uranium").define("Uranium",ModInfo.GUI_DEFAULT_VALUE);
         registerVanadium = builder.comment("Enable/Disable Vanadium").define("Vanadium", ModInfo.GUI_DEFAULT_VALUE);

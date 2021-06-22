@@ -363,19 +363,25 @@ public class ItemList
     public static Item itemGemAgate;
     public static Item itemGemAmethyst;
     public static Item itemGemAmetrine;
+    public static Item itemGemAquamarine;
     public static Item itemGemChrysocolla;
     public static Item itemGemCitrine;
     public static Item itemGemGarnet;
+    public static Item itemGemIolite;
     public static Item itemGemJade;
     public static Item itemGemJasper;
+    public static Item itemGemKyanite;
     public static Item itemGemMalachite;
     public static Item itemGemOnyx;
+    public static Item itemGemOpal;
     public static Item itemGemPeridot;
     public static Item itemGemPhoenixite;
     public static Item itemGemRuby;
     public static Item itemGemSapphire;
     public static Item itemGemSpinel;
     public static Item itemGemSugilite;
+    public static Item itemGemTanzanite;
     public static Item itemGemTopaz;
     public static Item itemGemTourmaline;
+    public static Item itemGemTurquoise;
 }

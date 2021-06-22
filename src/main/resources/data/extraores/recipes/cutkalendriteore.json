@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:kalendriteore"
-  },
-  "result": "extraores:kalendritedust",
-  "count": 2
-}

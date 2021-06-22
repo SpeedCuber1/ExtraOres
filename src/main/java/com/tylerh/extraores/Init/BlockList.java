@@ -14,6 +14,7 @@ public class BlockList
     public static Block blockOreAmetrine;
     public static Block blockOreAmordrine;
     public static Block blockOreAngmallen;
+    public static Block blockOreAquamarine;
     public static Block blockOreAstralSilver;
     public static Block blockOreAtlarus;
     public static Block blockOreBismuth;
@@ -38,10 +39,12 @@ public class BlockList
     public static Block blockOreIndium;
     public static Block blockOreInfuscolium;
     public static Block blockOreInolashite;
+    public static Block blockOreIolite;
     public static Block blockOreIridium;
     public static Block blockOreJade;
     public static Block blockOreJasper;
     public static Block blockOreKalendrite;
+    public static Block blockOreKyanite;
     public static Block blockOreLead;
     public static Block blockOreLemurite;
     public static Block blockOreMalachite;
@@ -55,6 +58,7 @@ public class BlockList
     public static Block blockOreNickel;
     public static Block blockOreNiobium;
     public static Block blockOreOnyx;
+    public static Block blockOreOpal;
     public static Block blockOreOrichalcum;
     public static Block blockOreOsmium;
     public static Block blockOreOureclase;
@@ -77,6 +81,7 @@ public class BlockList
     public static Block blockOreSpinel;
     public static Block blockOreSugilite;
     public static Block blockOreTantalum;
+    public static Block blockOreTanzanite;
     public static Block blockOreTartarite;
     public static Block blockOreTechnetium;
     public static Block blockOreThallium;
@@ -85,6 +90,7 @@ public class BlockList
     public static Block blockOreTopaz;
     public static Block blockOreTourmaline;
     public static Block blockOreTungsten;
+    public static Block blockOreTurquoise;
     public static Block blockOreUnobtainium;
     public static Block blockOreUranium;
     public static Block blockOreVanadium;
@@ -103,6 +109,7 @@ public class BlockList
     public static Block blockAmetrine;
     public static Block blockAmordrine;
     public static Block blockAngmallen;
+    public static Block blockAquamarine;
     public static Block blockAstralSilver;
     public static Block blockAtlarus;
     public static Block blockBismuth;
@@ -127,10 +134,12 @@ public class BlockList
     public static Block blockIndium;
     public static Block blockInfuscolium;
     public static Block blockInolashite;
+    public static Block blockIolite;
     public static Block blockIridium;
     public static Block blockJade;
     public static Block blockJasper;
     public static Block blockKalendrite;
+    public static Block blockKyanite;
     public static Block blockLead;
     public static Block blockLemurite;
     public static Block blockMalachite;
@@ -144,6 +153,7 @@ public class BlockList
     public static Block blockNickel;
     public static Block blockNiobium;
     public static Block blockOnyx;
+    public static Block blockOpal;
     public static Block blockOrichalcum;
     public static Block blockOsmium;
     public static Block blockOureclase;
@@ -166,6 +176,7 @@ public class BlockList
     public static Block blockSpinel;
     public static Block blockSugilite;
     public static Block blockTantalum;
+    public static Block blockTanzanite;
     public static Block blockTartarite;
     public static Block blockTechnetium;
     public static Block blockThallium;
@@ -174,6 +185,7 @@ public class BlockList
     public static Block blockTopaz;
     public static Block blockTourmaline;
     public static Block blockTungsten;
+    public static Block blockTurquoise;
     public static Block blockUnobtainium;
     public static Block blockUranium;
     public static Block blockVanadium;

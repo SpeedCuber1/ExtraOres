@@ -27,6 +27,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.oreAmetrine).add(BlockList.blockOreAmetrine.asItem());
         getOrCreateBuilder(ItemTagList.oreAmordrine).add(BlockList.blockOreAmordrine.asItem());
         getOrCreateBuilder(ItemTagList.oreAngmallen).add(BlockList.blockOreAngmallen.asItem());
+        getOrCreateBuilder(ItemTagList.oreAquamarine).add(BlockList.blockOreAquamarine.asItem());
         getOrCreateBuilder(ItemTagList.oreAstralSilver).add(BlockList.blockOreAstralSilver.asItem());
         getOrCreateBuilder(ItemTagList.oreAtlarus).add(BlockList.blockOreAtlarus.asItem());
         getOrCreateBuilder(ItemTagList.oreBismuth).add(BlockList.blockOreBismuth.asItem());
@@ -51,10 +52,12 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.oreIndium).add(BlockList.blockOreIndium.asItem());
         getOrCreateBuilder(ItemTagList.oreInfuscolium).add(BlockList.blockOreInfuscolium.asItem());
         getOrCreateBuilder(ItemTagList.oreInolashite).add(BlockList.blockOreInolashite.asItem());
+        getOrCreateBuilder(ItemTagList.oreIolite).add(BlockList.blockOreIolite.asItem());
         getOrCreateBuilder(ItemTagList.oreIridium).add(BlockList.blockOreIridium.asItem());
         getOrCreateBuilder(ItemTagList.oreJade).add(BlockList.blockOreJade.asItem());
         getOrCreateBuilder(ItemTagList.oreJasper).add(BlockList.blockOreJasper.asItem());
         getOrCreateBuilder(ItemTagList.oreKalendrite).add(BlockList.blockOreKalendrite.asItem());
+        getOrCreateBuilder(ItemTagList.oreKyanite).add(BlockList.blockOreKyanite.asItem());
         getOrCreateBuilder(ItemTagList.oreLead).add(BlockList.blockOreLead.asItem());
         getOrCreateBuilder(ItemTagList.oreLemurite).add(BlockList.blockOreLemurite.asItem());
         getOrCreateBuilder(ItemTagList.oreMalachite).add(BlockList.blockOreMalachite.asItem());
@@ -68,6 +71,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.oreNickel).add(BlockList.blockOreNickel.asItem());
         getOrCreateBuilder(ItemTagList.oreNiobium).add(BlockList.blockOreNiobium.asItem());
         getOrCreateBuilder(ItemTagList.oreOnyx).add(BlockList.blockOreOnyx.asItem());
+        getOrCreateBuilder(ItemTagList.oreOpal).add(BlockList.blockOreOpal.asItem());
         getOrCreateBuilder(ItemTagList.oreOrichalcum).add(BlockList.blockOreOrichalcum.asItem());
         getOrCreateBuilder(ItemTagList.oreOsmium).add(BlockList.blockOreOsmium.asItem());
         getOrCreateBuilder(ItemTagList.oreOureclase).add(BlockList.blockOreOureclase.asItem());
@@ -90,6 +94,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.oreSpinel).add(BlockList.blockOreSpinel.asItem());
         getOrCreateBuilder(ItemTagList.oreSugilite).add(BlockList.blockOreSugilite.asItem());
         getOrCreateBuilder(ItemTagList.oreTantalum).add(BlockList.blockOreTantalum.asItem());
+        getOrCreateBuilder(ItemTagList.oreTanzanite).add(BlockList.blockOreTanzanite.asItem());
         getOrCreateBuilder(ItemTagList.oreTartarite).add(BlockList.blockOreTartarite.asItem());
         getOrCreateBuilder(ItemTagList.oreTechnetium).add(BlockList.blockOreTechnetium.asItem());
         getOrCreateBuilder(ItemTagList.oreThallium).add(BlockList.blockOreThallium.asItem());
@@ -98,6 +103,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.oreTopaz).add(BlockList.blockOreTopaz.asItem());
         getOrCreateBuilder(ItemTagList.oreTourmaline).add(BlockList.blockOreTourmaline.asItem());
         getOrCreateBuilder(ItemTagList.oreTungsten).add(BlockList.blockOreTungsten.asItem());
+        getOrCreateBuilder(ItemTagList.oreTurquoise).add(BlockList.blockOreTurquoise.asItem());
         getOrCreateBuilder(ItemTagList.oreUnobtainium).add(BlockList.blockOreUnobtainium.asItem());
         getOrCreateBuilder(ItemTagList.oreUranium).add(BlockList.blockOreUranium.asItem());
         getOrCreateBuilder(ItemTagList.oreVanadium).add(BlockList.blockOreVanadium.asItem());
@@ -116,6 +122,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreAmetrine);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreAmordrine);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreAngmallen);
+        getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreAquamarine);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreAstralSilver);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreAtlarus);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreBismuth);
@@ -140,10 +147,12 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreIndium);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreInfuscolium);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreInolashite);
+        getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreIolite);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreIridium);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreJade);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreJasper);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreKalendrite);
+        getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreKyanite);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreLead);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreLemurite);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreMalachite);
@@ -157,6 +166,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreNickel);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreNiobium);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreOnyx);
+        getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreOpal);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreOrichalcum);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreOsmium);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreOureclase);
@@ -179,6 +189,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreSpinel);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreSugilite);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreTantalum);
+        getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreTanzanite);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreTartarite);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreTechnetium);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreThallium);
@@ -187,6 +198,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreTopaz);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreTourmaline);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreTungsten);
+        getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreTurquoise);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreUnobtainium);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreUranium);
         getOrCreateBuilder(ItemTagList.ORES).addTags(ItemTagList.oreVanadium);
@@ -206,6 +218,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.blockAmetrine).add(BlockList.blockAmetrine.asItem());
         getOrCreateBuilder(ItemTagList.blockAmordrine).add(BlockList.blockAmordrine.asItem());
         getOrCreateBuilder(ItemTagList.blockAngmallen).add(BlockList.blockAngmallen.asItem());
+        getOrCreateBuilder(ItemTagList.blockAquamarine).add(BlockList.blockAquamarine.asItem());
         getOrCreateBuilder(ItemTagList.blockAstralSilver).add(BlockList.blockAstralSilver.asItem());
         getOrCreateBuilder(ItemTagList.blockAtlarus).add(BlockList.blockAtlarus.asItem());
         getOrCreateBuilder(ItemTagList.blockBismuth).add(BlockList.blockBismuth.asItem());
@@ -230,10 +243,12 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.blockIndium).add(BlockList.blockIndium.asItem());
         getOrCreateBuilder(ItemTagList.blockInfuscolium).add(BlockList.blockInfuscolium.asItem());
         getOrCreateBuilder(ItemTagList.blockInolashite).add(BlockList.blockInolashite.asItem());
+        getOrCreateBuilder(ItemTagList.blockIolite).add(BlockList.blockIolite.asItem());
         getOrCreateBuilder(ItemTagList.blockIridium).add(BlockList.blockIridium.asItem());
         getOrCreateBuilder(ItemTagList.blockJade).add(BlockList.blockJade.asItem());
         getOrCreateBuilder(ItemTagList.blockJasper).add(BlockList.blockJasper.asItem());
         getOrCreateBuilder(ItemTagList.blockKalendrite).add(BlockList.blockKalendrite.asItem());
+        getOrCreateBuilder(ItemTagList.blockKyanite).add(BlockList.blockOreKyanite.asItem());
         getOrCreateBuilder(ItemTagList.blockLead).add(BlockList.blockLead.asItem());
         getOrCreateBuilder(ItemTagList.blockLemurite).add(BlockList.blockLemurite.asItem());
         getOrCreateBuilder(ItemTagList.blockMalachite).add(BlockList.blockMalachite.asItem());
@@ -247,6 +262,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.blockNickel).add(BlockList.blockNickel.asItem());
         getOrCreateBuilder(ItemTagList.blockNiobium).add(BlockList.blockNiobium.asItem());
         getOrCreateBuilder(ItemTagList.blockOnyx).add(BlockList.blockOnyx.asItem());
+        getOrCreateBuilder(ItemTagList.blockOpal).add(BlockList.blockOreOpal.asItem());
         getOrCreateBuilder(ItemTagList.blockOrichalcum).add(BlockList.blockOrichalcum.asItem());
         getOrCreateBuilder(ItemTagList.blockOsmium).add(BlockList.blockOsmium.asItem());
         getOrCreateBuilder(ItemTagList.blockOureclase).add(BlockList.blockOureclase.asItem());
@@ -269,6 +285,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.blockSpinel).add(BlockList.blockSpinel.asItem());
         getOrCreateBuilder(ItemTagList.blockSugilite).add(BlockList.blockSugilite.asItem());
         getOrCreateBuilder(ItemTagList.blockTantalum).add(BlockList.blockTantalum.asItem());
+        getOrCreateBuilder(ItemTagList.blockTanzanite).add(BlockList.blockTanzanite.asItem());
         getOrCreateBuilder(ItemTagList.blockTartarite).add(BlockList.blockTartarite.asItem());
         getOrCreateBuilder(ItemTagList.blockTechnetium).add(BlockList.blockTechnetium.asItem());
         getOrCreateBuilder(ItemTagList.blockThallium).add(BlockList.blockThallium.asItem());
@@ -277,6 +294,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.blockTopaz).add(BlockList.blockTopaz.asItem());
         getOrCreateBuilder(ItemTagList.blockTourmaline).add(BlockList.blockTourmaline.asItem());
         getOrCreateBuilder(ItemTagList.blockTungsten).add(BlockList.blockTungsten.asItem());
+        getOrCreateBuilder(ItemTagList.blockTurquoise).add(BlockList.blockTurquoise.asItem());
         getOrCreateBuilder(ItemTagList.blockUnobtainium).add(BlockList.blockUnobtainium.asItem());
         getOrCreateBuilder(ItemTagList.blockUranium).add(BlockList.blockUranium.asItem());
         getOrCreateBuilder(ItemTagList.blockVanadium).add(BlockList.blockVanadium.asItem());
@@ -295,6 +313,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockAmetrine);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockAmordrine);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockAngmallen);
+        getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockAquamarine);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockAstralSilver);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockAtlarus);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockBismuth);
@@ -319,10 +338,12 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockIndium);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockInfuscolium);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockInolashite);
+        getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockIolite);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockIridium);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockJade);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockJasper);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockKalendrite);
+        getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockKyanite);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockLead);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockLemurite);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockMalachite);
@@ -336,6 +357,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockNickel);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockNiobium);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockOnyx);
+        getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockOpal);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockOrichalcum);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockOsmium);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockOureclase);
@@ -358,6 +380,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockSpinel);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockSugilite);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockTantalum);
+        getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockTanzanite);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockTartarite);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockTechnetium);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockThallium);
@@ -366,6 +389,7 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockTopaz);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockTourmaline);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockTungsten);
+        getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockTurquoise);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockUnobtainium);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockUranium);
         getOrCreateBuilder(ItemTagList.STORAGE_BLOCKS).addTags(ItemTagList.blockVanadium);
@@ -663,39 +687,51 @@ public class ExOreItemTag extends ForgeItemTagsProvider
         getOrCreateBuilder(ItemTagList.gemAgate).add(ItemList.itemGemAgate);
         getOrCreateBuilder(ItemTagList.gemAmethyst).add(ItemList.itemGemAmethyst);
         getOrCreateBuilder(ItemTagList.gemAmetrine).add(ItemList.itemGemAmetrine);
+        getOrCreateBuilder(ItemTagList.gemAquamarine).add(ItemList.itemGemAquamarine);
         getOrCreateBuilder(ItemTagList.gemChrysocolla).add(ItemList.itemGemChrysocolla);
         getOrCreateBuilder(ItemTagList.gemCitrine).add(ItemList.itemGemCitrine);
         getOrCreateBuilder(ItemTagList.gemGarnet).add(ItemList.itemGemGarnet);
+        getOrCreateBuilder(ItemTagList.gemIolite).add(ItemList.itemGemIolite);
         getOrCreateBuilder(ItemTagList.gemJade).add(ItemList.itemGemJade);
         getOrCreateBuilder(ItemTagList.gemJasper).add(ItemList.itemGemJasper);
+        getOrCreateBuilder(ItemTagList.gemKyanite).add(ItemList.itemGemKyanite);
         getOrCreateBuilder(ItemTagList.gemMalachite).add(ItemList.itemGemMalachite);
         getOrCreateBuilder(ItemTagList.gemOnyx).add(ItemList.itemGemOnyx);
+        getOrCreateBuilder(ItemTagList.gemOpal).add(ItemList.itemGemOpal);
         getOrCreateBuilder(ItemTagList.gemPeridot).add(ItemList.itemGemPeridot);
         getOrCreateBuilder(ItemTagList.gemPhoenixite).add(ItemList.itemGemPhoenixite);
         getOrCreateBuilder(ItemTagList.gemRuby).add(ItemList.itemGemRuby);
         getOrCreateBuilder(ItemTagList.gemSapphire).add(ItemList.itemGemSapphire);
         getOrCreateBuilder(ItemTagList.gemSpinel).add(ItemList.itemGemSpinel);
         getOrCreateBuilder(ItemTagList.gemSugilite).add(ItemList.itemGemSugilite);
+        getOrCreateBuilder(ItemTagList.gemTanzanite).add(ItemList.itemGemTanzanite);
         getOrCreateBuilder(ItemTagList.gemTopaz).add(ItemList.itemGemTopaz);
         getOrCreateBuilder(ItemTagList.gemTourmaline).add(ItemList.itemGemTourmaline);
+        getOrCreateBuilder(ItemTagList.gemTurquoise).add(ItemList.itemGemTurquoise);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemAgate);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemAmethyst);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemAmetrine);
+        getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemAquamarine);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemChrysocolla);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemCitrine);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemGarnet);
+        getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemIolite);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemJade);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemJasper);
+        getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemKyanite);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemMalachite);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemOnyx);
+        getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemOpal);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemPeridot);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemPhoenixite);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemRuby);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemSapphire);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemSpinel);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemSugilite);
+        getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemTanzanite);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemTopaz);
         getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemTourmaline);
+        getOrCreateBuilder(ItemTagList.GEMS).addTags(ItemTagList.gemTurquoise);
     }
 
     @Override

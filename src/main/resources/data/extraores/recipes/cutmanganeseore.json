@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:manganeseore"
-  },
-  "result": "extraores:manganesedust",
-  "count": 2
-}

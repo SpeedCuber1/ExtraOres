@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:lemuriteore"
-  },
-  "result": "extraores:lemuritedust",
-  "count": 2
-}

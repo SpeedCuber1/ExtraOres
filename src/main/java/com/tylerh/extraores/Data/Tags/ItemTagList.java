@@ -18,6 +18,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> oreAmetrine = tag("ores/ametrine");
     public static final Tags.IOptionalNamedTag<Item> oreAmordrine = tag("ores/amordrine");
     public static final Tags.IOptionalNamedTag<Item> oreAngmallen = tag("ores/angmallen");
+    public static final Tags.IOptionalNamedTag<Item> oreAquamarine = tag("ores/aquamarine");
     public static final Tags.IOptionalNamedTag<Item> oreAstralSilver = tag("ores/astralsilver");
     public static final Tags.IOptionalNamedTag<Item> oreAtlarus = tag("ores/atlarus");
     public static final Tags.IOptionalNamedTag<Item> oreBismuth = tag("ores/bismuth");
@@ -42,10 +43,12 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> oreIndium = tag("ores/indium");
     public static final Tags.IOptionalNamedTag<Item> oreInfuscolium = tag("ores/infuscolium");
     public static final Tags.IOptionalNamedTag<Item> oreInolashite = tag("ores/inolashite");
+    public static final Tags.IOptionalNamedTag<Item> oreIolite = tag("ores/iollite");
     public static final Tags.IOptionalNamedTag<Item> oreIridium = tag("ores/iridium");
     public static final Tags.IOptionalNamedTag<Item> oreJade = tag("ores/jade");
     public static final Tags.IOptionalNamedTag<Item> oreJasper = tag("ores/jasper");
     public static final Tags.IOptionalNamedTag<Item> oreKalendrite = tag("ores/kalendrite");
+    public static final Tags.IOptionalNamedTag<Item> oreKyanite = tag("ores/kyanite");
     public static final Tags.IOptionalNamedTag<Item> oreLead = tag("ores/lead");
     public static final Tags.IOptionalNamedTag<Item> oreLemurite = tag("ores/lemurite");
     public static final Tags.IOptionalNamedTag<Item> oreMalachite = tag("ores/malachite");
@@ -59,6 +62,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> oreNickel = tag("ores/nickel");
     public static final Tags.IOptionalNamedTag<Item> oreNiobium = tag("ores/niobium");
     public static final Tags.IOptionalNamedTag<Item> oreOnyx = tag("ores/onyx");
+    public static final Tags.IOptionalNamedTag<Item> oreOpal = tag("ores/opal");
     public static final Tags.IOptionalNamedTag<Item> oreOrichalcum = tag("ores/orichalcum");
     public static final Tags.IOptionalNamedTag<Item> oreOsmium = tag("ores/osmium");
     public static final Tags.IOptionalNamedTag<Item> oreOureclase = tag("ores/oureclase");
@@ -81,6 +85,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> oreSpinel = tag("ores/spinel");
     public static final Tags.IOptionalNamedTag<Item> oreSugilite = tag("ores/sugilite");
     public static final Tags.IOptionalNamedTag<Item> oreTantalum = tag("ores/tantalum");
+    public static final Tags.IOptionalNamedTag<Item> oreTanzanite = tag("ores/tanzanite");
     public static final Tags.IOptionalNamedTag<Item> oreTartarite = tag("ores/tartarite");
     public static final Tags.IOptionalNamedTag<Item> oreTechnetium = tag("ores/technetium");
     public static final Tags.IOptionalNamedTag<Item> oreThallium = tag("ores/thallium");
@@ -89,6 +94,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> oreTopaz = tag("ores/topaz");
     public static final Tags.IOptionalNamedTag<Item> oreTourmaline = tag("ores/tourmaline");
     public static final Tags.IOptionalNamedTag<Item> oreTungsten = tag("ores/tungsten");
+    public static final Tags.IOptionalNamedTag<Item> oreTurquoise = tag("ores/turquoise");
     public static final Tags.IOptionalNamedTag<Item> oreUnobtainium = tag("ores/unobtainium");
     public static final Tags.IOptionalNamedTag<Item> oreUranium = tag("ores/uranium");
     public static final Tags.IOptionalNamedTag<Item> oreVanadium = tag("ores/vanadium");
@@ -109,6 +115,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> blockAmetrine = tag("storage_blocks/ametrine");
     public static final Tags.IOptionalNamedTag<Item> blockAmordrine = tag("storage_blocks/amordrine");
     public static final Tags.IOptionalNamedTag<Item> blockAngmallen = tag("storage_blocks/angmallen");
+    public static final Tags.IOptionalNamedTag<Item> blockAquamarine = tag("storage_blocks/aquamarine");
     public static final Tags.IOptionalNamedTag<Item> blockAstralSilver = tag("storage_blocks/astralsilver");
     public static final Tags.IOptionalNamedTag<Item> blockAtlarus = tag("storage_blocks/atlarus");
     public static final Tags.IOptionalNamedTag<Item> blockBismuth = tag("storage_blocks/bismuth");
@@ -133,10 +140,12 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> blockIndium = tag("storage_blocks/indium");
     public static final Tags.IOptionalNamedTag<Item> blockInfuscolium = tag("storage_blocks/infuscolium");
     public static final Tags.IOptionalNamedTag<Item> blockInolashite = tag("storage_blocks/inolashite");
+    public static final Tags.IOptionalNamedTag<Item> blockIolite = tag("storage_blocks/iolite");
     public static final Tags.IOptionalNamedTag<Item> blockIridium = tag("storage_blocks/iridium");
     public static final Tags.IOptionalNamedTag<Item> blockJade = tag("storage_blocks/jade");
     public static final Tags.IOptionalNamedTag<Item> blockJasper = tag("storage_blocks/jasper");
     public static final Tags.IOptionalNamedTag<Item> blockKalendrite = tag("storage_blocks/kalendrite");
+    public static final Tags.IOptionalNamedTag<Item> blockKyanite = tag("storage_blocks/kyanite");
     public static final Tags.IOptionalNamedTag<Item> blockLead = tag("storage_blocks/lead");
     public static final Tags.IOptionalNamedTag<Item> blockLemurite = tag("storage_blocks/lemurite");
     public static final Tags.IOptionalNamedTag<Item> blockMalachite = tag("storage_blocks/malachite");
@@ -150,6 +159,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> blockNickel = tag("storage_blocks/nickel");
     public static final Tags.IOptionalNamedTag<Item> blockNiobium = tag("storage_blocks/niobium");
     public static final Tags.IOptionalNamedTag<Item> blockOnyx = tag("storage_blocks/onyx");
+    public static final Tags.IOptionalNamedTag<Item> blockOpal = tag("storage_blocks/opal");
     public static final Tags.IOptionalNamedTag<Item> blockOrichalcum = tag("storage_blocks/orichalcum");
     public static final Tags.IOptionalNamedTag<Item> blockOsmium = tag("storage_blocks/osmium");
     public static final Tags.IOptionalNamedTag<Item> blockOureclase = tag("storage_blocks/oureclase");
@@ -172,6 +182,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> blockSpinel = tag("storage_blocks/spinel");
     public static final Tags.IOptionalNamedTag<Item> blockSugilite = tag("storage_blocks/sugilite");
     public static final Tags.IOptionalNamedTag<Item> blockTantalum = tag("storage_blocks/tantalum");
+    public static final Tags.IOptionalNamedTag<Item> blockTanzanite = tag("storage_blocks/tanzanite");
     public static final Tags.IOptionalNamedTag<Item> blockTartarite = tag("storage_blocks/tartarite");
     public static final Tags.IOptionalNamedTag<Item> blockTechnetium = tag("storage_blocks/technetium");
     public static final Tags.IOptionalNamedTag<Item> blockThallium = tag("storage_blocks/thallium");
@@ -180,6 +191,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> blockTopaz = tag("storage_blocks/topaz");
     public static final Tags.IOptionalNamedTag<Item> blockTourmaline = tag("storage_blocks/tourmaline");
     public static final Tags.IOptionalNamedTag<Item> blockTungsten = tag("storage_blocks/tungsten");
+    public static final Tags.IOptionalNamedTag<Item> blockTurquoise = tag("storage_blocks/turquoise");
     public static final Tags.IOptionalNamedTag<Item> blockUnobtainium = tag("storage_blocks/unobtainium");
     public static final Tags.IOptionalNamedTag<Item> blockUranium = tag("storage_blocks/uranium");
     public static final Tags.IOptionalNamedTag<Item> blockVanadium = tag("storage_blocks/vanadium");
@@ -339,21 +351,27 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> gemAgate = tag("gems/agate");
     public static final Tags.IOptionalNamedTag<Item> gemAmethyst = tag("gems/amethyst");
     public static final Tags.IOptionalNamedTag<Item> gemAmetrine = tag("gems/ametrine");
+    public static final Tags.IOptionalNamedTag<Item> gemAquamarine = tag("gems/aquamarine");
     public static final Tags.IOptionalNamedTag<Item> gemChrysocolla = tag("gems/chrysocolla");
     public static final Tags.IOptionalNamedTag<Item> gemCitrine = tag("gems/citrine");
     public static final Tags.IOptionalNamedTag<Item> gemGarnet = tag("gems/garnet");
+    public static final Tags.IOptionalNamedTag<Item> gemIolite = tag("gems/iolite");
     public static final Tags.IOptionalNamedTag<Item> gemJade = tag("gems/jade");
     public static final Tags.IOptionalNamedTag<Item> gemJasper = tag("gems/jasper");
+    public static final Tags.IOptionalNamedTag<Item> gemKyanite = tag("gems/kyanite");
     public static final Tags.IOptionalNamedTag<Item> gemMalachite = tag("gems/malachite");
     public static final Tags.IOptionalNamedTag<Item> gemOnyx = tag("gems/onyx");
+    public static final Tags.IOptionalNamedTag<Item> gemOpal = tag("gems/opal");
     public static final Tags.IOptionalNamedTag<Item> gemPeridot = tag("gems/peridot");
     public static final Tags.IOptionalNamedTag<Item> gemPhoenixite = tag("gems/phoenixite");
     public static final Tags.IOptionalNamedTag<Item> gemRuby = tag("gems/ruby");
     public static final Tags.IOptionalNamedTag<Item> gemSapphire = tag("gems/sapphire");
     public static final Tags.IOptionalNamedTag<Item> gemSpinel = tag("gems/spinel");
     public static final Tags.IOptionalNamedTag<Item> gemSugilite = tag("gems/sugilite");
+    public static final Tags.IOptionalNamedTag<Item> gemTanzanite = tag("gems/tanzanite");
     public static final Tags.IOptionalNamedTag<Item> gemTopaz = tag("gems/topaz");
     public static final Tags.IOptionalNamedTag<Item> gemTourmaline = tag("gems/tourmaline");
+    public static final Tags.IOptionalNamedTag<Item> gemTurquoise = tag("gems/turquoise");
     
     private static Tags.IOptionalNamedTag<Item> tag(String name)
     {

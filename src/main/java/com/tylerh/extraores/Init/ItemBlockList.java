@@ -15,6 +15,7 @@ public class ItemBlockList
     public static Item itemBlockOreAmetrine;
     public static Item itemBlockOreAmordrine;
     public static Item itemBlockOreAngmallen;
+    public static Item itemBlockOreAquamarine;
     public static Item itemBlockOreAstralSilver;
     public static Item itemBlockOreAtlarus;
     public static Item itemBlockOreBismuth;
@@ -39,10 +40,12 @@ public class ItemBlockList
     public static Item itemBlockOreIndium;
     public static Item itemBlockOreInfuscolium;
     public static Item itemBlockOreInolashite;
+    public static Item itemBlockOreIolite;
     public static Item itemBlockOreIridium;
     public static Item itemBlockOreJade;
     public static Item itemBlockOreJasper;
     public static Item itemBlockOreKalendrite;
+    public static Item itemBlockOreKyanite;
     public static Item itemBlockOreLead;
     public static Item itemBlockOreLemurite;
     public static Item itemBlockOreMalachite;
@@ -56,6 +59,7 @@ public class ItemBlockList
     public static Item itemBlockOreNickel;
     public static Item itemBlockOreNiobium;
     public static Item itemBlockOreOnyx;
+    public static Item itemBlockOreOpal;
     public static Item itemBlockOreOrichalcum;
     public static Item itemBlockOreOsmium;
     public static Item itemBlockOreOureclase;
@@ -78,6 +82,7 @@ public class ItemBlockList
     public static Item itemBlockOreSpinel;
     public static Item itemBlockOreSugilite;
     public static Item itemBlockOreTantalum;
+    public static Item itemBlockOreTanzanite;
     public static Item itemBlockOreTartarite;
     public static Item itemBlockOreTechnetium;
     public static Item itemBlockOreThallium;
@@ -86,6 +91,7 @@ public class ItemBlockList
     public static Item itemBlockOreTopaz;
     public static Item itemBlockOreTourmaline;
     public static Item itemBlockOreTungsten;
+    public static Item itemBlockOreTurquoise;
     public static Item itemBlockOreUnobtainium;
     public static Item itemBlockOreUranium;
     public static Item itemBlockOreVanadium;
@@ -104,6 +110,7 @@ public class ItemBlockList
     public static Item itemBlockAmetrine;
     public static Item itemBlockAmordrine;
     public static Item itemBlockAngmallen;
+    public static Item itemBlockAquamarine;
     public static Item itemBlockAstralSilver;
     public static Item itemBlockAtlarus;
     public static Item itemBlockBismuth;
@@ -128,10 +135,12 @@ public class ItemBlockList
     public static Item itemBlockIndium;
     public static Item itemBlockInfuscolium;
     public static Item itemBlockInolashite;
+    public static Item itemBlockIolite;
     public static Item itemBlockIridium;
     public static Item itemBlockJade;
     public static Item itemBlockJasper;
     public static Item itemBlockKalendrite;
+    public static Item itemBlockKyanite;
     public static Item itemBlockLead;
     public static Item itemBlockLemurite;
     public static Item itemBlockMalachite;
@@ -145,6 +154,7 @@ public class ItemBlockList
     public static Item itemBlockNickel;
     public static Item itemBlockNiobium;
     public static Item itemBlockOnyx;
+    public static Item itemBlockOpal;
     public static Item itemBlockOrichalcum;
     public static Item itemBlockOsmium;
     public static Item itemBlockOureclase;
@@ -167,6 +177,7 @@ public class ItemBlockList
     public static Item itemBlockSpinel;
     public static Item itemBlockSugilite;
     public static Item itemBlockTantalum;
+    public static Item itemBlockTanzanite;
     public static Item itemBlockTartarite;
     public static Item itemBlockTechnetium;
     public static Item itemBlockThallium;
@@ -175,6 +186,7 @@ public class ItemBlockList
     public static Item itemBlockTopaz;
     public static Item itemBlockTourmaline;
     public static Item itemBlockTungsten;
+    public static Item itemBlockTurquoise;
     public static Item itemBlockUnobtainium;
     public static Item itemBlockUranium;
     public static Item itemBlockVanadium;

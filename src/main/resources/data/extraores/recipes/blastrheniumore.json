@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:rheniumore"
-  },
-  "result": "extraores:rheniumingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

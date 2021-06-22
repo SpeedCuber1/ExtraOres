@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:promethiumore"
-  },
-  "result": "extraores:promethiumingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

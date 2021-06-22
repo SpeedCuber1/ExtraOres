@@ -196,6 +196,15 @@ public class ExOreWorldGen
                             .square()
                             .func_242732_c(rate));
                 }
+                if(ConfigRegistryList.registerAquamarine.get())
+                {
+                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreAquamarine.getDefaultState(),size);
+                    height = 100;
+                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                            .range(height)
+                            .square()
+                            .func_242732_c(rate));
+                }
                 if(ConfigRegistryList.registerAstralSilver.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreAstralSilver.getDefaultState(),size);
@@ -394,6 +403,15 @@ public class ExOreWorldGen
                             .square()
                             .func_242732_c(rate));
                 }
+                if(ConfigRegistryList.registerIolite.get())
+                {
+                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreIolite.getDefaultState(),size);
+                    height = 100;
+                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                            .range(height)
+                            .square()
+                            .func_242732_c(rate));
+                }
                 if(ConfigRegistryList.registerIridium.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreIridium.getDefaultState(),size);
@@ -415,6 +433,15 @@ public class ExOreWorldGen
                 if(ConfigRegistryList.registerJasper.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreJasper.getDefaultState(),size);
+                    height = 100;
+                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                            .range(height)
+                            .square()
+                            .func_242732_c(rate));
+                }
+                if(ConfigRegistryList.registerKyanite.get())
+                {
+                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreKyanite.getDefaultState(),size);
                     height = 100;
                     builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
                             .range(height)
@@ -514,6 +541,15 @@ public class ExOreWorldGen
                 if(ConfigRegistryList.registerOnyx.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreOnyx.getDefaultState(),size);
+                    height = 100;
+                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                            .range(height)
+                            .square()
+                            .func_242732_c(rate));
+                }
+                if(ConfigRegistryList.registerOpal.get())
+                {
+                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreOpal.getDefaultState(),size);
                     height = 100;
                     builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
                             .range(height)
@@ -691,6 +727,15 @@ public class ExOreWorldGen
                             .square()
                             .func_242732_c(rate));
                 }
+                if(ConfigRegistryList.registerTanzanite.get())
+                {
+                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreTanzanite.getDefaultState(),size);
+                    height = 100;
+                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                            .range(height)
+                            .square()
+                            .func_242732_c(rate));
+                }
                 if(ConfigRegistryList.registerTartarite.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreTartarite.getDefaultState(),size);
@@ -757,6 +802,15 @@ public class ExOreWorldGen
                 if(ConfigRegistryList.registerTungsten.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreTungsten.getDefaultState(),size);
+                    height = 100;
+                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                            .range(height)
+                            .square()
+                            .func_242732_c(rate));
+                }
+                if(ConfigRegistryList.registerTurquoise.get())
+                {
+                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreTurquoise.getDefaultState(),size);
                     height = 100;
                     builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
                             .range(height)

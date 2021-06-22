@@ -82,6 +82,13 @@ public class ExOreRecipe extends RecipeProvider
                 .key('i', ItemList.itemIngotAngmallen)
                 .addCriterion("angmallenblock",hasItem(BlockList.blockAngmallen))
                 .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BlockList.blockAquamarine)
+                .patternLine("iii")
+                .patternLine("iii")
+                .patternLine("iii")
+                .key('i',ItemList.itemGemAquamarine)
+                .addCriterion("aquamarineblock",hasItem(BlockList.blockAquamarine))
+                .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockAstralSilver)
                 .patternLine("iii")
                 .patternLine("iii")
@@ -250,6 +257,13 @@ public class ExOreRecipe extends RecipeProvider
                 .key('i', ItemList.itemIngotInolashite)
                 .addCriterion("inolashiteblock",hasItem(BlockList.blockInolashite))
                 .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BlockList.blockIolite)
+                .patternLine("iii")
+                .patternLine("iii")
+                .patternLine("iii")
+                .key('i',ItemList.itemGemIolite)
+                .addCriterion("ioliteblock",hasItem(BlockList.blockIolite))
+                .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockIridium)
                 .patternLine("iii")
                 .patternLine("iii")
@@ -277,6 +291,13 @@ public class ExOreRecipe extends RecipeProvider
                 .patternLine("iii")
                 .key('i', ItemList.itemIngotKalendrite)
                 .addCriterion("kalendriteblock",hasItem(BlockList.blockKalendrite))
+                .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BlockList.blockKyanite)
+                .patternLine("iii")
+                .patternLine("iii")
+                .patternLine("iii")
+                .key('i',ItemList.itemGemKyanite)
+                .addCriterion("kyaniteblock",hasItem(BlockList.blockKyanite))
                 .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockLead)
                 .patternLine("iii")
@@ -368,6 +389,13 @@ public class ExOreRecipe extends RecipeProvider
                 .patternLine("iii")
                 .key('i',ItemList.itemGemOnyx)
                 .addCriterion("onyxblock",hasItem(BlockList.blockOnyx))
+                .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BlockList.blockOpal)
+                .patternLine("iii")
+                .patternLine("iii")
+                .patternLine("iii")
+                .key('i',ItemList.itemGemOpal)
+                .addCriterion("opalblock",hasItem(BlockList.blockOpal))
                 .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockOrichalcum)
                 .patternLine("iii")
@@ -523,6 +551,13 @@ public class ExOreRecipe extends RecipeProvider
                 .key('i',ItemList.itemIngotTantalum)
                 .addCriterion("tantalumblock",hasItem(BlockList.blockTantalum))
                 .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BlockList.blockTanzanite)
+                .patternLine("iii")
+                .patternLine("iii")
+                .patternLine("iii")
+                .key('i',ItemList.itemGemTanzanite)
+                .addCriterion("tanzaniteblock",hasItem(BlockList.blockTanzanite))
+                .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockTartarite)
                 .patternLine("iii")
                 .patternLine("iii")
@@ -578,6 +613,13 @@ public class ExOreRecipe extends RecipeProvider
                 .patternLine("iii")
                 .key('i', ItemList.itemIngotTungsten)
                 .addCriterion("tungstenblock",hasItem(BlockList.blockTungsten))
+                .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BlockList.blockTurquoise)
+                .patternLine("iii")
+                .patternLine("iii")
+                .patternLine("iii")
+                .key('i',ItemList.itemGemTurquoise)
+                .addCriterion("turquoiseblock",hasItem(BlockList.blockTurquoise))
                 .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockUnobtainium)
                 .patternLine("iii")
@@ -671,6 +713,10 @@ public class ExOreRecipe extends RecipeProvider
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotAngmallen,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockAngmallen.asItem()))
                 .addCriterion("angmalleningot",hasItem(ItemList.itemIngotAngmallen))
+                .build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemGemAquamarine,9)
+                .addIngredient(Ingredient.fromItems(BlockList.blockAquamarine.asItem()))
+                .addCriterion("aquamarine",hasItem(ItemList.itemGemAquamarine))
                 .build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotAstralSilver,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockAstralSilver.asItem()))
@@ -768,6 +814,10 @@ public class ExOreRecipe extends RecipeProvider
                 .addIngredient(Ingredient.fromItems(BlockList.blockInolashite.asItem()))
                 .addCriterion("inolashiteingot",hasItem(ItemList.itemIngotInolashite))
                 .build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemGemIolite,9)
+                .addIngredient(Ingredient.fromItems(BlockList.blockIolite.asItem()))
+                .addCriterion("iolite",hasItem(ItemList.itemGemIolite))
+                .build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotIridium,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockIridium.asItem()))
                 .addCriterion("iridiumingot",hasItem(ItemList.itemIngotIridium))
@@ -783,6 +833,10 @@ public class ExOreRecipe extends RecipeProvider
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotKalendrite,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockKalendrite.asItem()))
                 .addCriterion("kalendriteingot",hasItem(ItemList.itemIngotKalendrite))
+                .build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemGemKyanite,9)
+                .addIngredient(Ingredient.fromItems(BlockList.blockKyanite.asItem()))
+                .addCriterion("kyanite",hasItem(ItemList.itemGemKyanite))
                 .build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotLead,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockLead.asItem()))
@@ -834,6 +888,10 @@ public class ExOreRecipe extends RecipeProvider
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemGemOnyx,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockOnyx.asItem()))
                 .addCriterion("onyx",hasItem(ItemList.itemGemOnyx))
+                .build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemGemOpal,9)
+                .addIngredient(Ingredient.fromItems(BlockList.blockOpal.asItem()))
+                .addCriterion("opal",hasItem(ItemList.itemGemOpal))
                 .build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotOrichalcum,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockOrichalcum.asItem()))
@@ -923,6 +981,10 @@ public class ExOreRecipe extends RecipeProvider
                 .addIngredient(Ingredient.fromItems(BlockList.blockTantalum.asItem()))
                 .addCriterion("tantalumingot",hasItem(ItemList.itemIngotTantalum))
                 .build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemGemTanzanite,9)
+                .addIngredient(Ingredient.fromItems(BlockList.blockTanzanite.asItem()))
+                .addCriterion("tanzanite",hasItem(ItemList.itemGemTanzanite))
+                .build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotTartarite,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockTartarite.asItem()))
                 .addCriterion("tartariteingot",hasItem(ItemList.itemIngotTartarite))
@@ -954,6 +1016,10 @@ public class ExOreRecipe extends RecipeProvider
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotTungsten,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockTungsten.asItem()))
                 .addCriterion("tungsteningot",hasItem(ItemList.itemIngotTungsten))
+                .build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemGemTurquoise,9)
+                .addIngredient(Ingredient.fromItems(BlockList.blockTurquoise.asItem()))
+                .addCriterion("turquoise",hasItem(ItemList.itemGemTurquoise))
                 .build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotUnobtainium,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockUnobtainium.asItem()))
