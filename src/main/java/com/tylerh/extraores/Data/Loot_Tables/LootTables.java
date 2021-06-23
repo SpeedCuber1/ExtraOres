@@ -80,6 +80,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOrePlutonium,createStandardTable("plutoniumore",BlockList.blockOrePlutonium));
         lootTables.put(BlockList.blockOrePolonium,createStandardTable("poloniumore",BlockList.blockOrePolonium));
         lootTables.put(BlockList.blockOrePromethium,createStandardTable("promethiumore",BlockList.blockOrePromethium));
+        lootTables.put(BlockList.blockOreQuartz,createFortune("quartzore",BlockList.blockOreQuartz,ItemList.itemGemQuartz));
         lootTables.put(BlockList.blockOreRhenium,createStandardTable("rheniumore",BlockList.blockOreRhenium));
         lootTables.put(BlockList.blockOreRhodium,createStandardTable("rhodiumore",BlockList.blockOreRhodium));
         lootTables.put(BlockList.blockOreRubracium,createStandardTable("rubraciumore",BlockList.blockOreRubracium));
@@ -173,6 +174,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockPlutonium,createStandardTable("plutoniumblock",BlockList.blockPlutonium));
         lootTables.put(BlockList.blockPolonium,createStandardTable("poloniumblock",BlockList.blockPolonium));
         lootTables.put(BlockList.blockPromethium,createStandardTable("promethiumblock",BlockList.blockPromethium));
+        lootTables.put(BlockList.blockQuartz,createStandardTable("quartzblock",BlockList.blockQuartz));
         lootTables.put(BlockList.blockRhenium,createStandardTable("rheniumblock",BlockList.blockRhenium));
         lootTables.put(BlockList.blockRhodium,createStandardTable("rhodiumblock",BlockList.blockRhodium));
         lootTables.put(BlockList.blockRubracium,createStandardTable("rubraciumblock",BlockList.blockRubracium));

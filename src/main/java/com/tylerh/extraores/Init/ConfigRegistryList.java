@@ -69,6 +69,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerPlutonium;
     public static ForgeConfigSpec.BooleanValue registerPolonium;
     public static ForgeConfigSpec.BooleanValue registerPromethium;
+    public static ForgeConfigSpec.BooleanValue registerQuartz;
     public static ForgeConfigSpec.BooleanValue registerRhenium;
     public static ForgeConfigSpec.BooleanValue registerRhodium;
     public static ForgeConfigSpec.BooleanValue registerRuthenium;
@@ -166,6 +167,7 @@ public class ConfigRegistryList
         registerPlutonium = builder.comment("Enable/Disable Plutonium").define("Plutonium",ModInfo.GUI_DEFAULT_VALUE);
         registerPolonium = builder.comment("Enable/Disable Polonium").define("Polonium",ModInfo.GUI_DEFAULT_VALUE);
         registerPromethium = builder.comment("Enable/Disable Promethium").define("Promethium", ModInfo.GUI_DEFAULT_VALUE);
+        registerQuartz = builder.comment("Enable/Disable Quartz").define("Quartz",ModInfo.GUI_DEFAULT_VALUE);
         registerRhenium = builder.comment("Enable/Disable Rhenium").define("Rhenium",ModInfo.GUI_DEFAULT_VALUE);
         registerRhodium = builder.comment("Enable/Disable Rhodium").define("Rhodium", ModInfo.GUI_DEFAULT_VALUE);
         registerRubracium = builder.comment("Enable/Disable Rubracium").define("Rubracium", ModInfo.GUI_DEFAULT_VALUE);

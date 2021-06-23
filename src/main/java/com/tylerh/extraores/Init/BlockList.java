@@ -69,6 +69,7 @@ public class BlockList
     public static Block blockOrePlutonium;
     public static Block blockOrePolonium;
     public static Block blockOrePromethium;
+    public static Block blockOreQuartz;
     public static Block blockOreRhenium;
     public static Block blockOreRhodium;
     public static Block blockOreRuby;
@@ -164,6 +165,7 @@ public class BlockList
     public static Block blockPlutonium;
     public static Block blockPolonium;
     public static Block blockPromethium;
+    public static Block blockQuartz;
     public static Block blockRhenium;
     public static Block blockRhodium;
     public static Block blockRuby;

@@ -73,6 +73,7 @@ public class BlockTagList
     public static final Tags.IOptionalNamedTag<Block> orePlutonium = tag("ores/plutonium");
     public static final Tags.IOptionalNamedTag<Block> orePolonium = tag("ores/polonium");
     public static final Tags.IOptionalNamedTag<Block> orePromethium = tag("ores/promethium");
+    public static final Tags.IOptionalNamedTag<Block> oreQuartz = tag("ores/quartz");
     public static final Tags.IOptionalNamedTag<Block> oreRhenium = tag("ores/rhenium");
     public static final Tags.IOptionalNamedTag<Block> oreRhodium = tag("ores/rhodium");
     public static final Tags.IOptionalNamedTag<Block> oreRubracium = tag("ores/rubracium");
@@ -170,6 +171,7 @@ public class BlockTagList
     public static final Tags.IOptionalNamedTag<Block> blockPlutonium = tag("storage_blocks/plutonium");
     public static final Tags.IOptionalNamedTag<Block> blockPolonium = tag("storage_blocks/polonium");
     public static final Tags.IOptionalNamedTag<Block> blockPromethium = tag("storage_blocks/promethium");
+    public static final Tags.IOptionalNamedTag<Block> blockQuartz = tag("storage_blocks/quartz");
     public static final Tags.IOptionalNamedTag<Block> blockRhenium = tag("storage_blocks/rhenium");
     public static final Tags.IOptionalNamedTag<Block> blockRhodium = tag("storage_blocks/rhodium");
     public static final Tags.IOptionalNamedTag<Block> blockRubracium = tag("storage_blocks/rubracium");

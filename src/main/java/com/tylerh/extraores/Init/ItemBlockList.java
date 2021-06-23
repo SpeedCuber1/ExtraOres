@@ -70,6 +70,7 @@ public class ItemBlockList
     public static Item itemBlockOrePlutonium;
     public static Item itemBlockOrePolonium;
     public static Item itemBlockOrePromethium;
+    public static Item itemBlockOreQuartz;
     public static Item itemBlockOreRhenium;
     public static Item itemBlockOreRhodium;
     public static Item itemBlockOreRuby;
@@ -165,6 +166,7 @@ public class ItemBlockList
     public static Item itemBlockPlutonium;
     public static Item itemBlockPolonium;
     public static Item itemBlockPromethium;
+    public static Item itemBlockQuartz;
     public static Item itemBlockRhenium;
     public static Item itemBlockRhodium;
     public static Item itemBlockRuby;

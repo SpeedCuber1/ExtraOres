@@ -376,6 +376,7 @@ public class ItemList
     public static Item itemGemOpal;
     public static Item itemGemPeridot;
     public static Item itemGemPhoenixite;
+    public static Item itemGemQuartz;
     public static Item itemGemRuby;
     public static Item itemGemSapphire;
     public static Item itemGemSpinel;

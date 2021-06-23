@@ -80,6 +80,7 @@ public class ExOreBlockTag extends ForgeBlockTagsProvider
         getOrCreateBuilder(BlockTagList.orePlutonium).add(BlockList.blockOrePlutonium);
         getOrCreateBuilder(BlockTagList.orePolonium).add(BlockList.blockOrePolonium);
         getOrCreateBuilder(BlockTagList.orePromethium).add(BlockList.blockOrePromethium);
+        getOrCreateBuilder(BlockTagList.oreQuartz).add(BlockList.blockOreQuartz);
         getOrCreateBuilder(BlockTagList.oreRhenium).add(BlockList.blockOreRhenium);
         getOrCreateBuilder(BlockTagList.oreRhodium).add(BlockList.blockOreRhodium);
         getOrCreateBuilder(BlockTagList.oreRubracium).add(BlockList.blockOreRubracium);
@@ -175,6 +176,7 @@ public class ExOreBlockTag extends ForgeBlockTagsProvider
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.orePlutonium);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.orePolonium);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.orePromethium);
+        getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreQuartz);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreRhenium);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreRhodium);
         getOrCreateBuilder(BlockTagList.ORES).addTags(BlockTagList.oreRubracium);
@@ -271,6 +273,7 @@ public class ExOreBlockTag extends ForgeBlockTagsProvider
         getOrCreateBuilder(BlockTagList.blockPlutonium).add(BlockList.blockPlutonium);
         getOrCreateBuilder(BlockTagList.blockPolonium).add(BlockList.blockPolonium);
         getOrCreateBuilder(BlockTagList.blockPromethium).add(BlockList.blockPromethium);
+        getOrCreateBuilder(BlockTagList.blockQuartz).add(BlockList.blockQuartz);
         getOrCreateBuilder(BlockTagList.blockRhenium).add(BlockList.blockRhenium);
         getOrCreateBuilder(BlockTagList.blockRhodium).add(BlockList.blockRhodium);
         getOrCreateBuilder(BlockTagList.blockRubracium).add(BlockList.blockRubracium);
@@ -366,6 +369,7 @@ public class ExOreBlockTag extends ForgeBlockTagsProvider
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockPlutonium);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockPolonium);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockPromethium);
+        getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockQuartz);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockRhenium);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockRhodium);
         getOrCreateBuilder(BlockTagList.STORAGE_BLOCKS).addTags(BlockTagList.blockRubracium);

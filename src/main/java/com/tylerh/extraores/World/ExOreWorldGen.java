@@ -646,6 +646,15 @@ public class ExOreWorldGen
                             .square()
                             .func_242732_c(rate));
                 }
+                if(ConfigRegistryList.registerQuartz.get())
+                {
+                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreQuartz.getDefaultState(),size);
+                    height = 100;
+                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
+                            .range(height)
+                            .square()
+                            .func_242732_c(rate));
+                }
                 if(ConfigRegistryList.registerRhenium.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreRhenium.getDefaultState(),size);

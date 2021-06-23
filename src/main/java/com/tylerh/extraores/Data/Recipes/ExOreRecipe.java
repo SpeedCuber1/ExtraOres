@@ -467,6 +467,13 @@ public class ExOreRecipe extends RecipeProvider
                 .key('i', ItemList.itemIngotPromethium)
                 .addCriterion("promethiumblock",hasItem(BlockList.blockPromethium))
                 .build(consumer);
+        ShapedRecipeBuilder.shapedRecipe(BlockList.blockQuartz)
+                .patternLine("iii")
+                .patternLine("iii")
+                .patternLine("iii")
+                .key('i',ItemList.itemGemQuartz)
+                .addCriterion("quartzblock",hasItem(BlockList.blockQuartz))
+                .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(BlockList.blockRhenium)
                 .patternLine("iii")
                 .patternLine("iii")
@@ -932,6 +939,10 @@ public class ExOreRecipe extends RecipeProvider
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotPromethium,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockPromethium.asItem()))
                 .addCriterion("promethiumingot",hasItem(ItemList.itemIngotPromethium))
+                .build(consumer);
+        ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemGemQuartz,9)
+                .addIngredient(Ingredient.fromItems(BlockList.blockQuartz.asItem()))
+                .addCriterion("quartz",hasItem(ItemList.itemGemQuartz))
                 .build(consumer);
         ShapelessRecipeBuilder.shapelessRecipe(ItemList.itemIngotRhenium,9)
                 .addIngredient(Ingredient.fromItems(BlockList.blockRhenium.asItem()))

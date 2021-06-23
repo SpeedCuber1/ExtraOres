@@ -467,6 +467,13 @@ public class InitBlocks
             blockRegistry(BlockList.blockOrePromethium, event);
             blockRegistry(BlockList.blockPromethium, event);
         }
+        if(ConfigRegistryList.registerQuartz.get())
+        {
+            BlockList.blockOreQuartz = new BlockEXOre(Material.ROCK,3.0f,5.0f,"quartzore");
+            BlockList.blockQuartz = new BlockEXOre(Material.ROCK,3.0f,5.0f,"quartzblock");
+            blockRegistry(BlockList.blockOreQuartz,event);
+            blockRegistry(BlockList.blockQuartz,event);
+        }
         if(ConfigRegistryList.registerRhenium.get())
         {
             BlockList.blockOreRhenium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "rheniumore");
@@ -1641,6 +1648,15 @@ public class InitBlocks
             itemRegistry(ItemList.itemDirtyDustPromethium,event);
             itemRegistry(ItemBlockList.itemBlockOrePromethium, event);
             itemRegistry(ItemBlockList.itemBlockPromethium, event);
+        }
+        if(ConfigRegistryList.registerQuartz.get())
+        {
+            ItemList.itemGemQuartz = new ItemEXOre(EXORES,"quartz");
+            ItemBlockList.itemBlockOreQuartz = new ItemBlockExOre(BlockList.blockOreQuartz,EXORES);
+            ItemBlockList.itemBlockQuartz = new ItemBlockExOre(BlockList.blockQuartz,EXORES);
+            itemRegistry(ItemList.itemGemQuartz,event);
+            itemRegistry(ItemBlockList.itemBlockOreQuartz,event);
+            itemRegistry(ItemBlockList.itemBlockQuartz,event);
         }
         if(ConfigRegistryList.registerRhenium.get())
         {

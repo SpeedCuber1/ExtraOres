@@ -73,6 +73,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> orePlutonium = tag("ores/plutonium");
     public static final Tags.IOptionalNamedTag<Item> orePolonium = tag("ores/polonium");
     public static final Tags.IOptionalNamedTag<Item> orePromethium = tag("ores/promethium");
+    public static final Tags.IOptionalNamedTag<Item> oreQuartz = tag("ores/quartz");
     public static final Tags.IOptionalNamedTag<Item> oreRhenium = tag("ores/rhenium");
     public static final Tags.IOptionalNamedTag<Item> oreRhodium = tag("ores/rhodium");
     public static final Tags.IOptionalNamedTag<Item> oreRubracium = tag("ores/rubracium");
@@ -170,6 +171,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> blockPlutonium = tag("storage_blocks/plutonium");
     public static final Tags.IOptionalNamedTag<Item> blockPolonium = tag("storage_blocks/polonium");
     public static final Tags.IOptionalNamedTag<Item> blockPromethium = tag("storage_blocks/promethium");
+    public static final Tags.IOptionalNamedTag<Item> blockQuartz = tag("storage_blocks/quartz");
     public static final Tags.IOptionalNamedTag<Item> blockRhenium = tag("storage_blocks/rhenium");
     public static final Tags.IOptionalNamedTag<Item> blockRhodium = tag("storage_blocks/rhodium");
     public static final Tags.IOptionalNamedTag<Item> blockRubracium = tag("storage_blocks/rubracium");
@@ -364,6 +366,7 @@ public class ItemTagList
     public static final Tags.IOptionalNamedTag<Item> gemOpal = tag("gems/opal");
     public static final Tags.IOptionalNamedTag<Item> gemPeridot = tag("gems/peridot");
     public static final Tags.IOptionalNamedTag<Item> gemPhoenixite = tag("gems/phoenixite");
+    public static final Tags.IOptionalNamedTag<Item> gemQuartz = tag("gems/quartz");
     public static final Tags.IOptionalNamedTag<Item> gemRuby = tag("gems/ruby");
     public static final Tags.IOptionalNamedTag<Item> gemSapphire = tag("gems/sapphire");
     public static final Tags.IOptionalNamedTag<Item> gemSpinel = tag("gems/spinel");
