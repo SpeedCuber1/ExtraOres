@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:plutoniumblock"
+    ]
+  },
+  "criteria": {
+    "plutoniumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:plutoniumblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:plutoniumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "plutoniumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

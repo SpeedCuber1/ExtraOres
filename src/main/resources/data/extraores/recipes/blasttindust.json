@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:tindust"
+  },
+  "result": "extraores:tiningot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

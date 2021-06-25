@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:blacksteelblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:blacksteelingot",
+    "count": 9
+  }
+}

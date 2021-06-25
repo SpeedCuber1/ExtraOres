@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:tungstenore"
+  },
+  "result": "extraores:tungstendust",
+  "count": 2
+}

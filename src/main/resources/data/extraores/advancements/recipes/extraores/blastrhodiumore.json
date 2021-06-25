@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrhodiumore"
+    ]
+  },
+  "criteria": {
+    "blastrhodiumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:rhodiumingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrhodiumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrhodiumore",
+      "has_the_recipe"
+    ]
+  ]
+}

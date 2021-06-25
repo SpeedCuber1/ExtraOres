@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cutatlarusore"
+    ]
+  },
+  "criteria": {
+    "cutatlarusore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:atlarusdust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cutatlarusore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cutatlarusore",
+      "has_the_recipe"
+    ]
+  ]
+}

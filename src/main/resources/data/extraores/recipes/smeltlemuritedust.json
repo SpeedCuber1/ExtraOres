@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:lemuritedust"
+  },
+  "result": "extraores:lemuriteingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

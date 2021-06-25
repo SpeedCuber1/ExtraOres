@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:oureclasedust"
+  },
+  "result": "extraores:oureclaseingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

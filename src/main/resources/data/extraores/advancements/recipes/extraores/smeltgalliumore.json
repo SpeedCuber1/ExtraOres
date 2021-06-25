@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltgalliumore"
+    ]
+  },
+  "criteria": {
+    "smeltgalliumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:galliumingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltgalliumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltgalliumore",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:technetiumore"
+  },
+  "result": "extraores:technetiumingot",
+  "experience": 0.75,
+  "cookingtime": 40
+}

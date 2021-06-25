@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blasttechnetiumore"
+    ]
+  },
+  "criteria": {
+    "blasttechnetiumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:technetiumingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blasttechnetiumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blasttechnetiumore",
+      "has_the_recipe"
+    ]
+  ]
+}

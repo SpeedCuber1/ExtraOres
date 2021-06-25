@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:americiumore"
+  },
+  "result": "extraores:americiumdust",
+  "count": 2
+}

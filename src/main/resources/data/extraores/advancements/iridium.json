@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:indium",
+  "display": {
+    "icon": {
+      "item": "extraores:iridiumore"
+    },
+    "title": {
+      "translate": "This Stuff Lasts Forever"
+    },
+    "description": {
+      "translate": "Mine Iridium Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "iridium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:iridiumore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "iridium"
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:yelloriteore"
+  },
+  "result": "extraores:yelloritedust",
+  "count": 2
+}

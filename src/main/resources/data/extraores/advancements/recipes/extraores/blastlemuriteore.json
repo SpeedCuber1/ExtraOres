@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastlemuriteore"
+    ]
+  },
+  "criteria": {
+    "blastlemuriteore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:lemuriteingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastlemuriteore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastlemuriteore",
+      "has_the_recipe"
+    ]
+  ]
+}

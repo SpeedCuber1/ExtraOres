@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:inolashitedust"
+  },
+  "result": "extraores:inolashiteingot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

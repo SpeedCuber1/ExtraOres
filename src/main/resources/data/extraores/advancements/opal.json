@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:onyx",
+  "display": {
+    "icon": {
+      "item": "extraores:opalore"
+    },
+    "title": {
+      "translate": "No Speeding Here"
+    },
+    "description": {
+      "translate": "Mine Opal Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "opal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:opal"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "opal"
+    ]
+  ]
+}

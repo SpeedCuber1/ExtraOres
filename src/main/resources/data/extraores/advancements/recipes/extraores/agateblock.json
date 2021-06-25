@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:agateblock"
+    ]
+  },
+  "criteria": {
+    "agateblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:agateblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:agateblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "agateblock",
+      "has_the_recipe"
+    ]
+  ]
+}

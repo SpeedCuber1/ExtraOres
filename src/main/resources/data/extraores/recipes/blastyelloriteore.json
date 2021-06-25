@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:yelloriteore"
+  },
+  "result": "extraores:yelloriteingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

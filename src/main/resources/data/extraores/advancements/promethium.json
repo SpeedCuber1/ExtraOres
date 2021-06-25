@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:oureclase",
+  "display": {
+    "icon": {
+      "item": "extraores:promethiumore"
+    },
+    "title": {
+      "translate": "Prometheus Would Be Pleased"
+    },
+    "description": {
+      "translate": "Mine Promethium Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "promethium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:promethiumore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "promethium"
+    ]
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:iolite",
+  "display": {
+    "icon": {
+      "item": "extraores:jadeore"
+    },
+    "title": {
+      "translate": "It\u0027s Jade"
+    },
+    "description": {
+      "translate": "Mine Jade Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "jade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:jade"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "jade"
+    ]
+  ]
+}
