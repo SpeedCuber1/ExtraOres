@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/nickel"
+    }
+  },
+  "output": {
+    "item": "extraores:nickeldust",
+    "count": 2
+  }
+}

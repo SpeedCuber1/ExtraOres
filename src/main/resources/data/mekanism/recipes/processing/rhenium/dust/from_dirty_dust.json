@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "item": "extraores:rheniumdirtydust"
+    }
+  },
+  "output": {
+    "item": "extraores:rheniumdust"
+  }
+}

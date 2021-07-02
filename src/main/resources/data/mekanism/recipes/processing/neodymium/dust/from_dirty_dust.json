@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "item": "extraores:neodymiumdirtydust"
+    }
+  },
+  "output": {
+    "item": "extraores:neodymiumdust"
+  }
+}

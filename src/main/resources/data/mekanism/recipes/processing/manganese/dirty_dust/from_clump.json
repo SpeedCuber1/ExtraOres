@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "ingredient": {
+      "item": "extraores:manganeseclump"
+    }
+  },
+  "output": {
+    "item": "extraores:manganesedirtydust"
+  }
+}
