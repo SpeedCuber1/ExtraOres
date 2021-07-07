@@ -129,7 +129,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockCelenegil,createStandardTable("celenegilblock",BlockList.blockCelenegil));
         lootTables.put(BlockList.blockCeruclase,createStandardTable("ceruclaseblock",BlockList.blockCeruclase));
         lootTables.put(BlockList.blockChromium,createStandardTable("chromiumblock",BlockList.blockChromium));
-        lootTables.put(BlockList.blockOreChrysocolla,createStandardTable("chrysocollablock",BlockList.blockChrysocolla));
+        lootTables.put(BlockList.blockChrysocolla,createStandardTable("chrysocollablock",BlockList.blockChrysocolla));
         lootTables.put(BlockList.blockCitrine,createStandardTable("citrineblock",BlockList.blockCitrine));
         lootTables.put(BlockList.blockCobalt,createStandardTable("cobaltblock",BlockList.blockCobalt));
         lootTables.put(BlockList.blockCopper,createStandardTable("copperblock",BlockList.blockCopper));

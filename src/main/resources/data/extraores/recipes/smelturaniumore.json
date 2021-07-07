@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:uraniumore"
-  },
-  "result": "extraores:uraniumingot",
-  "experience": 0.75,
-  "cookingtime": 40
-}
