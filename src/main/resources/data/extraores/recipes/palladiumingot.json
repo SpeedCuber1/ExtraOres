@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:palladiumblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:palladiumingot",
+    "count": 9
+  }
+}

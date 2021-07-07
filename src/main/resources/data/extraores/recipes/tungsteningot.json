@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:tungstenblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:tungsteningot",
+    "count": 9
+  }
+}

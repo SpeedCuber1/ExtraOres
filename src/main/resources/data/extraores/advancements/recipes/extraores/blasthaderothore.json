@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blasthaderothore"
+    ]
+  },
+  "criteria": {
+    "blasthaderothore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:haderothingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blasthaderothore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blasthaderothore",
+      "has_the_recipe"
+    ]
+  ]
+}

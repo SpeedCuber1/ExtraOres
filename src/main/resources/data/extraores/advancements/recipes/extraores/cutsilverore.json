@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cutsilverore"
+    ]
+  },
+  "criteria": {
+    "cutsilverore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:silverdust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cutsilverore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cutsilverore",
+      "has_the_recipe"
+    ]
+  ]
+}

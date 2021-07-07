@@ -1,0 +1,36 @@
+{
+  "parent": "extraores:root",
+  "display": {
+    "icon": {
+      "item": "extraores:aldouriteore"
+    },
+    "title": {
+      "translate": "They\u0027re HERE Too!?"
+    },
+    "description": {
+      "translate": "Mine Aldourite Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "aldourite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:aldouriteore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "aldourite"
+    ]
+  ]
+}

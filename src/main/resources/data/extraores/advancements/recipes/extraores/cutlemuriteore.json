@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cutlemuriteore"
+    ]
+  },
+  "criteria": {
+    "cutlemuriteore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:lemuritedust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cutlemuriteore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cutlemuriteore",
+      "has_the_recipe"
+    ]
+  ]
+}

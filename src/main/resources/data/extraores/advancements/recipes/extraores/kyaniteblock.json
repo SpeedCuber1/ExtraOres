@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:kyaniteblock"
+    ]
+  },
+  "criteria": {
+    "kyaniteblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:kyaniteblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:kyaniteblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "kyaniteblock",
+      "has_the_recipe"
+    ]
+  ]
+}

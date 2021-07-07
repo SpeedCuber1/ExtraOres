@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:copperingot"
+    ]
+  },
+  "criteria": {
+    "copperingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:copperingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:copperingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "copperingot",
+      "has_the_recipe"
+    ]
+  ]
+}

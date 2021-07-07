@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:inolashiteore"
+  },
+  "result": "extraores:inolashitedust",
+  "count": 2
+}

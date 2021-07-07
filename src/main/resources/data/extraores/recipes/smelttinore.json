@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:tinore"
+  },
+  "result": "extraores:tiningot",
+  "experience": 0.75,
+  "cookingtime": 40
+}

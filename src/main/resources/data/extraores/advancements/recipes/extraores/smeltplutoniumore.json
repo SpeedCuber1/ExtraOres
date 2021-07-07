@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltplutoniumore"
+    ]
+  },
+  "criteria": {
+    "smeltplutoniumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:plutoniumingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltplutoniumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltplutoniumore",
+      "has_the_recipe"
+    ]
+  ]
+}

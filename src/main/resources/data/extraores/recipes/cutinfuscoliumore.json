@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "extraores:infuscoliumore"
+  },
+  "result": "extraores:infuscoliumdust",
+  "count": 2
+}

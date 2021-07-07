@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltdeepirondust"
+    ]
+  },
+  "criteria": {
+    "smeltdeepirondust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:deepironingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltdeepirondust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltdeepirondust",
+      "has_the_recipe"
+    ]
+  ]
+}

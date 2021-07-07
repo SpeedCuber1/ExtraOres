@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:sugiliteblock"
+    ]
+  },
+  "criteria": {
+    "sugiliteore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:sugiliteblock"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:sugiliteblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sugiliteore",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:ceruclasedust"
+  },
+  "result": "extraores:ceruclaseingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

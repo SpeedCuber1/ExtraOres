@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:iridiumblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:iridiumingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:technetiumore"
+  },
+  "result": "extraores:technetiumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

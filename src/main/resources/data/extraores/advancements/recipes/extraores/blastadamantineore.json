@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastadamantineore"
+    ]
+  },
+  "criteria": {
+    "blastadamantineore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:adamantineingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastadamantineore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastadamantineore",
+      "has_the_recipe"
+    ]
+  ]
+}

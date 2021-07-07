@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastamericiumdust"
+    ]
+  },
+  "criteria": {
+    "blastamericiumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "extraores:americiumingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastamericiumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastamericiumdust",
+      "has_the_recipe"
+    ]
+  ]
+}
