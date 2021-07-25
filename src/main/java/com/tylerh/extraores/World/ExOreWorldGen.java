@@ -2,18 +2,22 @@ package com.tylerh.extraores.World;
 
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Init.ConfigRegistryList;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureSpread;
-import net.minecraft.world.gen.feature.FeatureSpreadConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.placement.Placement;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.WorldGenerationContext;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
+import net.minecraft.world.level.levelgen.heightproviders.HeightProvider;
+import net.minecraft.world.level.levelgen.heightproviders.UniformHeight;
 import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.Random;
 
 public class ExOreWorldGen
 {
@@ -21,9 +25,9 @@ public class ExOreWorldGen
     @SubscribeEvent
     public void onBiomesLoading(BiomeLoadingEvent event)
     {
-        Biome.Category category = event.getCategory();
+        Biome.BiomeCategory category = event.getCategory();
         BiomeGenerationSettingsBuilder builder = event.getGeneration();
-        OreFeatureConfig config;
+        OreConfiguration config;
         int height;
         int rate = ExOreWorldGenConfig.spawnRate.get();
         int size = ExOreWorldGenConfig.veinSize.get();
@@ -32,14 +36,14 @@ public class ExOreWorldGen
             case NETHER:
                 if (ConfigRegistryList.registerAldourite.get())
                 {
-                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_NETHER,BlockList.blockOreAldourite.getDefaultState(),size);
+                    config = new OreConfiguration(OreConfiguration.Predicates.NETHER_ORE_REPLACEABLES,BlockList.blockOreAldourite.defaultBlockState(),size);
                     height = 64;
-                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
-                    .range(height)
-                    .square()
-                    .func_242732_c(rate));
+                    builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
+                            .rangeUniform(VerticalAnchor.belowTop(height),VerticalAnchor.aboveBottom(-64))
+                            .squared()
+                            .rarity(rate));
                 }
-                if(ConfigRegistryList.registerCeruclase.get())
+                /*if(ConfigRegistryList.registerCeruclase.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_NETHER,BlockList.blockOreCeruclase.getDefaultState(), size);
                     height = 64;
@@ -119,20 +123,18 @@ public class ExOreWorldGen
                     .range(height)
                     .square()
                     .func_242732_c(rate));
-                }
+                }*/
                 break;
             case THEEND:
                 break;
             default:
                 if(ConfigRegistryList.registerAdamantine.get())
                 {
-                    config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreAdamantine.getDefaultState(),size);
-                    height = 32;
-                    builder.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(config)
-                    .range(height)
-                    .square()
-                    .func_242732_c(rate));
-                }
+                    config = new OreConfiguration(OreConfiguration.Predicates.STONE_ORE_REPLACEABLES,BlockList.blockOreAdamantine.defaultBlockState(),size);
+                    builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
+                    .range(new RangeDecoratorConfiguration(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.absolute(64))))
+                    .squared());
+                }/*
                 if(ConfigRegistryList.registerAgate.get())
                 {
                     config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,BlockList.blockOreAgate.getDefaultState(),size);
@@ -879,7 +881,7 @@ public class ExOreWorldGen
                             .range(height)
                             .square()
                             .func_242732_c(rate));
-                }
+                }*/
                 break;
         }
     }

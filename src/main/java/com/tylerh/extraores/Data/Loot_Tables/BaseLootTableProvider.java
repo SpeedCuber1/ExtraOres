@@ -1,110 +1,114 @@
 package com.tylerh.extraores.Data.Loot_Tables;
 
+
+import com.google.common.collect.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import net.minecraft.advancements.criterion.EnchantmentPredicate;
-import net.minecraft.advancements.criterion.ItemPredicate;
-import net.minecraft.advancements.criterion.MinMaxBounds;
-import net.minecraft.block.Block;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DirectoryCache;
-import net.minecraft.data.IDataProvider;
-import net.minecraft.data.LootTableProvider;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
-import net.minecraft.loot.*;
-import net.minecraft.loot.conditions.ILootCondition;
-import net.minecraft.loot.conditions.MatchTool;
-import net.minecraft.loot.functions.*;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.DataProvider;
+import net.minecraft.data.HashCache;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.LootTables;
+import net.minecraft.world.level.storage.loot.ValidationContext;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
+import java.util.Objects;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public abstract class BaseLootTableProvider extends LootTableProvider
 {
-
     private static final Logger LOGGER = LogManager.getLogger();
-    private static LootPool.Builder builder;
-    private static final ILootCondition.IBuilder SILK_TOUCH = MatchTool.builder(ItemPredicate.Builder.create().enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.IntBound.atLeast(1))));
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
-    protected final Map<Block, LootTable.Builder> lootTables = new HashMap<>();
     private final DataGenerator generator;
-    public BaseLootTableProvider(DataGenerator dataGeneratorIn)
+    //private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> subProviders;
+
+    public BaseLootTableProvider(DataGenerator gen)
     {
-        super(dataGeneratorIn);
-        this.generator = dataGeneratorIn;
+        super(gen);
+        //subProviders = ImmutableList.of(Pair.of(LootTables::new,LootContextParamSets.BLOCK));
+        generator = gen;
     }
-    protected abstract void addTables();
-    protected LootTable.Builder createFortune(String name,Block block,Item item)
-    {
-        return createSilkTouch(name,block,ItemLootEntry.builder(item).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE)));
-    }
-    protected LootTable.Builder createSilkTouch(String name,Block block,LootEntry.Builder<?> builder)
-    {
-        return createDropping(name,block,SILK_TOUCH,builder);
-    }
-    protected LootTable.Builder createDropping(String name,Block block,ILootCondition.IBuilder iBuilder,LootEntry.Builder<?> builder)
-    {
-        return createLootPool(name,block,iBuilder,builder);
-    }
-    protected LootTable.Builder createLootPool(String name,Block block,ILootCondition.IBuilder iBuilder,LootEntry.Builder<?> alt)
-    {
-        builder = LootPool.builder()
-                .name(name)
-                .rolls(ConstantRange.of(1))
-                .addEntry(ItemLootEntry.builder(block)
-                .acceptCondition(iBuilder)
-                .alternatively(alt));
-        return LootTable.builder().addLootPool(builder);
-    }
-    protected LootTable.Builder createStandardTable(String name, Block block)
-    {
-        builder = LootPool.builder()
-                .name(name)
-                .rolls(ConstantRange.of(1))
-                .addEntry(ItemLootEntry.builder(block)
-                        .acceptFunction(CopyName.builder(CopyName.Source.BLOCK_ENTITY))
-                        .acceptFunction(CopyNbt.builder(CopyNbt.Source.BLOCK_ENTITY)
-                                .addOperation("inv", "BlockEntityTag.inv", CopyNbt.Action.REPLACE)
-                                .addOperation("energy", "BlockEntityTag.energy", CopyNbt.Action.REPLACE))
-                        .acceptFunction(SetContents.builderIn()
-                                .addLootEntry(DynamicLootEntry.func_216162_a(new ResourceLocation("minecraft", "contents"))))
-                );
-        return LootTable.builder().addLootPool(builder);
-    }
+
     @Override
-    public void act(DirectoryCache cache)
+    public void run(HashCache cache)
     {
-        addTables();
-
-        Map<ResourceLocation, LootTable> tables = new HashMap<>();
-        for (Map.Entry<Block, LootTable.Builder> entry : lootTables.entrySet())
+        Path path = generator.getOutputFolder();
+        Map<ResourceLocation, LootTable> map = Maps.newHashMap();
+        LootContextParamSet var10002 = LootContextParamSets.ALL_PARAMS;
+        Function var10003 = (func) ->
         {
-            tables.put(entry.getKey().getLootTable(), entry.getValue().setParameterSet(LootParameterSets.BLOCK).build());
+            return null;
+        };
+        Objects.requireNonNull(map);
+        ValidationContext validationcontext = new ValidationContext(var10002, var10003, map::get);
+        this.validate(map, validationcontext);
+        Multimap<String, String> multimap = validationcontext.getProblems();
+        if (!multimap.isEmpty())
+        {
+            multimap.forEach((p_124446_, p_124447_) ->
+            {
+                LOGGER.warn("Found validation problem in {}: {}", p_124446_, p_124447_);
+            });
+            throw new IllegalStateException("Failed to validate loot tables, see logs");
         }
-        writeTables(cache, tables);
+        else
+        {
+            map.forEach((p_124451_, p_124452_) ->
+            {
+                Path path1 = createPath(path, p_124451_);
+
+                try
+                {
+                    DataProvider.save(GSON, cache, LootTables.serialize(p_124452_), path1);
+                }
+                catch (IOException var6)
+                {
+                    LOGGER.error("Couldn't save loot table {}", path1, var6);
+                }
+
+            });
+        }
     }
 
-    private void writeTables(DirectoryCache cache, Map<ResourceLocation, LootTable> tables)
+    /*protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables()
     {
-        Path outputFolder = this.generator.getOutputFolder();
-        tables.forEach((key, lootTable) ->
+        return this.subProviders;
+    }*/
+
+    protected void validate(Map<ResourceLocation, LootTable> map, ValidationContext validationtracker)
+    {
+        UnmodifiableIterator var3 = Sets.difference(BuiltInLootTables.all(), map.keySet()).iterator();
+
+        while (var3.hasNext())
         {
-            Path path = outputFolder.resolve("data/" + key.getNamespace() + "/loot_tables/" + key.getPath() + ".json");
-            try
-            {
-                IDataProvider.save(GSON, cache, LootTableManager.toJson(lootTable), path);
-            }
-            catch (IOException e)
-            {
-                LOGGER.error("Couldn't write loot table {}", path, e);
-            }
+            ResourceLocation resourcelocation = (ResourceLocation) var3.next();
+            validationtracker.reportProblem("Missing built-in table: " + resourcelocation);
+        }
+
+        map.forEach((p_218436_2_, p_218436_3_) ->
+        {
+            LootTables.validate(validationtracker, p_218436_2_, p_218436_3_);
         });
+    }
+
+    private static Path createPath(Path p_124454_, ResourceLocation p_124455_)
+    {
+        String var10001 = p_124455_.getNamespace();
+        return p_124454_.resolve("data/" + var10001 + "/loot_tables/" + p_124455_.getPath() + ".json");
     }
 
     @Override

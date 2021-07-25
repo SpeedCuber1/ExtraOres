@@ -1,7 +1,5 @@
 package com.tylerh.extraores.Util;
 
-import net.minecraft.block.Block;
-
 /**
  * Created by Tyler on 4/29/2016.
  */

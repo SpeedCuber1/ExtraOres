@@ -3,10 +3,10 @@ package com.tylerh.extraores.Init;
 import com.tylerh.extraores.Blocks.BlockEXOre;
 import com.tylerh.extraores.Items.*;
 import com.tylerh.extraores.Util.ItemGroupExOre;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,672 +15,672 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InitBlocks
 {
-    private static final ItemGroup EXORES = new ItemGroupExOre();
+    private static final CreativeModeTab EXORES = new ItemGroupExOre();
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event)
     {
         if (ConfigRegistryList.registerAdamantine.get())
         {
-            BlockList.blockOreAdamantine = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "adamantineore");
-            BlockList.blockAdamantine = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "adamantineblock");
+            BlockList.blockOreAdamantine = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "adamantineore");
+            BlockList.blockAdamantine = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "adamantineblock");
             blockRegistry(BlockList.blockOreAdamantine, event);
             blockRegistry(BlockList.blockAdamantine, event);
         }
         if(ConfigRegistryList.registerAgate.get())
         {
-            BlockList.blockOreAgate = new BlockEXOre(Material.ROCK,3.0f,5.0f,"agateore");
-            BlockList.blockAgate = new BlockEXOre(Material.IRON,3.0f,5.0f,"agateblock");
+            BlockList.blockOreAgate = new BlockEXOre(Material.STONE,3.0f,5.0f,"agateore");
+            BlockList.blockAgate = new BlockEXOre(Material.METAL,3.0f,5.0f,"agateblock");
             blockRegistry(BlockList.blockOreAgate,event);
             blockRegistry(BlockList.blockAgate,event);
         }
         if (ConfigRegistryList.registerAldourite.get())
         {
-            BlockList.blockOreAldourite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "aldouriteore");
-            BlockList.blockAldourite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "aldouriteblock");
+            BlockList.blockOreAldourite = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "aldouriteore");
+            BlockList.blockAldourite = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "aldouriteblock");
             blockRegistry(BlockList.blockOreAldourite, event);
             blockRegistry(BlockList.blockAldourite, event);
         }
         if (ConfigRegistryList.registerAluminum.get())
         {
-            BlockList.blockOreAluminum = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "aluminumore");
-            BlockList.blockAluminum = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "aluminumblock");
+            BlockList.blockOreAluminum = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "aluminumore");
+            BlockList.blockAluminum = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "aluminumblock");
             blockRegistry(BlockList.blockOreAluminum, event);
             blockRegistry(BlockList.blockAluminum, event);
         }
         if(ConfigRegistryList.registerAmericium.get())
         {
-            BlockList.blockOreAmericium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "americiumore");
-            BlockList.blockAmericium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "americiumblock");
+            BlockList.blockOreAmericium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "americiumore");
+            BlockList.blockAmericium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "americiumblock");
             blockRegistry(BlockList.blockOreAmericium, event);
             blockRegistry(BlockList.blockAmericium, event);
         }
         if(ConfigRegistryList.registerAmethyst.get())
         {
-            BlockList.blockOreAmethyst = new BlockEXOre(Material.ROCK,3.0f,5.0f,"amethystore");
-            BlockList.blockAmethyst = new BlockEXOre(Material.ROCK,3.0f,5.0f,"amethystblock");
+            BlockList.blockOreAmethyst = new BlockEXOre(Material.STONE,3.0f,5.0f,"amethystore");
+            BlockList.blockAmethyst = new BlockEXOre(Material.STONE,3.0f,5.0f,"amethystblock");
             blockRegistry(BlockList.blockOreAmethyst,event);
             blockRegistry(BlockList.blockAmethyst,event);
         }
         if(ConfigRegistryList.registerAmetrine.get())
         {
-            BlockList.blockOreAmetrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ametrineore");
-            BlockList.blockAmetrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ametrineblock");
+            BlockList.blockOreAmetrine = new BlockEXOre(Material.STONE,3.0f,5.0f,"ametrineore");
+            BlockList.blockAmetrine = new BlockEXOre(Material.STONE,3.0f,5.0f,"ametrineblock");
             blockRegistry(BlockList.blockOreAmetrine,event);
             blockRegistry(BlockList.blockAmetrine,event);
         }
         if (ConfigRegistryList.registerAmordrine.get())
         {
-            BlockList.blockOreAmordrine = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "amordrineore");
-            BlockList.blockAmordrine = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "amordrineblock");
+            BlockList.blockOreAmordrine = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "amordrineore");
+            BlockList.blockAmordrine = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "amordrineblock");
             blockRegistry(BlockList.blockOreAmordrine, event);
             blockRegistry(BlockList.blockAmordrine, event);
         }
         if (ConfigRegistryList.registerAngmallen.get())
         {
-            BlockList.blockOreAngmallen = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "angmallenore");
-            BlockList.blockAngmallen = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "angmallenblock");
+            BlockList.blockOreAngmallen = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "angmallenore");
+            BlockList.blockAngmallen = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "angmallenblock");
             blockRegistry(BlockList.blockOreAngmallen, event);
             blockRegistry(BlockList.blockAngmallen, event);
         }
         if(ConfigRegistryList.registerAquamarine.get())
         {
-            BlockList.blockOreAquamarine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"aquamarineore");
-            BlockList.blockAquamarine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"aquamarineblock");
+            BlockList.blockOreAquamarine = new BlockEXOre(Material.STONE,3.0f,5.0f,"aquamarineore");
+            BlockList.blockAquamarine = new BlockEXOre(Material.STONE,3.0f,5.0f,"aquamarineblock");
             blockRegistry(BlockList.blockOreAquamarine,event);
             blockRegistry(BlockList.blockAquamarine,event);
         }
         if (ConfigRegistryList.registerAstralSilver.get())
         {
-            BlockList.blockOreAstralSilver = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "astralsilverore");
-            BlockList.blockAstralSilver = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "astralsilverblock");
+            BlockList.blockOreAstralSilver = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "astralsilverore");
+            BlockList.blockAstralSilver = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "astralsilverblock");
             blockRegistry(BlockList.blockOreAstralSilver, event);
             blockRegistry(BlockList.blockAstralSilver, event);
         }
         if (ConfigRegistryList.registerAtlarus.get())
         {
-            BlockList.blockOreAtlarus = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "atlarusore");
-            BlockList.blockAtlarus = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "atlarusblock");
+            BlockList.blockOreAtlarus = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "atlarusore");
+            BlockList.blockAtlarus = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "atlarusblock");
             blockRegistry(BlockList.blockOreAtlarus, event);
             blockRegistry(BlockList.blockAtlarus, event);
         }
         if (ConfigRegistryList.registerBismuth.get())
         {
-            BlockList.blockOreBismuth = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "bismuthore");
-            BlockList.blockBismuth = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "bismuthblock");
+            BlockList.blockOreBismuth = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "bismuthore");
+            BlockList.blockBismuth = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "bismuthblock");
             blockRegistry(BlockList.blockOreBismuth, event);
             blockRegistry(BlockList.blockBismuth, event);
         }
         if (ConfigRegistryList.registerBlackSteel.get())
         {
-            BlockList.blockOreBlackSteel = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "blacksteelore");
-            BlockList.blockBlackSteel = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "blacksteelblock");
+            BlockList.blockOreBlackSteel = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "blacksteelore");
+            BlockList.blockBlackSteel = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "blacksteelblock");
             blockRegistry(BlockList.blockOreBlackSteel, event);
             blockRegistry(BlockList.blockBlackSteel, event);
         }
         if (ConfigRegistryList.registerCadmium.get())
         {
-            BlockList.blockOreCadmium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "cadmiumore");
-            BlockList.blockCadmium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "cadmiumblock");
+            BlockList.blockOreCadmium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "cadmiumore");
+            BlockList.blockCadmium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "cadmiumblock");
             blockRegistry(BlockList.blockOreCadmium, event);
             blockRegistry(BlockList.blockCadmium, event);
         }
         if (ConfigRegistryList.registerCarmot.get())
         {
-            BlockList.blockOreCarmot = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "carmotore");
-            BlockList.blockCarmot = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "carmotblock");
+            BlockList.blockOreCarmot = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "carmotore");
+            BlockList.blockCarmot = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "carmotblock");
             blockRegistry(BlockList.blockOreCarmot, event);
             blockRegistry(BlockList.blockCarmot, event);
         }
         if (ConfigRegistryList.registerCelenegil.get())
         {
-            BlockList.blockOreCelenegil = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "celenegilore");
-            BlockList.blockCelenegil = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "celenegilblock");
+            BlockList.blockOreCelenegil = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "celenegilore");
+            BlockList.blockCelenegil = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "celenegilblock");
             blockRegistry(BlockList.blockOreCelenegil, event);
             blockRegistry(BlockList.blockCelenegil, event);
         }
         if (ConfigRegistryList.registerCeruclase.get())
         {
-            BlockList.blockOreCeruclase = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "ceruclaseore");
-            BlockList.blockCeruclase = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "ceruclaseblock");
+            BlockList.blockOreCeruclase = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "ceruclaseore");
+            BlockList.blockCeruclase = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "ceruclaseblock");
             blockRegistry(BlockList.blockOreCeruclase, event);
             blockRegistry(BlockList.blockCeruclase, event);
         }
         if (ConfigRegistryList.registerChromium.get())
         {
-            BlockList.blockOreChromium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "chromiumore");
-            BlockList.blockChromium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "chromiumblock");
+            BlockList.blockOreChromium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "chromiumore");
+            BlockList.blockChromium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "chromiumblock");
             blockRegistry(BlockList.blockOreChromium, event);
             blockRegistry(BlockList.blockChromium, event);
         }
         if(ConfigRegistryList.registerChrysocolla.get())
         {
-            BlockList.blockOreChrysocolla = new BlockEXOre(Material.ROCK,3.0f,5.0f,"chrysocollaore");
-            BlockList.blockChrysocolla = new BlockEXOre(Material.ROCK,3.0f,5.0f,"chrysocollablock");
+            BlockList.blockOreChrysocolla = new BlockEXOre(Material.STONE,3.0f,5.0f,"chrysocollaore");
+            BlockList.blockChrysocolla = new BlockEXOre(Material.STONE,3.0f,5.0f,"chrysocollablock");
             blockRegistry(BlockList.blockOreChrysocolla,event);
             blockRegistry(BlockList.blockChrysocolla,event);
         }
         if(ConfigRegistryList.registerCitrine.get())
         {
-            BlockList.blockOreCitrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"citrineore");
-            BlockList.blockCitrine = new BlockEXOre(Material.ROCK,3.0f,5.0f,"citrineblock");
+            BlockList.blockOreCitrine = new BlockEXOre(Material.STONE,3.0f,5.0f,"citrineore");
+            BlockList.blockCitrine = new BlockEXOre(Material.STONE,3.0f,5.0f,"citrineblock");
             blockRegistry(BlockList.blockOreCitrine,event);
             blockRegistry(BlockList.blockCitrine,event);
         }
         if (ConfigRegistryList.registerCobalt.get())
         {
-            BlockList.blockOreCobalt = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "cobaltore");
-            BlockList.blockCobalt = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "cobaltblock");
+            BlockList.blockOreCobalt = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "cobaltore");
+            BlockList.blockCobalt = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "cobaltblock");
             blockRegistry(BlockList.blockOreCobalt, event);
             blockRegistry(BlockList.blockCobalt, event);
         }
         if (ConfigRegistryList.registerCopper.get())
         {
-            BlockList.blockOreCopper = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "copperore");
-            BlockList.blockCopper = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "copperblock");
+            BlockList.blockOreCopper = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "copperore");
+            BlockList.blockCopper = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "copperblock");
             blockRegistry(BlockList.blockOreCopper, event);
             blockRegistry(BlockList.blockCopper, event);
         }
         if (ConfigRegistryList.registerDeepIron.get())
         {
-            BlockList.blockOreDeepIron = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "deepironore");
-            BlockList.blockDeepIron = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "deepironblock");
+            BlockList.blockOreDeepIron = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "deepironore");
+            BlockList.blockDeepIron = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "deepironblock");
             blockRegistry(BlockList.blockOreDeepIron, event);
             blockRegistry(BlockList.blockDeepIron, event);
         }
         if(ConfigRegistryList.registerDesichalkos.get())
         {
-            BlockList.blockOreDesichalkos = new BlockEXOre(Material.ROCK,3.0f,5.0f,"desichalkosore");
-            BlockList.blockDesichalkos = new BlockEXOre(Material.IRON,3.0f,5.0f,"desichalkosblock");
+            BlockList.blockOreDesichalkos = new BlockEXOre(Material.STONE,3.0f,5.0f,"desichalkosore");
+            BlockList.blockDesichalkos = new BlockEXOre(Material.METAL,3.0f,5.0f,"desichalkosblock");
             blockRegistry(BlockList.blockOreDesichalkos,event);
             blockRegistry(BlockList.blockDesichalkos,event);
         }
         if(ConfigRegistryList.registerEximite.get())
         {
-            BlockList.blockOreEximite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"eximiteore");
-            BlockList.blockEximite = new BlockEXOre(Material.IRON,3.0f,5.0f,"eximiteblock");
+            BlockList.blockOreEximite = new BlockEXOre(Material.STONE,3.0f,5.0f,"eximiteore");
+            BlockList.blockEximite = new BlockEXOre(Material.METAL,3.0f,5.0f,"eximiteblock");
             blockRegistry(BlockList.blockOreEximite,event);
             blockRegistry(BlockList.blockEximite,event);
         }
         if (ConfigRegistryList.registerGallium.get())
         {
-            BlockList.blockOreGallium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "galliumore");
-            BlockList.blockGallium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "galliumblock");
+            BlockList.blockOreGallium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "galliumore");
+            BlockList.blockGallium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "galliumblock");
             blockRegistry(BlockList.blockOreGallium, event);
             blockRegistry(BlockList.blockGallium, event);
         }
         if(ConfigRegistryList.registerGarnet.get())
         {
-            BlockList.blockOreGarnet = new BlockEXOre(Material.ROCK,3.0f,5.0f,"garnetore");
-            BlockList.blockGarnet = new BlockEXOre(Material.ROCK,3.0f,5.0f,"garnetblock");
+            BlockList.blockOreGarnet = new BlockEXOre(Material.STONE,3.0f,5.0f,"garnetore");
+            BlockList.blockGarnet = new BlockEXOre(Material.STONE,3.0f,5.0f,"garnetblock");
             blockRegistry(BlockList.blockOreGarnet,event);
             blockRegistry(BlockList.blockGarnet,event);
         }
         if (ConfigRegistryList.registerHaderoth.get())
         {
-            BlockList.blockOreHaderoth = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "haderothore");
-            BlockList.blockHaderoth = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "haderothblock");
+            BlockList.blockOreHaderoth = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "haderothore");
+            BlockList.blockHaderoth = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "haderothblock");
             blockRegistry(BlockList.blockOreHaderoth, event);
             blockRegistry(BlockList.blockHaderoth, event);
         }
         if (ConfigRegistryList.registerHepatizon.get())
         {
-            BlockList.blockOreHepatizon = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "hepatizonore");
-            BlockList.blockHepatizon = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "hepatizonblock");
+            BlockList.blockOreHepatizon = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "hepatizonore");
+            BlockList.blockHepatizon = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "hepatizonblock");
             blockRegistry(BlockList.blockOreHepatizon, event);
             blockRegistry(BlockList.blockHepatizon, event);
         }
         if (ConfigRegistryList.registerIgnatius.get())
         {
-            BlockList.blockOreIgnatius = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "ignatiusore");
-            BlockList.blockIgnatius = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "ignatiusblock");
+            BlockList.blockOreIgnatius = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "ignatiusore");
+            BlockList.blockIgnatius = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "ignatiusblock");
             blockRegistry(BlockList.blockOreIgnatius, event);
             blockRegistry(BlockList.blockIgnatius, event);
         }
         if (ConfigRegistryList.registerIndium.get())
         {
-            BlockList.blockOreIndium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "indiumore");
-            BlockList.blockIndium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "indiumblock");
+            BlockList.blockOreIndium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "indiumore");
+            BlockList.blockIndium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "indiumblock");
             blockRegistry(BlockList.blockOreIndium, event);
             blockRegistry(BlockList.blockIndium, event);
         }
         if (ConfigRegistryList.registerInfuscolium.get())
         {
-            BlockList.blockOreInfuscolium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "infuscoliumore");
-            BlockList.blockInfuscolium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "infuscoliumblock");
+            BlockList.blockOreInfuscolium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "infuscoliumore");
+            BlockList.blockInfuscolium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "infuscoliumblock");
             blockRegistry(BlockList.blockOreInfuscolium, event);
             blockRegistry(BlockList.blockInfuscolium, event);
         }
         if (ConfigRegistryList.registerInolashite.get())
         {
-            BlockList.blockOreInolashite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "inolashiteore");
-            BlockList.blockInolashite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "inolashiteblock");
+            BlockList.blockOreInolashite = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "inolashiteore");
+            BlockList.blockInolashite = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "inolashiteblock");
             blockRegistry(BlockList.blockOreInolashite, event);
             blockRegistry(BlockList.blockInolashite, event);
         }
         if(ConfigRegistryList.registerIolite.get())
         {
-            BlockList.blockOreIolite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ioliteore");
-            BlockList.blockIolite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"ioliteblock");
+            BlockList.blockOreIolite = new BlockEXOre(Material.STONE,3.0f,5.0f,"ioliteore");
+            BlockList.blockIolite = new BlockEXOre(Material.STONE,3.0f,5.0f,"ioliteblock");
             blockRegistry(BlockList.blockOreIolite,event);
             blockRegistry(BlockList.blockIolite,event);
         }
         if(ConfigRegistryList.registerIridium.get())
         {
-            BlockList.blockOreIridium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "iridiumore");
-            BlockList.blockIridium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "iridiumblock");
+            BlockList.blockOreIridium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "iridiumore");
+            BlockList.blockIridium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "iridiumblock");
             blockRegistry(BlockList.blockOreIridium, event);
             blockRegistry(BlockList.blockIridium, event);
         }
         if(ConfigRegistryList.registerJade.get())
         {
-            BlockList.blockOreJade = new BlockEXOre(Material.ROCK,3.0f,5.0f,"jadeore");
-            BlockList.blockJade = new BlockEXOre(Material.ROCK,3.0f,5.0f,"jadeblock");
+            BlockList.blockOreJade = new BlockEXOre(Material.STONE,3.0f,5.0f,"jadeore");
+            BlockList.blockJade = new BlockEXOre(Material.STONE,3.0f,5.0f,"jadeblock");
             blockRegistry(BlockList.blockOreJade,event);
             blockRegistry(BlockList.blockJade,event);
         }
         if(ConfigRegistryList.registerJasper.get())
         {
-            BlockList.blockOreJasper = new BlockEXOre(Material.ROCK,3.0f,5.0f,"jasperore");
-            BlockList.blockJasper = new BlockEXOre(Material.ROCK,3.0f,5.0f,"jasperblock");
+            BlockList.blockOreJasper = new BlockEXOre(Material.STONE,3.0f,5.0f,"jasperore");
+            BlockList.blockJasper = new BlockEXOre(Material.STONE,3.0f,5.0f,"jasperblock");
             blockRegistry(BlockList.blockOreJasper,event);
             blockRegistry(BlockList.blockJasper,event);
         }
         if (ConfigRegistryList.registerKalendrite.get())
         {
-            BlockList.blockOreKalendrite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "kalendriteore");
-            BlockList.blockKalendrite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "kalendriteblock");
+            BlockList.blockOreKalendrite = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "kalendriteore");
+            BlockList.blockKalendrite = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "kalendriteblock");
             blockRegistry(BlockList.blockOreKalendrite, event);
             blockRegistry(BlockList.blockKalendrite, event);
         }
         if(ConfigRegistryList.registerKyanite.get())
         {
-            BlockList.blockOreKyanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"kyaniteore");
-            BlockList.blockKyanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"kyaniteblock");
+            BlockList.blockOreKyanite = new BlockEXOre(Material.STONE,3.0f,5.0f,"kyaniteore");
+            BlockList.blockKyanite = new BlockEXOre(Material.STONE,3.0f,5.0f,"kyaniteblock");
             blockRegistry(BlockList.blockOreKyanite,event);
             blockRegistry(BlockList.blockKyanite,event);
         }
         if (ConfigRegistryList.registerLead.get())
         {
-            BlockList.blockOreLead = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "leadore");
-            BlockList.blockLead = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "leadblock");
+            BlockList.blockOreLead = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "leadore");
+            BlockList.blockLead = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "leadblock");
             blockRegistry(BlockList.blockOreLead, event);
             blockRegistry(BlockList.blockLead, event);
         }
         if (ConfigRegistryList.registerLemurite.get())
         {
-            BlockList.blockOreLemurite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "lemuriteore");
-            BlockList.blockLemurite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "lemuriteblock");
+            BlockList.blockOreLemurite = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "lemuriteore");
+            BlockList.blockLemurite = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "lemuriteblock");
             blockRegistry(BlockList.blockOreLemurite, event);
             blockRegistry(BlockList.blockLemurite, event);
         }
         if(ConfigRegistryList.registerMalachite.get())
         {
-            BlockList.blockOreMalachite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"malachiteore");
-            BlockList.blockMalachite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"malachiteblock");
+            BlockList.blockOreMalachite = new BlockEXOre(Material.STONE,3.0f,5.0f,"malachiteore");
+            BlockList.blockMalachite = new BlockEXOre(Material.STONE,3.0f,5.0f,"malachiteblock");
             blockRegistry(BlockList.blockOreMalachite,event);
             blockRegistry(BlockList.blockMalachite,event);
         }
         if (ConfigRegistryList.registerManganese.get())
         {
-            BlockList.blockOreManganese = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "manganeseore");
-            BlockList.blockManganese = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "manganeseblock");
+            BlockList.blockOreManganese = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "manganeseore");
+            BlockList.blockManganese = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "manganeseblock");
             blockRegistry(BlockList.blockOreManganese, event);
             blockRegistry(BlockList.blockManganese, event);
         }
         if(ConfigRegistryList.registerMeutoite.get())
         {
-            BlockList.blockOreMeutoite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"meutoiteore");
-            BlockList.blockMeutoite = new BlockEXOre(Material.IRON,3.0f,5.0f,"meutoiteblock");
+            BlockList.blockOreMeutoite = new BlockEXOre(Material.STONE,3.0f,5.0f,"meutoiteore");
+            BlockList.blockMeutoite = new BlockEXOre(Material.METAL,3.0f,5.0f,"meutoiteblock");
             blockRegistry(BlockList.blockOreMeutoite,event);
             blockRegistry(BlockList.blockMeutoite,event);
         }
         if (ConfigRegistryList.registerMidasium.get())
         {
-            BlockList.blockOreMidasium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "midasiumore");
-            BlockList.blockMidasium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "midasiumblock");
+            BlockList.blockOreMidasium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "midasiumore");
+            BlockList.blockMidasium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "midasiumblock");
             blockRegistry(BlockList.blockOreMidasium, event);
             blockRegistry(BlockList.blockMidasium, event);
         }
         if (ConfigRegistryList.registerMithril.get())
         {
-            BlockList.blockOreMithril = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "mithrilore");
-            BlockList.blockMithril = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "mithrilblock");
+            BlockList.blockOreMithril = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "mithrilore");
+            BlockList.blockMithril = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "mithrilblock");
             blockRegistry(BlockList.blockOreMithril, event);
             blockRegistry(BlockList.blockMithril, event);
         }
         if (ConfigRegistryList.registerMolybdenum.get())
         {
-            BlockList.blockOreMolybdenum = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "molybdenumore");
-            BlockList.blockMolybdenum = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "molybdenumblock");
+            BlockList.blockOreMolybdenum = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "molybdenumore");
+            BlockList.blockMolybdenum = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "molybdenumblock");
             blockRegistry(BlockList.blockOreMolybdenum, event);
             blockRegistry(BlockList.blockMolybdenum, event);
         }
         if (ConfigRegistryList.registerNeodymium.get())
         {
-            BlockList.blockOreNeodymium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "neodymiumore");
-            BlockList.blockNeodymium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "neodymiumblock");
+            BlockList.blockOreNeodymium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "neodymiumore");
+            BlockList.blockNeodymium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "neodymiumblock");
             blockRegistry(BlockList.blockOreNeodymium, event);
             blockRegistry(BlockList.blockNeodymium, event);
         }
         if(ConfigRegistryList.registerNeptunium.get())
         {
-            BlockList.blockOreNeptunium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "neptuniumore");
-            BlockList.blockNeptunium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "neptuniumblock");
+            BlockList.blockOreNeptunium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "neptuniumore");
+            BlockList.blockNeptunium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "neptuniumblock");
             blockRegistry(BlockList.blockOreNeptunium, event);
             blockRegistry(BlockList.blockNeptunium, event);
         }
         if (ConfigRegistryList.registerNickel.get())
         {
-            BlockList.blockOreNickel = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "nickelore");
-            BlockList.blockNickel = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "nickelblock");
+            BlockList.blockOreNickel = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "nickelore");
+            BlockList.blockNickel = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "nickelblock");
             blockRegistry(BlockList.blockOreNickel, event);
             blockRegistry(BlockList.blockNickel, event);
         }
         if (ConfigRegistryList.registerNiobium.get())
         {
-            BlockList.blockOreNiobium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "niobiumore");
-            BlockList.blockNiobium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "niobiumblock");
+            BlockList.blockOreNiobium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "niobiumore");
+            BlockList.blockNiobium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "niobiumblock");
             blockRegistry(BlockList.blockOreNiobium, event);
             blockRegistry(BlockList.blockNiobium, event);
         }
         if(ConfigRegistryList.registerOnyx.get())
         {
-            BlockList.blockOreOnyx = new BlockEXOre(Material.ROCK,3.0f,5.0f,"onyxore");
-            BlockList.blockOnyx = new BlockEXOre(Material.ROCK,3.0f,5.0f,"onyxblock");
+            BlockList.blockOreOnyx = new BlockEXOre(Material.STONE,3.0f,5.0f,"onyxore");
+            BlockList.blockOnyx = new BlockEXOre(Material.STONE,3.0f,5.0f,"onyxblock");
             blockRegistry(BlockList.blockOreOnyx,event);
             blockRegistry(BlockList.blockOnyx,event);
         }
         if(ConfigRegistryList.registerOpal.get())
         {
-            BlockList.blockOreOpal = new BlockEXOre(Material.ROCK,3.0f,5.0f,"opalore");
-            BlockList.blockOpal = new BlockEXOre(Material.ROCK,3.0f,5.0f,"opalblock");
+            BlockList.blockOreOpal = new BlockEXOre(Material.STONE,3.0f,5.0f,"opalore");
+            BlockList.blockOpal = new BlockEXOre(Material.STONE,3.0f,5.0f,"opalblock");
             blockRegistry(BlockList.blockOreOpal,event);
             blockRegistry(BlockList.blockOpal,event);
         }
         if (ConfigRegistryList.registerOrichalcum.get())
         {
-            BlockList.blockOreOrichalcum = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "orichalcumore");
-            BlockList.blockOrichalcum = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "orichalcumblock");
+            BlockList.blockOreOrichalcum = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "orichalcumore");
+            BlockList.blockOrichalcum = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "orichalcumblock");
             blockRegistry(BlockList.blockOreOrichalcum, event);
             blockRegistry(BlockList.blockOrichalcum, event);
         }
         if(ConfigRegistryList.registerOsmium.get())
         {
-            BlockList.blockOreOsmium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "osmiumore");
-            BlockList.blockOsmium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "osmiumblock");
+            BlockList.blockOreOsmium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "osmiumore");
+            BlockList.blockOsmium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "osmiumblock");
             blockRegistry(BlockList.blockOreOsmium, event);
             blockRegistry(BlockList.blockOsmium, event);
         }
         if (ConfigRegistryList.registerOureclase.get())
         {
-            BlockList.blockOreOureclase = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "oureclaseore");
-            BlockList.blockOureclase = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "oureclaseblock");
+            BlockList.blockOreOureclase = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "oureclaseore");
+            BlockList.blockOureclase = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "oureclaseblock");
             blockRegistry(BlockList.blockOreOureclase, event);
             blockRegistry(BlockList.blockOureclase, event);
         }
         if (ConfigRegistryList.registerPalladium.get())
         {
-            BlockList.blockOrePalladium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "palladiumore");
-            BlockList.blockPalladium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "palladiumblock");
+            BlockList.blockOrePalladium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "palladiumore");
+            BlockList.blockPalladium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "palladiumblock");
             blockRegistry(BlockList.blockOrePalladium, event);
             blockRegistry(BlockList.blockPalladium, event);
         }
         if(ConfigRegistryList.registerPeridot.get())
         {
-            BlockList.blockOrePeridot = new BlockEXOre(Material.ROCK,3.0f,5.0f,"peridotore");
-            BlockList.blockPeridot = new BlockEXOre(Material.ROCK,3.0f,5.0f,"peridotblock");
+            BlockList.blockOrePeridot = new BlockEXOre(Material.STONE,3.0f,5.0f,"peridotore");
+            BlockList.blockPeridot = new BlockEXOre(Material.STONE,3.0f,5.0f,"peridotblock");
             blockRegistry(BlockList.blockOrePeridot,event);
             blockRegistry(BlockList.blockPeridot,event);
         }
         if(ConfigRegistryList.registerPhoenixite.get())
         {
-            BlockList.blockOrePhoenixite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"phoenixiteore");
-            BlockList.blockPhoenixite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"phoenixiteblock");
+            BlockList.blockOrePhoenixite = new BlockEXOre(Material.STONE,3.0f,5.0f,"phoenixiteore");
+            BlockList.blockPhoenixite = new BlockEXOre(Material.STONE,3.0f,5.0f,"phoenixiteblock");
             blockRegistry(BlockList.blockOrePhoenixite,event);
             blockRegistry(BlockList.blockPhoenixite,event);
         }
         if (ConfigRegistryList.registerPlatinum.get())
         {
-            BlockList.blockOrePlatinum = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "platinumore");
-            BlockList.blockPlatinum = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "platinumblock");
+            BlockList.blockOrePlatinum = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "platinumore");
+            BlockList.blockPlatinum = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "platinumblock");
             blockRegistry(BlockList.blockOrePlatinum, event);
             blockRegistry(BlockList.blockPlatinum, event);
         }
         if(ConfigRegistryList.registerPlutonium.get())
         {
-            BlockList.blockOrePlutonium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "plutoniumore");
-            BlockList.blockPlutonium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "plutoniumblock");
+            BlockList.blockOrePlutonium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "plutoniumore");
+            BlockList.blockPlutonium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "plutoniumblock");
             blockRegistry(BlockList.blockOrePlutonium, event);
             blockRegistry(BlockList.blockPlutonium, event);
         }
         if(ConfigRegistryList.registerPolonium.get())
         {
-            BlockList.blockOrePolonium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "poloniumore");
-            BlockList.blockPolonium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "poloniumblock");
+            BlockList.blockOrePolonium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "poloniumore");
+            BlockList.blockPolonium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "poloniumblock");
             blockRegistry(BlockList.blockOrePolonium, event);
             blockRegistry(BlockList.blockPolonium, event);
         }
         if (ConfigRegistryList.registerPromethium.get())
         {
-            BlockList.blockOrePromethium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "promethiumore");
-            BlockList.blockPromethium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "promethiumblock");
+            BlockList.blockOrePromethium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "promethiumore");
+            BlockList.blockPromethium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "promethiumblock");
             blockRegistry(BlockList.blockOrePromethium, event);
             blockRegistry(BlockList.blockPromethium, event);
         }
         if(ConfigRegistryList.registerQuartz.get())
         {
-            BlockList.blockOreQuartz = new BlockEXOre(Material.ROCK,3.0f,5.0f,"quartzore");
-            BlockList.blockQuartz = new BlockEXOre(Material.ROCK,3.0f,5.0f,"quartzblock");
+            BlockList.blockOreQuartz = new BlockEXOre(Material.STONE,3.0f,5.0f,"quartzore");
+            BlockList.blockQuartz = new BlockEXOre(Material.STONE,3.0f,5.0f,"quartzblock");
             blockRegistry(BlockList.blockOreQuartz,event);
             blockRegistry(BlockList.blockQuartz,event);
         }
         if(ConfigRegistryList.registerRhenium.get())
         {
-            BlockList.blockOreRhenium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "rheniumore");
-            BlockList.blockRhenium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "rheniumblock");
+            BlockList.blockOreRhenium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "rheniumore");
+            BlockList.blockRhenium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "rheniumblock");
             blockRegistry(BlockList.blockOreRhenium, event);
             blockRegistry(BlockList.blockRhenium, event);
         }
         if (ConfigRegistryList.registerRhodium.get())
         {
-            BlockList.blockOreRhodium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "rhodiumore");
-            BlockList.blockRhodium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "rhodiumblock");
+            BlockList.blockOreRhodium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "rhodiumore");
+            BlockList.blockRhodium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "rhodiumblock");
             blockRegistry(BlockList.blockOreRhodium, event);
             blockRegistry(BlockList.blockRhodium, event);
         }
         if (ConfigRegistryList.registerRubracium.get())
         {
-            BlockList.blockOreRubracium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "rubraciumore");
-            BlockList.blockRubracium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "rubraciumblock");
+            BlockList.blockOreRubracium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "rubraciumore");
+            BlockList.blockRubracium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "rubraciumblock");
             blockRegistry(BlockList.blockOreRubracium, event);
             blockRegistry(BlockList.blockRubracium, event);
         }
         if(ConfigRegistryList.registerRuby.get())
         {
-            BlockList.blockOreRuby = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rubyore");
-            BlockList.blockRuby = new BlockEXOre(Material.ROCK,3.0f,5.0f,"rubyblock");
+            BlockList.blockOreRuby = new BlockEXOre(Material.STONE,3.0f,5.0f,"rubyore");
+            BlockList.blockRuby = new BlockEXOre(Material.STONE,3.0f,5.0f,"rubyblock");
             blockRegistry(BlockList.blockOreRuby,event);
             blockRegistry(BlockList.blockRuby,event);
         }
         if (ConfigRegistryList.registerRuthenium.get())
         {
-            BlockList.blockOreRuthenium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "rutheniumore");
-            BlockList.blockRuthenium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "rutheniumblock");
+            BlockList.blockOreRuthenium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "rutheniumore");
+            BlockList.blockRuthenium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "rutheniumblock");
             blockRegistry(BlockList.blockOreRuthenium, event);
             blockRegistry(BlockList.blockRuthenium, event);
         }
         if (ConfigRegistryList.registerSanguinite.get())
         {
-            BlockList.blockOreSanguinite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "sanguiniteore");
-            BlockList.blockSanguinite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "sanguiniteblock");
+            BlockList.blockOreSanguinite = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "sanguiniteore");
+            BlockList.blockSanguinite = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "sanguiniteblock");
             blockRegistry(BlockList.blockOreSanguinite, event);
             blockRegistry(BlockList.blockSanguinite, event);
         }
         if(ConfigRegistryList.registerSapphire.get())
         {
-            BlockList.blockOreSapphire = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sapphireore");
-            BlockList.blockSapphire = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sapphireblock");
+            BlockList.blockOreSapphire = new BlockEXOre(Material.STONE,3.0f,5.0f,"sapphireore");
+            BlockList.blockSapphire = new BlockEXOre(Material.STONE,3.0f,5.0f,"sapphireblock");
             blockRegistry(BlockList.blockOreSapphire,event);
             blockRegistry(BlockList.blockSapphire,event);
         }
         if (ConfigRegistryList.registerShadowIron.get())
         {
-            BlockList.blockOreShadowIron = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "shadowironore");
-            BlockList.blockShadowIron = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "shadowironblock");
+            BlockList.blockOreShadowIron = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "shadowironore");
+            BlockList.blockShadowIron = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "shadowironblock");
             blockRegistry(BlockList.blockOreShadowIron, event);
             blockRegistry(BlockList.blockShadowIron, event);
         }
         if (ConfigRegistryList.registerSilver.get())
         {
-            BlockList.blockOreSilver = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "silverore");
-            BlockList.blockSilver = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "silverblock");
+            BlockList.blockOreSilver = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "silverore");
+            BlockList.blockSilver = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "silverblock");
             blockRegistry(BlockList.blockOreSilver, event);
             blockRegistry(BlockList.blockSilver, event);
         }
         if(ConfigRegistryList.registerSpinel.get())
         {
-            BlockList.blockOreSpinel = new BlockEXOre(Material.ROCK,3.0f,5.0f,"spinelore");
-            BlockList.blockSpinel = new BlockEXOre(Material.ROCK,3.0f,5.0f,"spinelblock");
+            BlockList.blockOreSpinel = new BlockEXOre(Material.STONE,3.0f,5.0f,"spinelore");
+            BlockList.blockSpinel = new BlockEXOre(Material.STONE,3.0f,5.0f,"spinelblock");
             blockRegistry(BlockList.blockOreSpinel,event);
             blockRegistry(BlockList.blockSpinel,event);
         }
         if(ConfigRegistryList.registerSugilite.get())
         {
-            BlockList.blockOreSugilite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sugiliteore");
-            BlockList.blockSugilite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"sugiliteblock");
+            BlockList.blockOreSugilite = new BlockEXOre(Material.STONE,3.0f,5.0f,"sugiliteore");
+            BlockList.blockSugilite = new BlockEXOre(Material.STONE,3.0f,5.0f,"sugiliteblock");
             blockRegistry(BlockList.blockOreSugilite,event);
             blockRegistry(BlockList.blockSugilite,event);
         }
         if(ConfigRegistryList.registerTantalum.get())
         {
-            BlockList.blockOreTantalum = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "tantalumore");
-            BlockList.blockTantalum = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "tantalumblock");
+            BlockList.blockOreTantalum = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "tantalumore");
+            BlockList.blockTantalum = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "tantalumblock");
             blockRegistry(BlockList.blockOreTantalum, event);
             blockRegistry(BlockList.blockTantalum, event);
         }
         if(ConfigRegistryList.registerTanzanite.get())
         {
-            BlockList.blockOreTanzanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tanzaniteore");
-            BlockList.blockTanzanite = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tanzaniteblock");
+            BlockList.blockOreTanzanite = new BlockEXOre(Material.STONE,3.0f,5.0f,"tanzaniteore");
+            BlockList.blockTanzanite = new BlockEXOre(Material.STONE,3.0f,5.0f,"tanzaniteblock");
             blockRegistry(BlockList.blockOreTanzanite,event);
             blockRegistry(BlockList.blockTanzanite,event);
         }
         if(ConfigRegistryList.registerTartarite.get())
         {
-            BlockList.blockOreTartarite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "tartariteore");
-            BlockList.blockTartarite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "tartariteblock");
+            BlockList.blockOreTartarite = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "tartariteore");
+            BlockList.blockTartarite = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "tartariteblock");
             blockRegistry(BlockList.blockOreTartarite, event);
             blockRegistry(BlockList.blockTartarite, event);
         }
         if (ConfigRegistryList.registerTechnetium.get())
         {
-            BlockList.blockOreTechnetium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "technetiumore");
-            BlockList.blockTechnetium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "technetiumblock");
+            BlockList.blockOreTechnetium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "technetiumore");
+            BlockList.blockTechnetium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "technetiumblock");
             blockRegistry(BlockList.blockOreTechnetium, event);
             blockRegistry(BlockList.blockTechnetium, event);
         }
         if (ConfigRegistryList.registerThallium.get())
         {
-            BlockList.blockOreThallium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "thalliumore");
-            BlockList.blockThallium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "thalliumblock");
+            BlockList.blockOreThallium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "thalliumore");
+            BlockList.blockThallium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "thalliumblock");
             blockRegistry(BlockList.blockOreThallium, event);
             blockRegistry(BlockList.blockThallium, event);
         }
         if (ConfigRegistryList.registerTin.get())
         {
-            BlockList.blockOreTin = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "tinore");
-            BlockList.blockTin = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "tinblock");
+            BlockList.blockOreTin = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "tinore");
+            BlockList.blockTin = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "tinblock");
             blockRegistry(BlockList.blockOreTin, event);
             blockRegistry(BlockList.blockTin, event);
         }
         if (ConfigRegistryList.registerTitanium.get())
         {
-            BlockList.blockOreTitanium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "titaniumore");
-            BlockList.blockTitanium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "titaniumblock");
+            BlockList.blockOreTitanium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "titaniumore");
+            BlockList.blockTitanium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "titaniumblock");
             blockRegistry(BlockList.blockOreTitanium, event);
             blockRegistry(BlockList.blockTitanium, event);
         }
         if(ConfigRegistryList.registerTopaz.get())
         {
-            BlockList.blockOreTopaz = new BlockEXOre(Material.ROCK,3.0f,5.0f,"topazore");
-            BlockList.blockTopaz = new BlockEXOre(Material.ROCK,3.0f,5.0f,"topazblock");
+            BlockList.blockOreTopaz = new BlockEXOre(Material.STONE,3.0f,5.0f,"topazore");
+            BlockList.blockTopaz = new BlockEXOre(Material.STONE,3.0f,5.0f,"topazblock");
             blockRegistry(BlockList.blockOreTopaz,event);
             blockRegistry(BlockList.blockTopaz,event);
         }
         if(ConfigRegistryList.registerTourmaline.get())
         {
-            BlockList.blockOreTourmaline = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tourmalineore");
-            BlockList.blockTourmaline = new BlockEXOre(Material.ROCK,3.0f,5.0f,"tourmalineblock");
+            BlockList.blockOreTourmaline = new BlockEXOre(Material.STONE,3.0f,5.0f,"tourmalineore");
+            BlockList.blockTourmaline = new BlockEXOre(Material.STONE,3.0f,5.0f,"tourmalineblock");
             blockRegistry(BlockList.blockOreTourmaline,event);
             blockRegistry(BlockList.blockTourmaline,event);
         }
         if (ConfigRegistryList.registerTungsten.get())
         {
-            BlockList.blockOreTungsten = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "tungstenore");
-            BlockList.blockTungsten = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "tungstenblock");
+            BlockList.blockOreTungsten = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "tungstenore");
+            BlockList.blockTungsten = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "tungstenblock");
             blockRegistry(BlockList.blockOreTungsten, event);
             blockRegistry(BlockList.blockTungsten, event);
         }
         if(ConfigRegistryList.registerTurquoise.get())
         {
-            BlockList.blockOreTurquoise = new BlockEXOre(Material.ROCK,3.0f,5.0f,"turquoiseore");
-            BlockList.blockTurquoise = new BlockEXOre(Material.ROCK,3.0f,5.0f,"turquoiseblock");
+            BlockList.blockOreTurquoise = new BlockEXOre(Material.STONE,3.0f,5.0f,"turquoiseore");
+            BlockList.blockTurquoise = new BlockEXOre(Material.STONE,3.0f,5.0f,"turquoiseblock");
             blockRegistry(BlockList.blockOreTurquoise,event);
             blockRegistry(BlockList.blockTurquoise,event);
         }
         if (ConfigRegistryList.registerUnobtainium.get())
         {
-            BlockList.blockOreUnobtainium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "unobtainiumore");
-            BlockList.blockUnobtainium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "unobtainiumblock");
+            BlockList.blockOreUnobtainium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "unobtainiumore");
+            BlockList.blockUnobtainium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "unobtainiumblock");
             blockRegistry(BlockList.blockOreUnobtainium, event);
             blockRegistry(BlockList.blockUnobtainium, event);
         }
         if (ConfigRegistryList.registerUranium.get())
         {
-            BlockList.blockOreUranium = new BlockEXOre(Material.ROCK,3.0f,5.0f,"uraniumore");
-            BlockList.blockUranium = new BlockEXOre(Material.IRON,3.0f,5.0f,"uraniumblock");
+            BlockList.blockOreUranium = new BlockEXOre(Material.STONE,3.0f,5.0f,"uraniumore");
+            BlockList.blockUranium = new BlockEXOre(Material.METAL,3.0f,5.0f,"uraniumblock");
             blockRegistry(BlockList.blockOreUranium,event);
             blockRegistry(BlockList.blockUranium,event);
         }
         if (ConfigRegistryList.registerVanadium.get())
         {
-            BlockList.blockOreVanadium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "vanadiumore");
-            BlockList.blockVanadium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "vanadiumblock");
+            BlockList.blockOreVanadium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "vanadiumore");
+            BlockList.blockVanadium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "vanadiumblock");
             blockRegistry(BlockList.blockOreVanadium, event);
             blockRegistry(BlockList.blockVanadium, event);
         }
         if (ConfigRegistryList.registerVulcanite.get())
         {
-            BlockList.blockOreVulcanite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "vulcaniteore");
-            BlockList.blockVulcanite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "vulcaniteblock");
+            BlockList.blockOreVulcanite = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "vulcaniteore");
+            BlockList.blockVulcanite = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "vulcaniteblock");
             blockRegistry(BlockList.blockOreVulcanite, event);
             blockRegistry(BlockList.blockVulcanite, event);
         }
         if (ConfigRegistryList.registerVyroxeres.get())
         {
-            BlockList.blockOreVyroxeres = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "vyroxeresore");
-            BlockList.blockVyroxeres = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "vyroxeresblock");
+            BlockList.blockOreVyroxeres = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "vyroxeresore");
+            BlockList.blockVyroxeres = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "vyroxeresblock");
             blockRegistry(BlockList.blockOreVyroxeres, event);
             blockRegistry(BlockList.blockVyroxeres, event);
         }
         if(ConfigRegistryList.registerYellorite.get())
         {
-            BlockList.blockOreYellorite = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "yelloriteore");
-            BlockList.blockYellorite = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "yelloriteblock");
+            BlockList.blockOreYellorite = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "yelloriteore");
+            BlockList.blockYellorite = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "yelloriteblock");
             blockRegistry(BlockList.blockOreYellorite, event);
             blockRegistry(BlockList.blockYellorite, event);
         }
         if (ConfigRegistryList.registerZinc.get())
         {
-            BlockList.blockOreZinc = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "zincore");
-            BlockList.blockZinc = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "zincblock");
+            BlockList.blockOreZinc = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "zincore");
+            BlockList.blockZinc = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "zincblock");
             blockRegistry(BlockList.blockOreZinc, event);
             blockRegistry(BlockList.blockZinc, event);
         }
         if (ConfigRegistryList.registerZirconium.get())
         {
-            BlockList.blockOreZirconium = new BlockEXOre(Material.ROCK, 3.0f, 5.0f, "zirconiumore");
-            BlockList.blockZirconium = new BlockEXOre(Material.IRON, 3.0f, 5.0f, "zirconiumblock");
+            BlockList.blockOreZirconium = new BlockEXOre(Material.STONE, 3.0f, 5.0f, "zirconiumore");
+            BlockList.blockZirconium = new BlockEXOre(Material.METAL, 3.0f, 5.0f, "zirconiumblock");
             blockRegistry(BlockList.blockOreZirconium, event);
             blockRegistry(BlockList.blockZirconium, event);
         }

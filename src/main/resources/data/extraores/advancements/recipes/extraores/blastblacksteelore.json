@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:blacksteelingot"
+            "items": [
+              "extraores:blacksteelingot"
+            ]
           }
         ]
       }

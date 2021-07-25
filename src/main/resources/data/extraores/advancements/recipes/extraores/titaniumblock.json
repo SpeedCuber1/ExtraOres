@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:titaniumblock"
+            "items": [
+              "extraores:titaniumblock"
+            ]
           }
         ]
       }

@@ -1,209 +1,31 @@
 package com.tylerh.extraores.Data.Loot_Tables;
 
-import com.tylerh.extraores.Init.BlockList;
-import com.tylerh.extraores.Init.ItemList;
-import net.minecraft.data.DataGenerator;
+import com.google.common.collect.Maps;
+import net.minecraft.advancements.critereon.EnchantmentPredicate;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.MinMaxBounds;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 
-public class LootTables extends BaseLootTableProvider
+import java.util.Map;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+
+public class LootTables implements Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>
 {
-
-    public LootTables(DataGenerator dataGeneratorIn)
+    private static final LootItemCondition.Builder SILK_TOUCH = MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))));
+    private final Map<ResourceLocation, LootTable.Builder> map = Maps.newHashMap();
+    public LootTables()
     {
-        super(dataGeneratorIn);
+
     }
 
     @Override
-    protected void addTables()
+    public void accept(BiConsumer<ResourceLocation, LootTable.Builder> resourceLocationBuilderBiConsumer)
     {
-        //Ores
-        lootTables.put(BlockList.blockOreAdamantine,createStandardTable("adamantineore",BlockList.blockOreAdamantine));
-        lootTables.put(BlockList.blockOreAgate,createFortune("agateore",BlockList.blockOreAgate,ItemList.itemGemAgate));
-        lootTables.put(BlockList.blockOreAldourite,createStandardTable("aldouriteore",BlockList.blockOreAldourite));
-        lootTables.put(BlockList.blockOreAluminum,createStandardTable("aluminumore",BlockList.blockOreAluminum));
-        lootTables.put(BlockList.blockOreAmericium,createStandardTable("americiumore",BlockList.blockOreAmericium));
-        lootTables.put(BlockList.blockOreAmethyst,createFortune("amethystore",BlockList.blockOreAmethyst,ItemList.itemGemAmethyst));
-        lootTables.put(BlockList.blockOreAmetrine,createFortune("ametrineore",BlockList.blockOreAmetrine,ItemList.itemGemAmetrine));
-        lootTables.put(BlockList.blockOreAmordrine,createStandardTable("amordrineore",BlockList.blockOreAmordrine));
-        lootTables.put(BlockList.blockOreAngmallen,createStandardTable("angmallenore",BlockList.blockOreAngmallen));
-        lootTables.put(BlockList.blockOreAquamarine,createFortune("aquamarineore",BlockList.blockOreAquamarine,ItemList.itemGemAquamarine));
-        lootTables.put(BlockList.blockOreAstralSilver,createStandardTable("astralsilverore",BlockList.blockOreAstralSilver));
-        lootTables.put(BlockList.blockOreAtlarus,createStandardTable("atlarusore",BlockList.blockOreAtlarus));
-        lootTables.put(BlockList.blockOreBismuth,createStandardTable("bismuthore",BlockList.blockOreBismuth));
-        lootTables.put(BlockList.blockOreBlackSteel,createStandardTable("blacksteelore",BlockList.blockOreBlackSteel));
-        lootTables.put(BlockList.blockOreCadmium,createStandardTable("cadmiumore",BlockList.blockOreCadmium));
-        lootTables.put(BlockList.blockOreCarmot,createStandardTable("carmotore",BlockList.blockOreCarmot));
-        lootTables.put(BlockList.blockOreCelenegil,createStandardTable("celenegilore",BlockList.blockOreCelenegil));
-        lootTables.put(BlockList.blockOreCeruclase,createStandardTable("ceruclaseore",BlockList.blockOreCeruclase));
-        lootTables.put(BlockList.blockOreChromium,createStandardTable("chromiumore",BlockList.blockOreChromium));
-        lootTables.put(BlockList.blockOreChrysocolla,createFortune("chrysocollaore",BlockList.blockOreChrysocolla,ItemList.itemGemChrysocolla));
-        lootTables.put(BlockList.blockOreCitrine,createFortune("citrineore",BlockList.blockOreCitrine,ItemList.itemGemCitrine));
-        lootTables.put(BlockList.blockOreCobalt,createStandardTable("cobaltore",BlockList.blockOreCobalt));
-        lootTables.put(BlockList.blockOreCopper,createStandardTable("copperore",BlockList.blockOreCopper));
-        lootTables.put(BlockList.blockOreDeepIron,createStandardTable("deepironore",BlockList.blockOreDeepIron));
-        lootTables.put(BlockList.blockOreDesichalkos,createStandardTable("desichalkosore",BlockList.blockOreDesichalkos));
-        lootTables.put(BlockList.blockOreEximite,createStandardTable("eximiteore",BlockList.blockOreEximite));
-        lootTables.put(BlockList.blockOreGallium,createStandardTable("galliumore",BlockList.blockOreGallium));
-        lootTables.put(BlockList.blockOreGarnet,createFortune("garnetore",BlockList.blockOreGarnet,ItemList.itemGemGarnet));
-        lootTables.put(BlockList.blockOreHaderoth,createStandardTable("haderothore",BlockList.blockOreHaderoth));
-        lootTables.put(BlockList.blockOreHepatizon,createStandardTable("hepatizonore",BlockList.blockOreHepatizon));
-        lootTables.put(BlockList.blockOreIgnatius,createStandardTable("ignatiusore",BlockList.blockOreIgnatius));
-        lootTables.put(BlockList.blockOreIndium,createStandardTable("indiumore",BlockList.blockOreIndium));
-        lootTables.put(BlockList.blockOreInfuscolium,createStandardTable("infuscoliumore",BlockList.blockOreInfuscolium));
-        lootTables.put(BlockList.blockOreInolashite,createStandardTable("inolashiteore",BlockList.blockOreInolashite));
-        lootTables.put(BlockList.blockOreIolite,createFortune("ioliteore",BlockList.blockOreIolite,ItemList.itemGemIolite));
-        lootTables.put(BlockList.blockOreIridium,createStandardTable("iridiumore",BlockList.blockOreIridium));
-        lootTables.put(BlockList.blockOreJade,createFortune("jadeore",BlockList.blockOreJade,ItemList.itemGemJade));
-        lootTables.put(BlockList.blockOreJasper,createFortune("jasperore",BlockList.blockOreJasper,ItemList.itemGemJasper));
-        lootTables.put(BlockList.blockOreKalendrite,createStandardTable("kalendriteore",BlockList.blockOreKalendrite));
-        lootTables.put(BlockList.blockOreKyanite,createFortune("kyaniteore",BlockList.blockOreKyanite,ItemList.itemGemKyanite));
-        lootTables.put(BlockList.blockOreLead,createStandardTable("leadore",BlockList.blockOreLead));
-        lootTables.put(BlockList.blockOreLemurite,createStandardTable("lemuriteore",BlockList.blockOreLemurite));
-        lootTables.put(BlockList.blockOreMalachite,createFortune("malachiteore",BlockList.blockOreMalachite,ItemList.itemGemMalachite));
-        lootTables.put(BlockList.blockOreManganese,createStandardTable("manganeseore",BlockList.blockOreManganese));
-        lootTables.put(BlockList.blockOreMeutoite,createStandardTable("meutoiteore",BlockList.blockOreMeutoite));
-        lootTables.put(BlockList.blockOreMidasium,createStandardTable("midasiumore",BlockList.blockOreMidasium));
-        lootTables.put(BlockList.blockOreMithril,createStandardTable("mithrilore",BlockList.blockOreMithril));
-        lootTables.put(BlockList.blockOreMolybdenum,createStandardTable("molybdenumore",BlockList.blockOreMolybdenum));
-        lootTables.put(BlockList.blockOreNeodymium,createStandardTable("neodymiumore",BlockList.blockOreNeodymium));
-        lootTables.put(BlockList.blockOreNeptunium,createStandardTable("neptuniumore",BlockList.blockOreNeptunium));
-        lootTables.put(BlockList.blockOreNickel,createStandardTable("nickelore",BlockList.blockOreNickel));
-        lootTables.put(BlockList.blockOreNiobium,createStandardTable("niobiumore",BlockList.blockOreNiobium));
-        lootTables.put(BlockList.blockOreOnyx,createFortune("onyxore",BlockList.blockOreOnyx,ItemList.itemGemOnyx));
-        lootTables.put(BlockList.blockOreOpal,createFortune("opalore",BlockList.blockOreOpal,ItemList.itemGemOpal));
-        lootTables.put(BlockList.blockOreOrichalcum,createStandardTable("orichalcumore",BlockList.blockOreOrichalcum));
-        lootTables.put(BlockList.blockOreOsmium,createStandardTable("osmiumore",BlockList.blockOreOsmium));
-        lootTables.put(BlockList.blockOreOureclase,createStandardTable("ourecolaseore",BlockList.blockOreOureclase));
-        lootTables.put(BlockList.blockOrePalladium,createStandardTable("palladiumore",BlockList.blockOrePalladium));
-        lootTables.put(BlockList.blockOrePeridot,createFortune("peridotore",BlockList.blockOrePeridot,ItemList.itemGemPeridot));
-        lootTables.put(BlockList.blockOrePhoenixite,createFortune("phoenixiteore",BlockList.blockOrePhoenixite,ItemList.itemGemPhoenixite));
-        lootTables.put(BlockList.blockOrePlatinum,createStandardTable("platinumore",BlockList.blockOrePlatinum));
-        lootTables.put(BlockList.blockOrePlutonium,createStandardTable("plutoniumore",BlockList.blockOrePlutonium));
-        lootTables.put(BlockList.blockOrePolonium,createStandardTable("poloniumore",BlockList.blockOrePolonium));
-        lootTables.put(BlockList.blockOrePromethium,createStandardTable("promethiumore",BlockList.blockOrePromethium));
-        lootTables.put(BlockList.blockOreQuartz,createFortune("quartzore",BlockList.blockOreQuartz,ItemList.itemGemQuartz));
-        lootTables.put(BlockList.blockOreRhenium,createStandardTable("rheniumore",BlockList.blockOreRhenium));
-        lootTables.put(BlockList.blockOreRhodium,createStandardTable("rhodiumore",BlockList.blockOreRhodium));
-        lootTables.put(BlockList.blockOreRubracium,createStandardTable("rubraciumore",BlockList.blockOreRubracium));
-        lootTables.put(BlockList.blockOreRuby,createFortune("rubyore",BlockList.blockOreRuby,ItemList.itemGemRuby));
-        lootTables.put(BlockList.blockOreRuthenium,createStandardTable("rutheniumore",BlockList.blockOreRuthenium));
-        lootTables.put(BlockList.blockOreSanguinite,createStandardTable("sanguiniteore",BlockList.blockOreSanguinite));
-        lootTables.put(BlockList.blockOreSapphire,createFortune("sapphireore",BlockList.blockOreSapphire,ItemList.itemGemSapphire));
-        lootTables.put(BlockList.blockOreShadowIron,createStandardTable("shadowironore",BlockList.blockOreShadowIron));
-        lootTables.put(BlockList.blockOreSilver,createStandardTable("silverore",BlockList.blockOreSilver));
-        lootTables.put(BlockList.blockOreSpinel,createFortune("spinelore",BlockList.blockOreSpinel,ItemList.itemGemSpinel));
-        lootTables.put(BlockList.blockOreSugilite,createFortune("sugiliteore",BlockList.blockOreSugilite,ItemList.itemGemSugilite));
-        lootTables.put(BlockList.blockOreTantalum,createStandardTable("tantalumore",BlockList.blockOreTantalum));
-        lootTables.put(BlockList.blockOreTanzanite,createFortune("tanzaniteore",BlockList.blockOreTanzanite,ItemList.itemGemTanzanite));
-        lootTables.put(BlockList.blockOreTartarite,createStandardTable("tartariteore",BlockList.blockOreTartarite));
-        lootTables.put(BlockList.blockOreTechnetium,createStandardTable("technetiumore",BlockList.blockOreTechnetium));
-        lootTables.put(BlockList.blockOreThallium,createStandardTable("thalliumore",BlockList.blockOreThallium));
-        lootTables.put(BlockList.blockOreTin,createStandardTable("tinore",BlockList.blockOreTin));
-        lootTables.put(BlockList.blockOreTitanium,createStandardTable("titaniumore",BlockList.blockOreTitanium));
-        lootTables.put(BlockList.blockOreTopaz,createFortune("topazore",BlockList.blockOreTopaz,ItemList.itemGemTopaz));
-        lootTables.put(BlockList.blockOreTourmaline,createFortune("tourmalineore",BlockList.blockOreTourmaline,ItemList.itemGemTourmaline));
-        lootTables.put(BlockList.blockOreTungsten,createStandardTable("tungstenore",BlockList.blockOreTungsten));
-        lootTables.put(BlockList.blockOreTurquoise,createFortune("turquoiseore",BlockList.blockOreTurquoise,ItemList.itemGemTurquoise));
-        lootTables.put(BlockList.blockOreUnobtainium,createStandardTable("unobtainiumore",BlockList.blockOreUnobtainium));
-        lootTables.put(BlockList.blockOreUranium,createStandardTable("uraniumore",BlockList.blockOreUranium));
-        lootTables.put(BlockList.blockOreVanadium,createStandardTable("vanadiumore",BlockList.blockOreVanadium));
-        lootTables.put(BlockList.blockOreVulcanite,createStandardTable("vulcaniteore",BlockList.blockOreVulcanite));
-        lootTables.put(BlockList.blockOreVyroxeres,createStandardTable("vyroxeresore",BlockList.blockOreVyroxeres));
-        lootTables.put(BlockList.blockOreYellorite,createStandardTable("yelloriteore",BlockList.blockOreYellorite));
-        lootTables.put(BlockList.blockOreZinc,createStandardTable("zincore",BlockList.blockOreZinc));
-        lootTables.put(BlockList.blockOreZirconium,createStandardTable("zirconiumore",BlockList.blockOreZirconium));
-        //Blocks
-        lootTables.put(BlockList.blockAdamantine,createStandardTable("adamantineblock",BlockList.blockAdamantine));
-        lootTables.put(BlockList.blockAgate,createStandardTable("agateblock",BlockList.blockAgate));
-        lootTables.put(BlockList.blockAldourite,createStandardTable("aldouriteblock",BlockList.blockAldourite));
-        lootTables.put(BlockList.blockAluminum,createStandardTable("aluminumblock",BlockList.blockAluminum));
-        lootTables.put(BlockList.blockAmericium,createStandardTable("americiumblock",BlockList.blockAmericium));
-        lootTables.put(BlockList.blockAmordrine,createStandardTable("amordrineblock",BlockList.blockAmordrine));
-        lootTables.put(BlockList.blockAngmallen,createStandardTable("angmallenblock",BlockList.blockAngmallen));
-        lootTables.put(BlockList.blockAquamarine,createStandardTable("aquamarineblock",BlockList.blockAquamarine));
-        lootTables.put(BlockList.blockAstralSilver,createStandardTable("astralsilverblock",BlockList.blockAstralSilver));
-        lootTables.put(BlockList.blockAtlarus,createStandardTable("atlarusblock",BlockList.blockAtlarus));
-        lootTables.put(BlockList.blockBismuth,createStandardTable("bismuthblock",BlockList.blockBismuth));
-        lootTables.put(BlockList.blockBlackSteel,createStandardTable("blacksteelblock",BlockList.blockBlackSteel));
-        lootTables.put(BlockList.blockCadmium,createStandardTable("cadmiumblock",BlockList.blockCadmium));
-        lootTables.put(BlockList.blockCarmot,createStandardTable("carmotblock",BlockList.blockCarmot));
-        lootTables.put(BlockList.blockCelenegil,createStandardTable("celenegilblock",BlockList.blockCelenegil));
-        lootTables.put(BlockList.blockCeruclase,createStandardTable("ceruclaseblock",BlockList.blockCeruclase));
-        lootTables.put(BlockList.blockChromium,createStandardTable("chromiumblock",BlockList.blockChromium));
-        lootTables.put(BlockList.blockChrysocolla,createStandardTable("chrysocollablock",BlockList.blockChrysocolla));
-        lootTables.put(BlockList.blockCitrine,createStandardTable("citrineblock",BlockList.blockCitrine));
-        lootTables.put(BlockList.blockCobalt,createStandardTable("cobaltblock",BlockList.blockCobalt));
-        lootTables.put(BlockList.blockCopper,createStandardTable("copperblock",BlockList.blockCopper));
-        lootTables.put(BlockList.blockDeepIron,createStandardTable("deepironblock",BlockList.blockDeepIron));
-        lootTables.put(BlockList.blockDesichalkos,createStandardTable("desichalkosblock",BlockList.blockDesichalkos));
-        lootTables.put(BlockList.blockEximite,createStandardTable("eximiteblock",BlockList.blockEximite));
-        lootTables.put(BlockList.blockGallium,createStandardTable("galliumblock",BlockList.blockGallium));
-        lootTables.put(BlockList.blockGarnet,createStandardTable("garnetblock",BlockList.blockGarnet));
-        lootTables.put(BlockList.blockHaderoth,createStandardTable("haderothblock",BlockList.blockHaderoth));
-        lootTables.put(BlockList.blockHepatizon,createStandardTable("hepatizonblock",BlockList.blockHepatizon));
-        lootTables.put(BlockList.blockIgnatius,createStandardTable("ignatiusblock",BlockList.blockIgnatius));
-        lootTables.put(BlockList.blockIndium,createStandardTable("indiumblock",BlockList.blockIndium));
-        lootTables.put(BlockList.blockInfuscolium,createStandardTable("infuscoliumblock",BlockList.blockInfuscolium));
-        lootTables.put(BlockList.blockInolashite,createStandardTable("inolashiteblock",BlockList.blockInolashite));
-        lootTables.put(BlockList.blockIolite,createStandardTable("ioliteblock",BlockList.blockIolite));
-        lootTables.put(BlockList.blockIridium,createStandardTable("iridiumblock",BlockList.blockIridium));
-        lootTables.put(BlockList.blockJade,createStandardTable("jadeblock",BlockList.blockJade));
-        lootTables.put(BlockList.blockJasper,createStandardTable("jasperblock",BlockList.blockJasper));
-        lootTables.put(BlockList.blockKalendrite,createStandardTable("kalendriteblock",BlockList.blockKalendrite));
-        lootTables.put(BlockList.blockKyanite,createStandardTable("kyaniteblock",BlockList.blockKyanite));
-        lootTables.put(BlockList.blockLead,createStandardTable("leadblock",BlockList.blockLead));
-        lootTables.put(BlockList.blockLemurite,createStandardTable("lemuriteblock",BlockList.blockLemurite));
-        lootTables.put(BlockList.blockMalachite,createStandardTable("malachiteblock",BlockList.blockMalachite));
-        lootTables.put(BlockList.blockManganese,createStandardTable("manganeseblock",BlockList.blockManganese));
-        lootTables.put(BlockList.blockMeutoite,createStandardTable("meutoiteblock",BlockList.blockMeutoite));
-        lootTables.put(BlockList.blockMidasium,createStandardTable("midasiumblock",BlockList.blockMidasium));
-        lootTables.put(BlockList.blockMithril,createStandardTable("mithrilblock",BlockList.blockMithril));
-        lootTables.put(BlockList.blockMolybdenum,createStandardTable("molybdenumblock",BlockList.blockMolybdenum));
-        lootTables.put(BlockList.blockNeodymium,createStandardTable("neodymiumblock",BlockList.blockNeodymium));
-        lootTables.put(BlockList.blockNeptunium,createStandardTable("neptuniumblock",BlockList.blockNeptunium));
-        lootTables.put(BlockList.blockNickel,createStandardTable("nickelblock",BlockList.blockNickel));
-        lootTables.put(BlockList.blockNiobium,createStandardTable("niobiumblock",BlockList.blockNiobium));
-        lootTables.put(BlockList.blockOnyx,createStandardTable("onyxblock",BlockList.blockOnyx));
-        lootTables.put(BlockList.blockOpal,createStandardTable("opalblock",BlockList.blockOpal));
-        lootTables.put(BlockList.blockOrichalcum,createStandardTable("orichalcumblock",BlockList.blockOrichalcum));
-        lootTables.put(BlockList.blockOsmium,createStandardTable("osmiumblock",BlockList.blockOsmium));
-        lootTables.put(BlockList.blockOureclase,createStandardTable("ourecolaseblock",BlockList.blockOureclase));
-        lootTables.put(BlockList.blockPalladium,createStandardTable("palladiumblock",BlockList.blockPalladium));
-        lootTables.put(BlockList.blockPeridot,createStandardTable("peridotblock",BlockList.blockPeridot));
-        lootTables.put(BlockList.blockPhoenixite,createStandardTable("phoenixiteblock",BlockList.blockPhoenixite));
-        lootTables.put(BlockList.blockPlatinum,createStandardTable("platinumblock",BlockList.blockPlatinum));
-        lootTables.put(BlockList.blockPlutonium,createStandardTable("plutoniumblock",BlockList.blockPlutonium));
-        lootTables.put(BlockList.blockPolonium,createStandardTable("poloniumblock",BlockList.blockPolonium));
-        lootTables.put(BlockList.blockPromethium,createStandardTable("promethiumblock",BlockList.blockPromethium));
-        lootTables.put(BlockList.blockQuartz,createStandardTable("quartzblock",BlockList.blockQuartz));
-        lootTables.put(BlockList.blockRhenium,createStandardTable("rheniumblock",BlockList.blockRhenium));
-        lootTables.put(BlockList.blockRhodium,createStandardTable("rhodiumblock",BlockList.blockRhodium));
-        lootTables.put(BlockList.blockRubracium,createStandardTable("rubraciumblock",BlockList.blockRubracium));
-        lootTables.put(BlockList.blockRuby,createStandardTable("rubyblock",BlockList.blockRuby));
-        lootTables.put(BlockList.blockRuthenium,createStandardTable("rutheniumblock",BlockList.blockRuthenium));
-        lootTables.put(BlockList.blockSanguinite,createStandardTable("sanguiniteblock",BlockList.blockSanguinite));
-        lootTables.put(BlockList.blockSapphire,createStandardTable("sapphireblock",BlockList.blockSapphire));
-        lootTables.put(BlockList.blockShadowIron,createStandardTable("shadowironblock",BlockList.blockShadowIron));
-        lootTables.put(BlockList.blockSilver,createStandardTable("silverblock",BlockList.blockSilver));
-        lootTables.put(BlockList.blockSpinel,createStandardTable("spinelblock",BlockList.blockSpinel));
-        lootTables.put(BlockList.blockSugilite,createStandardTable("sugiliteblock",BlockList.blockSugilite));
-        lootTables.put(BlockList.blockTantalum,createStandardTable("tantalumblock",BlockList.blockTantalum));
-        lootTables.put(BlockList.blockTanzanite,createStandardTable("tanzaniteblock",BlockList.blockTanzanite));
-        lootTables.put(BlockList.blockTartarite,createStandardTable("tartariteblock",BlockList.blockTartarite));
-        lootTables.put(BlockList.blockTechnetium,createStandardTable("technetiumblock",BlockList.blockTechnetium));
-        lootTables.put(BlockList.blockThallium,createStandardTable("thalliumblock",BlockList.blockThallium));
-        lootTables.put(BlockList.blockTin,createStandardTable("tinblock",BlockList.blockTin));
-        lootTables.put(BlockList.blockTitanium,createStandardTable("titaniumblock",BlockList.blockTitanium));
-        lootTables.put(BlockList.blockTopaz,createStandardTable("topazblock",BlockList.blockTopaz));
-        lootTables.put(BlockList.blockTourmaline,createStandardTable("tourmalineblock",BlockList.blockTourmaline));
-        lootTables.put(BlockList.blockTungsten,createStandardTable("tungstenblock",BlockList.blockTungsten));
-        lootTables.put(BlockList.blockTurquoise,createStandardTable("turquoiseblock",BlockList.blockTurquoise));
-        lootTables.put(BlockList.blockUnobtainium,createStandardTable("unobtainiumblock",BlockList.blockUnobtainium));
-        lootTables.put(BlockList.blockUranium,createStandardTable("uraniumblock",BlockList.blockUranium));
-        lootTables.put(BlockList.blockVanadium,createStandardTable("vanadiumblock",BlockList.blockVanadium));
-        lootTables.put(BlockList.blockVulcanite,createStandardTable("vulcaniteblock",BlockList.blockVulcanite));
-        lootTables.put(BlockList.blockVyroxeres,createStandardTable("vyroxeresblock",BlockList.blockVyroxeres));
-        lootTables.put(BlockList.blockYellorite,createStandardTable("yelloriteblock",BlockList.blockYellorite));
-        lootTables.put(BlockList.blockZinc,createStandardTable("zincblock",BlockList.blockZinc));
-        lootTables.put(BlockList.blockZirconium,createStandardTable("zirconiumblock",BlockList.blockZirconium));
+
     }
 }

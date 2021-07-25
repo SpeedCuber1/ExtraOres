@@ -1,8 +1,9 @@
 package com.tylerh.extraores.Blocks;
 
 import com.tylerh.extraores.Util.ModInfo;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.common.ToolType;
 
 /**
@@ -12,7 +13,7 @@ public class BlockEXOre extends Block
 {
     public BlockEXOre(Material mat, float hardness, float resistance, String uName)
     {
-        super(Block.Properties.create(mat).hardnessAndResistance(hardness, resistance).harvestLevel(2).harvestTool(ToolType.PICKAXE));
+        super(BlockBehaviour.Properties.of(mat).explosionResistance(resistance).strength(hardness).harvestLevel(2).harvestTool(ToolType.PICKAXE));
         setRegistryName(ModInfo.MOD_ID, uName);
     }
 

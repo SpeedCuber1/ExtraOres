@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:oureclaseblock"
+            "items": [
+              "extraores:oureclaseblock"
+            ]
           }
         ]
       }

@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:midasiumingot"
+            "items": [
+              "extraores:midasiumingot"
+            ]
           }
         ]
       }

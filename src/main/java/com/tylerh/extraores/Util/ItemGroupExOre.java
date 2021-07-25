@@ -1,10 +1,10 @@
 package com.tylerh.extraores.Util;
 
 import com.tylerh.extraores.Init.BlockList;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
-public class ItemGroupExOre extends ItemGroup
+public class ItemGroupExOre extends CreativeModeTab
 {
     public ItemGroupExOre()
     {
@@ -12,7 +12,7 @@ public class ItemGroupExOre extends ItemGroup
     }
 
     @Override
-    public ItemStack createIcon()
+    public ItemStack makeIcon()
     {
         return new ItemStack(BlockList.blockOreAdamantine);
     }
