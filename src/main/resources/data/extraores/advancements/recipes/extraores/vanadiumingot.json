@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:vanadiumingot"
+            "items": [
+              "extraores:vanadiumingot"
+            ]
           }
         ]
       }

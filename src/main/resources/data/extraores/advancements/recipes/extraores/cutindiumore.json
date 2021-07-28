@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:indiumdust"
+            "items": [
+              "extraores:indiumdust"
+            ]
           }
         ]
       }

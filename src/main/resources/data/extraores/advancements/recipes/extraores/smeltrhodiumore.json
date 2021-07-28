@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:rhodiumingot"
+            "items": [
+              "extraores:rhodiumingot"
+            ]
           }
         ]
       }

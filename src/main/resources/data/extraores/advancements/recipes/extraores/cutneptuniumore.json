@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:neptuniumdust"
+            "items": [
+              "extraores:neptuniumdust"
+            ]
           }
         ]
       }

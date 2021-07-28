@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "extraores:bismuthdust"
+            "items": [
+              "extraores:bismuthdust"
+            ]
           }
         ]
       }

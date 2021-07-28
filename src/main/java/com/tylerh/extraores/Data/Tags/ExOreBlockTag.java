@@ -1,15 +1,16 @@
 package com.tylerh.extraores.Data.Tags;
 
 import com.tylerh.extraores.Init.BlockList;
+import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.ForgeBlockTagsProvider;
 
-public class ExOreBlockTag extends ForgeBlockTagsProvider
+public class ExOreBlockTag extends BlockTagsProvider
 {
     public ExOreBlockTag(DataGenerator gen, ExistingFileHelper existingFileHelper)
     {
-        super(gen,existingFileHelper);
+        super(gen, ModInfo.MOD_ID,existingFileHelper);
     }
 
     @Override

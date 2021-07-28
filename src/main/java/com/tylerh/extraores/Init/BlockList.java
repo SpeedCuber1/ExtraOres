@@ -1,6 +1,6 @@
 package com.tylerh.extraores.Init;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class BlockList
 {
