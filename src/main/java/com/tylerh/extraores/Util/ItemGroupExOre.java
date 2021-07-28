@@ -12,7 +12,7 @@ public class ItemGroupExOre extends ItemGroup
     }
 
     @Override
-    public ItemStack createIcon()
+    public ItemStack makeIcon()
     {
         return new ItemStack(BlockList.blockOreAdamantine);
     }

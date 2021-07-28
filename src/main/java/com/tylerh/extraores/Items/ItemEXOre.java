@@ -13,19 +13,16 @@ import net.minecraftforge.common.ToolType;
 import javax.annotation.Nullable;
 import java.util.List;
 
-/**
- * Created by Tyler on 4/29/2016.
- */
 public class ItemEXOre extends Item
 {
     public ItemEXOre(ItemGroup group, String uName)
     {
-        super(new Item.Properties().addToolType(ToolType.PICKAXE, 2).group(group).maxStackSize(64));
+        super(new Item.Properties().addToolType(ToolType.PICKAXE, 2).tab(group).stacksTo(64));
         setRegistryName(ModInfo.MOD_ID, uName);
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag flag)
+    public void appendHoverText(ItemStack stack, @Nullable World world, List<ITextComponent> list, ITooltipFlag flag)
     {
         for (int i = 0; i < ModInfo.blockNames.length; i++)
         {

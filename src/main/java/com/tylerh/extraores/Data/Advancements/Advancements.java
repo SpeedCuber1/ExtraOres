@@ -33,7 +33,7 @@ public class Advancements extends AdvancementProvider
     }
 
     @Override
-    public void act(DirectoryCache cache)
+    public void run(DirectoryCache cache)
     {
         Path path = this.generator.getOutputFolder();
         Set<ResourceLocation> set = Sets.newHashSet();
@@ -49,7 +49,7 @@ public class Advancements extends AdvancementProvider
 
                 try
                 {
-                    IDataProvider.save(GSON, cache, p_204017_3_.copy().serialize(), path1);
+                    IDataProvider.save(GSON, cache, p_204017_3_.deconstruct().serializeToJson(), path1);
                 }
                 catch (IOException ioexception)
                 {
