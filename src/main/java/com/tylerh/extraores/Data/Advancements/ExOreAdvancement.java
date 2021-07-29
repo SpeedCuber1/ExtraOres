@@ -7,9 +7,9 @@ import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.FrameType;
 import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TranslatableComponent;
 
 import java.util.function.Consumer;
 
@@ -19,7 +19,7 @@ public class ExOreAdvancement implements Consumer<Consumer<Advancement>>
     @Override
     public void accept(Consumer<Advancement> advancementConsumer)
     {
-        Advancement root = Advancement.Builder.advancement().display(Blocks.IRON_ORE,new TranslatableComponent("Extra Ores"),new TranslatableComponent("Start Mining Resources"),new ResourceLocation(ModInfo.ADVANCEMENT_BACKGROUND),FrameType.TASK,false,false,false).addCriterion("iron", InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.IRON_ORE)).save(advancementConsumer,"extraores:root");
+        Advancement root = Advancement.Builder.advancement().display(Blocks.IRON_ORE,new TranslatableComponent("Extra Ores"),new TranslatableComponent("Start Mining Resources"),new ResourceLocation(ModInfo.ADVANCEMENT_BACKGROUND),FrameType.TASK,false,false,false).addCriterion("iron",InventoryChangeTrigger.TriggerInstance.hasItems(Blocks.IRON_ORE)).save(advancementConsumer,"extraores:root");
         Advancement adamantine = Advancement.Builder.advancement().display(BlockList.blockOreAdamantine,new TranslatableComponent("It Really DOES Exist"),new TranslatableComponent("Mine Adamantine Ore"),new ResourceLocation(ModInfo.ADVANCEMENT_BACKGROUND), FrameType.TASK,true,true,false).requirements(RequirementsStrategy.OR).addCriterion("adamantine", InventoryChangeTrigger.TriggerInstance.hasItems(BlockList.blockOreAdamantine)).parent(root).save(advancementConsumer,"extraores:adamantine");
         Advancement agate = Advancement.Builder.advancement().display(BlockList.blockOreAgate,new TranslatableComponent("Oh Look It's A Gate"),new TranslatableComponent("Mine Agate Ore"),new ResourceLocation(ModInfo.ADVANCEMENT_BACKGROUND),FrameType.TASK,true,true,false).requirements(RequirementsStrategy.OR).addCriterion("agate",InventoryChangeTrigger.TriggerInstance.hasItems(ItemList.itemGemAgate)).parent(root).save(advancementConsumer,"extraores:agate");
         Advancement aldourite = Advancement.Builder.advancement().display(BlockList.blockOreAldourite,new TranslatableComponent("They're HERE Too!?"),new TranslatableComponent("Mine Aldourite Ore"),new ResourceLocation(ModInfo.ADVANCEMENT_BACKGROUND),FrameType.TASK,true,true,false).requirements(RequirementsStrategy.OR).addCriterion("aldourite",InventoryChangeTrigger.TriggerInstance.hasItems(BlockList.blockOreAldourite)).parent(root).save(advancementConsumer,"extraores:aldourite");

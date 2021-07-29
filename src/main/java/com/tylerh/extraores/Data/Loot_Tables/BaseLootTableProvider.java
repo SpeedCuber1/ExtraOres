@@ -1,114 +1,114 @@
 package com.tylerh.extraores.Data.Loot_Tables;
 
-
-import com.google.common.collect.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mojang.datafixers.util.Pair;
+import net.minecraft.advancements.critereon.EnchantmentPredicate;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.MinMaxBounds;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
+import net.minecraft.data.DataProvider;
 import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.storage.loot.BuiltInLootTables;
-import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.LootTables;
-import net.minecraft.world.level.storage.loot.ValidationContext;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.LootTables;
+import net.minecraft.world.level.storage.loot.entries.DynamicLoot;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.CopyNameFunction;
+import net.minecraft.world.level.storage.loot.functions.CopyNbtFunction;
+import net.minecraft.world.level.storage.loot.functions.SetContainerContents;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
 public abstract class BaseLootTableProvider extends LootTableProvider
 {
+
     private static final Logger LOGGER = LogManager.getLogger();
+    private static final LootItemCondition.Builder SILK_TOUCH = MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH,MinMaxBounds.Ints.atLeast(1))));
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+    protected final Map<Block, LootTable.Builder> lootTables = new HashMap<>();
     private final DataGenerator generator;
-    //private final List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> subProviders;
-
-    public BaseLootTableProvider(DataGenerator gen)
+    public BaseLootTableProvider(DataGenerator dataGeneratorIn)
     {
-        super(gen);
-        //subProviders = ImmutableList.of(Pair.of(LootTables::new,LootContextParamSets.BLOCK));
-        generator = gen;
+        super(dataGeneratorIn);
+        this.generator = dataGeneratorIn;
     }
-
+    protected abstract void addTables();
+    protected LootTable.Builder createFortune(String name,Block block,Item item)
+    {
+        return createSilkTouch(name,block,LootItem.lootTableItem(item).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)));
+    }
+    protected LootTable.Builder createSilkTouch(String name,Block block,LootPoolEntryContainer.Builder<?> builder)
+    {
+        return createDropping(name,block, builder);
+    }
+    protected LootTable.Builder createDropping(String name, Block block, LootPoolEntryContainer.Builder<?> builder)
+    {
+        return createLootPool(name,block, builder);
+    }
+    protected LootTable.Builder createLootPool(String name, Block block, LootPoolEntryContainer.Builder<?> alt)
+    {
+        return LootTable.lootTable().withPool(LootPool.lootPool().name(name)
+                .setRolls(ConstantValue.exactly(1))
+                .add(LootItem.lootTableItem(block)
+                        .when(SILK_TOUCH)
+                        .otherwise(alt)));
+    }
+    protected LootTable.Builder createStandardTable(String name, Block block)
+    {
+        return LootTable.lootTable().withPool(LootPool.lootPool().name(name)
+                .setRolls(ConstantValue.exactly(1))
+                .add(LootItem.lootTableItem(block)
+                        .apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY))
+                        .apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY)
+                                .copy("inv","BlockEntityTag.inv", CopyNbtFunction.MergeStrategy.REPLACE)
+                                .copy("energy","BlockEntityTag.energy", CopyNbtFunction.MergeStrategy.REPLACE))
+                        .apply(SetContainerContents.setContents()
+                                .withEntry(DynamicLoot.dynamicEntry(new ResourceLocation("minecraft","contents"))))));
+    }
     @Override
     public void run(HashCache cache)
     {
-        Path path = generator.getOutputFolder();
-        Map<ResourceLocation, LootTable> map = Maps.newHashMap();
-        LootContextParamSet var10002 = LootContextParamSets.ALL_PARAMS;
-        Function var10003 = (func) ->
-        {
-            return null;
-        };
-        Objects.requireNonNull(map);
-        ValidationContext validationcontext = new ValidationContext(var10002, var10003, map::get);
-        this.validate(map, validationcontext);
-        Multimap<String, String> multimap = validationcontext.getProblems();
-        if (!multimap.isEmpty())
-        {
-            multimap.forEach((p_124446_, p_124447_) ->
-            {
-                LOGGER.warn("Found validation problem in {}: {}", p_124446_, p_124447_);
-            });
-            throw new IllegalStateException("Failed to validate loot tables, see logs");
-        }
-        else
-        {
-            map.forEach((p_124451_, p_124452_) ->
-            {
-                Path path1 = createPath(path, p_124451_);
+        addTables();
 
-                try
-                {
-                    DataProvider.save(GSON, cache, LootTables.serialize(p_124452_), path1);
-                }
-                catch (IOException var6)
-                {
-                    LOGGER.error("Couldn't save loot table {}", path1, var6);
-                }
-
-            });
+        Map<ResourceLocation, LootTable> tables = new HashMap<>();
+        for (Map.Entry<Block, LootTable.Builder> entry : lootTables.entrySet())
+        {
+            tables.put(entry.getKey().getLootTable(), entry.getValue().setParamSet(LootContextParamSets.BLOCK).build());
         }
+        writeTables(cache, tables);
     }
 
-    /*protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables()
+    private void writeTables(HashCache cache, Map<ResourceLocation, LootTable> tables)
     {
-        return this.subProviders;
-    }*/
-
-    protected void validate(Map<ResourceLocation, LootTable> map, ValidationContext validationtracker)
-    {
-        UnmodifiableIterator var3 = Sets.difference(BuiltInLootTables.all(), map.keySet()).iterator();
-
-        while (var3.hasNext())
+        Path outputFolder = this.generator.getOutputFolder();
+        tables.forEach((key, lootTable) ->
         {
-            ResourceLocation resourcelocation = (ResourceLocation) var3.next();
-            validationtracker.reportProblem("Missing built-in table: " + resourcelocation);
-        }
-
-        map.forEach((p_218436_2_, p_218436_3_) ->
-        {
-            LootTables.validate(validationtracker, p_218436_2_, p_218436_3_);
+            Path path = outputFolder.resolve("data/" + key.getNamespace() + "/loot_tables/" + key.getPath() + ".json");
+            try
+            {
+                DataProvider.save(GSON, cache, LootTables.serialize(lootTable), path);
+            }
+            catch (IOException e)
+            {
+                LOGGER.error("Couldn't write loot table {}", path, e);
+            }
         });
-    }
-
-    private static Path createPath(Path p_124454_, ResourceLocation p_124455_)
-    {
-        String var10001 = p_124455_.getNamespace();
-        return p_124454_.resolve("data/" + var10001 + "/loot_tables/" + p_124455_.getPath() + ".json");
     }
 
     @Override

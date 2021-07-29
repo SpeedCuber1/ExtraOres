@@ -1,8 +1,8 @@
 package com.tylerh.extraores.Data.Tags;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.Tags;
 
 public class ItemTagList

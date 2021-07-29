@@ -2,13 +2,18 @@ package com.tylerh.extraores.Data.Recipes;
 
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Init.ItemList;
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.*;
-import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
-
+import net.minecraft.resources.ResourceLocation;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Consumer;
-
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 
 public class ExOreRecipe extends RecipeProvider
 {
@@ -17,7 +22,8 @@ public class ExOreRecipe extends RecipeProvider
         super(gen);
     }
     @Override
-    public void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
+    @ParametersAreNonnullByDefault
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
         //Ingot To Block
         ShapedRecipeBuilder.shaped(BlockList.blockAdamantine)
@@ -2110,6 +2116,7 @@ public class ExOreRecipe extends RecipeProvider
                 .save(consumer,new ResourceLocation("extraores:cutzirconiumore"));
     }
     @Override
+    @MethodsReturnNonnullByDefault
     public String getName()
     {
         return "Extra Ores Recipes";

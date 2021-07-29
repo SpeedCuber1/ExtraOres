@@ -1,8 +1,5 @@
 package com.tylerh.extraores.Util;
 
-/**
- * Created by Tyler on 4/29/2016.
- */
 public class ModInfo
 {
     public static final String MOD_ID = "extraores";
