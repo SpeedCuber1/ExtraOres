@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "extraores:yelloriteore",
-    "bigreactors:yellorite_ore"
+    "extraores:yelloriteore"
   ]
 }
