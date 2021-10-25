@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawcobalt"
+    ]
+  },
+  "criteria": {
+    "smeltrawcobalt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cobaltingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawcobalt"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawcobalt",
+      "has_the_recipe"
+    ]
+  ]
+}

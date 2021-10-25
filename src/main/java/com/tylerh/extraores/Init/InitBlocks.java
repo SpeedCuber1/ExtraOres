@@ -696,6 +696,7 @@ public class InitBlocks
             ItemList.itemShardAdamantine = new ItemEXOre(EXORES,"adamantineshard");
             ItemList.itemClumpAdamantine = new ItemEXOre(EXORES,"adamantineclump");
             ItemList.itemDirtyDustAdamantine = new ItemEXOre(EXORES,"adamantinedirtydust");
+            ItemList.itemRawAdamantine = new ItemEXOre(EXORES,"rawadamantine");
             ItemBlockList.itemBlockOreAdamantine = new ItemBlockExOre(BlockList.blockOreAdamantine, EXORES);
             ItemBlockList.itemBlockAdamantine = new ItemBlockExOre(BlockList.blockAdamantine, EXORES);
             itemRegistry(ItemList.itemIngotAdamantine, event);
@@ -703,6 +704,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardAdamantine,event);
             itemRegistry(ItemList.itemClumpAdamantine,event);
             itemRegistry(ItemList.itemDirtyDustAdamantine,event);
+            itemRegistry(ItemList.itemRawAdamantine,event);
             itemRegistry(ItemBlockList.itemBlockOreAdamantine, event);
             itemRegistry(ItemBlockList.itemBlockAdamantine, event);
         }
@@ -722,6 +724,7 @@ public class InitBlocks
             ItemList.itemShardAldourite = new ItemEXOre(EXORES,"aldouriteshard");
             ItemList.itemClumpAldourite = new ItemEXOre(EXORES,"aldouriteclump");
             ItemList.itemDirtyDustAldourite = new ItemEXOre(EXORES,"aldouritedirtydust");
+            ItemList.itemRawAldourite = new ItemEXOre(EXORES,"rawaldourite");
             ItemBlockList.itemBlockOreAldourite = new ItemBlockExOre(BlockList.blockOreAldourite, EXORES);
             ItemBlockList.itemBlockAldourite = new ItemBlockExOre(BlockList.blockAldourite, EXORES);
             itemRegistry(ItemList.itemIngotAldourite, event);
@@ -729,6 +732,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardAldourite,event);
             itemRegistry(ItemList.itemClumpAldourite,event);
             itemRegistry(ItemList.itemDirtyDustAldourite,event);
+            itemRegistry(ItemList.itemRawAldourite,event);
             itemRegistry(ItemBlockList.itemBlockOreAldourite, event);
             itemRegistry(ItemBlockList.itemBlockAldourite, event);
         }
@@ -739,6 +743,7 @@ public class InitBlocks
             ItemList.itemShardAluminum = new ItemEXOre(EXORES,"aluminumshard");
             ItemList.itemClumpAluminum = new ItemEXOre(EXORES,"aluminumclump");
             ItemList.itemDirtyDustAluminum = new ItemEXOre(EXORES,"aluminumdirtydust");
+            ItemList.itemRawAluminum = new ItemEXOre(EXORES,"rawaluminum");
             ItemBlockList.itemBlockOreAluminum = new ItemBlockExOre(BlockList.blockOreAluminum, EXORES);
             ItemBlockList.itemBlockAluminum = new ItemBlockExOre(BlockList.blockAluminum, EXORES);
             itemRegistry(ItemList.itemIngotAluminum, event);
@@ -746,6 +751,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardAluminum,event);
             itemRegistry(ItemList.itemClumpAluminum,event);
             itemRegistry(ItemList.itemDirtyDustAluminum,event);
+            itemRegistry(ItemList.itemRawAluminum,event);
             itemRegistry(ItemBlockList.itemBlockOreAluminum, event);
             itemRegistry(ItemBlockList.itemBlockAluminum, event);
         }
@@ -756,6 +762,7 @@ public class InitBlocks
             ItemList.itemShardAmericium = new ItemEXOre(EXORES,"americiumshard");
             ItemList.itemClumpAmericium = new ItemEXOre(EXORES,"americiumclump");
             ItemList.itemDirtyDustAmericium = new ItemEXOre(EXORES,"americiumdirtydust");
+            ItemList.itemRawAmericium = new ItemEXOre(EXORES,"rawamericium");
             ItemBlockList.itemBlockOreAmericium = new ItemBlockExOre(BlockList.blockOreAmericium, EXORES);
             ItemBlockList.itemBlockAmericium = new ItemBlockExOre(BlockList.blockAmericium, EXORES);
             itemRegistry(ItemList.itemIngotAmericium, event);
@@ -763,6 +770,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardAmericium,event);
             itemRegistry(ItemList.itemClumpAmericium,event);
             itemRegistry(ItemList.itemDirtyDustAmericium,event);
+            itemRegistry(ItemList.itemRawAmericium,event);
             itemRegistry(ItemBlockList.itemBlockOreAmericium, event);
             itemRegistry(ItemBlockList.itemBlockAmericium, event);
         }
@@ -791,6 +799,7 @@ public class InitBlocks
             ItemList.itemShardAmordrine = new ItemEXOre(EXORES,"amordrineshard");
             ItemList.itemClumpAmordrine = new ItemEXOre(EXORES,"amordrineclump");
             ItemList.itemDirtyDustAmordrine = new ItemEXOre(EXORES,"amordrinedirtydust");
+            ItemList.itemRawAmordrine = new ItemEXOre(EXORES,"rawamordrine");
             ItemBlockList.itemBlockOreAmordrine = new ItemBlockExOre(BlockList.blockOreAmordrine, EXORES);
             ItemBlockList.itemBlockAmordrine = new ItemBlockExOre(BlockList.blockAmordrine, EXORES);
             itemRegistry(ItemList.itemIngotAmordrine, event);
@@ -798,6 +807,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardAmordrine,event);
             itemRegistry(ItemList.itemClumpAmordrine,event);
             itemRegistry(ItemList.itemDirtyDustAmordrine,event);
+            itemRegistry(ItemList.itemRawAmordrine,event);
             itemRegistry(ItemBlockList.itemBlockOreAmordrine, event);
             itemRegistry(ItemBlockList.itemBlockAmordrine, event);
         }
@@ -808,6 +818,7 @@ public class InitBlocks
             ItemList.itemShardAngmallen = new ItemEXOre(EXORES,"angmallenshard");
             ItemList.itemClumpAngmallen = new ItemEXOre(EXORES,"angmallenclump");
             ItemList.itemDirtyDustAngmallen = new ItemEXOre(EXORES,"angmallendirtydust");
+            ItemList.itemRawAngmallen = new ItemEXOre(EXORES,"rawangmallen");
             ItemBlockList.itemBlockOreAngmallen = new ItemBlockExOre(BlockList.blockOreAngmallen, EXORES);
             ItemBlockList.itemBlockAngmallen = new ItemBlockExOre(BlockList.blockAngmallen, EXORES);
             itemRegistry(ItemList.itemIngotAngmallen, event);
@@ -815,6 +826,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardAngmallen,event);
             itemRegistry(ItemList.itemClumpAngmallen,event);
             itemRegistry(ItemList.itemDirtyDustAngmallen,event);
+            itemRegistry(ItemList.itemRawAngmallen,event);
             itemRegistry(ItemBlockList.itemBlockOreAngmallen, event);
             itemRegistry(ItemBlockList.itemBlockAngmallen, event);
         }
@@ -834,6 +846,7 @@ public class InitBlocks
             ItemList.itemShardAstralSilver = new ItemEXOre(EXORES,"astralsilvershard");
             ItemList.itemClumpAstralSilver = new ItemEXOre(EXORES,"astralsilverclump");
             ItemList.itemDirtyDustAstralSilver = new ItemEXOre(EXORES,"astralsilverdirtydust");
+            ItemList.itemRawAstralSilver = new ItemEXOre(EXORES,"rawastralsilver");
             ItemBlockList.itemBlockOreAstralSilver = new ItemBlockExOre(BlockList.blockOreAstralSilver, EXORES);
             ItemBlockList.itemBlockAstralSilver = new ItemBlockExOre(BlockList.blockAstralSilver, EXORES);
             itemRegistry(ItemList.itemIngotAstralSilver, event);
@@ -841,6 +854,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardAstralSilver,event);
             itemRegistry(ItemList.itemClumpAstralSilver,event);
             itemRegistry(ItemList.itemDirtyDustAstralSilver,event);
+            itemRegistry(ItemList.itemRawAstralSilver,event);
             itemRegistry(ItemBlockList.itemBlockOreAstralSilver, event);
             itemRegistry(ItemBlockList.itemBlockAstralSilver, event);
         }
@@ -851,6 +865,7 @@ public class InitBlocks
             ItemList.itemShardAtlarus = new ItemEXOre(EXORES,"atlarusshard");
             ItemList.itemClumpAtlarus = new ItemEXOre(EXORES,"atlarusclump");
             ItemList.itemDirtyDustAtlarus = new ItemEXOre(EXORES,"atlarusdirtydust");
+            ItemList.itemRawAtlarus = new ItemEXOre(EXORES,"rawatlarus");
             ItemBlockList.itemBlockOreAtlarus = new ItemBlockExOre(BlockList.blockOreAtlarus, EXORES);
             ItemBlockList.itemBlockAtlarus = new ItemBlockExOre(BlockList.blockAtlarus, EXORES);
             itemRegistry(ItemList.itemIngotAtlarus, event);
@@ -858,6 +873,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardAtlarus,event);
             itemRegistry(ItemList.itemClumpAtlarus,event);
             itemRegistry(ItemList.itemDirtyDustAtlarus,event);
+            itemRegistry(ItemList.itemRawAtlarus,event);
             itemRegistry(ItemBlockList.itemBlockOreAtlarus, event);
             itemRegistry(ItemBlockList.itemBlockAtlarus, event);
         }
@@ -868,6 +884,7 @@ public class InitBlocks
             ItemList.itemShardBismuth = new ItemEXOre(EXORES,"bismuthshard");
             ItemList.itemClumpBismuth = new ItemEXOre(EXORES,"bismuthclump");
             ItemList.itemDirtyDustBismuth = new ItemEXOre(EXORES,"bismuthdirtydust");
+            ItemList.itemRawBismuth = new ItemEXOre(EXORES,"rawbismuth");
             ItemBlockList.itemBlockOreBismuth = new ItemBlockExOre(BlockList.blockOreBismuth, EXORES);
             ItemBlockList.itemBlockBismuth = new ItemBlockExOre(BlockList.blockBismuth, EXORES);
             itemRegistry(ItemList.itemIngotBismuth, event);
@@ -875,6 +892,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardBismuth,event);
             itemRegistry(ItemList.itemClumpBismuth,event);
             itemRegistry(ItemList.itemDirtyDustBismuth,event);
+            itemRegistry(ItemList.itemRawBismuth,event);
             itemRegistry(ItemBlockList.itemBlockOreBismuth, event);
             itemRegistry(ItemBlockList.itemBlockBismuth, event);
         }
@@ -885,6 +903,7 @@ public class InitBlocks
             ItemList.itemShardBlackSteel = new ItemEXOre(EXORES,"blacksteelshard");
             ItemList.itemClumpBlackSteel = new ItemEXOre(EXORES,"blacksteelclump");
             ItemList.itemDirtyDustBlackSteel = new ItemEXOre(EXORES,"blacksteeldirtydust");
+            ItemList.itemRawBlackSteel = new ItemEXOre(EXORES,"rawblacksteel");
             ItemBlockList.itemBlockOreBlackSteel = new ItemBlockExOre(BlockList.blockOreBlackSteel, EXORES);
             ItemBlockList.itemBlockBlackSteel = new ItemBlockExOre(BlockList.blockBlackSteel, EXORES);
             itemRegistry(ItemList.itemIngotBlackSteel, event);
@@ -892,6 +911,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardBlackSteel,event);
             itemRegistry(ItemList.itemClumpBlackSteel,event);
             itemRegistry(ItemList.itemDirtyDustBlackSteel,event);
+            itemRegistry(ItemList.itemRawBlackSteel,event);
             itemRegistry(ItemBlockList.itemBlockOreBlackSteel, event);
             itemRegistry(ItemBlockList.itemBlockBlackSteel, event);
         }
@@ -902,6 +922,7 @@ public class InitBlocks
             ItemList.itemShardCadmium = new ItemEXOre(EXORES,"cadmiumshard");
             ItemList.itemClumpCadmium = new ItemEXOre(EXORES,"cadmiumclump");
             ItemList.itemDirtyDustCadmium = new ItemEXOre(EXORES,"cadmiumdirtydust");
+            ItemList.itemRawCadmium = new ItemEXOre(EXORES,"rawcadmium");
             ItemBlockList.itemBlockOreCadmium = new ItemBlockExOre(BlockList.blockOreCadmium, EXORES);
             ItemBlockList.itemBlockCadmium = new ItemBlockExOre(BlockList.blockCadmium, EXORES);
             itemRegistry(ItemList.itemIngotCadmium, event);
@@ -909,6 +930,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardCadmium,event);
             itemRegistry(ItemList.itemClumpCadmium,event);
             itemRegistry(ItemList.itemDirtyDustCadmium,event);
+            itemRegistry(ItemList.itemRawCadmium,event);
             itemRegistry(ItemBlockList.itemBlockOreCadmium, event);
             itemRegistry(ItemBlockList.itemBlockCadmium, event);
         }
@@ -919,6 +941,7 @@ public class InitBlocks
             ItemList.itemShardCarmot = new ItemEXOre(EXORES,"carmotshard");
             ItemList.itemClumpCarmot = new ItemEXOre(EXORES,"carmotclump");
             ItemList.itemDirtyDustCarmot = new ItemEXOre(EXORES,"carmotdirtydust");
+            ItemList.itemRawCarmot = new ItemEXOre(EXORES,"rawcarmot");
             ItemBlockList.itemBlockOreCarmot = new ItemBlockExOre(BlockList.blockOreCarmot, EXORES);
             ItemBlockList.itemBlockCarmot = new ItemBlockExOre(BlockList.blockCarmot, EXORES);
             itemRegistry(ItemList.itemIngotCarmot, event);
@@ -926,6 +949,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardCarmot,event);
             itemRegistry(ItemList.itemClumpCarmot,event);
             itemRegistry(ItemList.itemDirtyDustCarmot,event);
+            itemRegistry(ItemList.itemRawCarmot,event);
             itemRegistry(ItemBlockList.itemBlockOreCarmot, event);
             itemRegistry(ItemBlockList.itemBlockCarmot, event);
         }
@@ -936,6 +960,7 @@ public class InitBlocks
             ItemList.itemShardCelenegil = new ItemEXOre(EXORES,"celenegilshard");
             ItemList.itemClumpCelenegil = new ItemEXOre(EXORES,"celenegilclump");
             ItemList.itemDirtyDustCelenegil = new ItemEXOre(EXORES,"celenegildirtydust");
+            ItemList.itemRawCelenegil = new ItemEXOre(EXORES,"rawcelenegil");
             ItemBlockList.itemBlockOreCelenegil = new ItemBlockExOre(BlockList.blockOreCelenegil, EXORES);
             ItemBlockList.itemBlockCelenegil = new ItemBlockExOre(BlockList.blockCelenegil, EXORES);
             itemRegistry(ItemList.itemIngotCelenegil, event);
@@ -943,6 +968,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardCelenegil,event);
             itemRegistry(ItemList.itemClumpCelenegil,event);
             itemRegistry(ItemList.itemDirtyDustCelenegil,event);
+            itemRegistry(ItemList.itemRawCelenegil,event);
             itemRegistry(ItemBlockList.itemBlockOreCelenegil, event);
             itemRegistry(ItemBlockList.itemBlockCelenegil, event);
         }
@@ -953,6 +979,7 @@ public class InitBlocks
             ItemList.itemShardCeruclase = new ItemEXOre(EXORES,"ceruclaseshard");
             ItemList.itemClumpCeruclase = new ItemEXOre(EXORES,"ceruclaseclump");
             ItemList.itemDirtyDustCeruclase = new ItemEXOre(EXORES,"ceruclasedirtydust");
+            ItemList.itemRawCeruclase = new ItemEXOre(EXORES,"rawceruclase");
             ItemBlockList.itemBlockOreCeruclase = new ItemBlockExOre(BlockList.blockOreCeruclase, EXORES);
             ItemBlockList.itemBlockCeruclase = new ItemBlockExOre(BlockList.blockCeruclase, EXORES);
             itemRegistry(ItemList.itemIngotCeruclase, event);
@@ -960,6 +987,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardCeruclase,event);
             itemRegistry(ItemList.itemClumpCeruclase,event);
             itemRegistry(ItemList.itemDirtyDustCeruclase,event);
+            itemRegistry(ItemList.itemRawCeruclase,event);
             itemRegistry(ItemBlockList.itemBlockOreCeruclase, event);
             itemRegistry(ItemBlockList.itemBlockCeruclase, event);
         }
@@ -970,6 +998,7 @@ public class InitBlocks
             ItemList.itemShardChromium = new ItemEXOre(EXORES,"chromiumshard");
             ItemList.itemClumpChromium = new ItemEXOre(EXORES,"chromiumclump");
             ItemList.itemDirtyDustChromium = new ItemEXOre(EXORES,"chromiumdirtydust");
+            ItemList.itemRawChromium = new ItemEXOre(EXORES,"rawchromium");
             ItemBlockList.itemBlockOreChromium = new ItemBlockExOre(BlockList.blockOreChromium, EXORES);
             ItemBlockList.itemBlockChromium = new ItemBlockExOre(BlockList.blockChromium, EXORES);
             itemRegistry(ItemList.itemIngotChromium, event);
@@ -977,6 +1006,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardChromium,event);
             itemRegistry(ItemList.itemClumpChromium,event);
             itemRegistry(ItemList.itemDirtyDustChromium,event);
+            itemRegistry(ItemList.itemRawChromium,event);
             itemRegistry(ItemBlockList.itemBlockOreChromium, event);
             itemRegistry(ItemBlockList.itemBlockChromium, event);
         }
@@ -1005,6 +1035,7 @@ public class InitBlocks
             ItemList.itemShardCobalt = new ItemEXOre(EXORES,"cobaltshard");
             ItemList.itemClumpCobalt = new ItemEXOre(EXORES,"cobaltclump");
             ItemList.itemDirtyDustCobalt = new ItemEXOre(EXORES,"cobaltdirtydust");
+            ItemList.itemRawCobalt = new ItemEXOre(EXORES,"rawcobalt");
             ItemBlockList.itemBlockOreCobalt = new ItemBlockExOre(BlockList.blockOreCobalt, EXORES);
             ItemBlockList.itemBlockCobalt = new ItemBlockExOre(BlockList.blockCobalt, EXORES);
             itemRegistry(ItemList.itemIngotCobalt, event);
@@ -1012,6 +1043,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardCobalt,event);
             itemRegistry(ItemList.itemClumpCobalt,event);
             itemRegistry(ItemList.itemDirtyDustCobalt,event);
+            itemRegistry(ItemList.itemRawCobalt,event);
             itemRegistry(ItemBlockList.itemBlockOreCobalt, event);
             itemRegistry(ItemBlockList.itemBlockCobalt, event);
         }
@@ -1022,6 +1054,7 @@ public class InitBlocks
             ItemList.itemShardCopper = new ItemEXOre(EXORES,"coppershard");
             ItemList.itemClumpCopper = new ItemEXOre(EXORES,"copperclump");
             ItemList.itemDirtyDustCopper = new ItemEXOre(EXORES,"copperdirtydust");
+            ItemList.itemRawCopper = new ItemEXOre(EXORES,"rawcopper");
             ItemBlockList.itemBlockOreCopper = new ItemBlockExOre(BlockList.blockOreCopper, EXORES);
             ItemBlockList.itemBlockCopper = new ItemBlockExOre(BlockList.blockCopper, EXORES);
             itemRegistry(ItemList.itemIngotCopper, event);
@@ -1029,6 +1062,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardCopper,event);
             itemRegistry(ItemList.itemClumpCopper,event);
             itemRegistry(ItemList.itemDirtyDustCopper,event);
+            itemRegistry(ItemList.itemRawCopper,event);
             itemRegistry(ItemBlockList.itemBlockOreCopper, event);
             itemRegistry(ItemBlockList.itemBlockCopper, event);
         }
@@ -1039,6 +1073,7 @@ public class InitBlocks
             ItemList.itemShardDeepIron = new ItemEXOre(EXORES,"deepironshard");
             ItemList.itemClumpDeepIron = new ItemEXOre(EXORES,"deepironclump");
             ItemList.itemDirtyDustDeepIron = new ItemEXOre(EXORES,"deepirondirtydust");
+            ItemList.itemRawDeepIron = new ItemEXOre(EXORES,"rawdeepiron");
             ItemBlockList.itemBlockOreDeepIron = new ItemBlockExOre(BlockList.blockOreDeepIron, EXORES);
             ItemBlockList.itemBlockDeepIron = new ItemBlockExOre(BlockList.blockDeepIron, EXORES);
             itemRegistry(ItemList.itemIngotDeepIron, event);
@@ -1046,6 +1081,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardDeepIron,event);
             itemRegistry(ItemList.itemClumpDeepIron,event);
             itemRegistry(ItemList.itemDirtyDustDeepIron,event);
+            itemRegistry(ItemList.itemRawDeepIron,event);
             itemRegistry(ItemBlockList.itemBlockOreDeepIron, event);
             itemRegistry(ItemBlockList.itemBlockDeepIron, event);
         }
@@ -1056,6 +1092,7 @@ public class InitBlocks
             ItemList.itemShardDesichalkos = new ItemEXOre(EXORES,"desichalkosshard");
             ItemList.itemClumpDesichalkos = new ItemEXOre(EXORES,"desichalkosclump");
             ItemList.itemDirtyDustDesichalkos = new ItemEXOre(EXORES,"desichalkosdirtydust");
+            ItemList.itemRawDesichalkos = new ItemEXOre(EXORES,"rawdesichalkos");
             ItemBlockList.itemBlockOreDesichalkos = new ItemBlockExOre(BlockList.blockOreDesichalkos, EXORES);
             ItemBlockList.itemBlockDesichalkos = new ItemBlockExOre(BlockList.blockDesichalkos, EXORES);
             itemRegistry(ItemList.itemIngotDesichalkos, event);
@@ -1063,6 +1100,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardDesichalkos,event);
             itemRegistry(ItemList.itemClumpDesichalkos,event);
             itemRegistry(ItemList.itemDirtyDustDesichalkos,event);
+            itemRegistry(ItemList.itemRawDesichalkos,event);
             itemRegistry(ItemBlockList.itemBlockOreDesichalkos, event);
             itemRegistry(ItemBlockList.itemBlockDesichalkos, event);
         }
@@ -1073,6 +1111,7 @@ public class InitBlocks
             ItemList.itemShardEximite = new ItemEXOre(EXORES,"eximiteshard");
             ItemList.itemClumpEximite = new ItemEXOre(EXORES,"eximiteclump");
             ItemList.itemDirtyDustEximite = new ItemEXOre(EXORES,"eximitedirtydust");
+            ItemList.itemRawEximite = new ItemEXOre(EXORES,"raweximite");
             ItemBlockList.itemBlockOreEximite = new ItemBlockExOre(BlockList.blockOreEximite, EXORES);
             ItemBlockList.itemBlockEximite = new ItemBlockExOre(BlockList.blockEximite, EXORES);
             itemRegistry(ItemList.itemIngotEximite, event);
@@ -1080,6 +1119,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardEximite,event);
             itemRegistry(ItemList.itemClumpEximite,event);
             itemRegistry(ItemList.itemDirtyDustEximite,event);
+            itemRegistry(ItemList.itemRawEximite,event);
             itemRegistry(ItemBlockList.itemBlockOreEximite, event);
             itemRegistry(ItemBlockList.itemBlockEximite, event);
         }
@@ -1090,6 +1130,7 @@ public class InitBlocks
             ItemList.itemShardGallium = new ItemEXOre(EXORES,"galliumshard");
             ItemList.itemClumpGallium = new ItemEXOre(EXORES,"galliumclump");
             ItemList.itemDirtyDustGallium = new ItemEXOre(EXORES,"galliumdirtydust");
+            ItemList.itemRawGallium = new ItemEXOre(EXORES,"rawgallium");
             ItemBlockList.itemBlockOreGallium = new ItemBlockExOre(BlockList.blockOreGallium, EXORES);
             ItemBlockList.itemBlockGallium = new ItemBlockExOre(BlockList.blockGallium, EXORES);
             itemRegistry(ItemList.itemIngotGallium, event);
@@ -1097,6 +1138,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardGallium,event);
             itemRegistry(ItemList.itemClumpGallium,event);
             itemRegistry(ItemList.itemDirtyDustGallium,event);
+            itemRegistry(ItemList.itemRawGallium,event);
             itemRegistry(ItemBlockList.itemBlockOreGallium, event);
             itemRegistry(ItemBlockList.itemBlockGallium, event);
         }
@@ -1116,6 +1158,7 @@ public class InitBlocks
             ItemList.itemShardHaderoth = new ItemEXOre(EXORES,"haderothshard");
             ItemList.itemClumpHaderoth = new ItemEXOre(EXORES,"haderothclump");
             ItemList.itemDirtyDustHaderoth = new ItemEXOre(EXORES,"haderothdirtydust");
+            ItemList.itemRawHaderoth = new ItemEXOre(EXORES,"rawhaderoth");
             ItemBlockList.itemBlockOreHaderoth = new ItemBlockExOre(BlockList.blockOreHaderoth, EXORES);
             ItemBlockList.itemBlockHaderoth = new ItemBlockExOre(BlockList.blockHaderoth, EXORES);
             itemRegistry(ItemList.itemIngotHaderoth, event);
@@ -1123,6 +1166,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardHaderoth,event);
             itemRegistry(ItemList.itemClumpHaderoth,event);
             itemRegistry(ItemList.itemDirtyDustHaderoth,event);
+            itemRegistry(ItemList.itemRawHaderoth,event);
             itemRegistry(ItemBlockList.itemBlockOreHaderoth, event);
             itemRegistry(ItemBlockList.itemBlockHaderoth, event);
         }
@@ -1133,6 +1177,7 @@ public class InitBlocks
             ItemList.itemShardHepatizon = new ItemEXOre(EXORES,"hepatizonshard");
             ItemList.itemClumpHepatizon = new ItemEXOre(EXORES,"hepatizonclump");
             ItemList.itemDirtyDustHepatizon = new ItemEXOre(EXORES,"hepatizondirtydust");
+            ItemList.itemRawHepatizon = new ItemEXOre(EXORES,"rawhepatizon");
             ItemBlockList.itemBlockOreHepatizon = new ItemBlockExOre(BlockList.blockOreHepatizon, EXORES);
             ItemBlockList.itemBlockHepatizon = new ItemBlockExOre(BlockList.blockHepatizon, EXORES);
             itemRegistry(ItemList.itemIngotHepatizon, event);
@@ -1140,6 +1185,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardHepatizon,event);
             itemRegistry(ItemList.itemClumpHepatizon,event);
             itemRegistry(ItemList.itemDirtyDustHepatizon,event);
+            itemRegistry(ItemList.itemRawHepatizon,event);
             itemRegistry(ItemBlockList.itemBlockOreHepatizon, event);
             itemRegistry(ItemBlockList.itemBlockHepatizon, event);
         }
@@ -1150,6 +1196,7 @@ public class InitBlocks
             ItemList.itemShardIgnatius = new ItemEXOre(EXORES,"ignatiusshard");
             ItemList.itemClumpIgnatius = new ItemEXOre(EXORES,"ignatiusclump");
             ItemList.itemDirtyDustIgnatius = new ItemEXOre(EXORES,"ignatiusdirtydust");
+            ItemList.itemRawIgnatius = new ItemEXOre(EXORES,"rawignatius");
             ItemBlockList.itemBlockOreIgnatius = new ItemBlockExOre(BlockList.blockOreIgnatius, EXORES);
             ItemBlockList.itemBlockIgnatius = new ItemBlockExOre(BlockList.blockIgnatius, EXORES);
             itemRegistry(ItemList.itemIngotIgnatius, event);
@@ -1157,6 +1204,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardIgnatius,event);
             itemRegistry(ItemList.itemClumpIgnatius,event);
             itemRegistry(ItemList.itemDirtyDustIgnatius,event);
+            itemRegistry(ItemList.itemRawIgnatius,event);
             itemRegistry(ItemBlockList.itemBlockOreIgnatius, event);
             itemRegistry(ItemBlockList.itemBlockIgnatius, event);
         }
@@ -1167,6 +1215,7 @@ public class InitBlocks
             ItemList.itemShardIndium = new ItemEXOre(EXORES,"indiumshard");
             ItemList.itemClumpIndium = new ItemEXOre(EXORES,"indiumclump");
             ItemList.itemDirtyDustIndium = new ItemEXOre(EXORES,"indiumdirtydust");
+            ItemList.itemRawIndium = new ItemEXOre(EXORES,"rawindium");
             ItemBlockList.itemBlockOreIndium = new ItemBlockExOre(BlockList.blockOreIndium, EXORES);
             ItemBlockList.itemBlockIndium = new ItemBlockExOre(BlockList.blockIndium, EXORES);
             itemRegistry(ItemList.itemIngotIndium, event);
@@ -1174,6 +1223,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardIndium,event);
             itemRegistry(ItemList.itemClumpIndium,event);
             itemRegistry(ItemList.itemDirtyDustIndium,event);
+            itemRegistry(ItemList.itemRawIndium,event);
             itemRegistry(ItemBlockList.itemBlockOreIndium, event);
             itemRegistry(ItemBlockList.itemBlockIndium, event);
         }
@@ -1184,6 +1234,7 @@ public class InitBlocks
             ItemList.itemShardInfuscolium = new ItemEXOre(EXORES,"infuscoliumshard");
             ItemList.itemClumpInfuscolium = new ItemEXOre(EXORES,"infuscoliumclump");
             ItemList.itemDirtyDustInfuscolium = new ItemEXOre(EXORES,"infuscoliumdirtydust");
+            ItemList.itemRawInfuscolium = new ItemEXOre(EXORES,"rawinfuscolium");
             ItemBlockList.itemBlockOreInfuscolium = new ItemBlockExOre(BlockList.blockOreInfuscolium, EXORES);
             ItemBlockList.itemBlockInfuscolium = new ItemBlockExOre(BlockList.blockInfuscolium, EXORES);
             itemRegistry(ItemList.itemIngotInfuscolium, event);
@@ -1191,6 +1242,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardInfuscolium,event);
             itemRegistry(ItemList.itemClumpInfuscolium,event);
             itemRegistry(ItemList.itemDirtyDustInfuscolium,event);
+            itemRegistry(ItemList.itemRawInfuscolium,event);
             itemRegistry(ItemBlockList.itemBlockOreInfuscolium, event);
             itemRegistry(ItemBlockList.itemBlockInfuscolium, event);
         }
@@ -1201,6 +1253,7 @@ public class InitBlocks
             ItemList.itemShardInolashite = new ItemEXOre(EXORES,"inolashiteshard");
             ItemList.itemClumpInolashite = new ItemEXOre(EXORES,"inolashiteclump");
             ItemList.itemDirtyDustInolashite = new ItemEXOre(EXORES,"inolashitedirtydust");
+            ItemList.itemRawInolashite = new ItemEXOre(EXORES,"rawinolashite");
             ItemBlockList.itemBlockOreInolashite = new ItemBlockExOre(BlockList.blockOreInolashite, EXORES);
             ItemBlockList.itemBlockInolashite = new ItemBlockExOre(BlockList.blockInolashite, EXORES);
             itemRegistry(ItemList.itemIngotInolashite, event);
@@ -1208,6 +1261,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardInolashite,event);
             itemRegistry(ItemList.itemClumpInolashite,event);
             itemRegistry(ItemList.itemDirtyDustInolashite,event);
+            itemRegistry(ItemList.itemRawInolashite,event);
             itemRegistry(ItemBlockList.itemBlockOreInolashite, event);
             itemRegistry(ItemBlockList.itemBlockInolashite, event);
         }
@@ -1227,6 +1281,7 @@ public class InitBlocks
             ItemList.itemShardIridium = new ItemEXOre(EXORES,"iridiumshard");
             ItemList.itemClumpIridium = new ItemEXOre(EXORES,"iridiumclump");
             ItemList.itemDirtyDustIridium = new ItemEXOre(EXORES,"iridiumdirtydust");
+            ItemList.itemRawIridium = new ItemEXOre(EXORES,"rawiridium");
             ItemBlockList.itemBlockOreIridium = new ItemBlockExOre(BlockList.blockOreIridium, EXORES);
             ItemBlockList.itemBlockIridium = new ItemBlockExOre(BlockList.blockIridium, EXORES);
             itemRegistry(ItemList.itemIngotIridium, event);
@@ -1234,6 +1289,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardIridium,event);
             itemRegistry(ItemList.itemClumpIridium,event);
             itemRegistry(ItemList.itemDirtyDustIridium,event);
+            itemRegistry(ItemList.itemRawIridium,event);
             itemRegistry(ItemBlockList.itemBlockOreIridium, event);
             itemRegistry(ItemBlockList.itemBlockIridium, event);
         }
@@ -1262,6 +1318,7 @@ public class InitBlocks
             ItemList.itemShardKalendrite = new ItemEXOre(EXORES,"kalendriteshard");
             ItemList.itemClumpKalendrite = new ItemEXOre(EXORES,"kalendriteclump");
             ItemList.itemDirtyDustKalendrite = new ItemEXOre(EXORES,"kalendritedirtydust");
+            ItemList.itemRawKalendrite = new ItemEXOre(EXORES,"rawkalendrite");
             ItemBlockList.itemBlockOreKalendrite = new ItemBlockExOre(BlockList.blockOreKalendrite, EXORES);
             ItemBlockList.itemBlockKalendrite = new ItemBlockExOre(BlockList.blockKalendrite, EXORES);
             itemRegistry(ItemList.itemIngotKalendrite, event);
@@ -1269,6 +1326,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardKalendrite,event);
             itemRegistry(ItemList.itemClumpKalendrite,event);
             itemRegistry(ItemList.itemDirtyDustKalendrite,event);
+            itemRegistry(ItemList.itemRawKalendrite,event);
             itemRegistry(ItemBlockList.itemBlockOreKalendrite, event);
             itemRegistry(ItemBlockList.itemBlockKalendrite, event);
         }
@@ -1288,6 +1346,7 @@ public class InitBlocks
             ItemList.itemShardLead = new ItemEXOre(EXORES,"leadshard");
             ItemList.itemClumpLead = new ItemEXOre(EXORES,"leadclump");
             ItemList.itemDirtyDustLead = new ItemEXOre(EXORES,"leaddirtydust");
+            ItemList.itemRawLead = new ItemEXOre(EXORES,"rawlead");
             ItemBlockList.itemBlockOreLead = new ItemBlockExOre(BlockList.blockOreLead, EXORES);
             ItemBlockList.itemBlockLead = new ItemBlockExOre(BlockList.blockLead, EXORES);
             itemRegistry(ItemList.itemIngotLead, event);
@@ -1295,6 +1354,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardLead,event);
             itemRegistry(ItemList.itemClumpLead,event);
             itemRegistry(ItemList.itemDirtyDustLead,event);
+            itemRegistry(ItemList.itemRawLead,event);
             itemRegistry(ItemBlockList.itemBlockOreLead, event);
             itemRegistry(ItemBlockList.itemBlockLead, event);
         }
@@ -1305,6 +1365,7 @@ public class InitBlocks
             ItemList.itemShardLemurite = new ItemEXOre(EXORES,"lemuriteshard");
             ItemList.itemClumpLemurite = new ItemEXOre(EXORES,"lemuriteclump");
             ItemList.itemDirtyDustLemurite = new ItemEXOre(EXORES,"lemuritedirtydust");
+            ItemList.itemRawLemurite = new ItemEXOre(EXORES,"rawlemurite");
             ItemBlockList.itemBlockOreLemurite = new ItemBlockExOre(BlockList.blockOreLemurite, EXORES);
             ItemBlockList.itemBlockLemurite = new ItemBlockExOre(BlockList.blockLemurite, EXORES);
             itemRegistry(ItemList.itemIngotLemurite, event);
@@ -1312,6 +1373,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardLemurite,event);
             itemRegistry(ItemList.itemClumpLemurite,event);
             itemRegistry(ItemList.itemDirtyDustLemurite,event);
+            itemRegistry(ItemList.itemRawLemurite,event);
             itemRegistry(ItemBlockList.itemBlockOreLemurite, event);
             itemRegistry(ItemBlockList.itemBlockLemurite, event);
         }
@@ -1331,6 +1393,7 @@ public class InitBlocks
             ItemList.itemShardManganese = new ItemEXOre(EXORES,"manganeseshard");
             ItemList.itemClumpManganese = new ItemEXOre(EXORES,"manganeseclump");
             ItemList.itemDirtyDustManganese = new ItemEXOre(EXORES,"manganesedirtydust");
+            ItemList.itemRawManganese = new ItemEXOre(EXORES,"rawmanganese");
             ItemBlockList.itemBlockOreManganese = new ItemBlockExOre(BlockList.blockOreManganese, EXORES);
             ItemBlockList.itemBlockManganese = new ItemBlockExOre(BlockList.blockManganese, EXORES);
             itemRegistry(ItemList.itemIngotManganese, event);
@@ -1338,6 +1401,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardManganese,event);
             itemRegistry(ItemList.itemClumpManganese,event);
             itemRegistry(ItemList.itemDirtyDustManganese,event);
+            itemRegistry(ItemList.itemRawManganese,event);
             itemRegistry(ItemBlockList.itemBlockOreManganese, event);
             itemRegistry(ItemBlockList.itemBlockManganese, event);
         }
@@ -1348,6 +1412,7 @@ public class InitBlocks
             ItemList.itemShardMeutoite = new ItemEXOre(EXORES,"meutoiteshard");
             ItemList.itemClumpMeutoite = new ItemEXOre(EXORES,"meutoiteclump");
             ItemList.itemDirtyDustMeutoite = new ItemEXOre(EXORES,"meutoitedirtydust");
+            ItemList.itemRawMeutoite = new ItemEXOre(EXORES,"rawmeutoite");
             ItemBlockList.itemBlockOreMeutoite = new ItemBlockExOre(BlockList.blockOreMeutoite, EXORES);
             ItemBlockList.itemBlockMeutoite = new ItemBlockExOre(BlockList.blockMeutoite, EXORES);
             itemRegistry(ItemList.itemIngotMeutoite, event);
@@ -1355,6 +1420,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardMeutoite,event);
             itemRegistry(ItemList.itemClumpMeutoite,event);
             itemRegistry(ItemList.itemDirtyDustMeutoite,event);
+            itemRegistry(ItemList.itemRawMeutoite,event);
             itemRegistry(ItemBlockList.itemBlockOreMeutoite, event);
             itemRegistry(ItemBlockList.itemBlockMeutoite, event);
         }
@@ -1365,6 +1431,7 @@ public class InitBlocks
             ItemList.itemShardMidasium = new ItemEXOre(EXORES,"midasiumshard");
             ItemList.itemClumpMidasium = new ItemEXOre(EXORES,"midasiumclump");
             ItemList.itemDirtyDustMidasium = new ItemEXOre(EXORES,"midasiumdirtydust");
+            ItemList.itemRawMidasium = new ItemEXOre(EXORES,"rawmidasium");
             ItemBlockList.itemBlockOreMidasium = new ItemBlockExOre(BlockList.blockOreMidasium, EXORES);
             ItemBlockList.itemBlockMidasium = new ItemBlockExOre(BlockList.blockMidasium, EXORES);
             itemRegistry(ItemList.itemIngotMidasium, event);
@@ -1372,6 +1439,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardMidasium,event);
             itemRegistry(ItemList.itemClumpMidasium,event);
             itemRegistry(ItemList.itemDirtyDustMidasium,event);
+            itemRegistry(ItemList.itemRawMidasium,event);
             itemRegistry(ItemBlockList.itemBlockOreMidasium, event);
             itemRegistry(ItemBlockList.itemBlockMidasium, event);
         }
@@ -1382,6 +1450,7 @@ public class InitBlocks
             ItemList.itemShardMithril = new ItemEXOre(EXORES,"mithrilshard");
             ItemList.itemClumpMithril = new ItemEXOre(EXORES,"mithrilclump");
             ItemList.itemDirtyDustMithril = new ItemEXOre(EXORES,"mithrildirtydust");
+            ItemList.itemRawMithril = new ItemEXOre(EXORES,"rawmithril");
             ItemBlockList.itemBlockOreMithril = new ItemBlockExOre(BlockList.blockOreMithril, EXORES);
             ItemBlockList.itemBlockMithril = new ItemBlockExOre(BlockList.blockMithril, EXORES);
             itemRegistry(ItemList.itemIngotMithril, event);
@@ -1389,6 +1458,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardMithril,event);
             itemRegistry(ItemList.itemClumpMithril,event);
             itemRegistry(ItemList.itemDirtyDustMithril,event);
+            itemRegistry(ItemList.itemRawMithril,event);
             itemRegistry(ItemBlockList.itemBlockOreMithril, event);
             itemRegistry(ItemBlockList.itemBlockMithril, event);
         }
@@ -1399,6 +1469,7 @@ public class InitBlocks
             ItemList.itemShardMolybdenum = new ItemEXOre(EXORES,"molybdenumshard");
             ItemList.itemClumpMolybdenum = new ItemEXOre(EXORES,"molybdenumclump");
             ItemList.itemDirtyDustMolybdenum = new ItemEXOre(EXORES,"molybdenumdirtydust");
+            ItemList.itemRawMolybdenum = new ItemEXOre(EXORES,"rawmolybdenum");
             ItemBlockList.itemBlockOreMolybdenum = new ItemBlockExOre(BlockList.blockOreMolybdenum, EXORES);
             ItemBlockList.itemBlockMolybdenum = new ItemBlockExOre(BlockList.blockMolybdenum, EXORES);
             itemRegistry(ItemList.itemIngotMolybdenum, event);
@@ -1406,6 +1477,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardMolybdenum,event);
             itemRegistry(ItemList.itemClumpMolybdenum,event);
             itemRegistry(ItemList.itemDirtyDustMolybdenum,event);
+            itemRegistry(ItemList.itemRawMolybdenum,event);
             itemRegistry(ItemBlockList.itemBlockOreMolybdenum, event);
             itemRegistry(ItemBlockList.itemBlockMolybdenum, event);
         }
@@ -1416,6 +1488,7 @@ public class InitBlocks
             ItemList.itemShardNeodymium = new ItemEXOre(EXORES,"neodymiumshard");
             ItemList.itemClumpNeodymium = new ItemEXOre(EXORES,"neodymiumclump");
             ItemList.itemDirtyDustNeodymium = new ItemEXOre(EXORES,"neodymiumdirtydust");
+            ItemList.itemRawNeodymium = new ItemEXOre(EXORES,"rawneodymium");
             ItemBlockList.itemBlockOreNeodymium = new ItemBlockExOre(BlockList.blockOreNeodymium, EXORES);
             ItemBlockList.itemBlockNeodymium = new ItemBlockExOre(BlockList.blockNeodymium, EXORES);
             itemRegistry(ItemList.itemIngotNeodymium, event);
@@ -1423,6 +1496,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardNeodymium,event);
             itemRegistry(ItemList.itemClumpNeodymium,event);
             itemRegistry(ItemList.itemDirtyDustNeodymium,event);
+            itemRegistry(ItemList.itemRawNeodymium,event);
             itemRegistry(ItemBlockList.itemBlockOreNeodymium, event);
             itemRegistry(ItemBlockList.itemBlockNeodymium, event);
         }
@@ -1433,6 +1507,7 @@ public class InitBlocks
             ItemList.itemShardNeptunium = new ItemEXOre(EXORES,"neptuniumshard");
             ItemList.itemClumpNeptunium = new ItemEXOre(EXORES,"neptuniumclump");
             ItemList.itemDirtyDustNeptunium = new ItemEXOre(EXORES,"neptuniumdirtydust");
+            ItemList.itemRawNeptunium = new ItemEXOre(EXORES,"rawneptunium");
             ItemBlockList.itemBlockOreNeptunium = new ItemBlockExOre(BlockList.blockOreNeptunium, EXORES);
             ItemBlockList.itemBlockNeptunium = new ItemBlockExOre(BlockList.blockNeptunium, EXORES);
             itemRegistry(ItemList.itemIngotNeptunium, event);
@@ -1440,6 +1515,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardNeptunium,event);
             itemRegistry(ItemList.itemClumpNeptunium,event);
             itemRegistry(ItemList.itemDirtyDustNeptunium,event);
+            itemRegistry(ItemList.itemRawNeptunium,event);
             itemRegistry(ItemBlockList.itemBlockOreNeptunium, event);
             itemRegistry(ItemBlockList.itemBlockNeptunium, event);
         }
@@ -1450,6 +1526,7 @@ public class InitBlocks
             ItemList.itemShardNickel = new ItemEXOre(EXORES,"nickelshard");
             ItemList.itemClumpNickel = new ItemEXOre(EXORES,"nickelclump");
             ItemList.itemDirtyDustNickel = new ItemEXOre(EXORES,"nickeldirtydust");
+            ItemList.itemRawNickel = new ItemEXOre(EXORES,"rawnickel");
             ItemBlockList.itemBlockOreNickel = new ItemBlockExOre(BlockList.blockOreNickel, EXORES);
             ItemBlockList.itemBlockNickel = new ItemBlockExOre(BlockList.blockNickel, EXORES);
             itemRegistry(ItemList.itemIngotNickel, event);
@@ -1457,6 +1534,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardNickel,event);
             itemRegistry(ItemList.itemClumpNickel,event);
             itemRegistry(ItemList.itemDirtyDustNickel,event);
+            itemRegistry(ItemList.itemRawNickel,event);
             itemRegistry(ItemBlockList.itemBlockOreNickel, event);
             itemRegistry(ItemBlockList.itemBlockNickel, event);
         }
@@ -1467,6 +1545,7 @@ public class InitBlocks
             ItemList.itemShardNiobium = new ItemEXOre(EXORES,"niobiumshard");
             ItemList.itemClumpNiobium = new ItemEXOre(EXORES,"niobiumclump");
             ItemList.itemDirtyDustNiobium = new ItemEXOre(EXORES,"niobiumdirtydust");
+            ItemList.itemRawNiobium = new ItemEXOre(EXORES,"rawniobium");
             ItemBlockList.itemBlockOreNiobium = new ItemBlockExOre(BlockList.blockOreNiobium, EXORES);
             ItemBlockList.itemBlockNiobium = new ItemBlockExOre(BlockList.blockNiobium, EXORES);
             itemRegistry(ItemList.itemIngotNiobium, event);
@@ -1474,6 +1553,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardNiobium,event);
             itemRegistry(ItemList.itemClumpNiobium,event);
             itemRegistry(ItemList.itemDirtyDustNiobium,event);
+            itemRegistry(ItemList.itemRawNiobium,event);
             itemRegistry(ItemBlockList.itemBlockOreNiobium, event);
             itemRegistry(ItemBlockList.itemBlockNiobium, event);
         }
@@ -1502,6 +1582,7 @@ public class InitBlocks
             ItemList.itemShardOrichalcum = new ItemEXOre(EXORES,"orichalcumshard");
             ItemList.itemClumpOrichalcum = new ItemEXOre(EXORES,"orichalcumclump");
             ItemList.itemDirtyDustOrichalcum = new ItemEXOre(EXORES,"orichalcumdirtydust");
+            ItemList.itemRawOrichalcum = new ItemEXOre(EXORES,"raworichalcum");
             ItemBlockList.itemBlockOreOrichalcum = new ItemBlockExOre(BlockList.blockOreOrichalcum, EXORES);
             ItemBlockList.itemBlockOrichalcum = new ItemBlockExOre(BlockList.blockOrichalcum, EXORES);
             itemRegistry(ItemList.itemIngotOrichalcum, event);
@@ -1509,6 +1590,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardOrichalcum,event);
             itemRegistry(ItemList.itemClumpOrichalcum,event);
             itemRegistry(ItemList.itemDirtyDustOrichalcum,event);
+            itemRegistry(ItemList.itemRawOrichalcum,event);
             itemRegistry(ItemBlockList.itemBlockOreOrichalcum, event);
             itemRegistry(ItemBlockList.itemBlockOrichalcum, event);
         }
@@ -1519,6 +1601,7 @@ public class InitBlocks
             ItemList.itemShardOsmium = new ItemEXOre(EXORES,"osmiumshard");
             ItemList.itemClumpOsmium = new ItemEXOre(EXORES,"osmiumclump");
             ItemList.itemDirtyDustOsmium = new ItemEXOre(EXORES,"osmiumdirtydust");
+            ItemList.itemRawOsmium = new ItemEXOre(EXORES,"rawosmium");
             ItemBlockList.itemBlockOreOsmium = new ItemBlockExOre(BlockList.blockOreOsmium, EXORES);
             ItemBlockList.itemBlockOsmium = new ItemBlockExOre(BlockList.blockOsmium, EXORES);
             itemRegistry(ItemList.itemIngotOsmium, event);
@@ -1526,6 +1609,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardOsmium,event);
             itemRegistry(ItemList.itemClumpOsmium,event);
             itemRegistry(ItemList.itemDirtyDustOsmium,event);
+            itemRegistry(ItemList.itemRawOsmium,event);
             itemRegistry(ItemBlockList.itemBlockOreOsmium, event);
             itemRegistry(ItemBlockList.itemBlockOsmium, event);
         }
@@ -1536,6 +1620,7 @@ public class InitBlocks
             ItemList.itemShardOureclase = new ItemEXOre(EXORES,"oureclaseshard");
             ItemList.itemClumpOureclase = new ItemEXOre(EXORES,"oureclaseclump");
             ItemList.itemDirtyDustOureclase = new ItemEXOre(EXORES,"oureclasedirtydust");
+            ItemList.itemRawOureclase = new ItemEXOre(EXORES,"rawoureclase");
             ItemBlockList.itemBlockOreOureclase = new ItemBlockExOre(BlockList.blockOreOureclase, EXORES);
             ItemBlockList.itemBlockOureclase = new ItemBlockExOre(BlockList.blockOureclase, EXORES);
             itemRegistry(ItemList.itemIngotOureclase, event);
@@ -1543,6 +1628,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardOureclase,event);
             itemRegistry(ItemList.itemClumpOureclase,event);
             itemRegistry(ItemList.itemDirtyDustOureclase,event);
+            itemRegistry(ItemList.itemRawOureclase,event);
             itemRegistry(ItemBlockList.itemBlockOreOureclase, event);
             itemRegistry(ItemBlockList.itemBlockOureclase, event);
         }
@@ -1553,6 +1639,7 @@ public class InitBlocks
             ItemList.itemShardPalladium = new ItemEXOre(EXORES,"palladiumshard");
             ItemList.itemClumpPalladium = new ItemEXOre(EXORES,"palladiumclump");
             ItemList.itemDirtyDustPalladium = new ItemEXOre(EXORES,"palladiumdirtydust");
+            ItemList.itemRawPalladium = new ItemEXOre(EXORES,"rawpalladium");
             ItemBlockList.itemBlockOrePalladium = new ItemBlockExOre(BlockList.blockOrePalladium, EXORES);
             ItemBlockList.itemBlockPalladium = new ItemBlockExOre(BlockList.blockPalladium, EXORES);
             itemRegistry(ItemList.itemIngotPalladium, event);
@@ -1560,6 +1647,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardPalladium,event);
             itemRegistry(ItemList.itemClumpPalladium,event);
             itemRegistry(ItemList.itemDirtyDustPalladium,event);
+            itemRegistry(ItemList.itemRawPalladium,event);
             itemRegistry(ItemBlockList.itemBlockOrePalladium, event);
             itemRegistry(ItemBlockList.itemBlockPalladium, event);
         }
@@ -1588,6 +1676,7 @@ public class InitBlocks
             ItemList.itemShardPlatinum = new ItemEXOre(EXORES,"platinumshard");
             ItemList.itemClumpPlatinum = new ItemEXOre(EXORES,"platinumclump");
             ItemList.itemDirtyDustPlatinum = new ItemEXOre(EXORES,"platinumdirtydust");
+            ItemList.itemRawPlatinum = new ItemEXOre(EXORES,"rawplatinum");
             ItemBlockList.itemBlockOrePlatinum = new ItemBlockExOre(BlockList.blockOrePlatinum, EXORES);
             ItemBlockList.itemBlockPlatinum = new ItemBlockExOre(BlockList.blockPlatinum, EXORES);
             itemRegistry(ItemList.itemIngotPlatinum, event);
@@ -1595,6 +1684,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardPlatinum,event);
             itemRegistry(ItemList.itemClumpPlatinum,event);
             itemRegistry(ItemList.itemDirtyDustPlatinum,event);
+            itemRegistry(ItemList.itemRawPlatinum,event);
             itemRegistry(ItemBlockList.itemBlockOrePlatinum, event);
             itemRegistry(ItemBlockList.itemBlockPlatinum, event);
         }
@@ -1605,6 +1695,7 @@ public class InitBlocks
             ItemList.itemShardPlutonium = new ItemEXOre(EXORES,"plutoniumshard");
             ItemList.itemClumpPlutonium = new ItemEXOre(EXORES,"plutoniumclump");
             ItemList.itemDirtyDustPlutonium = new ItemEXOre(EXORES,"plutoniumdirtydust");
+            ItemList.itemRawPlutonium = new ItemEXOre(EXORES,"rawplutonium");
             ItemBlockList.itemBlockOrePlutonium = new ItemBlockExOre(BlockList.blockOrePlutonium, EXORES);
             ItemBlockList.itemBlockPlutonium = new ItemBlockExOre(BlockList.blockPlutonium, EXORES);
             itemRegistry(ItemList.itemIngotPlutonium, event);
@@ -1612,6 +1703,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardPlutonium,event);
             itemRegistry(ItemList.itemClumpPlutonium,event);
             itemRegistry(ItemList.itemDirtyDustPlutonium,event);
+            itemRegistry(ItemList.itemRawPlutonium,event);
             itemRegistry(ItemBlockList.itemBlockOrePlutonium, event);
             itemRegistry(ItemBlockList.itemBlockPlutonium, event);
         }
@@ -1622,6 +1714,7 @@ public class InitBlocks
             ItemList.itemShardPolonium = new ItemEXOre(EXORES,"poloniumshard");
             ItemList.itemClumpPolonium = new ItemEXOre(EXORES,"poloniumclump");
             ItemList.itemDirtyDustPolonium = new ItemEXOre(EXORES,"poloniumdirtydust");
+            ItemList.itemRawPolonium = new ItemEXOre(EXORES,"rawpolonium");
             ItemBlockList.itemBlockOrePolonium = new ItemBlockExOre(BlockList.blockOrePolonium, EXORES);
             ItemBlockList.itemBlockPolonium = new ItemBlockExOre(BlockList.blockPolonium, EXORES);
             itemRegistry(ItemList.itemIngotPolonium, event);
@@ -1629,6 +1722,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardPolonium,event);
             itemRegistry(ItemList.itemClumpPolonium,event);
             itemRegistry(ItemList.itemDirtyDustPolonium,event);
+            itemRegistry(ItemList.itemRawPolonium,event);
             itemRegistry(ItemBlockList.itemBlockOrePolonium, event);
             itemRegistry(ItemBlockList.itemBlockPolonium, event);
         }
@@ -1639,6 +1733,7 @@ public class InitBlocks
             ItemList.itemShardPromethium = new ItemEXOre(EXORES,"promethiumshard");
             ItemList.itemClumpPromethium = new ItemEXOre(EXORES,"promethiumclump");
             ItemList.itemDirtyDustPromethium = new ItemEXOre(EXORES,"promethiumdirtydust");
+            ItemList.itemRawPromethium = new ItemEXOre(EXORES,"rawpromethium");
             ItemBlockList.itemBlockOrePromethium = new ItemBlockExOre(BlockList.blockOrePromethium, EXORES);
             ItemBlockList.itemBlockPromethium = new ItemBlockExOre(BlockList.blockPromethium, EXORES);
             itemRegistry(ItemList.itemIngotPromethium, event);
@@ -1646,6 +1741,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardPromethium,event);
             itemRegistry(ItemList.itemClumpPromethium,event);
             itemRegistry(ItemList.itemDirtyDustPromethium,event);
+            itemRegistry(ItemList.itemRawPromethium,event);
             itemRegistry(ItemBlockList.itemBlockOrePromethium, event);
             itemRegistry(ItemBlockList.itemBlockPromethium, event);
         }
@@ -1665,6 +1761,7 @@ public class InitBlocks
             ItemList.itemShardRhenium = new ItemEXOre(EXORES,"rheniumshard");
             ItemList.itemClumpRhenium = new ItemEXOre(EXORES,"rheniumclump");
             ItemList.itemDirtyDustRhenium = new ItemEXOre(EXORES,"rheniumdirtydust");
+            ItemList.itemRawRhenium = new ItemEXOre(EXORES,"rawrhenium");
             ItemBlockList.itemBlockOreRhenium = new ItemBlockExOre(BlockList.blockOreRhenium, EXORES);
             ItemBlockList.itemBlockRhenium = new ItemBlockExOre(BlockList.blockRhenium, EXORES);
             itemRegistry(ItemList.itemIngotRhenium, event);
@@ -1672,6 +1769,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardRhenium,event);
             itemRegistry(ItemList.itemClumpRhenium,event);
             itemRegistry(ItemList.itemDirtyDustRhenium,event);
+            itemRegistry(ItemList.itemRawRhenium,event);
             itemRegistry(ItemBlockList.itemBlockOreRhenium, event);
             itemRegistry(ItemBlockList.itemBlockRhenium, event);
         }
@@ -1682,6 +1780,7 @@ public class InitBlocks
             ItemList.itemShardRhodium = new ItemEXOre(EXORES,"rhodiumshard");
             ItemList.itemClumpRhodium = new ItemEXOre(EXORES,"rhodiumclump");
             ItemList.itemDirtyDustRhodium = new ItemEXOre(EXORES,"rhodiumdirtydust");
+            ItemList.itemRawRhodium = new ItemEXOre(EXORES,"rawrhodium");
             ItemBlockList.itemBlockOreRhodium = new ItemBlockExOre(BlockList.blockOreRhodium, EXORES);
             ItemBlockList.itemBlockRhodium = new ItemBlockExOre(BlockList.blockRhodium, EXORES);
             itemRegistry(ItemList.itemIngotRhodium, event);
@@ -1689,6 +1788,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardRhodium,event);
             itemRegistry(ItemList.itemClumpRhodium,event);
             itemRegistry(ItemList.itemDirtyDustRhodium,event);
+            itemRegistry(ItemList.itemRawRhodium,event);
             itemRegistry(ItemBlockList.itemBlockOreRhodium, event);
             itemRegistry(ItemBlockList.itemBlockRhodium, event);
         }
@@ -1699,6 +1799,7 @@ public class InitBlocks
             ItemList.itemShardRubracium = new ItemEXOre(EXORES,"rubraciumshard");
             ItemList.itemClumpRubracium = new ItemEXOre(EXORES,"rubraciumclump");
             ItemList.itemDirtyDustRubracium = new ItemEXOre(EXORES,"rubraciumdirtydust");
+            ItemList.itemRawRubracium = new ItemEXOre(EXORES,"rawrubracium");
             ItemBlockList.itemBlockOreRubracium = new ItemBlockExOre(BlockList.blockOreRubracium, EXORES);
             ItemBlockList.itemBlockRubracium = new ItemBlockExOre(BlockList.blockRubracium, EXORES);
             itemRegistry(ItemList.itemIngotRubracium, event);
@@ -1706,6 +1807,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardRubracium,event);
             itemRegistry(ItemList.itemClumpRubracium,event);
             itemRegistry(ItemList.itemDirtyDustRubracium,event);
+            itemRegistry(ItemList.itemRawRubracium,event);
             itemRegistry(ItemBlockList.itemBlockOreRubracium, event);
             itemRegistry(ItemBlockList.itemBlockRubracium, event);
         }
@@ -1725,6 +1827,7 @@ public class InitBlocks
             ItemList.itemShardRuthenium = new ItemEXOre(EXORES,"rutheniumshard");
             ItemList.itemClumpRuthenium = new ItemEXOre(EXORES,"rutheniumclump");
             ItemList.itemDirtyDustRuthenium = new ItemEXOre(EXORES,"rutheniumdirtydust");
+            ItemList.itemRawRuthenium = new ItemEXOre(EXORES,"rawruthenium");
             ItemBlockList.itemBlockOreRuthenium = new ItemBlockExOre(BlockList.blockOreRuthenium, EXORES);
             ItemBlockList.itemBlockRuthenium = new ItemBlockExOre(BlockList.blockRuthenium, EXORES);
             itemRegistry(ItemList.itemIngotRuthenium, event);
@@ -1732,6 +1835,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardRuthenium,event);
             itemRegistry(ItemList.itemClumpRuthenium,event);
             itemRegistry(ItemList.itemDirtyDustRuthenium,event);
+            itemRegistry(ItemList.itemRawRuthenium,event);
             itemRegistry(ItemBlockList.itemBlockOreRuthenium, event);
             itemRegistry(ItemBlockList.itemBlockRuthenium, event);
         }
@@ -1742,6 +1846,7 @@ public class InitBlocks
             ItemList.itemShardSanguinite = new ItemEXOre(EXORES,"sanguiniteshard");
             ItemList.itemClumpSanguinite = new ItemEXOre(EXORES,"sanguiniteclump");
             ItemList.itemDirtyDustSanguinite = new ItemEXOre(EXORES,"sanguinitedirtydust");
+            ItemList.itemRawSanguinite = new ItemEXOre(EXORES,"rawsanguinite");
             ItemBlockList.itemBlockOreSanguinite = new ItemBlockExOre(BlockList.blockOreSanguinite, EXORES);
             ItemBlockList.itemBlockSanguinite = new ItemBlockExOre(BlockList.blockSanguinite, EXORES);
             itemRegistry(ItemList.itemIngotSanguinite, event);
@@ -1749,6 +1854,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardSanguinite,event);
             itemRegistry(ItemList.itemClumpSanguinite,event);
             itemRegistry(ItemList.itemDirtyDustSanguinite,event);
+            itemRegistry(ItemList.itemRawSanguinite,event);
             itemRegistry(ItemBlockList.itemBlockOreSanguinite, event);
             itemRegistry(ItemBlockList.itemBlockSanguinite, event);
         }
@@ -1768,6 +1874,7 @@ public class InitBlocks
             ItemList.itemShardShadowIron = new ItemEXOre(EXORES,"shadowironshard");
             ItemList.itemClumpShadowIron = new ItemEXOre(EXORES,"shadowironclump");
             ItemList.itemDirtyDustShadowIron = new ItemEXOre(EXORES,"shadowirondirtydust");
+            ItemList.itemRawShadowIron = new ItemEXOre(EXORES,"rawshadowiron");
             ItemBlockList.itemBlockOreShadowIron = new ItemBlockExOre(BlockList.blockOreShadowIron, EXORES);
             ItemBlockList.itemBlockShadowIron = new ItemBlockExOre(BlockList.blockShadowIron, EXORES);
             itemRegistry(ItemList.itemIngotShadowIron, event);
@@ -1775,6 +1882,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardShadowIron,event);
             itemRegistry(ItemList.itemClumpShadowIron,event);
             itemRegistry(ItemList.itemDirtyDustShadowIron,event);
+            itemRegistry(ItemList.itemRawShadowIron,event);
             itemRegistry(ItemBlockList.itemBlockOreShadowIron, event);
             itemRegistry(ItemBlockList.itemBlockShadowIron, event);
         }
@@ -1785,6 +1893,7 @@ public class InitBlocks
             ItemList.itemShardSilver = new ItemEXOre(EXORES,"silvershard");
             ItemList.itemClumpSilver = new ItemEXOre(EXORES,"silverclump");
             ItemList.itemDirtyDustSilver = new ItemEXOre(EXORES,"silverdirtydust");
+            ItemList.itemRawSilver = new ItemEXOre(EXORES,"rawsilver");
             ItemBlockList.itemBlockOreSilver = new ItemBlockExOre(BlockList.blockOreSilver, EXORES);
             ItemBlockList.itemBlockSilver = new ItemBlockExOre(BlockList.blockSilver, EXORES);
             itemRegistry(ItemList.itemIngotSilver, event);
@@ -1792,6 +1901,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardSilver,event);
             itemRegistry(ItemList.itemClumpSilver,event);
             itemRegistry(ItemList.itemDirtyDustSilver,event);
+            itemRegistry(ItemList.itemRawSilver,event);
             itemRegistry(ItemBlockList.itemBlockOreSilver, event);
             itemRegistry(ItemBlockList.itemBlockSilver, event);
         }
@@ -1820,6 +1930,7 @@ public class InitBlocks
             ItemList.itemShardTantalum = new ItemEXOre(EXORES,"tantalumshard");
             ItemList.itemClumpTantalum = new ItemEXOre(EXORES,"tantalumclump");
             ItemList.itemDirtyDustTantalum = new ItemEXOre(EXORES,"tantalumdirtydust");
+            ItemList.itemRawTantalum = new ItemEXOre(EXORES,"rawtantalum");
             ItemBlockList.itemBlockOreTantalum = new ItemBlockExOre(BlockList.blockOreTantalum, EXORES);
             ItemBlockList.itemBlockTantalum = new ItemBlockExOre(BlockList.blockTantalum, EXORES);
             itemRegistry(ItemList.itemIngotTantalum, event);
@@ -1827,6 +1938,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardTantalum,event);
             itemRegistry(ItemList.itemClumpTantalum,event);
             itemRegistry(ItemList.itemDirtyDustTantalum,event);
+            itemRegistry(ItemList.itemRawTantalum,event);
             itemRegistry(ItemBlockList.itemBlockOreTantalum, event);
             itemRegistry(ItemBlockList.itemBlockTantalum, event);
         }
@@ -1846,6 +1958,7 @@ public class InitBlocks
             ItemList.itemShardTartarite = new ItemEXOre(EXORES,"tartariteshard");
             ItemList.itemClumpTartarite = new ItemEXOre(EXORES,"tartariteclump");
             ItemList.itemDirtyDustTartarite = new ItemEXOre(EXORES,"tartaritedirtydust");
+            ItemList.itemRawTartarite = new ItemEXOre(EXORES,"rawtartarite");
             ItemBlockList.itemBlockOreTartarite = new ItemBlockExOre(BlockList.blockOreTartarite, EXORES);
             ItemBlockList.itemBlockTartarite = new ItemBlockExOre(BlockList.blockTartarite, EXORES);
             itemRegistry(ItemList.itemIngotTartarite, event);
@@ -1853,6 +1966,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardTartarite,event);
             itemRegistry(ItemList.itemClumpTartarite,event);
             itemRegistry(ItemList.itemDirtyDustTartarite,event);
+            itemRegistry(ItemList.itemRawTartarite,event);
             itemRegistry(ItemBlockList.itemBlockOreTartarite, event);
             itemRegistry(ItemBlockList.itemBlockTartarite, event);
         }
@@ -1863,6 +1977,7 @@ public class InitBlocks
             ItemList.itemShardTechnetium = new ItemEXOre(EXORES,"technetiumshard");
             ItemList.itemClumpTechnetium = new ItemEXOre(EXORES,"technetiumclump");
             ItemList.itemDirtyDustTechnetium = new ItemEXOre(EXORES,"technetiumdirtydust");
+            ItemList.itemRawTechnetium = new ItemEXOre(EXORES,"rawtechnetium");
             ItemBlockList.itemBlockOreTechnetium = new ItemBlockExOre(BlockList.blockOreTechnetium, EXORES);
             ItemBlockList.itemBlockTechnetium = new ItemBlockExOre(BlockList.blockTechnetium, EXORES);
             itemRegistry(ItemList.itemIngotTechnetium, event);
@@ -1870,6 +1985,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardTechnetium,event);
             itemRegistry(ItemList.itemClumpTechnetium,event);
             itemRegistry(ItemList.itemDirtyDustTechnetium,event);
+            itemRegistry(ItemList.itemRawTechnetium,event);
             itemRegistry(ItemBlockList.itemBlockOreTechnetium, event);
             itemRegistry(ItemBlockList.itemBlockTechnetium, event);
         }
@@ -1880,6 +1996,7 @@ public class InitBlocks
             ItemList.itemShardThallium = new ItemEXOre(EXORES,"thalliumshard");
             ItemList.itemClumpThallium = new ItemEXOre(EXORES,"thalliumclump");
             ItemList.itemDirtyDustThallium = new ItemEXOre(EXORES,"thalliumdirtydust");
+            ItemList.itemRawThallium = new ItemEXOre(EXORES,"rawthallium");
             ItemBlockList.itemBlockOreThallium = new ItemBlockExOre(BlockList.blockOreThallium, EXORES);
             ItemBlockList.itemBlockThallium = new ItemBlockExOre(BlockList.blockThallium, EXORES);
             itemRegistry(ItemList.itemIngotThallium, event);
@@ -1887,6 +2004,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardThallium,event);
             itemRegistry(ItemList.itemClumpThallium,event);
             itemRegistry(ItemList.itemDirtyDustThallium,event);
+            itemRegistry(ItemList.itemRawThallium,event);
             itemRegistry(ItemBlockList.itemBlockOreThallium, event);
             itemRegistry(ItemBlockList.itemBlockThallium, event);
         }
@@ -1897,6 +2015,7 @@ public class InitBlocks
             ItemList.itemShardTin = new ItemEXOre(EXORES,"tinshard");
             ItemList.itemClumpTin = new ItemEXOre(EXORES,"tinclump");
             ItemList.itemDirtyDustTin = new ItemEXOre(EXORES,"tindirtydust");
+            ItemList.itemRawTin = new ItemEXOre(EXORES,"rawtin");
             ItemBlockList.itemBlockOreTin = new ItemBlockExOre(BlockList.blockOreTin, EXORES);
             ItemBlockList.itemBlockTin = new ItemBlockExOre(BlockList.blockTin, EXORES);
             itemRegistry(ItemList.itemIngotTin, event);
@@ -1904,6 +2023,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardTin,event);
             itemRegistry(ItemList.itemClumpTin,event);
             itemRegistry(ItemList.itemDirtyDustTin,event);
+            itemRegistry(ItemList.itemRawTin,event);
             itemRegistry(ItemBlockList.itemBlockOreTin, event);
             itemRegistry(ItemBlockList.itemBlockTin, event);
         }
@@ -1914,6 +2034,7 @@ public class InitBlocks
             ItemList.itemShardTitanium = new ItemEXOre(EXORES,"titaniumshard");
             ItemList.itemClumpTitanium = new ItemEXOre(EXORES,"titaniumclump");
             ItemList.itemDirtyDustTitanium = new ItemEXOre(EXORES,"titaniumdirtydust");
+            ItemList.itemRawTitanium = new ItemEXOre(EXORES,"rawtitanium");
             ItemBlockList.itemBlockOreTitanium = new ItemBlockExOre(BlockList.blockOreTitanium, EXORES);
             ItemBlockList.itemBlockTitanium = new ItemBlockExOre(BlockList.blockTitanium, EXORES);
             itemRegistry(ItemList.itemIngotTitanium, event);
@@ -1921,6 +2042,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardTitanium,event);
             itemRegistry(ItemList.itemClumpTitanium,event);
             itemRegistry(ItemList.itemDirtyDustTitanium,event);
+            itemRegistry(ItemList.itemRawTitanium,event);
             itemRegistry(ItemBlockList.itemBlockOreTitanium, event);
             itemRegistry(ItemBlockList.itemBlockTitanium, event);
         }
@@ -1949,6 +2071,7 @@ public class InitBlocks
             ItemList.itemShardTungsten = new ItemEXOre(EXORES,"tungstenshard");
             ItemList.itemClumpTungsten = new ItemEXOre(EXORES,"tungstenclump");
             ItemList.itemDirtyDustTungsten = new ItemEXOre(EXORES,"tungstendirtydust");
+            ItemList.itemRawTungsten = new ItemEXOre(EXORES,"rawtungsten");
             ItemBlockList.itemBlockOreTungsten = new ItemBlockExOre(BlockList.blockOreTungsten, EXORES);
             ItemBlockList.itemBlockTungsten = new ItemBlockExOre(BlockList.blockTungsten, EXORES);
             itemRegistry(ItemList.itemIngotTungsten, event);
@@ -1956,6 +2079,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardTungsten,event);
             itemRegistry(ItemList.itemClumpTungsten,event);
             itemRegistry(ItemList.itemDirtyDustTungsten,event);
+            itemRegistry(ItemList.itemRawTungsten,event);
             itemRegistry(ItemBlockList.itemBlockOreTungsten, event);
             itemRegistry(ItemBlockList.itemBlockTungsten, event);
         }
@@ -1975,6 +2099,7 @@ public class InitBlocks
             ItemList.itemShardUnobtainium = new ItemEXOre(EXORES,"unobtainiumshard");
             ItemList.itemClumpUnobtainium = new ItemEXOre(EXORES,"unobtainiumclump");
             ItemList.itemDirtyDustUnobtainium = new ItemEXOre(EXORES,"unobtainiumdirtydust");
+            ItemList.itemRawUnobtainium = new ItemEXOre(EXORES,"rawunobtainium");
             ItemBlockList.itemBlockOreUnobtainium = new ItemBlockExOre(BlockList.blockOreUnobtainium, EXORES);
             ItemBlockList.itemBlockUnobtainium = new ItemBlockExOre(BlockList.blockUnobtainium, EXORES);
             itemRegistry(ItemList.itemIngotUnobtainium, event);
@@ -1982,25 +2107,28 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardUnobtainium,event);
             itemRegistry(ItemList.itemClumpUnobtainium,event);
             itemRegistry(ItemList.itemDirtyDustUnobtainium,event);
+            itemRegistry(ItemList.itemRawUnobtainium,event);
             itemRegistry(ItemBlockList.itemBlockOreUnobtainium, event);
             itemRegistry(ItemBlockList.itemBlockUnobtainium, event);
         }
         if (ConfigRegistryList.registerUranium.get())
         {
-            ItemList.itemIngotUranium = new ItemEXOre(EXORES,"uraniumingot");
-            ItemList.itemDustUranium = new ItemEXOre(EXORES,"uraniumdust");
+            ItemList.itemIngotUranium = new ItemEXOre(EXORES, "uraniumingot");
+            ItemList.itemDustUranium = new ItemEXOre(EXORES, "uraniumdust");
             ItemList.itemShardUranium = new ItemEXOre(EXORES,"uraniumshard");
             ItemList.itemClumpUranium = new ItemEXOre(EXORES,"uraniumclump");
             ItemList.itemDirtyDustUranium = new ItemEXOre(EXORES,"uraniumdirtydust");
-            ItemBlockList.itemBlockOreUranium = new ItemBlockExOre(BlockList.blockOreUranium,EXORES);
-            ItemBlockList.itemBlockUranium = new ItemBlockExOre(BlockList.blockUranium,EXORES);
-            itemRegistry(ItemList.itemIngotUranium,event);
-            itemRegistry(ItemList.itemDustUranium,event);
+            ItemList.itemRawUranium = new ItemEXOre(EXORES,"rawuranium");
+            ItemBlockList.itemBlockOreUranium = new ItemBlockExOre(BlockList.blockOreUranium, EXORES);
+            ItemBlockList.itemBlockUranium = new ItemBlockExOre(BlockList.blockUranium, EXORES);
+            itemRegistry(ItemList.itemIngotUranium, event);
+            itemRegistry(ItemList.itemDustUranium, event);
             itemRegistry(ItemList.itemShardUranium,event);
             itemRegistry(ItemList.itemClumpUranium,event);
             itemRegistry(ItemList.itemDirtyDustUranium,event);
-            itemRegistry(ItemBlockList.itemBlockOreUranium,event);
-            itemRegistry(ItemBlockList.itemBlockUranium,event);
+            itemRegistry(ItemList.itemRawUranium,event);
+            itemRegistry(ItemBlockList.itemBlockOreUranium, event);
+            itemRegistry(ItemBlockList.itemBlockUranium, event);
         }
         if (ConfigRegistryList.registerVanadium.get())
         {
@@ -2009,6 +2137,7 @@ public class InitBlocks
             ItemList.itemShardVanadium = new ItemEXOre(EXORES,"vanadiumshard");
             ItemList.itemClumpVanadium = new ItemEXOre(EXORES,"vanadiumclump");
             ItemList.itemDirtyDustVanadium = new ItemEXOre(EXORES,"vanadiumdirtydust");
+            ItemList.itemRawVanadium = new ItemEXOre(EXORES,"rawvanadium");
             ItemBlockList.itemBlockOreVanadium = new ItemBlockExOre(BlockList.blockOreVanadium, EXORES);
             ItemBlockList.itemBlockVanadium = new ItemBlockExOre(BlockList.blockVanadium, EXORES);
             itemRegistry(ItemList.itemIngotVanadium, event);
@@ -2016,6 +2145,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardVanadium,event);
             itemRegistry(ItemList.itemClumpVanadium,event);
             itemRegistry(ItemList.itemDirtyDustVanadium,event);
+            itemRegistry(ItemList.itemRawVanadium,event);
             itemRegistry(ItemBlockList.itemBlockOreVanadium, event);
             itemRegistry(ItemBlockList.itemBlockVanadium, event);
         }
@@ -2026,6 +2156,7 @@ public class InitBlocks
             ItemList.itemShardVulcanite = new ItemEXOre(EXORES,"vulcaniteshard");
             ItemList.itemClumpVulcanite = new ItemEXOre(EXORES,"vulcaniteclump");
             ItemList.itemDirtyDustVulcanite = new ItemEXOre(EXORES,"vulcanitedirtydust");
+            ItemList.itemRawVulcanite = new ItemEXOre(EXORES,"rawvulcanite");
             ItemBlockList.itemBlockOreVulcanite = new ItemBlockExOre(BlockList.blockOreVulcanite, EXORES);
             ItemBlockList.itemBlockVulcanite = new ItemBlockExOre(BlockList.blockVulcanite, EXORES);
             itemRegistry(ItemList.itemIngotVulcanite, event);
@@ -2033,6 +2164,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardVulcanite,event);
             itemRegistry(ItemList.itemClumpVulcanite,event);
             itemRegistry(ItemList.itemDirtyDustVulcanite,event);
+            itemRegistry(ItemList.itemRawVulcanite,event);
             itemRegistry(ItemBlockList.itemBlockOreVulcanite, event);
             itemRegistry(ItemBlockList.itemBlockVulcanite, event);
         }
@@ -2043,6 +2175,7 @@ public class InitBlocks
             ItemList.itemShardVyroxeres = new ItemEXOre(EXORES,"vyroxeresshard");
             ItemList.itemClumpVyroxeres = new ItemEXOre(EXORES,"vyroxeresclump");
             ItemList.itemDirtyDustVyroxeres = new ItemEXOre(EXORES,"vyroxeresdirtydust");
+            ItemList.itemRawVyroxeres = new ItemEXOre(EXORES,"rawvyroxeres");
             ItemBlockList.itemBlockOreVyroxeres = new ItemBlockExOre(BlockList.blockOreVyroxeres, EXORES);
             ItemBlockList.itemBlockVyroxeres = new ItemBlockExOre(BlockList.blockVyroxeres, EXORES);
             itemRegistry(ItemList.itemIngotVyroxeres, event);
@@ -2050,6 +2183,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardVyroxeres,event);
             itemRegistry(ItemList.itemClumpVyroxeres,event);
             itemRegistry(ItemList.itemDirtyDustVyroxeres,event);
+            itemRegistry(ItemList.itemRawVyroxeres,event);
             itemRegistry(ItemBlockList.itemBlockOreVyroxeres, event);
             itemRegistry(ItemBlockList.itemBlockVyroxeres, event);
         }
@@ -2060,6 +2194,7 @@ public class InitBlocks
             ItemList.itemShardYellorite = new ItemEXOre(EXORES,"yelloriteshard");
             ItemList.itemClumpYellorite = new ItemEXOre(EXORES,"yelloriteclump");
             ItemList.itemDirtyDustYellorite = new ItemEXOre(EXORES,"yelloritedirtydust");
+            ItemList.itemRawYellorite = new ItemEXOre(EXORES,"rawyellorite");
             ItemBlockList.itemBlockOreYellorite = new ItemBlockExOre(BlockList.blockOreYellorite, EXORES);
             ItemBlockList.itemBlockYellorite = new ItemBlockExOre(BlockList.blockYellorite, EXORES);
             itemRegistry(ItemList.itemIngotYellorite, event);
@@ -2067,6 +2202,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardYellorite,event);
             itemRegistry(ItemList.itemClumpYellorite,event);
             itemRegistry(ItemList.itemDirtyDustYellorite,event);
+            itemRegistry(ItemList.itemRawYellorite,event);
             itemRegistry(ItemBlockList.itemBlockOreYellorite, event);
             itemRegistry(ItemBlockList.itemBlockYellorite, event);
         }
@@ -2077,6 +2213,7 @@ public class InitBlocks
             ItemList.itemShardZinc = new ItemEXOre(EXORES,"zincshard");
             ItemList.itemClumpZinc = new ItemEXOre(EXORES,"zincclump");
             ItemList.itemDirtyDustZinc = new ItemEXOre(EXORES,"zincdirtydust");
+            ItemList.itemRawZinc = new ItemEXOre(EXORES,"rawzinc");
             ItemBlockList.itemBlockOreZinc = new ItemBlockExOre(BlockList.blockOreZinc, EXORES);
             ItemBlockList.itemBlockZinc = new ItemBlockExOre(BlockList.blockZinc, EXORES);
             itemRegistry(ItemList.itemIngotZinc, event);
@@ -2084,6 +2221,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardZinc,event);
             itemRegistry(ItemList.itemClumpZinc,event);
             itemRegistry(ItemList.itemDirtyDustZinc,event);
+            itemRegistry(ItemList.itemRawZinc,event);
             itemRegistry(ItemBlockList.itemBlockOreZinc, event);
             itemRegistry(ItemBlockList.itemBlockZinc, event);
         }
@@ -2094,6 +2232,7 @@ public class InitBlocks
             ItemList.itemShardZirconium = new ItemEXOre(EXORES,"zirconiumshard");
             ItemList.itemClumpZirconium = new ItemEXOre(EXORES,"zirconiumclump");
             ItemList.itemDirtyDustZirconium = new ItemEXOre(EXORES,"zirconiumdirtydust");
+            ItemList.itemRawZirconium = new ItemEXOre(EXORES,"rawzirconium");
             ItemBlockList.itemBlockOreZirconium = new ItemBlockExOre(BlockList.blockOreZirconium, EXORES);
             ItemBlockList.itemBlockZirconium = new ItemBlockExOre(BlockList.blockZirconium, EXORES);
             itemRegistry(ItemList.itemIngotZirconium, event);
@@ -2101,6 +2240,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemShardZirconium,event);
             itemRegistry(ItemList.itemClumpZirconium,event);
             itemRegistry(ItemList.itemDirtyDustZirconium,event);
+            itemRegistry(ItemList.itemRawZirconium,event);
             itemRegistry(ItemBlockList.itemBlockOreZirconium, event);
             itemRegistry(ItemBlockList.itemBlockZirconium, event);
         }

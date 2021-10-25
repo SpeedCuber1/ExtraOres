@@ -4,6 +4,7 @@ import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ExOreBlockTag extends BlockTagsProvider
@@ -209,6 +210,8 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.ORES).addTags(BlockTagList.oreYellorium);
         tag(BlockTagList.ORES).addTags(BlockTagList.oreZinc);
         tag(BlockTagList.ORES).addTags(BlockTagList.oreZirconium);
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(BlockTagList.ORES);
+        tag(BlockTags.NEEDS_IRON_TOOL).addTags(BlockTagList.ORES);
         //Blocks
         tag(BlockTagList.blockAdamantine).add(BlockList.blockAdamantine);
         tag(BlockTagList.blockAgate).add(BlockList.blockAgate);

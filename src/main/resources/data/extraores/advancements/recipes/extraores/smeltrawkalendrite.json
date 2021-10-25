@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawkalendrite"
+    ]
+  },
+  "criteria": {
+    "smeltrawkalendrite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:kalendriteingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawkalendrite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawkalendrite",
+      "has_the_recipe"
+    ]
+  ]
+}

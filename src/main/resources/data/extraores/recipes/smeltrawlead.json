@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawlead"
+  },
+  "result": "extraores:leadingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

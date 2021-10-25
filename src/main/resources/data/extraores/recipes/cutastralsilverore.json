@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:astralsilverore"
-  },
-  "result": "extraores:astralsilverdust",
-  "count": 2
-}

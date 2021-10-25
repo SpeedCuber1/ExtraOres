@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawtechnetium"
+    ]
+  },
+  "criteria": {
+    "smeltrawtechnetium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:technetiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawtechnetium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawtechnetium",
+      "has_the_recipe"
+    ]
+  ]
+}

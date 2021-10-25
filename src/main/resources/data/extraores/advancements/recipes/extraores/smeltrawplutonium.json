@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawplutonium"
+    ]
+  },
+  "criteria": {
+    "smeltrawplutonium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:plutoniumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawplutonium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawplutonium",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawtartarite"
+  },
+  "result": "extraores:tartariteingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

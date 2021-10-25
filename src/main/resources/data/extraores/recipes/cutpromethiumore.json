@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "extraores:promethiumore"
-  },
-  "result": "extraores:promethiumdust",
-  "count": 2
-}

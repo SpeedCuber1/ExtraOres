@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawdeepiron"
+  },
+  "result": "extraores:deepironingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

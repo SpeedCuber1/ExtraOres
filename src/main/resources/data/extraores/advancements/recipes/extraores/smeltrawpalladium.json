@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawpalladium"
+    ]
+  },
+  "criteria": {
+    "smeltrawpalladium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:palladiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawpalladium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawpalladium",
+      "has_the_recipe"
+    ]
+  ]
+}

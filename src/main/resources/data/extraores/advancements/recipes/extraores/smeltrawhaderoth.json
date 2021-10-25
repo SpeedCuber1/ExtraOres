@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawhaderoth"
+    ]
+  },
+  "criteria": {
+    "smeltrawhaderoth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:haderothingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawhaderoth"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawhaderoth",
+      "has_the_recipe"
+    ]
+  ]
+}

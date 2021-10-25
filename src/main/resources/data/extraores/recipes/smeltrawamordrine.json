@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawamordrine"
+  },
+  "result": "extraores:amordrineingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawmanganese"
+    ]
+  },
+  "criteria": {
+    "smeltrawmanganese": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:manganeseingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawmanganese"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawmanganese",
+      "has_the_recipe"
+    ]
+  ]
+}

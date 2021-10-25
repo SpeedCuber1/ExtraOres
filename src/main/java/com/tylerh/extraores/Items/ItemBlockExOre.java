@@ -10,7 +10,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -20,7 +19,7 @@ public class ItemBlockExOre extends BlockItem
 {
     public ItemBlockExOre(Block block, CreativeModeTab group)
     {
-        super(block,new Item.Properties().addToolType(ToolType.PICKAXE,2).tab(group).stacksTo(64));
+        super(block,new Item.Properties().tab(group).stacksTo(64));
         setRegistryName(Objects.requireNonNull(block.getRegistryName()));
     }
 

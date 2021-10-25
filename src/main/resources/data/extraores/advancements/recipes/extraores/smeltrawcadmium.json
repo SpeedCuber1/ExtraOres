@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawcadmium"
+    ]
+  },
+  "criteria": {
+    "smeltrawcadmium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cadmiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawcadmium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawcadmium",
+      "has_the_recipe"
+    ]
+  ]
+}

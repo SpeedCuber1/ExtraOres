@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawvanadium"
+  },
+  "result": "extraores:vanadiumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

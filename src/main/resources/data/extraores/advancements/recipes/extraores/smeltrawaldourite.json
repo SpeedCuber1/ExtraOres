@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawaldourite"
+    ]
+  },
+  "criteria": {
+    "smeltrawaldourite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aldouriteingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawaldourite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawaldourite",
+      "has_the_recipe"
+    ]
+  ]
+}
