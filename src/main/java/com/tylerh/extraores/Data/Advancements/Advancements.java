@@ -10,6 +10,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.DataProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -26,9 +27,9 @@ public class Advancements extends AdvancementProvider
     private static final Logger LOGGER = LogManager.getLogger();
     private final List<Consumer<Consumer<Advancement>>> advancements = ImmutableList.of(new ExOreAdvancement());
 
-    public Advancements(DataGenerator generator)
+    public Advancements(DataGenerator generator, ExistingFileHelper helper)
     {
-        super(generator);
+        super(generator,helper);
         this.generator = generator;
     }
 

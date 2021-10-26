@@ -17,7 +17,7 @@ public class EXOreDataGen
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator generator = event.getGenerator();
-        generator.addProvider(new Advancements(generator));
+        generator.addProvider(new Advancements(generator,event.getExistingFileHelper()));
         generator.addProvider(new ExOreRecipe(generator));
         generator.addProvider(new ExOreBlockTag(generator, event.getExistingFileHelper()));
         generator.addProvider(new ExOreItemTag(generator,new ExOreBlockTag(generator, event.getExistingFileHelper()),event.getExistingFileHelper()));
