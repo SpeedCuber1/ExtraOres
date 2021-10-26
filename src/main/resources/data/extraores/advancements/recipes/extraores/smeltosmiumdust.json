@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltosmiumdust"
+    ]
+  },
+  "criteria": {
+    "smeltosmiumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:osmiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltosmiumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltosmiumdust",
+      "has_the_recipe"
+    ]
+  ]
+}
