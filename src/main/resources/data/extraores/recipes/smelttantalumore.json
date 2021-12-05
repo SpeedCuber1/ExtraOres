@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:tantalumore"
-  },
-  "result": "extraores:tantalumingot",
-  "experience": 0.75,
-  "cookingtime": 40
-}

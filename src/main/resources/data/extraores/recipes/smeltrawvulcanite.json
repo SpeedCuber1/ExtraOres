@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:rawvulcanite"
-  },
-  "result": "extraores:vulcaniteingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

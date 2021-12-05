@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:rutheniumore"
-  },
-  "result": "extraores:rutheniumingot",
-  "experience": 0.75,
-  "cookingtime": 40
-}

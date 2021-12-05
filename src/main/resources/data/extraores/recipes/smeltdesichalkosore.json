@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:desichalkosore"
-  },
-  "result": "extraores:desichalkosingot",
-  "experience": 0.75,
-  "cookingtime": 40
-}

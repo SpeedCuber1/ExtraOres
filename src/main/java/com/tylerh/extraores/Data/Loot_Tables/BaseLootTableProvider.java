@@ -71,6 +71,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider
     }
     protected LootTable.Builder createStandardTable(String name, Block block)
     {
+        /*
         return LootTable.lootTable().withPool(LootPool.lootPool().name(name)
                 .setRolls(ConstantValue.exactly(1))
                 .add(LootItem.lootTableItem(block)
@@ -79,7 +80,10 @@ public abstract class BaseLootTableProvider extends LootTableProvider
                                 .copy("inv","BlockEntityTag.inv", CopyNbtFunction.MergeStrategy.REPLACE)
                                 .copy("energy","BlockEntityTag.energy", CopyNbtFunction.MergeStrategy.REPLACE))
                         .apply(SetContainerContents.setContents()
-                                .withEntry(DynamicLoot.dynamicEntry(new ResourceLocation("minecraft","contents"))))));
+                                .withEntry(DynamicLoot.dynamicEntry(new ResourceLocation("minecraft","contents"))))));*/
+        return LootTable.lootTable().withPool(LootPool.lootPool().name(name)
+                .setRolls(ConstantValue.exactly(1))
+                .add(LootItem.lootTableItem(block)));
     }
     @Override
     public void run(HashCache cache)

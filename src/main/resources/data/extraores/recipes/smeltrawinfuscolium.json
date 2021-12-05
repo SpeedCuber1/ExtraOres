@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:rawinfuscolium"
-  },
-  "result": "extraores:infuscoliumingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:indiumdust"
-  },
-  "result": "extraores:indiumingot",
-  "experience": 0.75,
-  "cookingtime": 10
-}

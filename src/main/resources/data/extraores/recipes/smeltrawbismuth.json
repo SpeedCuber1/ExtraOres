@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:rawbismuth"
-  },
-  "result": "extraores:bismuthingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

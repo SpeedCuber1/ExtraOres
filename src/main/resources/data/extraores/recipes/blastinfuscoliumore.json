@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "extraores:infuscoliumore"
-  },
-  "result": "extraores:infuscoliumingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

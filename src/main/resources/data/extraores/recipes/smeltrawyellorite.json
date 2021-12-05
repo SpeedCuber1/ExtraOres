@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "extraores:rawyellorite"
-  },
-  "result": "extraores:yelloriteingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}
