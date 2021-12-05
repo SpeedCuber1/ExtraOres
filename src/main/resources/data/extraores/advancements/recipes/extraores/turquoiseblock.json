@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:turquoiseblock"
+    ]
+  },
+  "criteria": {
+    "turquoiseblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:turquoiseblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:turquoiseblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "turquoiseblock",
+      "has_the_recipe"
+    ]
+  ]
+}

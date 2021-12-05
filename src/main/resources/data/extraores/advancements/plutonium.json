@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:platinum",
+  "display": {
+    "icon": {
+      "item": "extraores:plutoniumore"
+    },
+    "title": {
+      "translate": "Not Responsible For Base Evisceration"
+    },
+    "description": {
+      "translate": "Mine Plutonium Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "plutonium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawplutonium"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "plutonium"
+    ]
+  ]
+}

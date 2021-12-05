@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:haderoth",
+  "display": {
+    "icon": {
+      "item": "extraores:hepatizonore"
+    },
+    "title": {
+      "translate": "Sounds Hypnotic Doesn\u0027t It"
+    },
+    "description": {
+      "translate": "Mine Hepatizon Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "hepatizon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawhepatizon"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hepatizon"
+    ]
+  ]
+}

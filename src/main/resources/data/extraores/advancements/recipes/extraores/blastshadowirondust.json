@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastshadowirondust"
+    ]
+  },
+  "criteria": {
+    "blastshadowirondust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:shadowironingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastshadowirondust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastshadowirondust",
+      "has_the_recipe"
+    ]
+  ]
+}

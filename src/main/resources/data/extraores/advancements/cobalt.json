@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:chromium",
+  "display": {
+    "icon": {
+      "item": "extraores:cobaltore"
+    },
+    "title": {
+      "translate": "Tough as Nails"
+    },
+    "description": {
+      "translate": "Mine Cobalt Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "cobalt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcobalt"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cobalt"
+    ]
+  ]
+}

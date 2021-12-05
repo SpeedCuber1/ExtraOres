@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:adamantineblock"
+    ]
+  },
+  "criteria": {
+    "adamantineblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:adamantineblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:adamantineblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "adamantineblock",
+      "has_the_recipe"
+    ]
+  ]
+}

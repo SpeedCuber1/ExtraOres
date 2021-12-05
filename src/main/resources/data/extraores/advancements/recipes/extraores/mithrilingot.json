@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:mithrilingot"
+    ]
+  },
+  "criteria": {
+    "mithrilingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:mithrilingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:mithrilingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mithrilingot",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:iridiumblock"
+    ]
+  },
+  "criteria": {
+    "iridiumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:iridiumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:iridiumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "iridiumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

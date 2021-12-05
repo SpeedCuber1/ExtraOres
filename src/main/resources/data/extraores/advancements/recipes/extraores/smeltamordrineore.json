@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltamordrineore"
+    ]
+  },
+  "criteria": {
+    "smeltamordrineore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:amordrineingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltamordrineore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltamordrineore",
+      "has_the_recipe"
+    ]
+  ]
+}

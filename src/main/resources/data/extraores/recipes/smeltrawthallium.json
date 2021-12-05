@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawthallium"
+  },
+  "result": "extraores:thalliumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

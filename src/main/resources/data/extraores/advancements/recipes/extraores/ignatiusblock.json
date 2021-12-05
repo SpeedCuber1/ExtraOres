@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:ignatiusblock"
+    ]
+  },
+  "criteria": {
+    "ignatiusblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ignatiusblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:ignatiusblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ignatiusblock",
+      "has_the_recipe"
+    ]
+  ]
+}

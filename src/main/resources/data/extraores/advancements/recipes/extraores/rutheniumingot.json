@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:rutheniumingot"
+    ]
+  },
+  "criteria": {
+    "rutheniumingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rutheniumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:rutheniumingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "rutheniumingot",
+      "has_the_recipe"
+    ]
+  ]
+}

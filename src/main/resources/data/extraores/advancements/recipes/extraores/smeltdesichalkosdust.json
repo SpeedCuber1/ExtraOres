@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltdesichalkosdust"
+    ]
+  },
+  "criteria": {
+    "smeltdesichalkosdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:desichalkosingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltdesichalkosdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltdesichalkosdust",
+      "has_the_recipe"
+    ]
+  ]
+}

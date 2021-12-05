@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:onyxblock"
+    ]
+  },
+  "criteria": {
+    "onyxblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:onyxblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:onyxblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "onyxblock",
+      "has_the_recipe"
+    ]
+  ]
+}

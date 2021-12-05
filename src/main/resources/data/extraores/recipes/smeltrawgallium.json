@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawgallium"
+  },
+  "result": "extraores:galliumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

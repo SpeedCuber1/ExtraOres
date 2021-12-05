@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:nickelblock"
+    ]
+  },
+  "criteria": {
+    "nickelblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:nickelblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:nickelblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nickelblock",
+      "has_the_recipe"
+    ]
+  ]
+}

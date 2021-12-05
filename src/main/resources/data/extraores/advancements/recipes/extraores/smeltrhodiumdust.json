@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrhodiumdust"
+    ]
+  },
+  "criteria": {
+    "smeltrhodiumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rhodiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrhodiumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrhodiumdust",
+      "has_the_recipe"
+    ]
+  ]
+}

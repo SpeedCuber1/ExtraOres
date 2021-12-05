@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:galliumblock"
+    ]
+  },
+  "criteria": {
+    "galliumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:galliumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:galliumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "galliumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

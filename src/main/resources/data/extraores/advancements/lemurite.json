@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:kalendrite",
+  "display": {
+    "icon": {
+      "item": "extraores:lemuriteore"
+    },
+    "title": {
+      "translate": "Now With Rings"
+    },
+    "description": {
+      "translate": "Mine Lemurite Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "lemurite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawlemurite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lemurite"
+    ]
+  ]
+}

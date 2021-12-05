@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:poloniumblock"
+    ]
+  },
+  "criteria": {
+    "poloniumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:poloniumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:poloniumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "poloniumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

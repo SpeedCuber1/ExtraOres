@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:yelloriteblock"
+    ]
+  },
+  "criteria": {
+    "yelloriteblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:yelloriteblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:yelloriteblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "yelloriteblock",
+      "has_the_recipe"
+    ]
+  ]
+}

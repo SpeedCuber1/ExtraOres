@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:sugilite",
+  "display": {
+    "icon": {
+      "item": "extraores:tanzaniteore"
+    },
+    "title": {
+      "translate": "Coming to You from Tanzania"
+    },
+    "description": {
+      "translate": "Mine Tanzanite Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "tanzanite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tanzanite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tanzanite"
+    ]
+  ]
+}

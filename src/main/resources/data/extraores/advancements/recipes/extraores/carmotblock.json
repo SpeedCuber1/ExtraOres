@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:carmotblock"
+    ]
+  },
+  "criteria": {
+    "carmotblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:carmotblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:carmotblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "carmotblock",
+      "has_the_recipe"
+    ]
+  ]
+}

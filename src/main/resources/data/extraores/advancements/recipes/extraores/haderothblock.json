@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:haderothblock"
+    ]
+  },
+  "criteria": {
+    "haderothblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:haderothblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:haderothblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "haderothblock",
+      "has_the_recipe"
+    ]
+  ]
+}

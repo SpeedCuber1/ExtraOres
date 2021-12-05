@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:vanadiumingot"
+    ]
+  },
+  "criteria": {
+    "vanadiumingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vanadiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:vanadiumingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "vanadiumingot",
+      "has_the_recipe"
+    ]
+  ]
+}

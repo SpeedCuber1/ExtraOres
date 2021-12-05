@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawniobium"
+  },
+  "result": "extraores:niobiumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

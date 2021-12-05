@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltchromiumdust"
+    ]
+  },
+  "criteria": {
+    "smeltchromiumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:chromiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltchromiumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltchromiumdust",
+      "has_the_recipe"
+    ]
+  ]
+}

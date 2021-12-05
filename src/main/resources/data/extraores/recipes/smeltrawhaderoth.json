@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawhaderoth"
+  },
+  "result": "extraores:haderothingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawatlarus"
+  },
+  "result": "extraores:atlarusingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

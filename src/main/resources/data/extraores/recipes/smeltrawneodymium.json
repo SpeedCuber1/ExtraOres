@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawneodymium"
+  },
+  "result": "extraores:neodymiumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

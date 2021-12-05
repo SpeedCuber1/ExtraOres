@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastunobtainiumore"
+    ]
+  },
+  "criteria": {
+    "blastunobtainiumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:unobtainiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastunobtainiumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastunobtainiumore",
+      "has_the_recipe"
+    ]
+  ]
+}

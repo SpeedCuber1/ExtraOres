@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:manganeseingot"
+    ]
+  },
+  "criteria": {
+    "manganeseingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:manganeseingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:manganeseingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "manganeseingot",
+      "has_the_recipe"
+    ]
+  ]
+}

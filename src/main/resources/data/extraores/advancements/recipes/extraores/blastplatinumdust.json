@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastplatinumdust"
+    ]
+  },
+  "criteria": {
+    "blastplatinumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:platinumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastplatinumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastplatinumdust",
+      "has_the_recipe"
+    ]
+  ]
+}

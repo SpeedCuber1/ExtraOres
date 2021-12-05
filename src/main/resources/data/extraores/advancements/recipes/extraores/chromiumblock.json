@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:chromiumblock"
+    ]
+  },
+  "criteria": {
+    "chromiumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:chromiumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:chromiumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "chromiumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

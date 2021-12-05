@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrubraciumdust"
+    ]
+  },
+  "criteria": {
+    "smeltrubraciumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rubraciumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrubraciumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrubraciumdust",
+      "has_the_recipe"
+    ]
+  ]
+}

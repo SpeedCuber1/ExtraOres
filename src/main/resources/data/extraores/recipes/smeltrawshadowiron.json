@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawshadowiron"
+  },
+  "result": "extraores:shadowironingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

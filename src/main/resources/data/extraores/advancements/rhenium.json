@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:polonium",
+  "display": {
+    "icon": {
+      "item": "extraores:rheniumore"
+    },
+    "title": {
+      "translate": "Have You Ever Seen The Rhenium"
+    },
+    "description": {
+      "translate": "Mine Rhenium Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "rhenium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawrhenium"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "rhenium"
+    ]
+  ]
+}

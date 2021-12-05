@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:cobalt",
+  "display": {
+    "icon": {
+      "item": "extraores:copperore"
+    },
+    "title": {
+      "translate": "You\u0027ll Never Take Me Alive"
+    },
+    "description": {
+      "translate": "Mine Copper Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "copper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcopper"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "copper"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:tourmalineblock"
+    ]
+  },
+  "criteria": {
+    "tourmalineblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tourmalineblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:tourmalineblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tourmalineblock",
+      "has_the_recipe"
+    ]
+  ]
+}

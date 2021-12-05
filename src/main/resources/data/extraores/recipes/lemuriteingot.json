@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:lemuriteblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:lemuriteingot",
+    "count": 9
+  }
+}

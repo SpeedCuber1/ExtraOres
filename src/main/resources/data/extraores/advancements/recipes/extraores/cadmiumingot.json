@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:cadmiumingot"
+    ]
+  },
+  "criteria": {
+    "cadmiumingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cadmiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:cadmiumingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cadmiumingot",
+      "has_the_recipe"
+    ]
+  ]
+}

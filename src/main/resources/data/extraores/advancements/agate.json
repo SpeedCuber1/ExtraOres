@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:root",
+  "display": {
+    "icon": {
+      "item": "extraores:agateore"
+    },
+    "title": {
+      "translate": "Oh Look It\u0027s A Gate"
+    },
+    "description": {
+      "translate": "Mine Agate Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "agate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:agate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "agate"
+    ]
+  ]
+}

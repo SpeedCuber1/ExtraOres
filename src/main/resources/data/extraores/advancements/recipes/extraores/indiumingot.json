@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:indiumingot"
+    ]
+  },
+  "criteria": {
+    "indiumingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:indiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:indiumingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "indiumingot",
+      "has_the_recipe"
+    ]
+  ]
+}

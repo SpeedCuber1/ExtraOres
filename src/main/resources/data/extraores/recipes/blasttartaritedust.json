@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:tartaritedust"
+  },
+  "result": "extraores:tartariteingot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

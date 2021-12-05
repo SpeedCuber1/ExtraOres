@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:sanguiniteblock"
+    ]
+  },
+  "criteria": {
+    "sanguiniteblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:sanguiniteblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:sanguiniteblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sanguiniteblock",
+      "has_the_recipe"
+    ]
+  ]
+}

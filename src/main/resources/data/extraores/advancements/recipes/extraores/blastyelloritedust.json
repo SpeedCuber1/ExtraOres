@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastyelloritedust"
+    ]
+  },
+  "criteria": {
+    "blastyelloritedust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:yelloriteingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastyelloritedust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastyelloritedust",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:neodymium",
+  "display": {
+    "icon": {
+      "item": "extraores:neptuniumore"
+    },
+    "title": {
+      "translate": "A Gift From Neptune Himself"
+    },
+    "description": {
+      "translate": "Mine Neptunium Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "neptunium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawneptunium"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "neptunium"
+    ]
+  ]
+}

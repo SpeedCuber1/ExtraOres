@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blasteximitedust"
+    ]
+  },
+  "criteria": {
+    "blasteximitedust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:eximiteingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blasteximitedust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blasteximitedust",
+      "has_the_recipe"
+    ]
+  ]
+}

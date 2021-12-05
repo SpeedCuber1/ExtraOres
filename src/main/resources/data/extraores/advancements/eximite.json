@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:desichalkos",
+  "display": {
+    "icon": {
+      "item": "extraores:eximiteore"
+    },
+    "title": {
+      "translate": "Exit? I Might"
+    },
+    "description": {
+      "translate": "Mine Eximite Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "eximite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:raweximite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "eximite"
+    ]
+  ]
+}

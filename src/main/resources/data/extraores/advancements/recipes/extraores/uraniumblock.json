@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:uraniumblock"
+    ]
+  },
+  "criteria": {
+    "uraniumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:uraniumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:uraniumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "uraniumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

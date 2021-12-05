@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:meutoiteblock"
+    ]
+  },
+  "criteria": {
+    "meutoiteblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:meutoiteblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:meutoiteblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "meutoiteblock",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastsilverore"
+    ]
+  },
+  "criteria": {
+    "blastsilverore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:silveringot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastsilverore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastsilverore",
+      "has_the_recipe"
+    ]
+  ]
+}

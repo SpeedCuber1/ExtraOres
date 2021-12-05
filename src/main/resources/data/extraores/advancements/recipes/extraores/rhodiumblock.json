@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:rhodiumblock"
+    ]
+  },
+  "criteria": {
+    "rhodiumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rhodiumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:rhodiumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "rhodiumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

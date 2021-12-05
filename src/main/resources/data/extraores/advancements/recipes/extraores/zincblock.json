@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:zincblock"
+    ]
+  },
+  "criteria": {
+    "zincblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:zincblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:zincblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "zincblock",
+      "has_the_recipe"
+    ]
+  ]
+}

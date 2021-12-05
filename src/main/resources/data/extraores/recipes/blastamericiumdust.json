@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "extraores:americiumdust"
+  },
+  "result": "extraores:americiumingot",
+  "experience": 0.75,
+  "cookingtime": 10
+}

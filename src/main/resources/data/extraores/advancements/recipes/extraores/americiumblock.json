@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:americiumblock"
+    ]
+  },
+  "criteria": {
+    "americiumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:americiumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:americiumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "americiumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

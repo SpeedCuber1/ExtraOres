@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:rutheniumblock"
+    ]
+  },
+  "criteria": {
+    "rutheniumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rutheniumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:rutheniumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "rutheniumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

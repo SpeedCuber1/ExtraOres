@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:tiningot"
+    ]
+  },
+  "criteria": {
+    "tiningot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tiningot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:tiningot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tiningot",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:aluminumblock"
+    ]
+  },
+  "criteria": {
+    "aluminumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aluminumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:aluminumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "aluminumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

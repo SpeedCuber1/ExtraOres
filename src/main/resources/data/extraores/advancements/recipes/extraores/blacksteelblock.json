@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blacksteelblock"
+    ]
+  },
+  "criteria": {
+    "blacksteelblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:blacksteelblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blacksteelblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blacksteelblock",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltleaddust"
+    ]
+  },
+  "criteria": {
+    "smeltleaddust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:leadingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltleaddust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltleaddust",
+      "has_the_recipe"
+    ]
+  ]
+}

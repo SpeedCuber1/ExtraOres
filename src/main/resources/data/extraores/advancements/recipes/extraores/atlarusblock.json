@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:atlarusblock"
+    ]
+  },
+  "criteria": {
+    "atlarusblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:atlarusblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:atlarusblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "atlarusblock",
+      "has_the_recipe"
+    ]
+  ]
+}

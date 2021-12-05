@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "extraores:rawrubracium"
+  },
+  "result": "extraores:rubraciumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

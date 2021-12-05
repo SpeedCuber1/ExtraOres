@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastignatiusore"
+    ]
+  },
+  "criteria": {
+    "blastignatiusore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ignatiusingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastignatiusore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastignatiusore",
+      "has_the_recipe"
+    ]
+  ]
+}

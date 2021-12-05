@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:inolashiteingot"
+    ]
+  },
+  "criteria": {
+    "inolashiteingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:inolashiteingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:inolashiteingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "inolashiteingot",
+      "has_the_recipe"
+    ]
+  ]
+}

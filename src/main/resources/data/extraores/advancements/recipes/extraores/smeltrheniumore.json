@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrheniumore"
+    ]
+  },
+  "criteria": {
+    "smeltrheniumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rheniumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrheniumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrheniumore",
+      "has_the_recipe"
+    ]
+  ]
+}

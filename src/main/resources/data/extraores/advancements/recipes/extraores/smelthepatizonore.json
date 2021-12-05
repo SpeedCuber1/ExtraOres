@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smelthepatizonore"
+    ]
+  },
+  "criteria": {
+    "smelthepatizonore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:hepatizoningot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smelthepatizonore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smelthepatizonore",
+      "has_the_recipe"
+    ]
+  ]
+}

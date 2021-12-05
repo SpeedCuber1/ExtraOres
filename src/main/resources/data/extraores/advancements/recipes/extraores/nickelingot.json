@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:nickelingot"
+    ]
+  },
+  "criteria": {
+    "nickelingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:nickelingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:nickelingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nickelingot",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smelthaderothore"
+    ]
+  },
+  "criteria": {
+    "smelthaderothore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:haderothingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smelthaderothore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smelthaderothore",
+      "has_the_recipe"
+    ]
+  ]
+}

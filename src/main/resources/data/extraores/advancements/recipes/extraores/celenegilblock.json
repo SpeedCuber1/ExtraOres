@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:celenegilblock"
+    ]
+  },
+  "criteria": {
+    "celenegilblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:celenegilblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:celenegilblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "celenegilblock",
+      "has_the_recipe"
+    ]
+  ]
+}

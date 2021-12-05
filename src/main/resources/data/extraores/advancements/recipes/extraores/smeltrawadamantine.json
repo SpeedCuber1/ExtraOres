@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawadamantine"
+    ]
+  },
+  "criteria": {
+    "smeltrawadamantine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:adamantineingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltrawadamantine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawadamantine",
+      "has_the_recipe"
+    ]
+  ]
+}

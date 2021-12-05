@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastaluminumdust"
+    ]
+  },
+  "criteria": {
+    "blastaluminumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aluminumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastaluminumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastaluminumdust",
+      "has_the_recipe"
+    ]
+  ]
+}

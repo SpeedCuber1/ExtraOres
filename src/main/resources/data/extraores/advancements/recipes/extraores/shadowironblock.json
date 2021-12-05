@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:shadowironblock"
+    ]
+  },
+  "criteria": {
+    "shadowironblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:shadowironblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:shadowironblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "shadowironblock",
+      "has_the_recipe"
+    ]
+  ]
+}

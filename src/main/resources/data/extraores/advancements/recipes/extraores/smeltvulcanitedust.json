@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltvulcanitedust"
+    ]
+  },
+  "criteria": {
+    "smeltvulcanitedust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vulcaniteingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltvulcanitedust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltvulcanitedust",
+      "has_the_recipe"
+    ]
+  ]
+}

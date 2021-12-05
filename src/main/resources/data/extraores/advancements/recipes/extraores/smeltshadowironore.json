@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltshadowironore"
+    ]
+  },
+  "criteria": {
+    "smeltshadowironore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:shadowironingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltshadowironore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltshadowironore",
+      "has_the_recipe"
+    ]
+  ]
+}

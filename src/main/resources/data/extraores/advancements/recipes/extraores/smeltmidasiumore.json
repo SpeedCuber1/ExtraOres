@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltmidasiumore"
+    ]
+  },
+  "criteria": {
+    "smeltmidasiumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:midasiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltmidasiumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltmidasiumore",
+      "has_the_recipe"
+    ]
+  ]
+}

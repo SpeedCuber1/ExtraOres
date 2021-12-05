@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:osmiumblock"
+    ]
+  },
+  "criteria": {
+    "osmiumblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:osmiumblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:osmiumblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "osmiumblock",
+      "has_the_recipe"
+    ]
+  ]
+}

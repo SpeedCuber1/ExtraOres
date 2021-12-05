@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:peridot",
+  "display": {
+    "icon": {
+      "item": "extraores:phoenixiteore"
+    },
+    "title": {
+      "translate": "Rise from the Ashes"
+    },
+    "description": {
+      "translate": "Mine Phoenixite Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "phoenixite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:phoenixite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "phoenixite"
+    ]
+  ]
+}

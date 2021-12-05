@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:root",
+  "display": {
+    "icon": {
+      "item": "extraores:aluminumore"
+    },
+    "title": {
+      "translate": "Soda Anyone?"
+    },
+    "description": {
+      "translate": "Mine Aluminum Ore"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "aluminum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawaluminum"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "aluminum"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smelttantalumdust"
+    ]
+  },
+  "criteria": {
+    "smelttantalumdust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tantalumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smelttantalumdust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smelttantalumdust",
+      "has_the_recipe"
+    ]
+  ]
+}

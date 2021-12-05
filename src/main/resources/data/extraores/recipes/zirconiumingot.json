@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:zirconiumblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:zirconiumingot",
+    "count": 9
+  }
+}

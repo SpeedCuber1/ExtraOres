@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:smeltneodymiumore"
+    ]
+  },
+  "criteria": {
+    "smeltneodymiumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:neodymiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:smeltneodymiumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "smeltneodymiumore",
+      "has_the_recipe"
+    ]
+  ]
+}

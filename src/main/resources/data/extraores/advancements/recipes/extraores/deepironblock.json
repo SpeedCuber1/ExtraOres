@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:deepironblock"
+    ]
+  },
+  "criteria": {
+    "deepironblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:deepironblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:deepironblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "deepironblock",
+      "has_the_recipe"
+    ]
+  ]
+}

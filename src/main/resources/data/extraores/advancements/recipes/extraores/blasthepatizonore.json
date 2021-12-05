@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blasthepatizonore"
+    ]
+  },
+  "criteria": {
+    "blasthepatizonore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:hepatizoningot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blasthepatizonore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blasthepatizonore",
+      "has_the_recipe"
+    ]
+  ]
+}

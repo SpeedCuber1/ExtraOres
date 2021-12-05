@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "extraores:spinelblock"
+    }
+  ],
+  "result": {
+    "item": "extraores:spinel",
+    "count": 9
+  }
+}

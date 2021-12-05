@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:amethystblock"
+    ]
+  },
+  "criteria": {
+    "amethystblock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:amethystblock"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:amethystblock"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "amethystblock",
+      "has_the_recipe"
+    ]
+  ]
+}

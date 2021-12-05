@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:orichalcumingot"
+    ]
+  },
+  "criteria": {
+    "orichalcumingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:orichalcumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:orichalcumingot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "orichalcumingot",
+      "has_the_recipe"
+    ]
+  ]
+}
