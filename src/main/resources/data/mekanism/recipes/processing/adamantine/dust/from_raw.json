@@ -1,0 +1,12 @@
+{
+  "type": "mekansim:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/adamantine"
+    }
+  },
+  "output": {
+    "item": "extraores:adamantinedust",
+    "count": 2
+  }
+}
