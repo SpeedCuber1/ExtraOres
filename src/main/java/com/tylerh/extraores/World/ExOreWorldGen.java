@@ -204,714 +204,872 @@ public class ExOreWorldGen
                 }
                 if(ConfigRegistryList.registerAmetrine.get())
                 {
-                    List<OreConfiguration.TargetBlockState> ametrine = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAmetrine.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAmetrine.defaultBlockState()));
-                    config = new OreConfiguration(ametrine,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAmetrine.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAmetrine.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerAmordrine.get())
                 {
-                    List<OreConfiguration.TargetBlockState> amordrine = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAmordrine.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAmordrine.defaultBlockState()));
-                    config = new OreConfiguration(amordrine,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAmordrine.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAmordrine.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerAngmallen.get())
                 {
-                    List<OreConfiguration.TargetBlockState> angmallen = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAngmallen.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAngmallen.defaultBlockState()));
-                    config = new OreConfiguration(angmallen,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAngmallen.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAngmallen.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerAquamarine.get())
                 {
-                    List<OreConfiguration.TargetBlockState> aquamarine = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAquamarine.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAquamarine.defaultBlockState()));
-                    config = new OreConfiguration(aquamarine,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAquamarine.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAquamarine.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerAstralSilver.get())
                 {
-                    List<OreConfiguration.TargetBlockState> astralsilver = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAstralSilver.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAstralSilver.defaultBlockState()));
-                    config = new OreConfiguration(astralsilver,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAstralSilver.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAstralSilver.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerAtlarus.get())
                 {
-                    List<OreConfiguration.TargetBlockState> atlarus = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAtlarus.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAtlarus.defaultBlockState()));
-                    config = new OreConfiguration(atlarus,size);
-                    height = 140;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreAtlarus.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAtlarus.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_RARE;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerBismuth.get())
                 {
-                    List<OreConfiguration.TargetBlockState> bismuth = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreBismuth.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreBismuth.defaultBlockState()));
-                    config = new OreConfiguration(bismuth,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreBismuth.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreBismuth.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerBlackSteel.get())
                 {
-                    List<OreConfiguration.TargetBlockState> blacksteel = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreBlackSteel.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreBlackSteel.defaultBlockState()));
-                    config = new OreConfiguration(blacksteel,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreBlackSteel.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreBlackSteel.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerCadmium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> cadmium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCadmium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCadmium.defaultBlockState()));
-                    config = new OreConfiguration(cadmium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCadmium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCadmium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerCarmot.get())
                 {
-                    List<OreConfiguration.TargetBlockState> carmot = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCarmot.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCarmot.defaultBlockState()));
-                    config = new OreConfiguration(carmot,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCarmot.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCarmot.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerCelenegil.get())
                 {
-                    List<OreConfiguration.TargetBlockState> celenegil = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCelenegil.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCelenegil.defaultBlockState()));
-                    config = new OreConfiguration(celenegil,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCelenegil.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCelenegil.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerChromium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> chromium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreChromium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreChromium.defaultBlockState()));
-                    config = new OreConfiguration(chromium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreChromium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreChromium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerChrysocolla.get())
                 {
-                    List<OreConfiguration.TargetBlockState> chrysocolla = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreChrysocolla.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreChrysocolla.defaultBlockState()));
-                    config = new OreConfiguration(chrysocolla,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreChrysocolla.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreChrysocolla.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerCitrine.get())
                 {
-                    List<OreConfiguration.TargetBlockState> citrine = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCitrine.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCitrine.defaultBlockState()));
-                    config = new OreConfiguration(citrine,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCitrine.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCitrine.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerCobalt.get())
                 {
-                    List<OreConfiguration.TargetBlockState> cobalt = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCobalt.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCobalt.defaultBlockState()));
-                    config = new OreConfiguration(cobalt,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCobalt.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCobalt.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerCopper.get())
                 {
-                    List<OreConfiguration.TargetBlockState> copper = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCopper.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCopper.defaultBlockState()));
-                    config = new OreConfiguration(copper,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreCopper.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCopper.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerDeepIron.get())
                 {
-                    List<OreConfiguration.TargetBlockState> deepiron = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreDeepIron.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreDeepIron.defaultBlockState()));
-                    config = new OreConfiguration(deepiron,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreDeepIron.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreDeepIron.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_RARE;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerDesichalkos.get())
                 {
-                    List<OreConfiguration.TargetBlockState> desichalkos = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreDesichalkos.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreDesichalkos.defaultBlockState()));
-                    config = new OreConfiguration(desichalkos,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreDesichalkos.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreDesichalkos.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerEximite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> eximite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreEximite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreEximite.defaultBlockState()));
-                    config = new OreConfiguration(eximite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreEximite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreEximite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerGallium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> gallium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreGallium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreGallium.defaultBlockState()));
-                    config = new OreConfiguration(gallium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreGallium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreGallium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerGarnet.get())
                 {
-                    List<OreConfiguration.TargetBlockState> garnet = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreGarnet.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreGarnet.defaultBlockState()));
-                    config = new OreConfiguration(garnet,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreGarnet.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreGarnet.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerHaderoth.get())
                 {
-                    List<OreConfiguration.TargetBlockState> haderoth = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreHaderoth.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreHaderoth.defaultBlockState()));
-                    config = new OreConfiguration(haderoth,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreHaderoth.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreHaderoth.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerHepatizon.get())
                 {
-                    List<OreConfiguration.TargetBlockState> hepatizon = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreHepatizon.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreHepatizon.defaultBlockState()));
-                    config = new OreConfiguration(hepatizon,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreHepatizon.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreHepatizon.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerIndium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> indium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreIndium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIndium.defaultBlockState()));
-                    config = new OreConfiguration(indium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreIndium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIndium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerInfuscolium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> infuscolium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreInfuscolium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreInfuscolium.defaultBlockState()));
-                    config = new OreConfiguration(infuscolium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreInfuscolium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreInfuscolium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerInolashite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> inolashite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreInolashite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreInolashite.defaultBlockState()));
-                    config = new OreConfiguration(inolashite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreInolashite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreInolashite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerIolite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> iolite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreIolite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIolite.defaultBlockState()));
-                    config = new OreConfiguration(iolite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreIolite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIolite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerIridium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> iridium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreIridium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIridium.defaultBlockState()));
-                    config = new OreConfiguration(iridium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreIridium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIridium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerJade.get())
                 {
-                    List<OreConfiguration.TargetBlockState> jade = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreJade.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreJade.defaultBlockState()));
-                    config = new OreConfiguration(jade,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreJade.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreJade.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerJasper.get())
                 {
-                    List<OreConfiguration.TargetBlockState> jasper = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreJasper.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreJasper.defaultBlockState()));
-                    config = new OreConfiguration(jasper,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreJasper.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreJasper.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerKyanite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> kyanite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreKyanite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreKyanite.defaultBlockState()));
-                    config = new OreConfiguration(kyanite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreKyanite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreKyanite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerLead.get())
                 {
-                    List<OreConfiguration.TargetBlockState> lead = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreLead.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreLead.defaultBlockState()));
-                    config = new OreConfiguration(lead,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreLead.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreLead.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerMalachite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> malachite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreMalachite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMalachite.defaultBlockState()));
-                    config = new OreConfiguration(malachite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreMalachite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMalachite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerManganese.get())
                 {
-                    List<OreConfiguration.TargetBlockState> manganese = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreManganese.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreManganese.defaultBlockState()));
-                    config = new OreConfiguration(manganese,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreManganese.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreManganese.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerMeutoite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> meutoite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreMeutoite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMeutoite.defaultBlockState()));
-                    config = new OreConfiguration(meutoite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreMeutoite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMeutoite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerMithril.get())
                 {
-                    List<OreConfiguration.TargetBlockState> mithril = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreMithril.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMithril.defaultBlockState()));
-                    config = new OreConfiguration(mithril,size);
-                    height = 140;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreMithril.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMithril.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_RARE;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerMolybdenum.get())
                 {
-                    List<OreConfiguration.TargetBlockState> molybdenum = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreMolybdenum.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMolybdenum.defaultBlockState()));
-                    config = new OreConfiguration(molybdenum,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreMolybdenum.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMolybdenum.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerNeodymium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> neodymium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreNeodymium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNeodymium.defaultBlockState()));
-                    config = new OreConfiguration(neodymium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreNeodymium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNeodymium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerNeptunium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> neptunium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreNeptunium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNeptunium.defaultBlockState()));
-                    config = new OreConfiguration(neptunium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreNeptunium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNeptunium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerNickel.get())
                 {
-                    List<OreConfiguration.TargetBlockState> nickel = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreNickel.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNickel.defaultBlockState()));
-                    config = new OreConfiguration(nickel,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreNickel.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNickel.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerNiobium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> niobium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreNiobium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNiobium.defaultBlockState()));
-                    config = new OreConfiguration(niobium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreNiobium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNiobium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerOnyx.get())
                 {
-                    List<OreConfiguration.TargetBlockState> onyx = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOnyx.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOnyx.defaultBlockState()));
-                    config = new OreConfiguration(onyx,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOnyx.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOnyx.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerOpal.get())
                 {
-                    List<OreConfiguration.TargetBlockState> opal = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOpal.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOpal.defaultBlockState()));
-                    config = new OreConfiguration(opal,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOpal.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOpal.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerOrichalcum.get())
                 {
-                    List<OreConfiguration.TargetBlockState> orichalcum = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOrichalcum.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOrichalcum.defaultBlockState()));
-                    config = new OreConfiguration(orichalcum,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOrichalcum.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOrichalcum.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerOsmium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> osmium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOsmium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOsmium.defaultBlockState()));
-                    config = new OreConfiguration(osmium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOsmium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOsmium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerOureclase.get())
                 {
-                    List<OreConfiguration.TargetBlockState> oureclase = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOureclase.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOureclase.defaultBlockState()));
-                    config = new OreConfiguration(oureclase,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreOureclase.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOureclase.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerPalladium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> palladium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePalladium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePalladium.defaultBlockState()));
-                    config = new OreConfiguration(palladium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePalladium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePalladium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerPeridot.get())
                 {
-                    List<OreConfiguration.TargetBlockState> peridot = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePeridot.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePeridot.defaultBlockState()));
-                    config = new OreConfiguration(peridot,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePeridot.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePeridot.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerPhoenixite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> phoenixite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePhoenixite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePhoenixite.defaultBlockState()));
-                    config = new OreConfiguration(phoenixite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePhoenixite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePhoenixite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerPlatinum.get())
                 {
-                    List<OreConfiguration.TargetBlockState> platinum = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePlatinum.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePlatinum.defaultBlockState()));
-                    config = new OreConfiguration(platinum,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePlatinum.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePlatinum.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerPlutonium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> plutonium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePlutonium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePlutonium.defaultBlockState()));
-                    config = new OreConfiguration(plutonium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePlutonium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePlutonium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerPolonium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> polonium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePolonium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePolonium.defaultBlockState()));
-                    config = new OreConfiguration(polonium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePolonium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePolonium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerPromethium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> promethium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePromethium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePromethium.defaultBlockState()));
-                    config = new OreConfiguration(promethium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOrePromethium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePromethium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerQuartz.get())
                 {
-                    List<OreConfiguration.TargetBlockState> quartz = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreQuartz.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreQuartz.defaultBlockState()));
-                    config = new OreConfiguration(quartz,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreQuartz.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreQuartz.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerRhenium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> rhenium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRhenium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRhenium.defaultBlockState()));
-                    config = new OreConfiguration(rhenium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRhenium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRhenium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerRhodium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> rhodium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRhodium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRhodium.defaultBlockState()));
-                    config = new OreConfiguration(rhodium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRhodium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRhodium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerRubracium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> rubracium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRubracium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRubracium.defaultBlockState()));
-                    config = new OreConfiguration(rubracium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRubracium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRubracium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerRuby.get())
                 {
-                    List<OreConfiguration.TargetBlockState> ruby = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRuby.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRuby.defaultBlockState()));
-                    config = new OreConfiguration(ruby,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRuby.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRuby.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerRuthenium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> ruthenium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRuthenium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRuthenium.defaultBlockState()));
-                    config = new OreConfiguration(ruthenium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreRuthenium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRuthenium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerSilver.get())
                 {
-                    List<OreConfiguration.TargetBlockState> silver = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreSilver.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSilver.defaultBlockState()));
-                    config = new OreConfiguration(silver,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreSilver.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSilver.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerSpinel.get())
                 {
-                    List<OreConfiguration.TargetBlockState> spinel = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreSpinel.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSpinel.defaultBlockState()));
-                    config = new OreConfiguration(spinel,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreSpinel.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSpinel.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerSugilite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> sugilite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreSugilite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSugilite.defaultBlockState()));
-                    config = new OreConfiguration(sugilite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreSugilite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSugilite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTantalum.get())
                 {
-                    List<OreConfiguration.TargetBlockState> tantalum = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTantalum.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTantalum.defaultBlockState()));
-                    config = new OreConfiguration(tantalum,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTantalum.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTantalum.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTanzanite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> tanzanite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTanzanite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTanzanite.defaultBlockState()));
-                    config = new OreConfiguration(tanzanite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTanzanite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTanzanite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTartarite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> tartarite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTartarite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTartarite.defaultBlockState()));
-                    config = new OreConfiguration(tartarite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTartarite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTartarite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTechnetium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> technetium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTechnetium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTechnetium.defaultBlockState()));
-                    config = new OreConfiguration(technetium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTechnetium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTechnetium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerThallium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> thallium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreThallium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreThallium.defaultBlockState()));
-                    config = new OreConfiguration(thallium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreThallium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreThallium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTin.get())
                 {
-                    List<OreConfiguration.TargetBlockState> tin = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTin.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTin.defaultBlockState()));
-                    config = new OreConfiguration(tin,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTin.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTin.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTitanium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> titanium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTitanium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTitanium.defaultBlockState()));
-                    config = new OreConfiguration(titanium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTitanium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTitanium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTopaz.get())
                 {
-                    List<OreConfiguration.TargetBlockState> topaz = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTopaz.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTopaz.defaultBlockState()));
-                    config = new OreConfiguration(topaz,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTopaz.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTopaz.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTourmaline.get())
                 {
-                    List<OreConfiguration.TargetBlockState> tourmaline = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTourmaline.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTourmaline.defaultBlockState()));
-                    config = new OreConfiguration(tourmaline,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTourmaline.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTourmaline.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTungsten.get())
                 {
-                    List<OreConfiguration.TargetBlockState> tungsten = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTungsten.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTungsten.defaultBlockState()));
-                    config = new OreConfiguration(tungsten,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTungsten.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTungsten.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_RARE;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerTurquoise.get())
                 {
-                    List<OreConfiguration.TargetBlockState> turquoise = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTurquoise.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTurquoise.defaultBlockState()));
-                    config = new OreConfiguration(turquoise,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreTurquoise.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTurquoise.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerUnobtainium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> unobtainium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreUnobtainium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreUnobtainium.defaultBlockState()));
-                    config = new OreConfiguration(unobtainium,size);
-                    height = 140;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreUnobtainium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreUnobtainium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_RARE;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerUranium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> uranium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreUranium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreUranium.defaultBlockState()));
-                    config = new OreConfiguration(uranium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreUranium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreUranium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerVanadium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> vanadium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreVanadium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreVanadium.defaultBlockState()));
-                    config = new OreConfiguration(vanadium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreVanadium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreVanadium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerYellorite.get())
                 {
-                    List<OreConfiguration.TargetBlockState> yellorite = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreYellorite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreYellorite.defaultBlockState()));
-                    config = new OreConfiguration(yellorite,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreYellorite.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreYellorite.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerZinc.get())
                 {
-                    List<OreConfiguration.TargetBlockState> zinc = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreZinc.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreZinc.defaultBlockState()));
-                    config = new OreConfiguration(zinc,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreZinc.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreZinc.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 if(ConfigRegistryList.registerZirconium.get())
                 {
-                    List<OreConfiguration.TargetBlockState> zirconium = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreZirconium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreZirconium.defaultBlockState()));
-                    config = new OreConfiguration(zirconium,size);
-                    height = 200;
-                    List<PlacementModifier> modifierList = List.of(HeightRangePlacement.of(UniformHeight.of(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height))),InSquarePlacement.spread(),CountPlacement.of(rate));
+                    target = List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES,BlockList.blockOreZirconium.defaultBlockState()),OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreZirconium.defaultBlockState()));
+                    config = new OreConfiguration(target,size);
+                    height = ModInfo.HEIGHT_NORMAL;
                     builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Feature.ORE.configured(config)
-                            .placed(modifierList));
+                            .placed(List.of(CountPlacement.of(rate),
+                                    InSquarePlacement.spread(),
+                                    HeightRangePlacement.uniform(VerticalAnchor.bottom(),VerticalAnchor.aboveBottom(height)),
+                                    BiomeFilter.biome())));
                 }
                 break;
         }
