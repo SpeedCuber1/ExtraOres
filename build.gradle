@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
 apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle'
 
-version = '1.11'
+version = '1.18.1'
 group = 'com.tylerh.extraores' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'extraores'
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
