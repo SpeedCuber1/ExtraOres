@@ -22,6 +22,9 @@ repositories {
     maven {
         url "file:///${project.projectDir}/mcmodsrepo"
     }
+    maven {
+        url "https://modmaven.dev"
+    }
 }
 minecraft {
     // The mappings can be changed at any time, and must be in the following format.
