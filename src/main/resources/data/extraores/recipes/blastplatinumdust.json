@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:platinumdust"
+    "tag": "forge:dusts/platinum"
   },
   "result": "extraores:platinumingot",
   "experience": 0.75,

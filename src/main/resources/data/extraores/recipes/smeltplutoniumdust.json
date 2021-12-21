@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:plutoniumdust"
+    "tag": "forge:dusts/plutonium"
   },
   "result": "extraores:plutoniumingot",
   "experience": 0.75,

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawneptunium"
+    "tag": "extraores:raw/neptunium"
   },
   "result": "extraores:neptuniumingot",
   "experience": 0.75,

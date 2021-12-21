@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:iridiumore"
+    "tag": "forge:ores/iridium"
   },
   "result": "extraores:iridiumingot",
   "experience": 0.75,

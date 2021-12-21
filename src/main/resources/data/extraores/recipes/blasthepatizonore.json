@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:hepatizonore"
+    "tag": "forge:ores/hepatizon"
   },
   "result": "extraores:hepatizoningot",
   "experience": 0.75,

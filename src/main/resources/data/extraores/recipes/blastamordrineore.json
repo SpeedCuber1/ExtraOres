@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:amordrineore"
+    "tag": "forge:ores/amordrine"
   },
   "result": "extraores:amordrineingot",
   "experience": 0.75,

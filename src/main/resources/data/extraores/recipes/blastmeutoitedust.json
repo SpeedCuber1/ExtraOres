@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:meutoitedust"
+    "tag": "forge:dusts/meutoite"
   },
   "result": "extraores:meutoiteingot",
   "experience": 0.75,

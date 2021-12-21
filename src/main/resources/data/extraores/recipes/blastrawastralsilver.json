@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/astralsilver"
+  },
+  "result": "extraores:astralsilveringot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

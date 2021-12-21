@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawcarmot"
+    ]
+  },
+  "criteria": {
+    "blastrawcarmot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:carmotingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawcarmot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawcarmot",
+      "has_the_recipe"
+    ]
+  ]
+}

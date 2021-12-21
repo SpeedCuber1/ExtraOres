@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:neptuniumore"
+    "tag": "forge:ores/neptunium"
   },
   "result": "extraores:neptuniumingot",
   "experience": 0.75,

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawmeutoite"
+    "tag": "extraores:raw/meutoite"
   },
   "result": "extraores:meutoiteingot",
   "experience": 0.75,

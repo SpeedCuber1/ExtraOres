@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:galliumore"
+    "tag": "forge:ores/gallium"
   },
   "result": "extraores:galliumingot",
   "experience": 0.75,

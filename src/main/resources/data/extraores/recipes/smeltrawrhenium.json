@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawrhenium"
+    "tag": "extraores:raw/rhenium"
   },
   "result": "extraores:rheniumingot",
   "experience": 0.75,

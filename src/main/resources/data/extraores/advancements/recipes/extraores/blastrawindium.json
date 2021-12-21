@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawindium"
+    ]
+  },
+  "criteria": {
+    "blastrawindium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:indiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawindium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawindium",
+      "has_the_recipe"
+    ]
+  ]
+}

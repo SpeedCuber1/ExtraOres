@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawcadmium"
+    "tag": "extraores:raw/cadmium"
   },
   "result": "extraores:cadmiumingot",
   "experience": 0.75,

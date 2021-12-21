@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawuranium"
+    ]
+  },
+  "criteria": {
+    "blastrawuranium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:uraniumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawuranium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawuranium",
+      "has_the_recipe"
+    ]
+  ]
+}

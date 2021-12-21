@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:rhodiumore"
+    "tag": "forge:ores/rhodium"
   },
   "result": "extraores:rhodiumingot",
   "experience": 0.75,

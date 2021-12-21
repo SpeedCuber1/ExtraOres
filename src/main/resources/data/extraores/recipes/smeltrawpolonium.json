@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawpolonium"
+    "tag": "extraores:raw/polonium"
   },
   "result": "extraores:poloniumingot",
   "experience": 0.75,

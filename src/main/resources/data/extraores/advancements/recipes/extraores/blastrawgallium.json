@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawgallium"
+    ]
+  },
+  "criteria": {
+    "blastrawgallium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:galliumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawgallium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawgallium",
+      "has_the_recipe"
+    ]
+  ]
+}

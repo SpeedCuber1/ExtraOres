@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawhepatizon"
+    ]
+  },
+  "criteria": {
+    "blastrawhepatizon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:hepatizoningot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawhepatizon"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawhepatizon",
+      "has_the_recipe"
+    ]
+  ]
+}

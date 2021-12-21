@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:americiumdust"
+    "tag": "forge:dusts/americium"
   },
   "result": "extraores:americiumingot",
   "experience": 0.75,

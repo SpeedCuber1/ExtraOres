@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:tungstendust"
+    "tag": "forge:dusts/tungsten"
   },
   "result": "extraores:tungsteningot",
   "experience": 0.75,

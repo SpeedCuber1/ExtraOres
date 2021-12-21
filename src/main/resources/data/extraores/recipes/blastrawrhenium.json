@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/rhenium"
+  },
+  "result": "extraores:rheniumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

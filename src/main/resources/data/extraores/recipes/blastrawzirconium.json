@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/zirconium"
+  },
+  "result": "extraores:zirconiumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

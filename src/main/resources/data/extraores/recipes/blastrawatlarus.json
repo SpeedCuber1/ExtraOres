@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/atlarus"
+  },
+  "result": "extraores:atlarusingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

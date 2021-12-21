@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:lemuritedust"
+    "tag": "forge:dusts/lemurite"
   },
   "result": "extraores:lemuriteingot",
   "experience": 0.75,

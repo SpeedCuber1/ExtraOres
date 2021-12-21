@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:midasiumore"
+    "tag": "forge:ores/midasium"
   },
   "result": "extraores:midasiumingot",
   "experience": 0.75,

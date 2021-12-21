@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawniobium"
+    ]
+  },
+  "criteria": {
+    "blastrawniobium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:niobiumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawniobium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawniobium",
+      "has_the_recipe"
+    ]
+  ]
+}

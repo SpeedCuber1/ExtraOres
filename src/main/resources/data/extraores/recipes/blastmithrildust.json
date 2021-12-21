@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:mithrildust"
+    "tag": "forge:dusts/mithril"
   },
   "result": "extraores:mithrilingot",
   "experience": 0.75,

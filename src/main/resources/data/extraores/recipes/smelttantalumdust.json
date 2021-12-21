@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:tantalumdust"
+    "tag": "forge:dusts/tantalum"
   },
   "result": "extraores:tantalumingot",
   "experience": 0.75,

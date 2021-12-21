@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/orichalcum"
+  },
+  "result": "extraores:orichalcumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

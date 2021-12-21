@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:ceruclaseore"
+    "tag": "forge:ores/ceruclase"
   },
   "result": "extraores:ceruclaseingot",
   "experience": 0.75,

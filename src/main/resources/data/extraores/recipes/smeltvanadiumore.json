@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:vanadiumore"
+    "tag": "forge:ores/vanadium"
   },
   "result": "extraores:vanadiumingot",
   "experience": 0.75,

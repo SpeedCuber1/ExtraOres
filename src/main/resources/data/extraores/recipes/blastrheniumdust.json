@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:rheniumdust"
+    "tag": "forge:dusts/rhenium"
   },
   "result": "extraores:rheniumingot",
   "experience": 0.75,

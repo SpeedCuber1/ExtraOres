@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:ceruclasedust"
+    "tag": "forge:dusts/ceruclase"
   },
   "result": "extraores:ceruclaseingot",
   "experience": 0.75,

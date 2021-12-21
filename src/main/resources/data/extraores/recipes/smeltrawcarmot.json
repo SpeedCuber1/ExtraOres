@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawcarmot"
+    "tag": "extraores:raw/carmot"
   },
   "result": "extraores:carmotingot",
   "experience": 0.75,

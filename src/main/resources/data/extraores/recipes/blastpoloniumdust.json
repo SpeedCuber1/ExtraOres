@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:poloniumdust"
+    "tag": "forge:dusts/polonium"
   },
   "result": "extraores:poloniumingot",
   "experience": 0.75,

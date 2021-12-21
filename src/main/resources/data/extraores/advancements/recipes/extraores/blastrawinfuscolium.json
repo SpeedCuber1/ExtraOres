@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawinfuscolium"
+    ]
+  },
+  "criteria": {
+    "blastrawinfuscolium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:infuscoliumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawinfuscolium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawinfuscolium",
+      "has_the_recipe"
+    ]
+  ]
+}

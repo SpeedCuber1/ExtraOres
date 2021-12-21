@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:angmallenore"
+    "tag": "forge:ores/angmallen"
   },
   "result": "extraores:angmalleningot",
   "experience": 0.75,

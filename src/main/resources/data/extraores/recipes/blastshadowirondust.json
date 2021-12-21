@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:shadowirondust"
+    "tag": "forge:dusts/shadowiron"
   },
   "result": "extraores:shadowironingot",
   "experience": 0.75,

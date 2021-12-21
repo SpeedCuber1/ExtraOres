@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawnickel"
+    ]
+  },
+  "criteria": {
+    "blastrawnickel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:nickelingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawnickel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawnickel",
+      "has_the_recipe"
+    ]
+  ]
+}

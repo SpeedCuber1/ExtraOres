@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/niobium"
+  },
+  "result": "extraores:niobiumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

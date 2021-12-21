@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:americiumore"
+    "tag": "forge:ores/americium"
   },
   "result": "extraores:americiumingot",
   "experience": 0.75,

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawoureclase"
+    ]
+  },
+  "criteria": {
+    "blastrawoureclase": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:oureclaseingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawoureclase"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawoureclase",
+      "has_the_recipe"
+    ]
+  ]
+}

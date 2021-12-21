@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rubraciumdust"
+    "tag": "forge:dusts/rubracium"
   },
   "result": "extraores:rubraciumingot",
   "experience": 0.75,

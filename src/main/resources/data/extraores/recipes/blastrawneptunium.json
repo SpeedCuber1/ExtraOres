@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/neptunium"
+  },
+  "result": "extraores:neptuniumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

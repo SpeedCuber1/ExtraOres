@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:orichalcumdust"
+    "tag": "forge:dusts/orichalcum"
   },
   "result": "extraores:orichalcumingot",
   "experience": 0.75,

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/desichalkos"
+  },
+  "result": "extraores:desichalkosingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

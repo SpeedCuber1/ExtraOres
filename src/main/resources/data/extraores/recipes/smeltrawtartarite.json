@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawtartarite"
+    "tag": "extraores:raw/tartarite"
   },
   "result": "extraores:tartariteingot",
   "experience": 0.75,

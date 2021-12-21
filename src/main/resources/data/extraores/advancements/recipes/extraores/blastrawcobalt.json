@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawcobalt"
+    ]
+  },
+  "criteria": {
+    "blastrawcobalt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cobaltingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawcobalt"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawcobalt",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawvyroxeres"
+    "tag": "extraores:raw/vyroxeres"
   },
   "result": "extraores:vyroxeresingot",
   "experience": 0.75,

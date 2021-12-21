@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:carmotdust"
+    "tag": "forge:dusts/carmot"
   },
   "result": "extraores:carmotingot",
   "experience": 0.75,

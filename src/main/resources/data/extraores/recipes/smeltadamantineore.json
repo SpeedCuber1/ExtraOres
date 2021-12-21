@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:adamantineore"
+    "tag": "forge:ores/adamantine"
   },
   "result": "extraores:adamantineingot",
   "experience": 0.75,

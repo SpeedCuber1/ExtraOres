@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawatlarus"
+    ]
+  },
+  "criteria": {
+    "blastrawatlarus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:atlarusingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawatlarus"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawatlarus",
+      "has_the_recipe"
+    ]
+  ]
+}

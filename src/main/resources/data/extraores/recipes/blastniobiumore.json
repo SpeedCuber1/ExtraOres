@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:niobiumore"
+    "tag": "forge:ores/niobium"
   },
   "result": "extraores:niobiumingot",
   "experience": 0.75,

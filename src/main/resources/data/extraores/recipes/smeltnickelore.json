@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:nickelore"
+    "tag": "forge:ores/nickel"
   },
   "result": "extraores:nickelingot",
   "experience": 0.75,

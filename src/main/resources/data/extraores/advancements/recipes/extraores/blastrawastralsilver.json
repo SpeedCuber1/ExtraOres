@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawastralsilver"
+    ]
+  },
+  "criteria": {
+    "blastrawastralsilver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:astralsilveringot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawastralsilver"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawastralsilver",
+      "has_the_recipe"
+    ]
+  ]
+}

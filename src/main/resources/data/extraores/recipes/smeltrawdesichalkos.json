@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawdesichalkos"
+    "tag": "extraores:raw/desichalkos"
   },
   "result": "extraores:desichalkosingot",
   "experience": 0.75,

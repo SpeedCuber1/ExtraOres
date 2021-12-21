@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:yelloritedust"
+    "tag": "forge:dusts/yellorite"
   },
   "result": "extraores:yelloriteingot",
   "experience": 0.75,

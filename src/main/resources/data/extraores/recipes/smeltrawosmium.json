@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawosmium"
+    "tag": "extraores:raw/osmium"
   },
   "result": "extraores:osmiumingot",
   "experience": 0.75,

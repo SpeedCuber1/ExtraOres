@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/copper"
+  },
+  "result": "extraores:copperingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

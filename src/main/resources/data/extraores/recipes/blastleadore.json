@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:leadore"
+    "tag": "forge:ores/lead"
   },
   "result": "extraores:leadingot",
   "experience": 0.75,

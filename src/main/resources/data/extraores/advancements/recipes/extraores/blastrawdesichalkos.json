@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawdesichalkos"
+    ]
+  },
+  "criteria": {
+    "blastrawdesichalkos": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:desichalkosingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawdesichalkos"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawdesichalkos",
+      "has_the_recipe"
+    ]
+  ]
+}

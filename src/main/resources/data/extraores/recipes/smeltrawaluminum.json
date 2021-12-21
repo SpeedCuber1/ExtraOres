@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawaluminum"
+    "tag": "extraores:raw/aluminum"
   },
   "result": "extraores:aluminumingot",
   "experience": 0.75,

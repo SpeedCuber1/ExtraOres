@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/haderoth"
+  },
+  "result": "extraores:haderothingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

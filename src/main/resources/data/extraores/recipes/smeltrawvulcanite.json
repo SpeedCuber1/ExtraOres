@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawvulcanite"
+    "tag": "extraores:raw/vulcanite"
   },
   "result": "extraores:vulcaniteingot",
   "experience": 0.75,

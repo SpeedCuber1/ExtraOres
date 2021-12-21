@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:titaniumdust"
+    "tag": "forge:dusts/titanium"
   },
   "result": "extraores:titaniumingot",
   "experience": 0.75,

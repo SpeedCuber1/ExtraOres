@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawaldourite"
+    "tag": "extraores:raw/aldourite"
   },
   "result": "extraores:aldouriteingot",
   "experience": 0.75,

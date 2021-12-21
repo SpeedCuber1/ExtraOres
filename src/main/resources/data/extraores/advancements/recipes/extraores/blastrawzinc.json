@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawzinc"
+    ]
+  },
+  "criteria": {
+    "blastrawzinc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:zincingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawzinc"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawzinc",
+      "has_the_recipe"
+    ]
+  ]
+}

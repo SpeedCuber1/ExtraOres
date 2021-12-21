@@ -13,7 +13,7 @@ loaderVersion="[38,)" #mandatory (24 is current forge version)
 # The modid of the mod
 modId="extraores" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.18" #mandatory# A display name for the mod
+version="1.18.1" #mandatory# A display name for the mod
 displayName="Extra Ores" #mandatory
 # A text field displayed in the mod UI
 credits="Thanks to forge for making this posible" #optional

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawaldourite"
+    ]
+  },
+  "criteria": {
+    "blastrawaldourite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aldouriteingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawaldourite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawaldourite",
+      "has_the_recipe"
+    ]
+  ]
+}

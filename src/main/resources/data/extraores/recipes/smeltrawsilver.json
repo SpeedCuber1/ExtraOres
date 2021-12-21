@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawsilver"
+    "tag": "extraores:raw/silver"
   },
   "result": "extraores:silveringot",
   "experience": 0.75,

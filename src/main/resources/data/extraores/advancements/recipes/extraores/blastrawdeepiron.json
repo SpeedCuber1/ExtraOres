@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawdeepiron"
+    ]
+  },
+  "criteria": {
+    "blastrawdeepiron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:deepironingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawdeepiron"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawdeepiron",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:silverdust"
+    "tag": "forge:dusts/silver"
   },
   "result": "extraores:silveringot",
   "experience": 0.75,

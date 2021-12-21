@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:carmotore"
+    "tag": "forge:ores/carmot"
   },
   "result": "extraores:carmotingot",
   "experience": 0.75,

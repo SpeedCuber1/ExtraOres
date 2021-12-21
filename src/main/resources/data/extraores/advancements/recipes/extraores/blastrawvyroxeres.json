@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawvyroxeres"
+    ]
+  },
+  "criteria": {
+    "blastrawvyroxeres": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vyroxeresingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawvyroxeres"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawvyroxeres",
+      "has_the_recipe"
+    ]
+  ]
+}

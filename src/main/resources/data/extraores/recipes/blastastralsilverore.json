@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:astralsilverore"
+    "tag": "forge:ores/astralsilver"
   },
   "result": "extraores:astralsilveringot",
   "experience": 0.75,

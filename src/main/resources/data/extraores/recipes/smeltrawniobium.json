@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawniobium"
+    "tag": "extraores:raw/niobium"
   },
   "result": "extraores:niobiumingot",
   "experience": 0.75,

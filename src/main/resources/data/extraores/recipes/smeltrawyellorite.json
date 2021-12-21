@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawyellorite"
+    "tag": "extraores:raw/yellorite"
   },
   "result": "extraores:yelloriteingot",
   "experience": 0.75,

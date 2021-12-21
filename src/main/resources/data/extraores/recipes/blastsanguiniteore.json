@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:sanguiniteore"
+    "tag": "forge:ores/sanguinite"
   },
   "result": "extraores:sanguiniteingot",
   "experience": 0.75,

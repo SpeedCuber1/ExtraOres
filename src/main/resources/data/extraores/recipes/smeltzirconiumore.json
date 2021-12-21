@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:zirconiumore"
+    "tag": "forge:ores/zirconium"
   },
   "result": "extraores:zirconiumingot",
   "experience": 0.75,

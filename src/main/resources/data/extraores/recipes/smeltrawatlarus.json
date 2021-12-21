@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawatlarus"
+    "tag": "extraores:raw/atlarus"
   },
   "result": "extraores:atlarusingot",
   "experience": 0.75,

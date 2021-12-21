@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawtin"
+    "tag": "extraores:raw/tin"
   },
   "result": "extraores:tiningot",
   "experience": 0.75,

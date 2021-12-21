@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:palladiumdust"
+    "tag": "forge:dusts/palladium"
   },
   "result": "extraores:palladiumingot",
   "experience": 0.75,

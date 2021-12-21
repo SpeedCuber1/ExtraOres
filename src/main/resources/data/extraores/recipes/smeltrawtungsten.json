@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawtungsten"
+    "tag": "extraores:raw/tungsten"
   },
   "result": "extraores:tungsteningot",
   "experience": 0.75,

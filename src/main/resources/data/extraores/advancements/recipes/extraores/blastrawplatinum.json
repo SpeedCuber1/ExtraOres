@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:blastrawplatinum"
+    ]
+  },
+  "criteria": {
+    "blastrawplatinum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:platinumingot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:blastrawplatinum"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blastrawplatinum",
+      "has_the_recipe"
+    ]
+  ]
+}

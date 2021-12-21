@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:iridiumdust"
+    "tag": "forge:dusts/iridium"
   },
   "result": "extraores:iridiumingot",
   "experience": 0.75,

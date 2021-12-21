@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "extraores:tindust"
+    "tag": "forge:dusts/tin"
   },
   "result": "extraores:tiningot",
   "experience": 0.75,

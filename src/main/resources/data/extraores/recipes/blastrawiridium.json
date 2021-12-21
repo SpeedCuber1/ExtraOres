@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "extraores:raw/iridium"
+  },
+  "result": "extraores:iridiumingot",
+  "experience": 0.75,
+  "cookingtime": 20
+}

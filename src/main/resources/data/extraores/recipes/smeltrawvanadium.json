@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "extraores:rawvanadium"
+    "tag": "extraores:raw/vanadium"
   },
   "result": "extraores:vanadiumingot",
   "experience": 0.75,
