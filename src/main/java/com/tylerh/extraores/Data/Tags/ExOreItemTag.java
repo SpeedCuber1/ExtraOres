@@ -18,7 +18,19 @@ public class ExOreItemTag extends ItemTagsProvider
     @Override
     public void addTags()
     {
-        //Ores
+        addOres();
+        addRaw();
+        addBlocks();
+        addIngots();
+        addShards();
+        addClumps();
+        addDirtyDusts();
+        addDusts();
+        addGems();
+    }
+    private void addOres()
+    {
+        //Ore Normal
         tag(ItemTagList.oreAdamantine).add(BlockList.blockOreAdamantine.asItem());
         tag(ItemTagList.oreAgate).add(BlockList.blockOreAgate.asItem());
         tag(ItemTagList.oreAldourite).add(BlockList.blockOreAldourite.asItem());
@@ -115,6 +127,104 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreYellorium).add(BlockList.blockOreYellorite.asItem());
         tag(ItemTagList.oreZinc).add(BlockList.blockOreZinc.asItem());
         tag(ItemTagList.oreZirconium).add(BlockList.blockOreZirconium.asItem());
+        /*
+        //Ore Deepslate
+        tag(ItemTagList.oreAdamantine).add(BlockList.blockDeepslateOreAdamantine.asItem());
+        tag(ItemTagList.oreAgate).add(BlockList.blockDeepslateOreAgate.asItem());
+        tag(ItemTagList.oreAldourite).add(BlockList.blockDeepslateOreAldourite.asItem());
+        tag(ItemTagList.oreAluminum).add(BlockList.blockDeepslateOreAluminum.asItem());
+        tag(ItemTagList.oreAmericium).add(BlockList.blockDeepslateOreAmericium.asItem());
+        tag(ItemTagList.oreAmethyst).add(BlockList.blockDeepslateOreAmethyst.asItem());
+        tag(ItemTagList.oreAmetrine).add(BlockList.blockDeepslateOreAmetrine.asItem());
+        tag(ItemTagList.oreAmordrine).add(BlockList.blockDeepslateOreAmordrine.asItem());
+        tag(ItemTagList.oreAngmallen).add(BlockList.blockDeepslateOreAngmallen.asItem());
+        tag(ItemTagList.oreAquamarine).add(BlockList.blockDeepslateOreAquamarine.asItem());
+        tag(ItemTagList.oreAstralSilver).add(BlockList.blockDeepslateOreAstralSilver.asItem());
+        tag(ItemTagList.oreAtlarus).add(BlockList.blockDeepslateOreAtlarus.asItem());
+        tag(ItemTagList.oreBismuth).add(BlockList.blockDeepslateOreBismuth.asItem());
+        tag(ItemTagList.oreBlackSteel).add(BlockList.blockDeepslateOreBlackSteel.asItem());
+        tag(ItemTagList.oreCadmium).add(BlockList.blockDeepslateOreCadmium.asItem());
+        tag(ItemTagList.oreCarmot).add(BlockList.blockDeepslateOreCarmot.asItem());
+        tag(ItemTagList.oreCelenegil).add(BlockList.blockDeepslateOreCelenegil.asItem());
+        tag(ItemTagList.oreCeruclase).add(BlockList.blockDeepslateOreCeruclase.asItem());
+        tag(ItemTagList.oreChromium).add(BlockList.blockDeepslateOreChromium.asItem());
+        tag(ItemTagList.oreChrysocolla).add(BlockList.blockDeepslateOreChrysocolla.asItem());
+        tag(ItemTagList.oreCitrine).add(BlockList.blockDeepslateOreCitrine.asItem());
+        tag(ItemTagList.oreCobalt).add(BlockList.blockDeepslateOreCobalt.asItem());
+        tag(ItemTagList.oreCopper).add(BlockList.blockDeepslateOreCopper.asItem());
+        tag(ItemTagList.oreDeepIron).add(BlockList.blockDeepslateOreDeepIron.asItem());
+        tag(ItemTagList.oreDesichalkos).add(BlockList.blockDeepslateOreDesichalkos.asItem());
+        tag(ItemTagList.oreEximite).add(BlockList.blockDeepslateOreEximite.asItem());
+        tag(ItemTagList.oreGallium).add(BlockList.blockDeepslateOreGallium.asItem());
+        tag(ItemTagList.oreGarnet).add(BlockList.blockDeepslateOreGarnet.asItem());
+        tag(ItemTagList.oreHaderoth).add(BlockList.blockDeepslateOreHaderoth.asItem());
+        tag(ItemTagList.oreHepatizon).add(BlockList.blockDeepslateOreHepatizon.asItem());
+        tag(ItemTagList.oreIgnatius).add(BlockList.blockDeepslateOreIgnatius.asItem());
+        tag(ItemTagList.oreIndium).add(BlockList.blockDeepslateOreIndium.asItem());
+        tag(ItemTagList.oreInfuscolium).add(BlockList.blockDeepslateOreInfuscolium.asItem());
+        tag(ItemTagList.oreInolashite).add(BlockList.blockDeepslateOreInolashite.asItem());
+        tag(ItemTagList.oreIolite).add(BlockList.blockDeepslateOreIolite.asItem());
+        tag(ItemTagList.oreIridium).add(BlockList.blockDeepslateOreIridium.asItem());
+        tag(ItemTagList.oreJade).add(BlockList.blockDeepslateOreJade.asItem());
+        tag(ItemTagList.oreJasper).add(BlockList.blockDeepslateOreJasper.asItem());
+        tag(ItemTagList.oreKalendrite).add(BlockList.blockDeepslateOreKalendrite.asItem());
+        tag(ItemTagList.oreKyanite).add(BlockList.blockDeepslateOreKyanite.asItem());
+        tag(ItemTagList.oreLead).add(BlockList.blockDeepslateOreLead.asItem());
+        tag(ItemTagList.oreLemurite).add(BlockList.blockDeepslateOreLemurite.asItem());
+        tag(ItemTagList.oreMalachite).add(BlockList.blockDeepslateOreMalachite.asItem());
+        tag(ItemTagList.oreManganese).add(BlockList.blockDeepslateOreManganese.asItem());
+        tag(ItemTagList.oreMeutoite).add(BlockList.blockDeepslateOreMeutoite.asItem());
+        tag(ItemTagList.oreMidasium).add(BlockList.blockDeepslateOreMidasium.asItem());
+        tag(ItemTagList.oreMithril).add(BlockList.blockDeepslateOreMithril.asItem());
+        tag(ItemTagList.oreMolybdenum).add(BlockList.blockDeepslateOreMolybdenum.asItem());
+        tag(ItemTagList.oreNeodymium).add(BlockList.blockDeepslateOreNeodymium.asItem());
+        tag(ItemTagList.oreNeptunium).add(BlockList.blockDeepslateOreNeptunium.asItem());
+        tag(ItemTagList.oreNickel).add(BlockList.blockDeepslateOreNickel.asItem());
+        tag(ItemTagList.oreNiobium).add(BlockList.blockDeepslateOreNiobium.asItem());
+        tag(ItemTagList.oreOnyx).add(BlockList.blockDeepslateOreOnyx.asItem());
+        tag(ItemTagList.oreOpal).add(BlockList.blockDeepslateOreOpal.asItem());
+        tag(ItemTagList.oreOrichalcum).add(BlockList.blockDeepslateOreOrichalcum.asItem());
+        tag(ItemTagList.oreOsmium).add(BlockList.blockDeepslateOreOsmium.asItem());
+        tag(ItemTagList.oreOureclase).add(BlockList.blockDeepslateOreOureclase.asItem());
+        tag(ItemTagList.orePalladium).add(BlockList.blockDeepslateOrePalladium.asItem());
+        tag(ItemTagList.orePeridot).add(BlockList.blockDeepslateOrePeridot.asItem());
+        tag(ItemTagList.orePhoenixite).add(BlockList.blockDeepslateOrePhoenixite.asItem());
+        tag(ItemTagList.orePlatinum).add(BlockList.blockDeepslateOrePlatinum.asItem());
+        tag(ItemTagList.orePlutonium).add(BlockList.blockDeepslateOrePlutonium.asItem());
+        tag(ItemTagList.orePolonium).add(BlockList.blockDeepslateOrePolonium.asItem());
+        tag(ItemTagList.orePromethium).add(BlockList.blockDeepslateOrePromethium.asItem());
+        tag(ItemTagList.oreQuartz).add(BlockList.blockDeepslateOreQuartz.asItem());
+        tag(ItemTagList.oreRhenium).add(BlockList.blockDeepslateOreRhenium.asItem());
+        tag(ItemTagList.oreRhodium).add(BlockList.blockDeepslateOreRhodium.asItem());
+        tag(ItemTagList.oreRubracium).add(BlockList.blockDeepslateOreRubracium.asItem());
+        tag(ItemTagList.oreRuby).add(BlockList.blockDeepslateOreRuby.asItem());
+        tag(ItemTagList.oreRuthenium).add(BlockList.blockDeepslateOreRuthenium.asItem());
+        tag(ItemTagList.oreSanguinite).add(BlockList.blockDeepslateOreSanguinite.asItem());
+        tag(ItemTagList.oreSapphire).add(BlockList.blockDeepslateOreSapphire.asItem());
+        tag(ItemTagList.oreShadowIron).add(BlockList.blockDeepslateOreShadowIron.asItem());
+        tag(ItemTagList.oreSilver).add(BlockList.blockDeepslateOreSilver.asItem());
+        tag(ItemTagList.oreSpinel).add(BlockList.blockDeepslateOreSpinel.asItem());
+        tag(ItemTagList.oreSugilite).add(BlockList.blockDeepslateOreSugilite.asItem());
+        tag(ItemTagList.oreTantalum).add(BlockList.blockDeepslateOreTantalum.asItem());
+        tag(ItemTagList.oreTanzanite).add(BlockList.blockDeepslateOreTanzanite.asItem());
+        tag(ItemTagList.oreTartarite).add(BlockList.blockDeepslateOreTartarite.asItem());
+        tag(ItemTagList.oreTechnetium).add(BlockList.blockDeepslateOreTechnetium.asItem());
+        tag(ItemTagList.oreThallium).add(BlockList.blockDeepslateOreThallium.asItem());
+        tag(ItemTagList.oreTin).add(BlockList.blockDeepslateOreTin.asItem());
+        tag(ItemTagList.oreTitanium).add(BlockList.blockDeepslateOreTitanium.asItem());
+        tag(ItemTagList.oreTopaz).add(BlockList.blockDeepslateOreTopaz.asItem());
+        tag(ItemTagList.oreTourmaline).add(BlockList.blockDeepslateOreTourmaline.asItem());
+        tag(ItemTagList.oreTungsten).add(BlockList.blockDeepslateOreTungsten.asItem());
+        tag(ItemTagList.oreTurquoise).add(BlockList.blockDeepslateOreTurquoise.asItem());
+        tag(ItemTagList.oreUnobtainium).add(BlockList.blockDeepslateOreUnobtainium.asItem());
+        tag(ItemTagList.oreUranium).add(BlockList.blockDeepslateOreUranium.asItem());
+        tag(ItemTagList.oreVanadium).add(BlockList.blockDeepslateOreVanadium.asItem());
+        tag(ItemTagList.oreVulcanite).add(BlockList.blockDeepslateOreVulcanite.asItem());
+        tag(ItemTagList.oreVyroxeres).add(BlockList.blockDeepslateOreVyroxeres.asItem());
+        tag(ItemTagList.oreYellorite).add(BlockList.blockDeepslateOreYellorite.asItem());
+        tag(ItemTagList.oreYellorium).add(BlockList.blockDeepslateOreYellorite.asItem());
+        tag(ItemTagList.oreZinc).add(BlockList.blockDeepslateOreZinc.asItem());
+        tag(ItemTagList.oreZirconium).add(BlockList.blockDeepslateOreZirconium.asItem());*/
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAdamantine);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAgate);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAldourite);
@@ -211,7 +321,9 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.ORES).addTag(ItemTagList.oreYellorium);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreZinc);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreZirconium);
-        //Raw
+    }
+    private void addRaw()
+    {
         tag(ItemTagList.rawAdamantine).add(ItemList.itemRawAdamantine.asItem());
         tag(ItemTagList.rawAldourite).add(ItemList.itemRawAldourite.asItem());
         tag(ItemTagList.rawAluminum).add(ItemList.itemRawAluminum.asItem());
@@ -354,7 +466,9 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.RAW).addTag(ItemTagList.rawYellorium);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawZinc);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawZirconium);
-        //Blocks
+    }
+    private void addBlocks()
+    {
         tag(ItemTagList.blockAdamantine).add(BlockList.blockAdamantine.asItem());
         tag(ItemTagList.blockAgate).add(BlockList.blockAgate.asItem());
         tag(ItemTagList.blockAldourite).add(BlockList.blockAldourite.asItem());
@@ -547,7 +661,9 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockYellorium);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockZinc);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockZirconium);
-        //Ingots
+    }
+    private void addIngots()
+    {
         tag(ItemTagList.ingotAdamantine).add(ItemList.itemIngotAdamantine);
         tag(ItemTagList.ingotAldourite).add(ItemList.itemIngotAldourite);
         tag(ItemTagList.ingotAluminum).add(ItemList.itemIngotAluminum);
@@ -690,7 +806,9 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotYellorium);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotZinc);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotZirconium);
-        //Dusts
+    }
+    private void addDusts()
+    {
         tag(ItemTagList.dustAdamantine).add(ItemList.itemDustAdamantine);
         tag(ItemTagList.dustAldourite).add(ItemList.itemDustAldourite);
         tag(ItemTagList.dustAluminum).add(ItemList.itemDustAluminum);
@@ -831,7 +949,9 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustYellorite);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustZinc);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustZirconium);
-        //Dirty Dusts
+    }
+    private void addDirtyDusts()
+    {
         tag(ItemTagList.dirtyDustAdamantine).add(ItemList.itemDirtyDustAdamantine.asItem());
         tag(ItemTagList.dirtyDustAldourite).add(ItemList.itemDirtyDustAldourite.asItem());
         tag(ItemTagList.dirtyDustAluminum).add(ItemList.itemDirtyDustAluminum.asItem());
@@ -972,7 +1092,9 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustYellorite);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustZinc);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustZirconium);
-        //Shards
+    }
+    private void addShards()
+    {
         tag(ItemTagList.shardAdamantine).add(ItemList.itemShardAdamantine);
         tag(ItemTagList.shardAldourite).add(ItemList.itemShardAldourite);
         tag(ItemTagList.shardAluminum).add(ItemList.itemShardAluminum);
@@ -1113,7 +1235,9 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardYellorite);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardZinc);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardZirconium);
-        //Clumps
+    }
+    private void addClumps()
+    {
         tag(ItemTagList.clumpAdamantine).add(ItemList.itemClumpAdamantine);
         tag(ItemTagList.clumpAldourite).add(ItemList.itemClumpAldourite);
         tag(ItemTagList.clumpAluminum).add(ItemList.itemClumpAluminum);
@@ -1254,7 +1378,9 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpYellorite);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpZinc);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpZirconium);
-        //Gems
+    }
+    private void addGems()
+    {
         tag(ItemTagList.gemAgate).add(ItemList.itemGemAgate);
         tag(ItemTagList.gemAmethyst).add(ItemList.itemGemAmethyst);
         tag(ItemTagList.gemAmetrine).add(ItemList.itemGemAmetrine);
@@ -1306,7 +1432,6 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.GEMS).addTag(ItemTagList.gemTourmaline);
         tag(ItemTagList.GEMS).addTag(ItemTagList.gemTurquoise);
     }
-
     @Override
     public String getName()
     {

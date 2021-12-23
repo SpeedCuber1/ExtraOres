@@ -7,16 +7,13 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.resources.ResourceLocation;
-
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.function.Consumer;
-
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
-import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 
 public class ExOreRecipe extends RecipeProvider
 {
@@ -2333,7 +2330,6 @@ public class ExOreRecipe extends RecipeProvider
                 .unlockedBy("blastrawzirconium", has(ItemList.itemIngotZirconium))
                 .save(consumer, new ResourceLocation("extraores:blastrawzirconium"));
     }
-
     @Override
     @MethodsReturnNonnullByDefault
     public String getName()
