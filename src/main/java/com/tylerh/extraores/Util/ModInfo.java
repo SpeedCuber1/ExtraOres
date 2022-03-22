@@ -9,4 +9,5 @@ public class ModInfo
     public static final String[] symbols = {"Al","Am", "Bi", "Cd", "Cr", "Co", "Cu", "Ga", "In","Ir", "Pb", "Mn", "Mo", "Nd","Np", "Ni", "Nb","Os","Pd", "Pt","Pu","Po","Pm","Re", "Rh", "Ru", "Ag","Ta", "Tc", "Tl", "Sn", "Ti", "W","U", "V", "Zn", "Zr"};
     public static final int HEIGHT_NORMAL = 220;
     public static final int HEIGHT_RARE = 160;
+    public static final int HEIGHT_NETHER = 100;
 }
