@@ -62,6 +62,14 @@ public final class ExOreWorldGen
             {
                 builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureShadowIron));
             }
+            if(ConfigRegistryList.registerVulcanite.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureVulcanite));
+            }
+            if(ConfigRegistryList.registerVyroxeres.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureVyroxeres));
+            }
         }
         else
         {
@@ -336,6 +344,74 @@ public final class ExOreWorldGen
             if(ConfigRegistryList.registerSugilite.get())
             {
                 builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureSugilite));
+            }
+            if(ConfigRegistryList.registerTantalum.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTantalum));
+            }
+            if(ConfigRegistryList.registerTanzanite.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTanzanite));
+            }
+            if(ConfigRegistryList.registerTartarite.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTartarite));
+            }
+            if(ConfigRegistryList.registerTechnetium.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTechnetium));
+            }
+            if(ConfigRegistryList.registerThallium.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureThallium));
+            }
+            if(ConfigRegistryList.registerTin.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTin));
+            }
+            if(ConfigRegistryList.registerTitanium.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTitanium));
+            }
+            if(ConfigRegistryList.registerTopaz.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTopaz));
+            }
+            if(ConfigRegistryList.registerTourmaline.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTourmaline));
+            }
+            if(ConfigRegistryList.registerTungsten.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTungsten));
+            }
+            if(ConfigRegistryList.registerTurquoise.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureTurquoise));
+            }
+            if(ConfigRegistryList.registerUnobtainium.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureUnobtainium));
+            }
+            if(ConfigRegistryList.registerUranium.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureUranium));
+            }
+            if(ConfigRegistryList.registerVanadium.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureVanadium));
+            }
+            if(ConfigRegistryList.registerYellorite.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureYellorite));
+            }
+            if(ConfigRegistryList.registerZinc.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureZinc));
+            }
+            if(ConfigRegistryList.registerZirconium.get())
+            {
+                builder.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,Holder.direct(PlacedFeatureList.featureZirconium));
             }
         }
     }
@@ -1637,6 +1713,329 @@ public final class ExOreWorldGen
             ));
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"sugiliteore"),feature);
             Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"sugiliteore"),PlacedFeatureList.featureSugilite);
+        }
+        if(ConfigRegistryList.registerTantalum.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTantalum.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTantalum.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTantalum = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tantalumore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tantalumore"),PlacedFeatureList.featureTantalum);
+        }
+        if(ConfigRegistryList.registerTanzanite.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTanzanite.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTanzanite.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTanzanite = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tanzaniteore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tanzaniteore"),PlacedFeatureList.featureTanzanite);
+        }
+        if(ConfigRegistryList.registerTartarite.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTartarite.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTartarite.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTartarite = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tartariteore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tartariteore"),PlacedFeatureList.featureTartarite);
+        }
+        if(ConfigRegistryList.registerTechnetium.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTechnetium.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTechnetium.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTechnetium = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"technetiumore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"technetiumore"),PlacedFeatureList.featureTechnetium);
+        }
+        if(ConfigRegistryList.registerThallium.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreThallium.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreThallium.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureThallium = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"thalliumore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"thalliumore"),PlacedFeatureList.featureThallium);
+        }
+        if(ConfigRegistryList.registerTin.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTin.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTin.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTin = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tinore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tinore"),PlacedFeatureList.featureTin);
+        }
+        if(ConfigRegistryList.registerTitanium.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTitanium.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTitanium.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTitanium = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"titaniumore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"titaniumore"),PlacedFeatureList.featureTitanium);
+        }
+        if(ConfigRegistryList.registerTopaz.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTopaz.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTopaz.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTopaz = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"topazore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"topazore"),PlacedFeatureList.featureTopaz);
+        }
+        if(ConfigRegistryList.registerTourmaline.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTourmaline.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTourmaline.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTourmaline = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tourmalineore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tourmalineore"),PlacedFeatureList.featureTourmaline);
+        }
+        if(ConfigRegistryList.registerTungsten.get())
+        {
+            height = ModInfo.HEIGHT_RARE;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTungsten.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTungsten.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTungsten = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tungstenore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"tungstenore"),PlacedFeatureList.featureTungsten);
+        }
+        if(ConfigRegistryList.registerTurquoise.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTurquoise.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTurquoise.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureTurquoise = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"turquoiseore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"turquoiseore"),PlacedFeatureList.featureTurquoise);
+        }
+        if(ConfigRegistryList.registerUnobtainium.get())
+        {
+            height = ModInfo.HEIGHT_RARE;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreUnobtainium.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreUnobtainium.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureUnobtainium = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"unobtainiumore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"unobtainiumore"),PlacedFeatureList.featureUnobtainium);
+        }
+        if(ConfigRegistryList.registerUranium.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreUranium.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreUranium.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureUranium = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"uraniumore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"uraniumore"),PlacedFeatureList.featureUranium);
+        }
+        if(ConfigRegistryList.registerVanadium.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVanadium.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreVanadium.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureVanadium = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"vanadiumore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"vanadiumore"),PlacedFeatureList.featureVanadium);
+        }
+        if(ConfigRegistryList.registerVulcanite.get())
+        {
+            height = ModInfo.HEIGHT_NETHER;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVulcanite.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreVulcanite.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureVulcanite = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"vulcaniteore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"vulcaniteore"),PlacedFeatureList.featureVulcanite);
+        }
+        if(ConfigRegistryList.registerVyroxeres.get())
+        {
+            height = ModInfo.HEIGHT_NETHER;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVyroxeres.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreVyroxeres.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureVyroxeres = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"vyroxeresore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"vyroxeresore"),PlacedFeatureList.featureVyroxeres);
+        }
+        if(ConfigRegistryList.registerYellorite.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreYellorite.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreYellorite.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureYellorite = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"yelloriteore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"yelloriteore"),PlacedFeatureList.featureYellorite);
+        }
+        if(ConfigRegistryList.registerZinc.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreZinc.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreZinc.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureZinc = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"zincore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"zincore"),PlacedFeatureList.featureZinc);
+        }
+        if(ConfigRegistryList.registerZirconium.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreZirconium.defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreZirconium.defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
+            PlacedFeatureList.featureZirconium = new PlacedFeature(Holder.direct(feature),List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM,VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"zirconiumore"),feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE,new ResourceLocation(ModInfo.MOD_ID,"zirconiumore"),PlacedFeatureList.featureZirconium);
         }
     }
 }

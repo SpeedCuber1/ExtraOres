@@ -32,17 +32,19 @@ public class InitBlocks
         {
             BlockList.blockOreAgate = new BlockEXOre(Material.STONE,1.5F,1.5F,"agateore");
             BlockList.blockAgate = new BlockEXOre(Material.METAL,1.5F,1.5F,"agateblock");
-            //BlockList.blockDeepslateOreAgate = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateagateore");
+            BlockList.blockDeepslateOreAgate = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateagateore");
             blockRegistry(BlockList.blockOreAgate,event);
-            //blockRegistry(BlockList.blockDeepslateOreAgate,event);
+            blockRegistry(BlockList.blockDeepslateOreAgate,event);
             blockRegistry(BlockList.blockAgate,event);
         }
         if (ConfigRegistryList.registerAldourite.get())
         {
             BlockList.blockOreAldourite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "aldouriteore");
-            BlockList.blockAldourite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "aldouriteblock");
+            BlockList.blockAldourite = new BlockEXOre(Material.METAL, 1.5F, 1.5F,"aldouriteblock");
+            BlockList.blockDeepslateOreAldourite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatealdouriteore");
             blockRegistry(BlockList.blockOreAldourite, event);
             blockRegistry(BlockList.blockAldourite, event);
+            blockRegistry(BlockList.blockDeepslateOreAldourite,event);
         }
         if (ConfigRegistryList.registerAluminum.get())
         {
@@ -718,10 +720,10 @@ public class InitBlocks
         {
             ItemList.itemGemAgate = new ItemEXOre(EXORES,"agate");
             ItemBlockList.itemBlockOreAgate = new ItemBlockExOre(BlockList.blockOreAgate,EXORES);
-            //ItemBlockList.itemBlockDeepslateOreAgate = new ItemBlockExOre(BlockList.blockDeepslateOreAgate,EXORES);
+            ItemBlockList.itemBlockDeepslateOreAgate = new ItemBlockExOre(BlockList.blockDeepslateOreAgate,EXORES);
             ItemBlockList.itemBlockAgate = new ItemBlockExOre(BlockList.blockAgate,EXORES);
             itemRegistry(ItemBlockList.itemBlockOreAgate,event);
-            //itemRegistry(ItemBlockList.itemBlockDeepslateOreAgate,event);
+            itemRegistry(ItemBlockList.itemBlockDeepslateOreAgate,event);
             itemRegistry(ItemBlockList.itemBlockAgate,event);
             itemRegistry(ItemList.itemGemAgate,event);
         }
@@ -734,6 +736,7 @@ public class InitBlocks
             ItemList.itemDirtyDustAldourite = new ItemEXOre(EXORES,"aldouritedirtydust");
             ItemList.itemRawAldourite = new ItemEXOre(EXORES,"rawaldourite");
             ItemBlockList.itemBlockOreAldourite = new ItemBlockExOre(BlockList.blockOreAldourite, EXORES);
+            ItemBlockList.itemBlockDeepslateOreAldourite = new ItemBlockExOre(BlockList.blockDeepslateOreAldourite,EXORES);
             ItemBlockList.itemBlockAldourite = new ItemBlockExOre(BlockList.blockAldourite, EXORES);
             itemRegistry(ItemList.itemIngotAldourite, event);
             itemRegistry(ItemList.itemDustAldourite, event);
@@ -742,6 +745,7 @@ public class InitBlocks
             itemRegistry(ItemList.itemDirtyDustAldourite,event);
             itemRegistry(ItemList.itemRawAldourite,event);
             itemRegistry(ItemBlockList.itemBlockOreAldourite, event);
+            itemRegistry(ItemBlockList.itemBlockDeepslateOreAldourite,event);
             itemRegistry(ItemBlockList.itemBlockAldourite, event);
         }
         if (ConfigRegistryList.registerAluminum.get())
