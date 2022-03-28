@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extraores:kalendriteore"
+    "extraores:kalendriteore",
+    "extraores:deepslatekalendriteore"
   ]
 }

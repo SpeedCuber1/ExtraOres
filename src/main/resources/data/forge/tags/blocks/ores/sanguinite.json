@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extraores:sanguiniteore"
+    "extraores:sanguiniteore",
+    "extraores:deepslatesanguiniteore"
   ]
 }

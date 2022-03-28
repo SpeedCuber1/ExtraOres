@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extraores:spinelore"
+    "extraores:spinelore",
+    "extraores:deepslatespinelore"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extraores:sugiliteore"
+    "extraores:sugiliteore",
+    "extraores:deepslatesugiliteore"
   ]
 }

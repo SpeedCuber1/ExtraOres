@@ -121,7 +121,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreYellorium).add(BlockList.blockOreYellorite);
         tag(BlockTagList.oreZinc).add(BlockList.blockOreZinc);
         tag(BlockTagList.oreZirconium).add(BlockList.blockOreZirconium);
-        /*
+
         //Ore Deepslate
         tag(BlockTagList.oreAdamantine).add(BlockList.blockDeepslateOreAdamantine);
         tag(BlockTagList.oreAgate).add(BlockList.blockDeepslateOreAgate);
@@ -218,7 +218,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreYellorite).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTagList.oreYellorium).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTagList.oreZinc).add(BlockList.blockDeepslateOreZinc);
-        tag(BlockTagList.oreZirconium).add(BlockList.blockDeepslateOreZirconium);*/
+        tag(BlockTagList.oreZirconium).add(BlockList.blockDeepslateOreZirconium);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreAdamantine);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreAgate);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreAldourite);
@@ -611,7 +611,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreYellorite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreZinc);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreZirconium);
-        /*
+
         //Ore Deepslate
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAdamantine);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAgate);
@@ -708,7 +708,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreZinc);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreZirconium);*/
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreZirconium);
         //Blocks
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockAdamantine);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockAgate);
@@ -906,7 +906,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreYellorite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreZinc);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreZirconium);
-        /*
+
         //Ore Deepslate
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAdamantine);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAgate);
@@ -1003,7 +1003,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreZinc);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreZirconium);*/
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreZirconium);
         //Blocks
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockAdamantine);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockAgate);

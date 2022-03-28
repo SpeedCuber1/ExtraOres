@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extraores:iridiumore"
+    "extraores:iridiumore",
+    "extraores:deepslateiridiumore"
   ]
 }

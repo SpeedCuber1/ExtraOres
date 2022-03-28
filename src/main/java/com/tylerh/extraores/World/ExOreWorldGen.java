@@ -444,7 +444,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAgate.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAgate.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAgate.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAgate = new PlacedFeature(Holder.direct(feature),List.of(
@@ -461,7 +461,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAldourite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAldourite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAldourite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAldourite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -478,7 +478,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAluminum.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAluminum.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAluminum.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAluminum = new PlacedFeature(Holder.direct(feature),List.of(
@@ -495,7 +495,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAmericium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAmericium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAmericium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAmericium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -512,7 +512,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAmethyst.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAmethyst.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAmethyst.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAmethyst = new PlacedFeature(Holder.direct(feature),List.of(
@@ -529,7 +529,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAmetrine.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAmetrine.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAmetrine.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAmetrine = new PlacedFeature(Holder.direct(feature),List.of(
@@ -546,7 +546,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAmordrine.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAmordrine.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAmordrine.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAmordrine = new PlacedFeature(Holder.direct(feature),List.of(
@@ -563,7 +563,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAngmallen.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAngmallen.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAngmallen.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAngmallen = new PlacedFeature(Holder.direct(feature),List.of(
@@ -580,7 +580,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAquamarine.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAquamarine.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAquamarine.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAquamarine = new PlacedFeature(Holder.direct(feature),List.of(
@@ -597,7 +597,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAstralSilver.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAstralSilver.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAstralSilver.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAstralSilver = new PlacedFeature(Holder.direct(feature),List.of(
@@ -614,7 +614,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAtlarus.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreAtlarus.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreAtlarus.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureAtlarus = new PlacedFeature(Holder.direct(feature),List.of(
@@ -631,7 +631,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreBismuth.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreBismuth.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreBismuth.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureBismuth = new PlacedFeature(Holder.direct(feature),List.of(
@@ -648,7 +648,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreBlackSteel.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreBlackSteel.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreBlackSteel.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureBlackSteel = new PlacedFeature(Holder.direct(feature),List.of(
@@ -665,7 +665,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCadmium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCadmium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreCadmium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureCadmium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -682,7 +682,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCarmot.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCarmot.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreCarmot.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureCarmot = new PlacedFeature(Holder.direct(feature),List.of(
@@ -699,7 +699,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCelenegil.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCelenegil.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreCelenegil.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureCelenegil = new PlacedFeature(Holder.direct(feature),List.of(
@@ -716,7 +716,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCeruclase.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCeruclase.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreCeruclase.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureCeruclase = new PlacedFeature(Holder.direct(feature),List.of(
@@ -733,7 +733,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreChromium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreChromium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreChromium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureChromium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -750,7 +750,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreChrysocolla.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreChrysocolla.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreChrysocolla.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureChrysocolla = new PlacedFeature(Holder.direct(feature),List.of(
@@ -767,7 +767,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCitrine.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCitrine.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreCitrine.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureCitrine = new PlacedFeature(Holder.direct(feature),List.of(
@@ -784,7 +784,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCobalt.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCobalt.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreCobalt.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureCobalt = new PlacedFeature(Holder.direct(feature),List.of(
@@ -801,7 +801,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCopper.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreCopper.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreCopper.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureCopper = new PlacedFeature(Holder.direct(feature),List.of(
@@ -818,7 +818,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreDeepIron.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreDeepIron.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreDeepIron.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureDeepIron = new PlacedFeature(Holder.direct(feature),List.of(
@@ -835,7 +835,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreDesichalkos.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreDesichalkos.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreDesichalkos.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureDesichalkos = new PlacedFeature(Holder.direct(feature),List.of(
@@ -852,7 +852,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreEximite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreEximite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreEximite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureEximite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -869,7 +869,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreGallium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreGallium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreGallium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureGallium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -886,7 +886,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreGarnet.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreGarnet.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreGarnet.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureGarnet = new PlacedFeature(Holder.direct(feature),List.of(
@@ -903,7 +903,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreHaderoth.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreHaderoth.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreHaderoth.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureHaderoth = new PlacedFeature(Holder.direct(feature),List.of(
@@ -920,7 +920,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreHepatizon.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreHepatizon.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreHepatizon.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureHepatizon = new PlacedFeature(Holder.direct(feature),List.of(
@@ -937,7 +937,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreIgnatius.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIgnatius.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreIgnatius.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureIgnatius = new PlacedFeature(Holder.direct(feature),List.of(
@@ -954,7 +954,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreIndium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIndium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreIndium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureIndium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -971,7 +971,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreInfuscolium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreInfuscolium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreInfuscolium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureInfuscolium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -988,7 +988,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreInolashite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreInolashite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreInolashite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureInolashite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1005,7 +1005,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreIolite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIolite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreIolite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureIolite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1022,7 +1022,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreIridium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreIridium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreIridium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureIridium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1039,7 +1039,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreJade.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreJade.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreJade.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureJade = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1056,7 +1056,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreJasper.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreJasper.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreJasper.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureJasper = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1073,7 +1073,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreKalendrite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreKalendrite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreKalendrite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureKalendrite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1090,7 +1090,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreKyanite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreKyanite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreKyanite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureKyanite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1107,7 +1107,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreLead.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreLead.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreLead.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureLead = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1124,7 +1124,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreLemurite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreLemurite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreLemurite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureLemurite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1141,7 +1141,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMalachite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMalachite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreMalachite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureMalachite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1158,7 +1158,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreManganese.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreManganese.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreManganese.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureManganese = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1175,7 +1175,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMeutoite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMeutoite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreMeutoite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureMeutoite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1192,7 +1192,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMidasium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMidasium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreMidasium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureMidasium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1209,7 +1209,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMithril.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMithril.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreMithril.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureMithril = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1226,7 +1226,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMolybdenum.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreMolybdenum.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreMolybdenum.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureMolybdenum = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1243,7 +1243,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreNeodymium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNeodymium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreNeodymium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureNeodymium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1260,7 +1260,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreNeptunium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNeptunium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreNeptunium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureNeptunium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1277,7 +1277,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreNickel.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNickel.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreNickel.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureNickel = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1294,7 +1294,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreNiobium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreNiobium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreNiobium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureNiobium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1311,7 +1311,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOnyx.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOnyx.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreOnyx.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureOnyx = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1328,7 +1328,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOpal.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOpal.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreOpal.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureOpal = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1345,7 +1345,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOrichalcum.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOrichalcum.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreOrichalcum.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureOrichalcum = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1362,7 +1362,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOsmium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOsmium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreOsmium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureOsmium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1379,7 +1379,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOureclase.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreOureclase.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreOureclase.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureOureclase = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1396,7 +1396,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePalladium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePalladium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOrePalladium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featurePalladium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1413,7 +1413,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePeridot.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePeridot.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOrePeridot.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featurePeridot = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1430,7 +1430,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePhoenixite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePhoenixite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOrePhoenixite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featurePhoenixite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1447,7 +1447,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePlatinum.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePlatinum.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOrePlatinum.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featurePlatinum = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1464,7 +1464,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePlutonium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePlutonium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOrePlutonium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featurePlutonium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1481,7 +1481,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePolonium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePolonium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOrePolonium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featurePolonium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1498,7 +1498,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePromethium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOrePromethium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOrePromethium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featurePromethium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1515,7 +1515,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreQuartz.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreQuartz.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreQuartz.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureQuartz = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1532,7 +1532,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRhenium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRhenium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreRhenium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureRhenium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1549,7 +1549,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRhodium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRhodium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreRhodium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureRhodium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1566,7 +1566,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRuthenium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRuthenium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreRuthenium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureRuthenium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1583,7 +1583,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRubracium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRubracium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreRubracium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureRubracium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1600,7 +1600,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRuby.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreRuby.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreRuby.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureRuby = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1617,7 +1617,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSanguinite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSanguinite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreSanguinite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureSanguinite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1634,7 +1634,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSapphire.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSapphire.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreSapphire.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureSapphire = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1651,7 +1651,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreShadowIron.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreShadowIron.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreShadowIron.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureShadowIron = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1668,7 +1668,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSilver.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSilver.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreSilver.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureSilver = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1685,7 +1685,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSpinel.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSpinel.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreSpinel.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureSpinel = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1702,7 +1702,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSugilite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreSugilite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreSugilite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureSugilite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1719,7 +1719,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTantalum.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTantalum.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTantalum.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTantalum = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1736,7 +1736,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTanzanite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTanzanite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTanzanite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTanzanite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1753,7 +1753,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTartarite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTartarite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTartarite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTartarite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1770,7 +1770,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTechnetium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTechnetium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTechnetium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTechnetium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1787,7 +1787,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreThallium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreThallium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreThallium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureThallium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1804,7 +1804,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTin.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTin.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTin.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTin = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1821,7 +1821,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTitanium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTitanium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTitanium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTitanium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1838,7 +1838,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTopaz.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTopaz.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTopaz.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTopaz = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1855,7 +1855,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTourmaline.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTourmaline.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTourmaline.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTourmaline = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1872,7 +1872,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTungsten.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTungsten.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTungsten.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTungsten = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1889,7 +1889,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTurquoise.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreTurquoise.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreTurquoise.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureTurquoise = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1906,7 +1906,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreUnobtainium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreUnobtainium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreUnobtainium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureUnobtainium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1923,7 +1923,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreUranium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreUranium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreUranium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureUranium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1940,7 +1940,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVanadium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreVanadium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreVanadium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureVanadium = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1957,7 +1957,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVulcanite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreVulcanite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreVulcanite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureVulcanite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1974,7 +1974,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVyroxeres.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreVyroxeres.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreVyroxeres.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureVyroxeres = new PlacedFeature(Holder.direct(feature),List.of(
@@ -1991,7 +1991,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreYellorite.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreYellorite.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreYellorite.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureYellorite = new PlacedFeature(Holder.direct(feature),List.of(
@@ -2008,7 +2008,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreZinc.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreZinc.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreZinc.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureZinc = new PlacedFeature(Holder.direct(feature),List.of(
@@ -2025,7 +2025,7 @@ public final class ExOreWorldGen
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreZirconium.defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockOreZirconium.defaultBlockState())
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,BlockList.blockDeepslateOreZirconium.defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE,new OreConfiguration(target,size));
             PlacedFeatureList.featureZirconium = new PlacedFeature(Holder.direct(feature),List.of(

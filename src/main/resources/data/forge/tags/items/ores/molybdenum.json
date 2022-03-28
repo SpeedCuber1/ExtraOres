@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extraores:molybdenumore"
+    "extraores:molybdenumore",
+    "extraores:deepslatemolybdenumore"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extraores:zirconiumore"
+    "extraores:zirconiumore",
+    "extraores:deepslatezirconiumore"
   ]
 }

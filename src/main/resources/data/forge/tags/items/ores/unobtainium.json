@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extraores:unobtainiumore"
+    "extraores:unobtainiumore",
+    "extraores:deepslateunobtainiumore"
   ]
 }
