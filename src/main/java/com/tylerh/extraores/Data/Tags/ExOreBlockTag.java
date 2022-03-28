@@ -125,7 +125,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         //Ore Deepslate
         tag(BlockTagList.oreAdamantine).add(BlockList.blockDeepslateOreAdamantine);
         tag(BlockTagList.oreAgate).add(BlockList.blockDeepslateOreAgate);
-        tag(BlockTagList.oreAldourite).add(BlockList.blockDeepslateOreAldourite);
         tag(BlockTagList.oreAluminum).add(BlockList.blockDeepslateOreAluminum);
         tag(BlockTagList.oreAmericium).add(BlockList.blockDeepslateOreAmericium);
         tag(BlockTagList.oreAmethyst).add(BlockList.blockDeepslateOreAmethyst);
@@ -140,7 +139,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreCadmium).add(BlockList.blockDeepslateOreCadmium);
         tag(BlockTagList.oreCarmot).add(BlockList.blockDeepslateOreCarmot);
         tag(BlockTagList.oreCelenegil).add(BlockList.blockDeepslateOreCelenegil);
-        tag(BlockTagList.oreCeruclase).add(BlockList.blockDeepslateOreCeruclase);
         tag(BlockTagList.oreChromium).add(BlockList.blockDeepslateOreChromium);
         tag(BlockTagList.oreChrysocolla).add(BlockList.blockDeepslateOreChrysocolla);
         tag(BlockTagList.oreCitrine).add(BlockList.blockDeepslateOreCitrine);
@@ -153,7 +151,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreGarnet).add(BlockList.blockDeepslateOreGarnet);
         tag(BlockTagList.oreHaderoth).add(BlockList.blockDeepslateOreHaderoth);
         tag(BlockTagList.oreHepatizon).add(BlockList.blockDeepslateOreHepatizon);
-        tag(BlockTagList.oreIgnatius).add(BlockList.blockDeepslateOreIgnatius);
         tag(BlockTagList.oreIndium).add(BlockList.blockDeepslateOreIndium);
         tag(BlockTagList.oreInfuscolium).add(BlockList.blockDeepslateOreInfuscolium);
         tag(BlockTagList.oreInolashite).add(BlockList.blockDeepslateOreInolashite);
@@ -161,14 +158,11 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreIridium).add(BlockList.blockDeepslateOreIridium);
         tag(BlockTagList.oreJade).add(BlockList.blockDeepslateOreJade);
         tag(BlockTagList.oreJasper).add(BlockList.blockDeepslateOreJasper);
-        tag(BlockTagList.oreKalendrite).add(BlockList.blockDeepslateOreKalendrite);
         tag(BlockTagList.oreKyanite).add(BlockList.blockDeepslateOreKyanite);
         tag(BlockTagList.oreLead).add(BlockList.blockDeepslateOreLead);
-        tag(BlockTagList.oreLemurite).add(BlockList.blockDeepslateOreLemurite);
         tag(BlockTagList.oreMalachite).add(BlockList.blockDeepslateOreMalachite);
         tag(BlockTagList.oreManganese).add(BlockList.blockDeepslateOreManganese);
         tag(BlockTagList.oreMeutoite).add(BlockList.blockDeepslateOreMeutoite);
-        tag(BlockTagList.oreMidasium).add(BlockList.blockDeepslateOreMidasium);
         tag(BlockTagList.oreMithril).add(BlockList.blockDeepslateOreMithril);
         tag(BlockTagList.oreMolybdenum).add(BlockList.blockDeepslateOreMolybdenum);
         tag(BlockTagList.oreNeodymium).add(BlockList.blockDeepslateOreNeodymium);
@@ -193,9 +187,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreRubracium).add(BlockList.blockDeepslateOreRubracium);
         tag(BlockTagList.oreRuby).add(BlockList.blockDeepslateOreRuby);
         tag(BlockTagList.oreRuthenium).add(BlockList.blockDeepslateOreRuthenium);
-        tag(BlockTagList.oreSanguinite).add(BlockList.blockDeepslateOreSanguinite);
         tag(BlockTagList.oreSapphire).add(BlockList.blockDeepslateOreSapphire);
-        tag(BlockTagList.oreShadowIron).add(BlockList.blockDeepslateOreShadowIron);
         tag(BlockTagList.oreSilver).add(BlockList.blockDeepslateOreSilver);
         tag(BlockTagList.oreSpinel).add(BlockList.blockDeepslateOreSpinel);
         tag(BlockTagList.oreSugilite).add(BlockList.blockDeepslateOreSugilite);
@@ -213,8 +205,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreUnobtainium).add(BlockList.blockDeepslateOreUnobtainium);
         tag(BlockTagList.oreUranium).add(BlockList.blockDeepslateOreUranium);
         tag(BlockTagList.oreVanadium).add(BlockList.blockDeepslateOreVanadium);
-        tag(BlockTagList.oreVulcanite).add(BlockList.blockDeepslateOreVulcanite);
-        tag(BlockTagList.oreVyroxeres).add(BlockList.blockDeepslateOreVyroxeres);
         tag(BlockTagList.oreYellorite).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTagList.oreYellorium).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTagList.oreZinc).add(BlockList.blockDeepslateOreZinc);
@@ -615,7 +605,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         //Ore Deepslate
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAdamantine);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAgate);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAldourite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAluminum);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAmericium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAmethyst);
@@ -630,7 +619,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCadmium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCarmot);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCelenegil);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCeruclase);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreChromium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreChrysocolla);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCitrine);
@@ -643,7 +631,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreGarnet);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreHaderoth);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreHepatizon);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreIgnatius);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreIndium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreInfuscolium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreInolashite);
@@ -651,14 +638,11 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreIridium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreJade);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreJasper);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreKalendrite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreKyanite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreLead);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreLemurite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreMalachite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreManganese);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreMeutoite);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreMidasium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreMithril);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreMolybdenum);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreNeodymium);
@@ -683,9 +667,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreRubracium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreRuby);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreRuthenium);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreSanguinite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreSapphire);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreShadowIron);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreSilver);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreSpinel);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreSugilite);
@@ -703,8 +685,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreUnobtainium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreUranium);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreVanadium);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreVulcanite);
-        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreVyroxeres);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreZinc);
@@ -910,7 +890,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         //Ore Deepslate
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAdamantine);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAgate);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAldourite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAluminum);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAmericium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAmethyst);
@@ -925,7 +904,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCadmium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCarmot);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCelenegil);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCeruclase);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreChromium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreChrysocolla);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCitrine);
@@ -938,7 +916,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreGarnet);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreHaderoth);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreHepatizon);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreIgnatius);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreIndium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreInfuscolium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreInolashite);
@@ -946,14 +923,11 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreIridium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreJade);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreJasper);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreKalendrite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreKyanite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreLead);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreLemurite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreMalachite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreManganese);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreMeutoite);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreMidasium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreMithril);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreMolybdenum);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreNeodymium);
@@ -978,9 +952,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreRubracium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreRuby);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreRuthenium);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreSanguinite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreSapphire);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreShadowIron);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreSilver);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreSpinel);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreSugilite);
@@ -998,8 +970,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreUnobtainium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreUranium);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreVanadium);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreVulcanite);
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreVyroxeres);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreYellorite);
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreZinc);

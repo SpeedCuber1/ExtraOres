@@ -113,7 +113,6 @@ public class LootTables extends BaseLootTableProvider
         //Ore Deepslate
         lootTables.put(BlockList.blockDeepslateOreAdamantine,createFortune("deepslateadamantineore",BlockList.blockDeepslateOreAdamantine,ItemList.itemRawAdamantine));
         lootTables.put(BlockList.blockDeepslateOreAgate,createFortune("deepslateagateore",BlockList.blockDeepslateOreAgate, ItemList.itemGemAgate));
-        lootTables.put(BlockList.blockDeepslateOreAldourite,createFortune("deepslatealdouriteore",BlockList.blockDeepslateOreAldourite,ItemList.itemRawAldourite));
         lootTables.put(BlockList.blockDeepslateOreAluminum,createFortune("deepslatealuminumore",BlockList.blockDeepslateOreAluminum,ItemList.itemRawAluminum));
         lootTables.put(BlockList.blockDeepslateOreAmericium,createFortune("deepslateamericiumore",BlockList.blockDeepslateOreAmericium,ItemList.itemRawAmericium));
         lootTables.put(BlockList.blockDeepslateOreAmethyst,createFortune("deepslateamethystore",BlockList.blockDeepslateOreAmethyst,ItemList.itemGemAmethyst));
@@ -128,7 +127,6 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreCadmium,createFortune("deepslatecadmiumore",BlockList.blockDeepslateOreCadmium,ItemList.itemRawCadmium));
         lootTables.put(BlockList.blockDeepslateOreCarmot,createFortune("deepslatecarmotore",BlockList.blockDeepslateOreCarmot,ItemList.itemRawCarmot));
         lootTables.put(BlockList.blockDeepslateOreCelenegil,createFortune("deepslatecelenegilore",BlockList.blockDeepslateOreCelenegil,ItemList.itemRawCelenegil));
-        lootTables.put(BlockList.blockDeepslateOreCeruclase,createFortune("deepslateceruclaseore",BlockList.blockDeepslateOreCeruclase,ItemList.itemRawCeruclase));
         lootTables.put(BlockList.blockDeepslateOreChromium,createFortune("deepslatechromiumore",BlockList.blockDeepslateOreChromium,ItemList.itemRawChromium));
         lootTables.put(BlockList.blockDeepslateOreChrysocolla,createFortune("deepslatechrysocollaore",BlockList.blockDeepslateOreChrysocolla,ItemList.itemGemChrysocolla));
         lootTables.put(BlockList.blockDeepslateOreCitrine,createFortune("deepslatecitrineore",BlockList.blockDeepslateOreCitrine,ItemList.itemGemCitrine));
@@ -141,7 +139,6 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreGarnet,createFortune("deepslategarnetore",BlockList.blockDeepslateOreGarnet,ItemList.itemGemGarnet));
         lootTables.put(BlockList.blockDeepslateOreHaderoth,createFortune("deepslatehaderothore",BlockList.blockDeepslateOreHaderoth,ItemList.itemRawHaderoth));
         lootTables.put(BlockList.blockDeepslateOreHepatizon,createFortune("deepslatehepatizonore",BlockList.blockDeepslateOreHepatizon,ItemList.itemRawHepatizon));
-        lootTables.put(BlockList.blockDeepslateOreIgnatius,createFortune("deepslateignatiusore",BlockList.blockDeepslateOreIgnatius,ItemList.itemRawIgnatius));
         lootTables.put(BlockList.blockDeepslateOreIndium,createFortune("deepslateindiumore",BlockList.blockDeepslateOreIndium,ItemList.itemRawIndium));
         lootTables.put(BlockList.blockDeepslateOreInfuscolium,createFortune("deepslateinfuscoliumore",BlockList.blockDeepslateOreInfuscolium,ItemList.itemRawInfuscolium));
         lootTables.put(BlockList.blockDeepslateOreInolashite,createFortune("deepslateinolashiteore",BlockList.blockDeepslateOreInolashite,ItemList.itemRawInolashite));
@@ -149,14 +146,11 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreIridium,createFortune("deepslateiridiumore",BlockList.blockDeepslateOreIridium,ItemList.itemRawIridium));
         lootTables.put(BlockList.blockDeepslateOreJade,createFortune("deepslatejadeore",BlockList.blockDeepslateOreJade,ItemList.itemGemJade));
         lootTables.put(BlockList.blockDeepslateOreJasper,createFortune("deepslatejasperore",BlockList.blockDeepslateOreJasper,ItemList.itemGemJasper));
-        lootTables.put(BlockList.blockDeepslateOreKalendrite,createFortune("deepslatekalendriteore",BlockList.blockDeepslateOreKalendrite,ItemList.itemRawKalendrite));
         lootTables.put(BlockList.blockDeepslateOreKyanite,createFortune("deepslatekyaniteore",BlockList.blockDeepslateOreKyanite,ItemList.itemGemKyanite));
         lootTables.put(BlockList.blockDeepslateOreLead,createFortune("deepslateleadore",BlockList.blockDeepslateOreLead,ItemList.itemRawLead));
-        lootTables.put(BlockList.blockDeepslateOreLemurite,createFortune("deepslatelemuriteore",BlockList.blockDeepslateOreLemurite,ItemList.itemRawLemurite));
         lootTables.put(BlockList.blockDeepslateOreMalachite,createFortune("deepslatemalachiteore",BlockList.blockDeepslateOreMalachite,ItemList.itemGemMalachite));
         lootTables.put(BlockList.blockDeepslateOreManganese,createFortune("deepslatemanganeseore",BlockList.blockDeepslateOreManganese,ItemList.itemRawManganese));
         lootTables.put(BlockList.blockDeepslateOreMeutoite,createFortune("deepslatemeutoiteore",BlockList.blockDeepslateOreMeutoite,ItemList.itemRawMeutoite));
-        lootTables.put(BlockList.blockDeepslateOreMidasium,createFortune("deepslatemidasiumore",BlockList.blockDeepslateOreMidasium,ItemList.itemRawMidasium));
         lootTables.put(BlockList.blockDeepslateOreMithril,createFortune("deepslatemithrilore",BlockList.blockDeepslateOreMithril,ItemList.itemRawMithril));
         lootTables.put(BlockList.blockDeepslateOreMolybdenum,createFortune("deepslatemolybdenumore",BlockList.blockDeepslateOreMolybdenum,ItemList.itemRawMolybdenum));
         lootTables.put(BlockList.blockDeepslateOreNeodymium,createFortune("deepslateneodymiumore",BlockList.blockDeepslateOreNeodymium,ItemList.itemRawNeodymium));
@@ -181,9 +175,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreRubracium,createFortune("deepslaterubraciumore",BlockList.blockDeepslateOreRubracium,ItemList.itemRawRubracium));
         lootTables.put(BlockList.blockDeepslateOreRuby,createFortune("deepslaterubyore",BlockList.blockDeepslateOreRuby,ItemList.itemGemRuby));
         lootTables.put(BlockList.blockDeepslateOreRuthenium,createFortune("deepslaterutheniumore",BlockList.blockDeepslateOreRuthenium,ItemList.itemRawRuthenium));
-        lootTables.put(BlockList.blockDeepslateOreSanguinite,createFortune("deepslatesanguiniteore",BlockList.blockDeepslateOreSanguinite,ItemList.itemRawSanguinite));
         lootTables.put(BlockList.blockDeepslateOreSapphire,createFortune("deepslatesapphireore",BlockList.blockDeepslateOreSapphire,ItemList.itemGemSapphire));
-        lootTables.put(BlockList.blockDeepslateOreShadowIron,createFortune("deepslateshadowironore",BlockList.blockDeepslateOreShadowIron,ItemList.itemRawShadowIron));
         lootTables.put(BlockList.blockDeepslateOreSilver,createFortune("deepslatesilverore",BlockList.blockDeepslateOreSilver,ItemList.itemRawSilver));
         lootTables.put(BlockList.blockDeepslateOreSpinel,createFortune("deepslatespinelore",BlockList.blockDeepslateOreSpinel,ItemList.itemGemSpinel));
         lootTables.put(BlockList.blockDeepslateOreSugilite,createFortune("deepslatesugiliteore",BlockList.blockDeepslateOreSugilite,ItemList.itemGemSugilite));
@@ -201,8 +193,6 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreUnobtainium,createFortune("deepslateunobtainiumore",BlockList.blockDeepslateOreUnobtainium,ItemList.itemRawUnobtainium));
         lootTables.put(BlockList.blockDeepslateOreUranium,createFortune("deepslateuraniumore",BlockList.blockDeepslateOreUranium,ItemList.itemRawUranium));
         lootTables.put(BlockList.blockDeepslateOreVanadium,createFortune("deepslatevanadiumore",BlockList.blockDeepslateOreVanadium,ItemList.itemRawVanadium));
-        lootTables.put(BlockList.blockDeepslateOreVulcanite,createFortune("deepslatevulcaniteore",BlockList.blockDeepslateOreVulcanite,ItemList.itemRawVulcanite));
-        lootTables.put(BlockList.blockDeepslateOreVyroxeres,createFortune("deepslatevyroxeresore",BlockList.blockDeepslateOreVyroxeres,ItemList.itemRawVyroxeres));
         lootTables.put(BlockList.blockDeepslateOreYellorite,createFortune("deepslateyelloriteore",BlockList.blockDeepslateOreYellorite,ItemList.itemRawYellorite));
         lootTables.put(BlockList.blockDeepslateOreZinc,createFortune("deepslatezincore",BlockList.blockDeepslateOreZinc,ItemList.itemRawZinc));
         lootTables.put(BlockList.blockDeepslateOreZirconium,createFortune("deepslatezirconiumore",BlockList.blockDeepslateOreZirconium,ItemList.itemRawZirconium));

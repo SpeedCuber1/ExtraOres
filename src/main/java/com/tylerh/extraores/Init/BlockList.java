@@ -103,7 +103,6 @@ public class BlockList
     //Ore Deepslate
     public static Block blockDeepslateOreAdamantine;
     public static Block blockDeepslateOreAgate;
-    public static Block blockDeepslateOreAldourite;
     public static Block blockDeepslateOreAluminum;
     public static Block blockDeepslateOreAmericium;
     public static Block blockDeepslateOreAmethyst;
@@ -118,7 +117,6 @@ public class BlockList
     public static Block blockDeepslateOreCadmium;
     public static Block blockDeepslateOreCarmot;
     public static Block blockDeepslateOreCelenegil;
-    public static Block blockDeepslateOreCeruclase;
     public static Block blockDeepslateOreChromium;
     public static Block blockDeepslateOreChrysocolla;
     public static Block blockDeepslateOreCitrine;
@@ -131,7 +129,6 @@ public class BlockList
     public static Block blockDeepslateOreGarnet;
     public static Block blockDeepslateOreHaderoth;
     public static Block blockDeepslateOreHepatizon;
-    public static Block blockDeepslateOreIgnatius;
     public static Block blockDeepslateOreIndium;
     public static Block blockDeepslateOreInfuscolium;
     public static Block blockDeepslateOreInolashite;
@@ -139,14 +136,11 @@ public class BlockList
     public static Block blockDeepslateOreIridium;
     public static Block blockDeepslateOreJade;
     public static Block blockDeepslateOreJasper;
-    public static Block blockDeepslateOreKalendrite;
     public static Block blockDeepslateOreKyanite;
     public static Block blockDeepslateOreLead;
-    public static Block blockDeepslateOreLemurite;
     public static Block blockDeepslateOreMalachite;
     public static Block blockDeepslateOreManganese;
     public static Block blockDeepslateOreMeutoite;
-    public static Block blockDeepslateOreMidasium;
     public static Block blockDeepslateOreMithril;
     public static Block blockDeepslateOreMolybdenum;
     public static Block blockDeepslateOreNeodymium;
@@ -171,9 +165,7 @@ public class BlockList
     public static Block blockDeepslateOreRuby;
     public static Block blockDeepslateOreRuthenium;
     public static Block blockDeepslateOreRubracium;
-    public static Block blockDeepslateOreSanguinite;
     public static Block blockDeepslateOreSapphire;
-    public static Block blockDeepslateOreShadowIron;
     public static Block blockDeepslateOreSilver;
     public static Block blockDeepslateOreSpinel;
     public static Block blockDeepslateOreSugilite;
@@ -191,8 +183,6 @@ public class BlockList
     public static Block blockDeepslateOreUnobtainium;
     public static Block blockDeepslateOreUranium;
     public static Block blockDeepslateOreVanadium;
-    public static Block blockDeepslateOreVulcanite;
-    public static Block blockDeepslateOreVyroxeres;
     public static Block blockDeepslateOreYellorite;
     public static Block blockDeepslateOreZinc;
     public static Block blockDeepslateOreZirconium;

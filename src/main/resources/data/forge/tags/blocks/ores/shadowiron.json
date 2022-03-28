@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "extraores:shadowironore",
-    "extraores:deepslateshadowironore"
+    "extraores:shadowironore"
   ]
 }

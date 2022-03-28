@@ -131,7 +131,6 @@ public class ExOreItemTag extends ItemTagsProvider
         //Ore Deepslate
         tag(ItemTagList.oreAdamantine).add(BlockList.blockDeepslateOreAdamantine.asItem());
         tag(ItemTagList.oreAgate).add(BlockList.blockDeepslateOreAgate.asItem());
-        tag(ItemTagList.oreAldourite).add(BlockList.blockDeepslateOreAldourite.asItem());
         tag(ItemTagList.oreAluminum).add(BlockList.blockDeepslateOreAluminum.asItem());
         tag(ItemTagList.oreAmericium).add(BlockList.blockDeepslateOreAmericium.asItem());
         tag(ItemTagList.oreAmethyst).add(BlockList.blockDeepslateOreAmethyst.asItem());
@@ -146,7 +145,6 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreCadmium).add(BlockList.blockDeepslateOreCadmium.asItem());
         tag(ItemTagList.oreCarmot).add(BlockList.blockDeepslateOreCarmot.asItem());
         tag(ItemTagList.oreCelenegil).add(BlockList.blockDeepslateOreCelenegil.asItem());
-        tag(ItemTagList.oreCeruclase).add(BlockList.blockDeepslateOreCeruclase.asItem());
         tag(ItemTagList.oreChromium).add(BlockList.blockDeepslateOreChromium.asItem());
         tag(ItemTagList.oreChrysocolla).add(BlockList.blockDeepslateOreChrysocolla.asItem());
         tag(ItemTagList.oreCitrine).add(BlockList.blockDeepslateOreCitrine.asItem());
@@ -159,7 +157,6 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreGarnet).add(BlockList.blockDeepslateOreGarnet.asItem());
         tag(ItemTagList.oreHaderoth).add(BlockList.blockDeepslateOreHaderoth.asItem());
         tag(ItemTagList.oreHepatizon).add(BlockList.blockDeepslateOreHepatizon.asItem());
-        tag(ItemTagList.oreIgnatius).add(BlockList.blockDeepslateOreIgnatius.asItem());
         tag(ItemTagList.oreIndium).add(BlockList.blockDeepslateOreIndium.asItem());
         tag(ItemTagList.oreInfuscolium).add(BlockList.blockDeepslateOreInfuscolium.asItem());
         tag(ItemTagList.oreInolashite).add(BlockList.blockDeepslateOreInolashite.asItem());
@@ -167,14 +164,11 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreIridium).add(BlockList.blockDeepslateOreIridium.asItem());
         tag(ItemTagList.oreJade).add(BlockList.blockDeepslateOreJade.asItem());
         tag(ItemTagList.oreJasper).add(BlockList.blockDeepslateOreJasper.asItem());
-        tag(ItemTagList.oreKalendrite).add(BlockList.blockDeepslateOreKalendrite.asItem());
         tag(ItemTagList.oreKyanite).add(BlockList.blockDeepslateOreKyanite.asItem());
         tag(ItemTagList.oreLead).add(BlockList.blockDeepslateOreLead.asItem());
-        tag(ItemTagList.oreLemurite).add(BlockList.blockDeepslateOreLemurite.asItem());
         tag(ItemTagList.oreMalachite).add(BlockList.blockDeepslateOreMalachite.asItem());
         tag(ItemTagList.oreManganese).add(BlockList.blockDeepslateOreManganese.asItem());
         tag(ItemTagList.oreMeutoite).add(BlockList.blockDeepslateOreMeutoite.asItem());
-        tag(ItemTagList.oreMidasium).add(BlockList.blockDeepslateOreMidasium.asItem());
         tag(ItemTagList.oreMithril).add(BlockList.blockDeepslateOreMithril.asItem());
         tag(ItemTagList.oreMolybdenum).add(BlockList.blockDeepslateOreMolybdenum.asItem());
         tag(ItemTagList.oreNeodymium).add(BlockList.blockDeepslateOreNeodymium.asItem());
@@ -199,9 +193,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreRubracium).add(BlockList.blockDeepslateOreRubracium.asItem());
         tag(ItemTagList.oreRuby).add(BlockList.blockDeepslateOreRuby.asItem());
         tag(ItemTagList.oreRuthenium).add(BlockList.blockDeepslateOreRuthenium.asItem());
-        tag(ItemTagList.oreSanguinite).add(BlockList.blockDeepslateOreSanguinite.asItem());
         tag(ItemTagList.oreSapphire).add(BlockList.blockDeepslateOreSapphire.asItem());
-        tag(ItemTagList.oreShadowIron).add(BlockList.blockDeepslateOreShadowIron.asItem());
         tag(ItemTagList.oreSilver).add(BlockList.blockDeepslateOreSilver.asItem());
         tag(ItemTagList.oreSpinel).add(BlockList.blockDeepslateOreSpinel.asItem());
         tag(ItemTagList.oreSugilite).add(BlockList.blockDeepslateOreSugilite.asItem());
@@ -219,8 +211,6 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreUnobtainium).add(BlockList.blockDeepslateOreUnobtainium.asItem());
         tag(ItemTagList.oreUranium).add(BlockList.blockDeepslateOreUranium.asItem());
         tag(ItemTagList.oreVanadium).add(BlockList.blockDeepslateOreVanadium.asItem());
-        tag(ItemTagList.oreVulcanite).add(BlockList.blockDeepslateOreVulcanite.asItem());
-        tag(ItemTagList.oreVyroxeres).add(BlockList.blockDeepslateOreVyroxeres.asItem());
         tag(ItemTagList.oreYellorite).add(BlockList.blockDeepslateOreYellorite.asItem());
         tag(ItemTagList.oreYellorium).add(BlockList.blockDeepslateOreYellorite.asItem());
         tag(ItemTagList.oreZinc).add(BlockList.blockDeepslateOreZinc.asItem());
