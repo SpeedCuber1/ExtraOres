@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/zirconium"
+    }
+  },
+  "output": {
+    "item": "extraores:zirconiumdust",
+    "count": 2
+  }
+}

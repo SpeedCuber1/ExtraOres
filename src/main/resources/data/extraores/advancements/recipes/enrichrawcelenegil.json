@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawcelenegil"
+    ]
+  },
+  "criteria": {
+    "enrichrawcelenegil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcelenegil"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawcelenegil"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawcelenegil",
+      "has_the_recipe"
+    ]
+  ]
+}

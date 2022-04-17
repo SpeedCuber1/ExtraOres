@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichunobtainiumdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichunobtainiumdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:unobtainiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichunobtainiumdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichunobtainiumdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

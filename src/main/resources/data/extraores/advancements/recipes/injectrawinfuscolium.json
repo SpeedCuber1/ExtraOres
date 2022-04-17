@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawinfuscolium"
+    ]
+  },
+  "criteria": {
+    "injectrawinfuscolium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:infuscoliumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawinfuscolium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawinfuscolium",
+      "has_the_recipe"
+    ]
+  ]
+}

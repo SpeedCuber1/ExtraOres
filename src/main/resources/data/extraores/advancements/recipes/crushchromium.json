@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushchromium"
+    ]
+  },
+  "criteria": {
+    "crushchromium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:chromiumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushchromium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushchromium",
+      "has_the_recipe"
+    ]
+  ]
+}

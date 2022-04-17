@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/deepiron"
+    "item": "extraores:deepirondust"
   },
   "result": "extraores:deepironingot",
   "experience": 0.75,

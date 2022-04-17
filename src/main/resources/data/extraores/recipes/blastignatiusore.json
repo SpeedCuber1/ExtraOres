@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/ignatius"
+    "item": "extraores:ignatiusore"
   },
   "result": "extraores:ignatiusingot",
   "experience": 0.75,

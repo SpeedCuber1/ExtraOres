@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/deepiron"
+    }
+  },
+  "output": {
+    "item": "extraores:deepirondust",
+    "count": 2
+  }
+}

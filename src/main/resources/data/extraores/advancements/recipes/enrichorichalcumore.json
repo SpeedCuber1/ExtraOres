@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichorichalcumore"
+    ]
+  },
+  "criteria": {
+    "enrichorichalcumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:orichalcumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichorichalcumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichorichalcumore",
+      "has_the_recipe"
+    ]
+  ]
+}

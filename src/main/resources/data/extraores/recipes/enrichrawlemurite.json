@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/lemurite"
+    }
+  },
+  "output": {
+    "item": "extraores:lemuritedust",
+    "count": 2
+  }
+}

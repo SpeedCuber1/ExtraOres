@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/rubracium"
+    "item": "extraores:rubraciumdust"
   },
   "result": "extraores:rubraciumingot",
   "experience": 0.75,

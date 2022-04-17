@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichvyroxeresdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichvyroxeresdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vyroxeresore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichvyroxeresdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichvyroxeresdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

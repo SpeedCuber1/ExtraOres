@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "extraores:raw/angmallen"
-  },
-  "result": "extraores:angmalleningot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/haderoth"
+    "item": "extraores:haderothdust"
   },
   "result": "extraores:haderothingot",
   "experience": 0.75,

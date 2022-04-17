@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawvyroxeres"
+    ]
+  },
+  "criteria": {
+    "purifyrawvyroxeres": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawvyroxeres"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawvyroxeres"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawvyroxeres",
+      "has_the_recipe"
+    ]
+  ]
+}

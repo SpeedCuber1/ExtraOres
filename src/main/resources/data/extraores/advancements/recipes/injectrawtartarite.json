@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawtartarite"
+    ]
+  },
+  "criteria": {
+    "injectrawtartarite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tartariteore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawtartarite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawtartarite",
+      "has_the_recipe"
+    ]
+  ]
+}

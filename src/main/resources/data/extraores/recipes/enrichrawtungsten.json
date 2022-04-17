@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/tungsten"
+    }
+  },
+  "output": {
+    "item": "extraores:tungstendust",
+    "count": 2
+  }
+}

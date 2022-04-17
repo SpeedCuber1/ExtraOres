@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "extraores:raw/celenegil"
-  },
-  "result": "extraores:celenegilingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

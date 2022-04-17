@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/kalendrite"
+    "item": "extraores:kalendriteore"
   },
   "result": "extraores:kalendriteingot",
   "experience": 0.75,

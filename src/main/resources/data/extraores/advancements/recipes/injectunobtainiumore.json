@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectunobtainiumore"
+    ]
+  },
+  "criteria": {
+    "injectunobtainiumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:unobtainiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectunobtainiumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectunobtainiumore",
+      "has_the_recipe"
+    ]
+  ]
+}

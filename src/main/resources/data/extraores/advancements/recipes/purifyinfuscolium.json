@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyinfuscolium"
+    ]
+  },
+  "criteria": {
+    "purifyinfuscolium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:infuscoliumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyinfuscolium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyinfuscolium",
+      "has_the_recipe"
+    ]
+  ]
+}

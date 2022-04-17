@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:purifying",
+  "itemInput": {
+    "ingredient": {
+      "tag": "extraores:raw/rhodium"
+    }
+  },
+  "chemicalInput": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "output": {
+    "item": "extraores:rhodiumclump",
+    "count": 3
+  }
+}

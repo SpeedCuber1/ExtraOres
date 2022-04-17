@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushamordrine"
+    ]
+  },
+  "criteria": {
+    "crushamordrine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:amordrineclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushamordrine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushamordrine",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawyellorite"
+    ]
+  },
+  "criteria": {
+    "enrichrawyellorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawyellorite"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawyellorite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawyellorite",
+      "has_the_recipe"
+    ]
+  ]
+}

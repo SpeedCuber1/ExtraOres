@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifytechnetium"
+    ]
+  },
+  "criteria": {
+    "purifytechnetium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:technetiumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifytechnetium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifytechnetium",
+      "has_the_recipe"
+    ]
+  ]
+}

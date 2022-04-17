@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/vulcanite"
+    "item": "extraores:vulcanitedust"
   },
   "result": "extraores:vulcaniteingot",
   "experience": 0.75,

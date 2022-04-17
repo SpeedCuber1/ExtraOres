@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/lemurite"
+    "item": "extraores:lemuritedust"
   },
   "result": "extraores:lemuriteingot",
   "experience": 0.75,

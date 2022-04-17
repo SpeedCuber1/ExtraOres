@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/indium"
+    "item": "extraores:indiumore"
   },
   "result": "extraores:indiumingot",
   "experience": 0.75,

@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/zinc"
+    }
+  },
+  "output": {
+    "item": "extraores:zincdust",
+    "count": 2
+  }
+}

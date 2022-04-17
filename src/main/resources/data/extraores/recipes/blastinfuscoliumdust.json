@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/infuscolium"
+    "item": "extraores:infuscoliumdust"
   },
   "result": "extraores:infuscoliumingot",
   "experience": 0.75,

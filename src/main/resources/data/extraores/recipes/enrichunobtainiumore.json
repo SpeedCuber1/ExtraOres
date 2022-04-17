@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/unobtainium"
+    }
+  },
+  "output": {
+    "item": "extraores:unobtainiumdust",
+    "count": 2
+  }
+}

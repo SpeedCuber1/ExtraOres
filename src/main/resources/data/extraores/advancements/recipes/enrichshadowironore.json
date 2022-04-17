@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichshadowironore"
+    ]
+  },
+  "criteria": {
+    "enrichshadowironore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:shadowironore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichshadowironore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichshadowironore",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/midasium"
+    "item": "extraores:midasiumdust"
   },
   "result": "extraores:midasiumingot",
   "experience": 0.75,

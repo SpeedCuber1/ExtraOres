@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichignatiusore"
+    ]
+  },
+  "criteria": {
+    "enrichignatiusore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ignatiusore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichignatiusore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichignatiusore",
+      "has_the_recipe"
+    ]
+  ]
+}

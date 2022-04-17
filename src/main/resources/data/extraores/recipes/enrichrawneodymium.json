@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/neodymium"
+    }
+  },
+  "output": {
+    "item": "extraores:neodymiumdust",
+    "count": 2
+  }
+}

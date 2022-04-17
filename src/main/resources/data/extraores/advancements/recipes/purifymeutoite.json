@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifymeutoite"
+    ]
+  },
+  "criteria": {
+    "purifymeutoite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:meutoiteshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifymeutoite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifymeutoite",
+      "has_the_recipe"
+    ]
+  ]
+}

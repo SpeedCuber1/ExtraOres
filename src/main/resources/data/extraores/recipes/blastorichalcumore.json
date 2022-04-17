@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/orichalcum"
+    "item": "extraores:orichalcumore"
   },
   "result": "extraores:orichalcumingot",
   "experience": 0.75,

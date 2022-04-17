@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawzirconium"
+    ]
+  },
+  "criteria": {
+    "enrichrawzirconium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawzirconium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawzirconium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawzirconium",
+      "has_the_recipe"
+    ]
+  ]
+}

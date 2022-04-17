@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/vyroxeres"
+    "item": "extraores:vyroxeresdust"
   },
   "result": "extraores:vyroxeresingot",
   "experience": 0.75,

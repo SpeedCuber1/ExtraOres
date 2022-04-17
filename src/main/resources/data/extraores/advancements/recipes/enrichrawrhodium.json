@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawrhodium"
+    ]
+  },
+  "criteria": {
+    "enrichrawrhodium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawrhodium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawrhodium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawrhodium",
+      "has_the_recipe"
+    ]
+  ]
+}

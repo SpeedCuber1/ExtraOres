@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushneodymium"
+    ]
+  },
+  "criteria": {
+    "crushneodymium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:neodymiumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushneodymium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushneodymium",
+      "has_the_recipe"
+    ]
+  ]
+}

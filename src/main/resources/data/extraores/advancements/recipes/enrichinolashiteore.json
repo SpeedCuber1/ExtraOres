@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichinolashiteore"
+    ]
+  },
+  "criteria": {
+    "enrichinolashiteore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:inolashiteore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichinolashiteore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichinolashiteore",
+      "has_the_recipe"
+    ]
+  ]
+}

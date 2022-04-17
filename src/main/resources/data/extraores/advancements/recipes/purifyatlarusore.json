@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyatlarusore"
+    ]
+  },
+  "criteria": {
+    "purifyatlarusore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:atlarusore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyatlarusore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyatlarusore",
+      "has_the_recipe"
+    ]
+  ]
+}

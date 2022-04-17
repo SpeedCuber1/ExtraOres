@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawmanganese"
+    ]
+  },
+  "criteria": {
+    "purifyrawmanganese": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawmanganese"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawmanganese"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawmanganese",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawhaderoth"
+    ]
+  },
+  "criteria": {
+    "enrichrawhaderoth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawhaderoth"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawhaderoth"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawhaderoth",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichyelloritedirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichyelloritedirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:yelloriteore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichyelloritedirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichyelloritedirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

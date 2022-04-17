@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifymidasium"
+    ]
+  },
+  "criteria": {
+    "purifymidasium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:midasiumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifymidasium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifymidasium",
+      "has_the_recipe"
+    ]
+  ]
+}

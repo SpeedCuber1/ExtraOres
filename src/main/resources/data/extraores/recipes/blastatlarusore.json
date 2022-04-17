@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/atlarus"
+    "item": "extraores:atlarusore"
   },
   "result": "extraores:atlarusingot",
   "experience": 0.75,

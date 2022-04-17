@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/vyroxeres"
+    }
+  },
+  "output": {
+    "item": "extraores:vyroxeresdust",
+    "count": 2
+  }
+}

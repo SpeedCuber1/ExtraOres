@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyeximite"
+    ]
+  },
+  "criteria": {
+    "purifyeximite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:eximiteshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyeximite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyeximite",
+      "has_the_recipe"
+    ]
+  ]
+}

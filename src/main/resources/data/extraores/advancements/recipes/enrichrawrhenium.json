@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawrhenium"
+    ]
+  },
+  "criteria": {
+    "enrichrawrhenium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawrhenium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawrhenium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawrhenium",
+      "has_the_recipe"
+    ]
+  ]
+}

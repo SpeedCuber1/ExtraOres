@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushmeutoite"
+    ]
+  },
+  "criteria": {
+    "crushmeutoite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:meutoiteclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushmeutoite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushmeutoite",
+      "has_the_recipe"
+    ]
+  ]
+}

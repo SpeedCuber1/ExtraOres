@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyneodymium"
+    ]
+  },
+  "criteria": {
+    "purifyneodymium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:neodymiumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyneodymium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyneodymium",
+      "has_the_recipe"
+    ]
+  ]
+}

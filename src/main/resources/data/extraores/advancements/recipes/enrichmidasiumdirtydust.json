@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichmidasiumdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichmidasiumdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:midasiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichmidasiumdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichmidasiumdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

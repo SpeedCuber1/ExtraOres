@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/chromium"
+    }
+  },
+  "output": {
+    "item": "extraores:chromiumdust",
+    "count": 2
+  }
+}

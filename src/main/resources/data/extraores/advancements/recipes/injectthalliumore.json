@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectthalliumore"
+    ]
+  },
+  "criteria": {
+    "injectthalliumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:thalliumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectthalliumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectthalliumore",
+      "has_the_recipe"
+    ]
+  ]
+}

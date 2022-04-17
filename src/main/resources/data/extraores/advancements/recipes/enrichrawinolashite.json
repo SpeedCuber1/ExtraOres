@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawinolashite"
+    ]
+  },
+  "criteria": {
+    "enrichrawinolashite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawinolashite"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawinolashite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawinolashite",
+      "has_the_recipe"
+    ]
+  ]
+}

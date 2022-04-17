@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/americium"
+    }
+  },
+  "output": {
+    "item": "extraores:americiumdust",
+    "count": 2
+  }
+}

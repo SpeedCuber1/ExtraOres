@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichlemuriteore"
+    ]
+  },
+  "criteria": {
+    "enrichlemuriteore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:lemuriteore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichlemuriteore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichlemuriteore",
+      "has_the_recipe"
+    ]
+  ]
+}

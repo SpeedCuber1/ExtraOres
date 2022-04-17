@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/vyroxeres"
+    }
+  },
+  "output": {
+    "item": "extraores:vyroxeresdust",
+    "count": 2
+  }
+}

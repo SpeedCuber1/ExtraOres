@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawniobium"
+    ]
+  },
+  "criteria": {
+    "injectrawniobium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:niobiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawniobium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawniobium",
+      "has_the_recipe"
+    ]
+  ]
+}

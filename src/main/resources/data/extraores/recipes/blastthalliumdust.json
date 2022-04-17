@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/thallium"
+    "item": "extraores:thalliumdust"
   },
   "result": "extraores:thalliumingot",
   "experience": 0.75,

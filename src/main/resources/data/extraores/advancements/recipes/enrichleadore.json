@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichleadore"
+    ]
+  },
+  "criteria": {
+    "enrichleadore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:leadore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichleadore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichleadore",
+      "has_the_recipe"
+    ]
+  ]
+}

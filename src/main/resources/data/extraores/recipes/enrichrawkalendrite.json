@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/kalendrite"
+    }
+  },
+  "output": {
+    "item": "extraores:kalendritedust",
+    "count": 2
+  }
+}

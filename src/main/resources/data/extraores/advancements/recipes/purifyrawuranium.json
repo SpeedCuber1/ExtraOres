@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawuranium"
+    ]
+  },
+  "criteria": {
+    "purifyrawuranium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawuranium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawuranium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawuranium",
+      "has_the_recipe"
+    ]
+  ]
+}

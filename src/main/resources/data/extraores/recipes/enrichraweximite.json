@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/eximite"
+    }
+  },
+  "output": {
+    "item": "extraores:eximitedust",
+    "count": 2
+  }
+}

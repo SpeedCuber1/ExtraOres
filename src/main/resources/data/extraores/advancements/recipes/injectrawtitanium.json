@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawtitanium"
+    ]
+  },
+  "criteria": {
+    "injectrawtitanium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:titaniumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawtitanium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawtitanium",
+      "has_the_recipe"
+    ]
+  ]
+}

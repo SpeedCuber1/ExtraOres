@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyadamantine"
+    ]
+  },
+  "criteria": {
+    "purifyadamantine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:adamantineshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyadamantine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyadamantine",
+      "has_the_recipe"
+    ]
+  ]
+}

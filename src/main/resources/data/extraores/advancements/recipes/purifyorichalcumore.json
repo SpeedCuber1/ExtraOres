@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyorichalcumore"
+    ]
+  },
+  "criteria": {
+    "purifyorichalcumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:orichalcumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyorichalcumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyorichalcumore",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/neptunium"
+    }
+  },
+  "output": {
+    "item": "extraores:neptuniumdust",
+    "count": 2
+  }
+}

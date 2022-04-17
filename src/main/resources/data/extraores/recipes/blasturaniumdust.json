@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/uranium"
+    "item": "extraores:uraniumdust"
   },
   "result": "extraores:uraniumingot",
   "experience": 0.75,

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crusheximite"
+    ]
+  },
+  "criteria": {
+    "crusheximite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:eximiteclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crusheximite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crusheximite",
+      "has_the_recipe"
+    ]
+  ]
+}

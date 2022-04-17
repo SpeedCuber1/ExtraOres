@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawpolonium"
+    ]
+  },
+  "criteria": {
+    "enrichrawpolonium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawpolonium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawpolonium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawpolonium",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/technetium"
+    }
+  },
+  "output": {
+    "item": "extraores:technetiumdust",
+    "count": 2
+  }
+}

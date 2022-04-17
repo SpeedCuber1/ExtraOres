@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "extraores:raw/shadowiron"
-  },
-  "result": "extraores:shadowironingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/meutoite"
+    }
+  },
+  "output": {
+    "item": "extraores:meutoitedust",
+    "count": 2
+  }
+}

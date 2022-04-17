@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/cadmium"
+    "item": "extraores:cadmiumore"
   },
   "result": "extraores:cadmiumingot",
   "experience": 0.75,

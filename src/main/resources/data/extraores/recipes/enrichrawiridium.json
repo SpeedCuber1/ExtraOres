@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/iridium"
+    }
+  },
+  "output": {
+    "item": "extraores:iridiumdust",
+    "count": 2
+  }
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/zinc"
+    "item": "extraores:zincore"
   },
   "result": "extraores:zincingot",
   "experience": 0.75,

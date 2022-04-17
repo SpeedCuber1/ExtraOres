@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichadamantinedirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichadamantinedirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:adamantineore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichadamantinedirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichadamantinedirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

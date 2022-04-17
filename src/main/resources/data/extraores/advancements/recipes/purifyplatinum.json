@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyplatinum"
+    ]
+  },
+  "criteria": {
+    "purifyplatinum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:platinumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyplatinum"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyplatinum",
+      "has_the_recipe"
+    ]
+  ]
+}

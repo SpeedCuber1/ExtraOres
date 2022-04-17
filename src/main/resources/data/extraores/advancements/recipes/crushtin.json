@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushtin"
+    ]
+  },
+  "criteria": {
+    "crushtin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tinclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushtin"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushtin",
+      "has_the_recipe"
+    ]
+  ]
+}

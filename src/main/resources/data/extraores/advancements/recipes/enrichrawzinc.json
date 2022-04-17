@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawzinc"
+    ]
+  },
+  "criteria": {
+    "enrichrawzinc": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawzinc"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawzinc"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawzinc",
+      "has_the_recipe"
+    ]
+  ]
+}

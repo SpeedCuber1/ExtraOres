@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawiridium"
+    ]
+  },
+  "criteria": {
+    "injectrawiridium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:iridiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawiridium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawiridium",
+      "has_the_recipe"
+    ]
+  ]
+}

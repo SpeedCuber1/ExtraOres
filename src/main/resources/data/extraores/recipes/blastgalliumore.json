@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/gallium"
+    "item": "extraores:galliumore"
   },
   "result": "extraores:galliumingot",
   "experience": 0.75,

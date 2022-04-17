@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/manganese"
+    "item": "extraores:manganeseore"
   },
   "result": "extraores:manganeseingot",
   "experience": 0.75,

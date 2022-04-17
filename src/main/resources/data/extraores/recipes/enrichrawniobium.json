@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/niobium"
+    }
+  },
+  "output": {
+    "item": "extraores:niobiumdust",
+    "count": 2
+  }
+}

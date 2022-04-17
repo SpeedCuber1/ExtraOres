@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/tantalum"
+    "item": "extraores:tantalumore"
   },
   "result": "extraores:tantalumingot",
   "experience": 0.75,

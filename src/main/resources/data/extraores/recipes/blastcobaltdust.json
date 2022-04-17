@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/cobalt"
+    "item": "extraores:cobaltdust"
   },
   "result": "extraores:cobaltingot",
   "experience": 0.75,

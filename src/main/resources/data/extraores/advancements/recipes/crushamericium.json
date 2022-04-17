@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushamericium"
+    ]
+  },
+  "criteria": {
+    "crushamericium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:americiumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushamericium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushamericium",
+      "has_the_recipe"
+    ]
+  ]
+}

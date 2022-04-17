@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/adamantine"
+    "item": "extraores:adamantineore"
   },
   "result": "extraores:adamantineingot",
   "experience": 0.75,

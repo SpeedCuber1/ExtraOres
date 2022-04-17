@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/tin"
+    }
+  },
+  "output": {
+    "item": "extraores:tindust",
+    "count": 2
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/ruthenium"
+    }
+  },
+  "output": {
+    "item": "extraores:rutheniumdust",
+    "count": 2
+  }
+}

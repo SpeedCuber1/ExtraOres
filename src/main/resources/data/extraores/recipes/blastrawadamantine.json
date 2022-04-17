@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "extraores:raw/adamantine"
-  },
-  "result": "extraores:adamantineingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

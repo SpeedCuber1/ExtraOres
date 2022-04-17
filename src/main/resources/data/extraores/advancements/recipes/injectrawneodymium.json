@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawneodymium"
+    ]
+  },
+  "criteria": {
+    "injectrawneodymium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:neodymiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawneodymium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawneodymium",
+      "has_the_recipe"
+    ]
+  ]
+}

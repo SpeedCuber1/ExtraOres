@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawplatinum"
+    ]
+  },
+  "criteria": {
+    "enrichrawplatinum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawplatinum"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawplatinum"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawplatinum",
+      "has_the_recipe"
+    ]
+  ]
+}

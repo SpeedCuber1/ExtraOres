@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawtantalum"
+    ]
+  },
+  "criteria": {
+    "enrichrawtantalum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawtantalum"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawtantalum"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawtantalum",
+      "has_the_recipe"
+    ]
+  ]
+}

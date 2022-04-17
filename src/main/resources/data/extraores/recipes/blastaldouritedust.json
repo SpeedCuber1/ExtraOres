@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/aldourite"
+    "item": "extraores:aldouritedust"
   },
   "result": "extraores:aldouriteingot",
   "experience": 0.75,

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichtindirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichtindirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tinore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichtindirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichtindirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

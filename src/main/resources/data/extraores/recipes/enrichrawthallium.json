@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/thallium"
+    }
+  },
+  "output": {
+    "item": "extraores:thalliumdust",
+    "count": 2
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawunobtainium"
+    ]
+  },
+  "criteria": {
+    "injectrawunobtainium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:unobtainiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawunobtainium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawunobtainium",
+      "has_the_recipe"
+    ]
+  ]
+}

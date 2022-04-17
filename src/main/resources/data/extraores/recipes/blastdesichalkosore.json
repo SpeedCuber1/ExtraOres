@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/desichalkos"
+    "item": "extraores:desichalkosore"
   },
   "result": "extraores:desichalkosingot",
   "experience": 0.75,

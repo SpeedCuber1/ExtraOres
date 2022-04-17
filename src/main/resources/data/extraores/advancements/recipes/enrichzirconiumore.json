@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichzirconiumore"
+    ]
+  },
+  "criteria": {
+    "enrichzirconiumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:zirconiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichzirconiumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichzirconiumore",
+      "has_the_recipe"
+    ]
+  ]
+}

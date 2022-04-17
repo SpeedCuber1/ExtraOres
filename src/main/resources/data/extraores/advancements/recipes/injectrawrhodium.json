@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawrhodium"
+    ]
+  },
+  "criteria": {
+    "injectrawrhodium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rhodiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawrhodium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawrhodium",
+      "has_the_recipe"
+    ]
+  ]
+}

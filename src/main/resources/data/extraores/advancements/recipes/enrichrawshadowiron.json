@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawshadowiron"
+    ]
+  },
+  "criteria": {
+    "enrichrawshadowiron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawshadowiron"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawshadowiron"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawshadowiron",
+      "has_the_recipe"
+    ]
+  ]
+}

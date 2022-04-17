@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/plutonium"
+    "item": "extraores:plutoniumore"
   },
   "result": "extraores:plutoniumingot",
   "experience": 0.75,

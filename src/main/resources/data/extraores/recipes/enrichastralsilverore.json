@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/astralsilver"
+    }
+  },
+  "output": {
+    "item": "extraores:astralsilverdust",
+    "count": 2
+  }
+}

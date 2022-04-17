@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/shadowiron"
+    }
+  },
+  "output": {
+    "item": "extraores:shadowirondust",
+    "count": 2
+  }
+}

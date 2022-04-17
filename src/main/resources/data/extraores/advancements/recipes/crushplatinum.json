@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushplatinum"
+    ]
+  },
+  "criteria": {
+    "crushplatinum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:platinumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushplatinum"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushplatinum",
+      "has_the_recipe"
+    ]
+  ]
+}

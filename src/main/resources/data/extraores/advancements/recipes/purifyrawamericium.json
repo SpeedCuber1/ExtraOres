@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawamericium"
+    ]
+  },
+  "criteria": {
+    "purifyrawamericium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawamericium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawamericium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawamericium",
+      "has_the_recipe"
+    ]
+  ]
+}

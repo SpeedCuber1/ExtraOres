@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/molybdenum"
+    "item": "extraores:molybdenumdust"
   },
   "result": "extraores:molybdenumingot",
   "experience": 0.75,

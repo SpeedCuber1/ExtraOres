@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/rhenium"
+    }
+  },
+  "output": {
+    "item": "extraores:rheniumdust",
+    "count": 2
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawinfuscolium"
+    ]
+  },
+  "criteria": {
+    "enrichrawinfuscolium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawinfuscolium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawinfuscolium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawinfuscolium",
+      "has_the_recipe"
+    ]
+  ]
+}

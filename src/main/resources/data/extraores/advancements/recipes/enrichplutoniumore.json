@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichplutoniumore"
+    ]
+  },
+  "criteria": {
+    "enrichplutoniumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:plutoniumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichplutoniumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichplutoniumore",
+      "has_the_recipe"
+    ]
+  ]
+}

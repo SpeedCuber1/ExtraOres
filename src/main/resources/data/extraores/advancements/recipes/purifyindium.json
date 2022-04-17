@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyindium"
+    ]
+  },
+  "criteria": {
+    "purifyindium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:indiumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyindium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyindium",
+      "has_the_recipe"
+    ]
+  ]
+}

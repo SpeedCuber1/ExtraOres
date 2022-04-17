@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichcadmiumdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichcadmiumdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cadmiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichcadmiumdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichcadmiumdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

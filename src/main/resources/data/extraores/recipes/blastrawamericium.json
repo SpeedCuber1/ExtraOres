@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "extraores:raw/americium"
-  },
-  "result": "extraores:americiumingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

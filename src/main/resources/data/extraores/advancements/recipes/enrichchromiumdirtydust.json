@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichchromiumdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichchromiumdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:chromiumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichchromiumdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichchromiumdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

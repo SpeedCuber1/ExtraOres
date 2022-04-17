@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushcelenegil"
+    ]
+  },
+  "criteria": {
+    "crushcelenegil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:celenegilclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushcelenegil"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushcelenegil",
+      "has_the_recipe"
+    ]
+  ]
+}

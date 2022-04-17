@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawruthenium"
+    ]
+  },
+  "criteria": {
+    "enrichrawruthenium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawruthenium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawruthenium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawruthenium",
+      "has_the_recipe"
+    ]
+  ]
+}

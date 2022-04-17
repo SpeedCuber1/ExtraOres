@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrhenium"
+    ]
+  },
+  "criteria": {
+    "purifyrhenium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rheniumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrhenium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrhenium",
+      "has_the_recipe"
+    ]
+  ]
+}

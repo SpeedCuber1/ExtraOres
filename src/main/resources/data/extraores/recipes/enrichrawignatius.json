@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/ignatius"
+    }
+  },
+  "output": {
+    "item": "extraores:ignatiusdust",
+    "count": 2
+  }
+}

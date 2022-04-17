@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyneptunium"
+    ]
+  },
+  "criteria": {
+    "purifyneptunium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:neptuniumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyneptunium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyneptunium",
+      "has_the_recipe"
+    ]
+  ]
+}

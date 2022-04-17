@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/bismuth"
+    "item": "extraores:bismuthore"
   },
   "result": "extraores:bismuthingot",
   "experience": 0.75,

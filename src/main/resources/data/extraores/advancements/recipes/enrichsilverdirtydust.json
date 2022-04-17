@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichsilverdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichsilverdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:silverore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichsilverdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichsilverdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

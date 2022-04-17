@@ -1,6 +1,10 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [],
+  "ingredients": [
+    {
+      "item": "extraores:neptuniumblock"
+    }
+  ],
   "result": {
     "item": "extraores:neptuniumingot",
     "count": 9

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawvulcanite"
+    ]
+  },
+  "criteria": {
+    "injectrawvulcanite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vulcaniteore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawvulcanite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawvulcanite",
+      "has_the_recipe"
+    ]
+  ]
+}

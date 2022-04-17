@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawneptunium"
+    ]
+  },
+  "criteria": {
+    "purifyrawneptunium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawneptunium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawneptunium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawneptunium",
+      "has_the_recipe"
+    ]
+  ]
+}

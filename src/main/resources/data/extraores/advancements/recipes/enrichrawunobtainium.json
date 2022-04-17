@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawunobtainium"
+    ]
+  },
+  "criteria": {
+    "enrichrawunobtainium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawunobtainium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawunobtainium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawunobtainium",
+      "has_the_recipe"
+    ]
+  ]
+}

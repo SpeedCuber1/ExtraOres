@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushuranium"
+    ]
+  },
+  "criteria": {
+    "crushuranium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:uraniumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushuranium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushuranium",
+      "has_the_recipe"
+    ]
+  ]
+}

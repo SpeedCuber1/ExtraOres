@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/technetium"
+    "item": "extraores:technetiumdust"
   },
   "result": "extraores:technetiumingot",
   "experience": 0.75,

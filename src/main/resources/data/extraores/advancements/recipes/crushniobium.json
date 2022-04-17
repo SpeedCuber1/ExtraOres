@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushniobium"
+    ]
+  },
+  "criteria": {
+    "crushniobium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:niobiumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushniobium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushniobium",
+      "has_the_recipe"
+    ]
+  ]
+}

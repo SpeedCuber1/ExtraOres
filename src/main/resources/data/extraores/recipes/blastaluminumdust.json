@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/aluminum"
+    "item": "extraores:aluminumdust"
   },
   "result": "extraores:aluminumingot",
   "experience": 0.75,

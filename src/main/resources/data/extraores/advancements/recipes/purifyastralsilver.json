@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyastralsilver"
+    ]
+  },
+  "criteria": {
+    "purifyastralsilver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:astralsilvershard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyastralsilver"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyastralsilver",
+      "has_the_recipe"
+    ]
+  ]
+}

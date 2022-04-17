@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/plutonium"
+    }
+  },
+  "output": {
+    "item": "extraores:plutoniumdust",
+    "count": 2
+  }
+}

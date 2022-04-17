@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushaluminum"
+    ]
+  },
+  "criteria": {
+    "crushaluminum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aluminumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushaluminum"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushaluminum",
+      "has_the_recipe"
+    ]
+  ]
+}

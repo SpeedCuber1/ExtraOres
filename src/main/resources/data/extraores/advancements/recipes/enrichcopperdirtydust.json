@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichcopperdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichcopperdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:copperore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichcopperdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichcopperdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

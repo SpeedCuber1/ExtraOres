@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifysilver"
+    ]
+  },
+  "criteria": {
+    "purifysilver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:silvershard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifysilver"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifysilver",
+      "has_the_recipe"
+    ]
+  ]
+}

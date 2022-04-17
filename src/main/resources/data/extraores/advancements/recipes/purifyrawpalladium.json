@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawpalladium"
+    ]
+  },
+  "criteria": {
+    "purifyrawpalladium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawpalladium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawpalladium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawpalladium",
+      "has_the_recipe"
+    ]
+  ]
+}

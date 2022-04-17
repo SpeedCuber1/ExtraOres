@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawastralsilver"
+    ]
+  },
+  "criteria": {
+    "enrichrawastralsilver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawastralsilver"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawastralsilver"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawastralsilver",
+      "has_the_recipe"
+    ]
+  ]
+}

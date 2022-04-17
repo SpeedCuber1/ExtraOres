@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushhaderoth"
+    ]
+  },
+  "criteria": {
+    "crushhaderoth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:haderothclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushhaderoth"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushhaderoth",
+      "has_the_recipe"
+    ]
+  ]
+}

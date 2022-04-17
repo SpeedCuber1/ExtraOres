@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/unobtainium"
+    "item": "extraores:unobtainiumdust"
   },
   "result": "extraores:unobtainiumingot",
   "experience": 0.75,

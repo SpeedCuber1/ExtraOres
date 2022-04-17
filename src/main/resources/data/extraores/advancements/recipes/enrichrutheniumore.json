@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrutheniumore"
+    ]
+  },
+  "criteria": {
+    "enrichrutheniumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rutheniumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrutheniumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrutheniumore",
+      "has_the_recipe"
+    ]
+  ]
+}

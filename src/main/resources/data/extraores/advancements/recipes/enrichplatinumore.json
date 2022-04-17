@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichplatinumore"
+    ]
+  },
+  "criteria": {
+    "enrichplatinumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:platinumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichplatinumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichplatinumore",
+      "has_the_recipe"
+    ]
+  ]
+}

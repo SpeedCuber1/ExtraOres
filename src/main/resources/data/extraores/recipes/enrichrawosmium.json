@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/osmium"
+    }
+  },
+  "output": {
+    "item": "extraores:osmiumdust",
+    "count": 2
+  }
+}

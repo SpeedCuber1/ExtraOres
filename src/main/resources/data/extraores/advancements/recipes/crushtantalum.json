@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushtantalum"
+    ]
+  },
+  "criteria": {
+    "crushtantalum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tantalumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushtantalum"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushtantalum",
+      "has_the_recipe"
+    ]
+  ]
+}

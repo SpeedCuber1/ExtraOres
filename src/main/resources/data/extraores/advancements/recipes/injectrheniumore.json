@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrheniumore"
+    ]
+  },
+  "criteria": {
+    "injectrheniumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rheniumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrheniumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrheniumore",
+      "has_the_recipe"
+    ]
+  ]
+}

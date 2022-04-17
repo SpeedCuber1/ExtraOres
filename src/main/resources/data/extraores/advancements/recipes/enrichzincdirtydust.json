@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichzincdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichzincdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:zincore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichzincdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichzincdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

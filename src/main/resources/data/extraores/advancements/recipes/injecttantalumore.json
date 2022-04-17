@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injecttantalumore"
+    ]
+  },
+  "criteria": {
+    "injecttantalumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tantalumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injecttantalumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injecttantalumore",
+      "has_the_recipe"
+    ]
+  ]
+}

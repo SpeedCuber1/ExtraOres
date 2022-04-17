@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawgallium"
+    ]
+  },
+  "criteria": {
+    "enrichrawgallium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawgallium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawgallium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawgallium",
+      "has_the_recipe"
+    ]
+  ]
+}

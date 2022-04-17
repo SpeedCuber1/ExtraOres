@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichsanguiniteore"
+    ]
+  },
+  "criteria": {
+    "enrichsanguiniteore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:sanguiniteore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichsanguiniteore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichsanguiniteore",
+      "has_the_recipe"
+    ]
+  ]
+}

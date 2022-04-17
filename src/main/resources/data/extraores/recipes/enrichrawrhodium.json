@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/rhodium"
+    }
+  },
+  "output": {
+    "item": "extraores:rhodiumdust",
+    "count": 2
+  }
+}

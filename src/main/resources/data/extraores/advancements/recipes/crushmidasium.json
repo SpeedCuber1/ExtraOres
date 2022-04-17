@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushmidasium"
+    ]
+  },
+  "criteria": {
+    "crushmidasium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:midasiumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushmidasium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushmidasium",
+      "has_the_recipe"
+    ]
+  ]
+}

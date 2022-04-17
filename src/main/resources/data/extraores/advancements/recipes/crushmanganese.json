@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushmanganese"
+    ]
+  },
+  "criteria": {
+    "crushmanganese": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:manganeseclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushmanganese"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushmanganese",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectraworichalcum"
+    ]
+  },
+  "criteria": {
+    "injectraworichalcum": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:orichalcumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectraworichalcum"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectraworichalcum",
+      "has_the_recipe"
+    ]
+  ]
+}

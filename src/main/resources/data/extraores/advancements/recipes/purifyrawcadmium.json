@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawcadmium"
+    ]
+  },
+  "criteria": {
+    "purifyrawcadmium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcadmium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawcadmium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawcadmium",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyvyroxeresore"
+    ]
+  },
+  "criteria": {
+    "purifyvyroxeresore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vyroxeresore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyvyroxeresore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyvyroxeresore",
+      "has_the_recipe"
+    ]
+  ]
+}

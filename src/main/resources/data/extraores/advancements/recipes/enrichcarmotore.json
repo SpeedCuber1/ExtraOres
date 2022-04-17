@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichcarmotore"
+    ]
+  },
+  "criteria": {
+    "enrichcarmotore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:carmotore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichcarmotore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichcarmotore",
+      "has_the_recipe"
+    ]
+  ]
+}

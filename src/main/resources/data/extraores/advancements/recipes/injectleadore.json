@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectleadore"
+    ]
+  },
+  "criteria": {
+    "injectleadore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:leadore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectleadore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectleadore",
+      "has_the_recipe"
+    ]
+  ]
+}

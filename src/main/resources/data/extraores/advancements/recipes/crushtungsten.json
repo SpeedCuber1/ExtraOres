@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushtungsten"
+    ]
+  },
+  "criteria": {
+    "crushtungsten": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tungstenclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushtungsten"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushtungsten",
+      "has_the_recipe"
+    ]
+  ]
+}

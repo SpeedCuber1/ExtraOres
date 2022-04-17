@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectatlarusore"
+    ]
+  },
+  "criteria": {
+    "injectatlarusore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:atlarusore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectatlarusore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectatlarusore",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/chromium"
+    "item": "extraores:chromiumore"
   },
   "result": "extraores:chromiumingot",
   "experience": 0.75,

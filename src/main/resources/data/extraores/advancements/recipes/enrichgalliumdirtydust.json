@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichgalliumdirtydust"
+    ]
+  },
+  "criteria": {
+    "enrichgalliumdirtydust": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:galliumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichgalliumdirtydust"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichgalliumdirtydust",
+      "has_the_recipe"
+    ]
+  ]
+}

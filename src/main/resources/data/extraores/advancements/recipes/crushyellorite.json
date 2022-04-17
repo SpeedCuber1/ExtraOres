@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushyellorite"
+    ]
+  },
+  "criteria": {
+    "crushyellorite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:yelloriteclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushyellorite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushyellorite",
+      "has_the_recipe"
+    ]
+  ]
+}

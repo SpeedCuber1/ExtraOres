@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushlemurite"
+    ]
+  },
+  "criteria": {
+    "crushlemurite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:lemuriteclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushlemurite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushlemurite",
+      "has_the_recipe"
+    ]
+  ]
+}

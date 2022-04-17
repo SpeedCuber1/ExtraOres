@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawbismuth"
+    ]
+  },
+  "criteria": {
+    "purifyrawbismuth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawbismuth"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawbismuth"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawbismuth",
+      "has_the_recipe"
+    ]
+  ]
+}

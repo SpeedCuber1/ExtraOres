@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "extraores:raw/kalendrite"
-  },
-  "result": "extraores:kalendriteingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

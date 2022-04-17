@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawpromethium"
+    ]
+  },
+  "criteria": {
+    "enrichrawpromethium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawpromethium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawpromethium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawpromethium",
+      "has_the_recipe"
+    ]
+  ]
+}

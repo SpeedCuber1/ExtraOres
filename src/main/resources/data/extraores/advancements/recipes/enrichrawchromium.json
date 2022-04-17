@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawchromium"
+    ]
+  },
+  "criteria": {
+    "enrichrawchromium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawchromium"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawchromium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawchromium",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "extraores:raw/thallium"
-  },
-  "result": "extraores:thalliumingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

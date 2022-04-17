@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/vulcanite"
+    }
+  },
+  "output": {
+    "item": "extraores:vulcanitedust",
+    "count": 2
+  }
+}

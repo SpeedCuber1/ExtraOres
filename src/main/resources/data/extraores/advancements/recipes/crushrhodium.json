@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushrhodium"
+    ]
+  },
+  "criteria": {
+    "crushrhodium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rhodiumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushrhodium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushrhodium",
+      "has_the_recipe"
+    ]
+  ]
+}

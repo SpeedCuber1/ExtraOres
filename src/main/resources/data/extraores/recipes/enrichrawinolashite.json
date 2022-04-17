@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/inolashite"
+    }
+  },
+  "output": {
+    "item": "extraores:inolashitedust",
+    "count": 2
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifylemurite"
+    ]
+  },
+  "criteria": {
+    "purifylemurite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:lemuriteshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifylemurite"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifylemurite",
+      "has_the_recipe"
+    ]
+  ]
+}

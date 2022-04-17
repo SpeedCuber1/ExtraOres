@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/indium"
+    }
+  },
+  "output": {
+    "item": "extraores:indiumdust",
+    "count": 2
+  }
+}

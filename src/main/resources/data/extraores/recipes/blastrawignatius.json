@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "extraores:raw/ignatius"
-  },
-  "result": "extraores:ignatiusingot",
-  "experience": 0.75,
-  "cookingtime": 20
-}

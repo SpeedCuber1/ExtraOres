@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/blacksteel"
+    "item": "extraores:blacksteeldust"
   },
   "result": "extraores:blacksteelingot",
   "experience": 0.75,

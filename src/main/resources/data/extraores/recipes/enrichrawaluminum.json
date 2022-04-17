@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/aluminum"
+    }
+  },
+  "output": {
+    "item": "extraores:aluminumdust",
+    "count": 2
+  }
+}

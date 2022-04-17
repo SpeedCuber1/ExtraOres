@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyinfuscoliumore"
+    ]
+  },
+  "criteria": {
+    "purifyinfuscoliumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:infuscoliumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyinfuscoliumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyinfuscoliumore",
+      "has_the_recipe"
+    ]
+  ]
+}

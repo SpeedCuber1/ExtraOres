@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifygalliumore"
+    ]
+  },
+  "criteria": {
+    "purifygalliumore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:galliumore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifygalliumore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifygalliumore",
+      "has_the_recipe"
+    ]
+  ]
+}

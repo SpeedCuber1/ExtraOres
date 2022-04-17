@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/eximite"
+    "item": "extraores:eximiteore"
   },
   "result": "extraores:eximiteingot",
   "experience": 0.75,

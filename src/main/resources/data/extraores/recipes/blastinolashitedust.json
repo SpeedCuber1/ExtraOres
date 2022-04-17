@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/inolashite"
+    "item": "extraores:inolashitedust"
   },
   "result": "extraores:inolashiteingot",
   "experience": 0.75,

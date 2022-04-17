@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/oureclase"
+    "item": "extraores:oureclaseore"
   },
   "result": "extraores:oureclaseingot",
   "experience": 0.75,

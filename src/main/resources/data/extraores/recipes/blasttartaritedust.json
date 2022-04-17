@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/tartarite"
+    "item": "extraores:tartaritedust"
   },
   "result": "extraores:tartariteingot",
   "experience": 0.75,

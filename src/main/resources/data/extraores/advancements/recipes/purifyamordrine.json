@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyamordrine"
+    ]
+  },
+  "criteria": {
+    "purifyamordrine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:amordrineshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyamordrine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyamordrine",
+      "has_the_recipe"
+    ]
+  ]
+}

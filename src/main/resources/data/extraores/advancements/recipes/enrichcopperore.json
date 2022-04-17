@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichcopperore"
+    ]
+  },
+  "criteria": {
+    "enrichcopperore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:copperore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichcopperore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichcopperore",
+      "has_the_recipe"
+    ]
+  ]
+}

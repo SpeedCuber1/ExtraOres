@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushunobtainium"
+    ]
+  },
+  "criteria": {
+    "crushunobtainium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:unobtainiumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushunobtainium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushunobtainium",
+      "has_the_recipe"
+    ]
+  ]
+}

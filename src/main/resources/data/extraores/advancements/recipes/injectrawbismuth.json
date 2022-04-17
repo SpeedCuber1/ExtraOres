@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawbismuth"
+    ]
+  },
+  "criteria": {
+    "injectrawbismuth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:bismuthore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:injectrawbismuth"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "injectrawbismuth",
+      "has_the_recipe"
+    ]
+  ]
+}

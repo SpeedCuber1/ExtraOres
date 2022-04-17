@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/cadmium"
+    }
+  },
+  "output": {
+    "item": "extraores:cadmiumdust",
+    "count": 2
+  }
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:dusts/neodymium"
+    "item": "extraores:neodymiumdust"
   },
   "result": "extraores:neodymiumingot",
   "experience": 0.75,

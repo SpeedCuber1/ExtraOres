@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifychromium"
+    ]
+  },
+  "criteria": {
+    "purifychromium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:chromiumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifychromium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifychromium",
+      "has_the_recipe"
+    ]
+  ]
+}

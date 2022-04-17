@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushiridium"
+    ]
+  },
+  "criteria": {
+    "crushiridium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:iridiumclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushiridium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushiridium",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:crushbismuth"
+    ]
+  },
+  "criteria": {
+    "crushbismuth": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:bismuthclump"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:crushbismuth"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crushbismuth",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/zirconium"
+    "item": "extraores:zirconiumore"
   },
   "result": "extraores:zirconiumingot",
   "experience": 0.75,

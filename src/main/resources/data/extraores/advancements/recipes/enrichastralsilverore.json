@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichastralsilverore"
+    ]
+  },
+  "criteria": {
+    "enrichastralsilverore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:astralsilverore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichastralsilverore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichastralsilverore",
+      "has_the_recipe"
+    ]
+  ]
+}

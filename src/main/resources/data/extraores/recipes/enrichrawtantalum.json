@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/tantalum"
+    }
+  },
+  "output": {
+    "item": "extraores:tantalumdust",
+    "count": 2
+  }
+}

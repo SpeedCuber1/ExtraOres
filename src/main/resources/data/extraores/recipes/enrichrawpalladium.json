@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/palladium"
+    }
+  },
+  "output": {
+    "item": "extraores:palladiumdust",
+    "count": 2
+  }
+}

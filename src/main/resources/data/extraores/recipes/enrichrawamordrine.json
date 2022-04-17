@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/amordrine"
+    }
+  },
+  "output": {
+    "item": "extraores:amordrinedust",
+    "count": 2
+  }
+}

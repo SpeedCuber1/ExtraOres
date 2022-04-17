@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "extraores:raw/ceruclase"
+    }
+  },
+  "output": {
+    "item": "extraores:ceruclasedust",
+    "count": 2
+  }
+}

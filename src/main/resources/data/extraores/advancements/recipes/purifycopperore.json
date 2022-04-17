@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifycopperore"
+    ]
+  },
+  "criteria": {
+    "purifycopperore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:copperore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifycopperore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifycopperore",
+      "has_the_recipe"
+    ]
+  ]
+}

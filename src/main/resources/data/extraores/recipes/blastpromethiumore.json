@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "forge:ores/promethium"
+    "item": "extraores:promethiumore"
   },
   "result": "extraores:promethiumingot",
   "experience": 0.75,

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawignatius"
+    ]
+  },
+  "criteria": {
+    "enrichrawignatius": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawignatius"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:enrichrawignatius"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enrichrawignatius",
+      "has_the_recipe"
+    ]
+  ]
+}

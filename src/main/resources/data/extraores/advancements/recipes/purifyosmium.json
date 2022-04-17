@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyosmium"
+    ]
+  },
+  "criteria": {
+    "purifyosmium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:osmiumshard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyosmium"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyosmium",
+      "has_the_recipe"
+    ]
+  ]
+}

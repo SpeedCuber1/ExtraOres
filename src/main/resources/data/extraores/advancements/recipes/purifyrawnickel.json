@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawnickel"
+    ]
+  },
+  "criteria": {
+    "purifyrawnickel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawnickel"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "extraores:purifyrawnickel"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawnickel",
+      "has_the_recipe"
+    ]
+  ]
+}
