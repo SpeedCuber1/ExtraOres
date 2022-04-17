@@ -3,8 +3,14 @@ package com.tylerh.extraores.Data.Recipes;
 import com.tylerh.extraores.Data.Tags.ItemTagList;
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Init.ItemList;
+import mekanism.api.MekanismAPI;
+import mekanism.api.chemical.gas.GasStack;
+import mekanism.api.datagen.recipe.builder.ItemStackChemicalToItemStackRecipeBuilder;
+import mekanism.api.datagen.recipe.builder.ItemStackToItemStackRecipeBuilder;
+import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.*;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.resources.ResourceLocation;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -2329,6 +2335,79 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemTagList.rawZirconium), ItemList.itemIngotZirconium, 0.75F, 20)
                 .unlockedBy("blastrawzirconium", has(ItemList.itemIngotZirconium))
                 .save(consumer, new ResourceLocation("extraores:blastrawzirconium"));
+        buildMekanismInjecting(consumer);
+        buildMekanismPurifying(consumer);
+        buildMekanismCrushing(consumer);
+        buildMekanismEnriching(consumer);
+    }
+    protected void buildMekanismInjecting(Consumer<FinishedRecipe> consumer)
+    {
+        //Ore
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(
+                IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine),
+                IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),
+                new ItemStack(ItemList.itemShardAdamantine,4))
+                .addCriterion("injectadamantineore",has(BlockList.blockOreAdamantine))
+                .build(consumer,new ResourceLocation("extraores:injectadamantineore"));
+        //Raw
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(
+                IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine),
+                IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),
+                new ItemStack(ItemList.itemShardAdamantine,4))
+                .addCriterion("injectrawadamantine",has(ItemList.itemRawAdamantine))
+                .build(consumer,new ResourceLocation("extraores:injectrawadamantine"));
+    }
+    protected void buildMekanismPurifying(Consumer<FinishedRecipe> consumer)
+    {
+        //Ore
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(
+                IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine),
+                IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),
+                new ItemStack(ItemList.itemClumpAdamantine,3))
+                .addCriterion("purifyadamantineore",has(BlockList.blockOreAdamantine))
+                .build(consumer,new ResourceLocation("extraores:purifyadamantineore"));
+        //Raw
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(
+                IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine),
+                IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),
+                new ItemStack(ItemList.itemClumpAdamantine,3))
+                .addCriterion("purifyrawadamantine",has(ItemList.itemRawAdamantine))
+                .build(consumer,new ResourceLocation("extraores:purifyrawadamantine"));
+        //Shard
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(
+                IngredientCreatorAccess.item().from(ItemTagList.shardAdamantine),
+                IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),
+                new ItemStack(ItemList.itemClumpAdamantine))
+                .addCriterion("purifyadamantine",has(ItemList.itemShardAdamantine))
+                .build(consumer,new ResourceLocation("extraores:purifyadamantine"));
+    }
+    protected void buildMekanismCrushing(Consumer<FinishedRecipe> consumer)
+    {
+        ItemStackToItemStackRecipeBuilder.crushing(
+                IngredientCreatorAccess.item().from(ItemTagList.clumpAdamantine),new ItemStack(ItemList.itemDirtyDustAdamantine))
+                .addCriterion("crushadamantine",has(ItemList.itemClumpAdamantine))
+                .build(consumer,new ResourceLocation("extraores:crushadamantine"));
+    }
+    protected void buildMekanismEnriching(Consumer<FinishedRecipe> consumer)
+    {
+        //Ore
+        ItemStackToItemStackRecipeBuilder.enriching(
+                IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine),
+                new ItemStack(ItemList.itemDustAdamantine,2))
+                .addCriterion("enrichadamantineore",has(BlockList.blockOreAdamantine))
+                .build(consumer,new ResourceLocation("extraores:enrichadamantineore"));
+        //Raw
+        ItemStackToItemStackRecipeBuilder.enriching(
+                IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine),
+                new ItemStack(ItemList.itemDustAdamantine,2))
+                .addCriterion("enrichrawadamantine",has(ItemList.itemRawAdamantine))
+                .build(consumer,new ResourceLocation("extraores:enrichrawadamantine"));
+        //Dirty Dust
+        ItemStackToItemStackRecipeBuilder.enriching(
+                IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAdamantine),
+                new ItemStack(ItemList.itemDustAdamantine))
+                .addCriterion("enrichdirtyadamantinedust",has(ItemList.itemDirtyDustAdamantine))
+                .build(consumer,new ResourceLocation("extraores:enrichdirtyadmantinedust"));
     }
     @Override
     @MethodsReturnNonnullByDefault
