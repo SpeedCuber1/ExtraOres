@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/haderoth"
+      "tag": "forge:raw_materials/haderoth"
     }
   },
   "chemicalInput": {

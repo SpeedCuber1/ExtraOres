@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/hepatizon"
+      "tag": "forge:raw_materials/hepatizon"
     }
   },
   "chemicalInput": {

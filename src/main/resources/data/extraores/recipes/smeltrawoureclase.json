@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/oureclase"
+    "tag": "forge:raw_materials/oureclase"
   },
   "result": "extraores:oureclaseingot",
   "experience": 0.75,

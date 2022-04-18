@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/rhodium"
+      "tag": "forge:raw_materials/rhodium"
     }
   },
   "output": {

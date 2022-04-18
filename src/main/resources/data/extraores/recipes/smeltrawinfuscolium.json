@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/infuscolium"
+    "tag": "forge:raw_materials/infuscolium"
   },
   "result": "extraores:infuscoliumingot",
   "experience": 0.75,

@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/midasium"
+      "tag": "forge:raw_materials/midasium"
     }
   },
   "chemicalInput": {

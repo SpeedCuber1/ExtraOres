@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/ceruclase"
+      "tag": "forge:raw_materials/ceruclase"
     }
   },
   "chemicalInput": {

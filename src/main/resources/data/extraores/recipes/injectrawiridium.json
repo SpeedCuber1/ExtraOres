@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/iridium"
+      "tag": "forge:raw_materials/iridium"
     }
   },
   "chemicalInput": {

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/tartarite"
+      "tag": "forge:raw_materials/tartarite"
     }
   },
   "output": {

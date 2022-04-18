@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/manganese"
+      "tag": "forge:raw_materials/manganese"
     }
   },
   "chemicalInput": {

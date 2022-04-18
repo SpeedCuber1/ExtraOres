@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/tartarite"
+      "tag": "forge:raw_materials/tartarite"
     }
   },
   "chemicalInput": {

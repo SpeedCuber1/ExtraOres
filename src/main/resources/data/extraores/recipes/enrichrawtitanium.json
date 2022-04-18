@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/titanium"
+      "tag": "forge:raw_materials/titanium"
     }
   },
   "output": {

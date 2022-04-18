@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/uranium"
+    "tag": "forge:raw_materials/uranium"
   },
   "result": "extraores:uraniumingot",
   "experience": 0.75,

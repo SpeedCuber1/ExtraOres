@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/neodymium"
+      "tag": "forge:raw_materials/neodymium"
     }
   },
   "chemicalInput": {

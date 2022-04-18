@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/rhodium"
+    "tag": "forge:raw_materials/rhodium"
   },
   "result": "extraores:rhodiumingot",
   "experience": 0.75,

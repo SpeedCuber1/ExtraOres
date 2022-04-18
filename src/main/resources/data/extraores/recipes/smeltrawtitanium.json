@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/titanium"
+    "tag": "forge:raw_materials/titanium"
   },
   "result": "extraores:titaniumingot",
   "experience": 0.75,

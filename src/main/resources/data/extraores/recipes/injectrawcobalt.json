@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/cobalt"
+      "tag": "forge:raw_materials/cobalt"
     }
   },
   "chemicalInput": {

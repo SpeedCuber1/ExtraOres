@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/tantalum"
+      "tag": "forge:raw_materials/tantalum"
     }
   },
   "chemicalInput": {

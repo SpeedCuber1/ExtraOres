@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/promethium"
+      "tag": "forge:raw_materials/promethium"
     }
   },
   "output": {

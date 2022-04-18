@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/tungsten"
+      "tag": "forge:raw_materials/tungsten"
     }
   },
   "chemicalInput": {

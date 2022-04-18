@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/infuscolium"
+      "tag": "forge:raw_materials/infuscolium"
     }
   },
   "output": {

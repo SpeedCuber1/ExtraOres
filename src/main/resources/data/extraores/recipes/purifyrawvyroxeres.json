@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/vyroxeres"
+      "tag": "forge:raw_materials/vyroxeres"
     }
   },
   "chemicalInput": {

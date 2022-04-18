@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/rhodium"
+      "tag": "forge:raw_materials/rhodium"
     }
   },
   "chemicalInput": {

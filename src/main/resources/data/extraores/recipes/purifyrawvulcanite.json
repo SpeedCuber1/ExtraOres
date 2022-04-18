@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/vulcanite"
+      "tag": "forge:raw_materials/vulcanite"
     }
   },
   "chemicalInput": {

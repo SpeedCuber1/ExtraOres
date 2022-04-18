@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/chromium"
+      "tag": "forge:raw_materials/chromium"
     }
   },
   "output": {

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/eximite"
+      "tag": "forge:raw_materials/eximite"
     }
   },
   "output": {

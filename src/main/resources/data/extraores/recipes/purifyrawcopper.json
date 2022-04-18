@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/copper"
+      "tag": "forge:raw_materials/copper"
     }
   },
   "chemicalInput": {

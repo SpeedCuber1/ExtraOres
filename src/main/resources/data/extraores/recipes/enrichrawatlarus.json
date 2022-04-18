@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/atlarus"
+      "tag": "forge:raw_materials/atlarus"
     }
   },
   "output": {

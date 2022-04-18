@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/aldourite"
+      "tag": "forge:raw_materials/aldourite"
     }
   },
   "output": {

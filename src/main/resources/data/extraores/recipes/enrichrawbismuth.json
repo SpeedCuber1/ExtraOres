@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/bismuth"
+      "tag": "forge:raw_materials/bismuth"
     }
   },
   "output": {

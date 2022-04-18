@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/ignatius"
+      "tag": "forge:raw_materials/ignatius"
     }
   },
   "output": {

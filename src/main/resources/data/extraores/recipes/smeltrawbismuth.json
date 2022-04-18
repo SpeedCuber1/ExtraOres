@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/bismuth"
+    "tag": "forge:raw_materials/bismuth"
   },
   "result": "extraores:bismuthingot",
   "experience": 0.75,

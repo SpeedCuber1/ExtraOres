@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/mithril"
+      "tag": "forge:raw_materials/mithril"
     }
   },
   "output": {

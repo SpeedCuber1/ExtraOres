@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/tin"
+      "tag": "forge:raw_materials/tin"
     }
   },
   "output": {

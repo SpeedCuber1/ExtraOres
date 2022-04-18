@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/deepiron"
+      "tag": "forge:raw_materials/deepiron"
     }
   },
   "chemicalInput": {

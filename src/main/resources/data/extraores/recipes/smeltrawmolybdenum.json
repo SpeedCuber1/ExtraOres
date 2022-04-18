@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/molybdenum"
+    "tag": "forge:raw_materials/molybdenum"
   },
   "result": "extraores:molybdenumingot",
   "experience": 0.75,

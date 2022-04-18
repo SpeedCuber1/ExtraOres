@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/celenegil"
+      "tag": "forge:raw_materials/celenegil"
     }
   },
   "output": {

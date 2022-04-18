@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/angmallen"
+      "tag": "forge:raw_materials/angmallen"
     }
   },
   "output": {

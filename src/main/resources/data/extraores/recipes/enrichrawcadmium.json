@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/cadmium"
+      "tag": "forge:raw_materials/cadmium"
     }
   },
   "output": {

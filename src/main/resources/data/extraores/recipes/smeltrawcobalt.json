@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/cobalt"
+    "tag": "forge:raw_materials/cobalt"
   },
   "result": "extraores:cobaltingot",
   "experience": 0.75,

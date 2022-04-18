@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/yellorite"
+      "tag": "forge:raw_materials/yellorite"
     }
   },
   "chemicalInput": {

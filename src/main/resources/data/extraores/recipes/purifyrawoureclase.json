@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/oureclase"
+      "tag": "forge:raw_materials/oureclase"
     }
   },
   "chemicalInput": {

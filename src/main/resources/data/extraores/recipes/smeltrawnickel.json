@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/nickel"
+    "tag": "forge:raw_materials/nickel"
   },
   "result": "extraores:nickelingot",
   "experience": 0.75,

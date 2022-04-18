@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/angmallen"
+    "tag": "forge:raw_materials/angmallen"
   },
   "result": "extraores:angmalleningot",
   "experience": 0.75,

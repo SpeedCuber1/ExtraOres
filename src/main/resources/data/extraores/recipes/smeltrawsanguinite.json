@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/sanguinite"
+    "tag": "forge:raw_materials/sanguinite"
   },
   "result": "extraores:sanguiniteingot",
   "experience": 0.75,

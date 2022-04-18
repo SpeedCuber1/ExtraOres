@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/amordrine"
+      "tag": "forge:raw_materials/amordrine"
     }
   },
   "chemicalInput": {

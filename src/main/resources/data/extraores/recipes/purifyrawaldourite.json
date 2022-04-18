@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/aldourite"
+      "tag": "forge:raw_materials/aldourite"
     }
   },
   "chemicalInput": {

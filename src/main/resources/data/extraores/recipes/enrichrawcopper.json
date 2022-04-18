@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/copper"
+      "tag": "forge:raw_materials/copper"
     }
   },
   "output": {

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/blacksteel"
+    "tag": "forge:raw_materials/blacksteel"
   },
   "result": "extraores:blacksteelingot",
   "experience": 0.75,

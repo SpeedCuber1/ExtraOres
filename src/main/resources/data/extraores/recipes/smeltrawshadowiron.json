@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/shadowiron"
+    "tag": "forge:raw_materials/shadowiron"
   },
   "result": "extraores:shadowironingot",
   "experience": 0.75,

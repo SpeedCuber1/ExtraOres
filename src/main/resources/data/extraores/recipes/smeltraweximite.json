@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/eximite"
+    "tag": "forge:raw_materials/eximite"
   },
   "result": "extraores:eximiteingot",
   "experience": 0.75,

@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/desichalkos"
+      "tag": "forge:raw_materials/desichalkos"
     }
   },
   "chemicalInput": {

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/neodymium"
+      "tag": "forge:raw_materials/neodymium"
     }
   },
   "output": {

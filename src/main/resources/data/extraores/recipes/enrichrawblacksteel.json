@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/blacksteel"
+      "tag": "forge:raw_materials/blacksteel"
     }
   },
   "output": {

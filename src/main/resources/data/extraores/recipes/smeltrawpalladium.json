@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/palladium"
+    "tag": "forge:raw_materials/palladium"
   },
   "result": "extraores:palladiumingot",
   "experience": 0.75,

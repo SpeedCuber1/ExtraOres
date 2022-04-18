@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/manganese"
+    "tag": "forge:raw_materials/manganese"
   },
   "result": "extraores:manganeseingot",
   "experience": 0.75,

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/adamantine"
+      "tag": "forge:raw_materials/adamantine"
     }
   },
   "output": {

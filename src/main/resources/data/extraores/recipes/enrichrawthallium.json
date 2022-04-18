@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/thallium"
+      "tag": "forge:raw_materials/thallium"
     }
   },
   "output": {

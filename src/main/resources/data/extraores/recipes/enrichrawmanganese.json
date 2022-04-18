@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/manganese"
+      "tag": "forge:raw_materials/manganese"
     }
   },
   "output": {

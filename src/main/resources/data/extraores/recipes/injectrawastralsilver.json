@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/astralsilver"
+      "tag": "forge:raw_materials/astralsilver"
     }
   },
   "chemicalInput": {

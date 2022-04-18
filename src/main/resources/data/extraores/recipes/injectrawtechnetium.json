@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/technetium"
+      "tag": "forge:raw_materials/technetium"
     }
   },
   "chemicalInput": {

@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/platinum"
+      "tag": "forge:raw_materials/platinum"
     }
   },
   "chemicalInput": {

@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/titanium"
+      "tag": "forge:raw_materials/titanium"
     }
   },
   "chemicalInput": {

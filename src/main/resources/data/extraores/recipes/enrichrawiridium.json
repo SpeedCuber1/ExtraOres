@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/iridium"
+      "tag": "forge:raw_materials/iridium"
     }
   },
   "output": {

@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/shadowiron"
+      "tag": "forge:raw_materials/shadowiron"
     }
   },
   "chemicalInput": {

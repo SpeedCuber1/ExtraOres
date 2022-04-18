@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/mithril"
+    "tag": "forge:raw_materials/mithril"
   },
   "result": "extraores:mithrilingot",
   "experience": 0.75,

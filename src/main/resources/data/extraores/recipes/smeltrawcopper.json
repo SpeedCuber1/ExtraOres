@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/copper"
+    "tag": "forge:raw_materials/copper"
   },
   "result": "extraores:copperingot",
   "experience": 0.75,

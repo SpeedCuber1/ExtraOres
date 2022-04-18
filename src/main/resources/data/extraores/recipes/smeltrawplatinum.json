@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/platinum"
+    "tag": "forge:raw_materials/platinum"
   },
   "result": "extraores:platinumingot",
   "experience": 0.75,

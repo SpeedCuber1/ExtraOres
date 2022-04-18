@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/molybdenum"
+      "tag": "forge:raw_materials/molybdenum"
     }
   },
   "chemicalInput": {

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/shadowiron"
+      "tag": "forge:raw_materials/shadowiron"
     }
   },
   "output": {

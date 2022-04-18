@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/astralsilver"
+    "tag": "forge:raw_materials/astralsilver"
   },
   "result": "extraores:astralsilveringot",
   "experience": 0.75,

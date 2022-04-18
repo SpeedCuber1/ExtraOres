@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/oureclase"
+      "tag": "forge:raw_materials/oureclase"
     }
   },
   "output": {

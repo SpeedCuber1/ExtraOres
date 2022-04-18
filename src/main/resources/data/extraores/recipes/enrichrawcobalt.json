@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "ingredient": {
-      "tag": "extraores:raw/cobalt"
+      "tag": "forge:raw_materials/cobalt"
     }
   },
   "output": {

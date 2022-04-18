@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/neodymium"
+    "tag": "forge:raw_materials/neodymium"
   },
   "result": "extraores:neodymiumingot",
   "experience": 0.75,

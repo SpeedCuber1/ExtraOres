@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/technetium"
+      "tag": "forge:raw_materials/technetium"
     }
   },
   "chemicalInput": {

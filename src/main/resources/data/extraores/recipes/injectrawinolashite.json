@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/inolashite"
+      "tag": "forge:raw_materials/inolashite"
     }
   },
   "chemicalInput": {

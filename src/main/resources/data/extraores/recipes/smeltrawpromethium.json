@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "extraores:raw/promethium"
+    "tag": "forge:raw_materials/promethium"
   },
   "result": "extraores:promethiumingot",
   "experience": 0.75,

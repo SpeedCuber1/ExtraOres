@@ -2,7 +2,7 @@
   "type": "mekanism:injecting",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/unobtainium"
+      "tag": "forge:raw_materials/unobtainium"
     }
   },
   "chemicalInput": {

@@ -2,7 +2,7 @@
   "type": "mekanism:purifying",
   "itemInput": {
     "ingredient": {
-      "tag": "extraores:raw/meutoite"
+      "tag": "forge:raw_materials/meutoite"
     }
   },
   "chemicalInput": {
