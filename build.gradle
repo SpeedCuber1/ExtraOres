@@ -85,9 +85,9 @@ dependencies {
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
-    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.192")
-    runtimeOnly fg.deobf("mekanism:Mekanism:1.18.2-10.2.0.459")
-    compileOnly fg.deobf("mekanism:Mekanism:1.18.2-10.2.0.459:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.195")
+    runtimeOnly fg.deobf("mekanism:Mekanism:1.18.2-10.2.3.463")
+    compileOnly fg.deobf("mekanism:Mekanism:1.18.2-10.2.3.463:api")
     // Real examples
     //compile fileTree('libs')
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
