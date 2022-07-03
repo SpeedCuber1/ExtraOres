@@ -1,8 +1,10 @@
 package com.tylerh.extraores;
 
+import com.tylerh.extraores.Init.InitBlocks;
+import com.tylerh.extraores.Init.InitModifiers;
 import com.tylerh.extraores.Util.ConfigHandler;
 import com.tylerh.extraores.Util.ModInfo;
-import com.tylerh.extraores.World.ExOreWorldGen;
+import com.tylerh.extraores.World.ExOreWorldGenRegistration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -22,15 +24,19 @@ public class ExtraOres
         bus.addListener(this::setup);
         bus.addListener(this::clientRegistries);
         bus.register(this);
+        InitBlocks.BLOCKS.register(bus);
+        InitBlocks.ITEMS.register(bus);
+        InitModifiers.MODIFIERS.register(bus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.spec);
         ConfigHandler.loadConfig(ConfigHandler.spec, FMLPaths.CONFIGDIR.get().resolve("extraores-common.toml"));
-        MinecraftForge.EVENT_BUS.register(new ExOreWorldGen());
         MinecraftForge.EVENT_BUS.register(this);
+        InitBlocks.registerBlocks();
+        InitBlocks.registerItems();
     }
     @SubscribeEvent
     public void setup(FMLCommonSetupEvent event)
     {
-        event.enqueueWork(ExOreWorldGen::onCommonSetup);
+        event.enqueueWork(ExOreWorldGenRegistration::onCommonSetup);
     }
     private void clientRegistries(FMLClientSetupEvent event)
     {

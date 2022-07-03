@@ -2,15 +2,15 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "quartzblock",
-      "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "extraores:quartzblock"
         }
-      ]
+      ],
+      "name": "quartzblock",
+      "rolls": 1.0
     }
   ]
 }

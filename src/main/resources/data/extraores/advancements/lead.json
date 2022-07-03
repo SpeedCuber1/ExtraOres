@@ -1,24 +1,7 @@
 {
   "parent": "extraores:iridium",
-  "display": {
-    "icon": {
-      "item": "extraores:leadore"
-    },
-    "title": {
-      "translate": "Everything\u0027s Lead-Lined"
-    },
-    "description": {
-      "translate": "Mine Lead Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "lead": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Lead Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:leadore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Everything's Lead-Lined"
     }
   },
   "requirements": [

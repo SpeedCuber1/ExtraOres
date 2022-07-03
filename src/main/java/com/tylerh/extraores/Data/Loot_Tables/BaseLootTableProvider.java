@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
+import net.minecraft.data.CachedOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
@@ -40,7 +41,6 @@ public abstract class BaseLootTableProvider extends LootTableProvider
 
     private static final Logger LOGGER = LogManager.getLogger();
     private static final LootItemCondition.Builder SILK_TOUCH = MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH,MinMaxBounds.Ints.atLeast(1))));
-    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
     protected final Map<Block, LootTable.Builder> lootTables = new HashMap<>();
     private final DataGenerator generator;
     public BaseLootTableProvider(DataGenerator dataGeneratorIn)
@@ -76,7 +76,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider
                 .add(LootItem.lootTableItem(block)));
     }
     @Override
-    public void run(HashCache cache)
+    public void run(CachedOutput cache)
     {
         addTables();
 
@@ -88,7 +88,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider
         writeTables(cache, tables);
     }
 
-    private void writeTables(HashCache cache, Map<ResourceLocation, LootTable> tables)
+    private void writeTables(CachedOutput cache, Map<ResourceLocation, LootTable> tables)
     {
         Path outputFolder = this.generator.getOutputFolder();
         tables.forEach((key, lootTable) ->
@@ -96,7 +96,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider
             Path path = outputFolder.resolve("data/" + key.getNamespace() + "/loot_tables/" + key.getPath() + ".json");
             try
             {
-                DataProvider.save(GSON, cache, LootTables.serialize(lootTable), path);
+                DataProvider.saveStable(cache, LootTables.serialize(lootTable), path);
             }
             catch (IOException e)
             {

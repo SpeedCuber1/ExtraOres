@@ -1,23 +1,6 @@
 {
-  "display": {
-    "icon": {
-      "item": "minecraft:iron_ore"
-    },
-    "title": {
-      "translate": "Extra Ores"
-    },
-    "description": {
-      "translate": "Start Mining Resources"
-    },
-    "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "iron": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -26,7 +9,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Start Mining Resources"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:iron_ore"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "Extra Ores"
     }
   },
   "requirements": [

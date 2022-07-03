@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 40,
+  "experience": 0.75,
   "ingredient": {
     "tag": "forge:raw_materials/unobtainium"
   },
-  "result": "extraores:unobtainiumingot",
-  "experience": 0.75,
-  "cookingtime": 40
+  "result": "extraores:unobtainiumingot"
 }

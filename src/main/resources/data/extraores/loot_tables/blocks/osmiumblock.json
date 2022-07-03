@@ -2,15 +2,15 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "osmiumblock",
-      "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "extraores:osmiumblock"
         }
-      ]
+      ],
+      "name": "osmiumblock",
+      "rolls": 1.0
     }
   ]
 }

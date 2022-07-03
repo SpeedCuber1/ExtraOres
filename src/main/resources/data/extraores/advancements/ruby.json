@@ -1,24 +1,7 @@
 {
   "parent": "extraores:quartz",
-  "display": {
-    "icon": {
-      "item": "extraores:rubyore"
-    },
-    "title": {
-      "translate": "That\u0027s Like 50,000 Carats"
-    },
-    "description": {
-      "translate": "Mine Ruby Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "ruby": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Ruby Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:rubyore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "That's Like 50,000 Carats"
     }
   },
   "requirements": [

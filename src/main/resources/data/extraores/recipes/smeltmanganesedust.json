@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 20,
+  "experience": 0.75,
   "ingredient": {
     "tag": "forge:dusts/manganese"
   },
-  "result": "extraores:manganeseingot",
-  "experience": 0.75,
-  "cookingtime": 20
+  "result": "extraores:manganeseingot"
 }

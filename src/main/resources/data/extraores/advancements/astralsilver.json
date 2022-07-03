@@ -1,24 +1,7 @@
 {
   "parent": "extraores:angmallen",
-  "display": {
-    "icon": {
-      "item": "extraores:astralsilverore"
-    },
-    "title": {
-      "translate": "By the Power of the Stars"
-    },
-    "description": {
-      "translate": "Mine Astral Silver Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "astralsilver": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Astral Silver Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:astralsilverore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "By the Power of the Stars"
     }
   },
   "requirements": [

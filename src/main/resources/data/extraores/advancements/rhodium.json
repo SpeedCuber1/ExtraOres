@@ -1,24 +1,7 @@
 {
   "parent": "extraores:rhenium",
-  "display": {
-    "icon": {
-      "item": "extraores:rhodiumore"
-    },
-    "title": {
-      "translate": "On the Rhodium"
-    },
-    "description": {
-      "translate": "Mine Rhodium Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "rhodium": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Rhodium Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:rhodiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "On the Rhodium"
     }
   },
   "requirements": [
