@@ -1,7 +1,6 @@
 package com.tylerh.extraores;
 
 import com.tylerh.extraores.Init.InitBlocks;
-import com.tylerh.extraores.Init.InitModifiers;
 import com.tylerh.extraores.Util.ConfigHandler;
 import com.tylerh.extraores.Util.ModInfo;
 import com.tylerh.extraores.World.ExOreWorldGenRegistration;
@@ -26,7 +25,6 @@ public class ExtraOres
         bus.register(this);
         InitBlocks.BLOCKS.register(bus);
         InitBlocks.ITEMS.register(bus);
-        InitModifiers.MODIFIERS.register(bus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.spec);
         ConfigHandler.loadConfig(ConfigHandler.spec, FMLPaths.CONFIGDIR.get().resolve("extraores-common.toml"));
         MinecraftForge.EVENT_BUS.register(this);

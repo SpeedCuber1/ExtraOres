@@ -62,7 +62,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAldourite.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreAldourite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAldourite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -316,7 +316,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCeruclase.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreCeruclase.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCeruclase = new PlacedFeature(Holder.direct(feature), List.of(
@@ -536,7 +536,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreIgnatius.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreIgnatius.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureIgnatius = new PlacedFeature(Holder.direct(feature), List.of(
@@ -671,7 +671,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreKalendrite.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreKalendrite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureKalendrite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -721,7 +721,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreLemurite.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreLemurite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureLemurite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -788,7 +788,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMidasium.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreMidasium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureMidasium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1212,7 +1212,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSanguinite.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreSanguinite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureSanguinite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1245,7 +1245,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreShadowIron.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreShadowIron.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureShadowIron = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1550,7 +1550,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVulcanite.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreVulcanite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureVulcanite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1566,7 +1566,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVyroxeres.get().defaultBlockState())
+                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreVyroxeres.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureVyroxeres = new PlacedFeature(Holder.direct(feature), List.of(

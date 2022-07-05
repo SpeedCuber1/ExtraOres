@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_overworld",
+  "features": "extraores:bismuthore",
+  "step": "underground_ores"
+}

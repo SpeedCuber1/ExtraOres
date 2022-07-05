@@ -73,9 +73,9 @@ public class BlockList
     public static RegistryObject<Block> blockOreQuartz;
     public static RegistryObject<Block> blockOreRhenium;
     public static RegistryObject<Block> blockOreRhodium;
+    public static RegistryObject<Block> blockOreRubracium;
     public static RegistryObject<Block> blockOreRuby;
     public static RegistryObject<Block> blockOreRuthenium;
-    public static RegistryObject<Block> blockOreRubracium;
     public static RegistryObject<Block> blockOreSanguinite;
     public static RegistryObject<Block> blockOreSapphire;
     public static RegistryObject<Block> blockOreShadowIron;
