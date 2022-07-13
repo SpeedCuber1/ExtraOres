@@ -1,24 +1,7 @@
 {
   "parent": "extraores:aldourite",
-  "display": {
-    "icon": {
-      "item": "extraores:ceruclaseore"
-    },
-    "title": {
-      "translate": "Ceruclase City"
-    },
-    "description": {
-      "translate": "Mine Ceruclase Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "ceruclase": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Ceruclase Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:ceruclaseore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Ceruclase City"
     }
   },
   "requirements": [

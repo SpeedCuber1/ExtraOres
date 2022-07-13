@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
-  "rewards": {
-    "recipes": [
-      "extraores:oureclaseblock"
-    ]
-  },
   "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:oureclaseblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
     "oureclaseblock": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -16,13 +16,8 @@
             ]
           }
         ]
-      }
-    },
-    "has_the_recipe": {
-      "trigger": "minecraft:recipe_unlocked",
-      "conditions": {
-        "recipe": "extraores:oureclaseblock"
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
@@ -30,5 +25,10 @@
       "oureclaseblock",
       "has_the_recipe"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:oureclaseblock"
+    ]
+  }
 }

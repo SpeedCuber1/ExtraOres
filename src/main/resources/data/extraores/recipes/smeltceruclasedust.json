@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 20,
+  "experience": 0.75,
   "ingredient": {
     "tag": "forge:dusts/ceruclase"
   },
-  "result": "extraores:ceruclaseingot",
-  "experience": 0.75,
-  "cookingtime": 20
+  "result": "extraores:ceruclaseingot"
 }

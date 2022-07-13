@@ -1,24 +1,7 @@
 {
   "parent": "extraores:tartarite",
-  "display": {
-    "icon": {
-      "item": "extraores:unobtainiumore"
-    },
-    "title": {
-      "translate": "Now Even More Obtainable"
-    },
-    "description": {
-      "translate": "Mine Unobtainium Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "unobtainium": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Unobtainium Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:unobtainiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Now Even More Obtainable"
     }
   },
   "requirements": [

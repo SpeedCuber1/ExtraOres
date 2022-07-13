@@ -17,10 +17,10 @@ public class EXOreDataGen
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator generator = event.getGenerator();
-        generator.addProvider(new Advancements(generator,event.getExistingFileHelper()));
-        generator.addProvider(new ExOreRecipe(generator));
-        generator.addProvider(new ExOreBlockTag(generator, event.getExistingFileHelper()));
-        generator.addProvider(new ExOreItemTag(generator,new ExOreBlockTag(generator, event.getExistingFileHelper()),event.getExistingFileHelper()));
-        generator.addProvider(new LootTables(generator));
+        generator.addProvider(true,new Advancements(generator,event.getExistingFileHelper()));
+        generator.addProvider(true,new ExOreRecipe(generator));
+        generator.addProvider(true,new ExOreBlockTag(generator, event.getExistingFileHelper()));
+        generator.addProvider(true,new ExOreItemTag(generator,new ExOreBlockTag(generator, event.getExistingFileHelper()),event.getExistingFileHelper()));
+        generator.addProvider(true,new LootTables(generator));
     }
 }

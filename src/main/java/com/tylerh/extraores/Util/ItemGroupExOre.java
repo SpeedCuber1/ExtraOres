@@ -14,6 +14,6 @@ public class ItemGroupExOre extends CreativeModeTab
     @Override
     public ItemStack makeIcon()
     {
-        return new ItemStack(BlockList.blockOreAdamantine);
+        return new ItemStack(BlockList.blockOreAdamantine.get());
     }
 }

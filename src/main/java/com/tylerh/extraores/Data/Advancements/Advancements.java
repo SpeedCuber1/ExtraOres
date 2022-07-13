@@ -5,6 +5,7 @@ import com.google.common.collect.Sets;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.data.CachedOutput;
 import net.minecraft.data.advancements.AdvancementProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.HashCache;
@@ -23,7 +24,6 @@ import java.util.function.Consumer;
 public class Advancements extends AdvancementProvider
 {
     private final DataGenerator generator;
-    private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().create();
     private static final Logger LOGGER = LogManager.getLogger();
     private final List<Consumer<Consumer<Advancement>>> advancements = ImmutableList.of(new ExOreAdvancement());
 
@@ -34,7 +34,7 @@ public class Advancements extends AdvancementProvider
     }
 
     @Override
-    public void run(HashCache cache)
+    public void run(CachedOutput cache)
     {
         Path path = this.generator.getOutputFolder();
         Set<ResourceLocation> set = Sets.newHashSet();
@@ -50,7 +50,7 @@ public class Advancements extends AdvancementProvider
 
                 try
                 {
-                    DataProvider.save(GSON, cache, p_204017_3_.deconstruct().serializeToJson(), path1);
+                    DataProvider.saveStable(cache, p_204017_3_.deconstruct().serializeToJson(), path1);
                 }
                 catch (IOException ioexception)
                 {

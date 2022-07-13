@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 40,
+  "experience": 0.75,
   "ingredient": {
     "tag": "forge:ores/nickel"
   },
-  "result": "extraores:nickelingot",
-  "experience": 0.75,
-  "cookingtime": 40
+  "result": "extraores:nickelingot"
 }

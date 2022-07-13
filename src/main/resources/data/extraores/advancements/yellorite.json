@@ -1,24 +1,7 @@
 {
   "parent": "extraores:unobtainium",
-  "display": {
-    "icon": {
-      "item": "extraores:yelloriteore"
-    },
-    "title": {
-      "translate": "This Seems Like I Could Use It Somewhere"
-    },
-    "description": {
-      "translate": "Mine Yellorite Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "yellorite": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Yellorite Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:yelloriteore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "This Seems Like I Could Use It Somewhere"
     }
   },
   "requirements": [

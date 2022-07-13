@@ -3,2596 +3,1328 @@ package com.tylerh.extraores.Init;
 import com.tylerh.extraores.Blocks.BlockEXOre;
 import com.tylerh.extraores.Items.*;
 import com.tylerh.extraores.Util.ItemGroupExOre;
+import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InitBlocks
 {
     private static final CreativeModeTab EXORES = new ItemGroupExOre();
-    @SubscribeEvent
-    public static void registerBlocks(final RegistryEvent.Register<Block> event)
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ModInfo.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ModInfo.MOD_ID);
+    private static <T extends Block>RegistryObject<T> register(String name, Supplier<T> supplier)
+    {
+        RegistryObject<T> block = BLOCKS.register(name,supplier);
+        ITEMS.register(name, () -> new ItemBlockExOre(block.get(),EXORES));
+        return block;
+    }
+    public static void registerBlocks()
     {
         if (ConfigRegistryList.registerAdamantine.get())
         {
-            BlockList.blockOreAdamantine = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "adamantineore");
-            BlockList.blockAdamantine = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "adamantineblock");
-            BlockList.blockDeepslateOreAdamantine = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateadamantineore");
-            blockRegistry(BlockList.blockOreAdamantine, event);
-            blockRegistry(BlockList.blockDeepslateOreAdamantine,event);
-            blockRegistry(BlockList.blockAdamantine, event);
+            BlockList.blockOreAdamantine = register("adamantineore", () -> new BlockEXOre(Material.STONE, 1.5F, 1.5F));
+            BlockList.blockAdamantine = register("adamantineblock", () -> new BlockEXOre(Material.METAL, 1.5F, 1.5F));
+            BlockList.blockDeepslateOreAdamantine = register("deepslateadamantineore", () -> new BlockEXOre(Material.STONE, 1.5F, 1.5F));
         }
+
         if(ConfigRegistryList.registerAgate.get())
         {
-            BlockList.blockOreAgate = new BlockEXOre(Material.STONE,1.5F,1.5F,"agateore");
-            BlockList.blockAgate = new BlockEXOre(Material.METAL,1.5F,1.5F,"agateblock");
-            BlockList.blockDeepslateOreAgate = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateagateore");
-            blockRegistry(BlockList.blockOreAgate,event);
-            blockRegistry(BlockList.blockDeepslateOreAgate,event);
-            blockRegistry(BlockList.blockAgate,event);
+            BlockList.blockOreAgate = register("agateore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAgate = register("agateblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAgate = register("deepslateagateore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerAldourite.get())
         {
-            BlockList.blockOreAldourite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "aldouriteore");
-            BlockList.blockAldourite = new BlockEXOre(Material.METAL, 1.5F, 1.5F,"aldouriteblock");
-            blockRegistry(BlockList.blockOreAldourite, event);
-            blockRegistry(BlockList.blockAldourite, event);
+            BlockList.blockOreAldourite = register("aldouriteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAldourite = register("aldouriteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerAluminum.get())
         {
-            BlockList.blockOreAluminum = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "aluminumore");
-            BlockList.blockAluminum = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "aluminumblock");
-            BlockList.blockDeepslateOreAluminum = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatealuminumore");
-            blockRegistry(BlockList.blockOreAluminum, event);
-            blockRegistry(BlockList.blockDeepslateOreAluminum,event);
-            blockRegistry(BlockList.blockAluminum, event);
+            BlockList.blockOreAluminum = register("aluminumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAluminum = register("aluminumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAluminum = register("deepslatealuminumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerAmericium.get())
         {
-            BlockList.blockOreAmericium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "americiumore");
-            BlockList.blockAmericium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "americiumblock");
-            BlockList.blockDeepslateOreAmericium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateamericiumore");
-            blockRegistry(BlockList.blockOreAmericium, event);
-            blockRegistry(BlockList.blockDeepslateOreAmericium,event);
-            blockRegistry(BlockList.blockAmericium, event);
+            BlockList.blockOreAmericium = register("americiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAmericium = register("americiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAmericium = register("deepslateamericiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerAmethyst.get())
         {
-            BlockList.blockOreAmethyst = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "amethystore");
-            BlockList.blockAmethyst = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "amethystblock");
-            BlockList.blockDeepslateOreAmethyst = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateamethystore");
-            blockRegistry(BlockList.blockOreAmethyst, event);
-            blockRegistry(BlockList.blockDeepslateOreAmethyst,event);
-            blockRegistry(BlockList.blockAmethyst, event);
+            BlockList.blockOreAmethyst = register("amethystore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAmethyst = register("amethystblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAmethyst = register("deepslateamethystore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerAmetrine.get())
         {
-            BlockList.blockOreAmetrine = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "ametrineore");
-            BlockList.blockAmetrine = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "ametrineblock");
-            BlockList.blockDeepslateOreAmetrine = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateametrineore");
-            blockRegistry(BlockList.blockOreAmetrine, event);
-            blockRegistry(BlockList.blockDeepslateOreAmetrine,event);
-            blockRegistry(BlockList.blockAmetrine, event);
+            BlockList.blockOreAmetrine = register("ametrineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAmetrine = register("ametrineblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAmetrine = register("deepslateametrineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerAmordrine.get())
         {
-            BlockList.blockOreAmordrine = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "amordrineore");
-            BlockList.blockAmordrine = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "amordrineblock");
-            BlockList.blockDeepslateOreAmordrine = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateamordrineore");
-            blockRegistry(BlockList.blockOreAmordrine, event);
-            blockRegistry(BlockList.blockDeepslateOreAmordrine,event);
-            blockRegistry(BlockList.blockAmordrine, event);
+            BlockList.blockOreAmordrine = register("amordrineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAmordrine = register("amordrineblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAmordrine = register("deepslateamordrineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerAngmallen.get())
         {
-            BlockList.blockOreAngmallen = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "angmallenore");
-            BlockList.blockAngmallen = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "angmallenblock");
-            BlockList.blockDeepslateOreAngmallen = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateangmallenore");
-            blockRegistry(BlockList.blockOreAngmallen, event);
-            blockRegistry(BlockList.blockDeepslateOreAngmallen,event);
-            blockRegistry(BlockList.blockAngmallen, event);
+            BlockList.blockOreAngmallen = register("angmallenore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAngmallen = register("angmallenblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAngmallen = register("deepslateangmallenore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerAquamarine.get())
         {
-            BlockList.blockOreAquamarine = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "aquamarineore");
-            BlockList.blockAquamarine = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "aquamarineblock");
-            BlockList.blockDeepslateOreAquamarine = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateaquamarineore");
-            blockRegistry(BlockList.blockOreAquamarine, event);
-            blockRegistry(BlockList.blockDeepslateOreAquamarine,event);
-            blockRegistry(BlockList.blockAquamarine, event);
+            BlockList.blockOreAquamarine = register("aquamarineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAquamarine = register("aquamarineblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAquamarine = register("deepslateaquamarineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerAstralSilver.get())
         {
-            BlockList.blockOreAstralSilver = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "astralsilverore");
-            BlockList.blockAstralSilver = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "astralsilverblock");
-            BlockList.blockDeepslateOreAstralSilver = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateastralsilverore");
-            blockRegistry(BlockList.blockOreAstralSilver, event);
-            blockRegistry(BlockList.blockDeepslateOreAstralSilver,event);
-            blockRegistry(BlockList.blockAstralSilver, event);
+            BlockList.blockOreAstralSilver = register("astralsilverore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAstralSilver = register("astralsilverblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAstralSilver = register("deepslateastralsilverore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerAtlarus.get())
         {
-            BlockList.blockOreAtlarus = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "atlarusore");
-            BlockList.blockAtlarus = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "atlarusblock");
-            BlockList.blockDeepslateOreAtlarus = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateatlarusore");
-            blockRegistry(BlockList.blockOreAtlarus, event);
-            blockRegistry(BlockList.blockDeepslateOreAtlarus,event);
-            blockRegistry(BlockList.blockAtlarus, event);
+            BlockList.blockOreAtlarus = register("atlarusore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAtlarus = register("atlarusblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAtlarus = register("deepslateatlarusore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerBismuth.get())
         {
-            BlockList.blockOreBismuth = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "bismuthore");
-            BlockList.blockBismuth = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "bismuthblock");
-            BlockList.blockDeepslateOreBismuth = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatebismuthore");
-            blockRegistry(BlockList.blockOreBismuth, event);
-            blockRegistry(BlockList.blockDeepslateOreBismuth,event);
-            blockRegistry(BlockList.blockBismuth, event);
+            BlockList.blockOreBismuth = register("bismuthore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockBismuth = register("bismuthblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreBismuth = register("deepslatebismuthore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerBlackSteel.get())
         {
-            BlockList.blockOreBlackSteel = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "blacksteelore");
-            BlockList.blockBlackSteel = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "blacksteelblock");
-            BlockList.blockDeepslateOreBlackSteel = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateblacksteelore");
-            blockRegistry(BlockList.blockOreBlackSteel, event);
-            blockRegistry(BlockList.blockDeepslateOreBlackSteel,event);
-            blockRegistry(BlockList.blockBlackSteel, event);
+            BlockList.blockOreBlackSteel = register("blacksteelore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockBlackSteel = register("blacksteelblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreBlackSteel = register("deepslateblacksteelore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerCadmium.get())
         {
-            BlockList.blockOreCadmium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "cadmiumore");
-            BlockList.blockCadmium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "cadmiumblock");
-            BlockList.blockDeepslateOreCadmium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatecadmiumore");
-            blockRegistry(BlockList.blockOreCadmium, event);
-            blockRegistry(BlockList.blockDeepslateOreCadmium,event);
-            blockRegistry(BlockList.blockCadmium, event);
+            BlockList.blockOreCadmium = register("cadmiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockCadmium = register("cadmiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreCadmium = register("deepslatecadmiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerCarmot.get())
         {
-            BlockList.blockOreCarmot = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "carmotore");
-            BlockList.blockCarmot = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "carmotblock");
-            BlockList.blockDeepslateOreCarmot = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatecarmotore");
-            blockRegistry(BlockList.blockOreCarmot, event);
-            blockRegistry(BlockList.blockDeepslateOreCarmot,event);
-            blockRegistry(BlockList.blockCarmot, event);
+            BlockList.blockOreCarmot = register("carmotore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockCarmot = register("carmotblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreCarmot = register("deepslatecarmotore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerCelenegil.get())
         {
-            BlockList.blockOreCelenegil = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "celenegilore");
-            BlockList.blockCelenegil = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "celenegilblock");
-            BlockList.blockDeepslateOreCelenegil = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatecelenegilore");
-            blockRegistry(BlockList.blockOreCelenegil, event);
-            blockRegistry(BlockList.blockDeepslateOreCelenegil,event);
-            blockRegistry(BlockList.blockCelenegil, event);
+            BlockList.blockOreCelenegil = register("celenegilore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockCelenegil = register("celenegilblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreCelenegil = register("deepslatecelenegilore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerCeruclase.get())
         {
-            BlockList.blockOreCeruclase = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "ceruclaseore");
-            BlockList.blockCeruclase = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "ceruclaseblock");
-            blockRegistry(BlockList.blockOreCeruclase, event);
-            blockRegistry(BlockList.blockCeruclase, event);
+            BlockList.blockOreCeruclase = register("ceruclaseore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockCeruclase = register("ceruclaseblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerChromium.get())
         {
-            BlockList.blockOreChromium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "chromiumore");
-            BlockList.blockChromium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "chromiumblock");
-            BlockList.blockDeepslateOreChromium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatechromiumore");
-            blockRegistry(BlockList.blockOreChromium, event);
-            blockRegistry(BlockList.blockDeepslateOreChromium,event);
-            blockRegistry(BlockList.blockChromium, event);
+            BlockList.blockOreChromium = register("chromiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockChromium = register("chromiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreChromium = register("deepslatechromiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerChrysocolla.get())
         {
-            BlockList.blockOreChrysocolla = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "chrysocollaore");
-            BlockList.blockChrysocolla = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "chrysocollablock");
-            BlockList.blockDeepslateOreChrysocolla = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatechrysocollaore");
-            blockRegistry(BlockList.blockOreChrysocolla, event);
-            blockRegistry(BlockList.blockDeepslateOreChrysocolla,event);
-            blockRegistry(BlockList.blockChrysocolla, event);
+            BlockList.blockOreChrysocolla = register("chrysocollaore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockChrysocolla = register("chrysocollablock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreChrysocolla = register("deepslatechrysocollaore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerCitrine.get())
         {
-            BlockList.blockOreCitrine = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "citrineore");
-            BlockList.blockCitrine = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "citrineblock");
-            BlockList.blockDeepslateOreCitrine = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatecitrineore");
-            blockRegistry(BlockList.blockOreCitrine, event);
-            blockRegistry(BlockList.blockDeepslateOreCitrine,event);
-            blockRegistry(BlockList.blockCitrine, event);
+            BlockList.blockOreCitrine = register("citrineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockCitrine = register("citrineblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreCitrine = register("deepslatecitrineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerCobalt.get())
         {
-            BlockList.blockOreCobalt = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "cobaltore");
-            BlockList.blockCobalt = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "cobaltblock");
-            BlockList.blockDeepslateOreCobalt = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatecobaltore");
-            blockRegistry(BlockList.blockOreCobalt, event);
-            blockRegistry(BlockList.blockDeepslateOreCobalt,event);
-            blockRegistry(BlockList.blockCobalt, event);
+            BlockList.blockOreCobalt = register("cobaltore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockCobalt = register("cobaltblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreCobalt = register("deepslatecobaltore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerCopper.get())
         {
-            BlockList.blockOreCopper = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "copperore");
-            BlockList.blockCopper = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "copperblock");
-            BlockList.blockDeepslateOreCopper = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatecopperore");
-            blockRegistry(BlockList.blockOreCopper, event);
-            blockRegistry(BlockList.blockDeepslateOreCopper,event);
-            blockRegistry(BlockList.blockCopper, event);
+            BlockList.blockOreCopper = register("copperore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockCopper = register("copperblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreCopper = register("deepslatecopperore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerDeepIron.get())
         {
-            BlockList.blockOreDeepIron = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "deepironore");
-            BlockList.blockDeepIron = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "deepironblock");
-            BlockList.blockDeepslateOreDeepIron = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatedeepironore");
-            blockRegistry(BlockList.blockOreDeepIron, event);
-            blockRegistry(BlockList.blockDeepslateOreDeepIron,event);
-            blockRegistry(BlockList.blockDeepIron, event);
+            BlockList.blockOreDeepIron = register("deepironore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockDeepIron = register("deepironblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreDeepIron = register("deepslatedeepironore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerDesichalkos.get())
         {
-            BlockList.blockOreDesichalkos = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "desichalkosore");
-            BlockList.blockDesichalkos = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "desichalkosblock");
-            BlockList.blockDeepslateOreDesichalkos = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatedesichalkosore");
-            blockRegistry(BlockList.blockOreDesichalkos, event);
-            blockRegistry(BlockList.blockDeepslateOreDesichalkos,event);
-            blockRegistry(BlockList.blockDesichalkos, event);
+            BlockList.blockOreDesichalkos = register("desichalkosore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockDesichalkos = register("desichalkosblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreDesichalkos = register("deepslatedesichalkosore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerEximite.get())
         {
-            BlockList.blockOreEximite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "eximiteore");
-            BlockList.blockEximite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "eximiteblock");
-            BlockList.blockDeepslateOreEximite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateeximiteore");
-            blockRegistry(BlockList.blockOreEximite, event);
-            blockRegistry(BlockList.blockDeepslateOreEximite,event);
-            blockRegistry(BlockList.blockEximite, event);
+            BlockList.blockOreEximite = register("eximiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockEximite = register("eximiteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreEximite = register("deepslateeximiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerGallium.get())
         {
-            BlockList.blockOreGallium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "galliumore");
-            BlockList.blockGallium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "galliumblock");
-            BlockList.blockDeepslateOreGallium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslategalliumore");
-            blockRegistry(BlockList.blockOreGallium, event);
-            blockRegistry(BlockList.blockDeepslateOreGallium,event);
-            blockRegistry(BlockList.blockGallium, event);
+            BlockList.blockOreGallium = register("galliumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockGallium = register("galliumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreGallium = register("deepslategalliumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerGarnet.get())
         {
-            BlockList.blockOreGarnet = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "garnetore");
-            BlockList.blockGarnet = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "garnetblock");
-            BlockList.blockDeepslateOreGarnet = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslategarnetore");
-            blockRegistry(BlockList.blockOreGarnet, event);
-            blockRegistry(BlockList.blockDeepslateOreGarnet,event);
-            blockRegistry(BlockList.blockGarnet, event);
+            BlockList.blockOreGarnet = register("garnetore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockGarnet = register("garnetblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreGarnet = register("deepslategarnetore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerHaderoth.get())
         {
-            BlockList.blockOreHaderoth = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "haderothore");
-            BlockList.blockHaderoth = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "haderothblock");
-            BlockList.blockDeepslateOreHaderoth = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatehaderothore");
-            blockRegistry(BlockList.blockOreHaderoth, event);
-            blockRegistry(BlockList.blockDeepslateOreHaderoth,event);
-            blockRegistry(BlockList.blockHaderoth, event);
+            BlockList.blockOreHaderoth = register("haderothore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockHaderoth = register("haderothblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreHaderoth = register("deepslatehaderothore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerHepatizon.get())
         {
-            BlockList.blockOreHepatizon = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "hepatizonore");
-            BlockList.blockHepatizon = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "hepatizonblock");
-            BlockList.blockDeepslateOreHepatizon = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatehepatizonore");
-            blockRegistry(BlockList.blockOreHepatizon, event);
-            blockRegistry(BlockList.blockDeepslateOreHepatizon,event);
-            blockRegistry(BlockList.blockHepatizon, event);
+            BlockList.blockOreHepatizon = register("hepatizonore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockHepatizon = register("hepatizonblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreHepatizon = register("deepslatehepatizonore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerIgnatius.get())
         {
-            BlockList.blockOreIgnatius = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "ignatiusore");
-            BlockList.blockIgnatius = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "ignatiusblock");
-            blockRegistry(BlockList.blockOreIgnatius, event);
-            blockRegistry(BlockList.blockIgnatius, event);
+            BlockList.blockOreIgnatius = register("ignatiusore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockIgnatius = register("ignatiusblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerIndium.get())
         {
-            BlockList.blockOreIndium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "indiumore");
-            BlockList.blockIndium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "indiumblock");
-            BlockList.blockDeepslateOreIndium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateindiumore");
-            blockRegistry(BlockList.blockOreIndium, event);
-            blockRegistry(BlockList.blockDeepslateOreIndium,event);
-            blockRegistry(BlockList.blockIndium, event);
+            BlockList.blockOreIndium = register("indiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockIndium = register("indiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreIndium = register("deepslateindiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerInfuscolium.get())
         {
-            BlockList.blockOreInfuscolium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "infuscoliumore");
-            BlockList.blockInfuscolium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "infuscoliumblock");
-            BlockList.blockDeepslateOreInfuscolium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateinfuscoliumore");
-            blockRegistry(BlockList.blockOreInfuscolium, event);
-            blockRegistry(BlockList.blockDeepslateOreInfuscolium,event);
-            blockRegistry(BlockList.blockInfuscolium, event);
+            BlockList.blockOreInfuscolium = register("infuscoliumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockInfuscolium = register("infuscoliumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreInfuscolium = register("deepslateinfuscoliumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerInolashite.get())
         {
-            BlockList.blockOreInolashite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "inolashiteore");
-            BlockList.blockInolashite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "inolashiteblock");
-            BlockList.blockDeepslateOreInolashite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateinolashiteore");
-            blockRegistry(BlockList.blockOreInolashite, event);
-            blockRegistry(BlockList.blockDeepslateOreInolashite,event);
-            blockRegistry(BlockList.blockInolashite, event);
+            BlockList.blockOreInolashite = register("inolashiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockInolashite = register("inolashiteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreInolashite = register("deepslateinolashiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerIolite.get())
         {
-            BlockList.blockOreIolite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "ioliteore");
-            BlockList.blockIolite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "ioliteblock");
-            BlockList.blockDeepslateOreIolite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateioliteore");
-            blockRegistry(BlockList.blockOreIolite, event);
-            blockRegistry(BlockList.blockDeepslateOreIolite,event);
-            blockRegistry(BlockList.blockIolite, event);
+            BlockList.blockOreIolite = register("ioliteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockIolite = register("ioliteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreIolite = register("deepslateioliteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerIridium.get())
         {
-            BlockList.blockOreIridium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "iridiumore");
-            BlockList.blockIridium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "iridiumblock");
-            BlockList.blockDeepslateOreIridium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateiridiumore");
-            blockRegistry(BlockList.blockOreIridium, event);
-            blockRegistry(BlockList.blockDeepslateOreIridium,event);
-            blockRegistry(BlockList.blockIridium, event);
+            BlockList.blockOreIridium = register("iridiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockIridium = register("iridiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreIridium = register("deepslateiridiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerJade.get())
         {
-            BlockList.blockOreJade = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "jadeore");
-            BlockList.blockJade = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "jadeblock");
-            BlockList.blockDeepslateOreJade = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatejadeore");
-            blockRegistry(BlockList.blockOreJade, event);
-            blockRegistry(BlockList.blockDeepslateOreJade,event);
-            blockRegistry(BlockList.blockJade, event);
+            BlockList.blockOreJade = register("jadeore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockJade = register("jadeblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreJade = register("deepslatejadeore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerJasper.get())
         {
-            BlockList.blockOreJasper = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "jasperore");
-            BlockList.blockJasper = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "jasperblock");
-            BlockList.blockDeepslateOreJasper = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatejasperore");
-            blockRegistry(BlockList.blockOreJasper, event);
-            blockRegistry(BlockList.blockDeepslateOreJasper,event);
-            blockRegistry(BlockList.blockJasper, event);
+            BlockList.blockOreJasper = register("jasperore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockJasper = register("jasperblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreJasper = register("deepslatejasperore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerKalendrite.get())
         {
-            BlockList.blockOreKalendrite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "kalendriteore");
-            BlockList.blockKalendrite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "kalendriteblock");
-            blockRegistry(BlockList.blockOreKalendrite, event);
-            blockRegistry(BlockList.blockKalendrite, event);
+            BlockList.blockOreKalendrite = register("kalendriteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockKalendrite = register("kalendriteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerKyanite.get())
         {
-            BlockList.blockOreKyanite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "kyaniteore");
-            BlockList.blockKyanite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "kyaniteblock");
-            BlockList.blockDeepslateOreKyanite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatekyaniteore");
-            blockRegistry(BlockList.blockOreKyanite, event);
-            blockRegistry(BlockList.blockDeepslateOreKyanite,event);
-            blockRegistry(BlockList.blockKyanite, event);
+            BlockList.blockOreKyanite = register("kyaniteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockKyanite = register("kyaniteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreKyanite = register("deepslatekyaniteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerLead.get())
         {
-            BlockList.blockOreLead = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "leadore");
-            BlockList.blockLead = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "leadblock");
-            BlockList.blockDeepslateOreLead = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateleadore");
-            blockRegistry(BlockList.blockOreLead, event);
-            blockRegistry(BlockList.blockDeepslateOreLead,event);
-            blockRegistry(BlockList.blockLead, event);
+            BlockList.blockOreLead = register("leadore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockLead = register("leadblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreLead = register("deepslateleadore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerLemurite.get())
         {
-            BlockList.blockOreLemurite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "lemuriteore");
-            BlockList.blockLemurite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "lemuriteblock");
-            blockRegistry(BlockList.blockOreLemurite, event);
-            blockRegistry(BlockList.blockLemurite, event);
+            BlockList.blockOreLemurite = register("lemuriteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockLemurite = register("lemuriteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerMalachite.get())
         {
-            BlockList.blockOreMalachite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "malachiteore");
-            BlockList.blockMalachite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "malachiteblock");
-            BlockList.blockDeepslateOreMalachite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatemalachiteore");
-            blockRegistry(BlockList.blockOreMalachite, event);
-            blockRegistry(BlockList.blockDeepslateOreMalachite,event);
-            blockRegistry(BlockList.blockMalachite, event);
+            BlockList.blockOreMalachite = register("malachiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockMalachite = register("malachiteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreMalachite = register("deepslatemalachiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerManganese.get())
         {
-            BlockList.blockOreManganese = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "manganeseore");
-            BlockList.blockManganese = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "manganeseblock");
-            BlockList.blockDeepslateOreManganese = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatemanganeseore");
-            blockRegistry(BlockList.blockOreManganese, event);
-            blockRegistry(BlockList.blockDeepslateOreManganese,event);
-            blockRegistry(BlockList.blockManganese, event);
+            BlockList.blockOreManganese = register("manganeseore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockManganese = register("manganeseblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreManganese = register("deepslatemanganeseore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerMeutoite.get())
         {
-            BlockList.blockOreMeutoite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "meutoiteore");
-            BlockList.blockMeutoite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "meutoiteblock");
-            BlockList.blockDeepslateOreMeutoite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatemeutoiteore");
-            blockRegistry(BlockList.blockOreMeutoite, event);
-            blockRegistry(BlockList.blockDeepslateOreMeutoite,event);
-            blockRegistry(BlockList.blockMeutoite, event);
+            BlockList.blockOreMeutoite = register("meutoiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockMeutoite = register("meutoiteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreMeutoite = register("deepslatemeutoiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerMidasium.get())
         {
-            BlockList.blockOreMidasium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "midasiumore");
-            BlockList.blockMidasium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "midasiumblock");
-            blockRegistry(BlockList.blockOreMidasium, event);
-            blockRegistry(BlockList.blockMidasium, event);
+            BlockList.blockOreMidasium = register("midasiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockMidasium = register("midasiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerMithril.get())
         {
-            BlockList.blockOreMithril = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "mithrilore");
-            BlockList.blockMithril = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "mithrilblock");
-            BlockList.blockDeepslateOreMithril = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatemithrilore");
-            blockRegistry(BlockList.blockOreMithril, event);
-            blockRegistry(BlockList.blockDeepslateOreMithril,event);
-            blockRegistry(BlockList.blockMithril, event);
+            BlockList.blockOreMithril = register("mithrilore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockMithril = register("mithrilblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreMithril = register("deepslatemithrilore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerMolybdenum.get())
         {
-            BlockList.blockOreMolybdenum = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "molybdenumore");
-            BlockList.blockMolybdenum = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "molybdenumblock");
-            BlockList.blockDeepslateOreMolybdenum = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatemolybdenumore");
-            blockRegistry(BlockList.blockOreMolybdenum, event);
-            blockRegistry(BlockList.blockDeepslateOreMolybdenum,event);
-            blockRegistry(BlockList.blockMolybdenum, event);
+            BlockList.blockOreMolybdenum = register("molybdenumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockMolybdenum = register("molybdenumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreMolybdenum = register("deepslatemolybdenumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerNeodymium.get())
         {
-            BlockList.blockOreNeodymium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "neodymiumore");
-            BlockList.blockNeodymium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "neodymiumblock");
-            BlockList.blockDeepslateOreNeodymium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateneodymiumore");
-            blockRegistry(BlockList.blockOreNeodymium, event);
-            blockRegistry(BlockList.blockDeepslateOreNeodymium,event);
-            blockRegistry(BlockList.blockNeodymium, event);
+            BlockList.blockOreNeodymium = register("neodymiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockNeodymium = register("neodymiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreNeodymium = register("deepslateneodymiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerNeptunium.get())
         {
-            BlockList.blockOreNeptunium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "neptuniumore");
-            BlockList.blockNeptunium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "neptuniumblock");
-            BlockList.blockDeepslateOreNeptunium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateneptuniumore");
-            blockRegistry(BlockList.blockOreNeptunium, event);
-            blockRegistry(BlockList.blockDeepslateOreNeptunium,event);
-            blockRegistry(BlockList.blockNeptunium, event);
+            BlockList.blockOreNeptunium = register("neptuniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockNeptunium = register("neptuniumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreNeptunium = register("deepslateneptuniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerNickel.get())
         {
-            BlockList.blockOreNickel = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "nickelore");
-            BlockList.blockNickel = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "nickelblock");
-            BlockList.blockDeepslateOreNickel = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatenickelore");
-            blockRegistry(BlockList.blockOreNickel, event);
-            blockRegistry(BlockList.blockDeepslateOreNickel,event);
-            blockRegistry(BlockList.blockNickel, event);
+            BlockList.blockOreNickel = register("nickelore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockNickel = register("nickelblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreNickel = register("deepslatenickelore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerNiobium.get())
         {
-            BlockList.blockOreNiobium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "niobiumore");
-            BlockList.blockNiobium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "niobiumblock");
-            BlockList.blockDeepslateOreNiobium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateniobiumore");
-            blockRegistry(BlockList.blockOreNiobium, event);
-            blockRegistry(BlockList.blockDeepslateOreNiobium,event);
-            blockRegistry(BlockList.blockNiobium, event);
+            BlockList.blockOreNiobium = register("niobiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockNiobium = register("niobiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreNiobium = register("deepslateniobiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerOnyx.get())
         {
-            BlockList.blockOreOnyx = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "onyxore");
-            BlockList.blockOnyx = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "onyxblock");
-            BlockList.blockDeepslateOreOnyx = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateonyxore");
-            blockRegistry(BlockList.blockOreOnyx, event);
-            blockRegistry(BlockList.blockDeepslateOreOnyx,event);
-            blockRegistry(BlockList.blockOnyx, event);
+            BlockList.blockOreOnyx = register("onyxore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockOnyx = register("onyxblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreOnyx = register("deepslateonyxore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerOpal.get())
         {
-            BlockList.blockOreOpal = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "opalore");
-            BlockList.blockOpal = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "opalblock");
-            BlockList.blockDeepslateOreOpal = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateopalore");
-            blockRegistry(BlockList.blockOreOpal, event);
-            blockRegistry(BlockList.blockDeepslateOreOpal,event);
-            blockRegistry(BlockList.blockOpal, event);
+            BlockList.blockOreOpal = register("opalore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockOpal = register("opalblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreOpal = register("deepslateopalore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerOrichalcum.get())
         {
-            BlockList.blockOreOrichalcum = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "orichalcumore");
-            BlockList.blockOrichalcum = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "orichalcumblock");
-            BlockList.blockDeepslateOreOrichalcum = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateorichalcumore");
-            blockRegistry(BlockList.blockOreOrichalcum, event);
-            blockRegistry(BlockList.blockDeepslateOreOrichalcum,event);
-            blockRegistry(BlockList.blockOrichalcum, event);
+            BlockList.blockOreOrichalcum = register("orichalcumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockOrichalcum = register("orichalcumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreOrichalcum = register("deepslateorichalcumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerOsmium.get())
         {
-            BlockList.blockOreOsmium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "osmiumore");
-            BlockList.blockOsmium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "osmiumblock");
-            BlockList.blockDeepslateOreOsmium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateosmiumore");
-            blockRegistry(BlockList.blockOreOsmium, event);
-            blockRegistry(BlockList.blockDeepslateOreOsmium,event);
-            blockRegistry(BlockList.blockOsmium, event);
+            BlockList.blockOreOsmium = register("osmiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockOsmium = register("osmiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreOsmium = register("deepslateosmiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerOureclase.get())
         {
-            BlockList.blockOreOureclase = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "oureclaseore");
-            BlockList.blockOureclase = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "oureclaseblock");
-            BlockList.blockDeepslateOreOureclase = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateoureclaseore");
-            blockRegistry(BlockList.blockOreOureclase, event);
-            blockRegistry(BlockList.blockDeepslateOreOureclase,event);
-            blockRegistry(BlockList.blockOureclase, event);
+            BlockList.blockOreOureclase = register("oureclaseore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockOureclase = register("oureclaseblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreOureclase = register("deepslateoureclaseore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerPalladium.get())
         {
-            BlockList.blockOrePalladium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "palladiumore");
-            BlockList.blockPalladium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "palladiumblock");
-            BlockList.blockDeepslateOrePalladium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatepalladiumore");
-            blockRegistry(BlockList.blockOrePalladium, event);
-            blockRegistry(BlockList.blockDeepslateOrePalladium,event);
-            blockRegistry(BlockList.blockPalladium, event);
+            BlockList.blockOrePalladium = register("palladiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockPalladium = register("palladiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOrePalladium = register("deepslatepalladiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerPeridot.get())
         {
-            BlockList.blockOrePeridot = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "peridotore");
-            BlockList.blockPeridot = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "peridotblock");
-            BlockList.blockDeepslateOrePeridot = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateperidotore");
-            blockRegistry(BlockList.blockOrePeridot, event);
-            blockRegistry(BlockList.blockDeepslateOrePeridot,event);
-            blockRegistry(BlockList.blockPeridot, event);
+            BlockList.blockOrePeridot = register("peridotore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockPeridot = register("peridotblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOrePeridot = register("deepslateperidotore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerPhoenixite.get())
         {
-            BlockList.blockOrePhoenixite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "phoenixiteore");
-            BlockList.blockPhoenixite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "phoenixiteblock");
-            BlockList.blockDeepslateOrePhoenixite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatephoenixiteore");
-            blockRegistry(BlockList.blockOrePhoenixite, event);
-            blockRegistry(BlockList.blockDeepslateOrePhoenixite,event);
-            blockRegistry(BlockList.blockPhoenixite, event);
+            BlockList.blockOrePhoenixite = register("phoenixiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockPhoenixite = register("phoenixiteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOrePhoenixite = register("deepslatephoenixiteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerPlatinum.get())
         {
-            BlockList.blockOrePlatinum = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "platinumore");
-            BlockList.blockPlatinum = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "platinumblock");
-            BlockList.blockDeepslateOrePlatinum = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateplatinumore");
-            blockRegistry(BlockList.blockOrePlatinum, event);
-            blockRegistry(BlockList.blockDeepslateOrePlatinum,event);
-            blockRegistry(BlockList.blockPlatinum, event);
+            BlockList.blockOrePlatinum = register("platinumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockPlatinum = register("platinumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOrePlatinum = register("deepslateplatinumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerPlutonium.get())
         {
-            BlockList.blockOrePlutonium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "plutoniumore");
-            BlockList.blockPlutonium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "plutoniumblock");
-            BlockList.blockDeepslateOrePlutonium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateplutoniumore");
-            blockRegistry(BlockList.blockOrePlutonium, event);
-            blockRegistry(BlockList.blockDeepslateOrePlutonium,event);
-            blockRegistry(BlockList.blockPlutonium, event);
+            BlockList.blockOrePlutonium = register("plutoniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockPlutonium = register("plutoniumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOrePlutonium = register("deepslateplutoniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerPolonium.get())
         {
-            BlockList.blockOrePolonium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "poloniumore");
-            BlockList.blockPolonium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "poloniumblock");
-            BlockList.blockDeepslateOrePolonium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatepoloniumore");
-            blockRegistry(BlockList.blockOrePolonium, event);
-            blockRegistry(BlockList.blockDeepslateOrePolonium,event);
-            blockRegistry(BlockList.blockPolonium, event);
+            BlockList.blockOrePolonium = register("poloniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockPolonium = register("poloniumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOrePolonium = register("deepslatepoloniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerPromethium.get())
         {
-            BlockList.blockOrePromethium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "promethiumore");
-            BlockList.blockPromethium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "promethiumblock");
-            BlockList.blockDeepslateOrePromethium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatepromethiumore");
-            blockRegistry(BlockList.blockOrePromethium, event);
-            blockRegistry(BlockList.blockDeepslateOrePromethium,event);
-            blockRegistry(BlockList.blockPromethium, event);
+            BlockList.blockOrePromethium = register("promethiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockPromethium = register("promethiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOrePromethium = register("deepslatepromethiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerQuartz.get())
         {
-            BlockList.blockOreQuartz = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "quartzore");
-            BlockList.blockQuartz = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "quartzblock");
-            BlockList.blockDeepslateOreQuartz = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatequartzore");
-            blockRegistry(BlockList.blockOreQuartz, event);
-            blockRegistry(BlockList.blockDeepslateOreQuartz,event);
-            blockRegistry(BlockList.blockQuartz, event);
+            BlockList.blockOreQuartz = register("quartzore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockQuartz = register("quartzblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreQuartz = register("deepslatequartzore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerRhenium.get())
         {
-            BlockList.blockOreRhenium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "rheniumore");
-            BlockList.blockRhenium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "rheniumblock");
-            BlockList.blockDeepslateOreRhenium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslaterheniumore");
-            blockRegistry(BlockList.blockOreRhenium, event);
-            blockRegistry(BlockList.blockDeepslateOreRhenium,event);
-            blockRegistry(BlockList.blockRhenium, event);
+            BlockList.blockOreRhenium = register("rheniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockRhenium = register("rheniumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreRhenium = register("deepslaterheniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerRhodium.get())
         {
-            BlockList.blockOreRhodium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "rhodiumore");
-            BlockList.blockRhodium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "rhodiumblock");
-            BlockList.blockDeepslateOreRhodium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslaterhodiumore");
-            blockRegistry(BlockList.blockOreRhodium, event);
-            blockRegistry(BlockList.blockDeepslateOreRhodium,event);
-            blockRegistry(BlockList.blockRhodium, event);
+            BlockList.blockOreRhodium = register("rhodiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockRhodium = register("rhodiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreRhodium = register("deepslaterhodiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerRubracium.get())
         {
-            BlockList.blockOreRubracium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "rubraciumore");
-            BlockList.blockRubracium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "rubraciumblock");
-            BlockList.blockDeepslateOreRubracium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslaterubraciumore");
-            blockRegistry(BlockList.blockOreRubracium, event);
-            blockRegistry(BlockList.blockDeepslateOreRubracium,event);
-            blockRegistry(BlockList.blockRubracium, event);
+            BlockList.blockOreRubracium = register("rubraciumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockRubracium = register("rubraciumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreRubracium = register("deepslaterubraciumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerRuby.get())
         {
-            BlockList.blockOreRuby = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "rubyore");
-            BlockList.blockRuby = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "rubyblock");
-            BlockList.blockDeepslateOreRuby = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslaterubyore");
-            blockRegistry(BlockList.blockOreRuby, event);
-            blockRegistry(BlockList.blockDeepslateOreRuby,event);
-            blockRegistry(BlockList.blockRuby, event);
+            BlockList.blockOreRuby = register("rubyore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockRuby = register("rubyblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreRuby = register("deepslaterubyore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerRuthenium.get())
         {
-            BlockList.blockOreRuthenium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "rutheniumore");
-            BlockList.blockRuthenium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "rutheniumblock");
-            BlockList.blockDeepslateOreRuthenium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslaterutheniumore");
-            blockRegistry(BlockList.blockOreRuthenium, event);
-            blockRegistry(BlockList.blockDeepslateOreRuthenium,event);
-            blockRegistry(BlockList.blockRuthenium, event);
+            BlockList.blockOreRuthenium = register("rutheniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockRuthenium = register("rutheniumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreRuthenium = register("deepslaterutheniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerSanguinite.get())
         {
-            BlockList.blockOreSanguinite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "sanguiniteore");
-            BlockList.blockSanguinite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "sanguiniteblock");
-            blockRegistry(BlockList.blockOreSanguinite, event);
-            blockRegistry(BlockList.blockSanguinite, event);
+            BlockList.blockOreSanguinite = register("sanguiniteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockSanguinite = register("sanguiniteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerSapphire.get())
         {
-            BlockList.blockOreSapphire = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "sapphireore");
-            BlockList.blockSapphire = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "sapphireblock");
-            BlockList.blockDeepslateOreSapphire = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatesapphireore");
-            blockRegistry(BlockList.blockOreSapphire, event);
-            blockRegistry(BlockList.blockDeepslateOreSapphire,event);
-            blockRegistry(BlockList.blockSapphire, event);
+            BlockList.blockOreSapphire = register("sapphireore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockSapphire = register("sapphireblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreSapphire = register("deepslatesapphireore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerShadowIron.get())
         {
-            BlockList.blockOreShadowIron = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "shadowironore");
-            BlockList.blockShadowIron = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "shadowironblock");
-            blockRegistry(BlockList.blockOreShadowIron, event);
-            blockRegistry(BlockList.blockShadowIron, event);
+            BlockList.blockOreShadowIron = register("shadowironore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockShadowIron = register("shadowironblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerSilver.get())
         {
-            BlockList.blockOreSilver = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "silverore");
-            BlockList.blockSilver = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "silverblock");
-            BlockList.blockDeepslateOreSilver = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatesilverore");
-            blockRegistry(BlockList.blockOreSilver, event);
-            blockRegistry(BlockList.blockDeepslateOreSilver,event);
-            blockRegistry(BlockList.blockSilver, event);
+            BlockList.blockOreSilver = register("silverore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockSilver = register("silverblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreSilver = register("deepslatesilverore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerSpinel.get())
         {
-            BlockList.blockOreSpinel = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "spinelore");
-            BlockList.blockSpinel = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "spinelblock");
-            BlockList.blockDeepslateOreSpinel = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatespinelore");
-            blockRegistry(BlockList.blockOreSpinel, event);
-            blockRegistry(BlockList.blockDeepslateOreSpinel,event);
-            blockRegistry(BlockList.blockSpinel, event);
+            BlockList.blockOreSpinel = register("spinelore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockSpinel = register("spinelblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreSpinel = register("deepslatespinelore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerSugilite.get())
         {
-            BlockList.blockOreSugilite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "sugiliteore");
-            BlockList.blockSugilite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "sugiliteblock");
-            BlockList.blockDeepslateOreSugilite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatesugiliteore");
-            blockRegistry(BlockList.blockOreSugilite, event);
-            blockRegistry(BlockList.blockDeepslateOreSugilite,event);
-            blockRegistry(BlockList.blockSugilite, event);
+            BlockList.blockOreSugilite = register("sugiliteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockSugilite = register("sugiliteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreSugilite = register("deepslatesugiliteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTantalum.get())
         {
-            BlockList.blockOreTantalum = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "tantalumore");
-            BlockList.blockTantalum = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "tantalumblock");
-            BlockList.blockDeepslateOreTantalum = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetantalumore");
-            blockRegistry(BlockList.blockOreTantalum, event);
-            blockRegistry(BlockList.blockDeepslateOreTantalum,event);
-            blockRegistry(BlockList.blockTantalum, event);
+            BlockList.blockOreTantalum = register("tantalumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTantalum = register("tantalumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTantalum = register("deepslatetantalumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTanzanite.get())
         {
-            BlockList.blockOreTanzanite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "tanzaniteore");
-            BlockList.blockTanzanite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "tanzaniteblock");
-            BlockList.blockDeepslateOreTanzanite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetanzaniteore");
-            blockRegistry(BlockList.blockOreTanzanite, event);
-            blockRegistry(BlockList.blockDeepslateOreTanzanite,event);
-            blockRegistry(BlockList.blockTanzanite, event);
+            BlockList.blockOreTanzanite = register("tanzaniteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTanzanite = register("tanzaniteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTanzanite = register("deepslatetanzaniteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTartarite.get())
         {
-            BlockList.blockOreTartarite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "tartariteore");
-            BlockList.blockTartarite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "tartariteblock");
-            BlockList.blockDeepslateOreTartarite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetartariteore");
-            blockRegistry(BlockList.blockOreTartarite, event);
-            blockRegistry(BlockList.blockDeepslateOreTartarite,event);
-            blockRegistry(BlockList.blockTartarite, event);
+            BlockList.blockOreTartarite = register("tartariteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTartarite = register("tartariteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTartarite = register("deepslatetartariteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerTechnetium.get())
         {
-            BlockList.blockOreTechnetium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "technetiumore");
-            BlockList.blockTechnetium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "technetiumblock");
-            BlockList.blockDeepslateOreTechnetium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetechnetiumore");
-            blockRegistry(BlockList.blockOreTechnetium, event);
-            blockRegistry(BlockList.blockDeepslateOreTechnetium,event);
-            blockRegistry(BlockList.blockTechnetium, event);
+            BlockList.blockOreTechnetium = register("technetiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTechnetium = register("technetiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTechnetium = register("deepslatetechnetiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerThallium.get())
         {
-            BlockList.blockOreThallium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "thalliumore");
-            BlockList.blockThallium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "thalliumblock");
-            BlockList.blockDeepslateOreThallium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatethalliumore");
-            blockRegistry(BlockList.blockOreThallium, event);
-            blockRegistry(BlockList.blockDeepslateOreThallium,event);
-            blockRegistry(BlockList.blockThallium, event);
+            BlockList.blockOreThallium = register("thalliumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockThallium = register("thalliumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreThallium = register("deepslatethalliumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerTin.get())
         {
-            BlockList.blockOreTin = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "tinore");
-            BlockList.blockTin = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "tinblock");
-            BlockList.blockDeepslateOreTin = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetinore");
-            blockRegistry(BlockList.blockOreTin, event);
-            blockRegistry(BlockList.blockDeepslateOreTin,event);
-            blockRegistry(BlockList.blockTin, event);
+            BlockList.blockOreTin = register("tinore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTin = register("tinblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTin = register("deepslatetinore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerTitanium.get())
         {
-            BlockList.blockOreTitanium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "titaniumore");
-            BlockList.blockTitanium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "titaniumblock");
-            BlockList.blockDeepslateOreTitanium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetitaniumore");
-            blockRegistry(BlockList.blockOreTitanium, event);
-            blockRegistry(BlockList.blockDeepslateOreTitanium,event);
-            blockRegistry(BlockList.blockTitanium, event);
+            BlockList.blockOreTitanium = register("titaniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTitanium = register("titaniumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTitanium = register("deepslatetitaniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTopaz.get())
         {
-            BlockList.blockOreTopaz = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "topazore");
-            BlockList.blockTopaz = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "topazblock");
-            BlockList.blockDeepslateOreTopaz = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetopazore");
-            blockRegistry(BlockList.blockOreTopaz, event);
-            blockRegistry(BlockList.blockDeepslateOreTopaz,event);
-            blockRegistry(BlockList.blockTopaz, event);
+            BlockList.blockOreTopaz = register("topazore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTopaz = register("topazblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTopaz = register("deepslatetopazore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTourmaline.get())
         {
-            BlockList.blockOreTourmaline = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "tourmalineore");
-            BlockList.blockTourmaline = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "tourmalineblock");
-            BlockList.blockDeepslateOreTourmaline = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetourmalineore");
-            blockRegistry(BlockList.blockOreTourmaline, event);
-            blockRegistry(BlockList.blockDeepslateOreTourmaline,event);
-            blockRegistry(BlockList.blockTourmaline, event);
+            BlockList.blockOreTourmaline = register("tourmalineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTourmaline = register("tourmalineblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTourmaline = register("deepslatetourmalineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerTungsten.get())
         {
-            BlockList.blockOreTungsten = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "tungstenore");
-            BlockList.blockTungsten = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "tungstenblock");
-            BlockList.blockDeepslateOreTungsten = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatetungstenore");
-            blockRegistry(BlockList.blockOreTungsten, event);
-            blockRegistry(BlockList.blockDeepslateOreTungsten,event);
-            blockRegistry(BlockList.blockTungsten, event);
+            BlockList.blockOreTungsten = register("tungstenore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTungsten = register("tungstenblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTungsten = register("deepslatetungstenore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTurquoise.get())
         {
-            BlockList.blockOreTurquoise = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "turquoiseore");
-            BlockList.blockTurquoise = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "turquoiseblock");
-            BlockList.blockDeepslateOreTurquoise = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateturquoiseore");
-            blockRegistry(BlockList.blockOreTurquoise, event);
-            blockRegistry(BlockList.blockDeepslateOreTurquoise,event);
-            blockRegistry(BlockList.blockTurquoise, event);
+            BlockList.blockOreTurquoise = register("turquoiseore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTurquoise = register("turquoiseblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTurquoise = register("deepslateturquoiseore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerUnobtainium.get())
         {
-            BlockList.blockOreUnobtainium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "unobtainiumore");
-            BlockList.blockUnobtainium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "unobtainiumblock");
-            BlockList.blockDeepslateOreUnobtainium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateunobtainiumore");
-            blockRegistry(BlockList.blockOreUnobtainium, event);
-            blockRegistry(BlockList.blockDeepslateOreUnobtainium,event);
-            blockRegistry(BlockList.blockUnobtainium, event);
+            BlockList.blockOreUnobtainium = register("unobtainiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockUnobtainium = register("unobtainiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreUnobtainium = register("deepslateunobtainiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerUranium.get())
         {
-            BlockList.blockOreUranium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "uraniumore");
-            BlockList.blockUranium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "uraniumblock");
-            BlockList.blockDeepslateOreUranium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateuraniumore");
-            blockRegistry(BlockList.blockOreUranium, event);
-            blockRegistry(BlockList.blockDeepslateOreUranium,event);
-            blockRegistry(BlockList.blockUranium, event);
+            BlockList.blockOreUranium = register("uraniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockUranium = register("uraniumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreUranium = register("deepslateuraniumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerVanadium.get())
         {
-            BlockList.blockOreVanadium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "vanadiumore");
-            BlockList.blockVanadium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "vanadiumblock");
-            BlockList.blockDeepslateOreVanadium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatevanadiumore");
-            blockRegistry(BlockList.blockOreVanadium, event);
-            blockRegistry(BlockList.blockDeepslateOreVanadium,event);
-            blockRegistry(BlockList.blockVanadium, event);
+            BlockList.blockOreVanadium = register("vanadiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockVanadium = register("vanadiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreVanadium = register("deepslatevanadiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerVulcanite.get())
         {
-            BlockList.blockOreVulcanite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "vulcaniteore");
-            BlockList.blockVulcanite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "vulcaniteblock");
-            blockRegistry(BlockList.blockOreVulcanite, event);
-            blockRegistry(BlockList.blockVulcanite, event);
+            BlockList.blockOreVulcanite = register("vulcaniteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockVulcanite = register("vulcaniteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerVyroxeres.get())
         {
-            BlockList.blockOreVyroxeres = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "vyroxeresore");
-            BlockList.blockVyroxeres = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "vyroxeresblock");
-            blockRegistry(BlockList.blockOreVyroxeres, event);
-            blockRegistry(BlockList.blockVyroxeres, event);
+            BlockList.blockOreVyroxeres = register("vyroxeresore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockVyroxeres = register("vyroxeresblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
         }
         if(ConfigRegistryList.registerYellorite.get())
         {
-            BlockList.blockOreYellorite = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "yelloriteore");
-            BlockList.blockYellorite = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "yelloriteblock");
-            BlockList.blockDeepslateOreYellorite = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslateyelloriteore");
-            blockRegistry(BlockList.blockOreYellorite, event);
-            blockRegistry(BlockList.blockDeepslateOreYellorite,event);
-            blockRegistry(BlockList.blockYellorite, event);
+            BlockList.blockOreYellorite = register("yelloriteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockYellorite = register("yelloriteblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreYellorite = register("deepslateyelloriteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerZinc.get())
         {
-            BlockList.blockOreZinc = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "zincore");
-            BlockList.blockZinc = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "zincblock");
-            BlockList.blockDeepslateOreZinc = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatezincore");
-            blockRegistry(BlockList.blockOreZinc, event);
-            blockRegistry(BlockList.blockDeepslateOreZinc,event);
-            blockRegistry(BlockList.blockZinc, event);
+            BlockList.blockOreZinc = register("zincore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockZinc = register("zincblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreZinc = register("deepslatezincore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
         if (ConfigRegistryList.registerZirconium.get())
         {
-            BlockList.blockOreZirconium = new BlockEXOre(Material.STONE, 1.5F, 1.5F, "zirconiumore");
-            BlockList.blockZirconium = new BlockEXOre(Material.METAL, 1.5F, 1.5F, "zirconiumblock");
-            BlockList.blockDeepslateOreZirconium = new BlockEXOre(Material.STONE,1.5F,1.5F,"deepslatezirconiumore");
-            blockRegistry(BlockList.blockOreZirconium, event);
-            blockRegistry(BlockList.blockDeepslateOreZirconium,event);
-            blockRegistry(BlockList.blockZirconium, event);
+            BlockList.blockOreZirconium = register("zirconiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockZirconium = register("zirconiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreZirconium = register("deepslatezirconiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
         }
     }
 
-    @SubscribeEvent
-    public static void registerItems(final RegistryEvent.Register<Item> event)
+    public static void registerItems()
     {
         if (ConfigRegistryList.registerAdamantine.get())
         {
-            ItemList.itemIngotAdamantine = new ItemEXOre(EXORES, "adamantineingot");
-            ItemList.itemDustAdamantine = new ItemEXOre(EXORES, "adamantinedust");
-            ItemList.itemShardAdamantine = new ItemEXOre(EXORES,"adamantineshard");
-            ItemList.itemClumpAdamantine = new ItemEXOre(EXORES,"adamantineclump");
-            ItemList.itemDirtyDustAdamantine = new ItemEXOre(EXORES,"adamantinedirtydust");
-            ItemList.itemRawAdamantine = new ItemEXOre(EXORES,"rawadamantine");
-            ItemBlockList.itemBlockOreAdamantine = new ItemBlockExOre(BlockList.blockOreAdamantine, EXORES);
-            ItemBlockList.itemBlockDeepslateOreAdamantine = new ItemBlockExOre(BlockList.blockDeepslateOreAdamantine,EXORES);
-            ItemBlockList.itemBlockAdamantine = new ItemBlockExOre(BlockList.blockAdamantine, EXORES);
-            itemRegistry(ItemList.itemIngotAdamantine, event);
-            itemRegistry(ItemList.itemDustAdamantine, event);
-            itemRegistry(ItemList.itemShardAdamantine,event);
-            itemRegistry(ItemList.itemClumpAdamantine,event);
-            itemRegistry(ItemList.itemDirtyDustAdamantine,event);
-            itemRegistry(ItemList.itemRawAdamantine,event);
-            itemRegistry(ItemBlockList.itemBlockOreAdamantine, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAdamantine,event);
-            itemRegistry(ItemBlockList.itemBlockAdamantine, event);
+            ItemList.itemIngotAdamantine = ITEMS.register("adamantineingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustAdamantine = ITEMS.register("adamantinedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardAdamantine = ITEMS.register("adamantineshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpAdamantine = ITEMS.register("adamantineclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustAdamantine = ITEMS.register("adamantinedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawAdamantine = ITEMS.register("rawadamantine", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerAgate.get())
+        
+        if (ConfigRegistryList.registerAgate.get())
         {
-            ItemList.itemGemAgate = new ItemEXOre(EXORES,"agate");
-            ItemBlockList.itemBlockOreAgate = new ItemBlockExOre(BlockList.blockOreAgate,EXORES);
-            ItemBlockList.itemBlockDeepslateOreAgate = new ItemBlockExOre(BlockList.blockDeepslateOreAgate,EXORES);
-            ItemBlockList.itemBlockAgate = new ItemBlockExOre(BlockList.blockAgate,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreAgate,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAgate,event);
-            itemRegistry(ItemBlockList.itemBlockAgate,event);
-            itemRegistry(ItemList.itemGemAgate,event);
+            ItemList.itemGemAgate = ITEMS.register("agate", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerAldourite.get())
         {
-            ItemList.itemIngotAldourite = new ItemEXOre(EXORES, "aldouriteingot");
-            ItemList.itemDustAldourite = new ItemEXOre(EXORES, "aldouritedust");
-            ItemList.itemShardAldourite = new ItemEXOre(EXORES,"aldouriteshard");
-            ItemList.itemClumpAldourite = new ItemEXOre(EXORES,"aldouriteclump");
-            ItemList.itemDirtyDustAldourite = new ItemEXOre(EXORES,"aldouritedirtydust");
-            ItemList.itemRawAldourite = new ItemEXOre(EXORES,"rawaldourite");
-            ItemBlockList.itemBlockOreAldourite = new ItemBlockExOre(BlockList.blockOreAldourite, EXORES);
-            ItemBlockList.itemBlockAldourite = new ItemBlockExOre(BlockList.blockAldourite, EXORES);
-            itemRegistry(ItemList.itemIngotAldourite, event);
-            itemRegistry(ItemList.itemDustAldourite, event);
-            itemRegistry(ItemList.itemShardAldourite,event);
-            itemRegistry(ItemList.itemClumpAldourite,event);
-            itemRegistry(ItemList.itemDirtyDustAldourite,event);
-            itemRegistry(ItemList.itemRawAldourite,event);
-            itemRegistry(ItemBlockList.itemBlockOreAldourite, event);
-            itemRegistry(ItemBlockList.itemBlockAldourite, event);
+            ItemList.itemIngotAldourite = ITEMS.register("aldouriteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustAldourite = ITEMS.register("aldouritedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardAldourite = ITEMS.register("aldouriteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpAldourite = ITEMS.register("aldouriteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustAldourite = ITEMS.register("aldouritedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawAldourite = ITEMS.register("rawaldourite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerAluminum.get())
         {
-            ItemList.itemIngotAluminum = new ItemEXOre(EXORES, "aluminumingot");
-            ItemList.itemDustAluminum = new ItemEXOre(EXORES, "aluminumdust");
-            ItemList.itemShardAluminum = new ItemEXOre(EXORES,"aluminumshard");
-            ItemList.itemClumpAluminum = new ItemEXOre(EXORES,"aluminumclump");
-            ItemList.itemDirtyDustAluminum = new ItemEXOre(EXORES,"aluminumdirtydust");
-            ItemList.itemRawAluminum = new ItemEXOre(EXORES,"rawaluminum");
-            ItemBlockList.itemBlockOreAluminum = new ItemBlockExOre(BlockList.blockOreAluminum, EXORES);
-            ItemBlockList.itemBlockDeepslateOreAluminum = new ItemBlockExOre(BlockList.blockDeepslateOreAluminum,EXORES);
-            ItemBlockList.itemBlockAluminum = new ItemBlockExOre(BlockList.blockAluminum, EXORES);
-            itemRegistry(ItemList.itemIngotAluminum, event);
-            itemRegistry(ItemList.itemDustAluminum, event);
-            itemRegistry(ItemList.itemShardAluminum,event);
-            itemRegistry(ItemList.itemClumpAluminum,event);
-            itemRegistry(ItemList.itemDirtyDustAluminum,event);
-            itemRegistry(ItemList.itemRawAluminum,event);
-            itemRegistry(ItemBlockList.itemBlockOreAluminum, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAluminum,event);
-            itemRegistry(ItemBlockList.itemBlockAluminum, event);
+            ItemList.itemIngotAluminum = ITEMS.register("aluminumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustAluminum = ITEMS.register("aluminumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardAluminum = ITEMS.register("aluminumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpAluminum = ITEMS.register("aluminumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustAluminum = ITEMS.register("aluminumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawAluminum = ITEMS.register("rawaluminum", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerAmericium.get())
+        if (ConfigRegistryList.registerAmericium.get())
         {
-            ItemList.itemIngotAmericium = new ItemEXOre(EXORES, "americiumingot");
-            ItemList.itemDustAmericium = new ItemEXOre(EXORES, "americiumdust");
-            ItemList.itemShardAmericium = new ItemEXOre(EXORES,"americiumshard");
-            ItemList.itemClumpAmericium = new ItemEXOre(EXORES,"americiumclump");
-            ItemList.itemDirtyDustAmericium = new ItemEXOre(EXORES,"americiumdirtydust");
-            ItemList.itemRawAmericium = new ItemEXOre(EXORES,"rawamericium");
-            ItemBlockList.itemBlockOreAmericium = new ItemBlockExOre(BlockList.blockOreAmericium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreAmericium = new ItemBlockExOre(BlockList.blockDeepslateOreAmericium,EXORES);
-            ItemBlockList.itemBlockAmericium = new ItemBlockExOre(BlockList.blockAmericium, EXORES);
-            itemRegistry(ItemList.itemIngotAmericium, event);
-            itemRegistry(ItemList.itemDustAmericium, event);
-            itemRegistry(ItemList.itemShardAmericium,event);
-            itemRegistry(ItemList.itemClumpAmericium,event);
-            itemRegistry(ItemList.itemDirtyDustAmericium,event);
-            itemRegistry(ItemList.itemRawAmericium,event);
-            itemRegistry(ItemBlockList.itemBlockOreAmericium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAmericium,event);
-            itemRegistry(ItemBlockList.itemBlockAmericium, event);
+            ItemList.itemIngotAmericium = ITEMS.register("americiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustAmericium = ITEMS.register("americiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardAmericium = ITEMS.register("americiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpAmericium = ITEMS.register("americiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustAmericium = ITEMS.register("americiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawAmericium = ITEMS.register("rawamericium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerAmethyst.get())
+        if (ConfigRegistryList.registerAmethyst.get())
         {
-            ItemList.itemGemAmethyst = new ItemEXOre(EXORES,"amethyst");
-            ItemBlockList.itemBlockOreAmethyst = new ItemBlockExOre(BlockList.blockOreAmethyst,EXORES);
-            ItemBlockList.itemBlockDeepslateOreAmethyst = new ItemBlockExOre(BlockList.blockDeepslateOreAmethyst,EXORES);
-            ItemBlockList.itemBlockAmethyst = new ItemBlockExOre(BlockList.blockAmethyst,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreAmethyst,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAmethyst,event);
-            itemRegistry(ItemBlockList.itemBlockAmethyst,event);
-            itemRegistry(ItemList.itemGemAmethyst,event);
+            ItemList.itemGemAmethyst = ITEMS.register("amethyst", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerAmetrine.get())
+        if (ConfigRegistryList.registerAmetrine.get())
         {
-            ItemList.itemGemAmetrine = new ItemEXOre(EXORES,"ametrine");
-            ItemBlockList.itemBlockOreAmetrine = new ItemBlockExOre(BlockList.blockOreAmetrine,EXORES);
-            ItemBlockList.itemBlockDeepslateOreAmetrine = new ItemBlockExOre(BlockList.blockDeepslateOreAmetrine,EXORES);
-            ItemBlockList.itemBlockAmetrine = new ItemBlockExOre(BlockList.blockAmetrine,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreAmetrine,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAmetrine,event);
-            itemRegistry(ItemBlockList.itemBlockAmetrine,event);
-            itemRegistry(ItemList.itemGemAmetrine,event);
+            ItemList.itemGemAmetrine = ITEMS.register("ametrine", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerAmordrine.get())
         {
-            ItemList.itemIngotAmordrine = new ItemEXOre(EXORES, "amordrineingot");
-            ItemList.itemDustAmordrine = new ItemEXOre(EXORES, "amordrinedust");
-            ItemList.itemShardAmordrine = new ItemEXOre(EXORES,"amordrineshard");
-            ItemList.itemClumpAmordrine = new ItemEXOre(EXORES,"amordrineclump");
-            ItemList.itemDirtyDustAmordrine = new ItemEXOre(EXORES,"amordrinedirtydust");
-            ItemList.itemRawAmordrine = new ItemEXOre(EXORES,"rawamordrine");
-            ItemBlockList.itemBlockOreAmordrine = new ItemBlockExOre(BlockList.blockOreAmordrine, EXORES);
-            ItemBlockList.itemBlockDeepslateOreAmordrine = new ItemBlockExOre(BlockList.blockDeepslateOreAmordrine,EXORES);
-            ItemBlockList.itemBlockAmordrine = new ItemBlockExOre(BlockList.blockAmordrine, EXORES);
-            itemRegistry(ItemList.itemIngotAmordrine, event);
-            itemRegistry(ItemList.itemDustAmordrine, event);
-            itemRegistry(ItemList.itemShardAmordrine,event);
-            itemRegistry(ItemList.itemClumpAmordrine,event);
-            itemRegistry(ItemList.itemDirtyDustAmordrine,event);
-            itemRegistry(ItemList.itemRawAmordrine,event);
-            itemRegistry(ItemBlockList.itemBlockOreAmordrine, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAmordrine,event);
-            itemRegistry(ItemBlockList.itemBlockAmordrine, event);
+            ItemList.itemIngotAmordrine = ITEMS.register("amordrineingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustAmordrine = ITEMS.register("amordrinedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardAmordrine = ITEMS.register("amordrineshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpAmordrine = ITEMS.register("amordrineclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustAmordrine = ITEMS.register("amordrinedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawAmordrine = ITEMS.register("rawamordrine", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerAngmallen.get())
         {
-            ItemList.itemIngotAngmallen = new ItemEXOre(EXORES, "angmalleningot");
-            ItemList.itemDustAngmallen = new ItemEXOre(EXORES, "angmallendust");
-            ItemList.itemShardAngmallen = new ItemEXOre(EXORES,"angmallenshard");
-            ItemList.itemClumpAngmallen = new ItemEXOre(EXORES,"angmallenclump");
-            ItemList.itemDirtyDustAngmallen = new ItemEXOre(EXORES,"angmallendirtydust");
-            ItemList.itemRawAngmallen = new ItemEXOre(EXORES,"rawangmallen");
-            ItemBlockList.itemBlockOreAngmallen = new ItemBlockExOre(BlockList.blockOreAngmallen, EXORES);
-            ItemBlockList.itemBlockDeepslateOreAngmallen = new ItemBlockExOre(BlockList.blockDeepslateOreAngmallen,EXORES);
-            ItemBlockList.itemBlockAngmallen = new ItemBlockExOre(BlockList.blockAngmallen, EXORES);
-            itemRegistry(ItemList.itemIngotAngmallen, event);
-            itemRegistry(ItemList.itemDustAngmallen, event);
-            itemRegistry(ItemList.itemShardAngmallen,event);
-            itemRegistry(ItemList.itemClumpAngmallen,event);
-            itemRegistry(ItemList.itemDirtyDustAngmallen,event);
-            itemRegistry(ItemList.itemRawAngmallen,event);
-            itemRegistry(ItemBlockList.itemBlockOreAngmallen, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAngmallen,event);
-            itemRegistry(ItemBlockList.itemBlockAngmallen, event);
+            ItemList.itemIngotAngmallen = ITEMS.register("angmalleningot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustAngmallen = ITEMS.register("angmallendust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardAngmallen = ITEMS.register("angmallenshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpAngmallen = ITEMS.register("angmallenclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustAngmallen = ITEMS.register("angmallendirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawAngmallen = ITEMS.register("rawangmallen", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerAquamarine.get())
+        if (ConfigRegistryList.registerAquamarine.get())
         {
-            ItemList.itemGemAquamarine = new ItemEXOre(EXORES,"aquamarine");
-            ItemBlockList.itemBlockOreAquamarine = new ItemBlockExOre(BlockList.blockOreAquamarine,EXORES);
-            ItemBlockList.itemBlockDeepslateOreAquamarine = new ItemBlockExOre(BlockList.blockDeepslateOreAquamarine,EXORES);
-            ItemBlockList.itemBlockAquamarine = new ItemBlockExOre(BlockList.blockAquamarine,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreAquamarine,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAquamarine,event);
-            itemRegistry(ItemBlockList.itemBlockAquamarine,event);
-            itemRegistry(ItemList.itemGemAquamarine,event);
+            ItemList.itemGemAquamarine = ITEMS.register("aquamarine", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerAstralSilver.get())
         {
-            ItemList.itemIngotAstralSilver = new ItemEXOre(EXORES, "astralsilveringot");
-            ItemList.itemDustAstralSilver = new ItemEXOre(EXORES, "astralsilverdust");
-            ItemList.itemShardAstralSilver = new ItemEXOre(EXORES,"astralsilvershard");
-            ItemList.itemClumpAstralSilver = new ItemEXOre(EXORES,"astralsilverclump");
-            ItemList.itemDirtyDustAstralSilver = new ItemEXOre(EXORES,"astralsilverdirtydust");
-            ItemList.itemRawAstralSilver = new ItemEXOre(EXORES,"rawastralsilver");
-            ItemBlockList.itemBlockOreAstralSilver = new ItemBlockExOre(BlockList.blockOreAstralSilver, EXORES);
-            ItemBlockList.itemBlockDeepslateOreAstralSilver = new ItemBlockExOre(BlockList.blockDeepslateOreAstralSilver,EXORES);
-            ItemBlockList.itemBlockAstralSilver = new ItemBlockExOre(BlockList.blockAstralSilver, EXORES);
-            itemRegistry(ItemList.itemIngotAstralSilver, event);
-            itemRegistry(ItemList.itemDustAstralSilver, event);
-            itemRegistry(ItemList.itemShardAstralSilver,event);
-            itemRegistry(ItemList.itemClumpAstralSilver,event);
-            itemRegistry(ItemList.itemDirtyDustAstralSilver,event);
-            itemRegistry(ItemList.itemRawAstralSilver,event);
-            itemRegistry(ItemBlockList.itemBlockOreAstralSilver, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAstralSilver,event);
-            itemRegistry(ItemBlockList.itemBlockAstralSilver, event);
+            ItemList.itemIngotAstralSilver = ITEMS.register("astralsilveringot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustAstralSilver = ITEMS.register("astralsilverdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardAstralSilver = ITEMS.register("astralsilvershard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpAstralSilver = ITEMS.register("astralsilverclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustAstralSilver = ITEMS.register("astralsilverdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawAstralSilver = ITEMS.register("rawastralsilver", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerAtlarus.get())
         {
-            ItemList.itemIngotAtlarus = new ItemEXOre(EXORES, "atlarusingot");
-            ItemList.itemDustAtlarus = new ItemEXOre(EXORES, "atlarusdust");
-            ItemList.itemShardAtlarus = new ItemEXOre(EXORES,"atlarusshard");
-            ItemList.itemClumpAtlarus = new ItemEXOre(EXORES,"atlarusclump");
-            ItemList.itemDirtyDustAtlarus = new ItemEXOre(EXORES,"atlarusdirtydust");
-            ItemList.itemRawAtlarus = new ItemEXOre(EXORES,"rawatlarus");
-            ItemBlockList.itemBlockOreAtlarus = new ItemBlockExOre(BlockList.blockOreAtlarus, EXORES);
-            ItemBlockList.itemBlockDeepslateOreAtlarus = new ItemBlockExOre(BlockList.blockDeepslateOreAtlarus,EXORES);
-            ItemBlockList.itemBlockAtlarus = new ItemBlockExOre(BlockList.blockAtlarus, EXORES);
-            itemRegistry(ItemList.itemIngotAtlarus, event);
-            itemRegistry(ItemList.itemDustAtlarus, event);
-            itemRegistry(ItemList.itemShardAtlarus,event);
-            itemRegistry(ItemList.itemClumpAtlarus,event);
-            itemRegistry(ItemList.itemDirtyDustAtlarus,event);
-            itemRegistry(ItemList.itemRawAtlarus,event);
-            itemRegistry(ItemBlockList.itemBlockOreAtlarus, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreAtlarus,event);
-            itemRegistry(ItemBlockList.itemBlockAtlarus, event);
+            ItemList.itemIngotAtlarus = ITEMS.register("atlarusingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustAtlarus = ITEMS.register("atlarusdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardAtlarus = ITEMS.register("atlarusshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpAtlarus = ITEMS.register("atlarusclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustAtlarus = ITEMS.register("atlarusdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawAtlarus = ITEMS.register("rawatlarus", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerBismuth.get())
         {
-            ItemList.itemIngotBismuth = new ItemEXOre(EXORES, "bismuthingot");
-            ItemList.itemDustBismuth = new ItemEXOre(EXORES, "bismuthdust");
-            ItemList.itemShardBismuth = new ItemEXOre(EXORES,"bismuthshard");
-            ItemList.itemClumpBismuth = new ItemEXOre(EXORES,"bismuthclump");
-            ItemList.itemDirtyDustBismuth = new ItemEXOre(EXORES,"bismuthdirtydust");
-            ItemList.itemRawBismuth = new ItemEXOre(EXORES,"rawbismuth");
-            ItemBlockList.itemBlockOreBismuth = new ItemBlockExOre(BlockList.blockOreBismuth, EXORES);
-            ItemBlockList.itemBlockDeepslateOreBismuth = new ItemBlockExOre(BlockList.blockDeepslateOreBismuth,EXORES);
-            ItemBlockList.itemBlockBismuth = new ItemBlockExOre(BlockList.blockBismuth, EXORES);
-            itemRegistry(ItemList.itemIngotBismuth, event);
-            itemRegistry(ItemList.itemDustBismuth, event);
-            itemRegistry(ItemList.itemShardBismuth,event);
-            itemRegistry(ItemList.itemClumpBismuth,event);
-            itemRegistry(ItemList.itemDirtyDustBismuth,event);
-            itemRegistry(ItemList.itemRawBismuth,event);
-            itemRegistry(ItemBlockList.itemBlockOreBismuth, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreBismuth,event);
-            itemRegistry(ItemBlockList.itemBlockBismuth, event);
+            ItemList.itemIngotBismuth = ITEMS.register("bismuthingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustBismuth = ITEMS.register("bismuthdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardBismuth = ITEMS.register("bismuthshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpBismuth = ITEMS.register("bismuthclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustBismuth = ITEMS.register("bismuthdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawBismuth = ITEMS.register("rawbismuth", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerBlackSteel.get())
         {
-            ItemList.itemIngotBlackSteel = new ItemEXOre(EXORES, "blacksteelingot");
-            ItemList.itemDustBlackSteel = new ItemEXOre(EXORES, "blacksteeldust");
-            ItemList.itemShardBlackSteel = new ItemEXOre(EXORES,"blacksteelshard");
-            ItemList.itemClumpBlackSteel = new ItemEXOre(EXORES,"blacksteelclump");
-            ItemList.itemDirtyDustBlackSteel = new ItemEXOre(EXORES,"blacksteeldirtydust");
-            ItemList.itemRawBlackSteel = new ItemEXOre(EXORES,"rawblacksteel");
-            ItemBlockList.itemBlockOreBlackSteel = new ItemBlockExOre(BlockList.blockOreBlackSteel, EXORES);
-            ItemBlockList.itemBlockDeepslateOreBlackSteel = new ItemBlockExOre(BlockList.blockDeepslateOreBlackSteel,EXORES);
-            ItemBlockList.itemBlockBlackSteel = new ItemBlockExOre(BlockList.blockBlackSteel, EXORES);
-            itemRegistry(ItemList.itemIngotBlackSteel, event);
-            itemRegistry(ItemList.itemDustBlackSteel, event);
-            itemRegistry(ItemList.itemShardBlackSteel,event);
-            itemRegistry(ItemList.itemClumpBlackSteel,event);
-            itemRegistry(ItemList.itemDirtyDustBlackSteel,event);
-            itemRegistry(ItemList.itemRawBlackSteel,event);
-            itemRegistry(ItemBlockList.itemBlockOreBlackSteel, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreBlackSteel,event);
-            itemRegistry(ItemBlockList.itemBlockBlackSteel, event);
+            ItemList.itemIngotBlackSteel = ITEMS.register("blacksteelingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustBlackSteel = ITEMS.register("blacksteeldust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardBlackSteel = ITEMS.register("blacksteelshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpBlackSteel = ITEMS.register("blacksteelclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustBlackSteel = ITEMS.register("blacksteeldirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawBlackSteel = ITEMS.register("rawblacksteel", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerCadmium.get())
         {
-            ItemList.itemIngotCadmium = new ItemEXOre(EXORES, "cadmiumingot");
-            ItemList.itemDustCadmium = new ItemEXOre(EXORES, "cadmiumdust");
-            ItemList.itemShardCadmium = new ItemEXOre(EXORES,"cadmiumshard");
-            ItemList.itemClumpCadmium = new ItemEXOre(EXORES,"cadmiumclump");
-            ItemList.itemDirtyDustCadmium = new ItemEXOre(EXORES,"cadmiumdirtydust");
-            ItemList.itemRawCadmium = new ItemEXOre(EXORES,"rawcadmium");
-            ItemBlockList.itemBlockOreCadmium = new ItemBlockExOre(BlockList.blockOreCadmium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreCadmium = new ItemBlockExOre(BlockList.blockDeepslateOreCadmium,EXORES);
-            ItemBlockList.itemBlockCadmium = new ItemBlockExOre(BlockList.blockCadmium, EXORES);
-            itemRegistry(ItemList.itemIngotCadmium, event);
-            itemRegistry(ItemList.itemDustCadmium, event);
-            itemRegistry(ItemList.itemShardCadmium,event);
-            itemRegistry(ItemList.itemClumpCadmium,event);
-            itemRegistry(ItemList.itemDirtyDustCadmium,event);
-            itemRegistry(ItemList.itemRawCadmium,event);
-            itemRegistry(ItemBlockList.itemBlockOreCadmium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreCadmium,event);
-            itemRegistry(ItemBlockList.itemBlockCadmium, event);
+            ItemList.itemIngotCadmium = ITEMS.register("cadmiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustCadmium = ITEMS.register("cadmiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardCadmium = ITEMS.register("cadmiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpCadmium = ITEMS.register("cadmiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustCadmium = ITEMS.register("cadmiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawCadmium = ITEMS.register("rawcadmium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerCarmot.get())
         {
-            ItemList.itemIngotCarmot = new ItemEXOre(EXORES, "carmotingot");
-            ItemList.itemDustCarmot = new ItemEXOre(EXORES, "carmotdust");
-            ItemList.itemShardCarmot = new ItemEXOre(EXORES,"carmotshard");
-            ItemList.itemClumpCarmot = new ItemEXOre(EXORES,"carmotclump");
-            ItemList.itemDirtyDustCarmot = new ItemEXOre(EXORES,"carmotdirtydust");
-            ItemList.itemRawCarmot = new ItemEXOre(EXORES,"rawcarmot");
-            ItemBlockList.itemBlockOreCarmot = new ItemBlockExOre(BlockList.blockOreCarmot, EXORES);
-            ItemBlockList.itemBlockDeepslateOreCarmot = new ItemBlockExOre(BlockList.blockDeepslateOreCarmot,EXORES);
-            ItemBlockList.itemBlockCarmot = new ItemBlockExOre(BlockList.blockCarmot, EXORES);
-            itemRegistry(ItemList.itemIngotCarmot, event);
-            itemRegistry(ItemList.itemDustCarmot, event);
-            itemRegistry(ItemList.itemShardCarmot,event);
-            itemRegistry(ItemList.itemClumpCarmot,event);
-            itemRegistry(ItemList.itemDirtyDustCarmot,event);
-            itemRegistry(ItemList.itemRawCarmot,event);
-            itemRegistry(ItemBlockList.itemBlockOreCarmot, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreCarmot,event);
-            itemRegistry(ItemBlockList.itemBlockCarmot, event);
+            ItemList.itemIngotCarmot = ITEMS.register("carmotingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustCarmot = ITEMS.register("carmotdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardCarmot = ITEMS.register("carmotshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpCarmot = ITEMS.register("carmotclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustCarmot = ITEMS.register("carmotdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawCarmot = ITEMS.register("rawcarmot", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerCelenegil.get())
         {
-            ItemList.itemIngotCelenegil = new ItemEXOre(EXORES, "celenegilingot");
-            ItemList.itemDustCelenegil = new ItemEXOre(EXORES, "celenegildust");
-            ItemList.itemShardCelenegil = new ItemEXOre(EXORES,"celenegilshard");
-            ItemList.itemClumpCelenegil = new ItemEXOre(EXORES,"celenegilclump");
-            ItemList.itemDirtyDustCelenegil = new ItemEXOre(EXORES,"celenegildirtydust");
-            ItemList.itemRawCelenegil = new ItemEXOre(EXORES,"rawcelenegil");
-            ItemBlockList.itemBlockOreCelenegil = new ItemBlockExOre(BlockList.blockOreCelenegil, EXORES);
-            ItemBlockList.itemBlockDeepslateOreCelenegil = new ItemBlockExOre(BlockList.blockDeepslateOreCelenegil,EXORES);
-            ItemBlockList.itemBlockCelenegil = new ItemBlockExOre(BlockList.blockCelenegil, EXORES);
-            itemRegistry(ItemList.itemIngotCelenegil, event);
-            itemRegistry(ItemList.itemDustCelenegil, event);
-            itemRegistry(ItemList.itemShardCelenegil,event);
-            itemRegistry(ItemList.itemClumpCelenegil,event);
-            itemRegistry(ItemList.itemDirtyDustCelenegil,event);
-            itemRegistry(ItemList.itemRawCelenegil,event);
-            itemRegistry(ItemBlockList.itemBlockOreCelenegil, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreCelenegil,event);
-            itemRegistry(ItemBlockList.itemBlockCelenegil, event);
+            ItemList.itemIngotCelenegil = ITEMS.register("celenegilingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustCelenegil = ITEMS.register("celenegildust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardCelenegil = ITEMS.register("celenegilshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpCelenegil = ITEMS.register("celenegilclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustCelenegil = ITEMS.register("celenegildirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawCelenegil = ITEMS.register("rawcelenegil", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerCeruclase.get())
         {
-            ItemList.itemIngotCeruclase = new ItemEXOre(EXORES, "ceruclaseingot");
-            ItemList.itemDustCeruclase = new ItemEXOre(EXORES, "ceruclasedust");
-            ItemList.itemShardCeruclase = new ItemEXOre(EXORES,"ceruclaseshard");
-            ItemList.itemClumpCeruclase = new ItemEXOre(EXORES,"ceruclaseclump");
-            ItemList.itemDirtyDustCeruclase = new ItemEXOre(EXORES,"ceruclasedirtydust");
-            ItemList.itemRawCeruclase = new ItemEXOre(EXORES,"rawceruclase");
-            ItemBlockList.itemBlockOreCeruclase = new ItemBlockExOre(BlockList.blockOreCeruclase, EXORES);
-            ItemBlockList.itemBlockCeruclase = new ItemBlockExOre(BlockList.blockCeruclase, EXORES);
-            itemRegistry(ItemList.itemIngotCeruclase, event);
-            itemRegistry(ItemList.itemDustCeruclase, event);
-            itemRegistry(ItemList.itemShardCeruclase,event);
-            itemRegistry(ItemList.itemClumpCeruclase,event);
-            itemRegistry(ItemList.itemDirtyDustCeruclase,event);
-            itemRegistry(ItemList.itemRawCeruclase,event);
-            itemRegistry(ItemBlockList.itemBlockOreCeruclase, event);
-            itemRegistry(ItemBlockList.itemBlockCeruclase, event);
+            ItemList.itemIngotCeruclase = ITEMS.register("ceruclaseingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustCeruclase = ITEMS.register("ceruclasedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardCeruclase = ITEMS.register("ceruclaseshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpCeruclase = ITEMS.register("ceruclaseclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustCeruclase = ITEMS.register("ceruclasedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawCeruclase = ITEMS.register("rawceruclase", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerChromium.get())
         {
-            ItemList.itemIngotChromium = new ItemEXOre(EXORES, "chromiumingot");
-            ItemList.itemDustChromium = new ItemEXOre(EXORES, "chromiumdust");
-            ItemList.itemShardChromium = new ItemEXOre(EXORES,"chromiumshard");
-            ItemList.itemClumpChromium = new ItemEXOre(EXORES,"chromiumclump");
-            ItemList.itemDirtyDustChromium = new ItemEXOre(EXORES,"chromiumdirtydust");
-            ItemList.itemRawChromium = new ItemEXOre(EXORES,"rawchromium");
-            ItemBlockList.itemBlockOreChromium = new ItemBlockExOre(BlockList.blockOreChromium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreChromium = new ItemBlockExOre(BlockList.blockDeepslateOreChromium,EXORES);
-            ItemBlockList.itemBlockChromium = new ItemBlockExOre(BlockList.blockChromium, EXORES);
-            itemRegistry(ItemList.itemIngotChromium, event);
-            itemRegistry(ItemList.itemDustChromium, event);
-            itemRegistry(ItemList.itemShardChromium,event);
-            itemRegistry(ItemList.itemClumpChromium,event);
-            itemRegistry(ItemList.itemDirtyDustChromium,event);
-            itemRegistry(ItemList.itemRawChromium,event);
-            itemRegistry(ItemBlockList.itemBlockOreChromium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreChromium,event);
-            itemRegistry(ItemBlockList.itemBlockChromium, event);
+            ItemList.itemIngotChromium = ITEMS.register("chromiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustChromium = ITEMS.register("chromiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardChromium = ITEMS.register("chromiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpChromium = ITEMS.register("chromiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustChromium = ITEMS.register("chromiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawChromium = ITEMS.register("rawchromium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerChrysocolla.get())
+        if (ConfigRegistryList.registerChrysocolla.get())
         {
-            ItemList.itemGemChrysocolla = new ItemEXOre(EXORES,"chrysocolla");
-            ItemBlockList.itemBlockOreChrysocolla = new ItemBlockExOre(BlockList.blockOreChrysocolla,EXORES);
-            ItemBlockList.itemBlockDeepslateOreChrysocolla = new ItemBlockExOre(BlockList.blockDeepslateOreChrysocolla,EXORES);
-            ItemBlockList.itemBlockChrysocolla = new ItemBlockExOre(BlockList.blockChrysocolla,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreChrysocolla,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreChrysocolla,event);
-            itemRegistry(ItemBlockList.itemBlockChrysocolla,event);
-            itemRegistry(ItemList.itemGemChrysocolla,event);
+            ItemList.itemGemChrysocolla = ITEMS.register("chrysocolla", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerCitrine.get())
+        if (ConfigRegistryList.registerCitrine.get())
         {
-            ItemList.itemGemCitrine = new ItemEXOre(EXORES,"citrine");
-            ItemBlockList.itemBlockOreCitrine = new ItemBlockExOre(BlockList.blockOreCitrine,EXORES);
-            ItemBlockList.itemBlockDeepslateOreCitrine = new ItemBlockExOre(BlockList.blockDeepslateOreCitrine,EXORES);
-            ItemBlockList.itemBlockCitrine = new ItemBlockExOre(BlockList.blockCitrine,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreCitrine,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreCitrine,event);
-            itemRegistry(ItemBlockList.itemBlockCitrine,event);
-            itemRegistry(ItemList.itemGemCitrine,event);
+            ItemList.itemGemCitrine = ITEMS.register("citrine", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerCobalt.get())
         {
-            ItemList.itemIngotCobalt = new ItemEXOre(EXORES, "cobaltingot");
-            ItemList.itemDustCobalt = new ItemEXOre(EXORES, "cobaltdust");
-            ItemList.itemShardCobalt = new ItemEXOre(EXORES,"cobaltshard");
-            ItemList.itemClumpCobalt = new ItemEXOre(EXORES,"cobaltclump");
-            ItemList.itemDirtyDustCobalt = new ItemEXOre(EXORES,"cobaltdirtydust");
-            ItemList.itemRawCobalt = new ItemEXOre(EXORES,"rawcobalt");
-            ItemBlockList.itemBlockOreCobalt = new ItemBlockExOre(BlockList.blockOreCobalt, EXORES);
-            ItemBlockList.itemBlockDeepslateOreCobalt = new ItemBlockExOre(BlockList.blockDeepslateOreCobalt,EXORES);
-            ItemBlockList.itemBlockCobalt = new ItemBlockExOre(BlockList.blockCobalt, EXORES);
-            itemRegistry(ItemList.itemIngotCobalt, event);
-            itemRegistry(ItemList.itemDustCobalt, event);
-            itemRegistry(ItemList.itemShardCobalt,event);
-            itemRegistry(ItemList.itemClumpCobalt,event);
-            itemRegistry(ItemList.itemDirtyDustCobalt,event);
-            itemRegistry(ItemList.itemRawCobalt,event);
-            itemRegistry(ItemBlockList.itemBlockOreCobalt, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreCobalt,event);
-            itemRegistry(ItemBlockList.itemBlockCobalt, event);
+            ItemList.itemIngotCobalt = ITEMS.register("cobaltingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustCobalt = ITEMS.register("cobaltdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardCobalt = ITEMS.register("cobaltshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpCobalt = ITEMS.register("cobaltclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustCobalt = ITEMS.register("cobaltdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawCobalt = ITEMS.register("rawcobalt", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerCopper.get())
         {
-            ItemList.itemIngotCopper = new ItemEXOre(EXORES, "copperingot");
-            ItemList.itemDustCopper = new ItemEXOre(EXORES, "copperdust");
-            ItemList.itemShardCopper = new ItemEXOre(EXORES,"coppershard");
-            ItemList.itemClumpCopper = new ItemEXOre(EXORES,"copperclump");
-            ItemList.itemDirtyDustCopper = new ItemEXOre(EXORES,"copperdirtydust");
-            ItemList.itemRawCopper = new ItemEXOre(EXORES,"rawcopper");
-            ItemBlockList.itemBlockOreCopper = new ItemBlockExOre(BlockList.blockOreCopper, EXORES);
-            ItemBlockList.itemBlockDeepslateOreCopper = new ItemBlockExOre(BlockList.blockDeepslateOreCopper,EXORES);
-            ItemBlockList.itemBlockCopper = new ItemBlockExOre(BlockList.blockCopper, EXORES);
-            itemRegistry(ItemList.itemIngotCopper, event);
-            itemRegistry(ItemList.itemDustCopper, event);
-            itemRegistry(ItemList.itemShardCopper,event);
-            itemRegistry(ItemList.itemClumpCopper,event);
-            itemRegistry(ItemList.itemDirtyDustCopper,event);
-            itemRegistry(ItemList.itemRawCopper,event);
-            itemRegistry(ItemBlockList.itemBlockOreCopper, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreCopper,event);
-            itemRegistry(ItemBlockList.itemBlockCopper, event);
+            ItemList.itemIngotCopper = ITEMS.register("copperingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustCopper = ITEMS.register("copperdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardCopper = ITEMS.register("coppershard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpCopper = ITEMS.register("copperclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustCopper = ITEMS.register("copperdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawCopper = ITEMS.register("rawcopper", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerDeepIron.get())
         {
-            ItemList.itemIngotDeepIron = new ItemEXOre(EXORES, "deepironingot");
-            ItemList.itemDustDeepIron = new ItemEXOre(EXORES, "deepirondust");
-            ItemList.itemShardDeepIron = new ItemEXOre(EXORES,"deepironshard");
-            ItemList.itemClumpDeepIron = new ItemEXOre(EXORES,"deepironclump");
-            ItemList.itemDirtyDustDeepIron = new ItemEXOre(EXORES,"deepirondirtydust");
-            ItemList.itemRawDeepIron = new ItemEXOre(EXORES,"rawdeepiron");
-            ItemBlockList.itemBlockOreDeepIron = new ItemBlockExOre(BlockList.blockOreDeepIron, EXORES);
-            ItemBlockList.itemBlockDeepslateOreDeepIron = new ItemBlockExOre(BlockList.blockDeepslateOreDeepIron,EXORES);
-            ItemBlockList.itemBlockDeepIron = new ItemBlockExOre(BlockList.blockDeepIron, EXORES);
-            itemRegistry(ItemList.itemIngotDeepIron, event);
-            itemRegistry(ItemList.itemDustDeepIron, event);
-            itemRegistry(ItemList.itemShardDeepIron,event);
-            itemRegistry(ItemList.itemClumpDeepIron,event);
-            itemRegistry(ItemList.itemDirtyDustDeepIron,event);
-            itemRegistry(ItemList.itemRawDeepIron,event);
-            itemRegistry(ItemBlockList.itemBlockOreDeepIron, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreDeepIron,event);
-            itemRegistry(ItemBlockList.itemBlockDeepIron, event);
+            ItemList.itemIngotDeepIron = ITEMS.register("deepironingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustDeepIron = ITEMS.register("deepirondust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardDeepIron = ITEMS.register("deepironshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpDeepIron = ITEMS.register("deepironclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustDeepIron = ITEMS.register("deepirondirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawDeepIron = ITEMS.register("rawdeepiron", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerDesichalkos.get())
+        if (ConfigRegistryList.registerDesichalkos.get())
         {
-            ItemList.itemIngotDesichalkos = new ItemEXOre(EXORES, "desichalkosingot");
-            ItemList.itemDustDesichalkos = new ItemEXOre(EXORES, "desichalkosdust");
-            ItemList.itemShardDesichalkos = new ItemEXOre(EXORES,"desichalkosshard");
-            ItemList.itemClumpDesichalkos = new ItemEXOre(EXORES,"desichalkosclump");
-            ItemList.itemDirtyDustDesichalkos = new ItemEXOre(EXORES,"desichalkosdirtydust");
-            ItemList.itemRawDesichalkos = new ItemEXOre(EXORES,"rawdesichalkos");
-            ItemBlockList.itemBlockOreDesichalkos = new ItemBlockExOre(BlockList.blockOreDesichalkos, EXORES);
-            ItemBlockList.itemBlockDeepslateOreDesichalkos = new ItemBlockExOre(BlockList.blockDeepslateOreDesichalkos,EXORES);
-            ItemBlockList.itemBlockDesichalkos = new ItemBlockExOre(BlockList.blockDesichalkos, EXORES);
-            itemRegistry(ItemList.itemIngotDesichalkos, event);
-            itemRegistry(ItemList.itemDustDesichalkos, event);
-            itemRegistry(ItemList.itemShardDesichalkos,event);
-            itemRegistry(ItemList.itemClumpDesichalkos,event);
-            itemRegistry(ItemList.itemDirtyDustDesichalkos,event);
-            itemRegistry(ItemList.itemRawDesichalkos,event);
-            itemRegistry(ItemBlockList.itemBlockOreDesichalkos, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreDesichalkos,event);
-            itemRegistry(ItemBlockList.itemBlockDesichalkos, event);
+            ItemList.itemIngotDesichalkos = ITEMS.register("desichalkosingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustDesichalkos = ITEMS.register("desichalkosdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardDesichalkos = ITEMS.register("desichalkosshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpDesichalkos = ITEMS.register("desichalkosclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustDesichalkos = ITEMS.register("desichalkosdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawDesichalkos = ITEMS.register("rawdesichalkos", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerEximite.get())
+        if (ConfigRegistryList.registerEximite.get())
         {
-            ItemList.itemIngotEximite = new ItemEXOre(EXORES, "eximiteingot");
-            ItemList.itemDustEximite = new ItemEXOre(EXORES, "eximitedust");
-            ItemList.itemShardEximite = new ItemEXOre(EXORES,"eximiteshard");
-            ItemList.itemClumpEximite = new ItemEXOre(EXORES,"eximiteclump");
-            ItemList.itemDirtyDustEximite = new ItemEXOre(EXORES,"eximitedirtydust");
-            ItemList.itemRawEximite = new ItemEXOre(EXORES,"raweximite");
-            ItemBlockList.itemBlockOreEximite = new ItemBlockExOre(BlockList.blockOreEximite, EXORES);
-            ItemBlockList.itemBlockDeepslateOreEximite = new ItemBlockExOre(BlockList.blockDeepslateOreEximite,EXORES);
-            ItemBlockList.itemBlockEximite = new ItemBlockExOre(BlockList.blockEximite, EXORES);
-            itemRegistry(ItemList.itemIngotEximite, event);
-            itemRegistry(ItemList.itemDustEximite, event);
-            itemRegistry(ItemList.itemShardEximite,event);
-            itemRegistry(ItemList.itemClumpEximite,event);
-            itemRegistry(ItemList.itemDirtyDustEximite,event);
-            itemRegistry(ItemList.itemRawEximite,event);
-            itemRegistry(ItemBlockList.itemBlockOreEximite, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreEximite,event);
-            itemRegistry(ItemBlockList.itemBlockEximite, event);
+            ItemList.itemIngotEximite = ITEMS.register("eximiteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustEximite = ITEMS.register("eximitedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardEximite = ITEMS.register("eximiteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpEximite = ITEMS.register("eximiteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustEximite = ITEMS.register("eximitedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawEximite = ITEMS.register("raweximite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerGallium.get())
         {
-            ItemList.itemIngotGallium = new ItemEXOre(EXORES, "galliumingot");
-            ItemList.itemDustGallium = new ItemEXOre(EXORES, "galliumdust");
-            ItemList.itemShardGallium = new ItemEXOre(EXORES,"galliumshard");
-            ItemList.itemClumpGallium = new ItemEXOre(EXORES,"galliumclump");
-            ItemList.itemDirtyDustGallium = new ItemEXOre(EXORES,"galliumdirtydust");
-            ItemList.itemRawGallium = new ItemEXOre(EXORES,"rawgallium");
-            ItemBlockList.itemBlockOreGallium = new ItemBlockExOre(BlockList.blockOreGallium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreGallium = new ItemBlockExOre(BlockList.blockDeepslateOreGallium,EXORES);
-            ItemBlockList.itemBlockGallium = new ItemBlockExOre(BlockList.blockGallium, EXORES);
-            itemRegistry(ItemList.itemIngotGallium, event);
-            itemRegistry(ItemList.itemDustGallium, event);
-            itemRegistry(ItemList.itemShardGallium,event);
-            itemRegistry(ItemList.itemClumpGallium,event);
-            itemRegistry(ItemList.itemDirtyDustGallium,event);
-            itemRegistry(ItemList.itemRawGallium,event);
-            itemRegistry(ItemBlockList.itemBlockOreGallium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreGallium,event);
-            itemRegistry(ItemBlockList.itemBlockGallium, event);
+            ItemList.itemIngotGallium = ITEMS.register("galliumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustGallium = ITEMS.register("galliumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardGallium = ITEMS.register("galliumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpGallium = ITEMS.register("galliumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustGallium = ITEMS.register("galliumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawGallium = ITEMS.register("rawgallium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerGarnet.get())
+        if (ConfigRegistryList.registerGarnet.get())
         {
-            ItemList.itemGemGarnet = new ItemEXOre(EXORES,"garnet");
-            ItemBlockList.itemBlockOreGarnet = new ItemBlockExOre(BlockList.blockOreGarnet,EXORES);
-            ItemBlockList.itemBlockDeepslateOreGarnet = new ItemBlockExOre(BlockList.blockDeepslateOreGarnet,EXORES);
-            ItemBlockList.itemBlockGarnet = new ItemBlockExOre(BlockList.blockGarnet,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreGarnet,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreGarnet,event);
-            itemRegistry(ItemBlockList.itemBlockGarnet,event);
-            itemRegistry(ItemList.itemGemGarnet,event);
+            ItemList.itemGemGarnet = ITEMS.register("garnet", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerHaderoth.get())
         {
-            ItemList.itemIngotHaderoth = new ItemEXOre(EXORES, "haderothingot");
-            ItemList.itemDustHaderoth = new ItemEXOre(EXORES, "haderothdust");
-            ItemList.itemShardHaderoth = new ItemEXOre(EXORES,"haderothshard");
-            ItemList.itemClumpHaderoth = new ItemEXOre(EXORES,"haderothclump");
-            ItemList.itemDirtyDustHaderoth = new ItemEXOre(EXORES,"haderothdirtydust");
-            ItemList.itemRawHaderoth = new ItemEXOre(EXORES,"rawhaderoth");
-            ItemBlockList.itemBlockOreHaderoth = new ItemBlockExOre(BlockList.blockOreHaderoth, EXORES);
-            ItemBlockList.itemBlockDeepslateOreHaderoth = new ItemBlockExOre(BlockList.blockDeepslateOreHaderoth,EXORES);
-            ItemBlockList.itemBlockHaderoth = new ItemBlockExOre(BlockList.blockHaderoth, EXORES);
-            itemRegistry(ItemList.itemIngotHaderoth, event);
-            itemRegistry(ItemList.itemDustHaderoth, event);
-            itemRegistry(ItemList.itemShardHaderoth,event);
-            itemRegistry(ItemList.itemClumpHaderoth,event);
-            itemRegistry(ItemList.itemDirtyDustHaderoth,event);
-            itemRegistry(ItemList.itemRawHaderoth,event);
-            itemRegistry(ItemBlockList.itemBlockOreHaderoth, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreHaderoth,event);
-            itemRegistry(ItemBlockList.itemBlockHaderoth, event);
+            ItemList.itemIngotHaderoth = ITEMS.register("haderothingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustHaderoth = ITEMS.register("haderothdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardHaderoth = ITEMS.register("haderothshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpHaderoth = ITEMS.register("haderothclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustHaderoth = ITEMS.register("haderothdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawHaderoth = ITEMS.register("rawhaderoth", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerHepatizon.get())
         {
-            ItemList.itemIngotHepatizon = new ItemEXOre(EXORES, "hepatizoningot");
-            ItemList.itemDustHepatizon = new ItemEXOre(EXORES, "hepatizondust");
-            ItemList.itemShardHepatizon = new ItemEXOre(EXORES,"hepatizonshard");
-            ItemList.itemClumpHepatizon = new ItemEXOre(EXORES,"hepatizonclump");
-            ItemList.itemDirtyDustHepatizon = new ItemEXOre(EXORES,"hepatizondirtydust");
-            ItemList.itemRawHepatizon = new ItemEXOre(EXORES,"rawhepatizon");
-            ItemBlockList.itemBlockOreHepatizon = new ItemBlockExOre(BlockList.blockOreHepatizon, EXORES);
-            ItemBlockList.itemBlockDeepslateOreHepatizon = new ItemBlockExOre(BlockList.blockDeepslateOreHepatizon,EXORES);
-            ItemBlockList.itemBlockHepatizon = new ItemBlockExOre(BlockList.blockHepatizon, EXORES);
-            itemRegistry(ItemList.itemIngotHepatizon, event);
-            itemRegistry(ItemList.itemDustHepatizon, event);
-            itemRegistry(ItemList.itemShardHepatizon,event);
-            itemRegistry(ItemList.itemClumpHepatizon,event);
-            itemRegistry(ItemList.itemDirtyDustHepatizon,event);
-            itemRegistry(ItemList.itemRawHepatizon,event);
-            itemRegistry(ItemBlockList.itemBlockOreHepatizon, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreHepatizon,event);
-            itemRegistry(ItemBlockList.itemBlockHepatizon, event);
+            ItemList.itemIngotHepatizon = ITEMS.register("hepatizoningot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustHepatizon = ITEMS.register("hepatizondust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardHepatizon = ITEMS.register("hepatizonshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpHepatizon = ITEMS.register("hepatizonclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustHepatizon = ITEMS.register("hepatizondirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawHepatizon = ITEMS.register("rawhepatizon", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerIgnatius.get())
         {
-            ItemList.itemIngotIgnatius = new ItemEXOre(EXORES, "ignatiusingot");
-            ItemList.itemDustIgnatius = new ItemEXOre(EXORES, "ignatiusdust");
-            ItemList.itemShardIgnatius = new ItemEXOre(EXORES,"ignatiusshard");
-            ItemList.itemClumpIgnatius = new ItemEXOre(EXORES,"ignatiusclump");
-            ItemList.itemDirtyDustIgnatius = new ItemEXOre(EXORES,"ignatiusdirtydust");
-            ItemList.itemRawIgnatius = new ItemEXOre(EXORES,"rawignatius");
-            ItemBlockList.itemBlockOreIgnatius = new ItemBlockExOre(BlockList.blockOreIgnatius, EXORES);
-            ItemBlockList.itemBlockIgnatius = new ItemBlockExOre(BlockList.blockIgnatius, EXORES);
-            itemRegistry(ItemList.itemIngotIgnatius, event);
-            itemRegistry(ItemList.itemDustIgnatius, event);
-            itemRegistry(ItemList.itemShardIgnatius,event);
-            itemRegistry(ItemList.itemClumpIgnatius,event);
-            itemRegistry(ItemList.itemDirtyDustIgnatius,event);
-            itemRegistry(ItemList.itemRawIgnatius,event);
-            itemRegistry(ItemBlockList.itemBlockOreIgnatius, event);
-            itemRegistry(ItemBlockList.itemBlockIgnatius, event);
+            ItemList.itemIngotIgnatius = ITEMS.register("ignatiusingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustIgnatius = ITEMS.register("ignatiusdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardIgnatius = ITEMS.register("ignatiusshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpIgnatius = ITEMS.register("ignatiusclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustIgnatius = ITEMS.register("ignatiusdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawIgnatius = ITEMS.register("rawignatius", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerIndium.get())
         {
-            ItemList.itemIngotIndium = new ItemEXOre(EXORES, "indiumingot");
-            ItemList.itemDustIndium = new ItemEXOre(EXORES, "indiumdust");
-            ItemList.itemShardIndium = new ItemEXOre(EXORES,"indiumshard");
-            ItemList.itemClumpIndium = new ItemEXOre(EXORES,"indiumclump");
-            ItemList.itemDirtyDustIndium = new ItemEXOre(EXORES,"indiumdirtydust");
-            ItemList.itemRawIndium = new ItemEXOre(EXORES,"rawindium");
-            ItemBlockList.itemBlockOreIndium = new ItemBlockExOre(BlockList.blockOreIndium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreIndium = new ItemBlockExOre(BlockList.blockDeepslateOreIndium,EXORES);
-            ItemBlockList.itemBlockIndium = new ItemBlockExOre(BlockList.blockIndium, EXORES);
-            itemRegistry(ItemList.itemIngotIndium, event);
-            itemRegistry(ItemList.itemDustIndium, event);
-            itemRegistry(ItemList.itemShardIndium,event);
-            itemRegistry(ItemList.itemClumpIndium,event);
-            itemRegistry(ItemList.itemDirtyDustIndium,event);
-            itemRegistry(ItemList.itemRawIndium,event);
-            itemRegistry(ItemBlockList.itemBlockOreIndium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreIndium,event);
-            itemRegistry(ItemBlockList.itemBlockIndium, event);
+            ItemList.itemIngotIndium = ITEMS.register("indiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustIndium = ITEMS.register("indiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardIndium = ITEMS.register("indiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpIndium = ITEMS.register("indiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustIndium = ITEMS.register("indiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawIndium = ITEMS.register("rawindium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerInfuscolium.get())
         {
-            ItemList.itemIngotInfuscolium = new ItemEXOre(EXORES, "infuscoliumingot");
-            ItemList.itemDustInfuscolium = new ItemEXOre(EXORES, "infuscoliumdust");
-            ItemList.itemShardInfuscolium = new ItemEXOre(EXORES,"infuscoliumshard");
-            ItemList.itemClumpInfuscolium = new ItemEXOre(EXORES,"infuscoliumclump");
-            ItemList.itemDirtyDustInfuscolium = new ItemEXOre(EXORES,"infuscoliumdirtydust");
-            ItemList.itemRawInfuscolium = new ItemEXOre(EXORES,"rawinfuscolium");
-            ItemBlockList.itemBlockOreInfuscolium = new ItemBlockExOre(BlockList.blockOreInfuscolium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreInfuscolium = new ItemBlockExOre(BlockList.blockDeepslateOreInfuscolium,EXORES);
-            ItemBlockList.itemBlockInfuscolium = new ItemBlockExOre(BlockList.blockInfuscolium, EXORES);
-            itemRegistry(ItemList.itemIngotInfuscolium, event);
-            itemRegistry(ItemList.itemDustInfuscolium, event);
-            itemRegistry(ItemList.itemShardInfuscolium,event);
-            itemRegistry(ItemList.itemClumpInfuscolium,event);
-            itemRegistry(ItemList.itemDirtyDustInfuscolium,event);
-            itemRegistry(ItemList.itemRawInfuscolium,event);
-            itemRegistry(ItemBlockList.itemBlockOreInfuscolium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreInfuscolium,event);
-            itemRegistry(ItemBlockList.itemBlockInfuscolium, event);
+            ItemList.itemIngotInfuscolium = ITEMS.register("infuscoliumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustInfuscolium = ITEMS.register("infuscoliumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardInfuscolium = ITEMS.register("infuscoliumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpInfuscolium = ITEMS.register("infuscoliumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustInfuscolium = ITEMS.register("infuscoliumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawInfuscolium = ITEMS.register("rawinfuscolium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerInolashite.get())
         {
-            ItemList.itemIngotInolashite = new ItemEXOre(EXORES, "inolashiteingot");
-            ItemList.itemDustInolashite = new ItemEXOre(EXORES, "inolashitedust");
-            ItemList.itemShardInolashite = new ItemEXOre(EXORES,"inolashiteshard");
-            ItemList.itemClumpInolashite = new ItemEXOre(EXORES,"inolashiteclump");
-            ItemList.itemDirtyDustInolashite = new ItemEXOre(EXORES,"inolashitedirtydust");
-            ItemList.itemRawInolashite = new ItemEXOre(EXORES,"rawinolashite");
-            ItemBlockList.itemBlockOreInolashite = new ItemBlockExOre(BlockList.blockOreInolashite, EXORES);
-            ItemBlockList.itemBlockDeepslateOreInolashite = new ItemBlockExOre(BlockList.blockDeepslateOreInolashite,EXORES);
-            ItemBlockList.itemBlockInolashite = new ItemBlockExOre(BlockList.blockInolashite, EXORES);
-            itemRegistry(ItemList.itemIngotInolashite, event);
-            itemRegistry(ItemList.itemDustInolashite, event);
-            itemRegistry(ItemList.itemShardInolashite,event);
-            itemRegistry(ItemList.itemClumpInolashite,event);
-            itemRegistry(ItemList.itemDirtyDustInolashite,event);
-            itemRegistry(ItemList.itemRawInolashite,event);
-            itemRegistry(ItemBlockList.itemBlockOreInolashite, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreInolashite,event);
-            itemRegistry(ItemBlockList.itemBlockInolashite, event);
+            ItemList.itemIngotInolashite = ITEMS.register("inolashiteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustInolashite = ITEMS.register("inolashitedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardInolashite = ITEMS.register("inolashiteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpInolashite = ITEMS.register("inolashiteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustInolashite = ITEMS.register("inolashitedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawInolashite = ITEMS.register("rawinolashite", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerIolite.get())
+        if (ConfigRegistryList.registerIolite.get())
         {
-            ItemList.itemGemIolite = new ItemEXOre(EXORES,"iolite");
-            ItemBlockList.itemBlockOreIolite = new ItemBlockExOre(BlockList.blockOreIolite,EXORES);
-            ItemBlockList.itemBlockDeepslateOreIolite = new ItemBlockExOre(BlockList.blockDeepslateOreIolite,EXORES);
-            ItemBlockList.itemBlockIolite = new ItemBlockExOre(BlockList.blockIolite,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreIolite,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreIolite,event);
-            itemRegistry(ItemBlockList.itemBlockIolite,event);
-            itemRegistry(ItemList.itemGemIolite,event);
+            ItemList.itemGemIolite = ITEMS.register("iolite", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerIridium.get())
+        if (ConfigRegistryList.registerIridium.get())
         {
-            ItemList.itemIngotIridium = new ItemEXOre(EXORES, "iridiumingot");
-            ItemList.itemDustIridium = new ItemEXOre(EXORES, "iridiumdust");
-            ItemList.itemShardIridium = new ItemEXOre(EXORES,"iridiumshard");
-            ItemList.itemClumpIridium = new ItemEXOre(EXORES,"iridiumclump");
-            ItemList.itemDirtyDustIridium = new ItemEXOre(EXORES,"iridiumdirtydust");
-            ItemList.itemRawIridium = new ItemEXOre(EXORES,"rawiridium");
-            ItemBlockList.itemBlockOreIridium = new ItemBlockExOre(BlockList.blockOreIridium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreIridium = new ItemBlockExOre(BlockList.blockDeepslateOreIridium,EXORES);
-            ItemBlockList.itemBlockIridium = new ItemBlockExOre(BlockList.blockIridium, EXORES);
-            itemRegistry(ItemList.itemIngotIridium, event);
-            itemRegistry(ItemList.itemDustIridium, event);
-            itemRegistry(ItemList.itemShardIridium,event);
-            itemRegistry(ItemList.itemClumpIridium,event);
-            itemRegistry(ItemList.itemDirtyDustIridium,event);
-            itemRegistry(ItemList.itemRawIridium,event);
-            itemRegistry(ItemBlockList.itemBlockOreIridium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreIridium,event);
-            itemRegistry(ItemBlockList.itemBlockIridium, event);
+            ItemList.itemIngotIridium = ITEMS.register("iridiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustIridium = ITEMS.register("iridiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardIridium = ITEMS.register("iridiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpIridium = ITEMS.register("iridiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustIridium = ITEMS.register("iridiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawIridium = ITEMS.register("rawiridium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerJade.get())
+        if (ConfigRegistryList.registerJade.get())
         {
-            ItemList.itemGemJade = new ItemEXOre(EXORES,"jade");
-            ItemBlockList.itemBlockOreJade = new ItemBlockExOre(BlockList.blockOreJade,EXORES);
-            ItemBlockList.itemBlockDeepslateOreJade = new ItemBlockExOre(BlockList.blockDeepslateOreJade,EXORES);
-            ItemBlockList.itemBlockJade = new ItemBlockExOre(BlockList.blockJade,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreJade,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreJade,event);
-            itemRegistry(ItemBlockList.itemBlockJade,event);
-            itemRegistry(ItemList.itemGemJade,event);
+            ItemList.itemGemJade = ITEMS.register("jade", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerJasper.get())
+        if (ConfigRegistryList.registerJasper.get())
         {
-            ItemList.itemGemJasper = new ItemEXOre(EXORES,"jasper");
-            ItemBlockList.itemBlockOreJasper = new ItemBlockExOre(BlockList.blockOreJasper,EXORES);
-            ItemBlockList.itemBlockDeepslateOreJasper = new ItemBlockExOre(BlockList.blockDeepslateOreJasper,EXORES);
-            ItemBlockList.itemBlockJasper = new ItemBlockExOre(BlockList.blockJasper,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreJasper,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreJasper,event);
-            itemRegistry(ItemBlockList.itemBlockJasper,event);
-            itemRegistry(ItemList.itemGemJasper,event);
+            ItemList.itemGemJasper = ITEMS.register("jasper", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerKalendrite.get())
         {
-            ItemList.itemIngotKalendrite = new ItemEXOre(EXORES, "kalendriteingot");
-            ItemList.itemDustKalendrite = new ItemEXOre(EXORES, "kalendritedust");
-            ItemList.itemShardKalendrite = new ItemEXOre(EXORES,"kalendriteshard");
-            ItemList.itemClumpKalendrite = new ItemEXOre(EXORES,"kalendriteclump");
-            ItemList.itemDirtyDustKalendrite = new ItemEXOre(EXORES,"kalendritedirtydust");
-            ItemList.itemRawKalendrite = new ItemEXOre(EXORES,"rawkalendrite");
-            ItemBlockList.itemBlockOreKalendrite = new ItemBlockExOre(BlockList.blockOreKalendrite, EXORES);
-            ItemBlockList.itemBlockKalendrite = new ItemBlockExOre(BlockList.blockKalendrite, EXORES);
-            itemRegistry(ItemList.itemIngotKalendrite, event);
-            itemRegistry(ItemList.itemDustKalendrite, event);
-            itemRegistry(ItemList.itemShardKalendrite,event);
-            itemRegistry(ItemList.itemClumpKalendrite,event);
-            itemRegistry(ItemList.itemDirtyDustKalendrite,event);
-            itemRegistry(ItemList.itemRawKalendrite,event);
-            itemRegistry(ItemBlockList.itemBlockOreKalendrite, event);
-            itemRegistry(ItemBlockList.itemBlockKalendrite, event);
+            ItemList.itemIngotKalendrite = ITEMS.register("kalendriteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustKalendrite = ITEMS.register("kalendritedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardKalendrite = ITEMS.register("kalendriteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpKalendrite = ITEMS.register("kalendriteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustKalendrite = ITEMS.register("kalendritedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawKalendrite = ITEMS.register("rawkalendrite", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerKyanite.get())
+        if (ConfigRegistryList.registerKyanite.get())
         {
-            ItemList.itemGemKyanite = new ItemEXOre(EXORES,"kyanite");
-            ItemBlockList.itemBlockOreKyanite = new ItemBlockExOre(BlockList.blockOreKyanite,EXORES);
-            ItemBlockList.itemBlockDeepslateOreKyanite = new ItemBlockExOre(BlockList.blockDeepslateOreKyanite,EXORES);
-            ItemBlockList.itemBlockKyanite = new ItemBlockExOre(BlockList.blockKyanite,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreKyanite,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreKyanite,event);
-            itemRegistry(ItemBlockList.itemBlockKyanite,event);
-            itemRegistry(ItemList.itemGemKyanite,event);
+            ItemList.itemGemKyanite = ITEMS.register("kyanite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerLead.get())
         {
-            ItemList.itemIngotLead = new ItemEXOre(EXORES, "leadingot");
-            ItemList.itemDustLead = new ItemEXOre(EXORES, "leaddust");
-            ItemList.itemShardLead = new ItemEXOre(EXORES,"leadshard");
-            ItemList.itemClumpLead = new ItemEXOre(EXORES,"leadclump");
-            ItemList.itemDirtyDustLead = new ItemEXOre(EXORES,"leaddirtydust");
-            ItemList.itemRawLead = new ItemEXOre(EXORES,"rawlead");
-            ItemBlockList.itemBlockOreLead = new ItemBlockExOre(BlockList.blockOreLead, EXORES);
-            ItemBlockList.itemBlockDeepslateOreLead = new ItemBlockExOre(BlockList.blockDeepslateOreLead,EXORES);
-            ItemBlockList.itemBlockLead = new ItemBlockExOre(BlockList.blockLead, EXORES);
-            itemRegistry(ItemList.itemIngotLead, event);
-            itemRegistry(ItemList.itemDustLead, event);
-            itemRegistry(ItemList.itemShardLead,event);
-            itemRegistry(ItemList.itemClumpLead,event);
-            itemRegistry(ItemList.itemDirtyDustLead,event);
-            itemRegistry(ItemList.itemRawLead,event);
-            itemRegistry(ItemBlockList.itemBlockOreLead, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreLead,event);
-            itemRegistry(ItemBlockList.itemBlockLead, event);
+            ItemList.itemIngotLead = ITEMS.register("leadingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustLead = ITEMS.register("leaddust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardLead = ITEMS.register("leadshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpLead = ITEMS.register("leadclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustLead = ITEMS.register("leaddirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawLead = ITEMS.register("rawlead", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerLemurite.get())
         {
-            ItemList.itemIngotLemurite = new ItemEXOre(EXORES, "lemuriteingot");
-            ItemList.itemDustLemurite = new ItemEXOre(EXORES, "lemuritedust");
-            ItemList.itemShardLemurite = new ItemEXOre(EXORES,"lemuriteshard");
-            ItemList.itemClumpLemurite = new ItemEXOre(EXORES,"lemuriteclump");
-            ItemList.itemDirtyDustLemurite = new ItemEXOre(EXORES,"lemuritedirtydust");
-            ItemList.itemRawLemurite = new ItemEXOre(EXORES,"rawlemurite");
-            ItemBlockList.itemBlockOreLemurite = new ItemBlockExOre(BlockList.blockOreLemurite, EXORES);
-            ItemBlockList.itemBlockLemurite = new ItemBlockExOre(BlockList.blockLemurite, EXORES);
-            itemRegistry(ItemList.itemIngotLemurite, event);
-            itemRegistry(ItemList.itemDustLemurite, event);
-            itemRegistry(ItemList.itemShardLemurite,event);
-            itemRegistry(ItemList.itemClumpLemurite,event);
-            itemRegistry(ItemList.itemDirtyDustLemurite,event);
-            itemRegistry(ItemList.itemRawLemurite,event);
-            itemRegistry(ItemBlockList.itemBlockOreLemurite, event);
-            itemRegistry(ItemBlockList.itemBlockLemurite, event);
+            ItemList.itemIngotLemurite = ITEMS.register("lemuriteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustLemurite = ITEMS.register("lemuritedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardLemurite = ITEMS.register("lemuriteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpLemurite = ITEMS.register("lemuriteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustLemurite = ITEMS.register("lemuritedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawLemurite = ITEMS.register("rawlemurite", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerMalachite.get())
+        if (ConfigRegistryList.registerMalachite.get())
         {
-            ItemList.itemGemMalachite = new ItemEXOre(EXORES,"malachite");
-            ItemBlockList.itemBlockOreMalachite = new ItemBlockExOre(BlockList.blockOreMalachite,EXORES);
-            ItemBlockList.itemBlockDeepslateOreMalachite = new ItemBlockExOre(BlockList.blockDeepslateOreMalachite,EXORES);
-            ItemBlockList.itemBlockMalachite = new ItemBlockExOre(BlockList.blockMalachite,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreMalachite,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreMalachite,event);
-            itemRegistry(ItemBlockList.itemBlockMalachite,event);
-            itemRegistry(ItemList.itemGemMalachite,event);
+            ItemList.itemGemMalachite = ITEMS.register("malachite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerManganese.get())
         {
-            ItemList.itemIngotManganese = new ItemEXOre(EXORES, "manganeseingot");
-            ItemList.itemDustManganese = new ItemEXOre(EXORES, "manganesedust");
-            ItemList.itemShardManganese = new ItemEXOre(EXORES,"manganeseshard");
-            ItemList.itemClumpManganese = new ItemEXOre(EXORES,"manganeseclump");
-            ItemList.itemDirtyDustManganese = new ItemEXOre(EXORES,"manganesedirtydust");
-            ItemList.itemRawManganese = new ItemEXOre(EXORES,"rawmanganese");
-            ItemBlockList.itemBlockOreManganese = new ItemBlockExOre(BlockList.blockOreManganese, EXORES);
-            ItemBlockList.itemBlockDeepslateOreManganese = new ItemBlockExOre(BlockList.blockDeepslateOreManganese,EXORES);
-            ItemBlockList.itemBlockManganese = new ItemBlockExOre(BlockList.blockManganese, EXORES);
-            itemRegistry(ItemList.itemIngotManganese, event);
-            itemRegistry(ItemList.itemDustManganese, event);
-            itemRegistry(ItemList.itemShardManganese,event);
-            itemRegistry(ItemList.itemClumpManganese,event);
-            itemRegistry(ItemList.itemDirtyDustManganese,event);
-            itemRegistry(ItemList.itemRawManganese,event);
-            itemRegistry(ItemBlockList.itemBlockOreManganese, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreManganese,event);
-            itemRegistry(ItemBlockList.itemBlockManganese, event);
+            ItemList.itemIngotManganese = ITEMS.register("manganeseingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustManganese = ITEMS.register("manganesedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardManganese = ITEMS.register("manganeseshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpManganese = ITEMS.register("manganeseclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustManganese = ITEMS.register("manganesedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawManganese = ITEMS.register("rawmanganese", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerMeutoite.get())
+        if (ConfigRegistryList.registerMeutoite.get())
         {
-            ItemList.itemIngotMeutoite = new ItemEXOre(EXORES, "meutoiteingot");
-            ItemList.itemDustMeutoite = new ItemEXOre(EXORES, "meutoitedust");
-            ItemList.itemShardMeutoite = new ItemEXOre(EXORES,"meutoiteshard");
-            ItemList.itemClumpMeutoite = new ItemEXOre(EXORES,"meutoiteclump");
-            ItemList.itemDirtyDustMeutoite = new ItemEXOre(EXORES,"meutoitedirtydust");
-            ItemList.itemRawMeutoite = new ItemEXOre(EXORES,"rawmeutoite");
-            ItemBlockList.itemBlockOreMeutoite = new ItemBlockExOre(BlockList.blockOreMeutoite, EXORES);
-            ItemBlockList.itemBlockDeepslateOreMeutoite = new ItemBlockExOre(BlockList.blockDeepslateOreMeutoite,EXORES);
-            ItemBlockList.itemBlockMeutoite = new ItemBlockExOre(BlockList.blockMeutoite, EXORES);
-            itemRegistry(ItemList.itemIngotMeutoite, event);
-            itemRegistry(ItemList.itemDustMeutoite, event);
-            itemRegistry(ItemList.itemShardMeutoite,event);
-            itemRegistry(ItemList.itemClumpMeutoite,event);
-            itemRegistry(ItemList.itemDirtyDustMeutoite,event);
-            itemRegistry(ItemList.itemRawMeutoite,event);
-            itemRegistry(ItemBlockList.itemBlockOreMeutoite, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreMeutoite,event);
-            itemRegistry(ItemBlockList.itemBlockMeutoite, event);
+            ItemList.itemIngotMeutoite = ITEMS.register("meutoiteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustMeutoite = ITEMS.register("meutoitedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardMeutoite = ITEMS.register("meutoiteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpMeutoite = ITEMS.register("meutoiteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustMeutoite = ITEMS.register("meutoitedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawMeutoite = ITEMS.register("rawmeutoite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerMidasium.get())
         {
-            ItemList.itemIngotMidasium = new ItemEXOre(EXORES, "midasiumingot");
-            ItemList.itemDustMidasium = new ItemEXOre(EXORES, "midasiumdust");
-            ItemList.itemShardMidasium = new ItemEXOre(EXORES,"midasiumshard");
-            ItemList.itemClumpMidasium = new ItemEXOre(EXORES,"midasiumclump");
-            ItemList.itemDirtyDustMidasium = new ItemEXOre(EXORES,"midasiumdirtydust");
-            ItemList.itemRawMidasium = new ItemEXOre(EXORES,"rawmidasium");
-            ItemBlockList.itemBlockOreMidasium = new ItemBlockExOre(BlockList.blockOreMidasium, EXORES);
-            ItemBlockList.itemBlockMidasium = new ItemBlockExOre(BlockList.blockMidasium, EXORES);
-            itemRegistry(ItemList.itemIngotMidasium, event);
-            itemRegistry(ItemList.itemDustMidasium, event);
-            itemRegistry(ItemList.itemShardMidasium,event);
-            itemRegistry(ItemList.itemClumpMidasium,event);
-            itemRegistry(ItemList.itemDirtyDustMidasium,event);
-            itemRegistry(ItemList.itemRawMidasium,event);
-            itemRegistry(ItemBlockList.itemBlockOreMidasium, event);
-            itemRegistry(ItemBlockList.itemBlockMidasium, event);
+            ItemList.itemIngotMidasium = ITEMS.register("midasiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustMidasium = ITEMS.register("midasiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardMidasium = ITEMS.register("midasiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpMidasium = ITEMS.register("midasiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustMidasium = ITEMS.register("midasiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawMidasium = ITEMS.register("rawmidasium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerMithril.get())
         {
-            ItemList.itemIngotMithril = new ItemEXOre(EXORES, "mithrilingot");
-            ItemList.itemDustMithril = new ItemEXOre(EXORES, "mithrildust");
-            ItemList.itemShardMithril = new ItemEXOre(EXORES,"mithrilshard");
-            ItemList.itemClumpMithril = new ItemEXOre(EXORES,"mithrilclump");
-            ItemList.itemDirtyDustMithril = new ItemEXOre(EXORES,"mithrildirtydust");
-            ItemList.itemRawMithril = new ItemEXOre(EXORES,"rawmithril");
-            ItemBlockList.itemBlockOreMithril = new ItemBlockExOre(BlockList.blockOreMithril, EXORES);
-            ItemBlockList.itemBlockDeepslateOreMithril = new ItemBlockExOre(BlockList.blockDeepslateOreMithril,EXORES);
-            ItemBlockList.itemBlockMithril = new ItemBlockExOre(BlockList.blockMithril, EXORES);
-            itemRegistry(ItemList.itemIngotMithril, event);
-            itemRegistry(ItemList.itemDustMithril, event);
-            itemRegistry(ItemList.itemShardMithril,event);
-            itemRegistry(ItemList.itemClumpMithril,event);
-            itemRegistry(ItemList.itemDirtyDustMithril,event);
-            itemRegistry(ItemList.itemRawMithril,event);
-            itemRegistry(ItemBlockList.itemBlockOreMithril, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreMithril,event);
-            itemRegistry(ItemBlockList.itemBlockMithril, event);
+            ItemList.itemIngotMithril = ITEMS.register("mithrilingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustMithril = ITEMS.register("mithrildust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardMithril = ITEMS.register("mithrilshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpMithril = ITEMS.register("mithrilclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustMithril = ITEMS.register("mithrildirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawMithril = ITEMS.register("rawmithril", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerMolybdenum.get())
         {
-            ItemList.itemIngotMolybdenum = new ItemEXOre(EXORES, "molybdenumingot");
-            ItemList.itemDustMolybdenum = new ItemEXOre(EXORES, "molybdenumdust");
-            ItemList.itemShardMolybdenum = new ItemEXOre(EXORES,"molybdenumshard");
-            ItemList.itemClumpMolybdenum = new ItemEXOre(EXORES,"molybdenumclump");
-            ItemList.itemDirtyDustMolybdenum = new ItemEXOre(EXORES,"molybdenumdirtydust");
-            ItemList.itemRawMolybdenum = new ItemEXOre(EXORES,"rawmolybdenum");
-            ItemBlockList.itemBlockOreMolybdenum = new ItemBlockExOre(BlockList.blockOreMolybdenum, EXORES);
-            ItemBlockList.itemBlockDeepslateOreMolybdenum = new ItemBlockExOre(BlockList.blockDeepslateOreMolybdenum,EXORES);
-            ItemBlockList.itemBlockMolybdenum = new ItemBlockExOre(BlockList.blockMolybdenum, EXORES);
-            itemRegistry(ItemList.itemIngotMolybdenum, event);
-            itemRegistry(ItemList.itemDustMolybdenum, event);
-            itemRegistry(ItemList.itemShardMolybdenum,event);
-            itemRegistry(ItemList.itemClumpMolybdenum,event);
-            itemRegistry(ItemList.itemDirtyDustMolybdenum,event);
-            itemRegistry(ItemList.itemRawMolybdenum,event);
-            itemRegistry(ItemBlockList.itemBlockOreMolybdenum, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreMolybdenum,event);
-            itemRegistry(ItemBlockList.itemBlockMolybdenum, event);
+            ItemList.itemIngotMolybdenum = ITEMS.register("molybdenumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustMolybdenum = ITEMS.register("molybdenumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardMolybdenum = ITEMS.register("molybdenumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpMolybdenum = ITEMS.register("molybdenumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustMolybdenum = ITEMS.register("molybdenumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawMolybdenum = ITEMS.register("rawmolybdenum", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerNeodymium.get())
         {
-            ItemList.itemIngotNeodymium = new ItemEXOre(EXORES, "neodymiumingot");
-            ItemList.itemDustNeodymium = new ItemEXOre(EXORES, "neodymiumdust");
-            ItemList.itemShardNeodymium = new ItemEXOre(EXORES,"neodymiumshard");
-            ItemList.itemClumpNeodymium = new ItemEXOre(EXORES,"neodymiumclump");
-            ItemList.itemDirtyDustNeodymium = new ItemEXOre(EXORES,"neodymiumdirtydust");
-            ItemList.itemRawNeodymium = new ItemEXOre(EXORES,"rawneodymium");
-            ItemBlockList.itemBlockOreNeodymium = new ItemBlockExOre(BlockList.blockOreNeodymium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreNeodymium = new ItemBlockExOre(BlockList.blockDeepslateOreNeodymium,EXORES);
-            ItemBlockList.itemBlockNeodymium = new ItemBlockExOre(BlockList.blockNeodymium, EXORES);
-            itemRegistry(ItemList.itemIngotNeodymium, event);
-            itemRegistry(ItemList.itemDustNeodymium, event);
-            itemRegistry(ItemList.itemShardNeodymium,event);
-            itemRegistry(ItemList.itemClumpNeodymium,event);
-            itemRegistry(ItemList.itemDirtyDustNeodymium,event);
-            itemRegistry(ItemList.itemRawNeodymium,event);
-            itemRegistry(ItemBlockList.itemBlockOreNeodymium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreNeodymium,event);
-            itemRegistry(ItemBlockList.itemBlockNeodymium, event);
+            ItemList.itemIngotNeodymium = ITEMS.register("neodymiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustNeodymium = ITEMS.register("neodymiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardNeodymium = ITEMS.register("neodymiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpNeodymium = ITEMS.register("neodymiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustNeodymium = ITEMS.register("neodymiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawNeodymium = ITEMS.register("rawneodymium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerNeptunium.get())
+        if (ConfigRegistryList.registerNeptunium.get())
         {
-            ItemList.itemIngotNeptunium = new ItemEXOre(EXORES, "neptuniumingot");
-            ItemList.itemDustNeptunium = new ItemEXOre(EXORES, "neptuniumdust");
-            ItemList.itemShardNeptunium = new ItemEXOre(EXORES,"neptuniumshard");
-            ItemList.itemClumpNeptunium = new ItemEXOre(EXORES,"neptuniumclump");
-            ItemList.itemDirtyDustNeptunium = new ItemEXOre(EXORES,"neptuniumdirtydust");
-            ItemList.itemRawNeptunium = new ItemEXOre(EXORES,"rawneptunium");
-            ItemBlockList.itemBlockOreNeptunium = new ItemBlockExOre(BlockList.blockOreNeptunium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreNeptunium = new ItemBlockExOre(BlockList.blockDeepslateOreNeptunium,EXORES);
-            ItemBlockList.itemBlockNeptunium = new ItemBlockExOre(BlockList.blockNeptunium, EXORES);
-            itemRegistry(ItemList.itemIngotNeptunium, event);
-            itemRegistry(ItemList.itemDustNeptunium, event);
-            itemRegistry(ItemList.itemShardNeptunium,event);
-            itemRegistry(ItemList.itemClumpNeptunium,event);
-            itemRegistry(ItemList.itemDirtyDustNeptunium,event);
-            itemRegistry(ItemList.itemRawNeptunium,event);
-            itemRegistry(ItemBlockList.itemBlockOreNeptunium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreNeptunium,event);
-            itemRegistry(ItemBlockList.itemBlockNeptunium, event);
+            ItemList.itemIngotNeptunium = ITEMS.register("neptuniumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustNeptunium = ITEMS.register("neptuniumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardNeptunium = ITEMS.register("neptuniumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpNeptunium = ITEMS.register("neptuniumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustNeptunium = ITEMS.register("neptuniumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawNeptunium = ITEMS.register("rawneptunium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerNickel.get())
         {
-            ItemList.itemIngotNickel = new ItemEXOre(EXORES, "nickelingot");
-            ItemList.itemDustNickel = new ItemEXOre(EXORES, "nickeldust");
-            ItemList.itemShardNickel = new ItemEXOre(EXORES,"nickelshard");
-            ItemList.itemClumpNickel = new ItemEXOre(EXORES,"nickelclump");
-            ItemList.itemDirtyDustNickel = new ItemEXOre(EXORES,"nickeldirtydust");
-            ItemList.itemRawNickel = new ItemEXOre(EXORES,"rawnickel");
-            ItemBlockList.itemBlockOreNickel = new ItemBlockExOre(BlockList.blockOreNickel, EXORES);
-            ItemBlockList.itemBlockDeepslateOreNickel = new ItemBlockExOre(BlockList.blockDeepslateOreNickel,EXORES);
-            ItemBlockList.itemBlockNickel = new ItemBlockExOre(BlockList.blockNickel, EXORES);
-            itemRegistry(ItemList.itemIngotNickel, event);
-            itemRegistry(ItemList.itemDustNickel, event);
-            itemRegistry(ItemList.itemShardNickel,event);
-            itemRegistry(ItemList.itemClumpNickel,event);
-            itemRegistry(ItemList.itemDirtyDustNickel,event);
-            itemRegistry(ItemList.itemRawNickel,event);
-            itemRegistry(ItemBlockList.itemBlockOreNickel, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreNickel,event);
-            itemRegistry(ItemBlockList.itemBlockNickel, event);
+            ItemList.itemIngotNickel = ITEMS.register("nickelingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustNickel = ITEMS.register("nickeldust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardNickel = ITEMS.register("nickelshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpNickel = ITEMS.register("nickelclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustNickel = ITEMS.register("nickeldirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawNickel = ITEMS.register("rawnickel", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerNiobium.get())
         {
-            ItemList.itemIngotNiobium = new ItemEXOre(EXORES, "niobiumingot");
-            ItemList.itemDustNiobium = new ItemEXOre(EXORES, "niobiumdust");
-            ItemList.itemShardNiobium = new ItemEXOre(EXORES,"niobiumshard");
-            ItemList.itemClumpNiobium = new ItemEXOre(EXORES,"niobiumclump");
-            ItemList.itemDirtyDustNiobium = new ItemEXOre(EXORES,"niobiumdirtydust");
-            ItemList.itemRawNiobium = new ItemEXOre(EXORES,"rawniobium");
-            ItemBlockList.itemBlockOreNiobium = new ItemBlockExOre(BlockList.blockOreNiobium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreNiobium = new ItemBlockExOre(BlockList.blockDeepslateOreNiobium,EXORES);
-            ItemBlockList.itemBlockNiobium = new ItemBlockExOre(BlockList.blockNiobium, EXORES);
-            itemRegistry(ItemList.itemIngotNiobium, event);
-            itemRegistry(ItemList.itemDustNiobium, event);
-            itemRegistry(ItemList.itemShardNiobium,event);
-            itemRegistry(ItemList.itemClumpNiobium,event);
-            itemRegistry(ItemList.itemDirtyDustNiobium,event);
-            itemRegistry(ItemList.itemRawNiobium,event);
-            itemRegistry(ItemBlockList.itemBlockOreNiobium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreNiobium,event);
-            itemRegistry(ItemBlockList.itemBlockNiobium, event);
+            ItemList.itemIngotNiobium = ITEMS.register("niobiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustNiobium = ITEMS.register("niobiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardNiobium = ITEMS.register("niobiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpNiobium = ITEMS.register("niobiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustNiobium = ITEMS.register("niobiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawNiobium = ITEMS.register("rawniobium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerOnyx.get())
+        if (ConfigRegistryList.registerOnyx.get())
         {
-            ItemList.itemGemOnyx = new ItemEXOre(EXORES,"onyx");
-            ItemBlockList.itemBlockOreOnyx = new ItemBlockExOre(BlockList.blockOreOnyx,EXORES);
-            ItemBlockList.itemBlockDeepslateOreOnyx = new ItemBlockExOre(BlockList.blockDeepslateOreOnyx,EXORES);
-            ItemBlockList.itemBlockOnyx = new ItemBlockExOre(BlockList.blockOnyx,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreOnyx,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreOnyx,event);
-            itemRegistry(ItemBlockList.itemBlockOnyx,event);
-            itemRegistry(ItemList.itemGemOnyx,event);
+            ItemList.itemGemOnyx = ITEMS.register("onyx", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerOpal.get())
+        if (ConfigRegistryList.registerOpal.get())
         {
-            ItemList.itemGemOpal = new ItemEXOre(EXORES,"opal");
-            ItemBlockList.itemBlockOreOpal = new ItemBlockExOre(BlockList.blockOreOpal,EXORES);
-            ItemBlockList.itemBlockDeepslateOreOpal = new ItemBlockExOre(BlockList.blockDeepslateOreOpal,EXORES);
-            ItemBlockList.itemBlockOpal = new ItemBlockExOre(BlockList.blockOpal,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreOpal,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreOpal,event);
-            itemRegistry(ItemBlockList.itemBlockOpal,event);
-            itemRegistry(ItemList.itemGemOpal,event);
+            ItemList.itemGemOpal = ITEMS.register("opal", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerOrichalcum.get())
         {
-            ItemList.itemIngotOrichalcum = new ItemEXOre(EXORES, "orichalcumingot");
-            ItemList.itemDustOrichalcum = new ItemEXOre(EXORES, "orichalcumdust");
-            ItemList.itemShardOrichalcum = new ItemEXOre(EXORES,"orichalcumshard");
-            ItemList.itemClumpOrichalcum = new ItemEXOre(EXORES,"orichalcumclump");
-            ItemList.itemDirtyDustOrichalcum = new ItemEXOre(EXORES,"orichalcumdirtydust");
-            ItemList.itemRawOrichalcum = new ItemEXOre(EXORES,"raworichalcum");
-            ItemBlockList.itemBlockOreOrichalcum = new ItemBlockExOre(BlockList.blockOreOrichalcum, EXORES);
-            ItemBlockList.itemBlockDeepslateOreOrichalcum = new ItemBlockExOre(BlockList.blockDeepslateOreOrichalcum,EXORES);
-            ItemBlockList.itemBlockOrichalcum = new ItemBlockExOre(BlockList.blockOrichalcum, EXORES);
-            itemRegistry(ItemList.itemIngotOrichalcum, event);
-            itemRegistry(ItemList.itemDustOrichalcum, event);
-            itemRegistry(ItemList.itemShardOrichalcum,event);
-            itemRegistry(ItemList.itemClumpOrichalcum,event);
-            itemRegistry(ItemList.itemDirtyDustOrichalcum,event);
-            itemRegistry(ItemList.itemRawOrichalcum,event);
-            itemRegistry(ItemBlockList.itemBlockOreOrichalcum, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreOrichalcum,event);
-            itemRegistry(ItemBlockList.itemBlockOrichalcum, event);
+            ItemList.itemIngotOrichalcum = ITEMS.register("orichalcumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustOrichalcum = ITEMS.register("orichalcumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardOrichalcum = ITEMS.register("orichalcumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpOrichalcum = ITEMS.register("orichalcumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustOrichalcum = ITEMS.register("orichalcumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawOrichalcum = ITEMS.register("raworichalcum", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerOsmium.get())
+        if (ConfigRegistryList.registerOsmium.get())
         {
-            ItemList.itemIngotOsmium = new ItemEXOre(EXORES, "osmiumingot");
-            ItemList.itemDustOsmium = new ItemEXOre(EXORES, "osmiumdust");
-            ItemList.itemShardOsmium = new ItemEXOre(EXORES,"osmiumshard");
-            ItemList.itemClumpOsmium = new ItemEXOre(EXORES,"osmiumclump");
-            ItemList.itemDirtyDustOsmium = new ItemEXOre(EXORES,"osmiumdirtydust");
-            ItemList.itemRawOsmium = new ItemEXOre(EXORES,"rawosmium");
-            ItemBlockList.itemBlockOreOsmium = new ItemBlockExOre(BlockList.blockOreOsmium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreOsmium = new ItemBlockExOre(BlockList.blockDeepslateOreOsmium,EXORES);
-            ItemBlockList.itemBlockOsmium = new ItemBlockExOre(BlockList.blockOsmium, EXORES);
-            itemRegistry(ItemList.itemIngotOsmium, event);
-            itemRegistry(ItemList.itemDustOsmium, event);
-            itemRegistry(ItemList.itemShardOsmium,event);
-            itemRegistry(ItemList.itemClumpOsmium,event);
-            itemRegistry(ItemList.itemDirtyDustOsmium,event);
-            itemRegistry(ItemList.itemRawOsmium,event);
-            itemRegistry(ItemBlockList.itemBlockOreOsmium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreOsmium,event);
-            itemRegistry(ItemBlockList.itemBlockOsmium, event);
+            ItemList.itemIngotOsmium = ITEMS.register("osmiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustOsmium = ITEMS.register("osmiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardOsmium = ITEMS.register("osmiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpOsmium = ITEMS.register("osmiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustOsmium = ITEMS.register("osmiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawOsmium = ITEMS.register("rawosmium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerOureclase.get())
         {
-            ItemList.itemIngotOureclase = new ItemEXOre(EXORES, "oureclaseingot");
-            ItemList.itemDustOureclase = new ItemEXOre(EXORES, "oureclasedust");
-            ItemList.itemShardOureclase = new ItemEXOre(EXORES,"oureclaseshard");
-            ItemList.itemClumpOureclase = new ItemEXOre(EXORES,"oureclaseclump");
-            ItemList.itemDirtyDustOureclase = new ItemEXOre(EXORES,"oureclasedirtydust");
-            ItemList.itemRawOureclase = new ItemEXOre(EXORES,"rawoureclase");
-            ItemBlockList.itemBlockOreOureclase = new ItemBlockExOre(BlockList.blockOreOureclase, EXORES);
-            ItemBlockList.itemBlockDeepslateOreOureclase = new ItemBlockExOre(BlockList.blockDeepslateOreOureclase,EXORES);
-            ItemBlockList.itemBlockOureclase = new ItemBlockExOre(BlockList.blockOureclase, EXORES);
-            itemRegistry(ItemList.itemIngotOureclase, event);
-            itemRegistry(ItemList.itemDustOureclase, event);
-            itemRegistry(ItemList.itemShardOureclase,event);
-            itemRegistry(ItemList.itemClumpOureclase,event);
-            itemRegistry(ItemList.itemDirtyDustOureclase,event);
-            itemRegistry(ItemList.itemRawOureclase,event);
-            itemRegistry(ItemBlockList.itemBlockOreOureclase, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreOureclase,event);
-            itemRegistry(ItemBlockList.itemBlockOureclase, event);
+            ItemList.itemIngotOureclase = ITEMS.register("oureclaseingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustOureclase = ITEMS.register("oureclasedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardOureclase = ITEMS.register("oureclaseshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpOureclase = ITEMS.register("oureclaseclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustOureclase = ITEMS.register("oureclasedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawOureclase = ITEMS.register("rawoureclase", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerPalladium.get())
         {
-            ItemList.itemIngotPalladium = new ItemEXOre(EXORES, "palladiumingot");
-            ItemList.itemDustPalladium = new ItemEXOre(EXORES, "palladiumdust");
-            ItemList.itemShardPalladium = new ItemEXOre(EXORES,"palladiumshard");
-            ItemList.itemClumpPalladium = new ItemEXOre(EXORES,"palladiumclump");
-            ItemList.itemDirtyDustPalladium = new ItemEXOre(EXORES,"palladiumdirtydust");
-            ItemList.itemRawPalladium = new ItemEXOre(EXORES,"rawpalladium");
-            ItemBlockList.itemBlockOrePalladium = new ItemBlockExOre(BlockList.blockOrePalladium, EXORES);
-            ItemBlockList.itemBlockDeepslateOrePalladium = new ItemBlockExOre(BlockList.blockDeepslateOrePalladium,EXORES);
-            ItemBlockList.itemBlockPalladium = new ItemBlockExOre(BlockList.blockPalladium, EXORES);
-            itemRegistry(ItemList.itemIngotPalladium, event);
-            itemRegistry(ItemList.itemDustPalladium, event);
-            itemRegistry(ItemList.itemShardPalladium,event);
-            itemRegistry(ItemList.itemClumpPalladium,event);
-            itemRegistry(ItemList.itemDirtyDustPalladium,event);
-            itemRegistry(ItemList.itemRawPalladium,event);
-            itemRegistry(ItemBlockList.itemBlockOrePalladium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOrePalladium,event);
-            itemRegistry(ItemBlockList.itemBlockPalladium, event);
+            ItemList.itemIngotPalladium = ITEMS.register("palladiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustPalladium = ITEMS.register("palladiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardPalladium = ITEMS.register("palladiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpPalladium = ITEMS.register("palladiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustPalladium = ITEMS.register("palladiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawPalladium = ITEMS.register("rawpalladium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerPeridot.get())
+        if (ConfigRegistryList.registerPeridot.get())
         {
-            ItemList.itemGemPeridot = new ItemEXOre(EXORES,"peridot");
-            ItemBlockList.itemBlockOrePeridot = new ItemBlockExOre(BlockList.blockOrePeridot,EXORES);
-            ItemBlockList.itemBlockDeepslateOrePeridot = new ItemBlockExOre(BlockList.blockDeepslateOrePeridot,EXORES);
-            ItemBlockList.itemBlockPeridot = new ItemBlockExOre(BlockList.blockPeridot,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOrePeridot,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOrePeridot,event);
-            itemRegistry(ItemBlockList.itemBlockPeridot,event);
-            itemRegistry(ItemList.itemGemPeridot,event);
+            ItemList.itemGemPeridot = ITEMS.register("peridot", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerPhoenixite.get())
+        if (ConfigRegistryList.registerPhoenixite.get())
         {
-            ItemList.itemGemPhoenixite = new ItemEXOre(EXORES,"phoenixite");
-            ItemBlockList.itemBlockOrePhoenixite = new ItemBlockExOre(BlockList.blockOrePhoenixite,EXORES);
-            ItemBlockList.itemBlockDeepslateOrePhoenixite = new ItemBlockExOre(BlockList.blockDeepslateOrePhoenixite,EXORES);
-            ItemBlockList.itemBlockPhoenixite = new ItemBlockExOre(BlockList.blockPhoenixite,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOrePhoenixite,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOrePhoenixite,event);
-            itemRegistry(ItemBlockList.itemBlockPhoenixite,event);
-            itemRegistry(ItemList.itemGemPhoenixite,event);
+            ItemList.itemGemPhoenixite = ITEMS.register("phoenixite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerPlatinum.get())
         {
-            ItemList.itemIngotPlatinum = new ItemEXOre(EXORES, "platinumingot");
-            ItemList.itemDustPlatinum = new ItemEXOre(EXORES, "platinumdust");
-            ItemList.itemShardPlatinum = new ItemEXOre(EXORES,"platinumshard");
-            ItemList.itemClumpPlatinum = new ItemEXOre(EXORES,"platinumclump");
-            ItemList.itemDirtyDustPlatinum = new ItemEXOre(EXORES,"platinumdirtydust");
-            ItemList.itemRawPlatinum = new ItemEXOre(EXORES,"rawplatinum");
-            ItemBlockList.itemBlockOrePlatinum = new ItemBlockExOre(BlockList.blockOrePlatinum, EXORES);
-            ItemBlockList.itemBlockDeepslateOrePlatinum = new ItemBlockExOre(BlockList.blockDeepslateOrePlatinum,EXORES);
-            ItemBlockList.itemBlockPlatinum = new ItemBlockExOre(BlockList.blockPlatinum, EXORES);
-            itemRegistry(ItemList.itemIngotPlatinum, event);
-            itemRegistry(ItemList.itemDustPlatinum, event);
-            itemRegistry(ItemList.itemShardPlatinum,event);
-            itemRegistry(ItemList.itemClumpPlatinum,event);
-            itemRegistry(ItemList.itemDirtyDustPlatinum,event);
-            itemRegistry(ItemList.itemRawPlatinum,event);
-            itemRegistry(ItemBlockList.itemBlockOrePlatinum, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOrePlatinum,event);
-            itemRegistry(ItemBlockList.itemBlockPlatinum, event);
+            ItemList.itemIngotPlatinum = ITEMS.register("platinumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustPlatinum = ITEMS.register("platinumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardPlatinum = ITEMS.register("platinumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpPlatinum = ITEMS.register("platinumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustPlatinum = ITEMS.register("platinumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawPlatinum = ITEMS.register("rawplatinum", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerPlutonium.get())
+        if (ConfigRegistryList.registerPlutonium.get())
         {
-            ItemList.itemIngotPlutonium = new ItemEXOre(EXORES, "plutoniumingot");
-            ItemList.itemDustPlutonium = new ItemEXOre(EXORES, "plutoniumdust");
-            ItemList.itemShardPlutonium = new ItemEXOre(EXORES,"plutoniumshard");
-            ItemList.itemClumpPlutonium = new ItemEXOre(EXORES,"plutoniumclump");
-            ItemList.itemDirtyDustPlutonium = new ItemEXOre(EXORES,"plutoniumdirtydust");
-            ItemList.itemRawPlutonium = new ItemEXOre(EXORES,"rawplutonium");
-            ItemBlockList.itemBlockOrePlutonium = new ItemBlockExOre(BlockList.blockOrePlutonium, EXORES);
-            ItemBlockList.itemBlockDeepslateOrePlutonium = new ItemBlockExOre(BlockList.blockDeepslateOrePlutonium,EXORES);
-            ItemBlockList.itemBlockPlutonium = new ItemBlockExOre(BlockList.blockPlutonium, EXORES);
-            itemRegistry(ItemList.itemIngotPlutonium, event);
-            itemRegistry(ItemList.itemDustPlutonium, event);
-            itemRegistry(ItemList.itemShardPlutonium,event);
-            itemRegistry(ItemList.itemClumpPlutonium,event);
-            itemRegistry(ItemList.itemDirtyDustPlutonium,event);
-            itemRegistry(ItemList.itemRawPlutonium,event);
-            itemRegistry(ItemBlockList.itemBlockOrePlutonium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOrePlutonium,event);
-            itemRegistry(ItemBlockList.itemBlockPlutonium, event);
+            ItemList.itemIngotPlutonium = ITEMS.register("plutoniumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustPlutonium = ITEMS.register("plutoniumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardPlutonium = ITEMS.register("plutoniumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpPlutonium = ITEMS.register("plutoniumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustPlutonium = ITEMS.register("plutoniumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawPlutonium = ITEMS.register("rawplutonium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerPolonium.get())
+        if (ConfigRegistryList.registerPolonium.get())
         {
-            ItemList.itemIngotPolonium = new ItemEXOre(EXORES, "poloniumingot");
-            ItemList.itemDustPolonium = new ItemEXOre(EXORES, "poloniumdust");
-            ItemList.itemShardPolonium = new ItemEXOre(EXORES,"poloniumshard");
-            ItemList.itemClumpPolonium = new ItemEXOre(EXORES,"poloniumclump");
-            ItemList.itemDirtyDustPolonium = new ItemEXOre(EXORES,"poloniumdirtydust");
-            ItemList.itemRawPolonium = new ItemEXOre(EXORES,"rawpolonium");
-            ItemBlockList.itemBlockOrePolonium = new ItemBlockExOre(BlockList.blockOrePolonium, EXORES);
-            ItemBlockList.itemBlockDeepslateOrePolonium = new ItemBlockExOre(BlockList.blockDeepslateOrePolonium,EXORES);
-            ItemBlockList.itemBlockPolonium = new ItemBlockExOre(BlockList.blockPolonium, EXORES);
-            itemRegistry(ItemList.itemIngotPolonium, event);
-            itemRegistry(ItemList.itemDustPolonium, event);
-            itemRegistry(ItemList.itemShardPolonium,event);
-            itemRegistry(ItemList.itemClumpPolonium,event);
-            itemRegistry(ItemList.itemDirtyDustPolonium,event);
-            itemRegistry(ItemList.itemRawPolonium,event);
-            itemRegistry(ItemBlockList.itemBlockOrePolonium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOrePolonium,event);
-            itemRegistry(ItemBlockList.itemBlockPolonium, event);
+            ItemList.itemIngotPolonium = ITEMS.register("poloniumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustPolonium = ITEMS.register("poloniumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardPolonium = ITEMS.register("poloniumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpPolonium = ITEMS.register("poloniumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustPolonium = ITEMS.register("poloniumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawPolonium = ITEMS.register("rawpolonium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerPromethium.get())
         {
-            ItemList.itemIngotPromethium = new ItemEXOre(EXORES, "promethiumingot");
-            ItemList.itemDustPromethium = new ItemEXOre(EXORES, "promethiumdust");
-            ItemList.itemShardPromethium = new ItemEXOre(EXORES,"promethiumshard");
-            ItemList.itemClumpPromethium = new ItemEXOre(EXORES,"promethiumclump");
-            ItemList.itemDirtyDustPromethium = new ItemEXOre(EXORES,"promethiumdirtydust");
-            ItemList.itemRawPromethium = new ItemEXOre(EXORES,"rawpromethium");
-            ItemBlockList.itemBlockOrePromethium = new ItemBlockExOre(BlockList.blockOrePromethium, EXORES);
-            ItemBlockList.itemBlockDeepslateOrePromethium = new ItemBlockExOre(BlockList.blockDeepslateOrePromethium,EXORES);
-            ItemBlockList.itemBlockPromethium = new ItemBlockExOre(BlockList.blockPromethium, EXORES);
-            itemRegistry(ItemList.itemIngotPromethium, event);
-            itemRegistry(ItemList.itemDustPromethium, event);
-            itemRegistry(ItemList.itemShardPromethium,event);
-            itemRegistry(ItemList.itemClumpPromethium,event);
-            itemRegistry(ItemList.itemDirtyDustPromethium,event);
-            itemRegistry(ItemList.itemRawPromethium,event);
-            itemRegistry(ItemBlockList.itemBlockOrePromethium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOrePromethium,event);
-            itemRegistry(ItemBlockList.itemBlockPromethium, event);
+            ItemList.itemIngotPromethium = ITEMS.register("promethiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustPromethium = ITEMS.register("promethiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardPromethium = ITEMS.register("promethiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpPromethium = ITEMS.register("promethiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustPromethium = ITEMS.register("promethiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawPromethium = ITEMS.register("rawpromethium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerQuartz.get())
+        if (ConfigRegistryList.registerQuartz.get())
         {
-            ItemList.itemGemQuartz = new ItemEXOre(EXORES,"quartz");
-            ItemBlockList.itemBlockOreQuartz = new ItemBlockExOre(BlockList.blockOreQuartz,EXORES);
-            ItemBlockList.itemBlockDeepslateOreQuartz = new ItemBlockExOre(BlockList.blockDeepslateOreQuartz,EXORES);
-            ItemBlockList.itemBlockQuartz = new ItemBlockExOre(BlockList.blockQuartz,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreQuartz,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreQuartz,event);
-            itemRegistry(ItemBlockList.itemBlockQuartz,event);
-            itemRegistry(ItemList.itemGemQuartz,event);
+            ItemList.itemGemQuartz = ITEMS.register("quartz", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerRhenium.get())
+        if (ConfigRegistryList.registerRhenium.get())
         {
-            ItemList.itemIngotRhenium = new ItemEXOre(EXORES, "rheniumingot");
-            ItemList.itemDustRhenium = new ItemEXOre(EXORES, "rheniumdust");
-            ItemList.itemShardRhenium = new ItemEXOre(EXORES,"rheniumshard");
-            ItemList.itemClumpRhenium = new ItemEXOre(EXORES,"rheniumclump");
-            ItemList.itemDirtyDustRhenium = new ItemEXOre(EXORES,"rheniumdirtydust");
-            ItemList.itemRawRhenium = new ItemEXOre(EXORES,"rawrhenium");
-            ItemBlockList.itemBlockOreRhenium = new ItemBlockExOre(BlockList.blockOreRhenium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreRhenium = new ItemBlockExOre(BlockList.blockDeepslateOreRhenium,EXORES);
-            ItemBlockList.itemBlockRhenium = new ItemBlockExOre(BlockList.blockRhenium, EXORES);
-            itemRegistry(ItemList.itemIngotRhenium, event);
-            itemRegistry(ItemList.itemDustRhenium, event);
-            itemRegistry(ItemList.itemShardRhenium,event);
-            itemRegistry(ItemList.itemClumpRhenium,event);
-            itemRegistry(ItemList.itemDirtyDustRhenium,event);
-            itemRegistry(ItemList.itemRawRhenium,event);
-            itemRegistry(ItemBlockList.itemBlockOreRhenium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreRhenium,event);
-            itemRegistry(ItemBlockList.itemBlockRhenium, event);
+            ItemList.itemIngotRhenium = ITEMS.register("rheniumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustRhenium = ITEMS.register("rheniumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardRhenium = ITEMS.register("rheniumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpRhenium = ITEMS.register("rheniumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustRhenium = ITEMS.register("rheniumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawRhenium = ITEMS.register("rawrhenium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerRhodium.get())
         {
-            ItemList.itemIngotRhodium = new ItemEXOre(EXORES, "rhodiumingot");
-            ItemList.itemDustRhodium = new ItemEXOre(EXORES, "rhodiumdust");
-            ItemList.itemShardRhodium = new ItemEXOre(EXORES,"rhodiumshard");
-            ItemList.itemClumpRhodium = new ItemEXOre(EXORES,"rhodiumclump");
-            ItemList.itemDirtyDustRhodium = new ItemEXOre(EXORES,"rhodiumdirtydust");
-            ItemList.itemRawRhodium = new ItemEXOre(EXORES,"rawrhodium");
-            ItemBlockList.itemBlockOreRhodium = new ItemBlockExOre(BlockList.blockOreRhodium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreRhodium = new ItemBlockExOre(BlockList.blockDeepslateOreRhodium,EXORES);
-            ItemBlockList.itemBlockRhodium = new ItemBlockExOre(BlockList.blockRhodium, EXORES);
-            itemRegistry(ItemList.itemIngotRhodium, event);
-            itemRegistry(ItemList.itemDustRhodium, event);
-            itemRegistry(ItemList.itemShardRhodium,event);
-            itemRegistry(ItemList.itemClumpRhodium,event);
-            itemRegistry(ItemList.itemDirtyDustRhodium,event);
-            itemRegistry(ItemList.itemRawRhodium,event);
-            itemRegistry(ItemBlockList.itemBlockOreRhodium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreRhodium,event);
-            itemRegistry(ItemBlockList.itemBlockRhodium, event);
+            ItemList.itemIngotRhodium = ITEMS.register("rhodiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustRhodium = ITEMS.register("rhodiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardRhodium = ITEMS.register("rhodiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpRhodium = ITEMS.register("rhodiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustRhodium = ITEMS.register("rhodiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawRhodium = ITEMS.register("rawrhodium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerRubracium.get())
         {
-            ItemList.itemIngotRubracium = new ItemEXOre(EXORES, "rubraciumingot");
-            ItemList.itemDustRubracium = new ItemEXOre(EXORES, "rubraciumdust");
-            ItemList.itemShardRubracium = new ItemEXOre(EXORES,"rubraciumshard");
-            ItemList.itemClumpRubracium = new ItemEXOre(EXORES,"rubraciumclump");
-            ItemList.itemDirtyDustRubracium = new ItemEXOre(EXORES,"rubraciumdirtydust");
-            ItemList.itemRawRubracium = new ItemEXOre(EXORES,"rawrubracium");
-            ItemBlockList.itemBlockOreRubracium = new ItemBlockExOre(BlockList.blockOreRubracium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreRubracium = new ItemBlockExOre(BlockList.blockDeepslateOreRubracium,EXORES);
-            ItemBlockList.itemBlockRubracium = new ItemBlockExOre(BlockList.blockRubracium, EXORES);
-            itemRegistry(ItemList.itemIngotRubracium, event);
-            itemRegistry(ItemList.itemDustRubracium, event);
-            itemRegistry(ItemList.itemShardRubracium,event);
-            itemRegistry(ItemList.itemClumpRubracium,event);
-            itemRegistry(ItemList.itemDirtyDustRubracium,event);
-            itemRegistry(ItemList.itemRawRubracium,event);
-            itemRegistry(ItemBlockList.itemBlockOreRubracium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreRubracium,event);
-            itemRegistry(ItemBlockList.itemBlockRubracium, event);
+            ItemList.itemIngotRubracium = ITEMS.register("rubraciumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustRubracium = ITEMS.register("rubraciumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardRubracium = ITEMS.register("rubraciumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpRubracium = ITEMS.register("rubraciumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustRubracium = ITEMS.register("rubraciumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawRubracium = ITEMS.register("rawrubracium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerRuby.get())
+        if (ConfigRegistryList.registerRuby.get())
         {
-            ItemList.itemGemRuby = new ItemEXOre(EXORES,"ruby");
-            ItemBlockList.itemBlockOreRuby = new ItemBlockExOre(BlockList.blockOreRuby,EXORES);
-            ItemBlockList.itemBlockDeepslateOreRuby = new ItemBlockExOre(BlockList.blockDeepslateOreRuby,EXORES);
-            ItemBlockList.itemBlockRuby = new ItemBlockExOre(BlockList.blockRuby,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreRuby,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreRuby,event);
-            itemRegistry(ItemBlockList.itemBlockRuby,event);
-            itemRegistry(ItemList.itemGemRuby,event);
+            ItemList.itemGemRuby = ITEMS.register("ruby", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerRuthenium.get())
         {
-            ItemList.itemIngotRuthenium = new ItemEXOre(EXORES, "rutheniumingot");
-            ItemList.itemDustRuthenium = new ItemEXOre(EXORES, "rutheniumdust");
-            ItemList.itemShardRuthenium = new ItemEXOre(EXORES,"rutheniumshard");
-            ItemList.itemClumpRuthenium = new ItemEXOre(EXORES,"rutheniumclump");
-            ItemList.itemDirtyDustRuthenium = new ItemEXOre(EXORES,"rutheniumdirtydust");
-            ItemList.itemRawRuthenium = new ItemEXOre(EXORES,"rawruthenium");
-            ItemBlockList.itemBlockOreRuthenium = new ItemBlockExOre(BlockList.blockOreRuthenium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreRuthenium = new ItemBlockExOre(BlockList.blockDeepslateOreRuthenium,EXORES);
-            ItemBlockList.itemBlockRuthenium = new ItemBlockExOre(BlockList.blockRuthenium, EXORES);
-            itemRegistry(ItemList.itemIngotRuthenium, event);
-            itemRegistry(ItemList.itemDustRuthenium, event);
-            itemRegistry(ItemList.itemShardRuthenium,event);
-            itemRegistry(ItemList.itemClumpRuthenium,event);
-            itemRegistry(ItemList.itemDirtyDustRuthenium,event);
-            itemRegistry(ItemList.itemRawRuthenium,event);
-            itemRegistry(ItemBlockList.itemBlockOreRuthenium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreRuthenium,event);
-            itemRegistry(ItemBlockList.itemBlockRuthenium, event);
+            ItemList.itemIngotRuthenium = ITEMS.register("rutheniumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustRuthenium = ITEMS.register("rutheniumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardRuthenium = ITEMS.register("rutheniumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpRuthenium = ITEMS.register("rutheniumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustRuthenium = ITEMS.register("rutheniumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawRuthenium = ITEMS.register("rawruthenium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerSanguinite.get())
         {
-            ItemList.itemIngotSanguinite = new ItemEXOre(EXORES, "sanguiniteingot");
-            ItemList.itemDustSanguinite = new ItemEXOre(EXORES, "sanguinitedust");
-            ItemList.itemShardSanguinite = new ItemEXOre(EXORES,"sanguiniteshard");
-            ItemList.itemClumpSanguinite = new ItemEXOre(EXORES,"sanguiniteclump");
-            ItemList.itemDirtyDustSanguinite = new ItemEXOre(EXORES,"sanguinitedirtydust");
-            ItemList.itemRawSanguinite = new ItemEXOre(EXORES,"rawsanguinite");
-            ItemBlockList.itemBlockOreSanguinite = new ItemBlockExOre(BlockList.blockOreSanguinite, EXORES);
-            ItemBlockList.itemBlockSanguinite = new ItemBlockExOre(BlockList.blockSanguinite, EXORES);
-            itemRegistry(ItemList.itemIngotSanguinite, event);
-            itemRegistry(ItemList.itemDustSanguinite, event);
-            itemRegistry(ItemList.itemShardSanguinite,event);
-            itemRegistry(ItemList.itemClumpSanguinite,event);
-            itemRegistry(ItemList.itemDirtyDustSanguinite,event);
-            itemRegistry(ItemList.itemRawSanguinite,event);
-            itemRegistry(ItemBlockList.itemBlockOreSanguinite, event);
-            itemRegistry(ItemBlockList.itemBlockSanguinite, event);
+            ItemList.itemIngotSanguinite = ITEMS.register("sanguiniteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustSanguinite = ITEMS.register("sanguinitedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardSanguinite = ITEMS.register("sanguiniteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpSanguinite = ITEMS.register("sanguiniteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustSanguinite = ITEMS.register("sanguinitedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawSanguinite = ITEMS.register("rawsanguinite", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerSapphire.get())
+        if (ConfigRegistryList.registerSapphire.get())
         {
-            ItemList.itemGemSapphire = new ItemEXOre(EXORES,"sapphire");
-            ItemBlockList.itemBlockOreSapphire = new ItemBlockExOre(BlockList.blockOreSapphire,EXORES);
-            ItemBlockList.itemBlockDeepslateOreSapphire = new ItemBlockExOre(BlockList.blockDeepslateOreSapphire,EXORES);
-            ItemBlockList.itemBlockSapphire = new ItemBlockExOre(BlockList.blockSapphire,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreSapphire,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreSapphire,event);
-            itemRegistry(ItemBlockList.itemBlockSapphire,event);
-            itemRegistry(ItemList.itemGemSapphire,event);
+            ItemList.itemGemSapphire = ITEMS.register("sapphire", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerShadowIron.get())
         {
-            ItemList.itemIngotShadowIron = new ItemEXOre(EXORES, "shadowironingot");
-            ItemList.itemDustShadowIron = new ItemEXOre(EXORES, "shadowirondust");
-            ItemList.itemShardShadowIron = new ItemEXOre(EXORES,"shadowironshard");
-            ItemList.itemClumpShadowIron = new ItemEXOre(EXORES,"shadowironclump");
-            ItemList.itemDirtyDustShadowIron = new ItemEXOre(EXORES,"shadowirondirtydust");
-            ItemList.itemRawShadowIron = new ItemEXOre(EXORES,"rawshadowiron");
-            ItemBlockList.itemBlockOreShadowIron = new ItemBlockExOre(BlockList.blockOreShadowIron, EXORES);
-            ItemBlockList.itemBlockShadowIron = new ItemBlockExOre(BlockList.blockShadowIron, EXORES);
-            itemRegistry(ItemList.itemIngotShadowIron, event);
-            itemRegistry(ItemList.itemDustShadowIron, event);
-            itemRegistry(ItemList.itemShardShadowIron,event);
-            itemRegistry(ItemList.itemClumpShadowIron,event);
-            itemRegistry(ItemList.itemDirtyDustShadowIron,event);
-            itemRegistry(ItemList.itemRawShadowIron,event);
-            itemRegistry(ItemBlockList.itemBlockOreShadowIron, event);
-            itemRegistry(ItemBlockList.itemBlockShadowIron, event);
+            ItemList.itemIngotShadowIron = ITEMS.register("shadowironingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustShadowIron = ITEMS.register("shadowirondust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardShadowIron = ITEMS.register("shadowironshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpShadowIron = ITEMS.register("shadowironclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustShadowIron = ITEMS.register("shadowirondirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawShadowIron = ITEMS.register("rawshadowiron", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerSilver.get())
         {
-            ItemList.itemIngotSilver = new ItemEXOre(EXORES, "silveringot");
-            ItemList.itemDustSilver = new ItemEXOre(EXORES, "silverdust");
-            ItemList.itemShardSilver = new ItemEXOre(EXORES,"silvershard");
-            ItemList.itemClumpSilver = new ItemEXOre(EXORES,"silverclump");
-            ItemList.itemDirtyDustSilver = new ItemEXOre(EXORES,"silverdirtydust");
-            ItemList.itemRawSilver = new ItemEXOre(EXORES,"rawsilver");
-            ItemBlockList.itemBlockOreSilver = new ItemBlockExOre(BlockList.blockOreSilver, EXORES);
-            ItemBlockList.itemBlockDeepslateOreSilver = new ItemBlockExOre(BlockList.blockDeepslateOreSilver,EXORES);
-            ItemBlockList.itemBlockSilver = new ItemBlockExOre(BlockList.blockSilver, EXORES);
-            itemRegistry(ItemList.itemIngotSilver, event);
-            itemRegistry(ItemList.itemDustSilver, event);
-            itemRegistry(ItemList.itemShardSilver,event);
-            itemRegistry(ItemList.itemClumpSilver,event);
-            itemRegistry(ItemList.itemDirtyDustSilver,event);
-            itemRegistry(ItemList.itemRawSilver,event);
-            itemRegistry(ItemBlockList.itemBlockOreSilver, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreSilver,event);
-            itemRegistry(ItemBlockList.itemBlockSilver, event);
+            ItemList.itemIngotSilver = ITEMS.register("silveringot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustSilver = ITEMS.register("silverdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardSilver = ITEMS.register("silvershard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpSilver = ITEMS.register("silverclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustSilver = ITEMS.register("silverdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawSilver = ITEMS.register("rawsilver", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerSpinel.get())
+        if (ConfigRegistryList.registerSpinel.get())
         {
-            ItemList.itemGemSpinel = new ItemEXOre(EXORES,"spinel");
-            ItemBlockList.itemBlockOreSpinel = new ItemBlockExOre(BlockList.blockOreSpinel,EXORES);
-            ItemBlockList.itemBlockDeepslateOreSpinel = new ItemBlockExOre(BlockList.blockDeepslateOreSpinel,EXORES);
-            ItemBlockList.itemBlockSpinel = new ItemBlockExOre(BlockList.blockSpinel,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreSpinel,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreSpinel,event);
-            itemRegistry(ItemBlockList.itemBlockSpinel,event);
-            itemRegistry(ItemList.itemGemSpinel,event);
+            ItemList.itemGemSpinel = ITEMS.register("spinel", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerSugilite.get())
+        if (ConfigRegistryList.registerSugilite.get())
         {
-            ItemList.itemGemSugilite = new ItemEXOre(EXORES,"sugilite");
-            ItemBlockList.itemBlockOreSugilite = new ItemBlockExOre(BlockList.blockOreSugilite,EXORES);
-            ItemBlockList.itemBlockDeepslateOreSugilite = new ItemBlockExOre(BlockList.blockDeepslateOreSugilite,EXORES);
-            ItemBlockList.itemBlockSugilite = new ItemBlockExOre(BlockList.blockSugilite,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreSugilite,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreSugilite,event);
-            itemRegistry(ItemBlockList.itemBlockSugilite,event);
-            itemRegistry(ItemList.itemGemSugilite,event);
+            ItemList.itemGemSugilite = ITEMS.register("sugilite", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerTantalum.get())
+        if (ConfigRegistryList.registerTantalum.get())
         {
-            ItemList.itemIngotTantalum = new ItemEXOre(EXORES, "tantalumingot");
-            ItemList.itemDustTantalum = new ItemEXOre(EXORES, "tantalumdust");
-            ItemList.itemShardTantalum = new ItemEXOre(EXORES,"tantalumshard");
-            ItemList.itemClumpTantalum = new ItemEXOre(EXORES,"tantalumclump");
-            ItemList.itemDirtyDustTantalum = new ItemEXOre(EXORES,"tantalumdirtydust");
-            ItemList.itemRawTantalum = new ItemEXOre(EXORES,"rawtantalum");
-            ItemBlockList.itemBlockOreTantalum = new ItemBlockExOre(BlockList.blockOreTantalum, EXORES);
-            ItemBlockList.itemBlockDeepslateOreTantalum = new ItemBlockExOre(BlockList.blockDeepslateOreTantalum,EXORES);
-            ItemBlockList.itemBlockTantalum = new ItemBlockExOre(BlockList.blockTantalum, EXORES);
-            itemRegistry(ItemList.itemIngotTantalum, event);
-            itemRegistry(ItemList.itemDustTantalum, event);
-            itemRegistry(ItemList.itemShardTantalum,event);
-            itemRegistry(ItemList.itemClumpTantalum,event);
-            itemRegistry(ItemList.itemDirtyDustTantalum,event);
-            itemRegistry(ItemList.itemRawTantalum,event);
-            itemRegistry(ItemBlockList.itemBlockOreTantalum, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTantalum,event);
-            itemRegistry(ItemBlockList.itemBlockTantalum, event);
+            ItemList.itemIngotTantalum = ITEMS.register("tantalumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustTantalum = ITEMS.register("tantalumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardTantalum = ITEMS.register("tantalumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpTantalum = ITEMS.register("tantalumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustTantalum = ITEMS.register("tantalumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawTantalum = ITEMS.register("rawtantalum", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerTanzanite.get())
+        if (ConfigRegistryList.registerTanzanite.get())
         {
-            ItemList.itemGemTanzanite = new ItemEXOre(EXORES,"tanzanite");
-            ItemBlockList.itemBlockOreTanzanite = new ItemBlockExOre(BlockList.blockOreTanzanite,EXORES);
-            ItemBlockList.itemBlockDeepslateOreTanzanite = new ItemBlockExOre(BlockList.blockDeepslateOreTanzanite,EXORES);
-            ItemBlockList.itemBlockTanzanite = new ItemBlockExOre(BlockList.blockTanzanite,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreTanzanite,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTanzanite,event);
-            itemRegistry(ItemBlockList.itemBlockTanzanite,event);
-            itemRegistry(ItemList.itemGemTanzanite,event);
+            ItemList.itemGemTanzanite = ITEMS.register("tanzanite", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerTartarite.get())
+        if (ConfigRegistryList.registerTartarite.get())
         {
-            ItemList.itemIngotTartarite = new ItemEXOre(EXORES, "tartariteingot");
-            ItemList.itemDustTartarite = new ItemEXOre(EXORES, "tartaritedust");
-            ItemList.itemShardTartarite = new ItemEXOre(EXORES,"tartariteshard");
-            ItemList.itemClumpTartarite = new ItemEXOre(EXORES,"tartariteclump");
-            ItemList.itemDirtyDustTartarite = new ItemEXOre(EXORES,"tartaritedirtydust");
-            ItemList.itemRawTartarite = new ItemEXOre(EXORES,"rawtartarite");
-            ItemBlockList.itemBlockOreTartarite = new ItemBlockExOre(BlockList.blockOreTartarite, EXORES);
-            ItemBlockList.itemBlockDeepslateOreTartarite = new ItemBlockExOre(BlockList.blockDeepslateOreTartarite,EXORES);
-            ItemBlockList.itemBlockTartarite = new ItemBlockExOre(BlockList.blockTartarite, EXORES);
-            itemRegistry(ItemList.itemIngotTartarite, event);
-            itemRegistry(ItemList.itemDustTartarite, event);
-            itemRegistry(ItemList.itemShardTartarite,event);
-            itemRegistry(ItemList.itemClumpTartarite,event);
-            itemRegistry(ItemList.itemDirtyDustTartarite,event);
-            itemRegistry(ItemList.itemRawTartarite,event);
-            itemRegistry(ItemBlockList.itemBlockOreTartarite, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTartarite,event);
-            itemRegistry(ItemBlockList.itemBlockTartarite, event);
+            ItemList.itemIngotTartarite = ITEMS.register("tartariteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustTartarite = ITEMS.register("tartaritedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardTartarite = ITEMS.register("tartariteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpTartarite = ITEMS.register("tartariteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustTartarite = ITEMS.register("tartaritedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawTartarite = ITEMS.register("rawtartarite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerTechnetium.get())
         {
-            ItemList.itemIngotTechnetium = new ItemEXOre(EXORES, "technetiumingot");
-            ItemList.itemDustTechnetium = new ItemEXOre(EXORES, "technetiumdust");
-            ItemList.itemShardTechnetium = new ItemEXOre(EXORES,"technetiumshard");
-            ItemList.itemClumpTechnetium = new ItemEXOre(EXORES,"technetiumclump");
-            ItemList.itemDirtyDustTechnetium = new ItemEXOre(EXORES,"technetiumdirtydust");
-            ItemList.itemRawTechnetium = new ItemEXOre(EXORES,"rawtechnetium");
-            ItemBlockList.itemBlockOreTechnetium = new ItemBlockExOre(BlockList.blockOreTechnetium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreTechnetium = new ItemBlockExOre(BlockList.blockDeepslateOreTechnetium,EXORES);
-            ItemBlockList.itemBlockTechnetium = new ItemBlockExOre(BlockList.blockTechnetium, EXORES);
-            itemRegistry(ItemList.itemIngotTechnetium, event);
-            itemRegistry(ItemList.itemDustTechnetium, event);
-            itemRegistry(ItemList.itemShardTechnetium,event);
-            itemRegistry(ItemList.itemClumpTechnetium,event);
-            itemRegistry(ItemList.itemDirtyDustTechnetium,event);
-            itemRegistry(ItemList.itemRawTechnetium,event);
-            itemRegistry(ItemBlockList.itemBlockOreTechnetium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTechnetium,event);
-            itemRegistry(ItemBlockList.itemBlockTechnetium, event);
+            ItemList.itemIngotTechnetium = ITEMS.register("technetiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustTechnetium = ITEMS.register("technetiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardTechnetium = ITEMS.register("technetiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpTechnetium = ITEMS.register("technetiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustTechnetium = ITEMS.register("technetiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawTechnetium = ITEMS.register("rawtechnetium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerThallium.get())
         {
-            ItemList.itemIngotThallium = new ItemEXOre(EXORES, "thalliumingot");
-            ItemList.itemDustThallium = new ItemEXOre(EXORES, "thalliumdust");
-            ItemList.itemShardThallium = new ItemEXOre(EXORES,"thalliumshard");
-            ItemList.itemClumpThallium = new ItemEXOre(EXORES,"thalliumclump");
-            ItemList.itemDirtyDustThallium = new ItemEXOre(EXORES,"thalliumdirtydust");
-            ItemList.itemRawThallium = new ItemEXOre(EXORES,"rawthallium");
-            ItemBlockList.itemBlockOreThallium = new ItemBlockExOre(BlockList.blockOreThallium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreThallium = new ItemBlockExOre(BlockList.blockDeepslateOreThallium,EXORES);
-            ItemBlockList.itemBlockThallium = new ItemBlockExOre(BlockList.blockThallium, EXORES);
-            itemRegistry(ItemList.itemIngotThallium, event);
-            itemRegistry(ItemList.itemDustThallium, event);
-            itemRegistry(ItemList.itemShardThallium,event);
-            itemRegistry(ItemList.itemClumpThallium,event);
-            itemRegistry(ItemList.itemDirtyDustThallium,event);
-            itemRegistry(ItemList.itemRawThallium,event);
-            itemRegistry(ItemBlockList.itemBlockOreThallium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreThallium,event);
-            itemRegistry(ItemBlockList.itemBlockThallium, event);
+            ItemList.itemIngotThallium = ITEMS.register("thalliumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustThallium = ITEMS.register("thalliumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardThallium = ITEMS.register("thalliumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpThallium = ITEMS.register("thalliumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustThallium = ITEMS.register("thalliumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawThallium = ITEMS.register("rawthallium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerTin.get())
         {
-            ItemList.itemIngotTin = new ItemEXOre(EXORES, "tiningot");
-            ItemList.itemDustTin = new ItemEXOre(EXORES, "tindust");
-            ItemList.itemShardTin = new ItemEXOre(EXORES,"tinshard");
-            ItemList.itemClumpTin = new ItemEXOre(EXORES,"tinclump");
-            ItemList.itemDirtyDustTin = new ItemEXOre(EXORES,"tindirtydust");
-            ItemList.itemRawTin = new ItemEXOre(EXORES,"rawtin");
-            ItemBlockList.itemBlockOreTin = new ItemBlockExOre(BlockList.blockOreTin, EXORES);
-            ItemBlockList.itemBlockDeepslateOreTin = new ItemBlockExOre(BlockList.blockDeepslateOreTin,EXORES);
-            ItemBlockList.itemBlockTin = new ItemBlockExOre(BlockList.blockTin, EXORES);
-            itemRegistry(ItemList.itemIngotTin, event);
-            itemRegistry(ItemList.itemDustTin, event);
-            itemRegistry(ItemList.itemShardTin,event);
-            itemRegistry(ItemList.itemClumpTin,event);
-            itemRegistry(ItemList.itemDirtyDustTin,event);
-            itemRegistry(ItemList.itemRawTin,event);
-            itemRegistry(ItemBlockList.itemBlockOreTin, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTin,event);
-            itemRegistry(ItemBlockList.itemBlockTin, event);
+            ItemList.itemIngotTin = ITEMS.register("tiningot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustTin = ITEMS.register("tindust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardTin = ITEMS.register("tinshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpTin = ITEMS.register("tinclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustTin = ITEMS.register("tindirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawTin = ITEMS.register("rawtin", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerTitanium.get())
         {
-            ItemList.itemIngotTitanium = new ItemEXOre(EXORES, "titaniumingot");
-            ItemList.itemDustTitanium = new ItemEXOre(EXORES, "titaniumdust");
-            ItemList.itemShardTitanium = new ItemEXOre(EXORES,"titaniumshard");
-            ItemList.itemClumpTitanium = new ItemEXOre(EXORES,"titaniumclump");
-            ItemList.itemDirtyDustTitanium = new ItemEXOre(EXORES,"titaniumdirtydust");
-            ItemList.itemRawTitanium = new ItemEXOre(EXORES,"rawtitanium");
-            ItemBlockList.itemBlockOreTitanium = new ItemBlockExOre(BlockList.blockOreTitanium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreTitanium = new ItemBlockExOre(BlockList.blockDeepslateOreTitanium,EXORES);
-            ItemBlockList.itemBlockTitanium = new ItemBlockExOre(BlockList.blockTitanium, EXORES);
-            itemRegistry(ItemList.itemIngotTitanium, event);
-            itemRegistry(ItemList.itemDustTitanium, event);
-            itemRegistry(ItemList.itemShardTitanium,event);
-            itemRegistry(ItemList.itemClumpTitanium,event);
-            itemRegistry(ItemList.itemDirtyDustTitanium,event);
-            itemRegistry(ItemList.itemRawTitanium,event);
-            itemRegistry(ItemBlockList.itemBlockOreTitanium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTitanium,event);
-            itemRegistry(ItemBlockList.itemBlockTitanium, event);
+            ItemList.itemIngotTitanium = ITEMS.register("titaniumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustTitanium = ITEMS.register("titaniumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardTitanium = ITEMS.register("titaniumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpTitanium = ITEMS.register("titaniumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustTitanium = ITEMS.register("titaniumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawTitanium = ITEMS.register("rawtitanium", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerTopaz.get())
+        if (ConfigRegistryList.registerTopaz.get())
         {
-            ItemList.itemGemTopaz = new ItemEXOre(EXORES,"topaz");
-            ItemBlockList.itemBlockOreTopaz = new ItemBlockExOre(BlockList.blockOreTopaz,EXORES);
-            ItemBlockList.itemBlockDeepslateOreTopaz = new ItemBlockExOre(BlockList.blockDeepslateOreTopaz,EXORES);
-            ItemBlockList.itemBlockTopaz = new ItemBlockExOre(BlockList.blockTopaz,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreTopaz,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTopaz,event);
-            itemRegistry(ItemBlockList.itemBlockTopaz,event);
-            itemRegistry(ItemList.itemGemTopaz,event);
+            ItemList.itemGemTopaz = ITEMS.register("topaz", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerTourmaline.get())
+        if (ConfigRegistryList.registerTourmaline.get())
         {
-            ItemList.itemGemTourmaline = new ItemEXOre(EXORES,"tourmaline");
-            ItemBlockList.itemBlockOreTourmaline = new ItemBlockExOre(BlockList.blockOreTourmaline,EXORES);
-            ItemBlockList.itemBlockDeepslateOreTourmaline = new ItemBlockExOre(BlockList.blockDeepslateOreTourmaline,EXORES);
-            ItemBlockList.itemBlockTourmaline = new ItemBlockExOre(BlockList.blockTourmaline,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreTourmaline,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTourmaline,event);
-            itemRegistry(ItemBlockList.itemBlockTourmaline,event);
-            itemRegistry(ItemList.itemGemTourmaline,event);
+            ItemList.itemGemTourmaline = ITEMS.register("tourmaline", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerTungsten.get())
         {
-            ItemList.itemIngotTungsten = new ItemEXOre(EXORES, "tungsteningot");
-            ItemList.itemDustTungsten = new ItemEXOre(EXORES, "tungstendust");
-            ItemList.itemShardTungsten = new ItemEXOre(EXORES,"tungstenshard");
-            ItemList.itemClumpTungsten = new ItemEXOre(EXORES,"tungstenclump");
-            ItemList.itemDirtyDustTungsten = new ItemEXOre(EXORES,"tungstendirtydust");
-            ItemList.itemRawTungsten = new ItemEXOre(EXORES,"rawtungsten");
-            ItemBlockList.itemBlockOreTungsten = new ItemBlockExOre(BlockList.blockOreTungsten, EXORES);
-            ItemBlockList.itemBlockDeepslateOreTungsten = new ItemBlockExOre(BlockList.blockDeepslateOreTungsten,EXORES);
-            ItemBlockList.itemBlockTungsten = new ItemBlockExOre(BlockList.blockTungsten, EXORES);
-            itemRegistry(ItemList.itemIngotTungsten, event);
-            itemRegistry(ItemList.itemDustTungsten, event);
-            itemRegistry(ItemList.itemShardTungsten,event);
-            itemRegistry(ItemList.itemClumpTungsten,event);
-            itemRegistry(ItemList.itemDirtyDustTungsten,event);
-            itemRegistry(ItemList.itemRawTungsten,event);
-            itemRegistry(ItemBlockList.itemBlockOreTungsten, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTungsten,event);
-            itemRegistry(ItemBlockList.itemBlockTungsten, event);
+            ItemList.itemIngotTungsten = ITEMS.register("tungsteningot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustTungsten = ITEMS.register("tungstendust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardTungsten = ITEMS.register("tungstenshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpTungsten = ITEMS.register("tungstenclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustTungsten = ITEMS.register("tungstendirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawTungsten = ITEMS.register("rawtungsten", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerTurquoise.get())
+        if (ConfigRegistryList.registerTurquoise.get())
         {
-            ItemList.itemGemTurquoise = new ItemEXOre(EXORES,"turquoise");
-            ItemBlockList.itemBlockOreTurquoise = new ItemBlockExOre(BlockList.blockOreTurquoise,EXORES);
-            ItemBlockList.itemBlockDeepslateOreTurquoise = new ItemBlockExOre(BlockList.blockDeepslateOreTurquoise,EXORES);
-            ItemBlockList.itemBlockTurquoise = new ItemBlockExOre(BlockList.blockTurquoise,EXORES);
-            itemRegistry(ItemBlockList.itemBlockOreTurquoise,event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreTurquoise,event);
-            itemRegistry(ItemBlockList.itemBlockTurquoise,event);
-            itemRegistry(ItemList.itemGemTurquoise,event);
+            ItemList.itemGemTurquoise = ITEMS.register("turquoise", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerUnobtainium.get())
         {
-            ItemList.itemIngotUnobtainium = new ItemEXOre(EXORES, "unobtainiumingot");
-            ItemList.itemDustUnobtainium = new ItemEXOre(EXORES, "unobtainiumdust");
-            ItemList.itemShardUnobtainium = new ItemEXOre(EXORES,"unobtainiumshard");
-            ItemList.itemClumpUnobtainium = new ItemEXOre(EXORES,"unobtainiumclump");
-            ItemList.itemDirtyDustUnobtainium = new ItemEXOre(EXORES,"unobtainiumdirtydust");
-            ItemList.itemRawUnobtainium = new ItemEXOre(EXORES,"rawunobtainium");
-            ItemBlockList.itemBlockOreUnobtainium = new ItemBlockExOre(BlockList.blockOreUnobtainium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreUnobtainium = new ItemBlockExOre(BlockList.blockDeepslateOreUnobtainium,EXORES);
-            ItemBlockList.itemBlockUnobtainium = new ItemBlockExOre(BlockList.blockUnobtainium, EXORES);
-            itemRegistry(ItemList.itemIngotUnobtainium, event);
-            itemRegistry(ItemList.itemDustUnobtainium, event);
-            itemRegistry(ItemList.itemShardUnobtainium,event);
-            itemRegistry(ItemList.itemClumpUnobtainium,event);
-            itemRegistry(ItemList.itemDirtyDustUnobtainium,event);
-            itemRegistry(ItemList.itemRawUnobtainium,event);
-            itemRegistry(ItemBlockList.itemBlockOreUnobtainium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreUnobtainium,event);
-            itemRegistry(ItemBlockList.itemBlockUnobtainium, event);
+            ItemList.itemIngotUnobtainium = ITEMS.register("unobtainiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustUnobtainium = ITEMS.register("unobtainiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardUnobtainium = ITEMS.register("unobtainiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpUnobtainium = ITEMS.register("unobtainiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustUnobtainium = ITEMS.register("unobtainiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawUnobtainium = ITEMS.register("rawunobtainium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerUranium.get())
         {
-            ItemList.itemIngotUranium = new ItemEXOre(EXORES, "uraniumingot");
-            ItemList.itemDustUranium = new ItemEXOre(EXORES, "uraniumdust");
-            ItemList.itemShardUranium = new ItemEXOre(EXORES,"uraniumshard");
-            ItemList.itemClumpUranium = new ItemEXOre(EXORES,"uraniumclump");
-            ItemList.itemDirtyDustUranium = new ItemEXOre(EXORES,"uraniumdirtydust");
-            ItemList.itemRawUranium = new ItemEXOre(EXORES,"rawuranium");
-            ItemBlockList.itemBlockOreUranium = new ItemBlockExOre(BlockList.blockOreUranium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreUranium = new ItemBlockExOre(BlockList.blockDeepslateOreUranium,EXORES);
-            ItemBlockList.itemBlockUranium = new ItemBlockExOre(BlockList.blockUranium, EXORES);
-            itemRegistry(ItemList.itemIngotUranium, event);
-            itemRegistry(ItemList.itemDustUranium, event);
-            itemRegistry(ItemList.itemShardUranium,event);
-            itemRegistry(ItemList.itemClumpUranium,event);
-            itemRegistry(ItemList.itemDirtyDustUranium,event);
-            itemRegistry(ItemList.itemRawUranium,event);
-            itemRegistry(ItemBlockList.itemBlockOreUranium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreUranium,event);
-            itemRegistry(ItemBlockList.itemBlockUranium, event);
+            ItemList.itemIngotUranium = ITEMS.register("uraniumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustUranium = ITEMS.register("uraniumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardUranium = ITEMS.register("uraniumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpUranium = ITEMS.register("uraniumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustUranium = ITEMS.register("uraniumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawUranium = ITEMS.register("rawuranium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerVanadium.get())
         {
-            ItemList.itemIngotVanadium = new ItemEXOre(EXORES, "vanadiumingot");
-            ItemList.itemDustVanadium = new ItemEXOre(EXORES, "vanadiumdust");
-            ItemList.itemShardVanadium = new ItemEXOre(EXORES,"vanadiumshard");
-            ItemList.itemClumpVanadium = new ItemEXOre(EXORES,"vanadiumclump");
-            ItemList.itemDirtyDustVanadium = new ItemEXOre(EXORES,"vanadiumdirtydust");
-            ItemList.itemRawVanadium = new ItemEXOre(EXORES,"rawvanadium");
-            ItemBlockList.itemBlockOreVanadium = new ItemBlockExOre(BlockList.blockOreVanadium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreVanadium = new ItemBlockExOre(BlockList.blockDeepslateOreVanadium,EXORES);
-            ItemBlockList.itemBlockVanadium = new ItemBlockExOre(BlockList.blockVanadium, EXORES);
-            itemRegistry(ItemList.itemIngotVanadium, event);
-            itemRegistry(ItemList.itemDustVanadium, event);
-            itemRegistry(ItemList.itemShardVanadium,event);
-            itemRegistry(ItemList.itemClumpVanadium,event);
-            itemRegistry(ItemList.itemDirtyDustVanadium,event);
-            itemRegistry(ItemList.itemRawVanadium,event);
-            itemRegistry(ItemBlockList.itemBlockOreVanadium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreVanadium,event);
-            itemRegistry(ItemBlockList.itemBlockVanadium, event);
+            ItemList.itemIngotVanadium = ITEMS.register("vanadiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustVanadium = ITEMS.register("vanadiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardVanadium = ITEMS.register("vanadiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpVanadium = ITEMS.register("vanadiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustVanadium = ITEMS.register("vanadiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawVanadium = ITEMS.register("rawvanadium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerVulcanite.get())
         {
-            ItemList.itemIngotVulcanite = new ItemEXOre(EXORES, "vulcaniteingot");
-            ItemList.itemDustVulcanite = new ItemEXOre(EXORES, "vulcanitedust");
-            ItemList.itemShardVulcanite = new ItemEXOre(EXORES,"vulcaniteshard");
-            ItemList.itemClumpVulcanite = new ItemEXOre(EXORES,"vulcaniteclump");
-            ItemList.itemDirtyDustVulcanite = new ItemEXOre(EXORES,"vulcanitedirtydust");
-            ItemList.itemRawVulcanite = new ItemEXOre(EXORES,"rawvulcanite");
-            ItemBlockList.itemBlockOreVulcanite = new ItemBlockExOre(BlockList.blockOreVulcanite, EXORES);
-            ItemBlockList.itemBlockVulcanite = new ItemBlockExOre(BlockList.blockVulcanite, EXORES);
-            itemRegistry(ItemList.itemIngotVulcanite, event);
-            itemRegistry(ItemList.itemDustVulcanite, event);
-            itemRegistry(ItemList.itemShardVulcanite,event);
-            itemRegistry(ItemList.itemClumpVulcanite,event);
-            itemRegistry(ItemList.itemDirtyDustVulcanite,event);
-            itemRegistry(ItemList.itemRawVulcanite,event);
-            itemRegistry(ItemBlockList.itemBlockOreVulcanite, event);
-            itemRegistry(ItemBlockList.itemBlockVulcanite, event);
+            ItemList.itemIngotVulcanite = ITEMS.register("vulcaniteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustVulcanite = ITEMS.register("vulcanitedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardVulcanite = ITEMS.register("vulcaniteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpVulcanite = ITEMS.register("vulcaniteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustVulcanite = ITEMS.register("vulcanitedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawVulcanite = ITEMS.register("rawvulcanite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerVyroxeres.get())
         {
-            ItemList.itemIngotVyroxeres = new ItemEXOre(EXORES, "vyroxeresingot");
-            ItemList.itemDustVyroxeres = new ItemEXOre(EXORES, "vyroxeresdust");
-            ItemList.itemShardVyroxeres = new ItemEXOre(EXORES,"vyroxeresshard");
-            ItemList.itemClumpVyroxeres = new ItemEXOre(EXORES,"vyroxeresclump");
-            ItemList.itemDirtyDustVyroxeres = new ItemEXOre(EXORES,"vyroxeresdirtydust");
-            ItemList.itemRawVyroxeres = new ItemEXOre(EXORES,"rawvyroxeres");
-            ItemBlockList.itemBlockOreVyroxeres = new ItemBlockExOre(BlockList.blockOreVyroxeres, EXORES);
-            ItemBlockList.itemBlockVyroxeres = new ItemBlockExOre(BlockList.blockVyroxeres, EXORES);
-            itemRegistry(ItemList.itemIngotVyroxeres, event);
-            itemRegistry(ItemList.itemDustVyroxeres, event);
-            itemRegistry(ItemList.itemShardVyroxeres,event);
-            itemRegistry(ItemList.itemClumpVyroxeres,event);
-            itemRegistry(ItemList.itemDirtyDustVyroxeres,event);
-            itemRegistry(ItemList.itemRawVyroxeres,event);
-            itemRegistry(ItemBlockList.itemBlockOreVyroxeres, event);
-            itemRegistry(ItemBlockList.itemBlockVyroxeres, event);
+            ItemList.itemIngotVyroxeres = ITEMS.register("vyroxeresingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustVyroxeres = ITEMS.register("vyroxeresdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardVyroxeres = ITEMS.register("vyroxeresshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpVyroxeres = ITEMS.register("vyroxeresclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustVyroxeres = ITEMS.register("vyroxeresdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawVyroxeres = ITEMS.register("rawvyroxeres", () -> new ItemEXOre(EXORES));
         }
-        if(ConfigRegistryList.registerYellorite.get())
+        if (ConfigRegistryList.registerYellorite.get())
         {
-            ItemList.itemIngotYellorite = new ItemEXOre(EXORES, "yelloriteingot");
-            ItemList.itemDustYellorite = new ItemEXOre(EXORES, "yelloritedust");
-            ItemList.itemShardYellorite = new ItemEXOre(EXORES,"yelloriteshard");
-            ItemList.itemClumpYellorite = new ItemEXOre(EXORES,"yelloriteclump");
-            ItemList.itemDirtyDustYellorite = new ItemEXOre(EXORES,"yelloritedirtydust");
-            ItemList.itemRawYellorite = new ItemEXOre(EXORES,"rawyellorite");
-            ItemBlockList.itemBlockOreYellorite = new ItemBlockExOre(BlockList.blockOreYellorite, EXORES);
-            ItemBlockList.itemBlockDeepslateOreYellorite = new ItemBlockExOre(BlockList.blockDeepslateOreYellorite,EXORES);
-            ItemBlockList.itemBlockYellorite = new ItemBlockExOre(BlockList.blockYellorite, EXORES);
-            itemRegistry(ItemList.itemIngotYellorite, event);
-            itemRegistry(ItemList.itemDustYellorite, event);
-            itemRegistry(ItemList.itemShardYellorite,event);
-            itemRegistry(ItemList.itemClumpYellorite,event);
-            itemRegistry(ItemList.itemDirtyDustYellorite,event);
-            itemRegistry(ItemList.itemRawYellorite,event);
-            itemRegistry(ItemBlockList.itemBlockOreYellorite, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreYellorite,event);
-            itemRegistry(ItemBlockList.itemBlockYellorite, event);
+            ItemList.itemIngotYellorite = ITEMS.register("yelloriteingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustYellorite = ITEMS.register("yelloritedust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardYellorite = ITEMS.register("yelloriteshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpYellorite = ITEMS.register("yelloriteclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustYellorite = ITEMS.register("yelloritedirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawYellorite = ITEMS.register("rawyellorite", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerZinc.get())
         {
-            ItemList.itemIngotZinc = new ItemEXOre(EXORES, "zincingot");
-            ItemList.itemDustZinc = new ItemEXOre(EXORES, "zincdust");
-            ItemList.itemShardZinc = new ItemEXOre(EXORES,"zincshard");
-            ItemList.itemClumpZinc = new ItemEXOre(EXORES,"zincclump");
-            ItemList.itemDirtyDustZinc = new ItemEXOre(EXORES,"zincdirtydust");
-            ItemList.itemRawZinc = new ItemEXOre(EXORES,"rawzinc");
-            ItemBlockList.itemBlockOreZinc = new ItemBlockExOre(BlockList.blockOreZinc, EXORES);
-            ItemBlockList.itemBlockDeepslateOreZinc = new ItemBlockExOre(BlockList.blockDeepslateOreZinc,EXORES);
-            ItemBlockList.itemBlockZinc = new ItemBlockExOre(BlockList.blockZinc, EXORES);
-            itemRegistry(ItemList.itemIngotZinc, event);
-            itemRegistry(ItemList.itemDustZinc, event);
-            itemRegistry(ItemList.itemShardZinc,event);
-            itemRegistry(ItemList.itemClumpZinc,event);
-            itemRegistry(ItemList.itemDirtyDustZinc,event);
-            itemRegistry(ItemList.itemRawZinc,event);
-            itemRegistry(ItemBlockList.itemBlockOreZinc, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreZinc,event);
-            itemRegistry(ItemBlockList.itemBlockZinc, event);
+            ItemList.itemIngotZinc = ITEMS.register("zincingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustZinc = ITEMS.register("zincdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardZinc = ITEMS.register("zincshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpZinc = ITEMS.register("zincclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustZinc = ITEMS.register("zincdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawZinc = ITEMS.register("rawzinc", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerZirconium.get())
         {
-            ItemList.itemIngotZirconium = new ItemEXOre(EXORES, "zirconiumingot");
-            ItemList.itemDustZirconium = new ItemEXOre(EXORES, "zirconiumdust");
-            ItemList.itemShardZirconium = new ItemEXOre(EXORES,"zirconiumshard");
-            ItemList.itemClumpZirconium = new ItemEXOre(EXORES,"zirconiumclump");
-            ItemList.itemDirtyDustZirconium = new ItemEXOre(EXORES,"zirconiumdirtydust");
-            ItemList.itemRawZirconium = new ItemEXOre(EXORES,"rawzirconium");
-            ItemBlockList.itemBlockOreZirconium = new ItemBlockExOre(BlockList.blockOreZirconium, EXORES);
-            ItemBlockList.itemBlockDeepslateOreZirconium = new ItemBlockExOre(BlockList.blockDeepslateOreZirconium,EXORES);
-            ItemBlockList.itemBlockZirconium = new ItemBlockExOre(BlockList.blockZirconium, EXORES);
-            itemRegistry(ItemList.itemIngotZirconium, event);
-            itemRegistry(ItemList.itemDustZirconium, event);
-            itemRegistry(ItemList.itemShardZirconium,event);
-            itemRegistry(ItemList.itemClumpZirconium,event);
-            itemRegistry(ItemList.itemDirtyDustZirconium,event);
-            itemRegistry(ItemList.itemRawZirconium,event);
-            itemRegistry(ItemBlockList.itemBlockOreZirconium, event);
-            itemRegistry(ItemBlockList.itemBlockDeepslateOreZirconium,event);
-            itemRegistry(ItemBlockList.itemBlockZirconium, event);
+            ItemList.itemIngotZirconium = ITEMS.register("zirconiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustZirconium = ITEMS.register("zirconiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardZirconium = ITEMS.register("zirconiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpZirconium = ITEMS.register("zirconiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustZirconium = ITEMS.register("zirconiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawZirconium = ITEMS.register("rawzirconium", () -> new ItemEXOre(EXORES));
         }
-    }
-
-    private static void blockRegistry(Block block, RegistryEvent.Register<Block> regEvent)
-    {
-        regEvent.getRegistry().register(block);
-    }
-
-    private static void itemRegistry(Item item, RegistryEvent.Register<Item> regEvent)
-    {
-        regEvent.getRegistry().register(item);
     }
 }

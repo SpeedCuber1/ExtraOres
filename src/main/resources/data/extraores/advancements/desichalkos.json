@@ -1,24 +1,7 @@
 {
   "parent": "extraores:deepiron",
-  "display": {
-    "icon": {
-      "item": "extraores:desichalkosore"
-    },
-    "title": {
-      "translate": "Ores R Us"
-    },
-    "description": {
-      "translate": "Mine Desichalkis Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "desichalkos": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Desichalkis Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:desichalkosore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Ores R Us"
     }
   },
   "requirements": [

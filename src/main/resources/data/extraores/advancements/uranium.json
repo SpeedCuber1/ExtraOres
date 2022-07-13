@@ -1,24 +1,7 @@
 {
   "parent": "extraores:tungsten",
-  "display": {
-    "icon": {
-      "item": "extraores:uraniumore"
-    },
-    "title": {
-      "translate": "Time to get Nuclear"
-    },
-    "description": {
-      "translate": "Mine Uranium Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "uranium": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Uranium Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:uraniumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Time to get Nuclear"
     }
   },
   "requirements": [

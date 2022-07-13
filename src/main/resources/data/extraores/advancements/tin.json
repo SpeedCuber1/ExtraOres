@@ -1,24 +1,7 @@
 {
   "parent": "extraores:thallium",
-  "display": {
-    "icon": {
-      "item": "extraores:tinore"
-    },
-    "title": {
-      "translate": "Where\u0027s the Lion and the Scarecrow"
-    },
-    "description": {
-      "translate": "Mine Tin Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "tin": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Tin Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:tinore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Where's the Lion and the Scarecrow"
     }
   },
   "requirements": [

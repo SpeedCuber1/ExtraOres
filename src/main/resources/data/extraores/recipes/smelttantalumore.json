@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 40,
+  "experience": 0.75,
   "ingredient": {
     "tag": "forge:ores/tantalum"
   },
-  "result": "extraores:tantalumingot",
-  "experience": 0.75,
-  "cookingtime": 40
+  "result": "extraores:tantalumingot"
 }

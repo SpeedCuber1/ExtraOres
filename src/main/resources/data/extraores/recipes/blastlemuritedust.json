@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 10,
+  "experience": 0.75,
   "ingredient": {
     "item": "extraores:lemuritedust"
   },
-  "result": "extraores:lemuriteingot",
-  "experience": 0.75,
-  "cookingtime": 10
+  "result": "extraores:lemuriteingot"
 }

@@ -1,24 +1,7 @@
 {
   "parent": "extraores:technetium",
-  "display": {
-    "icon": {
-      "item": "extraores:thalliumore"
-    },
-    "title": {
-      "translate": "Bring Me the Prussian Blue STAT"
-    },
-    "description": {
-      "translate": "Mine Thallium Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "thallium": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Thallium Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:thalliumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Bring Me the Prussian Blue STAT"
     }
   },
   "requirements": [

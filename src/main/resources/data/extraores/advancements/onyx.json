@@ -1,24 +1,7 @@
 {
   "parent": "extraores:malachite",
-  "display": {
-    "icon": {
-      "item": "extraores:onyxore"
-    },
-    "title": {
-      "translate": "Hooked on Onyx"
-    },
-    "description": {
-      "translate": "Mine Onyx Ore"
-    },
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false,
-    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
-  },
   "criteria": {
     "onyx": {
-      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -27,7 +10,24 @@
             ]
           }
         ]
-      }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Onyx Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:onyxore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Hooked on Onyx"
     }
   },
   "requirements": [
