@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyamericiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyamericiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:americiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyamericiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyamericiumore"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawlemurite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawlemurite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:lemuriteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawlemurite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawlemurite"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifytungstenore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifytungstenore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tungstenore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifytungstenore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifytungstenore"
+    ]
+  }
+}

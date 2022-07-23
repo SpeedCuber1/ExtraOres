@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichblacksteeldirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:blacksteelore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichblacksteeldirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "enrichblacksteeldirtydust",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichblacksteeldirtydust"
+    ]
+  }
+}

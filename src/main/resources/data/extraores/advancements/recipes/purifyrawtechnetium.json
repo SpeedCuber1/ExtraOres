@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawtechnetium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawtechnetium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawtechnetium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawtechnetium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawtechnetium"
+    ]
+  }
+}

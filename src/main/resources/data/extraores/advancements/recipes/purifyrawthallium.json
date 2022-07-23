@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawthallium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawthallium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawthallium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawthallium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawthallium"
+    ]
+  }
+}

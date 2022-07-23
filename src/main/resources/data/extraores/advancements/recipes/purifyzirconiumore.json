@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyzirconiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyzirconiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:zirconiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyzirconiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyzirconiumore"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifylead"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifylead": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:leadshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifylead",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifylead"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectdesichalkosore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectdesichalkosore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:desichalkosore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectdesichalkosore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectdesichalkosore"
+    ]
+  }
+}

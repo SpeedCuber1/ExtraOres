@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifycelenegilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifycelenegilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:celenegilore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifycelenegilore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifycelenegilore"
+    ]
+  }
+}

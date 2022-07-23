@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectyelloriteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectyelloriteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:yelloriteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectyelloriteore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectyelloriteore"
+    ]
+  }
+}

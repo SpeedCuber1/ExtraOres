@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawrhodium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawrhodium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawrhodium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawrhodium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawrhodium"
+    ]
+  }
+}

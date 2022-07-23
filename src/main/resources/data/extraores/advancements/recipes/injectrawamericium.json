@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawamericium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawamericium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:americiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawamericium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawamericium"
+    ]
+  }
+}

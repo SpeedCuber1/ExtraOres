@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawblacksteel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawblacksteel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawblacksteel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawblacksteel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawblacksteel"
+    ]
+  }
+}

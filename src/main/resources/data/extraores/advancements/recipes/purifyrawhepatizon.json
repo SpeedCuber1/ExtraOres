@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawhepatizon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawhepatizon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawhepatizon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawhepatizon",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawhepatizon"
+    ]
+  }
+}

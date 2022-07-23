@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifytantalum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifytantalum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tantalumshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifytantalum",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifytantalum"
+    ]
+  }
+}

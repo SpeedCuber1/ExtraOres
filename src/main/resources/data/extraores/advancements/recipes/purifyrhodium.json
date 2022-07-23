@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrhodium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrhodium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rhodiumshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrhodium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrhodium"
+    ]
+  }
+}

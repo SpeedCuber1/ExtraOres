@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/haderoth"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "extraores:haderothdust"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawmidasium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawmidasium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:midasiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawmidasium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawmidasium"
+    ]
+  }
+}

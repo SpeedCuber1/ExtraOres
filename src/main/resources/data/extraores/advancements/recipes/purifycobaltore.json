@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifycobaltore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifycobaltore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cobaltore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifycobaltore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifycobaltore"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifypromethiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifypromethiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:promethiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifypromethiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifypromethiumore"
+    ]
+  }
+}

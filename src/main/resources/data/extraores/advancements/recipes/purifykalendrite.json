@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifykalendrite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifykalendrite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:kalendriteshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifykalendrite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifykalendrite"
+    ]
+  }
+}

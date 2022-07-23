@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyoureclase"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyoureclase": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:oureclaseshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyoureclase",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyoureclase"
+    ]
+  }
+}

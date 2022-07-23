@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyunobtainium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyunobtainium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:unobtainiumshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyunobtainium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyunobtainium"
+    ]
+  }
+}

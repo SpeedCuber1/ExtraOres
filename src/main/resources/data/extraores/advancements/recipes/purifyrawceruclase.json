@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawceruclase"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawceruclase": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawceruclase"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawceruclase",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawceruclase"
+    ]
+  }
+}

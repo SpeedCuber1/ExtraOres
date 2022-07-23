@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawtungsten"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawtungsten": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawtungsten"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawtungsten",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawtungsten"
+    ]
+  }
+}

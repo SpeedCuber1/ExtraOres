@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectangmallenore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectangmallenore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:angmallenore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectangmallenore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectangmallenore"
+    ]
+  }
+}

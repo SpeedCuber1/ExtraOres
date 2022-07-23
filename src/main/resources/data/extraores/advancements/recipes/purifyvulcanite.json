@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyvulcanite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyvulcanite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vulcaniteshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyvulcanite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyvulcanite"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawoureclase"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawoureclase": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:oureclaseore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawoureclase",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawoureclase"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawuranium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawuranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:uraniumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawuranium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawuranium"
+    ]
+  }
+}

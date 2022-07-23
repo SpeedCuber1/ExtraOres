@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifymithril"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifymithril": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:mithrilshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifymithril",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifymithril"
+    ]
+  }
+}

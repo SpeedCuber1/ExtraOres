@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifydeepironore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifydeepironore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:deepironore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifydeepironore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifydeepironore"
+    ]
+  }
+}

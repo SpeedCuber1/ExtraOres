@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawastralsilver"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawastralsilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawastralsilver"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawastralsilver",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawastralsilver"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawrhenium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawrhenium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawrhenium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawrhenium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawrhenium"
+    ]
+  }
+}

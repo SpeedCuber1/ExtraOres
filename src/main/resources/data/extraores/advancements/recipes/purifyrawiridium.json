@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawiridium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawiridium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawiridium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawiridium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawiridium"
+    ]
+  }
+}

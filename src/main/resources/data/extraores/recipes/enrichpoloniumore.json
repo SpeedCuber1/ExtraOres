@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/polonium"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "extraores:poloniumdust"
+  }
+}

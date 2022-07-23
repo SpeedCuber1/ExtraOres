@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyuraniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyuraniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:uraniumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyuraniumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyuraniumore"
+    ]
+  }
+}

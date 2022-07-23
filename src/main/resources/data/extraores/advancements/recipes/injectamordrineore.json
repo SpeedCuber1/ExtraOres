@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectamordrineore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectamordrineore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:amordrineore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectamordrineore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectamordrineore"
+    ]
+  }
+}

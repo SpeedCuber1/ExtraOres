@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawcobalt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawcobalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcobalt"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawcobalt",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawcobalt"
+    ]
+  }
+}

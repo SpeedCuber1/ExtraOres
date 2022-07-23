@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawplatinum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawplatinum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:platinumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawplatinum",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawplatinum"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injecthaderothore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injecthaderothore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:haderothore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injecthaderothore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injecthaderothore"
+    ]
+  }
+}

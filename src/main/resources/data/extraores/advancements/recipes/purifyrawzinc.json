@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawzinc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawzinc": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawzinc"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawzinc",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawzinc"
+    ]
+  }
+}

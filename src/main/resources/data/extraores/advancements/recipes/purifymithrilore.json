@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifymithrilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifymithrilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:mithrilore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifymithrilore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifymithrilore"
+    ]
+  }
+}

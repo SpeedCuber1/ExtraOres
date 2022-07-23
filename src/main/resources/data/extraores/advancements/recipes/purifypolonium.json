@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifypolonium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifypolonium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:poloniumshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifypolonium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifypolonium"
+    ]
+  }
+}

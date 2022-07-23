@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectmanganeseore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectmanganeseore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:manganeseore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectmanganeseore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectmanganeseore"
+    ]
+  }
+}

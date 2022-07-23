@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawlemurite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawlemurite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawlemurite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawlemurite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawlemurite"
+    ]
+  }
+}

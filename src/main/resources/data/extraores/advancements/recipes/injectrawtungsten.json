@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawtungsten"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawtungsten": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tungstenore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawtungsten",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawtungsten"
+    ]
+  }
+}

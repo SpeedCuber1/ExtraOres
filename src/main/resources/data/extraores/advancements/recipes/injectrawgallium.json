@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawgallium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawgallium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:galliumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawgallium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawgallium"
+    ]
+  }
+}

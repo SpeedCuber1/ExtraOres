@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectceruclaseore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectceruclaseore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ceruclaseore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectceruclaseore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectceruclaseore"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawtin"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawtin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tinore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawtin",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawtin"
+    ]
+  }
+}

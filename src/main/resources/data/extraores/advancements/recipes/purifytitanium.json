@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifytitanium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifytitanium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:titaniumshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifytitanium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifytitanium"
+    ]
+  }
+}

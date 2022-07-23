@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawchromium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawchromium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:chromiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawchromium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawchromium"
+    ]
+  }
+}
