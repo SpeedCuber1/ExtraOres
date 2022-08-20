@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'idea'
 
-version = '1.19'
+version = '1.19.2'
 group = 'com.tylerh.extraores' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'extraores'
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -77,14 +77,14 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.19-41.1.0'
+    minecraft 'net.minecraftforge:forge:1.19.2-43.0.8'
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
-    runtimeOnly fg.deobf("mezz.jei:jei-1.19-forge:11.1.1.236")
-    runtimeOnly fg.deobf("mekanism:Mekanism:1.19-10.3.0.467")
-    compileOnly fg.deobf("mekanism:Mekanism:1.19-10.3.0.467:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:11.2.0.246")
+    runtimeOnly fg.deobf("mekanism:Mekanism:1.19.2-10.3.2.469")
+    compileOnly fg.deobf("mekanism:Mekanism:1.19.2-10.3.2.469:api")
     // Real examples
     //compile fileTree('libs')
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
