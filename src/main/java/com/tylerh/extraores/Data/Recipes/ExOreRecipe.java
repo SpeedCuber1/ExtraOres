@@ -1213,6 +1213,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreOrichalcum),ItemList.itemIngotOrichalcum.get(),0.75F,40)
                 .unlockedBy("smeltorichalcumore",has(ItemList.itemIngotOrichalcum.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltorichalcumore"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreOsmium),ItemList.itemIngotOsmium.get(),0.75F,40)
+                .unlockedBy("smeltosmiumore",has(ItemList.itemIngotOsmium.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltosmiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreOureclase),ItemList.itemIngotOureclase.get(),0.75F,40)
                 .unlockedBy("smeltoureclaseore",has(ItemList.itemIngotOureclase.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltoureclaseore"));
@@ -1421,6 +1424,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawOrichalcum),ItemList.itemIngotOrichalcum.get(),0.75F,40)
                 .unlockedBy("smeltraworichalcum",has(ItemList.itemIngotOrichalcum.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltraworichalcum"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawOsmium),ItemList.itemIngotOsmium.get(),0.75F,40)
+                .unlockedBy("smeltrawosmium",has(ItemList.itemIngotOureclase.get()))
+                        .save(consumer,new ResourceLocation("extraores:smeltrawosmium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawOureclase),ItemList.itemIngotOureclase.get(),0.75F,40)
                 .unlockedBy("smeltrawoureclase",has(ItemList.itemIngotOureclase.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltrawoureclase"));
@@ -1629,6 +1635,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustOrichalcum),ItemList.itemIngotOrichalcum.get(),0.75F,20)
                 .unlockedBy("smeltorichalcumdust",has(ItemList.itemIngotOrichalcum.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltorichalcumdust"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustOsmium),ItemList.itemIngotOsmium.get(),0.75F,20)
+                .unlockedBy("smeltosmiumdust",has(ItemList.itemIngotOsmium.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltosmiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustOureclase),ItemList.itemIngotOureclase.get(),0.75F,20)
                 .unlockedBy("smeltoureclasedust",has(ItemList.itemIngotOureclase.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltoureclasedust"));
