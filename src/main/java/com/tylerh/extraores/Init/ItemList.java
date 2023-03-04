@@ -71,6 +71,7 @@ public class ItemList
     public static RegistryObject<Item> itemIngotUnobtainium;
     public static RegistryObject<Item> itemIngotUranium;
     public static RegistryObject<Item> itemIngotVanadium;
+    public static RegistryObject<Item> itemIngotVibranium;
     public static RegistryObject<Item> itemIngotVulcanite;
     public static RegistryObject<Item> itemIngotVyroxeres;
     public static RegistryObject<Item> itemIngotYellorite;
@@ -142,6 +143,7 @@ public class ItemList
     public static RegistryObject<Item> itemDustUnobtainium;
     public static RegistryObject<Item> itemDustUranium;
     public static RegistryObject<Item> itemDustVanadium;
+    public static RegistryObject<Item> itemDustVibranium;
     public static RegistryObject<Item> itemDustVulcanite;
     public static RegistryObject<Item> itemDustVyroxeres;
     public static RegistryObject<Item> itemDustYellorite;
@@ -213,6 +215,7 @@ public class ItemList
     public static RegistryObject<Item> itemShardUnobtainium;
     public static RegistryObject<Item> itemShardUranium;
     public static RegistryObject<Item> itemShardVanadium;
+    public static RegistryObject<Item> itemShardVibranium;
     public static RegistryObject<Item> itemShardVulcanite;
     public static RegistryObject<Item> itemShardVyroxeres;
     public static RegistryObject<Item> itemShardYellorite;
@@ -284,6 +287,7 @@ public class ItemList
     public static RegistryObject<Item> itemClumpUnobtainium;
     public static RegistryObject<Item> itemClumpUranium;
     public static RegistryObject<Item> itemClumpVanadium;
+    public static RegistryObject<Item> itemClumpVibranium;
     public static RegistryObject<Item> itemClumpVulcanite;
     public static RegistryObject<Item> itemClumpVyroxeres;
     public static RegistryObject<Item> itemClumpYellorite;
@@ -355,6 +359,7 @@ public class ItemList
     public static RegistryObject<Item> itemDirtyDustUnobtainium;
     public static RegistryObject<Item> itemDirtyDustUranium;
     public static RegistryObject<Item> itemDirtyDustVanadium;
+    public static RegistryObject<Item> itemDirtyDustVibranium;
     public static RegistryObject<Item> itemDirtyDustVulcanite;
     public static RegistryObject<Item> itemDirtyDustVyroxeres;
     public static RegistryObject<Item> itemDirtyDustYellorite;
@@ -426,6 +431,7 @@ public class ItemList
     public static RegistryObject<Item> itemRawUnobtainium;
     public static RegistryObject<Item> itemRawUranium;
     public static RegistryObject<Item> itemRawVanadium;
+    public static RegistryObject<Item> itemRawVibranium;
     public static RegistryObject<Item> itemRawVulcanite;
     public static RegistryObject<Item> itemRawVyroxeres;
     public static RegistryObject<Item> itemRawYellorite;

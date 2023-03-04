@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:unobtainium",
+  "criteria": {
+    "vibranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawvibranium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Vibranium Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:vibraniumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "You're the Captain Now"
+    }
+  },
+  "requirements": [
+    [
+      "vibranium"
+    ]
+  ]
+}

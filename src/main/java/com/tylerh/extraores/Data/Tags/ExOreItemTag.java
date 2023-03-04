@@ -121,6 +121,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreUnobtainium).add(BlockList.blockOreUnobtainium.get().asItem());
         tag(ItemTagList.oreUranium).add(BlockList.blockOreUranium.get().asItem());
         tag(ItemTagList.oreVanadium).add(BlockList.blockOreVanadium.get().asItem());
+        tag(ItemTagList.oreVibranium).add(BlockList.blockOreVibranium.get().asItem());
         tag(ItemTagList.oreVulcanite).add(BlockList.blockOreVulcanite.get().asItem());
         tag(ItemTagList.oreVyroxeres).add(BlockList.blockOreVyroxeres.get().asItem());
         tag(ItemTagList.oreYellorite).add(BlockList.blockOreYellorite.get().asItem());
@@ -211,6 +212,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreUnobtainium).add(BlockList.blockDeepslateOreUnobtainium.get().asItem());
         tag(ItemTagList.oreUranium).add(BlockList.blockDeepslateOreUranium.get().asItem());
         tag(ItemTagList.oreVanadium).add(BlockList.blockDeepslateOreVanadium.get().asItem());
+        tag(ItemTagList.oreVibranium).add(BlockList.blockDeepslateOreVibranium.get().asItem());
         tag(ItemTagList.oreYellorite).add(BlockList.blockDeepslateOreYellorite.get().asItem());
         tag(ItemTagList.oreYellorium).add(BlockList.blockDeepslateOreYellorite.get().asItem());
         tag(ItemTagList.oreZinc).add(BlockList.blockDeepslateOreZinc.get().asItem());
@@ -305,6 +307,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.ORES).addTag(ItemTagList.oreUnobtainium);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreUranium);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreVanadium);
+        tag(ItemTagList.ORES).addTag(ItemTagList.oreVibranium);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreVulcanite);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreVyroxeres);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreYellorite);
@@ -379,6 +382,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.rawUnobtainium).add(ItemList.itemRawUnobtainium.get().asItem());
         tag(ItemTagList.rawUranium).add(ItemList.itemRawUranium.get().asItem());
         tag(ItemTagList.rawVanadium).add(ItemList.itemRawVanadium.get().asItem());
+        tag(ItemTagList.rawVibranium).add(ItemList.itemRawVibranium.get().asItem());
         tag(ItemTagList.rawVulcanite).add(ItemList.itemRawVulcanite.get().asItem());
         tag(ItemTagList.rawVyroxeres).add(ItemList.itemRawVyroxeres.get().asItem());
         tag(ItemTagList.rawYellorite).add(ItemList.itemRawYellorite.get().asItem());
@@ -450,6 +454,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.RAW).addTag(ItemTagList.rawUnobtainium);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawUranium);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawVanadium);
+        tag(ItemTagList.RAW).addTag(ItemTagList.rawVibranium);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawVulcanite);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawVyroxeres);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawYellorite);
@@ -549,6 +554,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.blockUnobtainium).add(BlockList.blockUnobtainium.get().asItem());
         tag(ItemTagList.blockUranium).add(BlockList.blockUranium.get().asItem());
         tag(ItemTagList.blockVanadium).add(BlockList.blockVanadium.get().asItem());
+        tag(ItemTagList.blockVibranium).add(BlockList.blockVibranium.get().asItem());
         tag(ItemTagList.blockVulcanite).add(BlockList.blockVulcanite.get().asItem());
         tag(ItemTagList.blockVyroxeres).add(BlockList.blockVyroxeres.get().asItem());
         tag(ItemTagList.blockYellorite).add(BlockList.blockYellorite.get().asItem());
@@ -645,6 +651,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockUnobtainium);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockUranium);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockVanadium);
+        tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockVibranium);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockVulcanite);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockVyroxeres);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockYellorite);
@@ -719,6 +726,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.ingotUnobtainium).add(ItemList.itemIngotUnobtainium.get());
         tag(ItemTagList.ingotUranium).add(ItemList.itemIngotUranium.get());
         tag(ItemTagList.ingotVanadium).add(ItemList.itemIngotVanadium.get());
+        tag(ItemTagList.ingotVibranium).add(ItemList.itemIngotVibranium.get());
         tag(ItemTagList.ingotVulcanite).add(ItemList.itemIngotVulcanite.get());
         tag(ItemTagList.ingotVyroxeres).add(ItemList.itemIngotVyroxeres.get());
         tag(ItemTagList.ingotYellorite).add(ItemList.itemIngotYellorite.get());
@@ -790,6 +798,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotUnobtainium);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotUranium);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotVanadium);
+        tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotVibranium);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotVulcanite);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotVyroxeres);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotYellorite);
@@ -864,6 +873,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.dustUnobtainium).add(ItemList.itemDustUnobtainium.get());
         tag(ItemTagList.dustUranium).add(ItemList.itemDustUranium.get());
         tag(ItemTagList.dustVanadium).add(ItemList.itemDustVanadium.get());
+        tag(ItemTagList.dustVibranium).add(ItemList.itemDustVibranium.get());
         tag(ItemTagList.dustVulcanite).add(ItemList.itemDustVulcanite.get());
         tag(ItemTagList.dustVyroxeres).add(ItemList.itemDustVyroxeres.get());
         tag(ItemTagList.dustYellorite).add(ItemList.itemDustYellorite.get());
@@ -934,6 +944,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustUnobtainium);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustUranium);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustVanadium);
+        tag(ItemTagList.DUSTS).addTag(ItemTagList.dustVibranium);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustVulcanite);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustVyroxeres);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustYellorite);
@@ -1007,6 +1018,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.dirtyDustUnobtainium).add(ItemList.itemDirtyDustUnobtainium.get().asItem());
         tag(ItemTagList.dirtyDustUranium).add(ItemList.itemDirtyDustUranium.get().asItem());
         tag(ItemTagList.dirtyDustVanadium).add(ItemList.itemDirtyDustVanadium.get().asItem());
+        tag(ItemTagList.dirtyDustVibranium).add(ItemList.itemDirtyDustVibranium.get().asItem());
         tag(ItemTagList.dirtyDustVulcanite).add(ItemList.itemDirtyDustVulcanite.get().asItem());
         tag(ItemTagList.dirtyDustVyroxeres).add(ItemList.itemDirtyDustVyroxeres.get().asItem());
         tag(ItemTagList.dirtyDustYellorite).add(ItemList.itemDirtyDustYellorite.get().asItem());
@@ -1077,6 +1089,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustUnobtainium);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustUranium);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustVanadium);
+        tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustVibranium);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustVulcanite);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustVyroxeres);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustYellorite);
@@ -1150,6 +1163,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.shardUnobtainium).add(ItemList.itemShardUnobtainium.get());
         tag(ItemTagList.shardUranium).add(ItemList.itemShardUranium.get());
         tag(ItemTagList.shardVanadium).add(ItemList.itemShardVanadium.get());
+        tag(ItemTagList.shardVibranium).add(ItemList.itemShardVibranium.get());
         tag(ItemTagList.shardVulcanite).add(ItemList.itemShardVulcanite.get());
         tag(ItemTagList.shardVyroxeres).add(ItemList.itemShardVyroxeres.get());
         tag(ItemTagList.shardYellorite).add(ItemList.itemShardYellorite.get());
@@ -1220,6 +1234,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardUnobtainium);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardUranium);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardVanadium);
+        tag(ItemTagList.SHARDS).addTag(ItemTagList.shardVibranium);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardVulcanite);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardVyroxeres);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardYellorite);
@@ -1293,6 +1308,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.clumpUnobtainium).add(ItemList.itemClumpUnobtainium.get());
         tag(ItemTagList.clumpUranium).add(ItemList.itemClumpUranium.get());
         tag(ItemTagList.clumpVanadium).add(ItemList.itemClumpVanadium.get());
+        tag(ItemTagList.clumpVibranium).add(ItemList.itemClumpVibranium.get());
         tag(ItemTagList.clumpVulcanite).add(ItemList.itemClumpVulcanite.get());
         tag(ItemTagList.clumpVyroxeres).add(ItemList.itemClumpVyroxeres.get());
         tag(ItemTagList.clumpYellorite).add(ItemList.itemClumpYellorite.get());
@@ -1363,6 +1379,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpUnobtainium);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpUranium);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpVanadium);
+        tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpVibranium);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpVulcanite);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpVyroxeres);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpYellorite);

@@ -99,6 +99,7 @@ public class BlockTagList
     public static final TagKey<Block> oreUnobtainium = tag("ores/unobtainium");
     public static final TagKey<Block> oreUranium = tag("ores/uranium");
     public static final TagKey<Block> oreVanadium = tag("ores/vanadium");
+    public static final TagKey<Block> oreVibranium = tag("ores/vibranium");
     public static final TagKey<Block> oreVulcanite = tag("ores/vulcanite");
     public static final TagKey<Block> oreVyroxeres = tag("ores/vyroxeres");
     public static final TagKey<Block> oreYellorite = tag("ores/yellorite");
@@ -197,6 +198,7 @@ public class BlockTagList
     public static final TagKey<Block> blockUnobtainium = tag("storage_blocks/unobtainium");
     public static final TagKey<Block> blockUranium = tag("storage_blocks/uranium");
     public static final TagKey<Block> blockVanadium = tag("storage_blocks/vanadium");
+    public static final TagKey<Block> blockVibranium = tag("storage_blocks/vibranium");
     public static final TagKey<Block> blockVulcanite = tag("storage_blocks/vulcanite");
     public static final TagKey<Block> blockVyroxeres = tag("storage_blocks/vyroxeres");
     public static final TagKey<Block> blockYellorite = tag("storage_blocks/yellorite");

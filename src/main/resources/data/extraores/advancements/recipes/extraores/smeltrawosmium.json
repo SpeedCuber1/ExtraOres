@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawosmium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawosmium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:oureclaseingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawosmium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawosmium"
+    ]
+  }
+}

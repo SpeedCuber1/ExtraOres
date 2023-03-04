@@ -668,6 +668,13 @@ public class ExOreRecipe extends RecipeProvider
                 .define('i', ItemList.itemIngotVanadium.get())
                 .unlockedBy("vanadiumblock",has(BlockList.blockVanadium.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(BlockList.blockVibranium.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i',ItemList.itemIngotVibranium.get())
+                .unlockedBy("vibraniumblock",has(BlockList.blockVibranium.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(BlockList.blockVulcanite.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -1066,6 +1073,10 @@ public class ExOreRecipe extends RecipeProvider
                 .requires(Ingredient.of(BlockList.blockVanadium.get().asItem()))
                 .unlockedBy("vanadiumingot",has(ItemList.itemIngotVanadium.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(ItemList.itemIngotVibranium.get(),9)
+                .requires(Ingredient.of(BlockList.blockVibranium.get().asItem()))
+                .unlockedBy("vibraniumingot",has(ItemList.itemIngotVibranium.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(ItemList.itemIngotVulcanite.get(),9)
                 .requires(Ingredient.of(BlockList.blockVulcanite.get().asItem()))
                 .unlockedBy("vulcaniteingot",has(ItemList.itemIngotVulcanite.get()))
@@ -1285,6 +1296,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreVanadium),ItemList.itemIngotVanadium.get(),0.75F,40)
                 .unlockedBy("smeltvanadiumore",has(ItemList.itemIngotVanadium.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltvanadiumore"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreVibranium),ItemList.itemIngotVibranium.get(),0.75F,40)
+                .unlockedBy("smeltvibraniumore",has(ItemList.itemIngotVibranium.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltvibraniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreVulcanite),ItemList.itemIngotVulcanite.get(),0.75F,40)
                 .unlockedBy("smeltvulcaniteore",has(ItemList.itemIngotVulcanite.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltvulcaniteore"));
@@ -1496,6 +1510,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawVanadium),ItemList.itemIngotVanadium.get(),0.75F,40)
                 .unlockedBy("smeltrawvanadium",has(ItemList.itemIngotVanadium.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltrawvanadium"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawVibranium),ItemList.itemIngotVibranium.get(),0.75F,40)
+                .unlockedBy("smeltrawvibranium",has(ItemList.itemIngotVibranium.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltrawvibranium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawVulcanite),ItemList.itemIngotVulcanite.get(),0.75F,40)
                 .unlockedBy("smeltrawvulcanite",has(ItemList.itemIngotVulcanite.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltrawvulcanite"));
@@ -1707,6 +1724,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustVanadium),ItemList.itemIngotVanadium.get(),0.75F,20)
                 .unlockedBy("smeltvanadiumdust",has(ItemList.itemIngotVanadium.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltvanadiumdust"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustVibranium),ItemList.itemIngotVibranium.get(),0.75F,20)
+                .unlockedBy("smeltvibraniumdust",has(ItemList.itemIngotVibranium.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltvibraniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustVulcanite),ItemList.itemIngotVulcanite.get(),0.75F,20)
                 .unlockedBy("smeltvulcanitedust",has(ItemList.itemIngotVulcanite.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltvulcanitedust"));
@@ -1917,6 +1937,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVanadium.get().asItem()),ItemList.itemIngotVanadium.get(),0.75F,20)
                 .unlockedBy("blastvanadiumore",has(ItemList.itemIngotVanadium.get()))
                 .save(consumer,new ResourceLocation("extraores:blastvanadiumore"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVibranium.get().asItem()),ItemList.itemIngotVibranium.get(),0.75F,20)
+                .unlockedBy("blastvibraniumore",has(ItemList.itemIngotVibranium.get()))
+                .save(consumer,new ResourceLocation("extraores:blastvibraniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVulcanite.get().asItem()),ItemList.itemIngotVulcanite.get(),0.75F,20)
                 .unlockedBy("blastvulcaniteore",has(ItemList.itemIngotVulcanite.get()))
                 .save(consumer,new ResourceLocation("extraores:blastvulcaniteore"));
@@ -2125,6 +2148,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVanadium.get()),ItemList.itemIngotVanadium.get(),0.75F,10)
                 .unlockedBy("blastvanadiumdust",has(ItemList.itemIngotVanadium.get()))
                 .save(consumer,new ResourceLocation("extraores:blastvanadiumdust"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVibranium.get()),ItemList.itemIngotVibranium.get(),0.75F,10)
+                .unlockedBy("blastvibraniumdust",has(ItemList.itemIngotVibranium.get()))
+                .save(consumer,new ResourceLocation("extraores:blastvibraniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVulcanite.get()),ItemList.itemIngotVulcanite.get(),0.75F,10)
                 .unlockedBy("blastvulcanitedust",has(ItemList.itemIngotVulcanite.get()))
                 .save(consumer,new ResourceLocation("extraores:blastvulcanitedust"));
@@ -2339,6 +2365,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardVanadium.get(),4))
                 .addCriterion("injectvanadiumore",has(BlockList.blockOreVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:injectvanadiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardVibranium.get(),4))
+                .addCriterion("injectvibraniumore",has(BlockList.blockOreVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:injectvibraniumore"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardVulcanite.get(),4))
                 .addCriterion("injectvulcaniteore",has(BlockList.blockOreVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:injectvulcaniteore"));
@@ -2550,6 +2579,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardVanadium.get(),4))
                 .addCriterion("injectrawvanadium",has(BlockList.blockOreVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:injectrawvanadium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardVibranium.get(),4))
+                .addCriterion("injectrawvibranium",has(BlockList.blockOreVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:injectrawvibranium"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardVulcanite.get(),4))
                 .addCriterion("injectrawvulcanite",has(BlockList.blockOreVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:injectrawvulcanite"));
@@ -2764,6 +2796,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVanadium.get(),3))
                 .addCriterion("purifyvanadiumore",has(BlockList.blockOreVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyvanadiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVibranium.get(),3))
+                .addCriterion("purifyvibraniumore",has(BlockList.blockOreVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:purifyvibraniumore"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVulcanite.get(),3))
                 .addCriterion("purifyvulcaniteore",has(BlockList.blockOreVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyvulcaniteore"));
@@ -2975,6 +3010,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVanadium.get(),3))
                 .addCriterion("purifyrawvanadium",has(ItemList.itemRawVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyrawvanadium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVibranium.get(),3))
+                .addCriterion("purifyrawvibranium",has(ItemList.itemRawVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:purifyrawvibranium"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVulcanite.get(),3))
                 .addCriterion("purifyrawvulcanite",has(ItemList.itemRawVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyrawvulcanite"));
@@ -3186,6 +3224,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVanadium.get()))
                 .addCriterion("purifyvanadium",has(ItemList.itemShardVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyvanadium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVibranium.get()))
+                .addCriterion("purifyvibranium",has(ItemList.itemShardVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:purifyvibranium"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpVulcanite.get()))
                 .addCriterion("purifyvulcanite",has(ItemList.itemShardVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyvulcanite"));
@@ -3399,6 +3440,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpVanadium),new ItemStack(ItemList.itemDirtyDustVanadium.get()))
                 .addCriterion("crushvanadium",has(ItemList.itemClumpVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:crushvanadium"));
+        ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpVibranium),new ItemStack(ItemList.itemDirtyDustVibranium.get()))
+                .addCriterion("crushvibranium",has(ItemList.itemClumpVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:crushvibranium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpVulcanite),new ItemStack(ItemList.itemDirtyDustVulcanite.get()))
                 .addCriterion("crushvulcanite",has(ItemList.itemClumpVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:crushvulcanite"));
@@ -3613,6 +3657,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreVanadium),new ItemStack(ItemList.itemDustVanadium.get(),2))
                 .addCriterion("enrichvanadiumore",has(BlockList.blockOreVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichvanadiumore"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreVibranium),new ItemStack(ItemList.itemDustVibranium.get(),2))
+                .addCriterion("enrichvibraniumore",has(BlockList.blockOreVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichvibraniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreVulcanite),new ItemStack(ItemList.itemDustVulcanite.get(),2))
                 .addCriterion("enrichvulcaniteore",has(BlockList.blockOreVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichvulcaniteore"));
@@ -3824,6 +3871,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawVanadium),new ItemStack(ItemList.itemDustVanadium.get(),2))
                 .addCriterion("enrichrawvanadium",has(ItemList.itemRawVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichrawvanadium"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawVibranium),new ItemStack(ItemList.itemDustVibranium.get(),2))
+                .addCriterion("enrichrawvibranium",has(ItemList.itemRawVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichrawvibranium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawVulcanite),new ItemStack(ItemList.itemDustVulcanite.get(),2))
                 .addCriterion("enrichrawvulcanite",has(ItemList.itemRawVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichrawvulcanite"));
@@ -4035,6 +4085,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustVanadium),new ItemStack(ItemList.itemDustVanadium.get()))
                 .addCriterion("enrichvanadiumdirtydust",has(BlockList.blockOreVanadium.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichvanadiumdirtydust"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustVibranium),new ItemStack(ItemList.itemDustVibranium.get()))
+                .addCriterion("enrichvibraniumdirtydust",has(BlockList.blockOreVibranium.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichvibraniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustVulcanite),new ItemStack(ItemList.itemDustVulcanite.get()))
                 .addCriterion("enrichvulcanitedirtydust",has(BlockList.blockOreVulcanite.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichvulcanitedirtydust"));

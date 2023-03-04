@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawvibranium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawvibranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vibraniumingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawvibranium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawvibranium"
+    ]
+  }
+}

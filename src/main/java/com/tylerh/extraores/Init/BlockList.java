@@ -96,6 +96,7 @@ public class BlockList
     public static RegistryObject<Block> blockOreUnobtainium;
     public static RegistryObject<Block> blockOreUranium;
     public static RegistryObject<Block> blockOreVanadium;
+    public static RegistryObject<Block> blockOreVibranium;
     public static RegistryObject<Block> blockOreVulcanite;
     public static RegistryObject<Block> blockOreVyroxeres;
     public static RegistryObject<Block> blockOreYellorite;
@@ -184,6 +185,7 @@ public class BlockList
     public static RegistryObject<Block> blockDeepslateOreUnobtainium;
     public static RegistryObject<Block> blockDeepslateOreUranium;
     public static RegistryObject<Block> blockDeepslateOreVanadium;
+    public static RegistryObject<Block> blockDeepslateOreVibranium;
     public static RegistryObject<Block> blockDeepslateOreYellorite;
     public static RegistryObject<Block> blockDeepslateOreZinc;
     public static RegistryObject<Block> blockDeepslateOreZirconium;
@@ -278,6 +280,7 @@ public class BlockList
     public static RegistryObject<Block> blockUnobtainium;
     public static RegistryObject<Block> blockUranium;
     public static RegistryObject<Block> blockVanadium;
+    public static RegistryObject<Block> blockVibranium;
     public static RegistryObject<Block> blockVulcanite;
     public static RegistryObject<Block> blockVyroxeres;
     public static RegistryObject<Block> blockYellorite;

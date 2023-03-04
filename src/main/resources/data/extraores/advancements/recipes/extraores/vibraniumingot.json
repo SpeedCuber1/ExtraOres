@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vibraniumingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "vibraniumingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vibraniumingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "vibraniumingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vibraniumingot"
+    ]
+  }
+}

@@ -564,6 +564,12 @@ public class InitBlocks
             BlockList.blockVanadium = register("vanadiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
             BlockList.blockDeepslateOreVanadium = register("deepslatevanadiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F,SoundType.DEEPSLATE));
         }
+        if(ConfigRegistryList.registerVibranium.get())
+        {
+            BlockList.blockOreVibranium = register("vibraniumore",() -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockVibranium = register("vibraniumblock",() -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreVibranium = register("deepslatevibraniumore",() -> new BlockEXOre(Material.STONE,1.5F,1.5F,SoundType.DEEPSLATE));
+        }
         if (ConfigRegistryList.registerVulcanite.get())
         {
             BlockList.blockOreVulcanite = register("vulcaniteore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
@@ -1281,6 +1287,15 @@ public class InitBlocks
             ItemList.itemClumpVanadium = ITEMS.register("vanadiumclump", () -> new ItemEXOre(EXORES));
             ItemList.itemDirtyDustVanadium = ITEMS.register("vanadiumdirtydust", () -> new ItemEXOre(EXORES));
             ItemList.itemRawVanadium = ITEMS.register("rawvanadium", () -> new ItemEXOre(EXORES));
+        }
+        if(ConfigRegistryList.registerVibranium.get())
+        {
+            ItemList.itemIngotVibranium = ITEMS.register("vibraniumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustVibranium = ITEMS.register("vibraniumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardVibranium = ITEMS.register("vibraniumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpVibranium = ITEMS.register("vibraniumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustVibranium = ITEMS.register("vibraniumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawVibranium = ITEMS.register("rawvibranium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerVulcanite.get())
         {

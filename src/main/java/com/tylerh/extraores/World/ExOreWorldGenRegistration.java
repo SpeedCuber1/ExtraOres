@@ -1546,6 +1546,23 @@ public final class ExOreWorldGenRegistration
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "vanadiumore"), feature);
             Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "vanadiumore"), featureVanadium);
         }
+        if(ConfigRegistryList.registerVibranium.get())
+        {
+            height = ModInfo.HEIGHT_RARE;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVibranium.get().defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreVibranium.get().defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
+            var featureVibranium = new PlacedFeature(Holder.direct(feature), List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM, VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "vibraniumore"), feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "vibraniumore"), featureVibranium);
+        }
         if (ConfigRegistryList.registerVulcanite.get())
         {
             height = ModInfo.HEIGHT_NETHER;

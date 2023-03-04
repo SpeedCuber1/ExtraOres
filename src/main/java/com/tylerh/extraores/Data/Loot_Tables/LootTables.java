@@ -104,6 +104,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreUnobtainium.get(),createFortune("unobtainiumore",BlockList.blockOreUnobtainium.get(),ItemList.itemRawUnobtainium.get()));
         lootTables.put(BlockList.blockOreUranium.get(),createFortune("uraniumore",BlockList.blockOreUranium.get(),ItemList.itemRawUranium.get()));
         lootTables.put(BlockList.blockOreVanadium.get(),createFortune("vanadiumore",BlockList.blockOreVanadium.get(),ItemList.itemRawVanadium.get()));
+        lootTables.put(BlockList.blockOreVibranium.get(),createFortune("vibraniumore",BlockList.blockOreVibranium.get(),ItemList.itemRawVibranium.get()));
         lootTables.put(BlockList.blockOreVulcanite.get(),createFortune("vulcaniteore",BlockList.blockOreVulcanite.get(),ItemList.itemRawVulcanite.get()));
         lootTables.put(BlockList.blockOreVyroxeres.get(),createFortune("vyroxeresore",BlockList.blockOreVyroxeres.get(),ItemList.itemRawVyroxeres.get()));
         lootTables.put(BlockList.blockOreYellorite.get(),createFortune("yelloriteore",BlockList.blockOreYellorite.get(),ItemList.itemRawYellorite.get()));
@@ -193,6 +194,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreUnobtainium.get(),createFortune("deepslateunobtainiumore",BlockList.blockDeepslateOreUnobtainium.get(),ItemList.itemRawUnobtainium.get()));
         lootTables.put(BlockList.blockDeepslateOreUranium.get(),createFortune("deepslateuraniumore",BlockList.blockDeepslateOreUranium.get(),ItemList.itemRawUranium.get()));
         lootTables.put(BlockList.blockDeepslateOreVanadium.get(),createFortune("deepslatevanadiumore",BlockList.blockDeepslateOreVanadium.get(),ItemList.itemRawVanadium.get()));
+        lootTables.put(BlockList.blockDeepslateOreVibranium.get(),createFortune("deepslatevibraniumore",BlockList.blockDeepslateOreVibranium.get(),ItemList.itemRawVibranium.get()));
         lootTables.put(BlockList.blockDeepslateOreYellorite.get(),createFortune("deepslateyelloriteore",BlockList.blockDeepslateOreYellorite.get(),ItemList.itemRawYellorite.get()));
         lootTables.put(BlockList.blockDeepslateOreZinc.get(),createFortune("deepslatezincore",BlockList.blockDeepslateOreZinc.get(),ItemList.itemRawZinc.get()));
         lootTables.put(BlockList.blockDeepslateOreZirconium.get(),createFortune("deepslatezirconiumore",BlockList.blockDeepslateOreZirconium.get(),ItemList.itemRawZirconium.get()));
@@ -285,6 +287,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockUnobtainium.get(),createStandardTable("unobtainiumblock",BlockList.blockUnobtainium.get()));
         lootTables.put(BlockList.blockUranium.get(),createStandardTable("uraniumblock",BlockList.blockUranium.get()));
         lootTables.put(BlockList.blockVanadium.get(),createStandardTable("vanadiumblock",BlockList.blockVanadium.get()));
+        lootTables.put(BlockList.blockVibranium.get(),createStandardTable("vibraniumblock",BlockList.blockVibranium.get()));
         lootTables.put(BlockList.blockVulcanite.get(),createStandardTable("vulcaniteblock",BlockList.blockVulcanite.get()));
         lootTables.put(BlockList.blockVyroxeres.get(),createStandardTable("vyroxeresblock",BlockList.blockVyroxeres.get()));
         lootTables.put(BlockList.blockYellorite.get(),createStandardTable("yelloriteblock",BlockList.blockYellorite.get()));
