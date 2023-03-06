@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tritiumingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "tritiumingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tritiumingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "tritiumingot",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tritiumingot"
+    ]
+  }
+}

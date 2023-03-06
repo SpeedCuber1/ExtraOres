@@ -534,6 +534,12 @@ public class InitBlocks
             BlockList.blockTourmaline = register("tourmalineblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
             BlockList.blockDeepslateOreTourmaline = register("deepslatetourmalineore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F,SoundType.DEEPSLATE));
         }
+        if(ConfigRegistryList.registerTritium.get())
+        {
+            BlockList.blockOreTritium = register("tritiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockTritium = register("tritiumblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreTritium = register("deepslatetritiumore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F,SoundType.DEEPSLATE));
+        }
         if (ConfigRegistryList.registerTungsten.get())
         {
             BlockList.blockOreTungsten = register("tungstenore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
@@ -1247,6 +1253,15 @@ public class InitBlocks
         if (ConfigRegistryList.registerTourmaline.get())
         {
             ItemList.itemGemTourmaline = ITEMS.register("tourmaline", () -> new ItemEXOre(EXORES));
+        }
+        if(ConfigRegistryList.registerTritium.get())
+        {
+            ItemList.itemIngotTritium = ITEMS.register("tritiumingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustTritium = ITEMS.register("tritiumdust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardTritium = ITEMS.register("tritiumshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpTritium = ITEMS.register("tritiumclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustTritium = ITEMS.register("tritiumdirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawTritium = ITEMS.register("rawtritium", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerTungsten.get())
         {

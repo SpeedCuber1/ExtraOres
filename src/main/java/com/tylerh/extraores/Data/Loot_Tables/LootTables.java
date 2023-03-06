@@ -99,6 +99,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreTitanium.get(),createFortune("titaniumore",BlockList.blockOreTitanium.get(),ItemList.itemRawTitanium.get()));
         lootTables.put(BlockList.blockOreTopaz.get(),createFortune("topazore",BlockList.blockOreTopaz.get(),ItemList.itemGemTopaz.get()));
         lootTables.put(BlockList.blockOreTourmaline.get(),createFortune("tourmalineore",BlockList.blockOreTourmaline.get(),ItemList.itemGemTourmaline.get()));
+        lootTables.put(BlockList.blockOreTritium.get(), createFortune("tritiumore",BlockList.blockOreTritium.get(),ItemList.itemRawTritium.get()));
         lootTables.put(BlockList.blockOreTungsten.get(),createFortune("tungstenore",BlockList.blockOreTungsten.get(),ItemList.itemRawTungsten.get()));
         lootTables.put(BlockList.blockOreTurquoise.get(),createFortune("turquoiseore",BlockList.blockOreTurquoise.get(),ItemList.itemGemTurquoise.get()));
         lootTables.put(BlockList.blockOreUnobtainium.get(),createFortune("unobtainiumore",BlockList.blockOreUnobtainium.get(),ItemList.itemRawUnobtainium.get()));
@@ -189,6 +190,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreTitanium.get(),createFortune("deepslatetitaniumore",BlockList.blockDeepslateOreTitanium.get(),ItemList.itemRawTitanium.get()));
         lootTables.put(BlockList.blockDeepslateOreTopaz.get(),createFortune("deepslatetopazore",BlockList.blockDeepslateOreTopaz.get(),ItemList.itemGemTopaz.get()));
         lootTables.put(BlockList.blockDeepslateOreTourmaline.get(),createFortune("deepslatetourmalineore",BlockList.blockDeepslateOreTourmaline.get(),ItemList.itemGemTourmaline.get()));
+        lootTables.put(BlockList.blockDeepslateOreTritium.get(), createFortune("deepslatetritiumore",BlockList.blockDeepslateOreTritium.get(), ItemList.itemRawTritium.get()));
         lootTables.put(BlockList.blockDeepslateOreTungsten.get(),createFortune("deepslatetungstenore",BlockList.blockDeepslateOreTungsten.get(),ItemList.itemRawTungsten.get()));
         lootTables.put(BlockList.blockDeepslateOreTurquoise.get(),createFortune("deepslateturquoiseore",BlockList.blockDeepslateOreTurquoise.get(),ItemList.itemGemTurquoise.get()));
         lootTables.put(BlockList.blockDeepslateOreUnobtainium.get(),createFortune("deepslateunobtainiumore",BlockList.blockDeepslateOreUnobtainium.get(),ItemList.itemRawUnobtainium.get()));
@@ -282,6 +284,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockTitanium.get(),createStandardTable("titaniumblock",BlockList.blockTitanium.get()));
         lootTables.put(BlockList.blockTopaz.get(),createStandardTable("topazblock",BlockList.blockTopaz.get()));
         lootTables.put(BlockList.blockTourmaline.get(),createStandardTable("tourmalineblock",BlockList.blockTourmaline.get()));
+        lootTables.put(BlockList.blockTritium.get(), createStandardTable("tritiumblock",BlockList.blockOreTritium.get()));
         lootTables.put(BlockList.blockTungsten.get(),createStandardTable("tungstenblock",BlockList.blockTungsten.get()));
         lootTables.put(BlockList.blockTurquoise.get(),createStandardTable("turquoiseblock",BlockList.blockTurquoise.get()));
         lootTables.put(BlockList.blockUnobtainium.get(),createStandardTable("unobtainiumblock",BlockList.blockUnobtainium.get()));

@@ -116,6 +116,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreTitanium).add(BlockList.blockOreTitanium.get().asItem());
         tag(ItemTagList.oreTopaz).add(BlockList.blockOreTopaz.get().asItem());
         tag(ItemTagList.oreTourmaline).add(BlockList.blockOreTourmaline.get().asItem());
+        tag(ItemTagList.oreTritium).add(BlockList.blockOreTritium.get().asItem());
         tag(ItemTagList.oreTungsten).add(BlockList.blockOreTungsten.get().asItem());
         tag(ItemTagList.oreTurquoise).add(BlockList.blockOreTurquoise.get().asItem());
         tag(ItemTagList.oreUnobtainium).add(BlockList.blockOreUnobtainium.get().asItem());
@@ -207,6 +208,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreTitanium).add(BlockList.blockDeepslateOreTitanium.get().asItem());
         tag(ItemTagList.oreTopaz).add(BlockList.blockDeepslateOreTopaz.get().asItem());
         tag(ItemTagList.oreTourmaline).add(BlockList.blockDeepslateOreTourmaline.get().asItem());
+        tag(ItemTagList.oreTritium).add(BlockList.blockDeepslateOreTritium.get().asItem());
         tag(ItemTagList.oreTungsten).add(BlockList.blockDeepslateOreTungsten.get().asItem());
         tag(ItemTagList.oreTurquoise).add(BlockList.blockDeepslateOreTurquoise.get().asItem());
         tag(ItemTagList.oreUnobtainium).add(BlockList.blockDeepslateOreUnobtainium.get().asItem());
@@ -302,6 +304,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.ORES).addTag(ItemTagList.oreTitanium);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreTopaz);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreTourmaline);
+        tag(ItemTagList.ORES).addTag(ItemTagList.oreTritium);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreTungsten);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreTurquoise);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreUnobtainium);
@@ -378,6 +381,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.rawThallium).add(ItemList.itemRawThallium.get().asItem());
         tag(ItemTagList.rawTin).add(ItemList.itemRawTin.get().asItem());
         tag(ItemTagList.rawTitanium).add(ItemList.itemRawTitanium.get().asItem());
+        tag(ItemTagList.rawTritium).add(ItemList.itemRawTritium.get().asItem());
         tag(ItemTagList.rawTungsten).add(ItemList.itemRawTungsten.get().asItem());
         tag(ItemTagList.rawUnobtainium).add(ItemList.itemRawUnobtainium.get().asItem());
         tag(ItemTagList.rawUranium).add(ItemList.itemRawUranium.get().asItem());
@@ -450,6 +454,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.RAW).addTag(ItemTagList.rawThallium);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawTin);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawTitanium);
+        tag(ItemTagList.RAW).addTag(ItemTagList.rawTritium);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawTungsten);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawUnobtainium);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawUranium);
@@ -549,6 +554,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.blockTitanium).add(BlockList.blockTitanium.get().asItem());
         tag(ItemTagList.blockTopaz).add(BlockList.blockTopaz.get().asItem());
         tag(ItemTagList.blockTourmaline).add(BlockList.blockTourmaline.get().asItem());
+        tag(ItemTagList.blockTritium).add(BlockList.blockTritium.get().asItem());
         tag(ItemTagList.blockTungsten).add(BlockList.blockTungsten.get().asItem());
         tag(ItemTagList.blockTurquoise).add(BlockList.blockTurquoise.get().asItem());
         tag(ItemTagList.blockUnobtainium).add(BlockList.blockUnobtainium.get().asItem());
@@ -646,6 +652,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockTitanium);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockTopaz);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockTourmaline);
+        tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockTritium);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockTungsten);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockTurquoise);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockUnobtainium);
@@ -722,6 +729,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.ingotThallium).add(ItemList.itemIngotThallium.get());
         tag(ItemTagList.ingotTin).add(ItemList.itemIngotTin.get());
         tag(ItemTagList.ingotTitanium).add(ItemList.itemIngotTitanium.get());
+        tag(ItemTagList.ingotTritium).add(ItemList.itemIngotTritium.get());
         tag(ItemTagList.ingotTungsten).add(ItemList.itemIngotTungsten.get());
         tag(ItemTagList.ingotUnobtainium).add(ItemList.itemIngotUnobtainium.get());
         tag(ItemTagList.ingotUranium).add(ItemList.itemIngotUranium.get());
@@ -794,6 +802,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotThallium);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotTin);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotTitanium);
+        tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotTritium);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotTungsten);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotUnobtainium);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotUranium);
@@ -869,6 +878,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.dustThallium).add(ItemList.itemDustThallium.get());
         tag(ItemTagList.dustTin).add(ItemList.itemDustTin.get());
         tag(ItemTagList.dustTitanium).add(ItemList.itemDustTitanium.get());
+        tag(ItemTagList.dustTritium).add(ItemList.itemDustTritium.get());
         tag(ItemTagList.dustTungsten).add(ItemList.itemDustTungsten.get());
         tag(ItemTagList.dustUnobtainium).add(ItemList.itemDustUnobtainium.get());
         tag(ItemTagList.dustUranium).add(ItemList.itemDustUranium.get());
@@ -940,6 +950,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustThallium);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustTin);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustTitanium);
+        tag(ItemTagList.DUSTS).addTag(ItemTagList.dustTritium);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustTungsten);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustUnobtainium);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustUranium);
@@ -1014,6 +1025,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.dirtyDustThallium).add(ItemList.itemDirtyDustThallium.get().asItem());
         tag(ItemTagList.dirtyDustTin).add(ItemList.itemDirtyDustTin.get().asItem());
         tag(ItemTagList.dirtyDustTitanium).add(ItemList.itemDirtyDustTitanium.get().asItem());
+        tag(ItemTagList.dirtyDustTritium).add(ItemList.itemDirtyDustTritium.get().asItem());
         tag(ItemTagList.dirtyDustTungsten).add(ItemList.itemDirtyDustTungsten.get().asItem());
         tag(ItemTagList.dirtyDustUnobtainium).add(ItemList.itemDirtyDustUnobtainium.get().asItem());
         tag(ItemTagList.dirtyDustUranium).add(ItemList.itemDirtyDustUranium.get().asItem());
@@ -1085,6 +1097,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustThallium);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustTin);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustTitanium);
+        tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustTritium);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustTungsten);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustUnobtainium);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustUranium);
@@ -1159,6 +1172,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.shardThallium).add(ItemList.itemShardThallium.get());
         tag(ItemTagList.shardTin).add(ItemList.itemShardTin.get());
         tag(ItemTagList.shardTitanium).add(ItemList.itemShardTitanium.get());
+        tag(ItemTagList.shardTritium).add(ItemList.itemShardTritium.get());
         tag(ItemTagList.shardTungsten).add(ItemList.itemShardTungsten.get());
         tag(ItemTagList.shardUnobtainium).add(ItemList.itemShardUnobtainium.get());
         tag(ItemTagList.shardUranium).add(ItemList.itemShardUranium.get());
@@ -1230,6 +1244,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardThallium);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardTin);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardTitanium);
+        tag(ItemTagList.SHARDS).addTags(ItemTagList.shardTritium);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardTungsten);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardUnobtainium);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardUranium);
@@ -1304,6 +1319,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.clumpThallium).add(ItemList.itemClumpThallium.get());
         tag(ItemTagList.clumpTin).add(ItemList.itemClumpTin.get());
         tag(ItemTagList.clumpTitanium).add(ItemList.itemClumpTitanium.get());
+        tag(ItemTagList.clumpTritium).add(ItemList.itemClumpTritium.get());
         tag(ItemTagList.clumpTungsten).add(ItemList.itemClumpTungsten.get());
         tag(ItemTagList.clumpUnobtainium).add(ItemList.itemClumpUnobtainium.get());
         tag(ItemTagList.clumpUranium).add(ItemList.itemClumpUranium.get());
@@ -1375,6 +1391,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpThallium);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpTin);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpTitanium);
+        tag(ItemTagList.CLUMPS).addTags(ItemTagList.clumpTritium);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpTungsten);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpUnobtainium);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpUranium);

@@ -94,6 +94,7 @@ public class BlockTagList
     public static final TagKey<Block> oreTitanium = tag("ores/titanium");
     public static final TagKey<Block> oreTopaz = tag("ores/topaz");
     public static final TagKey<Block> oreTourmaline = tag("ores/tourmaline");
+    public static final TagKey<Block> oreTritium = tag("ores/tritium");
     public static final TagKey<Block> oreTungsten = tag("ores/tungsten");
     public static final TagKey<Block> oreTurquoise = tag("ores/turquoise");
     public static final TagKey<Block> oreUnobtainium = tag("ores/unobtainium");
@@ -193,6 +194,7 @@ public class BlockTagList
     public static final TagKey<Block> blockTitanium = tag("storage_blocks/titanium");
     public static final TagKey<Block> blockTopaz = tag("storage_blocks/topaz");
     public static final TagKey<Block> blockTourmaline = tag("storage_blocks/tourmaline");
+    public static final TagKey<Block> blockTritium = tag("storage_blocks/tritium");
     public static final TagKey<Block> blockTungsten = tag("storage_blocks/tungsten");
     public static final TagKey<Block> blockTurquoise = tag("storage_blocks/turquoise");
     public static final TagKey<Block> blockUnobtainium = tag("storage_blocks/unobtainium");

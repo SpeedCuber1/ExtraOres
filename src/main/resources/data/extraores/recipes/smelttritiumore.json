@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 40,
+  "experience": 0.75,
+  "ingredient": {
+    "tag": "forge:ores/tritium"
+  },
+  "result": "extraores:tritiumingot"
+}

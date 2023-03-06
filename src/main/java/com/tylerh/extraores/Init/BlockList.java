@@ -91,6 +91,7 @@ public class BlockList
     public static RegistryObject<Block> blockOreTitanium;
     public static RegistryObject<Block> blockOreTopaz;
     public static RegistryObject<Block> blockOreTourmaline;
+    public static RegistryObject<Block> blockOreTritium;
     public static RegistryObject<Block> blockOreTungsten;
     public static RegistryObject<Block> blockOreTurquoise;
     public static RegistryObject<Block> blockOreUnobtainium;
@@ -180,6 +181,7 @@ public class BlockList
     public static RegistryObject<Block> blockDeepslateOreTitanium;
     public static RegistryObject<Block> blockDeepslateOreTopaz;
     public static RegistryObject<Block> blockDeepslateOreTourmaline;
+    public static RegistryObject<Block> blockDeepslateOreTritium;
     public static RegistryObject<Block> blockDeepslateOreTungsten;
     public static RegistryObject<Block> blockDeepslateOreTurquoise;
     public static RegistryObject<Block> blockDeepslateOreUnobtainium;
@@ -275,6 +277,7 @@ public class BlockList
     public static RegistryObject<Block> blockTitanium;
     public static RegistryObject<Block> blockTopaz;
     public static RegistryObject<Block> blockTourmaline;
+    public static RegistryObject<Block> blockTritium;
     public static RegistryObject<Block> blockTungsten;
     public static RegistryObject<Block> blockTurquoise;
     public static RegistryObject<Block> blockUnobtainium;

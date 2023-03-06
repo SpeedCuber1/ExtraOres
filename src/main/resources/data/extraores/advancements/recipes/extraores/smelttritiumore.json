@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smelttritiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smelttritiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tritiumingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "smelttritiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smelttritiumore"
+    ]
+  }
+}

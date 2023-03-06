@@ -67,6 +67,7 @@ public class ItemList
     public static RegistryObject<Item> itemIngotThallium;
     public static RegistryObject<Item> itemIngotTin;
     public static RegistryObject<Item> itemIngotTitanium;
+    public static RegistryObject<Item> itemIngotTritium;
     public static RegistryObject<Item> itemIngotTungsten;
     public static RegistryObject<Item> itemIngotUnobtainium;
     public static RegistryObject<Item> itemIngotUranium;
@@ -139,6 +140,7 @@ public class ItemList
     public static RegistryObject<Item> itemDustThallium;
     public static RegistryObject<Item> itemDustTin;
     public static RegistryObject<Item> itemDustTitanium;
+    public static RegistryObject<Item> itemDustTritium;
     public static RegistryObject<Item> itemDustTungsten;
     public static RegistryObject<Item> itemDustUnobtainium;
     public static RegistryObject<Item> itemDustUranium;
@@ -211,6 +213,7 @@ public class ItemList
     public static RegistryObject<Item> itemShardThallium;
     public static RegistryObject<Item> itemShardTin;
     public static RegistryObject<Item> itemShardTitanium;
+    public static RegistryObject<Item> itemShardTritium;
     public static RegistryObject<Item> itemShardTungsten;
     public static RegistryObject<Item> itemShardUnobtainium;
     public static RegistryObject<Item> itemShardUranium;
@@ -283,6 +286,7 @@ public class ItemList
     public static RegistryObject<Item> itemClumpThallium;
     public static RegistryObject<Item> itemClumpTin;
     public static RegistryObject<Item> itemClumpTitanium;
+    public static RegistryObject<Item> itemClumpTritium;
     public static RegistryObject<Item> itemClumpTungsten;
     public static RegistryObject<Item> itemClumpUnobtainium;
     public static RegistryObject<Item> itemClumpUranium;
@@ -355,6 +359,7 @@ public class ItemList
     public static RegistryObject<Item> itemDirtyDustThallium;
     public static RegistryObject<Item> itemDirtyDustTin;
     public static RegistryObject<Item> itemDirtyDustTitanium;
+    public static RegistryObject<Item> itemDirtyDustTritium;
     public static RegistryObject<Item> itemDirtyDustTungsten;
     public static RegistryObject<Item> itemDirtyDustUnobtainium;
     public static RegistryObject<Item> itemDirtyDustUranium;
@@ -427,6 +432,7 @@ public class ItemList
     public static RegistryObject<Item> itemRawThallium;
     public static RegistryObject<Item> itemRawTin;
     public static RegistryObject<Item> itemRawTitanium;
+    public static RegistryObject<Item> itemRawTritium;
     public static RegistryObject<Item> itemRawTungsten;
     public static RegistryObject<Item> itemRawUnobtainium;
     public static RegistryObject<Item> itemRawUranium;

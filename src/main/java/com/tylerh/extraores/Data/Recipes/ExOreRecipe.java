@@ -633,6 +633,13 @@ public class ExOreRecipe extends RecipeProvider
                 .define('i',ItemList.itemGemTourmaline.get())
                 .unlockedBy("tourmalineblock",has(BlockList.blockTourmaline.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(BlockList.blockTritium.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i',ItemList.itemIngotTritium.get())
+                .unlockedBy("tritiumblock",has(BlockList.blockTritium.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(BlockList.blockTungsten.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -1053,6 +1060,10 @@ public class ExOreRecipe extends RecipeProvider
                 .requires(Ingredient.of(BlockList.blockTourmaline.get().asItem()))
                 .unlockedBy("tourmaline",has(ItemList.itemGemTourmaline.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(ItemList.itemIngotTritium.get(),9)
+                .requires(Ingredient.of(BlockList.blockTritium.get().asItem()))
+                .unlockedBy("tritiumingot",has(ItemList.itemIngotTritium.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(ItemList.itemIngotTungsten.get(),9)
                 .requires(Ingredient.of(BlockList.blockTungsten.get().asItem()))
                 .unlockedBy("tungsteningot",has(ItemList.itemIngotTungsten.get()))
@@ -1284,6 +1295,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTitanium),ItemList.itemIngotTitanium.get(),0.75F,40)
                 .unlockedBy("smelttitaniumore",has(ItemList.itemIngotTitanium.get()))
                 .save(consumer,new ResourceLocation("extraores:smelttitaniumore"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTritium),ItemList.itemIngotTritium.get(), 0.75F,40)
+                .unlockedBy("smelttritiumore",has(ItemList.itemIngotTritium.get()))
+                .save(consumer,new ResourceLocation("extraores:smelttritiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTungsten),ItemList.itemIngotTungsten.get(),0.75F,40)
                 .unlockedBy("smelttungstenore",has(ItemList.itemIngotTungsten.get()))
                 .save(consumer,new ResourceLocation("extraores:smelttungstenore"));
@@ -1498,6 +1512,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTitanium),ItemList.itemIngotTitanium.get(),0.75F,40)
                 .unlockedBy("smeltrawtitanium",has(ItemList.itemIngotTitanium.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltrawtitanium"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTritium),ItemList.itemIngotTritium.get(), 0.75F,40)
+                .unlockedBy("smeltrawtritium",has(ItemList.itemIngotTritium.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltrawtritium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTungsten),ItemList.itemIngotTungsten.get(),0.75F,40)
                 .unlockedBy("smeltrawtungsten",has(ItemList.itemIngotTungsten.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltrawtungsten"));
@@ -1712,6 +1729,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTitanium),ItemList.itemIngotTitanium.get(),0.75F,20)
                 .unlockedBy("smelttitaniumdust",has(ItemList.itemIngotTitanium.get()))
                 .save(consumer,new ResourceLocation("extraores:smelttitaniumdust"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTritium),ItemList.itemIngotTritium.get(),0.75F,20)
+        .unlockedBy("smelttritiumdust",has(ItemList.itemIngotTritium.get()))
+        .save(consumer,new ResourceLocation("extraores:smelttritiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTungsten),ItemList.itemIngotTungsten.get(),0.75F,20)
                 .unlockedBy("smelttungstendust",has(ItemList.itemIngotTungsten.get()))
                 .save(consumer,new ResourceLocation("extraores:smelttungstendust"));
@@ -1925,6 +1945,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTitanium.get().asItem()),ItemList.itemIngotTitanium.get(),0.75F,20)
                 .unlockedBy("blasttitaniumore",has(ItemList.itemIngotTitanium.get()))
                 .save(consumer,new ResourceLocation("extraores:blasttitaniumore"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTritium.get().asItem()),ItemList.itemIngotTritium.get(),0.75F,20)
+                .unlockedBy("blasttritiumore",has(ItemList.itemIngotTritium.get()))
+                .save(consumer,new ResourceLocation("extraores:blasttritiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTungsten.get().asItem()),ItemList.itemIngotTungsten.get(),0.75F,20)
                 .unlockedBy("blasttungstenore",has(ItemList.itemIngotTungsten.get()))
                 .save(consumer,new ResourceLocation("extraores:blasttungstenore"));
@@ -2136,6 +2159,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTitanium.get()),ItemList.itemIngotTitanium.get(),0.75F,10)
                 .unlockedBy("blasttitaniumdust",has(ItemList.itemIngotTitanium.get()))
                 .save(consumer,new ResourceLocation("extraores:blasttitaniumdust"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTritium.get()),ItemList.itemIngotTritium.get(),0.75F,10)
+                .unlockedBy("blasttritiumdust",has(ItemList.itemIngotTritium.get()))
+                .save(consumer,new ResourceLocation("extraores:blasttritiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTungsten.get()),ItemList.itemIngotTungsten.get(),0.75F,10)
                 .unlockedBy("blasttungstendust",has(ItemList.itemIngotTungsten.get()))
                 .save(consumer,new ResourceLocation("extraores:blasttungstendust"));
@@ -2350,9 +2376,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTin), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardTin.get(),4))
                 .addCriterion("injecttinore",has(BlockList.blockOreTin.get()))
                 .build(consumer,new ResourceLocation("extraores:injecttinore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardTitanium.get(),4))
-                .addCriterion("injecttitaniumore",has(BlockList.blockOreTitanium.get()))
-                .build(consumer,new ResourceLocation("extraores:injecttitaniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardTritium.get(),4))
+                .addCriterion("injecttritiumore",has(BlockList.blockOreTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:injecttritiumore"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardTungsten.get(),4))
                 .addCriterion("injecttungstenore",has(BlockList.blockOreTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:injecttungstenore"));
@@ -2567,6 +2593,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardTitanium.get(),4))
                 .addCriterion("injectrawtitanium",has(BlockList.blockOreTitanium.get()))
                 .build(consumer,new ResourceLocation("extraores:injectrawtitanium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardTritium.get(),4))
+                .addCriterion("injectrawtritium",has(BlockList.blockOreTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:injectrawtritium"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardTungsten.get(),4))
                 .addCriterion("injectrawtungsten",has(BlockList.blockOreTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:injectrawtungsten"));
@@ -2784,6 +2813,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTitanium.get(),3))
                 .addCriterion("purifytitaniumore",has(BlockList.blockOreTitanium.get()))
                 .build(consumer,new ResourceLocation("extraores:purifytitaniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTritium.get(),3))
+                .addCriterion("purifytritiumore",has(BlockList.blockOreTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:purifytritiumore"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTungsten.get(),3))
                 .addCriterion("purifytungstenore",has(BlockList.blockOreTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:purifytungstenore"));
@@ -2998,6 +3030,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTitanium.get(),3))
                 .addCriterion("purifyrawtitanium",has(ItemList.itemRawTitanium.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyrawtitanium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTritium.get(),3))
+                .addCriterion("purifyrawtritium",has(ItemList.itemRawTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:purifyrawtritium"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTungsten.get(),3))
                 .addCriterion("purifyrawtungsten",has(ItemList.itemRawTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyrawtungsten"));
@@ -3212,6 +3247,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTitanium.get()))
                 .addCriterion("purifytitanium",has(ItemList.itemShardTitanium.get()))
                 .build(consumer,new ResourceLocation("extraores:purifytitanium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTritium.get()))
+                .addCriterion("purifytritium",has(ItemList.itemShardTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:purifytritium"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpTungsten.get()))
                 .addCriterion("purifytungsten",has(ItemList.itemShardTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:purifytungsten"));
@@ -3428,6 +3466,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTitanium),new ItemStack(ItemList.itemDirtyDustTitanium.get()))
                 .addCriterion("crushtitanium",has(ItemList.itemClumpTitanium.get()))
                 .build(consumer,new ResourceLocation("extraores:crushtitanium"));
+        ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTritium),new ItemStack(ItemList.itemDirtyDustTritium.get()))
+                .addCriterion("crushtritium",has(ItemList.itemClumpTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:crushtritium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTungsten),new ItemStack(ItemList.itemDirtyDustTungsten.get()))
                 .addCriterion("crushtungsten",has(ItemList.itemClumpTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:crushtungsten"));
@@ -3645,6 +3686,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTitanium),new ItemStack(ItemList.itemDustTitanium.get(),2))
                 .addCriterion("enrichtitaniumore",has(BlockList.blockOreTitanium.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichtitaniumore"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTritium),new ItemStack(ItemList.itemDustTritium.get(),2))
+                .addCriterion("enrichtritiumore",has(BlockList.blockOreTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichtritiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTungsten),new ItemStack(ItemList.itemDustTungsten.get(),2))
                 .addCriterion("enrichtungstenore",has(BlockList.blockOreTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichtungstenore"));
@@ -3859,6 +3903,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTitanium),new ItemStack(ItemList.itemDustTitanium.get(),2))
                 .addCriterion("enrichrawtitanium",has(ItemList.itemRawTitanium.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichrawtitanium"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTritium),new ItemStack(ItemList.itemDustTritium.get(),2))
+                .addCriterion("enrichrawtritium",has(ItemList.itemRawTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichrawtritium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTungsten),new ItemStack(ItemList.itemDustTungsten.get(),2))
                 .addCriterion("enrichrawtungsten",has(ItemList.itemRawTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichrawtungsten"));
@@ -4073,6 +4120,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTitanium),new ItemStack(ItemList.itemDustTitanium.get()))
                 .addCriterion("enrichtitaniumdirtydust",has(BlockList.blockOreTitanium.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichtitaniumdirtydust"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTritium),new ItemStack(ItemList.itemDustTritium.get()))
+                .addCriterion("enrichtritiumdirtydust",has(BlockList.blockOreTritium.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichtritiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTungsten),new ItemStack(ItemList.itemDustTungsten.get()))
                 .addCriterion("enrichtungstendirtydust",has(BlockList.blockOreTungsten.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichtungstendirtydust"));

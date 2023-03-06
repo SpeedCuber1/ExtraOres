@@ -90,6 +90,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerTitanium;
     public static ForgeConfigSpec.BooleanValue registerTopaz;
     public static ForgeConfigSpec.BooleanValue registerTourmaline;
+    public static ForgeConfigSpec.BooleanValue registerTritium;
     public static ForgeConfigSpec.BooleanValue registerTungsten;
     public static ForgeConfigSpec.BooleanValue registerTurquoise;
     public static ForgeConfigSpec.BooleanValue registerUnobtainium;
@@ -189,6 +190,7 @@ public class ConfigRegistryList
         registerTitanium = builder.comment("Enable/Disable Titanium").define("Titanium", ModInfo.GUI_DEFAULT_VALUE);
         registerTopaz = builder.comment("Enable/Disable Topaz").define("Topaz",ModInfo.GUI_DEFAULT_VALUE);
         registerTourmaline = builder.comment("Enable/Disable Tourmaline").define("Tourmaline",ModInfo.GUI_DEFAULT_VALUE);
+        registerTritium = builder.comment("Enable/Disable Tritium").define("Tritium",ModInfo.GUI_DEFAULT_VALUE);
         registerTungsten = builder.comment("Enable/Disable Tungsten").define("Tungsten", ModInfo.GUI_DEFAULT_VALUE);
         registerTurquoise = builder.comment("Enable/Disable Turquoise").define("Turquoise",ModInfo.GUI_DEFAULT_VALUE);
         registerUnobtainium = builder.comment("Enable/Disable Unobtainium").define("Unobtainium", ModInfo.GUI_DEFAULT_VALUE);

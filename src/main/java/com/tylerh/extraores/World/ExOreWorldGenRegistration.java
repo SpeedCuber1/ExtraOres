@@ -1461,6 +1461,23 @@ public final class ExOreWorldGenRegistration
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "tourmalineore"), feature);
             Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "tourmalineore"), featureTourmaline);
         }
+        if(ConfigRegistryList.registerTritium.get())
+        {
+            height = ModInfo.HEIGHT_RARE;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTritium.get().defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTritium.get().defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
+            var featureTritium = new PlacedFeature(Holder.direct(feature), List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM, VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "tritiumore"), feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "tritiumore"), featureTritium);
+        }
         if (ConfigRegistryList.registerTungsten.get())
         {
             height = ModInfo.HEIGHT_RARE;
