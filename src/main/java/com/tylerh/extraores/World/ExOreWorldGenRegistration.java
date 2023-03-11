@@ -5,14 +5,20 @@ import com.tylerh.extraores.Init.ConfigRegistryList;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+
 import java.util.List;
 
 public final class ExOreWorldGenRegistration
@@ -28,8 +34,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAdamantine.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAdamantine.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAdamantine.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAdamantine.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAdamantine = new PlacedFeature(Holder.direct(feature), List.of(
@@ -45,8 +51,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAgate.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAgate.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAgate.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAgate.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAgate = new PlacedFeature(Holder.direct(feature), List.of(
@@ -62,7 +68,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreAldourite.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreAldourite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAldourite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -78,8 +84,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAluminum.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAluminum.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAluminum.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAluminum.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAluminum = new PlacedFeature(Holder.direct(feature), List.of(
@@ -95,8 +101,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAmericium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAmericium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAmericium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAmericium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAmericium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -112,8 +118,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAmethyst.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAmethyst.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAmethyst.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAmethyst.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAmethyst = new PlacedFeature(Holder.direct(feature), List.of(
@@ -129,8 +135,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAmetrine.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAmetrine.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAmetrine.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAmetrine.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAmetrine = new PlacedFeature(Holder.direct(feature), List.of(
@@ -146,8 +152,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAmordrine.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAmordrine.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAmordrine.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAmordrine.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAmordrine = new PlacedFeature(Holder.direct(feature), List.of(
@@ -163,8 +169,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAngmallen.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAngmallen.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAngmallen.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAngmallen.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAngmallen = new PlacedFeature(Holder.direct(feature), List.of(
@@ -180,8 +186,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAquamarine.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAquamarine.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAquamarine.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAquamarine.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAquamarine = new PlacedFeature(Holder.direct(feature), List.of(
@@ -197,8 +203,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAstralSilver.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAstralSilver.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAstralSilver.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAstralSilver.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAstralSilver = new PlacedFeature(Holder.direct(feature), List.of(
@@ -214,8 +220,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAtlarus.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAtlarus.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreAtlarus.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreAtlarus.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureAtlarus = new PlacedFeature(Holder.direct(feature), List.of(
@@ -231,8 +237,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreBismuth.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreBismuth.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreBismuth.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreBismuth.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureBismuth = new PlacedFeature(Holder.direct(feature), List.of(
@@ -248,8 +254,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreBlackSteel.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreBlackSteel.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreBlackSteel.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreBlackSteel.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureBlackSteel = new PlacedFeature(Holder.direct(feature), List.of(
@@ -265,8 +271,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCadmium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreCadmium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreCadmium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreCadmium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCadmium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -282,8 +288,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCarmot.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreCarmot.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreCarmot.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreCarmot.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCarmot = new PlacedFeature(Holder.direct(feature), List.of(
@@ -299,8 +305,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCelenegil.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreCelenegil.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreCelenegil.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreCelenegil.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCelenegil = new PlacedFeature(Holder.direct(feature), List.of(
@@ -316,7 +322,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreCeruclase.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreCeruclase.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCeruclase = new PlacedFeature(Holder.direct(feature), List.of(
@@ -332,8 +338,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreChromium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreChromium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreChromium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreChromium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureChromium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -349,8 +355,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreChrysocolla.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreChrysocolla.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreChrysocolla.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreChrysocolla.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureChrysocolla = new PlacedFeature(Holder.direct(feature), List.of(
@@ -366,8 +372,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCitrine.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreCitrine.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreCitrine.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreCitrine.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCitrine = new PlacedFeature(Holder.direct(feature), List.of(
@@ -383,8 +389,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCobalt.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreCobalt.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreCobalt.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreCobalt.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCobalt = new PlacedFeature(Holder.direct(feature), List.of(
@@ -400,8 +406,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCopper.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreCopper.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreCopper.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreCopper.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCopper = new PlacedFeature(Holder.direct(feature), List.of(
@@ -417,8 +423,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCrimsonSteel.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreCrimsonSteel.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreCrimsonSteel.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreCrimsonSteel.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureCrimsonSteel = new PlacedFeature(Holder.direct(feature), List.of(
@@ -434,8 +440,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreDeepIron.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreDeepIron.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreDeepIron.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreDeepIron.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureDeepIron = new PlacedFeature(Holder.direct(feature), List.of(
@@ -451,8 +457,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreDesichalkos.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreDesichalkos.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreDesichalkos.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreDesichalkos.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureDesichalkos = new PlacedFeature(Holder.direct(feature), List.of(
@@ -468,8 +474,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreEximite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreEximite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreEximite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreEximite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureEximite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -485,8 +491,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreGallium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreGallium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreGallium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreGallium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureGallium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -502,8 +508,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreGarnet.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreGarnet.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreGarnet.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreGarnet.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureGarnet = new PlacedFeature(Holder.direct(feature), List.of(
@@ -519,8 +525,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreHaderoth.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreHaderoth.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreHaderoth.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreHaderoth.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureHaderoth = new PlacedFeature(Holder.direct(feature), List.of(
@@ -536,8 +542,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreHepatizon.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreHepatizon.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreHepatizon.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreHepatizon.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureHepatizon = new PlacedFeature(Holder.direct(feature), List.of(
@@ -553,7 +559,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreIgnatius.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreIgnatius.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureIgnatius = new PlacedFeature(Holder.direct(feature), List.of(
@@ -569,8 +575,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreIndium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreIndium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreIndium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreIndium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureIndium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -586,8 +592,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreInfuscolium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreInfuscolium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreInfuscolium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreInfuscolium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureInfuscolium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -603,8 +609,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreInolashite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreInolashite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreInolashite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreInolashite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureInolashite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -620,8 +626,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreIolite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreIolite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreIolite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreIolite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureIolite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -637,8 +643,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreIridium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreIridium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreIridium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreIridium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureIridium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -654,8 +660,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreJade.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreJade.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreJade.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreJade.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureJade = new PlacedFeature(Holder.direct(feature), List.of(
@@ -671,8 +677,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreJasper.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreJasper.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreJasper.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreJasper.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureJasper = new PlacedFeature(Holder.direct(feature), List.of(
@@ -688,7 +694,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreKalendrite.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreKalendrite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureKalendrite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -704,8 +710,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreKyanite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreKyanite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreKyanite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreKyanite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureKyanite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -721,8 +727,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreLead.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreLead.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreLead.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreLead.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureLead = new PlacedFeature(Holder.direct(feature), List.of(
@@ -738,7 +744,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreLemurite.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreLemurite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureLemurite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -754,8 +760,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMalachite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreMalachite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreMalachite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreMalachite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureMalachite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -771,8 +777,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreManganese.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreManganese.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreManganese.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreManganese.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureManganese = new PlacedFeature(Holder.direct(feature), List.of(
@@ -788,8 +794,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMeutoite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreMeutoite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreMeutoite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreMeutoite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureMeutoite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -805,7 +811,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreMidasium.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreMidasium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureMidasium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -821,8 +827,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMithril.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreMithril.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreMithril.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreMithril.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureMithril = new PlacedFeature(Holder.direct(feature), List.of(
@@ -838,8 +844,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreMolybdenum.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreMolybdenum.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreMolybdenum.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreMolybdenum.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureMolybdenum = new PlacedFeature(Holder.direct(feature), List.of(
@@ -855,8 +861,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreNeodymium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreNeodymium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreNeodymium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreNeodymium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureNeodymium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -872,8 +878,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreNeptunium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreNeptunium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreNeptunium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreNeptunium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureNeptunium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -889,8 +895,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreNickel.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreNickel.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreNickel.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreNickel.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureNickel = new PlacedFeature(Holder.direct(feature), List.of(
@@ -906,8 +912,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreNiobium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreNiobium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreNiobium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreNiobium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureNiobium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -923,8 +929,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOnyx.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreOnyx.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreOnyx.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreOnyx.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureOnyx = new PlacedFeature(Holder.direct(feature), List.of(
@@ -940,8 +946,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOpal.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreOpal.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreOpal.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreOpal.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureOpal = new PlacedFeature(Holder.direct(feature), List.of(
@@ -957,8 +963,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOrichalcum.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreOrichalcum.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreOrichalcum.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreOrichalcum.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureOrichalcum = new PlacedFeature(Holder.direct(feature), List.of(
@@ -974,8 +980,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOsmium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreOsmium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreOsmium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreOsmium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureOsmium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -991,8 +997,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreOureclase.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreOureclase.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreOureclase.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreOureclase.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureOureclase = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1008,8 +1014,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePalladium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOrePalladium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOrePalladium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOrePalladium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featurePalladium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1025,8 +1031,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePeridot.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOrePeridot.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOrePeridot.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOrePeridot.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featurePeridot = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1042,8 +1048,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePhoenixite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOrePhoenixite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOrePhoenixite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOrePhoenixite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featurePhoenixite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1059,8 +1065,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePlatinum.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOrePlatinum.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOrePlatinum.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOrePlatinum.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featurePlatinum = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1076,8 +1082,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePlutonium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOrePlutonium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOrePlutonium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOrePlutonium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featurePlutonium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1093,8 +1099,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePolonium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOrePolonium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOrePolonium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOrePolonium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featurePolonium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1110,8 +1116,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOrePromethium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOrePromethium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOrePromethium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOrePromethium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featurePromethium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1127,8 +1133,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreQuartz.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreQuartz.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreQuartz.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreQuartz.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureQuartz = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1144,8 +1150,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRhenium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreRhenium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreRhenium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreRhenium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureRhenium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1161,8 +1167,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRhodium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreRhodium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreRhodium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreRhodium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureRhodium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1178,8 +1184,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRuthenium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreRuthenium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreRuthenium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreRuthenium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureRuthenium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1195,8 +1201,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRubracium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreRubracium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreRubracium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreRubracium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureRubracium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1212,8 +1218,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreRuby.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreRuby.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreRuby.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreRuby.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureRuby = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1229,7 +1235,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreSanguinite.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreSanguinite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureSanguinite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1245,8 +1251,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSapphire.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreSapphire.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreSapphire.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreSapphire.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureSapphire = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1262,7 +1268,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreShadowIron.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreShadowIron.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureShadowIron = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1278,8 +1284,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSilver.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreSilver.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreSilver.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreSilver.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureSilver = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1295,8 +1301,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSpinel.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreSpinel.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreSpinel.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreSpinel.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureSpinel = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1312,8 +1318,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreSugilite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreSugilite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreSugilite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreSugilite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureSugilite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1329,8 +1335,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTantalum.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTantalum.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTantalum.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTantalum.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTantalum = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1346,8 +1352,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTanzanite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTanzanite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTanzanite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTanzanite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTanzanite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1363,8 +1369,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTartarite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTartarite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTartarite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTartarite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTartarite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1380,8 +1386,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTechnetium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTechnetium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTechnetium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTechnetium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTechnetium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1397,8 +1403,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreThallium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreThallium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreThallium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreThallium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureThallium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1414,8 +1420,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTin.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTin.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTin.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTin.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTin = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1431,8 +1437,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTitanium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTitanium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTitanium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTitanium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTitanium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1448,8 +1454,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTopaz.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTopaz.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTopaz.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTopaz.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTopaz = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1465,8 +1471,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTourmaline.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTourmaline.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTourmaline.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTourmaline.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTourmaline = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1482,8 +1488,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTritium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTritium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTritium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTritium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTritium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1499,8 +1505,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTungsten.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTungsten.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTungsten.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTungsten.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTungsten = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1516,8 +1522,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreTurquoise.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreTurquoise.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreTurquoise.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreTurquoise.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureTurquoise = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1533,8 +1539,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreUnobtainium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreUnobtainium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreUnobtainium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreUnobtainium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureUnobtainium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1550,8 +1556,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreUranium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreUranium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreUranium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreUranium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureUranium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1567,8 +1573,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVanadium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreVanadium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreVanadium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreVanadium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureVanadium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1584,8 +1590,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_RARE;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreVibranium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreVibranium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreVibranium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreVibranium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureVibranium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1601,7 +1607,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreVulcanite.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreVulcanite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureVulcanite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1617,7 +1623,7 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NETHER;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockList.blockOreVyroxeres.get().defaultBlockState())
+                    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK), BlockList.blockOreVyroxeres.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureVyroxeres = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1633,8 +1639,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreYellorite.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreYellorite.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreYellorite.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreYellorite.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureYellorite = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1650,8 +1656,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreZinc.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreZinc.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreZinc.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreZinc.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureZinc = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1667,8 +1673,8 @@ public final class ExOreWorldGenRegistration
         {
             height = ModInfo.HEIGHT_NORMAL;
             target = List.of(
-                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreZirconium.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreZirconium.get().defaultBlockState())
+                    OreConfiguration.target(new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES), BlockList.blockOreZirconium.get().defaultBlockState()),
+                    OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), BlockList.blockDeepslateOreZirconium.get().defaultBlockState())
             );
             feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
             var featureZirconium = new PlacedFeature(Holder.direct(feature), List.of(
@@ -1677,8 +1683,12 @@ public final class ExOreWorldGenRegistration
                     HeightRangePlacement.uniform(VerticalAnchor.BOTTOM, VerticalAnchor.aboveBottom(height)),
                     BiomeFilter.biome()
             ));
-            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "zirconiumore"), feature);
-            Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "zirconiumore"), featureZirconium);
+            //Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "zirconiumore"), feature);
+            //Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "zirconiumore"), featureZirconium);
         }
+    }
+    private static <FC extends FeatureConfiguration,F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?,?>> context, ResourceKey<ConfiguredFeature<?,?>> key,F feature,FC configuration)
+    {
+        context.register(key,new ConfiguredFeature<>(feature,configuration));
     }
 }

@@ -5,7 +5,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.Level;
@@ -14,9 +13,9 @@ import java.util.List;
 
 public class ItemBlockExOre extends BlockItem
 {
-    public ItemBlockExOre(Block block, CreativeModeTab group)
+    public ItemBlockExOre(Block block)
     {
-        super(block,new Item.Properties().tab(group).stacksTo(64));
+        super(block,new Item.Properties().stacksTo(64));
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.tylerh.extraores.Data.Rendering;
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -10,9 +11,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ExOreBlockstateProvider extends BlockStateProvider
 {
-    public ExOreBlockstateProvider(DataGenerator gen,ExistingFileHelper exFileHelper)
+    public ExOreBlockstateProvider(PackOutput output, ExistingFileHelper exFileHelper)
     {
-        super(gen,ModInfo.MOD_ID, exFileHelper);
+        super(output,ModInfo.MOD_ID, exFileHelper);
     }
 
     @Override

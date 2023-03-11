@@ -3,6 +3,7 @@ package com.tylerh.extraores.Data.Rendering;
 import com.tylerh.extraores.Init.ItemList;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -10,9 +11,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ExOreItemModelProvider extends ItemModelProvider
 {
-    public ExOreItemModelProvider(DataGenerator generator,ExistingFileHelper existingFileHelper)
+    public ExOreItemModelProvider(PackOutput output,ExistingFileHelper existingFileHelper)
     {
-        super(generator, ModInfo.MOD_ID, existingFileHelper);
+        super(output, ModInfo.MOD_ID, existingFileHelper);
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.tylerh.extraores.Items;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.Level;
@@ -13,9 +12,9 @@ import java.util.List;
 
 public class ItemEXOre extends Item
 {
-    public ItemEXOre(CreativeModeTab group)
+    public ItemEXOre()
     {
-        super(new Item.Properties().tab(group).stacksTo(64));
+        super(new Item.Properties().stacksTo(64));
     }
 
     @Override

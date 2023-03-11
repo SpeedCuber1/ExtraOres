@@ -1,7 +1,7 @@
 package com.tylerh.extraores.Data;
 
-import com.tylerh.extraores.Data.Advancements.Advancements;
-import com.tylerh.extraores.Data.Loot_Tables.LootTables;
+import com.tylerh.extraores.Data.Advancements.ExOreAdvancementGenerator;
+import com.tylerh.extraores.Data.Loot_Tables.ExOreLootTableProvider;
 import com.tylerh.extraores.Data.Recipes.ExOreRecipe;
 import com.tylerh.extraores.Data.Rendering.ExOreBlockstateProvider;
 import com.tylerh.extraores.Data.Rendering.ExOreItemModelProvider;
@@ -18,13 +18,15 @@ public class EXOreDataGen
     public static void gatherData(GatherDataEvent event)
     {
         var generator = event.getGenerator();
+        var packOutput = generator.getPackOutput();
         var existingFileHelper = event.getExistingFileHelper();
-        generator.addProvider(true,new Advancements(generator,existingFileHelper));
-        generator.addProvider(true,new ExOreRecipe(generator));
-        generator.addProvider(true,new ExOreBlockTag(generator, existingFileHelper));
-        generator.addProvider(true,new ExOreItemTag(generator,new ExOreBlockTag(generator,existingFileHelper),existingFileHelper));
-        generator.addProvider(true,new LootTables(generator));
-        generator.addProvider(true,new ExOreBlockstateProvider(generator,existingFileHelper));
-        generator.addProvider(true,new ExOreItemModelProvider(generator,existingFileHelper));
+        var lookupProvider = event.getLookupProvider();
+        generator.addProvider(true, ExOreLootTableProvider.create(packOutput));
+        generator.addProvider(true,new ExOreAdvancementGenerator(packOutput));
+        generator.addProvider(true,new ExOreRecipe(packOutput));
+        generator.addProvider(true,new ExOreBlockTag(packOutput,lookupProvider,existingFileHelper));
+        generator.addProvider(true,new ExOreItemTag(packOutput,lookupProvider,existingFileHelper));
+        generator.addProvider(true,new ExOreBlockstateProvider(packOutput,existingFileHelper));
+        generator.addProvider(true,new ExOreItemModelProvider(packOutput,existingFileHelper));
     }
 }
