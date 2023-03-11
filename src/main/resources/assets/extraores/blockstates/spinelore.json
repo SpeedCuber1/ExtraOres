@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/spinelore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/spinelore"
     }
+  }
 }

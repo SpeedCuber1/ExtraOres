@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/crimsonsteelblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/crimsonsteelblock"
     }
+  }
 }

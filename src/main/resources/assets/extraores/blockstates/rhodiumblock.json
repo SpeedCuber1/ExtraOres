@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/rhodiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/rhodiumblock"
     }
+  }
 }

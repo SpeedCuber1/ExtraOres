@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatetechnetiumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatetechnetiumore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/chromiumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/chromiumore"
     }
+  }
 }

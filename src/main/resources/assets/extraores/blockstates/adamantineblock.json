@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/adamantineblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/adamantineblock"
     }
+  }
 }

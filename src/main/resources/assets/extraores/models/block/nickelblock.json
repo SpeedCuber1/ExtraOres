@@ -1,6 +1,6 @@
 {
-    "parent":"minecraft:block/cube_all",
-    "textures":{
-        "all":"extraores:blocks/nickelblock"
-    }
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "extraores:block/nickelblock"
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/kalendriteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/kalendriteore"
     }
+  }
 }

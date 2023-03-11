@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/mithrilblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/mithrilblock"
     }
+  }
 }

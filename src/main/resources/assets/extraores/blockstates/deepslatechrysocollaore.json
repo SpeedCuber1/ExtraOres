@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatechrysocollaore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatechrysocollaore"
     }
+  }
 }

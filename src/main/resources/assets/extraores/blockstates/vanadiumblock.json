@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/vanadiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/vanadiumblock"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/cobaltore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/cobaltore"
     }
+  }
 }

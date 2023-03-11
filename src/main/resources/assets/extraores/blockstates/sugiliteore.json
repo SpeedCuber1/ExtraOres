@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/sugiliteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/sugiliteore"
     }
+  }
 }

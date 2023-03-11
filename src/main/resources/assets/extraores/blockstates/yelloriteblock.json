@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/yelloriteblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/yelloriteblock"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/celenegilblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/celenegilblock"
     }
+  }
 }

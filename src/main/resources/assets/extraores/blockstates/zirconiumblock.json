@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/zirconiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/zirconiumblock"
     }
+  }
 }

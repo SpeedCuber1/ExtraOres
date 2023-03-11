@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/meutoiteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/meutoiteore"
     }
+  }
 }

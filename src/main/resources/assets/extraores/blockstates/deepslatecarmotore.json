@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatecarmotore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatecarmotore"
     }
+  }
 }

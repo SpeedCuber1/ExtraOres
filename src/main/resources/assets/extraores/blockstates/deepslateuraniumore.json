@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslateuraniumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslateuraniumore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/leadore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/leadore"
     }
+  }
 }

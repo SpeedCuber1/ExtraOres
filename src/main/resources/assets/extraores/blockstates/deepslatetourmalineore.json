@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatetourmalineore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatetourmalineore"
     }
+  }
 }

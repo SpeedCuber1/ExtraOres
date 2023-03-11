@@ -67,7 +67,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'info'
 
-            args '--mod', 'extraores','--all', '--output', file('src/generated/resources')
+            args '--mod', 'extraores','--all', '--output', file('src/generated/resources'), '--existing', file('src/main/resources/')
 
         }
     }

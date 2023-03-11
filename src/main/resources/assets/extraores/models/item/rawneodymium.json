@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "extraores:items/rawneodymium"
+    "layer0": "extraores:item/rawneodymium"
   }
 }

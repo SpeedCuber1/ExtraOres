@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/zincblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/zincblock"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatequartzore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatequartzore"
     }
+  }
 }

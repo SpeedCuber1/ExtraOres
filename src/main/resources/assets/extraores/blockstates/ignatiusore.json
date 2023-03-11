@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/ignatiusore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/ignatiusore"
     }
+  }
 }

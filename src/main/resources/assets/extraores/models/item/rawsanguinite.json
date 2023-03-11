@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "extraores:items/rawsanguinite"
+    "layer0": "extraores:item/rawsanguinite"
   }
 }

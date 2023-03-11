@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "extraores:items/rawkalendrite"
+    "layer0": "extraores:item/rawkalendrite"
   }
 }

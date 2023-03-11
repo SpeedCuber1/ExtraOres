@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/lemuriteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/lemuriteore"
     }
+  }
 }

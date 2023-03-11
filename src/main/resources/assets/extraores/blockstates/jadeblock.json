@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/jadeblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/jadeblock"
     }
+  }
 }

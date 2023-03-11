@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/vulcaniteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/vulcaniteore"
     }
+  }
 }

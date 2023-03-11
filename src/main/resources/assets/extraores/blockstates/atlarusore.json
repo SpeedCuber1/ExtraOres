@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/atlarusore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/atlarusore"
     }
+  }
 }

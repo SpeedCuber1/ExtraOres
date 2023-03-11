@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/manganeseore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/manganeseore"
     }
+  }
 }

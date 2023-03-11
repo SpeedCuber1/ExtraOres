@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatephoenixiteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatephoenixiteore"
     }
+  }
 }

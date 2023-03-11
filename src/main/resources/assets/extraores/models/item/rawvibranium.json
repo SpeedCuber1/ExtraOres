@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "extraores:items/rawvibranium"
+    "layer0": "extraores:item/rawvibranium"
   }
 }

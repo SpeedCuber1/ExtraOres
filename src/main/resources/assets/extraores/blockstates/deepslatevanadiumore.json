@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatevanadiumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatevanadiumore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/angmallenore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/angmallenore"
     }
+  }
 }

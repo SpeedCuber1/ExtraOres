@@ -1,6 +1,6 @@
 {
-    "parent":"minecraft:block/cube_all",
-    "textures":{
-        "all":"extraores:blocks/rubyblock"
-    }
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "extraores:block/rubyblock"
+  }
 }

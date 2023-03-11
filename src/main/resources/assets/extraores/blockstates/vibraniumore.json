@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/vibraniumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/vibraniumore"
     }
+  }
 }

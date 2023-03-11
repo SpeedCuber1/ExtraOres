@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatecopperore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatecopperore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatekyaniteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatekyaniteore"
     }
+  }
 }

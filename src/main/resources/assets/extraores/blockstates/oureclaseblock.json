@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/oureclaseblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/oureclaseblock"
     }
+  }
 }

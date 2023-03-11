@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/tantalumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/tantalumore"
     }
+  }
 }

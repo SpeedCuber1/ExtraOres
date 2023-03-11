@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/osmiumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/osmiumore"
     }
+  }
 }

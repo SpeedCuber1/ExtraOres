@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslateturquoiseore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslateturquoiseore"
     }
+  }
 }

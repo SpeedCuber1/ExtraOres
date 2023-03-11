@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/vyroxeresblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/vyroxeresblock"
     }
+  }
 }

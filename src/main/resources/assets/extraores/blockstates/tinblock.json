@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/tinblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/tinblock"
     }
+  }
 }

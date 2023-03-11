@@ -1,6 +1,6 @@
 {
-    "parent":"minecraft:block/cube_all",
-    "textures":{
-        "all":"extraores:blocks/aldouriteore"
-    }
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "extraores:block/aldouriteore"
+  }
 }

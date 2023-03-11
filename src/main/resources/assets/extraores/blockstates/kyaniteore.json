@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/kyaniteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/kyaniteore"
     }
+  }
 }

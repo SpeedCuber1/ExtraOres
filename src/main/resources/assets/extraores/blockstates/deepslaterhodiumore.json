@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslaterhodiumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslaterhodiumore"
     }
+  }
 }

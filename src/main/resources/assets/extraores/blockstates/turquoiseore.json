@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/turquoiseore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/turquoiseore"
     }
+  }
 }

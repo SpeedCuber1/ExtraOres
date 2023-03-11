@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/infuscoliumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/infuscoliumblock"
     }
+  }
 }

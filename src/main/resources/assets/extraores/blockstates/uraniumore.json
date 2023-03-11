@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/uraniumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/uraniumore"
     }
+  }
 }

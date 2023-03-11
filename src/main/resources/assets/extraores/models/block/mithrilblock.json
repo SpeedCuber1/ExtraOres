@@ -1,6 +1,6 @@
 {
-    "parent":"minecraft:block/cube_all",
-    "textures":{
-        "all":"extraores:blocks/mithrilblock"
-    }
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "extraores:block/mithrilblock"
+  }
 }

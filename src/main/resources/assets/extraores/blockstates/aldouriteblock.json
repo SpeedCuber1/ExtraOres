@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/aldouriteblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/aldouriteblock"
     }
+  }
 }

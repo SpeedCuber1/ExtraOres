@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "extraores:items/rawtantalum"
+    "layer0": "extraores:item/rawtantalum"
   }
 }

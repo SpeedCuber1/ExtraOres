@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/lemuriteblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/lemuriteblock"
     }
+  }
 }

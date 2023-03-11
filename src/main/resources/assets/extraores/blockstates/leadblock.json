@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/leadblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/leadblock"
     }
+  }
 }

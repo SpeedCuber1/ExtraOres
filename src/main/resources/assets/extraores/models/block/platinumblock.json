@@ -1,6 +1,6 @@
 {
-    "parent":"minecraft:block/cube_all",
-    "textures":{
-        "all":"extraores:blocks/platinumblock"
-    }
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "extraores:block/platinumblock"
+  }
 }

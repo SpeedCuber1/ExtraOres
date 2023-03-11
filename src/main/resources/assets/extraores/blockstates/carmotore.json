@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/carmotore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/carmotore"
     }
+  }
 }

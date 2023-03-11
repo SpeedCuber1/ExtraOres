@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/cobaltblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/cobaltblock"
     }
+  }
 }

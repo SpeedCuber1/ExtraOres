@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/nickelore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/nickelore"
     }
+  }
 }

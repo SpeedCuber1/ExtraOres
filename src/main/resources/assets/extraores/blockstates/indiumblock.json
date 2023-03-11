@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/indiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/indiumblock"
     }
+  }
 }

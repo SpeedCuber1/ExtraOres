@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/platinumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/platinumore"
     }
+  }
 }

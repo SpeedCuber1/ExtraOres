@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/tartariteblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/tartariteblock"
     }
+  }
 }

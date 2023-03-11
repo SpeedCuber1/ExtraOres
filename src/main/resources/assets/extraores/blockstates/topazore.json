@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/topazore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/topazore"
     }
+  }
 }

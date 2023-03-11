@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/neodymiumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/neodymiumore"
     }
+  }
 }

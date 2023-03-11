@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/peridotblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/peridotblock"
     }
+  }
 }

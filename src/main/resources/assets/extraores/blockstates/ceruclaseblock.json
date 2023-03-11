@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/ceruclaseblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/ceruclaseblock"
     }
+  }
 }

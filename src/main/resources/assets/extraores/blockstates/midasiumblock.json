@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/midasiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/midasiumblock"
     }
+  }
 }

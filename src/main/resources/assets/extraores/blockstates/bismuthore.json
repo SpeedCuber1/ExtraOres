@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/bismuthore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/bismuthore"
     }
+  }
 }

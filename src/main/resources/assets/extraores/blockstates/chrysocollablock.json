@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/chrysocollablock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/chrysocollablock"
     }
+  }
 }

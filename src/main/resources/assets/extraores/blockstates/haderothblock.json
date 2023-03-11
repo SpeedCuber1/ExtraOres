@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/haderothblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/haderothblock"
     }
+  }
 }

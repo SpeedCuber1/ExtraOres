@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/amethystblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/amethystblock"
     }
+  }
 }

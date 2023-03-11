@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/sanguiniteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/sanguiniteore"
     }
+  }
 }

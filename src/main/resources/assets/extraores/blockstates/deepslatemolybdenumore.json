@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatemolybdenumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatemolybdenumore"
     }
+  }
 }

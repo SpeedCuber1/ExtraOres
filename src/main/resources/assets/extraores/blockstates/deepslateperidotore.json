@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslateperidotore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslateperidotore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/astralsilverblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/astralsilverblock"
     }
+  }
 }

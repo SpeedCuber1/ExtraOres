@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/garnetblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/garnetblock"
     }
+  }
 }

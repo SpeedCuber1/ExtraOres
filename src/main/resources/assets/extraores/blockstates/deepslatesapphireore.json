@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatesapphireore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatesapphireore"
     }
+  }
 }

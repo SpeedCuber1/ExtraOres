@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/neptuniumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/neptuniumblock"
     }
+  }
 }

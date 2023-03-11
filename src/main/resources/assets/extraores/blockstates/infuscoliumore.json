@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/infuscoliumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/infuscoliumore"
     }
+  }
 }

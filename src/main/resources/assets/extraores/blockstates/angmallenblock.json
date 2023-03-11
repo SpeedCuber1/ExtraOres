@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/angmallenblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/angmallenblock"
     }
+  }
 }

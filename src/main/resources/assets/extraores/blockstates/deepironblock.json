@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepironblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepironblock"
     }
+  }
 }

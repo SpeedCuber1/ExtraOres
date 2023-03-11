@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/onyxore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/onyxore"
     }
+  }
 }

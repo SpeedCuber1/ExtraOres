@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatetungstenore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatetungstenore"
     }
+  }
 }

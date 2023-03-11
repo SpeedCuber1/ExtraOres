@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/promethiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/promethiumblock"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatecitrineore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatecitrineore"
     }
+  }
 }

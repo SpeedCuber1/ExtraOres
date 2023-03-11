@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/phoenixiteblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/phoenixiteblock"
     }
+  }
 }

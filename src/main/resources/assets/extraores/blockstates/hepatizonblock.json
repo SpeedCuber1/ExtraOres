@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/hepatizonblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/hepatizonblock"
     }
+  }
 }

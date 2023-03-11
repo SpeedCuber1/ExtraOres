@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/galliumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/galliumore"
     }
+  }
 }

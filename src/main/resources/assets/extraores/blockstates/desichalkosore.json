@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/desichalkosore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/desichalkosore"
     }
+  }
 }

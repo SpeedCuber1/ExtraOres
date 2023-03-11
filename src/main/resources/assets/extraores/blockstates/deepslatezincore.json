@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatezincore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatezincore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatealuminumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatealuminumore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/cadmiumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/cadmiumore"
     }
+  }
 }

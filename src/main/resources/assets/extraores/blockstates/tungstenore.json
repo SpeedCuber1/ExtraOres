@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/tungstenore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/tungstenore"
     }
+  }
 }

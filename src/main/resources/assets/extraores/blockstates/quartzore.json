@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/quartzore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/quartzore"
     }
+  }
 }

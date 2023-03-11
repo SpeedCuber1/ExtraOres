@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/thalliumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/thalliumore"
     }
+  }
 }

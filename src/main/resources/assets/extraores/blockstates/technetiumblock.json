@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/technetiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/technetiumblock"
     }
+  }
 }

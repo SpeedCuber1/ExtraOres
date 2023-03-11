@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/poloniumore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/poloniumore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/rubyore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/rubyore"
     }
+  }
 }

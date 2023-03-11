@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/deepslatetanzaniteore"}
+  "variants": {
+    "": {
+      "model": "extraores:block/deepslatetanzaniteore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/unobtainiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/unobtainiumblock"
     }
+  }
 }

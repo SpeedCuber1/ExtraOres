@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/americiumblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/americiumblock"
     }
+  }
 }

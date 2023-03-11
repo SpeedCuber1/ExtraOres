@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/malachiteblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/malachiteblock"
     }
+  }
 }

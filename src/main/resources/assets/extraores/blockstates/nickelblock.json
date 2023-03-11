@@ -1,5 +1,7 @@
 {
-    "variants":{
-        "":{"model":"extraores:block/nickelblock"}
+  "variants": {
+    "": {
+      "model": "extraores:block/nickelblock"
     }
+  }
 }
