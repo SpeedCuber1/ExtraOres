@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 20,
+  "experience": 0.75,
+  "ingredient": {
+    "tag": "forge:dusts/crimsonsteel"
+  },
+  "result": "extraores:crimsonsteelingot"
+}

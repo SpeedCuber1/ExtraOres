@@ -199,6 +199,13 @@ public class ExOreRecipe extends RecipeProvider
                 .define('i', ItemList.itemIngotCopper.get())
                 .unlockedBy("copperblock",has(BlockList.blockCopper.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(BlockList.blockCrimsonSteel.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemIngotCrimsonSteel.get())
+                .unlockedBy("crimsonsteelblock",has(BlockList.blockCrimsonSteel.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(BlockList.blockDeepIron.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -812,6 +819,10 @@ public class ExOreRecipe extends RecipeProvider
                 .requires(Ingredient.of(BlockList.blockCopper.get().asItem()))
                 .unlockedBy("copperingot",has(ItemList.itemIngotCopper.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(ItemList.itemIngotCrimsonSteel.get(),9)
+                .requires(Ingredient.of(BlockList.blockCrimsonSteel.get().asItem()))
+                .unlockedBy("crimsonsteelingot",has(ItemList.itemIngotCrimsonSteel.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(ItemList.itemIngotDeepIron.get(),9)
                 .requires(Ingredient.of(BlockList.blockDeepIron.get().asItem()))
                 .unlockedBy("deepironingot",has(ItemList.itemIngotDeepIron.get()))
@@ -1163,6 +1174,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCopper),ItemList.itemIngotCopper.get(),0.75F,40)
                 .unlockedBy("smeltcopperore",has(ItemList.itemIngotCopper.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltcopperore"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCrimsonSteel),ItemList.itemIngotCrimsonSteel.get(),0.75F,40)
+                .unlockedBy("smeltcrimsonsteelore",has(ItemList.itemIngotCrimsonSteel.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltcrimsonsteelore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreDeepIron),ItemList.itemIngotDeepIron.get(),0.75F,40)
                 .unlockedBy("smeltdeepironore",has(ItemList.itemIngotDeepIron.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltdeepironore"));
@@ -1380,6 +1394,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCopper),ItemList.itemIngotCopper.get(),0.75F,40)
                 .unlockedBy("smeltrawcopper",has(ItemList.itemIngotCopper.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltrawcopper"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCrimsonSteel),ItemList.itemIngotCrimsonSteel.get(),0.75F,40)
+                .unlockedBy("smeltrawcrimsonsteel",has(ItemList.itemIngotCrimsonSteel.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltrawcrimsonsteel"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawDeepIron),ItemList.itemIngotDeepIron.get(),0.75F,40)
                 .unlockedBy("smeltrawdeepiron",has(ItemList.itemIngotDeepIron.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltrawdeepiron"));
@@ -1597,6 +1614,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCopper),ItemList.itemIngotCopper.get(),0.75F,20)
                 .unlockedBy("smeltcopperdust",has(ItemList.itemIngotCopper.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltcopperdust"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCrimsonSteel),ItemList.itemIngotCrimsonSteel.get(),0.75F,20)
+                .unlockedBy("smeltcrimsonsteeldust",has(ItemList.itemIngotCrimsonSteel.get()))
+                .save(consumer,new ResourceLocation("extraores:smeltcrimsonsteeldust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustDeepIron),ItemList.itemIngotDeepIron.get(),0.75F,20)
                 .unlockedBy("smeltdeepirondust",has(ItemList.itemIngotDeepIron.get()))
                 .save(consumer,new ResourceLocation("extraores:smeltdeepirondust"));
@@ -1816,6 +1836,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCopper.get().asItem()),ItemList.itemIngotCopper.get(),0.75F,20)
                 .unlockedBy("blastcopperore",has(ItemList.itemIngotCopper.get()))
                 .save(consumer,new ResourceLocation("extraores:blastcopperore"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCrimsonSteel.get().asItem()),ItemList.itemIngotCrimsonSteel.get(),0.75F,20)
+                .unlockedBy("blastcrimsonsteelore",has(ItemList.itemIngotCrimsonSteel.get()))
+                .save(consumer,new ResourceLocation("extraores:blastcrimsonsteelore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreDeepIron.get().asItem()),ItemList.itemIngotDeepIron.get(),0.75F,20)
                 .unlockedBy("blastdeepironore",has(ItemList.itemIngotDeepIron.get()))
                 .save(consumer,new ResourceLocation("extraores:blastdeepironore"));
@@ -2030,6 +2053,9 @@ public class ExOreRecipe extends RecipeProvider
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCopper.get()),ItemList.itemIngotCopper.get(),0.75F,10)
                 .unlockedBy("blastcopperdust",has(ItemList.itemIngotCopper.get()))
                 .save(consumer,new ResourceLocation("extraores:blastcopperdust"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCrimsonSteel.get()),ItemList.itemIngotCrimsonSteel.get(),0.75F,10)
+                .unlockedBy("blastcrimsonsteeldust",has(ItemList.itemIngotCrimsonSteel.get()))
+                .save(consumer,new ResourceLocation("extraores:blastcrimsonsteeldust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustDeepIron.get()),ItemList.itemIngotDeepIron.get(),0.75F,10)
                 .unlockedBy("blastdeepirondust",has(ItemList.itemIngotDeepIron.get()))
                 .save(consumer,new ResourceLocation("extraores:blastdeepirondust"));
@@ -2247,6 +2273,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardCopper.get(),4))
                 .addCriterion("injectcopperore",has(BlockList.blockOreCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:injectcopperore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardCrimsonSteel.get(),4))
+                .addCriterion("injectcrimsonsteelore",has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:injectcrimsonsteelore"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardDeepIron.get(),4))
                 .addCriterion("injectdeepironore",has(BlockList.blockOreDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:injectdeepironore"));
@@ -2461,6 +2490,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardCopper.get(),4))
                 .addCriterion("injectrawcopper",has(BlockList.blockOreCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:injectrawcopper"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardCrimsonSteel.get(),4))
+                .addCriterion("injectrawcrimsonsteel",has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:injectrawcrimsonsteel"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardDeepIron.get(),4))
                 .addCriterion("injectrawdeepiron",has(BlockList.blockOreDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:injectrawdeepiron"));
@@ -2681,6 +2713,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpCopper.get(),3))
                 .addCriterion("purifycopperore",has(BlockList.blockOreCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:purifycopperore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpCrimsonSteel.get(),3))
+                .addCriterion("purifycrimsonsteelore",has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:purifycrimsonsteelore"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpDeepIron.get(),3))
                 .addCriterion("purifydeepironore",has(BlockList.blockOreDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:purifydeepironore"));
@@ -2898,6 +2933,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpCopper.get(),3))
                 .addCriterion("purifyrawcopper",has(ItemList.itemRawCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyrawcopper"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpCrimsonSteel.get(),3))
+                .addCriterion("purifyrawcrimsonsteel",has(ItemList.itemRawCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:purifyrawcrimsonsteel"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpDeepIron.get(),3))
                 .addCriterion("purifyrawdeepiron",has(ItemList.itemRawDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:purifyrawdeepiron"));
@@ -3115,6 +3153,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpCopper.get()))
                 .addCriterion("purifycopper",has(ItemList.itemShardCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:purifycopper"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpCrimsonSteel.get()))
+                .addCriterion("purifycrimsonsteel",has(ItemList.itemShardCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:purifycrimsonsteel"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpDeepIron.get()))
                 .addCriterion("purifydeepiron",has(ItemList.itemShardDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:purifydeepiron"));
@@ -3334,6 +3375,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCopper),new ItemStack(ItemList.itemDirtyDustCopper.get()))
                 .addCriterion("crushcopper",has(ItemList.itemClumpCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:crushcopper"));
+        ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCrimsonSteel),new ItemStack(ItemList.itemDirtyDustCrimsonSteel.get()))
+                .addCriterion("crushcrimsonsteel",has(ItemList.itemClumpCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:crushcrimsonsteel"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpDeepIron),new ItemStack(ItemList.itemDirtyDustDeepIron.get()))
                 .addCriterion("crushdeepiron",has(ItemList.itemClumpDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:crushdeepiron"));
@@ -3554,6 +3598,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCopper),new ItemStack(ItemList.itemDustCopper.get(),2))
                 .addCriterion("enrichcopperore",has(BlockList.blockOreCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichcopperore"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCrimsonSteel),new ItemStack(ItemList.itemDustCrimsonSteel.get(),2))
+                .addCriterion("enrichcrimsonsteelore",has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichcrimsonsteelore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreDeepIron),new ItemStack(ItemList.itemDustDeepIron.get(),2))
                 .addCriterion("enrichdeepironore",has(BlockList.blockOreDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichdeepironore"));
@@ -3771,6 +3818,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCopper),new ItemStack(ItemList.itemDustCopper.get(),2))
                 .addCriterion("enrichrawcopper",has(ItemList.itemRawCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichrawcopper"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCrimsonSteel),new ItemStack(ItemList.itemDustCrimsonSteel.get(),2))
+                .addCriterion("enrichrawcrimsonsteel",has(ItemList.itemRawCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichrawcrimsonsteel"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawDeepIron),new ItemStack(ItemList.itemDustDeepIron.get(),2))
                 .addCriterion("enrichrawdeepiron",has(ItemList.itemRawDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichrawdeepiron"));
@@ -3988,6 +4038,9 @@ public class ExOreRecipe extends RecipeProvider
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCopper),new ItemStack(ItemList.itemDustCopper.get()))
                 .addCriterion("enrichcopperdirtydust",has(BlockList.blockOreCopper.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichcopperdirtydust"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCrimsonSteel),new ItemStack(ItemList.itemDustCrimsonSteel.get()))
+                .addCriterion("enrichcrimsonsteeldirtydust",has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer,new ResourceLocation("extraores:enrichcrimsonsteeldirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustDeepIron),new ItemStack(ItemList.itemDustDeepIron.get()))
                 .addCriterion("enrichdeepirondirtydust",has(BlockList.blockOreDeepIron.get()))
                 .build(consumer,new ResourceLocation("extraores:enrichdeepirondirtydust"));

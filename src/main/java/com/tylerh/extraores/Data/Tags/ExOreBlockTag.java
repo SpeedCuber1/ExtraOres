@@ -48,6 +48,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreCitrine).add(BlockList.blockOreCitrine.get());
         tag(BlockTagList.oreCobalt).add(BlockList.blockOreCobalt.get());
         tag(BlockTagList.oreCopper).add(BlockList.blockOreCopper.get());
+        tag(BlockTagList.oreCrimsonSteel).add(BlockList.blockOreCrimsonSteel.get());
         tag(BlockTagList.oreDeepIron).add(BlockList.blockOreDeepIron.get());
         tag(BlockTagList.oreDesichalkos).add(BlockList.blockOreDesichalkos.get());
         tag(BlockTagList.oreEximite).add(BlockList.blockOreEximite.get());
@@ -146,6 +147,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreCitrine).add(BlockList.blockDeepslateOreCitrine.get());
         tag(BlockTagList.oreCobalt).add(BlockList.blockDeepslateOreCobalt.get());
         tag(BlockTagList.oreCopper).add(BlockList.blockDeepslateOreCopper.get());
+        tag(BlockTagList.oreCrimsonSteel).add(BlockList.blockDeepslateOreCrimsonSteel.get());
         tag(BlockTagList.oreDeepIron).add(BlockList.blockDeepslateOreDeepIron.get());
         tag(BlockTagList.oreDesichalkos).add(BlockList.blockDeepslateOreDesichalkos.get());
         tag(BlockTagList.oreEximite).add(BlockList.blockDeepslateOreEximite.get());
@@ -236,6 +238,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.ORES).addTag(BlockTagList.oreCitrine);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreCobalt);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreCopper);
+        tag(BlockTagList.ORES).addTag(BlockTagList.oreCrimsonSteel);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreDeepIron);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreDesichalkos);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreEximite);
@@ -338,6 +341,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.blockCitrine).add(BlockList.blockCitrine.get());
         tag(BlockTagList.blockCobalt).add(BlockList.blockCobalt.get());
         tag(BlockTagList.blockCopper).add(BlockList.blockCopper.get());
+        tag(BlockTagList.blockCrimsonSteel).add(BlockList.blockCrimsonSteel.get());
         tag(BlockTagList.blockDeepIron).add(BlockList.blockDeepIron.get());
         tag(BlockTagList.blockDesichalkos).add(BlockList.blockDesichalkos.get());
         tag(BlockTagList.blockEximite).add(BlockList.blockEximite.get());
@@ -436,6 +440,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockCitrine);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockCobalt);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockCopper);
+        tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockCrimsonSteel);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockDeepIron);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockDesichalkos);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockEximite);
@@ -538,6 +543,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreCitrine.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreCobalt.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreCopper.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreCrimsonSteel.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreDeepIron.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreDesichalkos.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreEximite.get());
@@ -636,6 +642,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCitrine.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCobalt.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCopper.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreCrimsonSteel.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreDeepIron.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreDesichalkos.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreEximite.get());
@@ -727,6 +734,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockCitrine.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockCobalt.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockCopper.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockCrimsonSteel.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepIron.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDesichalkos.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEximite.get());
@@ -829,6 +837,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreCitrine.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreCobalt.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreCopper.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreCrimsonSteel.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreDeepIron.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreDesichalkos.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreEximite.get());
@@ -927,6 +936,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCitrine.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCobalt.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCopper.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreCrimsonSteel.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreDeepIron.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreDesichalkos.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreEximite.get());
@@ -1018,6 +1028,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockCitrine.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockCobalt.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockCopper.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockCrimsonSteel.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepIron.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDesichalkos.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEximite.get());

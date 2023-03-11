@@ -32,6 +32,7 @@ public class BlockTagList
     public static final TagKey<Block> oreCitrine = tag("ores/citrine");
     public static final TagKey<Block> oreCobalt = tag("ores/cobalt");
     public static final TagKey<Block> oreCopper = tag("ores/copper");
+    public static final TagKey<Block> oreCrimsonSteel = tag("ores/crimsonsteel");
     public static final TagKey<Block> oreDeepIron = tag("ores/deepiron");
     public static final TagKey<Block> oreDesichalkos = tag("ores/desichalkos");
     public static final TagKey<Block> oreEximite = tag("ores/eximite");
@@ -132,6 +133,7 @@ public class BlockTagList
     public static final TagKey<Block> blockCitrine = tag("storage_blocks/citrine");
     public static final TagKey<Block> blockCobalt = tag("storage_blocks/cobalt");
     public static final TagKey<Block> blockCopper = tag("storage_blocks/copper");
+    public static final TagKey<Block> blockCrimsonSteel = tag("storage_blocks/crimsonsteel");
     public static final TagKey<Block> blockDeepIron = tag("storage_blocks/deepiron");
     public static final TagKey<Block> blockDesichalkos = tag("storage_blocks/desichalkos");
     public static final TagKey<Block> blockEximite = tag("storage_blocks/eximite");

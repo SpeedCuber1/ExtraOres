@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawcrimsonsteel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawcrimsonsteel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:crimsonsteelingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawcrimsonsteel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawcrimsonsteel"
+    ]
+  }
+}

@@ -29,6 +29,7 @@ public class BlockList
     public static RegistryObject<Block> blockOreCitrine;
     public static RegistryObject<Block> blockOreCobalt;
     public static RegistryObject<Block> blockOreCopper;
+    public static RegistryObject<Block> blockOreCrimsonSteel;
     public static RegistryObject<Block> blockOreDeepIron;
     public static RegistryObject<Block> blockOreDesichalkos;
     public static RegistryObject<Block> blockOreEximite;
@@ -125,6 +126,7 @@ public class BlockList
     public static RegistryObject<Block> blockDeepslateOreCitrine;
     public static RegistryObject<Block> blockDeepslateOreCobalt;
     public static RegistryObject<Block> blockDeepslateOreCopper;
+    public static RegistryObject<Block> blockDeepslateOreCrimsonSteel;
     public static RegistryObject<Block> blockDeepslateOreDeepIron;
     public static RegistryObject<Block> blockDeepslateOreDesichalkos;
     public static RegistryObject<Block> blockDeepslateOreEximite;
@@ -215,6 +217,7 @@ public class BlockList
     public static RegistryObject<Block> blockCitrine;
     public static RegistryObject<Block> blockCobalt;
     public static RegistryObject<Block> blockCopper;
+    public static RegistryObject<Block> blockCrimsonSteel;
     public static RegistryObject<Block> blockDeepIron;
     public static RegistryObject<Block> blockDesichalkos;
     public static RegistryObject<Block> blockEximite;

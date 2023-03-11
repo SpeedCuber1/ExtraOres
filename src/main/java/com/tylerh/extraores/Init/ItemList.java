@@ -23,6 +23,7 @@ public class ItemList
     public static RegistryObject<Item> itemIngotChromium;
     public static RegistryObject<Item> itemIngotCobalt;
     public static RegistryObject<Item> itemIngotCopper;
+    public static RegistryObject<Item> itemIngotCrimsonSteel;
     public static RegistryObject<Item> itemIngotDeepIron;
     public static RegistryObject<Item> itemIngotDesichalkos;
     public static RegistryObject<Item> itemIngotEximite;
@@ -96,6 +97,7 @@ public class ItemList
     public static RegistryObject<Item> itemDustChromium;
     public static RegistryObject<Item> itemDustCobalt;
     public static RegistryObject<Item> itemDustCopper;
+    public static RegistryObject<Item> itemDustCrimsonSteel;
     public static RegistryObject<Item> itemDustDeepIron;
     public static RegistryObject<Item> itemDustDesichalkos;
     public static RegistryObject<Item> itemDustEximite;
@@ -169,6 +171,7 @@ public class ItemList
     public static RegistryObject<Item> itemShardChromium;
     public static RegistryObject<Item> itemShardCobalt;
     public static RegistryObject<Item> itemShardCopper;
+    public static RegistryObject<Item> itemShardCrimsonSteel;
     public static RegistryObject<Item> itemShardDeepIron;
     public static RegistryObject<Item> itemShardDesichalkos;
     public static RegistryObject<Item> itemShardEximite;
@@ -242,6 +245,7 @@ public class ItemList
     public static RegistryObject<Item> itemClumpChromium;
     public static RegistryObject<Item> itemClumpCobalt;
     public static RegistryObject<Item> itemClumpCopper;
+    public static RegistryObject<Item> itemClumpCrimsonSteel;
     public static RegistryObject<Item> itemClumpDeepIron;
     public static RegistryObject<Item> itemClumpDesichalkos;
     public static RegistryObject<Item> itemClumpEximite;
@@ -315,6 +319,7 @@ public class ItemList
     public static RegistryObject<Item> itemDirtyDustChromium;
     public static RegistryObject<Item> itemDirtyDustCobalt;
     public static RegistryObject<Item> itemDirtyDustCopper;
+    public static RegistryObject<Item> itemDirtyDustCrimsonSteel;
     public static RegistryObject<Item> itemDirtyDustDeepIron;
     public static RegistryObject<Item> itemDirtyDustDesichalkos;
     public static RegistryObject<Item> itemDirtyDustEximite;
@@ -388,6 +393,7 @@ public class ItemList
     public static RegistryObject<Item> itemRawChromium;
     public static RegistryObject<Item> itemRawCobalt;
     public static RegistryObject<Item> itemRawCopper;
+    public static RegistryObject<Item> itemRawCrimsonSteel;
     public static RegistryObject<Item> itemRawDeepIron;
     public static RegistryObject<Item> itemRawDesichalkos;
     public static RegistryObject<Item> itemRawEximite;

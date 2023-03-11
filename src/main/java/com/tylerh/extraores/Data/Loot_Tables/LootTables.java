@@ -37,6 +37,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreCitrine.get(),createFortune("citrineore",BlockList.blockOreCitrine.get(),ItemList.itemGemCitrine.get()));
         lootTables.put(BlockList.blockOreCobalt.get(),createFortune("cobaltore",BlockList.blockOreCobalt.get(),ItemList.itemRawCobalt.get()));
         lootTables.put(BlockList.blockOreCopper.get(),createFortune("copperore",BlockList.blockOreCopper.get(),ItemList.itemRawCopper.get()));
+        lootTables.put(BlockList.blockOreCrimsonSteel.get(),createFortune("crimsonsteelore",BlockList.blockOreCrimsonSteel.get(),ItemList.itemRawCrimsonSteel.get()));
         lootTables.put(BlockList.blockOreDeepIron.get(),createFortune("deepironore",BlockList.blockOreDeepIron.get(),ItemList.itemRawDeepIron.get()));
         lootTables.put(BlockList.blockOreDesichalkos.get(),createFortune("desichalkosore",BlockList.blockOreDesichalkos.get(),ItemList.itemRawDesichalkos.get()));
         lootTables.put(BlockList.blockOreEximite.get(),createFortune("eximiteore",BlockList.blockOreEximite.get(),ItemList.itemRawEximite.get()));
@@ -134,6 +135,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreCitrine.get(),createFortune("deepslatecitrineore",BlockList.blockDeepslateOreCitrine.get(),ItemList.itemGemCitrine.get()));
         lootTables.put(BlockList.blockDeepslateOreCobalt.get(),createFortune("deepslatecobaltore",BlockList.blockDeepslateOreCobalt.get(),ItemList.itemRawCobalt.get()));
         lootTables.put(BlockList.blockDeepslateOreCopper.get(),createFortune("deepslatecopperore",BlockList.blockDeepslateOreCopper.get(),ItemList.itemRawCopper.get()));
+        lootTables.put(BlockList.blockDeepslateOreCrimsonSteel.get(),createFortune("deepslatecrimsonsteelore",BlockList.blockDeepslateOreCrimsonSteel.get(),ItemList.itemRawCrimsonSteel.get()));
         lootTables.put(BlockList.blockDeepslateOreDeepIron.get(),createFortune("deepslatedeepironore",BlockList.blockDeepslateOreDeepIron.get(),ItemList.itemRawDeepIron.get()));
         lootTables.put(BlockList.blockDeepslateOreDesichalkos.get(),createFortune("deepslatedesichalkosore",BlockList.blockDeepslateOreDesichalkos.get(),ItemList.itemRawDesichalkos.get()));
         lootTables.put(BlockList.blockDeepslateOreEximite.get(),createFortune("deepslateeximiteore",BlockList.blockDeepslateOreEximite.get(),ItemList.itemRawEximite.get()));
@@ -222,6 +224,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockCitrine.get(),createStandardTable("citrineblock",BlockList.blockCitrine.get()));
         lootTables.put(BlockList.blockCobalt.get(),createStandardTable("cobaltblock",BlockList.blockCobalt.get()));
         lootTables.put(BlockList.blockCopper.get(),createStandardTable("copperblock",BlockList.blockCopper.get()));
+        lootTables.put(BlockList.blockCrimsonSteel.get(),createStandardTable("crimsonsteelblock",BlockList.blockCrimsonSteel.get()));
         lootTables.put(BlockList.blockDeepIron.get(),createStandardTable("deepironblock",BlockList.blockDeepIron.get()));
         lootTables.put(BlockList.blockDesichalkos.get(),createStandardTable("desichalkosblock",BlockList.blockDesichalkos.get()));
         lootTables.put(BlockList.blockEximite.get(),createStandardTable("eximiteblock",BlockList.blockEximite.get()));

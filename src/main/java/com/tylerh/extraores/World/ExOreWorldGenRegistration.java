@@ -413,6 +413,23 @@ public final class ExOreWorldGenRegistration
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "copperore"), feature);
             Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "copperore"), featureCopper);
         }
+        if(ConfigRegistryList.registerCrimsonSteel.get())
+        {
+            height = ModInfo.HEIGHT_NORMAL;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreCrimsonSteel.get().defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreCrimsonSteel.get().defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
+            var featureCrimsonSteel = new PlacedFeature(Holder.direct(feature), List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM, VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "crimsonsteelore"), feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "crimsonsteelore"), featureCrimsonSteel);
+        }
         if (ConfigRegistryList.registerDeepIron.get())
         {
             height = ModInfo.HEIGHT_RARE;

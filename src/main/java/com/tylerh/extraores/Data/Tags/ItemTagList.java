@@ -30,6 +30,7 @@ public class ItemTagList
     public static final TagKey<Item> oreCitrine = tag("forge","ores/citrine");
     public static final TagKey<Item> oreCobalt = tag("forge","ores/cobalt");
     public static final TagKey<Item> oreCopper = tag("forge","ores/copper");
+    public static final TagKey<Item> oreCrimsonSteel = tag("forge","ores/crimsonsteel");
     public static final TagKey<Item> oreDeepIron = tag("forge","ores/deepiron");
     public static final TagKey<Item> oreDesichalkos = tag("forge","ores/desichalkos");
     public static final TagKey<Item> oreEximite = tag("forge","ores/eximite");
@@ -130,6 +131,7 @@ public class ItemTagList
     public static final TagKey<Item> blockCitrine = tag("forge","storage_blocks/citrine");
     public static final TagKey<Item> blockCobalt = tag("forge","storage_blocks/cobalt");
     public static final TagKey<Item> blockCopper = tag("forge","storage_blocks/copper");
+    public static final TagKey<Item> blockCrimsonSteel = tag("forge","storage_blocks/crimsonsteel");
     public static final TagKey<Item> blockDeepIron = tag("forge","storage_blocks/deepiron");
     public static final TagKey<Item> blockDesichalkos = tag("forge","storage_blocks/desichalkos");
     public static final TagKey<Item> blockEximite = tag("forge","storage_blocks/eximite");
@@ -224,6 +226,7 @@ public class ItemTagList
     public static final TagKey<Item> ingotChromium = tag("forge","ingots/chromium");
     public static final TagKey<Item> ingotCobalt = tag("forge","ingots/cobalt");
     public static final TagKey<Item> ingotCopper = tag("forge","ingots/copper");
+    public static final TagKey<Item> ingotCrimsonSteel = tag("forge","ingots/crimsonsteel");
     public static final TagKey<Item> ingotDeepIron = tag("forge","ingots/deepiron");
     public static final TagKey<Item> ingotDesichalkos = tag("forge","ingots/desichalkos");
     public static final TagKey<Item> ingotEximite = tag("forge","ingots/eximite");
@@ -299,6 +302,7 @@ public class ItemTagList
     public static final TagKey<Item> rawChromium = tag("forge","raw_materials/chromium");
     public static final TagKey<Item> rawCobalt = tag("forge","raw_materials/cobalt");
     public static final TagKey<Item> rawCopper = tag("forge","raw_materials/copper");
+    public static final TagKey<Item> rawCrimsonSteel = tag("forge","raw_materials/crimsonsteel");
     public static final TagKey<Item> rawDeepIron = tag("forge","raw_materials/deepiron");
     public static final TagKey<Item> rawDesichalkos = tag("forge","raw_materials/desichalkos");
     public static final TagKey<Item> rawEximite = tag("forge","raw_materials/eximite");
@@ -374,6 +378,7 @@ public class ItemTagList
     public static final TagKey<Item> dustChromium = tag("forge","dusts/chromium");
     public static final TagKey<Item> dustCobalt = tag("forge","dusts/cobalt");
     public static final TagKey<Item> dustCopper = tag("forge","dusts/copper");
+    public static final TagKey<Item> dustCrimsonSteel = tag("forge","dusts/crimsonsteel");
     public static final TagKey<Item> dustDeepIron = tag("forge","dusts/deepiron");
     public static final TagKey<Item> dustDesichalkos = tag("forge","dusts/desichalkos");
     public static final TagKey<Item> dustEximite = tag("forge","dusts/eximite");
@@ -448,6 +453,7 @@ public class ItemTagList
     public static final TagKey<Item> dirtyDustChromium = tag("mekanism","dirty_dusts/chromium");
     public static final TagKey<Item> dirtyDustCobalt = tag("mekanism","dirty_dusts/cobalt");
     public static final TagKey<Item> dirtyDustCopper = tag("mekanism","dirty_dusts/copper");
+    public static final TagKey<Item> dirtyDustCrimsonSteel = tag("mekanism","dirty_dusts/crimsonsteel");
     public static final TagKey<Item> dirtyDustDeepIron = tag("mekanism","dirty_dusts/deepiron");
     public static final TagKey<Item> dirtyDustDesichalkos = tag("mekanism","dirty_dusts/desichalkos");
     public static final TagKey<Item> dirtyDustEximite = tag("mekanism","dirty_dusts/eximite");
@@ -522,6 +528,7 @@ public class ItemTagList
     public static final TagKey<Item> shardChromium = tag("mekanism","shards/chromium");
     public static final TagKey<Item> shardCobalt = tag("mekanism","shards/cobalt");
     public static final TagKey<Item> shardCopper = tag("mekanism","shards/copper");
+    public static final TagKey<Item> shardCrimsonSteel = tag("mekanism","shards/crimsonsteel");
     public static final TagKey<Item> shardDeepIron = tag("mekanism","shards/deepiron");
     public static final TagKey<Item> shardDesichalkos = tag("mekanism","shards/desichalkos");
     public static final TagKey<Item> shardEximite = tag("mekanism","shards/eximite");
@@ -596,6 +603,7 @@ public class ItemTagList
     public static final TagKey<Item> clumpChromium = tag("mekanism","clumps/chromium");
     public static final TagKey<Item> clumpCobalt = tag("mekanism","clumps/cobalt");
     public static final TagKey<Item> clumpCopper = tag("mekanism","clumps/copper");
+    public static final TagKey<Item> clumpCrimsonSteel = tag("mekanism","clumps/crimsonsteel");
     public static final TagKey<Item> clumpDeepIron = tag("mekanism","clumps/deepiron");
     public static final TagKey<Item> clumpDesichalkos = tag("mekanism","clumps/desichalkos");
     public static final TagKey<Item> clumpEximite = tag("mekanism","clumps/eximite");

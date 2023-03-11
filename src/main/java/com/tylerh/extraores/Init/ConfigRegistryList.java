@@ -28,6 +28,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerCitrine;
     public static ForgeConfigSpec.BooleanValue registerCobalt;
     public static ForgeConfigSpec.BooleanValue registerCopper;
+    public static ForgeConfigSpec.BooleanValue registerCrimsonSteel;
     public static ForgeConfigSpec.BooleanValue registerDeepIron;
     public static ForgeConfigSpec.BooleanValue registerDesichalkos;
     public static ForgeConfigSpec.BooleanValue registerEximite;
@@ -128,6 +129,7 @@ public class ConfigRegistryList
         registerCitrine = builder.comment("Enable/Disable Citrine").define("Citrine",ModInfo.GUI_DEFAULT_VALUE);
         registerCobalt = builder.comment("Enable/Disable Cobalt").define("Cobalt", ModInfo.GUI_DEFAULT_VALUE);
         registerCopper = builder.comment("Enable/Disable Copper").define("Copper", ModInfo.GUI_DEFAULT_VALUE);
+        registerCrimsonSteel = builder.comment("Enable/Disable").define("Crimson Steel",ModInfo.GUI_DEFAULT_VALUE);
         registerDeepIron = builder.comment("Enable/Disable Deep Iron").define("Deep Iron", ModInfo.GUI_DEFAULT_VALUE);
         registerDesichalkos = builder.comment("Enable/Disable Desichalkos").define("Desichalkos",ModInfo.GUI_DEFAULT_VALUE);
         registerEximite = builder.comment("Enable/Disable Eximite").define("Eximite",ModInfo.GUI_DEFAULT_VALUE);

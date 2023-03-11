@@ -168,6 +168,12 @@ public class InitBlocks
             BlockList.blockCopper = register("copperblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
             BlockList.blockDeepslateOreCopper = register("deepslatecopperore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F,SoundType.DEEPSLATE));
         }
+        if(ConfigRegistryList.registerCrimsonSteel.get())
+        {
+            BlockList.blockOreCrimsonSteel = register("crimsonsteelore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockCrimsonSteel = register("crimsonsteelblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreCrimsonSteel = register("deepslatecrimsonsteelore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F,SoundType.DEEPSLATE));
+        }
         if (ConfigRegistryList.registerDeepIron.get())
         {
             BlockList.blockOreDeepIron = register("deepironore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
@@ -785,6 +791,15 @@ public class InitBlocks
             ItemList.itemClumpCopper = ITEMS.register("copperclump", () -> new ItemEXOre(EXORES));
             ItemList.itemDirtyDustCopper = ITEMS.register("copperdirtydust", () -> new ItemEXOre(EXORES));
             ItemList.itemRawCopper = ITEMS.register("rawcopper", () -> new ItemEXOre(EXORES));
+        }
+        if(ConfigRegistryList.registerCrimsonSteel.get())
+        {
+            ItemList.itemIngotCrimsonSteel = ITEMS.register("crimsonsteelingot", () -> new ItemEXOre(EXORES));
+            ItemList.itemDustCrimsonSteel = ITEMS.register("crimsonsteeldust", () -> new ItemEXOre(EXORES));
+            ItemList.itemShardCrimsonSteel = ITEMS.register("crimsonsteelshard", () -> new ItemEXOre(EXORES));
+            ItemList.itemClumpCrimsonSteel = ITEMS.register("crimsonsteelclump", () -> new ItemEXOre(EXORES));
+            ItemList.itemDirtyDustCrimsonSteel = ITEMS.register("crimsonsteeldirtydust", () -> new ItemEXOre(EXORES));
+            ItemList.itemRawCrimsonSteel = ITEMS.register("rawcrimsonsteel", () -> new ItemEXOre(EXORES));
         }
         if (ConfigRegistryList.registerDeepIron.get())
         {

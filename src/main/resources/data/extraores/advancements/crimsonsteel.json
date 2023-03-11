@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:celenegil",
+  "criteria": {
+    "crimsonsteel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcrimsonsteel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Crimson Steel Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:crimsonsteelore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Roll Out the Crimson Tide"
+    }
+  },
+  "requirements": [
+    [
+      "crimsonsteel"
+    ]
+  ]
+}
