@@ -50,7 +50,9 @@ public class ExOreConfiguredFeature
         if(ConfigRegistryList.registerAldourite.get())
         {
             ConfiguredFeatureList.featureAldourite = registerKey("aldouriteore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreAldourite.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreAldourite.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureAldourite,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerAluminum.get())
@@ -182,7 +184,9 @@ public class ExOreConfiguredFeature
         if(ConfigRegistryList.registerCeruclase.get())
         {
             ConfiguredFeatureList.featureCeruclase = registerKey("ceruclaseore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreCeruclase.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreCeruclase.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureCeruclase,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerChromium.get())
@@ -305,7 +309,9 @@ public class ExOreConfiguredFeature
         if(ConfigRegistryList.registerIgnatius.get())
         {
             ConfiguredFeatureList.featureIgnatius = registerKey("ignatiusore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreIgnatius.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreIgnatius.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureIgnatius,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerIndium.get())
@@ -374,7 +380,9 @@ public class ExOreConfiguredFeature
         if(ConfigRegistryList.registerKalendrite.get())
         {
             ConfiguredFeatureList.featureKalendrite = registerKey("kalendriteore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreKalendrite.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreKalendrite.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureKalendrite,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerKyanite.get())
@@ -398,7 +406,9 @@ public class ExOreConfiguredFeature
         if(ConfigRegistryList.registerLemurite.get())
         {
             ConfiguredFeatureList.featureLemurite = registerKey("lemuriteore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreLemurite.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreLemurite.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureLemurite,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerMalachite.get())
@@ -431,7 +441,9 @@ public class ExOreConfiguredFeature
         if(ConfigRegistryList.registerMidasium.get())
         {
             ConfiguredFeatureList.featureMidasium = registerKey("midasiumore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreMidasium.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreMidasium.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureMidasium,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerMithril.get())
@@ -653,7 +665,9 @@ public class ExOreConfiguredFeature
         if(ConfigRegistryList.registerSanguinite.get())
         {
             ConfiguredFeatureList.featureSanguinite = registerKey("sanguiniteore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreSanguinite.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreSanguinite.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureSanguinite,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerSapphire.get())
@@ -669,8 +683,7 @@ public class ExOreConfiguredFeature
         {
             ConfiguredFeatureList.featureShadowIron = registerKey("shadowironore");
             target = List.of(
-                    OreConfiguration.target(stoneReplaceables, BlockList.blockOreShadowIron.get().defaultBlockState()),
-                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreShadowIron.get().defaultBlockState())
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreShadowIron.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureShadowIron,Feature.ORE,new OreConfiguration(target,size));
         }
@@ -848,13 +861,17 @@ public class ExOreConfiguredFeature
         if(ConfigRegistryList.registerVulcanite.get())
         {
             ConfiguredFeatureList.featureVulcanite = registerKey("vulcaniteore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreVulcanite.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreVulcanite.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureVulcanite,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerVyroxeres.get())
         {
             ConfiguredFeatureList.featureVyroxeres = registerKey("vyroxeresore");
-            target = OreConfiguration.target(netherReplaceables,BlockList.blockOreVyroxeres.get().defaultBlockState());
+            target = List.of(
+                    OreConfiguration.target(netherReplaceables,BlockList.blockOreVyroxeres.get().defaultBlockState())
+            );
             register(context,ConfiguredFeatureList.featureVyroxeres,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerYellorite.get())
