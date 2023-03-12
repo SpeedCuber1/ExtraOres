@@ -153,7 +153,7 @@ public class ExOreAdvancementGenerator implements DataProvider
     }
     private static Path createPath(Path basePath,Advancement advancement)
     {
-        return basePath.resolve("data/" + advancement.getId() + "advancements/" + advancement.getId().getPath() + ".json");
+        return basePath.resolve("data/" + advancement.getId().getNamespace() + "/advancements/" + advancement.getId().getPath() + ".json");
     }
     @Override
     public String getName()

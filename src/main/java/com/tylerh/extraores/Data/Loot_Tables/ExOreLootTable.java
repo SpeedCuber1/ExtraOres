@@ -315,7 +315,7 @@ public class ExOreLootTable extends BlockLootSubProvider
     }
     private void createFortune(RegistryObject<Block> blockRegistryObject,RegistryObject<Item> itemRegistryObject)
     {
-        createOreDrop(blockRegistryObject.get(),itemRegistryObject.get());
+        add(blockRegistryObject.get(),(block) -> createOreDrop(blockRegistryObject.get(),itemRegistryObject.get()));
     }
     @Override
     protected Iterable<Block> getKnownBlocks()

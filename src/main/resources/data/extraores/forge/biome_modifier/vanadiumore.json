@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#is_overworld",
-  "features": "extraores:vanadiumore",
-  "step": "underground_ores"
-}

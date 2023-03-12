@@ -3,13 +3,17 @@
   "pools": [
     {
       "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
           "name": "extraores:silverblock"
         }
       ],
-      "name": "silverblock",
       "rolls": 1.0
     }
   ]

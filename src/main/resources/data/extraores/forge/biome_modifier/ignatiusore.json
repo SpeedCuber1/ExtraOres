@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#is_nether",
-  "features": "extraores:ignatiusore",
-  "step": "underground_ores"
-}

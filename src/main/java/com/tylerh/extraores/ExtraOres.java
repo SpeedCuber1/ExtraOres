@@ -6,9 +6,6 @@ import com.tylerh.extraores.Init.ItemList;
 import com.tylerh.extraores.Util.ConfigHandler;
 import com.tylerh.extraores.Util.ExOreCreativeTab;
 import com.tylerh.extraores.Util.ModInfo;
-import com.tylerh.extraores.World.ExOreWorldGenRegistration;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,7 +16,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.registries.RegistryObject;
 
 @Mod(ModInfo.MOD_ID)
 public class ExtraOres
@@ -41,7 +37,7 @@ public class ExtraOres
     @SubscribeEvent
     public void setup(FMLCommonSetupEvent event)
     {
-        event.enqueueWork(ExOreWorldGenRegistration::onCommonSetup);
+
     }
     private void clientRegistries(FMLClientSetupEvent event)
     {
