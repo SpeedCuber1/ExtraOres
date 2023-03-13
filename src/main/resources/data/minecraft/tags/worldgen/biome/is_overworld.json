@@ -1,5 +1,8 @@
 {
   "values": [
-    "jamd:mining"
+    {
+      "id": "jamd:mining",
+      "required": false
+    }
   ]
 }
