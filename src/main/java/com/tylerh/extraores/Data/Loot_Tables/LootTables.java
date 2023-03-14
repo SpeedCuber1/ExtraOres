@@ -26,6 +26,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockOreAquamarine.get(),createFortune("aquamarineore",BlockList.blockOreAquamarine.get(),ItemList.itemGemAquamarine.get()));
         lootTables.put(BlockList.blockOreAstralSilver.get(),createFortune("astralsilverore",BlockList.blockOreAstralSilver.get(),ItemList.itemRawAstralSilver.get()));
         lootTables.put(BlockList.blockOreAtlarus.get(),createFortune("atlarusore",BlockList.blockOreAtlarus.get(),ItemList.itemRawAtlarus.get()));
+        lootTables.put(BlockList.blockOreAzureSilver.get(),createFortune("azuresilverore",BlockList.blockOreAzureSilver.get(),ItemList.itemRawAzureSilver.get()));
         lootTables.put(BlockList.blockOreBismuth.get(),createFortune("bismuthore",BlockList.blockOreBismuth.get(),ItemList.itemRawBismuth.get()));
         lootTables.put(BlockList.blockOreBlackSteel.get(),createFortune("blacksteelore",BlockList.blockOreBlackSteel.get(),ItemList.itemRawBlackSteel.get()));
         lootTables.put(BlockList.blockOreCadmium.get(),createFortune("cadmiumore",BlockList.blockOreCadmium.get(),ItemList.itemRawCadmium.get()));
@@ -125,6 +126,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreAquamarine.get(),createFortune("deepslateaquamarineore",BlockList.blockDeepslateOreAquamarine.get(),ItemList.itemGemAquamarine.get()));
         lootTables.put(BlockList.blockDeepslateOreAstralSilver.get(),createFortune("deepslateastralsilverore",BlockList.blockDeepslateOreAstralSilver.get(),ItemList.itemRawAstralSilver.get()));
         lootTables.put(BlockList.blockDeepslateOreAtlarus.get(),createFortune("deepslateatlarusore",BlockList.blockDeepslateOreAtlarus.get(),ItemList.itemRawAtlarus.get()));
+        lootTables.put(BlockList.blockDeepslateOreAzureSilver.get(),createFortune("deepslateazuresilverore",BlockList.blockDeepslateOreAzureSilver.get(),ItemList.itemRawAzureSilver.get()));
         lootTables.put(BlockList.blockDeepslateOreBismuth.get(),createFortune("deepslatebismuthore",BlockList.blockDeepslateOreBismuth.get(),ItemList.itemRawBismuth.get()));
         lootTables.put(BlockList.blockDeepslateOreBlackSteel.get(),createFortune("deepslateblacksteelore",BlockList.blockDeepslateOreBlackSteel.get(),ItemList.itemRawBlackSteel.get()));
         lootTables.put(BlockList.blockDeepslateOreCadmium.get(),createFortune("deepslatecadmiumore",BlockList.blockDeepslateOreCadmium.get(),ItemList.itemRawCadmium.get()));
@@ -213,6 +215,7 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockAquamarine.get(),createStandardTable("aquamarineblock",BlockList.blockAquamarine.get()));
         lootTables.put(BlockList.blockAstralSilver.get(),createStandardTable("astralsilverblock",BlockList.blockAstralSilver.get()));
         lootTables.put(BlockList.blockAtlarus.get(),createStandardTable("atlarusblock",BlockList.blockAtlarus.get()));
+        lootTables.put(BlockList.blockAzureSilver.get(),createStandardTable("azuresilverblock",BlockList.blockAzureSilver.get()));
         lootTables.put(BlockList.blockBismuth.get(),createStandardTable("bismuthblock",BlockList.blockBismuth.get()));
         lootTables.put(BlockList.blockBlackSteel.get(),createStandardTable("blacksteelblock",BlockList.blockBlackSteel.get()));
         lootTables.put(BlockList.blockCadmium.get(),createStandardTable("cadmiumblock",BlockList.blockCadmium.get()));

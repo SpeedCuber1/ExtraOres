@@ -27,6 +27,7 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemIngotAngmallen);
         simpleItem(ItemList.itemIngotAstralSilver);
         simpleItem(ItemList.itemIngotAtlarus);
+        simpleItem(ItemList.itemIngotAzureSilver);
         simpleItem(ItemList.itemIngotBismuth);
         simpleItem(ItemList.itemIngotBlackSteel);
         simpleItem(ItemList.itemIngotCadmium);
@@ -101,6 +102,7 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemDustAngmallen);
         simpleItem(ItemList.itemDustAstralSilver);
         simpleItem(ItemList.itemDustAtlarus);
+        simpleItem(ItemList.itemDustAzureSilver);
         simpleItem(ItemList.itemDustBismuth);
         simpleItem(ItemList.itemDustBlackSteel);
         simpleItem(ItemList.itemDustCadmium);
@@ -175,6 +177,7 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemShardAngmallen);
         simpleItem(ItemList.itemShardAstralSilver);
         simpleItem(ItemList.itemShardAtlarus);
+        simpleItem(ItemList.itemShardAzureSilver);
         simpleItem(ItemList.itemShardBismuth);
         simpleItem(ItemList.itemShardBlackSteel);
         simpleItem(ItemList.itemShardCadmium);
@@ -249,6 +252,7 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemClumpAngmallen);
         simpleItem(ItemList.itemClumpAstralSilver);
         simpleItem(ItemList.itemClumpAtlarus);
+        simpleItem(ItemList.itemClumpAzureSilver);
         simpleItem(ItemList.itemClumpBismuth);
         simpleItem(ItemList.itemClumpBlackSteel);
         simpleItem(ItemList.itemClumpCadmium);
@@ -323,6 +327,7 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemDirtyDustAngmallen);
         simpleItem(ItemList.itemDirtyDustAstralSilver);
         simpleItem(ItemList.itemDirtyDustAtlarus);
+        simpleItem(ItemList.itemDirtyDustAzureSilver);
         simpleItem(ItemList.itemDirtyDustBismuth);
         simpleItem(ItemList.itemDirtyDustBlackSteel);
         simpleItem(ItemList.itemDirtyDustCadmium);
@@ -397,6 +402,7 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemRawAngmallen);
         simpleItem(ItemList.itemRawAstralSilver);
         simpleItem(ItemList.itemRawAtlarus);
+        simpleItem(ItemList.itemRawAzureSilver);
         simpleItem(ItemList.itemRawBismuth);
         simpleItem(ItemList.itemRawBlackSteel);
         simpleItem(ItemList.itemRawCadmium);

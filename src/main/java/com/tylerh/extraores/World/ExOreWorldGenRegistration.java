@@ -227,6 +227,23 @@ public final class ExOreWorldGenRegistration
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "atlarusore"), feature);
             Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "atlarusore"), featureAtlarus);
         }
+        if(ConfigRegistryList.registerAzureSilver.get())
+        {
+            height = ModInfo.HEIGHT_RARE;
+            target = List.of(
+                    OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockList.blockOreAzureSilver.get().defaultBlockState()),
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockList.blockDeepslateOreAzureSilver.get().defaultBlockState())
+            );
+            feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(target, size));
+            var featureAzureSilver = new PlacedFeature(Holder.direct(feature), List.of(
+                    CountPlacement.of(rate),
+                    InSquarePlacement.spread(),
+                    HeightRangePlacement.uniform(VerticalAnchor.BOTTOM, VerticalAnchor.aboveBottom(height)),
+                    BiomeFilter.biome()
+            ));
+            Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "azuresilverore"), feature);
+            Registry.register(BuiltinRegistries.PLACED_FEATURE, new ResourceLocation(ModInfo.MOD_ID, "azuresilverore"), featureAzureSilver);
+        }
         if (ConfigRegistryList.registerBismuth.get())
         {
             height = ModInfo.HEIGHT_NORMAL;

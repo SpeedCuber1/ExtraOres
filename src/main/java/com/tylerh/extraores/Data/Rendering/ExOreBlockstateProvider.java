@@ -31,6 +31,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockOreAquamarine);
         blockWithItem(BlockList.blockOreAstralSilver);
         blockWithItem(BlockList.blockOreAtlarus);
+        blockWithItem(BlockList.blockOreAzureSilver);
         blockWithItem(BlockList.blockOreBismuth);
         blockWithItem(BlockList.blockOreBlackSteel);
         blockWithItem(BlockList.blockOreCadmium);
@@ -129,6 +130,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockDeepslateOreAquamarine);
         blockWithItem(BlockList.blockDeepslateOreAstralSilver);
         blockWithItem(BlockList.blockDeepslateOreAtlarus);
+        blockWithItem(BlockList.blockDeepslateOreAzureSilver);
         blockWithItem(BlockList.blockDeepslateOreBismuth);
         blockWithItem(BlockList.blockDeepslateOreBlackSteel);
         blockWithItem(BlockList.blockDeepslateOreCadmium);
@@ -219,6 +221,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockAquamarine);
         blockWithItem(BlockList.blockAstralSilver);
         blockWithItem(BlockList.blockAtlarus);
+        blockWithItem(BlockList.blockAzureSilver);
         blockWithItem(BlockList.blockBismuth);
         blockWithItem(BlockList.blockBlackSteel);
         blockWithItem(BlockList.blockCadmium);

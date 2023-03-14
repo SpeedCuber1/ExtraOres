@@ -23,7 +23,7 @@ public class ItemEXOre extends Item
     {
         for (int i = 0; i < ModInfo.blockNames.length; i++)
         {
-            if(stack.getDisplayName().getString().contains(ModInfo.blockNames[i]) && !stack.getDisplayName().getString().contains("Astral"))
+            if(stack.getDisplayName().getString().contains(ModInfo.blockNames[i]) && !stack.getDisplayName().getString().contains("Astral") && !stack.getDisplayName().getString().contains("Azure"))
             {
                 list.add(Component.translatable("Atomic Symbol: " + ModInfo.symbols[i]));
                 break;
