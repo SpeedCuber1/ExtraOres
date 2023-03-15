@@ -122,6 +122,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .define('i', ItemList.itemIngotAtlarus.get())
                 .unlockedBy("atlarusblock", has(BlockList.blockAtlarus.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockAzureSilver.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemIngotAzureSilver.get())
+                .unlockedBy("azuresilverblock", has(BlockList.blockAzureSilver.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockBismuth.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -776,6 +783,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .requires(Ingredient.of(BlockList.blockAtlarus.get().asItem()))
                 .unlockedBy("atlarusingot", has(ItemList.itemIngotAtlarus.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 9)
+                .requires(Ingredient.of(BlockList.blockAzureSilver.get().asItem()))
+                .unlockedBy("azuresilveringot", has(ItemList.itemIngotAzureSilver.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 9)
                 .requires(Ingredient.of(BlockList.blockBismuth.get().asItem()))
                 .unlockedBy("bismuthingot", has(ItemList.itemIngotBismuth.get()))
@@ -1149,6 +1160,9 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAtlarus), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 40)
                 .unlockedBy("smeltatlarusore", has(ItemList.itemIngotAtlarus.get()))
                 .save(consumer, new ResourceLocation("extraores:smeltatlarusore"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAzureSilver), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 40)
+                .unlockedBy("smeltazuresilverore", has(ItemList.itemIngotAzureSilver.get()))
+                .save(consumer, new ResourceLocation("extraores:smeltazuresilverore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreBismuth), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 40)
                 .unlockedBy("smeltbismuthore", has(ItemList.itemIngotBismuth.get()))
                 .save(consumer, new ResourceLocation("extraores:smeltbismuthore"));
@@ -1369,6 +1383,9 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAtlarus), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 40)
                 .unlockedBy("smeltrawatlarus", has(ItemList.itemIngotAtlarus.get()))
                 .save(consumer, new ResourceLocation("extraores:smeltrawatlarus"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAzureSilver), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 40)
+                .unlockedBy("smeltrawazuresilver", has(ItemList.itemIngotAzureSilver.get()))
+                .save(consumer, new ResourceLocation("extraores:smeltrawazuresilver"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawBismuth), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 40)
                 .unlockedBy("smeltrawbismuth", has(ItemList.itemIngotBismuth.get()))
                 .save(consumer, new ResourceLocation("extraores:smeltrawbismuth"));
@@ -1589,6 +1606,9 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAtlarus), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 20)
                 .unlockedBy("smeltatlarusdust", has(ItemList.itemIngotAtlarus.get()))
                 .save(consumer, new ResourceLocation("extraores:smeltatlarusdust"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAzureSilver), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 20)
+                .unlockedBy("smeltazuresilverdust", has(ItemList.itemIngotAzureSilver.get()))
+                .save(consumer, new ResourceLocation("extraores:smeltazuresilverdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustBismuth), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 20)
                 .unlockedBy("smeltbismuthdust", has(ItemList.itemIngotBismuth.get()))
                 .save(consumer, new ResourceLocation("extraores:smeltbismuthdust"));
@@ -1812,6 +1832,9 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAtlarus.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 20)
                 .unlockedBy("blastatlarusore", has(ItemList.itemIngotAtlarus.get()))
                 .save(consumer, new ResourceLocation("extraores:blastatlarusore"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAzureSilver.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 20)
+                .unlockedBy("blastazuresilverore", has(ItemList.itemIngotAzureSilver.get()))
+                .save(consumer, new ResourceLocation("extraores:blastazuresilverore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreBismuth.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 20)
                 .unlockedBy("blastbismuthore", has(ItemList.itemIngotBismuth.get()))
                 .save(consumer, new ResourceLocation("extraores:blastbismuthore"));
@@ -2029,6 +2052,9 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAtlarus.get()), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 10)
                 .unlockedBy("blastatlarusdust", has(ItemList.itemIngotAtlarus.get()))
                 .save(consumer, new ResourceLocation("extraores:blastatlarusdust"));
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAzureSilver.get()), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 10)
+                .unlockedBy("blastazuresilverdust", has(ItemList.itemIngotAzureSilver.get()))
+                .save(consumer, new ResourceLocation("extraores:blastazuresilverdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustBismuth.get()), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 10)
                 .unlockedBy("blastbismuthdust", has(ItemList.itemIngotBismuth.get()))
                 .save(consumer, new ResourceLocation("extraores:blastbismuthdust"));

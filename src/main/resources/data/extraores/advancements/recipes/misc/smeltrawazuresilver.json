@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawazuresilver"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawazuresilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:azuresilveringot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "smeltrawazuresilver",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawazuresilver"
+    ]
+  }
+}

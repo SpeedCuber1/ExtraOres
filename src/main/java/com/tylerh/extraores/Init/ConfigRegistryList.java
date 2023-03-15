@@ -17,6 +17,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerAquamarine;
     public static ForgeConfigSpec.BooleanValue registerAstralSilver;
     public static ForgeConfigSpec.BooleanValue registerAtlarus;
+    public static ForgeConfigSpec.BooleanValue registerAzureSilver;
     public static ForgeConfigSpec.BooleanValue registerBismuth;
     public static ForgeConfigSpec.BooleanValue registerBlackSteel;
     public static ForgeConfigSpec.BooleanValue registerCadmium;
@@ -118,6 +119,7 @@ public class ConfigRegistryList
         registerAquamarine = builder.comment("Enable/Disable Aquamarine").define("Aquamarine",ModInfo.GUI_DEFAULT_VALUE);
         registerAstralSilver = builder.comment("Enable/Disable Astral Silver").define("Astral Silver", ModInfo.GUI_DEFAULT_VALUE);
         registerAtlarus = builder.comment("Enable/Disable Atlarus").define("Atlarus", ModInfo.GUI_DEFAULT_VALUE);
+        registerAzureSilver = builder.comment("Enable/Disable Azure Silver").define("Azure Silver",ModInfo.GUI_DEFAULT_VALUE);
         registerBismuth = builder.comment("Enable/Disable Bismuth").define("Bismuth", ModInfo.GUI_DEFAULT_VALUE);
         registerBlackSteel = builder.comment("Enable/Disable Black Steel").define("Black Steel", ModInfo.GUI_DEFAULT_VALUE);
         registerCadmium = builder.comment("Enable/Disable Cadmium").define("Cadmium", ModInfo.GUI_DEFAULT_VALUE);

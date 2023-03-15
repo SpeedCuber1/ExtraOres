@@ -21,6 +21,7 @@ public class BlockTagList
     public static final TagKey<Block> oreAquamarine = tag("ores/aquamarine");
     public static final TagKey<Block> oreAstralSilver = tag("ores/astralsilver");
     public static final TagKey<Block> oreAtlarus = tag("ores/atlarus");
+    public static final TagKey<Block> oreAzureSilver = tag("ores/azuresilver");
     public static final TagKey<Block> oreBismuth = tag("ores/bismuth");
     public static final TagKey<Block> oreBlackSteel = tag("ores/blacksteel");
     public static final TagKey<Block> oreCadmium = tag("ores/cadmium");
@@ -122,6 +123,7 @@ public class BlockTagList
     public static final TagKey<Block> blockAquamarine = tag("storage_blocks/aquamarine");
     public static final TagKey<Block> blockAstralSilver = tag("storage_blocks/astralsilver");
     public static final TagKey<Block> blockAtlarus = tag("storage_blocks/atlarus");
+    public static final TagKey<Block> blockAzureSilver = tag("storage_blocks/azuresilver");
     public static final TagKey<Block> blockBismuth = tag("storage_blocks/bismuth");
     public static final TagKey<Block> blockBlackSteel = tag("storage_blocks/blacksteel");
     public static final TagKey<Block> blockCadmium = tag("storage_blocks/cadmium");

@@ -1,0 +1,38 @@
+{
+  "parent": "extraores:atlarus",
+  "criteria": {
+    "azuresilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawazuresilver"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Azure Silver Ore"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:azuresilverore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "As You're Sitting There..."
+    }
+  },
+  "requirements": [
+    [
+      "azuresilver"
+    ]
+  ]
+}

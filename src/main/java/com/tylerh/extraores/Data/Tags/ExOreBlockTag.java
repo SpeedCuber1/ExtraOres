@@ -3,7 +3,6 @@ package com.tylerh.extraores.Data.Tags;
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BlockTags;
@@ -43,6 +42,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTagList.oreAquamarine).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAquamarine.get()).get());
         tag(BlockTagList.oreAstralSilver).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAstralSilver.get()).get());
         tag(BlockTagList.oreAtlarus).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAtlarus.get()).get());
+        tag(BlockTagList.oreAzureSilver).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAzureSilver.get()).get());
         tag(BlockTagList.oreBismuth).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreBismuth.get()).get());
         tag(BlockTagList.oreBlackSteel).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreBlackSteel.get()).get());
         tag(BlockTagList.oreCadmium).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreCadmium.get()).get());
@@ -143,6 +143,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTagList.oreAquamarine).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAquamarine.get()).get());
         tag(BlockTagList.oreAstralSilver).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAstralSilver.get()).get());
         tag(BlockTagList.oreAtlarus).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAtlarus.get()).get());
+        tag(BlockTagList.oreAzureSilver).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAzureSilver.get()).get());
         tag(BlockTagList.oreBismuth).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreBismuth.get()).get());
         tag(BlockTagList.oreBlackSteel).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreBlackSteel.get()).get());
         tag(BlockTagList.oreCadmium).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreCadmium.get()).get());
@@ -233,6 +234,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTagList.ORES).addTag(BlockTagList.oreAquamarine);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreAstralSilver);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreAtlarus);
+        tag(BlockTagList.ORES).addTag(BlockTagList.oreAzureSilver);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreBismuth);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreBlackSteel);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreCadmium);
@@ -336,6 +338,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTagList.blockAquamarine).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAquamarine.get()).get());
         tag(BlockTagList.blockAstralSilver).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAstralSilver.get()).get());
         tag(BlockTagList.blockAtlarus).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAtlarus.get()).get());
+        tag(BlockTagList.blockAzureSilver).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAzureSilver.get()).get());
         tag(BlockTagList.blockBismuth).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockBismuth.get()).get());
         tag(BlockTagList.blockBlackSteel).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockBlackSteel.get()).get());
         tag(BlockTagList.blockCadmium).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockCadmium.get()).get());
@@ -435,6 +438,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockAquamarine);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockAstralSilver);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockAtlarus);
+        tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockAzureSilver);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockBismuth);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockBlackSteel);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockCadmium);
@@ -538,6 +542,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAquamarine.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAstralSilver.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAtlarus.get()).get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAzureSilver.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreBismuth.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreBlackSteel.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreCadmium.get()).get());
@@ -638,6 +643,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAquamarine.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAstralSilver.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAtlarus.get()).get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAzureSilver.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreBismuth.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreBlackSteel.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreCadmium.get()).get());
@@ -729,6 +735,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAquamarine.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAstralSilver.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAtlarus.get()).get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAzureSilver.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockBismuth.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockBlackSteel.get()).get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockCadmium.get()).get());
@@ -832,6 +839,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAquamarine.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAstralSilver.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAtlarus.get()).get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreAzureSilver.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreBismuth.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreBlackSteel.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockOreCadmium.get()).get());
@@ -932,6 +940,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAquamarine.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAstralSilver.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAtlarus.get()).get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreAzureSilver.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreBismuth.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreBlackSteel.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockDeepslateOreCadmium.get()).get());
@@ -1023,6 +1032,7 @@ public class ExOreBlockTag extends TagsProvider<Block>
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAquamarine.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAstralSilver.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAtlarus.get()).get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockAzureSilver.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockBismuth.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockBlackSteel.get()).get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ForgeRegistries.BLOCKS.getResourceKey(BlockList.blockCadmium.get()).get());

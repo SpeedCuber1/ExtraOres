@@ -34,6 +34,7 @@ public class ExOreLootTable extends BlockLootSubProvider
         createFortune(BlockList.blockOreAquamarine,ItemList.itemGemAquamarine);
         createFortune(BlockList.blockOreAstralSilver,ItemList.itemRawAstralSilver);
         createFortune(BlockList.blockOreAtlarus,ItemList.itemRawAtlarus);
+        createFortune(BlockList.blockOreAzureSilver,ItemList.itemRawAzureSilver);
         createFortune(BlockList.blockOreBismuth,ItemList.itemRawBismuth);
         createFortune(BlockList.blockOreBlackSteel,ItemList.itemRawBlackSteel);
         createFortune(BlockList.blockOreCadmium,ItemList.itemRawCadmium);
@@ -132,6 +133,7 @@ public class ExOreLootTable extends BlockLootSubProvider
         createFortune(BlockList.blockDeepslateOreAquamarine,ItemList.itemGemAquamarine);
         createFortune(BlockList.blockDeepslateOreAstralSilver,ItemList.itemRawAstralSilver);
         createFortune(BlockList.blockDeepslateOreAtlarus,ItemList.itemRawAtlarus);
+        createFortune(BlockList.blockDeepslateOreAzureSilver,ItemList.itemRawAzureSilver);
         createFortune(BlockList.blockDeepslateOreBismuth,ItemList.itemRawBismuth);
         createFortune(BlockList.blockDeepslateOreBlackSteel,ItemList.itemRawBlackSteel);
         createFortune(BlockList.blockDeepslateOreCadmium,ItemList.itemRawCadmium);
@@ -222,6 +224,7 @@ public class ExOreLootTable extends BlockLootSubProvider
         createStandardTable(BlockList.blockAquamarine);
         createStandardTable(BlockList.blockAstralSilver);
         createStandardTable(BlockList.blockAtlarus);
+        createStandardTable(BlockList.blockAzureSilver);
         createStandardTable(BlockList.blockBismuth);
         createStandardTable(BlockList.blockBlackSteel);
         createStandardTable(BlockList.blockCadmium);

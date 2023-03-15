@@ -136,6 +136,15 @@ public class ExOreConfiguredFeature
             );
             register(context,ConfiguredFeatureList.featureAtlarus,Feature.ORE,new OreConfiguration(target,size));
         }
+        if(ConfigRegistryList.registerAzureSilver.get())
+        {
+            ConfiguredFeatureList.featureAzureSilver = registerKey("azuresilverore");
+            target = List.of(
+                    OreConfiguration.target(stoneReplaceables, BlockList.blockOreAzureSilver.get().defaultBlockState()),
+                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAzureSilver.get().defaultBlockState())
+            );
+            register(context,ConfiguredFeatureList.featureAzureSilver,Feature.ORE,new OreConfiguration(target,size));
+        }
         if(ConfigRegistryList.registerBismuth.get())
         {
             ConfiguredFeatureList.featureBismuth = registerKey("bismuthore");

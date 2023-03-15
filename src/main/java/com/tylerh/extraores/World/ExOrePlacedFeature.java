@@ -95,6 +95,12 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_RARE;
             register(context,PlacedFeatureList.featureAtlarusPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureAtlarus),rate,height);
         }
+        if(ConfigRegistryList.registerAzureSilver.get())
+        {
+            PlacedFeatureList.featureAzureSilverPlaced = createKey("azuresilverore");
+            height = ModInfo.HEIGHT_RARE;
+            register(context,PlacedFeatureList.featureAzureSilverPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureAzureSilver),rate,height);
+        }
         if(ConfigRegistryList.registerBismuth.get())
         {
             PlacedFeatureList.featureBismuthPlaced = createKey("bismuthore");

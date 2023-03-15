@@ -48,6 +48,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.oreAquamarine).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreAquamarine.get().asItem()).get());
         tag(ItemTagList.oreAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreAstralSilver.get().asItem()).get());
         tag(ItemTagList.oreAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreAtlarus.get().asItem()).get());
+        tag(ItemTagList.oreAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreAzureSilver.get().asItem()).get());
         tag(ItemTagList.oreBismuth).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreBismuth.get().asItem()).get());
         tag(ItemTagList.oreBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreBlackSteel.get().asItem()).get());
         tag(ItemTagList.oreCadmium).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreCadmium.get().asItem()).get());
@@ -148,6 +149,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.oreAquamarine).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreAquamarine.get().asItem()).get());
         tag(ItemTagList.oreAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreAstralSilver.get().asItem()).get());
         tag(ItemTagList.oreAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreAtlarus.get().asItem()).get());
+        tag(ItemTagList.oreAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreAzureSilver.get().asItem()).get());
         tag(ItemTagList.oreBismuth).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreBismuth.get().asItem()).get());
         tag(ItemTagList.oreBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreBlackSteel.get().asItem()).get());
         tag(ItemTagList.oreCadmium).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreCadmium.get().asItem()).get());
@@ -238,6 +240,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAquamarine);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAstralSilver);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAtlarus);
+        tag(ItemTagList.ORES).addTag(ItemTagList.oreAzureSilver);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreBismuth);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreBlackSteel);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreCadmium);
@@ -336,6 +339,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.rawAngmallen).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemRawAngmallen.get()).get());
         tag(ItemTagList.rawAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemRawAstralSilver.get()).get());
         tag(ItemTagList.rawAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemRawAtlarus.get()).get());
+        tag(ItemTagList.rawAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemRawAzureSilver.get()).get());
         tag(ItemTagList.rawBismuth).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemRawBismuth.get()).get());
         tag(ItemTagList.rawBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemRawBlackSteel.get()).get());
         tag(ItemTagList.rawCadmium).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemRawCadmium.get()).get());
@@ -410,6 +414,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.RAW).addTag(ItemTagList.rawAngmallen);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawAstralSilver);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawAtlarus);
+        tag(ItemTagList.RAW).addTag(ItemTagList.rawAzureSilver);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawBismuth);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawBlackSteel);
         tag(ItemTagList.RAW).addTag(ItemTagList.rawCadmium);
@@ -491,6 +496,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.blockAquamarine).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockAquamarine.get().asItem()).get());
         tag(ItemTagList.blockAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockAstralSilver.get().asItem()).get());
         tag(ItemTagList.blockAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockAtlarus.get().asItem()).get());
+        tag(ItemTagList.blockAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockAzureSilver.get().asItem()).get());
         tag(ItemTagList.blockBismuth).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockBismuth.get().asItem()).get());
         tag(ItemTagList.blockBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockBlackSteel.get().asItem()).get());
         tag(ItemTagList.blockCadmium).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockCadmium.get().asItem()).get());
@@ -590,6 +596,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockAquamarine);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockAstralSilver);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockAtlarus);
+        tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockAzureSilver);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockBismuth);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockBlackSteel);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockCadmium);
@@ -688,6 +695,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.ingotAngmallen).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemIngotAngmallen.get()).get());
         tag(ItemTagList.ingotAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemIngotAstralSilver.get()).get());
         tag(ItemTagList.ingotAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemIngotAtlarus.get()).get());
+        tag(ItemTagList.ingotAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemIngotAzureSilver.get()).get());
         tag(ItemTagList.ingotBismuth).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemIngotBismuth.get()).get());
         tag(ItemTagList.ingotBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemIngotBlackSteel.get()).get());
         tag(ItemTagList.ingotCadmium).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemIngotCadmium.get()).get());
@@ -762,6 +770,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotAngmallen);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotAstralSilver);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotAtlarus);
+        tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotAzureSilver);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotBismuth);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotBlackSteel);
         tag(ItemTagList.INGOTS).addTag(ItemTagList.ingotCadmium);
@@ -839,6 +848,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.dustAngmallen).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDustAngmallen.get()).get());
         tag(ItemTagList.dustAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDustAstralSilver.get()).get());
         tag(ItemTagList.dustAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDustAtlarus.get()).get());
+        tag(ItemTagList.dustAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDustAzureSilver.get()).get());
         tag(ItemTagList.dustBismuth).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDustBismuth.get()).get());
         tag(ItemTagList.dustBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDustBlackSteel.get()).get());
         tag(ItemTagList.dustCadmium).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDustCadmium.get()).get());
@@ -912,6 +922,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustAngmallen);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustAstralSilver);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustAtlarus);
+        tag(ItemTagList.DUSTS).addTag(ItemTagList.dustAzureSilver);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustBismuth);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustBlackSteel);
         tag(ItemTagList.DUSTS).addTag(ItemTagList.dustCadmium);
@@ -988,6 +999,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.dirtyDustAngmallen).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDirtyDustAngmallen.get()).get());
         tag(ItemTagList.dirtyDustAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDirtyDustAstralSilver.get()).get());
         tag(ItemTagList.dirtyDustAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDirtyDustAtlarus.get()).get());
+        tag(ItemTagList.dirtyDustAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDirtyDustAzureSilver.get()).get());
         tag(ItemTagList.dirtyDustBismuth).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDirtyDustBismuth.get()).get());
         tag(ItemTagList.dirtyDustBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDirtyDustBlackSteel.get()).get());
         tag(ItemTagList.dirtyDustCadmium).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemDirtyDustCadmium.get()).get());
@@ -1061,6 +1073,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustAngmallen);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustAstralSilver);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustAtlarus);
+        tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustAzureSilver);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustBismuth);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustBlackSteel);
         tag(ItemTagList.DIRTY_DUSTS).addTag(ItemTagList.dirtyDustCadmium);
@@ -1137,6 +1150,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.shardAngmallen).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemShardAngmallen.get()).get());
         tag(ItemTagList.shardAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemShardAstralSilver.get()).get());
         tag(ItemTagList.shardAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemShardAtlarus.get()).get());
+        tag(ItemTagList.shardAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemShardAzureSilver.get()).get());
         tag(ItemTagList.shardBismuth).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemShardBismuth.get()).get());
         tag(ItemTagList.shardBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemShardBlackSteel.get()).get());
         tag(ItemTagList.shardCadmium).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemShardCadmium.get()).get());
@@ -1210,6 +1224,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardAngmallen);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardAstralSilver);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardAtlarus);
+        tag(ItemTagList.SHARDS).addTag(ItemTagList.shardAzureSilver);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardBismuth);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardBlackSteel);
         tag(ItemTagList.SHARDS).addTag(ItemTagList.shardCadmium);
@@ -1286,6 +1301,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.clumpAngmallen).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemClumpAngmallen.get()).get());
         tag(ItemTagList.clumpAstralSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemClumpAstralSilver.get()).get());
         tag(ItemTagList.clumpAtlarus).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemClumpAtlarus.get()).get());
+        tag(ItemTagList.clumpAzureSilver).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemClumpAzureSilver.get()).get());
         tag(ItemTagList.clumpBismuth).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemClumpBismuth.get()).get());
         tag(ItemTagList.clumpBlackSteel).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemClumpBlackSteel.get()).get());
         tag(ItemTagList.clumpCadmium).add(ForgeRegistries.ITEMS.getResourceKey(ItemList.itemClumpCadmium.get()).get());
@@ -1359,6 +1375,7 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpAngmallen);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpAstralSilver);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpAtlarus);
+        tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpAzureSilver);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpBismuth);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpBlackSteel);
         tag(ItemTagList.CLUMPS).addTag(ItemTagList.clumpCadmium);

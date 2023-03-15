@@ -19,6 +19,7 @@ public class PlacedFeatureList
     public static ResourceKey<PlacedFeature> featureAquamarinePlaced;
     public static ResourceKey<PlacedFeature> featureAstralSilverPlaced;
     public static ResourceKey<PlacedFeature> featureAtlarusPlaced;
+    public static ResourceKey<PlacedFeature> featureAzureSilverPlaced;
     public static ResourceKey<PlacedFeature> featureBismuthPlaced;
     public static ResourceKey<PlacedFeature> featureBlackSteelPlaced;
     public static ResourceKey<PlacedFeature> featureCadmiumPlaced;

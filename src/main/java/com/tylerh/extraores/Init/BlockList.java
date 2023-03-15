@@ -18,6 +18,7 @@ public class BlockList
     public static RegistryObject<Block> blockOreAquamarine;
     public static RegistryObject<Block> blockOreAstralSilver;
     public static RegistryObject<Block> blockOreAtlarus;
+    public static RegistryObject<Block> blockOreAzureSilver;
     public static RegistryObject<Block> blockOreBismuth;
     public static RegistryObject<Block> blockOreBlackSteel;
     public static RegistryObject<Block> blockOreCadmium;
@@ -116,6 +117,7 @@ public class BlockList
     public static RegistryObject<Block> blockDeepslateOreAquamarine;
     public static RegistryObject<Block> blockDeepslateOreAstralSilver;
     public static RegistryObject<Block> blockDeepslateOreAtlarus;
+    public static RegistryObject<Block> blockDeepslateOreAzureSilver;
     public static RegistryObject<Block> blockDeepslateOreBismuth;
     public static RegistryObject<Block> blockDeepslateOreBlackSteel;
     public static RegistryObject<Block> blockDeepslateOreCadmium;
@@ -206,6 +208,7 @@ public class BlockList
     public static RegistryObject<Block> blockAquamarine;
     public static RegistryObject<Block> blockAstralSilver;
     public static RegistryObject<Block> blockAtlarus;
+    public static RegistryObject<Block> blockAzureSilver;
     public static RegistryObject<Block> blockBismuth;
     public static RegistryObject<Block> blockBlackSteel;
     public static RegistryObject<Block> blockCadmium;

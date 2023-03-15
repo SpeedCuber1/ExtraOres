@@ -18,6 +18,7 @@ public class ConfiguredFeatureList
     public static ResourceKey<ConfiguredFeature<?,?>> featureAquamarine;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAstralSilver;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAtlarus;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureAzureSilver;
     public static ResourceKey<ConfiguredFeature<?,?>> featureBismuth;
     public static ResourceKey<ConfiguredFeature<?,?>> featureBlackSteel;
     public static ResourceKey<ConfiguredFeature<?,?>> featureCadmium;

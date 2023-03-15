@@ -31,6 +31,7 @@ public class ExtraOres
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.spec);
         ConfigHandler.loadConfig(ConfigHandler.spec, FMLPaths.CONFIGDIR.get().resolve("extraores-common.toml"));
         MinecraftForge.EVENT_BUS.register(this);
+        bus.addListener(this::addCreative);
         InitBlocks.registerBlocks();
         InitBlocks.registerItems();
     }
@@ -65,6 +66,7 @@ public class ExtraOres
         event.accept(BlockList.blockOreAquamarine.get().asItem());
         event.accept(BlockList.blockOreAstralSilver.get().asItem());
         event.accept(BlockList.blockOreAtlarus.get().asItem());
+        event.accept(BlockList.blockOreAzureSilver.get().asItem());
         event.accept(BlockList.blockOreBismuth.get().asItem());
         event.accept(BlockList.blockOreBlackSteel.get().asItem());
         event.accept(BlockList.blockOreCadmium.get().asItem());
@@ -163,6 +165,7 @@ public class ExtraOres
         event.accept(BlockList.blockDeepslateOreAquamarine.get().asItem());
         event.accept(BlockList.blockDeepslateOreAstralSilver.get().asItem());
         event.accept(BlockList.blockDeepslateOreAtlarus.get().asItem());
+        event.accept(BlockList.blockDeepslateOreAzureSilver.get().asItem());
         event.accept(BlockList.blockDeepslateOreBismuth.get().asItem());
         event.accept(BlockList.blockDeepslateOreBlackSteel.get().asItem());
         event.accept(BlockList.blockDeepslateOreCadmium.get().asItem());
@@ -253,6 +256,7 @@ public class ExtraOres
         event.accept(BlockList.blockAquamarine.get().asItem());
         event.accept(BlockList.blockAstralSilver.get().asItem());
         event.accept(BlockList.blockAtlarus.get().asItem());
+        event.accept(BlockList.blockAzureSilver.get().asItem());
         event.accept(BlockList.blockBismuth.get().asItem());
         event.accept(BlockList.blockBlackSteel.get().asItem());
         event.accept(BlockList.blockCadmium.get().asItem());
@@ -351,6 +355,7 @@ public class ExtraOres
         event.accept(ItemList.itemIngotAngmallen.get());
         event.accept(ItemList.itemIngotAstralSilver.get());
         event.accept(ItemList.itemIngotAtlarus.get());
+        event.accept(ItemList.itemIngotAzureSilver.get());
         event.accept(ItemList.itemIngotBismuth.get());
         event.accept(ItemList.itemIngotBlackSteel.get());
         event.accept(ItemList.itemIngotCadmium.get());
@@ -425,6 +430,7 @@ public class ExtraOres
         event.accept(ItemList.itemDustAngmallen.get());
         event.accept(ItemList.itemDustAstralSilver.get());
         event.accept(ItemList.itemDustAtlarus.get());
+        event.accept(ItemList.itemDustAzureSilver.get());
         event.accept(ItemList.itemDustBismuth.get());
         event.accept(ItemList.itemDustBlackSteel.get());
         event.accept(ItemList.itemDustCadmium.get());
@@ -499,6 +505,7 @@ public class ExtraOres
         event.accept(ItemList.itemShardAngmallen.get());
         event.accept(ItemList.itemShardAstralSilver.get());
         event.accept(ItemList.itemShardAtlarus.get());
+        event.accept(ItemList.itemShardAzureSilver.get());
         event.accept(ItemList.itemShardBismuth.get());
         event.accept(ItemList.itemShardBlackSteel.get());
         event.accept(ItemList.itemShardCadmium.get());
@@ -573,6 +580,7 @@ public class ExtraOres
         event.accept(ItemList.itemClumpAngmallen.get());
         event.accept(ItemList.itemClumpAstralSilver.get());
         event.accept(ItemList.itemClumpAtlarus.get());
+        event.accept(ItemList.itemClumpAzureSilver.get());
         event.accept(ItemList.itemClumpBismuth.get());
         event.accept(ItemList.itemClumpBlackSteel.get());
         event.accept(ItemList.itemClumpCadmium.get());
@@ -647,6 +655,7 @@ public class ExtraOres
         event.accept(ItemList.itemDirtyDustAngmallen.get());
         event.accept(ItemList.itemDirtyDustAstralSilver.get());
         event.accept(ItemList.itemDirtyDustAtlarus.get());
+        event.accept(ItemList.itemDirtyDustAzureSilver.get());
         event.accept(ItemList.itemDirtyDustBismuth.get());
         event.accept(ItemList.itemDirtyDustBlackSteel.get());
         event.accept(ItemList.itemDirtyDustCadmium.get());
@@ -721,6 +730,7 @@ public class ExtraOres
         event.accept(ItemList.itemRawAngmallen.get());
         event.accept(ItemList.itemRawAstralSilver.get());
         event.accept(ItemList.itemRawAtlarus.get());
+        event.accept(ItemList.itemRawAzureSilver.get());
         event.accept(ItemList.itemRawBismuth.get());
         event.accept(ItemList.itemRawBlackSteel.get());
         event.accept(ItemList.itemRawCadmium.get());

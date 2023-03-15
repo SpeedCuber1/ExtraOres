@@ -100,6 +100,12 @@ public class InitBlocks
             BlockList.blockAtlarus = register("atlarusblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
             BlockList.blockDeepslateOreAtlarus = register("deepslateatlarusore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F,SoundType.DEEPSLATE));
         }
+        if(ConfigRegistryList.registerAzureSilver.get())
+        {
+            BlockList.blockOreAzureSilver = register("azuresilverore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
+            BlockList.blockAzureSilver = register("azuresilverblock", () -> new BlockEXOre(Material.METAL,1.5F,1.5F));
+            BlockList.blockDeepslateOreAzureSilver = register("deepslateazuresilverore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F,SoundType.DEEPSLATE));
+        }
         if (ConfigRegistryList.registerBismuth.get())
         {
             BlockList.blockOreBismuth = register("bismuthore", () -> new BlockEXOre(Material.STONE,1.5F,1.5F));
@@ -699,6 +705,15 @@ public class InitBlocks
             ItemList.itemClumpAtlarus = ITEMS.register("atlarusclump", () -> new ItemEXOre());
             ItemList.itemDirtyDustAtlarus = ITEMS.register("atlarusdirtydust", () -> new ItemEXOre());
             ItemList.itemRawAtlarus = ITEMS.register("rawatlarus", () -> new ItemEXOre());
+        }
+        if(ConfigRegistryList.registerAzureSilver.get())
+        {
+            ItemList.itemIngotAzureSilver = ITEMS.register("azuresilveringot", () -> new ItemEXOre());
+            ItemList.itemDustAzureSilver = ITEMS.register("azuresilverdust", () -> new ItemEXOre());
+            ItemList.itemShardAzureSilver = ITEMS.register("azuresilvershard", () -> new ItemEXOre());
+            ItemList.itemClumpAzureSilver = ITEMS.register("azuresilverclump", () -> new ItemEXOre());
+            ItemList.itemDirtyDustAzureSilver = ITEMS.register("azuresilverdirtydust", () -> new ItemEXOre());
+            ItemList.itemRawAzureSilver = ITEMS.register("rawazuresilver", () -> new ItemEXOre());
         }
         if (ConfigRegistryList.registerBismuth.get())
         {
