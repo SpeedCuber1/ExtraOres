@@ -994,7 +994,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.dirtyDustAngmallen).add(ItemList.itemDirtyDustAngmallen.get());
         tag(ItemTagList.dirtyDustAstralSilver).add(ItemList.itemDirtyDustAstralSilver.get());
         tag(ItemTagList.dirtyDustAtlarus).add(ItemList.itemDirtyDustAtlarus.get());
-        tag(ItemTagList.dirtyDustAzureSilver).add(ItemList.itemDirtyDustAstralSilver.get());
+        tag(ItemTagList.dirtyDustAzureSilver).add(ItemList.itemDirtyDustAzureSilver.get());
         tag(ItemTagList.dirtyDustBismuth).add(ItemList.itemDirtyDustBismuth.get());
         tag(ItemTagList.dirtyDustBlackSteel).add(ItemList.itemDirtyDustBlackSteel.get());
         tag(ItemTagList.dirtyDustCadmium).add(ItemList.itemDirtyDustCadmium.get());
