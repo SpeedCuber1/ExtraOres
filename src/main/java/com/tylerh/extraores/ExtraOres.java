@@ -7,7 +7,7 @@ import com.tylerh.extraores.Util.ConfigHandler;
 import com.tylerh.extraores.Util.ExOreCreativeTab;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -28,6 +28,7 @@ public class ExtraOres
         bus.register(this);
         InitBlocks.BLOCKS.register(bus);
         InitBlocks.ITEMS.register(bus);
+        ExOreCreativeTab.CREATIVE_TABS.register(bus);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.spec);
         ConfigHandler.loadConfig(ConfigHandler.spec, FMLPaths.CONFIGDIR.get().resolve("extraores-common.toml"));
         MinecraftForge.EVENT_BUS.register(this);
@@ -43,15 +44,15 @@ public class ExtraOres
     private void clientRegistries(FMLClientSetupEvent event)
     {
     }
-    private void addCreative(CreativeModeTabEvent.BuildContents event)
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTab() == ExOreCreativeTab.EXORES)
+        if(event.getTab() == ExOreCreativeTab.EXORES.get())
         {
             addBlocks(event);
             addItems(event);
         }
     }
-    private void addBlocks(CreativeModeTabEvent.BuildContents event)
+    private void addBlocks(BuildCreativeModeTabContentsEvent event)
     {
         //Ore Normal
         event.accept(BlockList.blockOreAdamantine.get().asItem());
@@ -344,7 +345,7 @@ public class ExtraOres
         event.accept(BlockList.blockZinc.get().asItem());
         event.accept(BlockList.blockZirconium.get().asItem());
     }
-    private void addItems(CreativeModeTabEvent.BuildContents event)
+    private void addItems(BuildCreativeModeTabContentsEvent event)
     {
         //Ingots
         event.accept(ItemList.itemIngotAdamantine.get());
