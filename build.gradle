@@ -82,7 +82,7 @@ dependencies {
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
-    runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:11.6.0.1015")
+    runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:11.6.0.1016")
     runtimeOnly fg.deobf("mekanism:Mekanism:1.19.2-10.3.8.477")
     compileOnly fg.deobf("mekanism:Mekanism:1.19.2-10.3.8.477:api")
     // Real examples
