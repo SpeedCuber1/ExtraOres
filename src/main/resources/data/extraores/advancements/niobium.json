@@ -34,5 +34,6 @@
     [
       "niobium"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

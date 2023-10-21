@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:garnetblock"
-  }
+  },
+  "show_notification": true
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:peridot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

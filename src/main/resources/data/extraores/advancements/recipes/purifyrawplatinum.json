@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawplatinum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawplatinum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawplatinum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawplatinum",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawplatinum"
+    ]
+  },
+  "sends_telemetry_event": true
+}

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawnickel"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

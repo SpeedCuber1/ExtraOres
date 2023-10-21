@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:manganeseingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

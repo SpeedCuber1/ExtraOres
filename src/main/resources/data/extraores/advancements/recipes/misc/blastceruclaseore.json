@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastceruclaseore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

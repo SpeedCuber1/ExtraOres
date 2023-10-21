@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:tanzanite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

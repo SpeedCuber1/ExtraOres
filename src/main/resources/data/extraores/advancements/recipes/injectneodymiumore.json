@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectneodymiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectneodymiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:neodymiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectneodymiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectneodymiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

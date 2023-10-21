@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltplutoniumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:sanguiniteblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

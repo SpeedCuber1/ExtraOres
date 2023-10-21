@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltmidasiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

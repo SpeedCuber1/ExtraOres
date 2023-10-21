@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:titaniumblock"
-  }
+  },
+  "show_notification": true
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:rubraciumblock"
-  }
+  },
+  "show_notification": true
 }

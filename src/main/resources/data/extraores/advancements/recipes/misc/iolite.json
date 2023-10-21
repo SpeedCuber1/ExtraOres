@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:iolite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

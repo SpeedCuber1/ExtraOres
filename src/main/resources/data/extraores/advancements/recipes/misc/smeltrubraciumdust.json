@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrubraciumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

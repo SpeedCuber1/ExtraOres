@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:ceruclaseblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:uraniumblock"
-  }
+  },
+  "show_notification": true
 }

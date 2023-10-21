@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawaluminum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawaluminum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aluminumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawaluminum",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawaluminum"
+    ]
+  },
+  "sends_telemetry_event": true
+}

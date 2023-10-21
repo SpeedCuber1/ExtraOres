@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectcopperore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectcopperore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:copperore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectcopperore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectcopperore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

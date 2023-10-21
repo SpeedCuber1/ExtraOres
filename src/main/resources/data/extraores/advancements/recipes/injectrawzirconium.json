@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawzirconium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawzirconium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:zirconiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawzirconium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawzirconium"
+    ]
+  },
+  "sends_telemetry_event": true
+}

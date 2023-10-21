@@ -34,5 +34,6 @@
     [
       "sanguinite"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

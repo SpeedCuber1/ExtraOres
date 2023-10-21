@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltvanadiumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

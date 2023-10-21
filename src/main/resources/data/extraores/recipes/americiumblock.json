@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:americiumblock"
-  }
+  },
+  "show_notification": true
 }

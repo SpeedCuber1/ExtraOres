@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:cadmiumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

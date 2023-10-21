@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:celenegilingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

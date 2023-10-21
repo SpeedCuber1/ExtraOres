@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:blacksteelblock"
-  }
+  },
+  "show_notification": true
 }

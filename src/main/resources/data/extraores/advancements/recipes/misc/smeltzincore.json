@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltzincore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

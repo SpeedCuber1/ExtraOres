@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastignatiusdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

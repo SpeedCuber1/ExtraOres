@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:deepironblock"
-  }
+  },
+  "show_notification": true
 }

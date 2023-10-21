@@ -34,5 +34,6 @@
     [
       "sugilite"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

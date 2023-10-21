@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:poloniumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

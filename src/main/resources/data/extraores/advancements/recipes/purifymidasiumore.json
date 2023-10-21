@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifymidasiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifymidasiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:midasiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifymidasiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifymidasiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

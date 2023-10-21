@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:atlarusblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

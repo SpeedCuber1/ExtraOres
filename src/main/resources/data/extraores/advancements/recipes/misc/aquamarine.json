@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:aquamarine"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

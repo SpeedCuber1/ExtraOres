@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:aquamarineblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smelthepatizonore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

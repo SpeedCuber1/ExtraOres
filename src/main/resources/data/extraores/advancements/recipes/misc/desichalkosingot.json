@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:desichalkosingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

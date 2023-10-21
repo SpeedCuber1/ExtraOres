@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectgalliumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectgalliumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:galliumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectgalliumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectgalliumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

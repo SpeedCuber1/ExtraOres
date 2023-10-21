@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:poloniumblock"
-  }
+  },
+  "show_notification": true
 }

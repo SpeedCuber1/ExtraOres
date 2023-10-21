@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltcadmiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

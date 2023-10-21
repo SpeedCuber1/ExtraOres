@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:molybdenumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

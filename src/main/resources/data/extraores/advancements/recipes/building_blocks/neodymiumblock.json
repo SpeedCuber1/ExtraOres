@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:neodymiumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

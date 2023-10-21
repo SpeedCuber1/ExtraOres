@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltshadowirondust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

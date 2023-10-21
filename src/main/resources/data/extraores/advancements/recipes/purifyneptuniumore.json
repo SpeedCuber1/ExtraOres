@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyneptuniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyneptuniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:neptuniumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyneptuniumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyneptuniumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

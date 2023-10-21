@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastamordrinedust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

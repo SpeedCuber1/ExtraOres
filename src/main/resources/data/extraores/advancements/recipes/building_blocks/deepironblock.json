@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:deepironblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

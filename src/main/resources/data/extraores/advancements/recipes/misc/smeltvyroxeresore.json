@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltvyroxeresore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

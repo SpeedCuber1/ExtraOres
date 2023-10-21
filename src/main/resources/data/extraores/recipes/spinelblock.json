@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:spinelblock"
-  }
+  },
+  "show_notification": true
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blasttitaniumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

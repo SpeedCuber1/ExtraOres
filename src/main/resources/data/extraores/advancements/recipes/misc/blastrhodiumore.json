@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastrhodiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

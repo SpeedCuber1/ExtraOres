@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:midasiumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

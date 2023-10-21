@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:oureclaseblock"
-  }
+  },
+  "show_notification": true
 }

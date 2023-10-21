@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:copperblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

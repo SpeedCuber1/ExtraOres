@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltthalliumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

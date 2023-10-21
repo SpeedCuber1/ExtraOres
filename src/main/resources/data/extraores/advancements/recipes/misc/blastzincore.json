@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastzincore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

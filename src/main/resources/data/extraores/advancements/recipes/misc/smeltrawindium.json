@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawindium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

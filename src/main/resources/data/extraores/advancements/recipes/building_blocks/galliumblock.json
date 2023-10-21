@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:galliumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

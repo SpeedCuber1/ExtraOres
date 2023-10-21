@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawceruclase"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawceruclase": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ceruclaseore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawceruclase",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawceruclase"
+    ]
+  },
+  "sends_telemetry_event": true
+}

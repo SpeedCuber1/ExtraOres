@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltraweximite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

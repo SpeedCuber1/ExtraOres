@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:chromiumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

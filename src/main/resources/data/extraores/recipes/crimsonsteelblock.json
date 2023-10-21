@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:crimsonsteelblock"
-  }
+  },
+  "show_notification": true
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawhepatizon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawhepatizon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:hepatizonore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawhepatizon",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawhepatizon"
+    ]
+  },
+  "sends_telemetry_event": true
+}

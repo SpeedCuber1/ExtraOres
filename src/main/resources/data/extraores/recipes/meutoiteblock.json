@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:meutoiteblock"
-  }
+  },
+  "show_notification": true
 }

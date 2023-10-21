@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:orichalcumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

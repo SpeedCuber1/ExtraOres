@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:plutoniumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

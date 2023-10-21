@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltaluminumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:vulcaniteblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

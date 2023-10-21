@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltdesichalkosdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

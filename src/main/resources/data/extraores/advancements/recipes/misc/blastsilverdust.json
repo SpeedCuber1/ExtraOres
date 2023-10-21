@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastsilverdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

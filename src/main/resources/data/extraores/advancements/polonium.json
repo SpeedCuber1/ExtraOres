@@ -34,5 +34,6 @@
     [
       "polonium"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

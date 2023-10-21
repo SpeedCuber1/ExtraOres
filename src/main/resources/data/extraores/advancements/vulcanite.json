@@ -34,5 +34,6 @@
     [
       "vulcanite"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

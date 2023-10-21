@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyaluminumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyaluminumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aluminumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyaluminumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyaluminumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

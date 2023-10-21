@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:sapphireblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

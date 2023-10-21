@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawmidasium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

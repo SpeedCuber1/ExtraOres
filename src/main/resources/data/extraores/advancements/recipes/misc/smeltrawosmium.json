@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawosmium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

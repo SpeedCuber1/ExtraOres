@@ -34,5 +34,6 @@
     [
       "hepatizon"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

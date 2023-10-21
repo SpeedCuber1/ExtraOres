@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawyellorite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawyellorite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:yelloriteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawyellorite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawyellorite"
+    ]
+  },
+  "sends_telemetry_event": true
+}

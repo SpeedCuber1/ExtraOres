@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:kalendriteblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltcobaltore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

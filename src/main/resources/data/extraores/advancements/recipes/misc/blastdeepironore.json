@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastdeepironore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

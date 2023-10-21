@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawmanganese"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

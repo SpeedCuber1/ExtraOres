@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastpalladiumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

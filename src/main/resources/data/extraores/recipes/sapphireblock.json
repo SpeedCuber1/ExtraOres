@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:sapphireblock"
-  }
+  },
+  "show_notification": true
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawinolashite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

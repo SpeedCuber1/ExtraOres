@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:niobiumblock"
-  }
+  },
+  "show_notification": true
 }

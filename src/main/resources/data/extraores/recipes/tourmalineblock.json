@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:tourmalineblock"
-  }
+  },
+  "show_notification": true
 }

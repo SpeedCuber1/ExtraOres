@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:orichalcumblock"
-  }
+  },
+  "show_notification": true
 }

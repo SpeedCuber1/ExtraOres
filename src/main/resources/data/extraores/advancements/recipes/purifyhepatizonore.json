@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyhepatizonore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyhepatizonore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:hepatizonore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyhepatizonore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyhepatizonore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

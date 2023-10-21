@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectraweximite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectraweximite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:eximiteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectraweximite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectraweximite"
+    ]
+  },
+  "sends_telemetry_event": true
+}

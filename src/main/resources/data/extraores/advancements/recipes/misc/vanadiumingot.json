@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:vanadiumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

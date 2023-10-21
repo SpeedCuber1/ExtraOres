@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:chromiumblock"
-  }
+  },
+  "show_notification": true
 }

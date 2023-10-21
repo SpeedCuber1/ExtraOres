@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:sugiliteblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:titaniumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

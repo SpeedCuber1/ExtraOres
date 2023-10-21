@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:celenegilblock"
-  }
+  },
+  "show_notification": true
 }

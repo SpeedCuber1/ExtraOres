@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injecturaniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injecturaniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:uraniumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injecturaniumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injecturaniumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

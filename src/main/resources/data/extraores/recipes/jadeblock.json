@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:jadeblock"
-  }
+  },
+  "show_notification": true
 }

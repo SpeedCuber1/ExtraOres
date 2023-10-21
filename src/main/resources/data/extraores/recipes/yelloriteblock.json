@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:yelloriteblock"
-  }
+  },
+  "show_notification": true
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:citrineblock"
-  }
+  },
+  "show_notification": true
 }

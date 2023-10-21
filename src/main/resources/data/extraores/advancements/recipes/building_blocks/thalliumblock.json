@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:thalliumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

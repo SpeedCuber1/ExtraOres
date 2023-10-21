@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawinfuscolium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

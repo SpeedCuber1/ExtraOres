@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:turquoiseblock"
-  }
+  },
+  "show_notification": true
 }

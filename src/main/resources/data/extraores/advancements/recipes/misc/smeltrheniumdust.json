@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrheniumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltkalendriteore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:manganeseblock"
-  }
+  },
+  "show_notification": true
 }

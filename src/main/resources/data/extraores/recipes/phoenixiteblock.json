@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:phoenixiteblock"
-  }
+  },
+  "show_notification": true
 }

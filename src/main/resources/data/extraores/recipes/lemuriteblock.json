@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:lemuriteblock"
-  }
+  },
+  "show_notification": true
 }

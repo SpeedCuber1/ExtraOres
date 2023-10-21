@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:tritiumblock"
-  }
+  },
+  "show_notification": true
 }

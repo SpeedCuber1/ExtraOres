@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawzirconium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

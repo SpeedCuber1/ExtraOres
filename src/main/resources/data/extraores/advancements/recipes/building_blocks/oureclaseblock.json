@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:oureclaseblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

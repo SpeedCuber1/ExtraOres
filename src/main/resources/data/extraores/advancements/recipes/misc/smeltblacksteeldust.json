@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltblacksteeldust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

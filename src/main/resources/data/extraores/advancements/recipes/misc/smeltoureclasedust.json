@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltoureclasedust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

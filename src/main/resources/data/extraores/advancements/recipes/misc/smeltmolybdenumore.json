@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltmolybdenumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

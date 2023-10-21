@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:malachiteblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

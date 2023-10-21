@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltvibraniumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

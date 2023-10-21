@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:ignatiusblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

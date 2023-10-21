@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:tourmaline"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

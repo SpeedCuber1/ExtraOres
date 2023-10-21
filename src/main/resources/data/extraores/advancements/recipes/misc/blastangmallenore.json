@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastangmallenore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastmidasiumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

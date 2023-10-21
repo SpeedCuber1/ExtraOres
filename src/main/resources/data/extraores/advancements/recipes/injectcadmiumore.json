@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectcadmiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectcadmiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cadmiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectcadmiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectcadmiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

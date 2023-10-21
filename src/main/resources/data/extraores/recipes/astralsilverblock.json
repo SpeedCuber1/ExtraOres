@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:astralsilverblock"
-  }
+  },
+  "show_notification": true
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:cadmiumblock"
-  }
+  },
+  "show_notification": true
 }

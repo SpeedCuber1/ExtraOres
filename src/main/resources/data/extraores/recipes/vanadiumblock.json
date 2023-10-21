@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:vanadiumblock"
-  }
+  },
+  "show_notification": true
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltosmiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

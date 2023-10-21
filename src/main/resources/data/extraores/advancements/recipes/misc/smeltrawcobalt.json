@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawcobalt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

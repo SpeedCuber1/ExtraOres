@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastnickelore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

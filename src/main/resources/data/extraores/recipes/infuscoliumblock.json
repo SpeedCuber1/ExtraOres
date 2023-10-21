@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:infuscoliumblock"
-  }
+  },
+  "show_notification": true
 }

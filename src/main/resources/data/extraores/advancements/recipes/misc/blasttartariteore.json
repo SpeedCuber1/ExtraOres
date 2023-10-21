@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blasttartariteore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

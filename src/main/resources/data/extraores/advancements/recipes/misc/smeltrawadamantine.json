@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawadamantine"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

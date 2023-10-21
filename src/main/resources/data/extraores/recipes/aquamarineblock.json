@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:aquamarineblock"
-  }
+  },
+  "show_notification": true
 }

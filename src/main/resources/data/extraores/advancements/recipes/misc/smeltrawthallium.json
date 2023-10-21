@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawthallium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:azuresilveringot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

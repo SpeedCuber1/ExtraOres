@@ -34,5 +34,6 @@
     [
       "titanium"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

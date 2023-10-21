@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:americiumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

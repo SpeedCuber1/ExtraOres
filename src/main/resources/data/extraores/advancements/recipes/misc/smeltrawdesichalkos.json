@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawdesichalkos"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

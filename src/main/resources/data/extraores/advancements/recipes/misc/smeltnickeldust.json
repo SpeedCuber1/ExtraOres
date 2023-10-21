@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltnickeldust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

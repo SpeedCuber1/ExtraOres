@@ -34,5 +34,6 @@
     [
       "crimsonsteel"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

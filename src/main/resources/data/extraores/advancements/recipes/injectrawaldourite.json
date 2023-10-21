@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawaldourite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawaldourite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aldouriteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawaldourite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawaldourite"
+    ]
+  },
+  "sends_telemetry_event": true
+}

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastthalliumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

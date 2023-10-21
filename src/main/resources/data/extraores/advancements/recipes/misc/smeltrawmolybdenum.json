@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawmolybdenum"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

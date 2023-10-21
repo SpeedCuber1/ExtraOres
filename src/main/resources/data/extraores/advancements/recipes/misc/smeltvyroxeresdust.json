@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltvyroxeresdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltplatinumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

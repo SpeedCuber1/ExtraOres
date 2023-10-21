@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifycelenegil"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifycelenegil": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:celenegilshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifycelenegil",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifycelenegil"
+    ]
+  },
+  "sends_telemetry_event": true
+}

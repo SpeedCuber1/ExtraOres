@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:azuresilverblock"
-  }
+  },
+  "show_notification": true
 }

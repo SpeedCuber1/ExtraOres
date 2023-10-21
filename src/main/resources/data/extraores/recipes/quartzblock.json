@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:quartzblock"
-  }
+  },
+  "show_notification": true
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:zirconiumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrhodiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrhodiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rhodiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrhodiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrhodiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:spinel"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

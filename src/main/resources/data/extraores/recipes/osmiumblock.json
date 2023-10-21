@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:osmiumblock"
-  }
+  },
+  "show_notification": true
 }

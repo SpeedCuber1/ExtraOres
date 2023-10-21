@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:atlarusingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

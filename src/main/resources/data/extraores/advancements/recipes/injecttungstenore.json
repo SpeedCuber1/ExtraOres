@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injecttungstenore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injecttungstenore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tungstenore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injecttungstenore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injecttungstenore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

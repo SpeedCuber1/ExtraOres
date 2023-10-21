@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:aluminumblock"
-  }
+  },
+  "show_notification": true
 }

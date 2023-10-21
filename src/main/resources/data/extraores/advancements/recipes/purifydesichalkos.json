@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifydesichalkos"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifydesichalkos": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:desichalkosshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifydesichalkos",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifydesichalkos"
+    ]
+  },
+  "sends_telemetry_event": true
+}

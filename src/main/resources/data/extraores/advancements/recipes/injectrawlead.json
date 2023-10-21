@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawlead"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawlead": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:leadore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawlead",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawlead"
+    ]
+  },
+  "sends_telemetry_event": true
+}

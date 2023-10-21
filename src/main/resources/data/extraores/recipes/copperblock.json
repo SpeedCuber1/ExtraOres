@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:copperblock"
-  }
+  },
+  "show_notification": true
 }

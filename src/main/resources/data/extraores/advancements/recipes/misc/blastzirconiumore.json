@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastzirconiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -34,5 +34,6 @@
     [
       "tritium"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

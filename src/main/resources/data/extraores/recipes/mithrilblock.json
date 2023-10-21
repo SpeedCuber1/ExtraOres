@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:mithrilblock"
-  }
+  },
+  "show_notification": true
 }

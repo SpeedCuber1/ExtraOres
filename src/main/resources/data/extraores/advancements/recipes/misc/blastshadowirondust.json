@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastshadowirondust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:aldouriteblock"
-  }
+  },
+  "show_notification": true
 }

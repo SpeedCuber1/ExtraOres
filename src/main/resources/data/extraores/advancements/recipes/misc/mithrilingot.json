@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:mithrilingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

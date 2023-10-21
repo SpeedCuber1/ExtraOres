@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:nickelblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

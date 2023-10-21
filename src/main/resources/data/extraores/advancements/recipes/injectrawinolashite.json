@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawinolashite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawinolashite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:inolashiteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawinolashite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawinolashite"
+    ]
+  },
+  "sends_telemetry_event": true
+}

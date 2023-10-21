@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawsanguinite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawsanguinite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:sanguiniteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawsanguinite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawsanguinite"
+    ]
+  },
+  "sends_telemetry_event": true
+}

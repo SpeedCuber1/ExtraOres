@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:kyanite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

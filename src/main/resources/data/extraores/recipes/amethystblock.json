@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:amethystblock"
-  }
+  },
+  "show_notification": true
 }

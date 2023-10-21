@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawmanganese"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawmanganese": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:manganeseore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawmanganese",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawmanganese"
+    ]
+  },
+  "sends_telemetry_event": true
+}

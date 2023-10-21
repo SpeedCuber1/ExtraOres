@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injecttritiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injecttritiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tritiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injecttritiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injecttritiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

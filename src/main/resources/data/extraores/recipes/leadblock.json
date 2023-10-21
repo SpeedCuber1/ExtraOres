@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:leadblock"
-  }
+  },
+  "show_notification": true
 }

@@ -34,5 +34,6 @@
     [
       "rhenium"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:neptuniumblock"
-  }
+  },
+  "show_notification": true
 }

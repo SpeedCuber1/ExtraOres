@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastneptuniumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

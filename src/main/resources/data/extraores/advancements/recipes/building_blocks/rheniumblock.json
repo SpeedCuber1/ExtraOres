@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:rheniumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

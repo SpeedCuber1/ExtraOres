@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:amethystblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

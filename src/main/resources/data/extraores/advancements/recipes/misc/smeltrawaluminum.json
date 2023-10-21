@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawaluminum"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltlemuritedust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

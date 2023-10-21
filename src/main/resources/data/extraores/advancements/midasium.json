@@ -34,5 +34,6 @@
     [
       "midasium"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

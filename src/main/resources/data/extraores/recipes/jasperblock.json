@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:jasperblock"
-  }
+  },
+  "show_notification": true
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawlemurite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

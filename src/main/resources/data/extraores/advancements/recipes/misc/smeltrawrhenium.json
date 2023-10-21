@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawrhenium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

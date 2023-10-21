@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltneodymiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

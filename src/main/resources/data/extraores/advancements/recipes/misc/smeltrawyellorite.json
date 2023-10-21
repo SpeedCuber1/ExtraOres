@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawyellorite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

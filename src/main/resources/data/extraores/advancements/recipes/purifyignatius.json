@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyignatius"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyignatius": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ignatiusshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyignatius",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyignatius"
+    ]
+  },
+  "sends_telemetry_event": true
+}

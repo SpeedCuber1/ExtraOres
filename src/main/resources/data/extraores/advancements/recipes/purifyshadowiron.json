@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyshadowiron"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyshadowiron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:shadowironshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyshadowiron",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyshadowiron"
+    ]
+  },
+  "sends_telemetry_event": true
+}

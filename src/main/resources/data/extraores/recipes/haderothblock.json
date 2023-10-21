@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:haderothblock"
-  }
+  },
+  "show_notification": true
 }

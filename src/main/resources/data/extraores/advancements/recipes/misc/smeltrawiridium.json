@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawiridium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

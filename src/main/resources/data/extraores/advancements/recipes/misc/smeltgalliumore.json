@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltgalliumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

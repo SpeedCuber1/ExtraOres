@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltplutoniumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

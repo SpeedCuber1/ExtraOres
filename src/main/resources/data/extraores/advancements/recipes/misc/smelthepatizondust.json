@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smelthepatizondust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

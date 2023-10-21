@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawastralsilver"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

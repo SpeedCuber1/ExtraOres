@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltamordrinedust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

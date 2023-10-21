@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blasttantalumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

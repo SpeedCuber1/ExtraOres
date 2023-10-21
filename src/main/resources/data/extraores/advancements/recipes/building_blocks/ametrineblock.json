@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:ametrineblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

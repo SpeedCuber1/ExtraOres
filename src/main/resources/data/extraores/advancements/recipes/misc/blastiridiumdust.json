@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastiridiumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

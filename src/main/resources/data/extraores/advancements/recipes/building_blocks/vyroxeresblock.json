@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:vyroxeresblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawuranium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

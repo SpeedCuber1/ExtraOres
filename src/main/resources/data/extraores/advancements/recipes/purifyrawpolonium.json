@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawpolonium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawpolonium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawpolonium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawpolonium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawpolonium"
+    ]
+  },
+  "sends_telemetry_event": true
+}

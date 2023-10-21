@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:rutheniumblock"
-  }
+  },
+  "show_notification": true
 }

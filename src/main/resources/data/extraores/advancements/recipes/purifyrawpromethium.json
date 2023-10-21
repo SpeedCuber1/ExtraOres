@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawpromethium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawpromethium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawpromethium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawpromethium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawpromethium"
+    ]
+  },
+  "sends_telemetry_event": true
+}

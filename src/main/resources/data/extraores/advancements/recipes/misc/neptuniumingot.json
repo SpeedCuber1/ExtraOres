@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:neptuniumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

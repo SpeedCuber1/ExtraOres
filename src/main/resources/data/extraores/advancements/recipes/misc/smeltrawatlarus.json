@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawatlarus"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

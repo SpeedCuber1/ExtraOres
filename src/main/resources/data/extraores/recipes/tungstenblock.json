@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:tungstenblock"
-  }
+  },
+  "show_notification": true
 }

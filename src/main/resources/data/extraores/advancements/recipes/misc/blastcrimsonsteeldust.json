@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastcrimsonsteeldust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawcarmot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

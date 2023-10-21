@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:niobiumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

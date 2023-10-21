@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastchromiumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

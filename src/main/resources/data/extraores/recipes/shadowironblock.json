@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:shadowironblock"
-  }
+  },
+  "show_notification": true
 }

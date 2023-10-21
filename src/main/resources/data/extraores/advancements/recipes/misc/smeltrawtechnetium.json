@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawtechnetium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

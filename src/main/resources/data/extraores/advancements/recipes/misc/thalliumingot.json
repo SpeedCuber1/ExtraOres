@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:thalliumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

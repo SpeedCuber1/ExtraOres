@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltbismuthdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

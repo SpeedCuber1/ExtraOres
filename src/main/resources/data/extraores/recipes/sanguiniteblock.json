@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:sanguiniteblock"
-  }
+  },
+  "show_notification": true
 }

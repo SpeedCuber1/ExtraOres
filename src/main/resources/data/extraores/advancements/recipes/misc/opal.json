@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:opal"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

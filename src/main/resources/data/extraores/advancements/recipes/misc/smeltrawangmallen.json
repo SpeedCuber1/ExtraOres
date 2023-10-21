@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawangmallen"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

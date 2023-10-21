@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastrheniumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:hepatizonblock"
-  }
+  },
+  "show_notification": true
 }

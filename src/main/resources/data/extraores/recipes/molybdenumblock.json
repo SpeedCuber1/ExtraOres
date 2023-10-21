@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:molybdenumblock"
-  }
+  },
+  "show_notification": true
 }

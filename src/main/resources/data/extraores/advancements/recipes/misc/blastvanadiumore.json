@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastvanadiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

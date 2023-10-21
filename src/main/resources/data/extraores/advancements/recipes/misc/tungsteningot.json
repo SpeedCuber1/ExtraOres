@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:tungsteningot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:malachiteblock"
-  }
+  },
+  "show_notification": true
 }

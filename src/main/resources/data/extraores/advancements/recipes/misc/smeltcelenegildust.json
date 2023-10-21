@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltcelenegildust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

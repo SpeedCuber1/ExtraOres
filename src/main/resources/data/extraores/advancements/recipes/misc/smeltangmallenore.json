@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltangmallenore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

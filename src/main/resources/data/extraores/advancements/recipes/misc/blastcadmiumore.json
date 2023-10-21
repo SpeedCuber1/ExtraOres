@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastcadmiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

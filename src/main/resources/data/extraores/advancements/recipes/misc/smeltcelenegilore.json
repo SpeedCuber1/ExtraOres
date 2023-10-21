@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltcelenegilore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

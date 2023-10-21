@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastinolashiteore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

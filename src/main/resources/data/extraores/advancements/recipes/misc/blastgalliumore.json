@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastgalliumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

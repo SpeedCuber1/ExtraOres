@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:infuscoliumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyatlarus"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyatlarus": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:atlarusshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyatlarus",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyatlarus"
+    ]
+  },
+  "sends_telemetry_event": true
+}

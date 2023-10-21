@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltinfuscoliumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

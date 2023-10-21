@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawoureclase"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

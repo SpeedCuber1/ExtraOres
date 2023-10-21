@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:tritiumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

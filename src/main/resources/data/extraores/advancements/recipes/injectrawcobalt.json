@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawcobalt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawcobalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cobaltore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawcobalt",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawcobalt"
+    ]
+  },
+  "sends_telemetry_event": true
+}

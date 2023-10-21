@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:lemuriteblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

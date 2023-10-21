@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyosmiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyosmiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:osmiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyosmiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyosmiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

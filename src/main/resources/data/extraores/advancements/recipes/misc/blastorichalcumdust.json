@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastorichalcumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

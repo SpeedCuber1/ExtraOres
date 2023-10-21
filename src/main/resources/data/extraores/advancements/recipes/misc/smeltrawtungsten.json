@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawtungsten"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

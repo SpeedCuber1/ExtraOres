@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blasthaderothore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

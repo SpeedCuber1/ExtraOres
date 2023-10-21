@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:platinumblock"
-  }
+  },
+  "show_notification": true
 }

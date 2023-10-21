@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltvibraniumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

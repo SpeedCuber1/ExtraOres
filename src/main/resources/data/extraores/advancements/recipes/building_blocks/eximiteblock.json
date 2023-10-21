@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:eximiteblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

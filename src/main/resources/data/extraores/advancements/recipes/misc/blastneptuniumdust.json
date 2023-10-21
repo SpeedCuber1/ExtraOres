@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastneptuniumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

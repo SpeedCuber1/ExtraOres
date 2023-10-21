@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blastplatinumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

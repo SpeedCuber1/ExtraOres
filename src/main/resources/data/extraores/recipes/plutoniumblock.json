@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:plutoniumblock"
-  }
+  },
+  "show_notification": true
 }

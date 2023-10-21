@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:phoenixiteblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

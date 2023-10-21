@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltleadore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

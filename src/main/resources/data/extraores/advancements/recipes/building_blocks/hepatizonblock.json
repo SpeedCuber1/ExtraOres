@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:hepatizonblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

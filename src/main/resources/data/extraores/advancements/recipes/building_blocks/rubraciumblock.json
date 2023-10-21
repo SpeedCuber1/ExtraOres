@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:rubraciumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

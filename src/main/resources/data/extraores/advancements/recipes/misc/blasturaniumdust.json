@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blasturaniumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

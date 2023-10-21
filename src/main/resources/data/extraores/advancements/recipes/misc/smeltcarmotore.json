@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltcarmotore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

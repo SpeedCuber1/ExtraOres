@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:adamantineblock"
-  }
+  },
+  "show_notification": true
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:blasteximitedust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

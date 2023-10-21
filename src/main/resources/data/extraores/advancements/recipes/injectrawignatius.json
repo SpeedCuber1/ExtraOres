@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawignatius"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawignatius": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ignatiusore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawignatius",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawignatius"
+    ]
+  },
+  "sends_telemetry_event": true
+}

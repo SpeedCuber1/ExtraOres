@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltkalendritedust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

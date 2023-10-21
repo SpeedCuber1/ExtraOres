@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:chrysocolla"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

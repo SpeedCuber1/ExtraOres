@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyamordrineore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyamordrineore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:amordrineore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyamordrineore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyamordrineore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

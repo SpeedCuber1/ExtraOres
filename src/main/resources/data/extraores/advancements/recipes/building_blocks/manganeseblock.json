@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:manganeseblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyadamantineore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyadamantineore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:adamantineore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyadamantineore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyadamantineore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

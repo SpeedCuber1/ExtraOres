@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:carmotblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

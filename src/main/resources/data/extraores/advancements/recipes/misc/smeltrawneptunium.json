@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawneptunium"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

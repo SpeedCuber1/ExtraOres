@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrhodiumore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

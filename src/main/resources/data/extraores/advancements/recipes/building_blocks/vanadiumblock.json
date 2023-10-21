@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:vanadiumblock"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

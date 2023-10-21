@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltcopperdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

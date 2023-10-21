@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:palladiumblock"
-  }
+  },
+  "show_notification": true
 }

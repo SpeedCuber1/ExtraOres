@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltosmiumdust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

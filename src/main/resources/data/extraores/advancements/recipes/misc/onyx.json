@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:onyx"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

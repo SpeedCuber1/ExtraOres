@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawhepatizon"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

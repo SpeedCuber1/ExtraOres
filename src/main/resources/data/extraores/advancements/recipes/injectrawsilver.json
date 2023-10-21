@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawsilver"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawsilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:silverore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawsilver",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawsilver"
+    ]
+  },
+  "sends_telemetry_event": true
+}

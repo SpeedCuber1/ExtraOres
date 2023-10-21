@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:vyroxeresblock"
-  }
+  },
+  "show_notification": true
 }

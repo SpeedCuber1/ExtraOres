@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:palladiumingot"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

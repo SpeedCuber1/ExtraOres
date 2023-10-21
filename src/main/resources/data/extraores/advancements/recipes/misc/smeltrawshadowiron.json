@@ -30,5 +30,6 @@
     "recipes": [
       "extraores:smeltrawshadowiron"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

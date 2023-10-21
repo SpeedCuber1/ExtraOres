@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:eximiteblock"
-  }
+  },
+  "show_notification": true
 }

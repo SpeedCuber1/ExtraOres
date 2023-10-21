@@ -13,5 +13,6 @@
   ],
   "result": {
     "item": "extraores:midasiumblock"
-  }
+  },
+  "show_notification": true
 }
