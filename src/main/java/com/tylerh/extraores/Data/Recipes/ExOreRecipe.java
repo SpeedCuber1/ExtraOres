@@ -2497,7 +2497,7 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAtlarus), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAtlarus.get(), 4))
                 .addCriterion("injectrawatlarus", has(ItemList.itemRawAtlarus.get()))
                 .build(consumer, new ResourceLocation("extraores:injectrawatlarus"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAzureSilver),IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemShardAzureSilver.get(),4))
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAzureSilver),IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardAzureSilver.get(),4))
                 .addCriterion("injectrawazuresilver",has(ItemList.itemRawAzureSilver.get()))
                 .build(consumer,new ResourceLocation("extraores:injectrawazuresilver"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardBismuth.get(), 4))
