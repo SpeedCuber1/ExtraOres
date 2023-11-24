@@ -83,8 +83,8 @@ dependencies {
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
     runtimeOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.2.0.27")
-    runtimeOnly fg.deobf("mekanism:Mekanism:1.20.1-10.4.2.16")
-    compileOnly fg.deobf("mekanism:Mekanism:1.20.1-10.4.2.16:api")
+    runtimeOnly fg.deobf("mekanism:Mekanism:1.20.1-10.4.5.19")
+    compileOnly fg.deobf("mekanism:Mekanism:1.20.1-10.4.5.19:api")
     // Real examples
     //compile fileTree('libs')
     // compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
