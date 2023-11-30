@@ -1,7 +1,6 @@
 package com.tylerh.extraores.Init;
 
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class PlacedFeatureList

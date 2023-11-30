@@ -39,6 +39,7 @@ public class InitBlocks
             BlockList.blockOreAgate = register("agateore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAgate = register("agateblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAgate = register("deepslateagateore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreAgate = register("enderagateore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerAldourite.get())
         {
@@ -62,12 +63,14 @@ public class InitBlocks
             BlockList.blockOreAmethyst = register("amethystore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAmethyst = register("amethystblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAmethyst = register("deepslateamethystore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreAmethyst = register("enderamethystore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerAmetrine.get())
         {
             BlockList.blockOreAmetrine = register("ametrineore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAmetrine = register("ametrineblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAmetrine = register("deepslateametrineore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreAmetrine = register("enderametrineore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerAmordrine.get())
         {
@@ -86,6 +89,7 @@ public class InitBlocks
             BlockList.blockOreAquamarine = register("aquamarineore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAquamarine = register("aquamarineblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAquamarine = register("deepslateaquamarineore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreAquamarine = register("enderaquamarineore", () -> new BlockEXOre(1.5F,1.F));
         }
         if (ConfigRegistryList.registerAstralSilver.get())
         {
@@ -151,12 +155,14 @@ public class InitBlocks
             BlockList.blockOreChrysocolla = register("chrysocollaore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockChrysocolla = register("chrysocollablock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreChrysocolla = register("deepslatechrysocollaore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreChrysocolla = register("enderchrysocollaore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerCitrine.get())
         {
             BlockList.blockOreCitrine = register("citrineore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockCitrine = register("citrineblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreCitrine = register("deepslatecitrineore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreCitrine = register("endercitrineore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerCobalt.get())
         {
@@ -205,6 +211,7 @@ public class InitBlocks
             BlockList.blockOreGarnet = register("garnetore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockGarnet = register("garnetblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreGarnet = register("deepslategarnetore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreGarnet = register("endergarnetore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerHaderoth.get())
         {
@@ -246,6 +253,7 @@ public class InitBlocks
             BlockList.blockOreIolite = register("ioliteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockIolite = register("ioliteblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreIolite = register("deepslateioliteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreIolite = register("enderioliteore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerIridium.get())
         {
@@ -258,12 +266,14 @@ public class InitBlocks
             BlockList.blockOreJade = register("jadeore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockJade = register("jadeblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreJade = register("deepslatejadeore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreJade = register("enderjadeore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerJasper.get())
         {
             BlockList.blockOreJasper = register("jasperore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockJasper = register("jasperblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreJasper = register("deepslatejasperore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreJasper = register("enderjasperore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerKalendrite.get())
         {
@@ -275,6 +285,7 @@ public class InitBlocks
             BlockList.blockOreKyanite = register("kyaniteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockKyanite = register("kyaniteblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreKyanite = register("deepslatekyaniteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreKyanite = register("enderkyaniteore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerLead.get())
         {
@@ -292,6 +303,7 @@ public class InitBlocks
             BlockList.blockOreMalachite = register("malachiteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockMalachite = register("malachiteblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreMalachite = register("deepslatemalachiteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreMalachite = register("endermalachiteore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerManganese.get())
         {
@@ -351,12 +363,14 @@ public class InitBlocks
             BlockList.blockOreOnyx = register("onyxore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockOnyx = register("onyxblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreOnyx = register("deepslateonyxore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreOnyx = register("enderonyxore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerOpal.get())
         {
             BlockList.blockOreOpal = register("opalore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockOpal = register("opalblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreOpal = register("deepslateopalore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreOpal = register("enderopalore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerOrichalcum.get())
         {
@@ -387,12 +401,14 @@ public class InitBlocks
             BlockList.blockOrePeridot = register("peridotore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockPeridot = register("peridotblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOrePeridot = register("deepslateperidotore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOrePeridot = register("enderperidotore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerPhoenixite.get())
         {
             BlockList.blockOrePhoenixite = register("phoenixiteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockPhoenixite = register("phoenixiteblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOrePhoenixite = register("deepslatephoenixiteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOrePhoenixite = register("enderphoenixiteore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerPlatinum.get())
         {
@@ -423,6 +439,7 @@ public class InitBlocks
             BlockList.blockOreQuartz = register("quartzore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockQuartz = register("quartzblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreQuartz = register("deepslatequartzore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreQuartz = register("enderquartzore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerRhenium.get())
         {
@@ -447,6 +464,7 @@ public class InitBlocks
             BlockList.blockOreRuby = register("rubyore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockRuby = register("rubyblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreRuby = register("deepslaterubyore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreRuby = register("enderrubyore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerRuthenium.get())
         {
@@ -464,6 +482,7 @@ public class InitBlocks
             BlockList.blockOreSapphire = register("sapphireore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockSapphire = register("sapphireblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreSapphire = register("deepslatesapphireore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreSapphire = register("endersapphireore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerShadowIron.get())
         {
@@ -481,12 +500,14 @@ public class InitBlocks
             BlockList.blockOreSpinel = register("spinelore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockSpinel = register("spinelblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreSpinel = register("deepslatespinelore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreSpinel = register("enderspinelore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerSugilite.get())
         {
             BlockList.blockOreSugilite = register("sugiliteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockSugilite = register("sugiliteblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreSugilite = register("deepslatesugiliteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreSugilite = register("endersugiliteore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTantalum.get())
         {
@@ -499,6 +520,7 @@ public class InitBlocks
             BlockList.blockOreTanzanite = register("tanzaniteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockTanzanite = register("tanzaniteblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreTanzanite = register("deepslatetanzaniteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreTanzanite = register("endertanzaniteore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTartarite.get())
         {
@@ -535,12 +557,14 @@ public class InitBlocks
             BlockList.blockOreTopaz = register("topazore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockTopaz = register("topazblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreTopaz = register("deepslatetopazore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreTopaz = register("endertopazore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTourmaline.get())
         {
             BlockList.blockOreTourmaline = register("tourmalineore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockTourmaline = register("tourmalineblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreTourmaline = register("deepslatetourmalineore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreTourmaline = register("endertourmalineore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ConfigRegistryList.registerTritium.get())
         {
@@ -559,6 +583,7 @@ public class InitBlocks
             BlockList.blockOreTurquoise = register("turquoiseore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockTurquoise = register("turquoiseblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreTurquoise = register("deepslateturquoiseore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreTurquoise = register("enderturquoiseore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if (ConfigRegistryList.registerUnobtainium.get())
         {

@@ -29,6 +29,7 @@ public class ExOreConfiguredFeature
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
         if(ConfigRegistryList.registerAdamantine.get())
         {
             ConfiguredFeatureList.featureAdamantine = registerKey("adamantineore");
@@ -43,7 +44,8 @@ public class ExOreConfiguredFeature
             ConfiguredFeatureList.featureAgate = registerKey("agateore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreAgate.get().defaultBlockState()),
-                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAgate.get().defaultBlockState())
+                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAgate.get().defaultBlockState()),
+                    OreConfiguration.target(endReplaceables,BlockList.blockEnderOreAgate.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureAgate,Feature.ORE,new OreConfiguration(target,size));
         }
