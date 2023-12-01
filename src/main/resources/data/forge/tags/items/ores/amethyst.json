@@ -1,6 +1,7 @@
 {
   "values": [
     "extraores:amethystore",
-    "extraores:deepslateamethystore"
+    "extraores:deepslateamethystore",
+    "extraores:enderamethystore"
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectazuresilverore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectazuresilverore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:azuresilverore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectazuresilverore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectazuresilverore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

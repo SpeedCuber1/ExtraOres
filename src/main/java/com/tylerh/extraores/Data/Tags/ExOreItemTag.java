@@ -136,7 +136,6 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.oreYellorium).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreYellorite.get().asItem()).get());
         tag(ItemTagList.oreZinc).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreZinc.get().asItem()).get());
         tag(ItemTagList.oreZirconium).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockOreZirconium.get().asItem()).get());
-
         //Ore Deepslate
         tag(ItemTagList.oreAdamantine).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreAdamantine.get().asItem()).get());
         tag(ItemTagList.oreAgate).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreAgate.get().asItem()).get());
@@ -228,6 +227,32 @@ public class ExOreItemTag extends TagsProvider<Item>
         tag(ItemTagList.oreYellorium).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreYellorite.get().asItem()).get());
         tag(ItemTagList.oreZinc).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreZinc.get().asItem()).get());
         tag(ItemTagList.oreZirconium).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockDeepslateOreZirconium.get().asItem()).get());
+        //Ores End Stone
+        tag(ItemTagList.oreAgate).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreAgate.get().asItem()).get());
+        tag(ItemTagList.oreAmethyst).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreAmethyst.get().asItem()).get());
+        tag(ItemTagList.oreAmetrine).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreAmetrine.get().asItem()).get());
+        tag(ItemTagList.oreAquamarine).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreAquamarine.get().asItem()).get());
+        tag(ItemTagList.oreChrysocolla).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreChrysocolla.get().asItem()).get());
+        tag(ItemTagList.oreCitrine).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreCitrine.get().asItem()).get());
+        tag(ItemTagList.oreGarnet).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreGarnet.get().asItem()).get());
+        tag(ItemTagList.oreIolite).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreIolite.get().asItem()).get());
+        tag(ItemTagList.oreJade).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreJade.get().asItem()).get());
+        tag(ItemTagList.oreJasper).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreJasper.get().asItem()).get());
+        tag(ItemTagList.oreKyanite).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreKyanite.get().asItem()).get());
+        tag(ItemTagList.oreMalachite).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreMalachite.get().asItem()).get());
+        tag(ItemTagList.oreOnyx).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreOnyx.get().asItem()).get());
+        tag(ItemTagList.oreOpal).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreOpal.get().asItem()).get());
+        tag(ItemTagList.orePeridot).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOrePeridot.get().asItem()).get());
+        tag(ItemTagList.orePhoenixite).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOrePhoenixite.get().asItem()).get());
+        tag(ItemTagList.oreQuartz).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreQuartz.get().asItem()).get());
+        tag(ItemTagList.oreRuby).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreRuby.get().asItem()).get());
+        tag(ItemTagList.oreSapphire).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreSapphire.get().asItem()).get());
+        tag(ItemTagList.oreSpinel).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreSpinel.get().asItem()).get());
+        tag(ItemTagList.oreSugilite).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreSugilite.get().asItem()).get());
+        tag(ItemTagList.oreTanzanite).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreTanzanite.get().asItem()).get());
+        tag(ItemTagList.oreTopaz).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreTopaz.get().asItem()).get());
+        tag(ItemTagList.oreTourmaline).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreTourmaline.get().asItem()).get());
+        tag(ItemTagList.oreTurquoise).add(ForgeRegistries.ITEMS.getResourceKey(BlockList.blockEnderOreTurquoise.get().asItem()).get());
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAdamantine);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAgate);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreAldourite);

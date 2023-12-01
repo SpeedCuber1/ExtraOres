@@ -211,6 +211,32 @@ public class ExOreLootTable extends BlockLootSubProvider
         createFortune(BlockList.blockDeepslateOreYellorite,ItemList.itemRawYellorite);
         createFortune(BlockList.blockDeepslateOreZinc,ItemList.itemRawZinc);
         createFortune(BlockList.blockDeepslateOreZirconium,ItemList.itemRawZirconium);
+        //Ore End Stone
+        createFortune(BlockList.blockEnderOreAgate,ItemList.itemGemAgate);
+        createFortune(BlockList.blockEnderOreAmethyst,ItemList.itemGemAmethyst);
+        createFortune(BlockList.blockEnderOreAmetrine,ItemList.itemGemAmetrine);
+        createFortune(BlockList.blockEnderOreAquamarine,ItemList.itemGemAquamarine);
+        createFortune(BlockList.blockEnderOreChrysocolla,ItemList.itemGemChrysocolla);
+        createFortune(BlockList.blockEnderOreCitrine,ItemList.itemGemCitrine);
+        createFortune(BlockList.blockEnderOreGarnet,ItemList.itemGemGarnet);
+        createFortune(BlockList.blockEnderOreIolite,ItemList.itemGemIolite);
+        createFortune(BlockList.blockEnderOreJade,ItemList.itemGemJade);
+        createFortune(BlockList.blockEnderOreJasper,ItemList.itemGemJasper);
+        createFortune(BlockList.blockEnderOreKyanite,ItemList.itemGemKyanite);
+        createFortune(BlockList.blockEnderOreMalachite,ItemList.itemGemMalachite);
+        createFortune(BlockList.blockEnderOreOnyx,ItemList.itemGemOnyx);
+        createFortune(BlockList.blockEnderOreOpal,ItemList.itemGemOpal);
+        createFortune(BlockList.blockEnderOrePeridot,ItemList.itemGemPeridot);
+        createFortune(BlockList.blockEnderOrePhoenixite,ItemList.itemGemPhoenixite);
+        createFortune(BlockList.blockEnderOreQuartz,ItemList.itemGemQuartz);
+        createFortune(BlockList.blockEnderOreRuby,ItemList.itemGemRuby);
+        createFortune(BlockList.blockEnderOreSapphire,ItemList.itemGemSapphire);
+        createFortune(BlockList.blockEnderOreSpinel,ItemList.itemGemSpinel);
+        createFortune(BlockList.blockEnderOreSugilite,ItemList.itemGemSugilite);
+        createFortune(BlockList.blockEnderOreTanzanite,ItemList.itemGemTanzanite);
+        createFortune(BlockList.blockEnderOreTopaz,ItemList.itemGemTopaz);
+        createFortune(BlockList.blockEnderOreTourmaline,ItemList.itemGemTourmaline);
+        createFortune(BlockList.blockEnderOreTurquoise,ItemList.itemGemTurquoise);
         //Blocks
         createStandardTable(BlockList.blockAdamantine);
         createStandardTable(BlockList.blockAgate);
