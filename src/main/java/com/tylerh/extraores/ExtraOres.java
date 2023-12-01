@@ -244,6 +244,32 @@ public class ExtraOres
         event.accept(BlockList.blockDeepslateOreYellorite.get().asItem());
         event.accept(BlockList.blockDeepslateOreZinc.get().asItem());
         event.accept(BlockList.blockDeepslateOreZirconium.get().asItem());
+        //Ore End Stone
+        event.accept(BlockList.blockEnderOreAgate.get().asItem());
+        event.accept(BlockList.blockEnderOreAmethyst.get().asItem());
+        event.accept(BlockList.blockEnderOreAmetrine.get().asItem());
+        event.accept(BlockList.blockEnderOreAquamarine.get().asItem());
+        event.accept(BlockList.blockEnderOreChrysocolla.get().asItem());
+        event.accept(BlockList.blockEnderOreCitrine.get().asItem());
+        event.accept(BlockList.blockEnderOreGarnet.get().asItem());
+        event.accept(BlockList.blockEnderOreIolite.get().asItem());
+        event.accept(BlockList.blockEnderOreJade.get().asItem());
+        event.accept(BlockList.blockEnderOreJasper.get().asItem());
+        event.accept(BlockList.blockEnderOreKyanite.get().asItem());
+        event.accept(BlockList.blockEnderOreMalachite.get().asItem());
+        event.accept(BlockList.blockEnderOreOnyx.get().asItem());
+        event.accept(BlockList.blockEnderOreOpal.get().asItem());
+        event.accept(BlockList.blockEnderOrePeridot.get().asItem());
+        event.accept(BlockList.blockEnderOrePhoenixite.get().asItem());
+        event.accept(BlockList.blockEnderOreQuartz.get().asItem());
+        event.accept(BlockList.blockEnderOreRuby.get().asItem());
+        event.accept(BlockList.blockEnderOreSapphire.get().asItem());
+        event.accept(BlockList.blockEnderOreSpinel.get().asItem());
+        event.accept(BlockList.blockEnderOreSugilite.get().asItem());
+        event.accept(BlockList.blockEnderOreTanzanite.get().asItem());
+        event.accept(BlockList.blockEnderOreTopaz.get().asItem());
+        event.accept(BlockList.blockEnderOreTourmaline.get().asItem());
+        event.accept(BlockList.blockEnderOreTurquoise.get().asItem());
         //Blocks
         event.accept(BlockList.blockAdamantine.get().asItem());
         event.accept(BlockList.blockAgate.get().asItem());
