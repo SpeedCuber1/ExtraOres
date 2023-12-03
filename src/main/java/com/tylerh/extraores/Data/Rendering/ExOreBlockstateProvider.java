@@ -1,6 +1,7 @@
 package com.tylerh.extraores.Data.Rendering;
 
 import com.tylerh.extraores.Init.BlockList;
+import com.tylerh.extraores.Init.ItemList;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
@@ -208,6 +209,32 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockDeepslateOreYellorite);
         blockWithItem(BlockList.blockDeepslateOreZinc);
         blockWithItem(BlockList.blockDeepslateOreZirconium);
+        //Ore End Stone
+        blockWithItem(BlockList.blockEnderOreAgate);
+        blockWithItem(BlockList.blockEnderOreAmethyst);
+        blockWithItem(BlockList.blockEnderOreAmetrine);
+        blockWithItem(BlockList.blockEnderOreAquamarine);
+        blockWithItem(BlockList.blockEnderOreChrysocolla);
+        blockWithItem(BlockList.blockEnderOreCitrine);
+        blockWithItem(BlockList.blockEnderOreGarnet);
+        blockWithItem(BlockList.blockEnderOreIolite);
+        blockWithItem(BlockList.blockEnderOreJade);
+        blockWithItem(BlockList.blockEnderOreJasper);
+        blockWithItem(BlockList.blockEnderOreKyanite);
+        blockWithItem(BlockList.blockEnderOreMalachite);
+        blockWithItem(BlockList.blockEnderOreOnyx);
+        blockWithItem(BlockList.blockEnderOreOpal);
+        blockWithItem(BlockList.blockEnderOrePeridot);
+        blockWithItem(BlockList.blockEnderOrePhoenixite);
+        blockWithItem(BlockList.blockEnderOreQuartz);
+        blockWithItem(BlockList.blockEnderOreRuby);
+        blockWithItem(BlockList.blockEnderOreSapphire);
+        blockWithItem(BlockList.blockEnderOreSpinel);
+        blockWithItem(BlockList.blockEnderOreSugilite);
+        blockWithItem(BlockList.blockEnderOreTanzanite);
+        blockWithItem(BlockList.blockEnderOreTopaz);
+        blockWithItem(BlockList.blockEnderOreTourmaline);
+        blockWithItem(BlockList.blockEnderOreTurquoise);
         //Blocks
         blockWithItem(BlockList.blockAdamantine);
         blockWithItem(BlockList.blockAgate);

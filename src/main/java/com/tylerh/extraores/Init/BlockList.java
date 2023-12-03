@@ -195,6 +195,32 @@ public class BlockList
     public static RegistryObject<Block> blockDeepslateOreYellorite;
     public static RegistryObject<Block> blockDeepslateOreZinc;
     public static RegistryObject<Block> blockDeepslateOreZirconium;
+    //Ore End Stone
+    public static RegistryObject<Block> blockEnderOreAgate;
+    public static RegistryObject<Block> blockEnderOreAmethyst;
+    public static RegistryObject<Block> blockEnderOreAmetrine;
+    public static RegistryObject<Block> blockEnderOreAquamarine;
+    public static RegistryObject<Block> blockEnderOreChrysocolla;
+    public static RegistryObject<Block> blockEnderOreCitrine;
+    public static RegistryObject<Block> blockEnderOreGarnet;
+    public static RegistryObject<Block> blockEnderOreIolite;
+    public static RegistryObject<Block> blockEnderOreJade;
+    public static RegistryObject<Block> blockEnderOreJasper;
+    public static RegistryObject<Block> blockEnderOreKyanite;
+    public static RegistryObject<Block> blockEnderOreMalachite;
+    public static RegistryObject<Block> blockEnderOreOnyx;
+    public static RegistryObject<Block> blockEnderOreOpal;
+    public static RegistryObject<Block> blockEnderOrePeridot;
+    public static RegistryObject<Block> blockEnderOrePhoenixite;
+    public static RegistryObject<Block> blockEnderOreQuartz;
+    public static RegistryObject<Block> blockEnderOreRuby;
+    public static RegistryObject<Block> blockEnderOreSapphire;
+    public static RegistryObject<Block> blockEnderOreSpinel;
+    public static RegistryObject<Block> blockEnderOreSugilite;
+    public static RegistryObject<Block> blockEnderOreTanzanite;
+    public static RegistryObject<Block> blockEnderOreTopaz;
+    public static RegistryObject<Block> blockEnderOreTourmaline;
+    public static RegistryObject<Block> blockEnderOreTurquoise;
     //Blocks
     public static RegistryObject<Block> blockAdamantine;
     public static RegistryObject<Block> blockAgate;

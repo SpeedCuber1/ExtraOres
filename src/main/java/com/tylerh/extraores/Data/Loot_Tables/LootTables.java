@@ -204,6 +204,33 @@ public class LootTables extends BaseLootTableProvider
         lootTables.put(BlockList.blockDeepslateOreYellorite.get(),createFortune("deepslateyelloriteore",BlockList.blockDeepslateOreYellorite.get(),ItemList.itemRawYellorite.get()));
         lootTables.put(BlockList.blockDeepslateOreZinc.get(),createFortune("deepslatezincore",BlockList.blockDeepslateOreZinc.get(),ItemList.itemRawZinc.get()));
         lootTables.put(BlockList.blockDeepslateOreZirconium.get(),createFortune("deepslatezirconiumore",BlockList.blockDeepslateOreZirconium.get(),ItemList.itemRawZirconium.get()));
+        //Ore End Stone
+        lootTables.put(BlockList.blockEnderOreAgate.get(),createFortune("enderagateore",BlockList.blockEnderOreAgate.get(),ItemList.itemGemAgate.get()));
+        lootTables.put(BlockList.blockEnderOreAmethyst.get(),createFortune("enderamethystore",BlockList.blockEnderOreAmethyst.get(),ItemList.itemGemAmethyst.get()));
+        lootTables.put(BlockList.blockEnderOreAmetrine.get(),createFortune("enderametrineore",BlockList.blockEnderOreAmetrine.get(),ItemList.itemGemAmetrine.get()));
+        lootTables.put(BlockList.blockEnderOreAquamarine.get(),createFortune("enderaquamarineore",BlockList.blockEnderOreAquamarine.get(),ItemList.itemGemAquamarine.get()));
+        lootTables.put(BlockList.blockEnderOreChrysocolla.get(),createFortune("enderchrysocollaore",BlockList.blockEnderOreChrysocolla.get(),ItemList.itemGemChrysocolla.get()));
+        lootTables.put(BlockList.blockEnderOreCitrine.get(),createFortune("endercitrineore",BlockList.blockEnderOreCitrine.get(),ItemList.itemGemCitrine.get()));
+        lootTables.put(BlockList.blockEnderOreGarnet.get(),createFortune("endergarnetore",BlockList.blockEnderOreGarnet.get(),ItemList.itemGemGarnet.get()));
+        lootTables.put(BlockList.blockEnderOreIolite.get(),createFortune("enderioliteore",BlockList.blockEnderOreIolite.get(),ItemList.itemGemIolite.get()));
+        lootTables.put(BlockList.blockEnderOreJade.get(),createFortune("enderjadeore",BlockList.blockEnderOreJade.get(),ItemList.itemGemJade.get()));
+        lootTables.put(BlockList.blockEnderOreJasper.get(),createFortune("enderjasperore",BlockList.blockEnderOreJasper.get(),ItemList.itemGemJasper.get()));
+        lootTables.put(BlockList.blockEnderOreKyanite.get(),createFortune("enderkyaniteore",BlockList.blockEnderOreKyanite.get(),ItemList.itemGemKyanite.get()));
+        lootTables.put(BlockList.blockEnderOreMalachite.get(),createFortune("endermalachiteore",BlockList.blockEnderOreMalachite.get(),ItemList.itemGemMalachite.get()));
+        lootTables.put(BlockList.blockEnderOreOnyx.get(),createFortune("enderonyxore",BlockList.blockEnderOreOnyx.get(),ItemList.itemGemOnyx.get()));
+        lootTables.put(BlockList.blockEnderOreOpal.get(),createFortune("enderopalore",BlockList.blockEnderOreOpal.get(),ItemList.itemGemOpal.get()));
+        lootTables.put(BlockList.blockEnderOrePeridot.get(),createFortune("enderperidotore",BlockList.blockEnderOrePeridot.get(),ItemList.itemGemPeridot.get()));
+        lootTables.put(BlockList.blockEnderOrePhoenixite.get(),createFortune("enderphoenixiteore",BlockList.blockEnderOrePhoenixite.get(),ItemList.itemGemPhoenixite.get()));
+        lootTables.put(BlockList.blockEnderOreQuartz.get(),createFortune("enderquartzore",BlockList.blockEnderOreQuartz.get(),ItemList.itemGemQuartz.get()));
+        lootTables.put(BlockList.blockEnderOreRuby.get(),createFortune("enderrubyore",BlockList.blockEnderOreRuby.get(),ItemList.itemGemRuby.get()));
+        lootTables.put(BlockList.blockEnderOreSapphire.get(),createFortune("endersapphireore",BlockList.blockEnderOreSapphire.get(),ItemList.itemGemSapphire.get()));
+        lootTables.put(BlockList.blockEnderOreSpinel.get(),createFortune("enderspinelore",BlockList.blockEnderOreSpinel.get(),ItemList.itemGemSpinel.get()));
+        lootTables.put(BlockList.blockEnderOreSugilite.get(),createFortune("endersugiliteore",BlockList.blockEnderOreSugilite.get(),ItemList.itemGemSugilite.get()));
+        lootTables.put(BlockList.blockEnderOreTanzanite.get(),createFortune("endertanzaniteore",BlockList.blockEnderOreTanzanite.get(),ItemList.itemGemTanzanite.get()));
+        lootTables.put(BlockList.blockEnderOreTopaz.get(),createFortune("endertopazore",BlockList.blockEnderOreTopaz.get(),ItemList.itemGemTopaz.get()));
+        lootTables.put(BlockList.blockEnderOreTourmaline.get(),createFortune("endertourmalineore",BlockList.blockEnderOreTourmaline.get(),ItemList.itemGemTourmaline.get()));
+        lootTables.put(BlockList.blockEnderOreTurquoise.get(),createFortune("enderturquoiseore",BlockList.blockEnderOreTurquoise.get(),ItemList.itemGemTurquoise.get()));
+        
         //Blocks
         lootTables.put(BlockList.blockAdamantine.get(),createStandardTable("adamantineblock",BlockList.blockAdamantine.get()));
         lootTables.put(BlockList.blockAgate.get(),createStandardTable("agateblock",BlockList.blockAgate.get()));
