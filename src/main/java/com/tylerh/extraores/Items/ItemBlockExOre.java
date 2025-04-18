@@ -7,8 +7,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.level.Level;
-import javax.annotation.Nullable;
 import java.util.List;
 
 public class ItemBlockExOre extends BlockItem
@@ -19,7 +17,7 @@ public class ItemBlockExOre extends BlockItem
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> list, TooltipFlag flag)
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> list, TooltipFlag flag)
     {
         for (int i = 0; i < ModInfo.blockNames.length; i++)
         {

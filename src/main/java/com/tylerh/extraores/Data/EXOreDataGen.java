@@ -1,18 +1,18 @@
 package com.tylerh.extraores.Data;
 
-import com.tylerh.extraores.Data.Advancements.ExOreAdvancementGenerator;
+import com.tylerh.extraores.Data.Advancements.ExOreAdvancementProvider;
 import com.tylerh.extraores.Data.Loot_Tables.ExOreLootTableProvider;
 import com.tylerh.extraores.Data.Recipes.ExOreRecipe;
 import com.tylerh.extraores.Data.Rendering.ExOreBlockstateProvider;
 import com.tylerh.extraores.Data.Rendering.ExOreItemModelProvider;
 import com.tylerh.extraores.Data.Tags.ExOreBlockTag;
 import com.tylerh.extraores.Data.Tags.ExOreItemTag;
-import com.tylerh.extraores.Data.World.ExOreWorldGenProvider;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import com.tylerh.extraores.Util.ModInfo;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = ModInfo.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class EXOreDataGen
 {
     @SubscribeEvent
@@ -22,13 +22,13 @@ public class EXOreDataGen
         var packOutput = generator.getPackOutput();
         var existingFileHelper = event.getExistingFileHelper();
         var lookupProvider = event.getLookupProvider();
-        generator.addProvider(true, ExOreLootTableProvider.create(packOutput));
-        generator.addProvider(true,new ExOreAdvancementGenerator(packOutput));
-        generator.addProvider(true,new ExOreRecipe(packOutput));
+        generator.addProvider(true, ExOreLootTableProvider.create(packOutput,lookupProvider));
+        generator.addProvider(true,new ExOreAdvancementProvider(packOutput,lookupProvider,existingFileHelper));
+        generator.addProvider(true,new ExOreRecipe(packOutput,lookupProvider));
         generator.addProvider(true,new ExOreBlockTag(packOutput,lookupProvider,existingFileHelper));
         generator.addProvider(true,new ExOreItemTag(packOutput,lookupProvider,existingFileHelper));
         generator.addProvider(true,new ExOreBlockstateProvider(packOutput,existingFileHelper));
         generator.addProvider(true,new ExOreItemModelProvider(packOutput,existingFileHelper));
-        generator.addProvider(true,new ExOreWorldGenProvider(packOutput,lookupProvider));
+        //generator.addProvider(true,new ExOreWorldGenProvider(packOutput,lookupProvider));
     }
 }

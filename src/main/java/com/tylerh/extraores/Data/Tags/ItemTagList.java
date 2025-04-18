@@ -697,6 +697,6 @@ public class ItemTagList
     
     private static TagKey<Item> tag(String modid, String name)
     {
-        return ItemTags.create(new ResourceLocation(modid,name));
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(modid,name));
     }
 }

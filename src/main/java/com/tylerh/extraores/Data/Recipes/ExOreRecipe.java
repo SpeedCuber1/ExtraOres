@@ -4,28 +4,28 @@ import com.tylerh.extraores.Data.Tags.ItemTagList;
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Init.ItemList;
 import mekanism.api.MekanismAPI;
-import mekanism.api.chemical.gas.GasStack;
 import mekanism.api.datagen.recipe.builder.ItemStackChemicalToItemStackRecipeBuilder;
 import mekanism.api.datagen.recipe.builder.ItemStackToItemStackRecipeBuilder;
+import mekanism.api.recipes.ingredients.GasStackIngredient;
 import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.*;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-
-import java.util.function.Consumer;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import java.util.concurrent.CompletableFuture;
 
 public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
 {
-    public ExOreRecipe(PackOutput output)
+    public ExOreRecipe(PackOutput output, CompletableFuture<HolderLookup.Provider> provider)
     {
-        super(output);
+        super(output,provider);
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildRecipes(RecipeOutput consumer)
     {
         buildShapedRecipes(consumer);
         buildShapelessRecipes(consumer);
@@ -37,7 +37,7 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         buildMekanismEnriching(consumer);
     }
 
-    protected void buildShapedRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildShapedRecipes(RecipeOutput consumer)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockAdamantine.get())
                 .pattern("iii")
@@ -734,7 +734,7 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .save(consumer);
     }
 
-    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildShapelessRecipes(RecipeOutput consumer)
     {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotAdamantine.get(), 9)
                 .requires(Ingredient.of(BlockList.blockAdamantine.get().asItem()))
@@ -1134,3138 +1134,3138 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .save(consumer);
     }
 
-    protected void buildSmeltingRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildSmeltingRecipes(RecipeOutput consumer)
     {
         //Smelting Ore
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAdamantine), RecipeCategory.MISC, ItemList.itemIngotAdamantine.get(), 0.75F, 40)
                 .unlockedBy("smeltadamantineore", has(ItemList.itemIngotAdamantine.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltadamantineore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltadamantineore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAldourite), RecipeCategory.MISC, ItemList.itemIngotAldourite.get(), 0.75F, 40)
                 .unlockedBy("smeltaldouriteore", has(ItemList.itemIngotAldourite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltaldouriteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltaldouriteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAluminum), RecipeCategory.MISC, ItemList.itemIngotAluminum.get(), 0.75F, 40)
                 .unlockedBy("smeltaluminumore", has(ItemList.itemIngotAluminum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltaluminumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltaluminumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAmericium), RecipeCategory.MISC, ItemList.itemIngotAmericium.get(), 0.75F, 40)
                 .unlockedBy("smeltamericiumore", has(ItemList.itemIngotAmericium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltamericiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltamericiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAmordrine), RecipeCategory.MISC, ItemList.itemIngotAmordrine.get(), 0.75F, 40)
                 .unlockedBy("smeltamordrineore", has(ItemList.itemIngotAmordrine.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltamordrineore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltamordrineore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAngmallen), RecipeCategory.MISC, ItemList.itemIngotAngmallen.get(), 0.75F, 40)
                 .unlockedBy("smeltangmallenore", has(ItemList.itemIngotAngmallen.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltangmallenore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltangmallenore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAstralSilver), RecipeCategory.MISC, ItemList.itemIngotAstralSilver.get(), 0.75F, 40)
                 .unlockedBy("smeltastralsilverore", has(ItemList.itemIngotAstralSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltastralsilverore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltastralsilverore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAtlarus), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 40)
                 .unlockedBy("smeltatlarusore", has(ItemList.itemIngotAtlarus.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltatlarusore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltatlarusore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreAzureSilver), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 40)
                 .unlockedBy("smeltazuresilverore", has(ItemList.itemIngotAzureSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltazuresilverore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltazuresilverore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreBismuth), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 40)
                 .unlockedBy("smeltbismuthore", has(ItemList.itemIngotBismuth.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltbismuthore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltbismuthore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreBlackSteel), RecipeCategory.MISC, ItemList.itemIngotBlackSteel.get(), 0.75F, 40)
                 .unlockedBy("smeltblacksteelore", has(ItemList.itemIngotBlackSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltblacksteelore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltblacksteelore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCadmium), RecipeCategory.MISC, ItemList.itemIngotCadmium.get(), 0.75F, 40)
                 .unlockedBy("smeltcadmiumore", has(ItemList.itemIngotCadmium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcadmiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcadmiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCarmot), RecipeCategory.MISC, ItemList.itemIngotCarmot.get(), 0.75F, 40)
                 .unlockedBy("smeltcarmotore", has(ItemList.itemIngotCarmot.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcarmotore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcarmotore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCelenegil), RecipeCategory.MISC, ItemList.itemIngotCelenegil.get(), 0.75F, 40)
                 .unlockedBy("smeltcelenegilore", has(ItemList.itemIngotCelenegil.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcelenegilore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcelenegilore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCeruclase), RecipeCategory.MISC, ItemList.itemIngotCeruclase.get(), 0.75F, 40)
                 .unlockedBy("smeltceruclaseore", has(ItemList.itemIngotCeruclase.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltceruclaseore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltceruclaseore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreChromium), RecipeCategory.MISC, ItemList.itemIngotChromium.get(), 0.75F, 40)
                 .unlockedBy("smeltchromiumore", has(ItemList.itemIngotChromium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltchromiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltchromiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCobalt), RecipeCategory.MISC, ItemList.itemIngotCobalt.get(), 0.75F, 40)
                 .unlockedBy("smeltcobaltore", has(ItemList.itemIngotCobalt.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcobaltore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcobaltore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCopper), RecipeCategory.MISC, ItemList.itemIngotCopper.get(), 0.75F, 40)
                 .unlockedBy("smeltcopperore", has(ItemList.itemIngotCopper.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcopperore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcopperore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreCrimsonSteel), RecipeCategory.MISC, ItemList.itemIngotCrimsonSteel.get(), 0.75F, 40)
                 .unlockedBy("smeltcrimsonsteelore", has(ItemList.itemIngotCrimsonSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcrimsonsteelore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcrimsonsteelore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreDeepIron), RecipeCategory.MISC, ItemList.itemIngotDeepIron.get(), 0.75F, 40)
                 .unlockedBy("smeltdeepironore", has(ItemList.itemIngotDeepIron.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltdeepironore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltdeepironore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreDesichalkos), RecipeCategory.MISC, ItemList.itemIngotDesichalkos.get(), 0.75F, 40)
                 .unlockedBy("smeltdesichalkosore", has(ItemList.itemIngotDesichalkos.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltdesichalkosore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltdesichalkosore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreEximite), RecipeCategory.MISC, ItemList.itemIngotEximite.get(), 0.75F, 40)
                 .unlockedBy("smelteximiteore", has(ItemList.itemIngotEximite.get()))
-                .save(consumer, new ResourceLocation("extraores:smelteximiteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelteximiteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreGallium), RecipeCategory.MISC, ItemList.itemIngotGallium.get(), 0.75F, 40)
                 .unlockedBy("smeltgalliumore", has(ItemList.itemIngotGallium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltgalliumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltgalliumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreHaderoth), RecipeCategory.MISC, ItemList.itemIngotHaderoth.get(), 0.75F, 40)
                 .unlockedBy("smelthaderothore", has(ItemList.itemIngotHaderoth.get()))
-                .save(consumer, new ResourceLocation("extraores:smelthaderothore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelthaderothore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreHepatizon), RecipeCategory.MISC, ItemList.itemIngotHepatizon.get(), 0.75F, 40)
                 .unlockedBy("smelthepatizonore", has(ItemList.itemIngotHepatizon.get()))
-                .save(consumer, new ResourceLocation("extraores:smelthepatizonore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelthepatizonore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreIgnatius), RecipeCategory.MISC, ItemList.itemIngotIgnatius.get(), 0.75F, 40)
                 .unlockedBy("smeltignatiusore", has(ItemList.itemIngotIgnatius.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltignatiusore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltignatiusore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreIndium), RecipeCategory.MISC, ItemList.itemIngotIndium.get(), 0.75F, 40)
                 .unlockedBy("smeltindiumore", has(ItemList.itemIngotIndium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltindiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltindiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreInfuscolium), RecipeCategory.MISC, ItemList.itemIngotInfuscolium.get(), 0.75F, 40)
                 .unlockedBy("smeltinfuscoliumore", has(ItemList.itemIngotInfuscolium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltinfuscoliumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltinfuscoliumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreInolashite), RecipeCategory.MISC, ItemList.itemIngotInolashite.get(), 0.75F, 40)
                 .unlockedBy("smeltinolashiteore", has(ItemList.itemIngotInolashite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltinolashiteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltinolashiteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreIridium), RecipeCategory.MISC, ItemList.itemIngotIridium.get(), 0.75F, 40)
                 .unlockedBy("smeltiridiumore", has(ItemList.itemIngotIridium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltiridiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltiridiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreKalendrite), RecipeCategory.MISC, ItemList.itemIngotKalendrite.get(), 0.75F, 40)
                 .unlockedBy("smeltkalendriteore", has(ItemList.itemIngotKalendrite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltkalendriteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltkalendriteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreLead), RecipeCategory.MISC, ItemList.itemIngotLead.get(), 0.75F, 40)
                 .unlockedBy("smeltleadore", has(ItemList.itemIngotLead.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltleadore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltleadore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreLemurite), RecipeCategory.MISC, ItemList.itemIngotLemurite.get(), 0.75F, 40)
                 .unlockedBy("smeltlemuriteore", has(ItemList.itemIngotLemurite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltlemuriteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltlemuriteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreManganese), RecipeCategory.MISC, ItemList.itemIngotManganese.get(), 0.75F, 40)
                 .unlockedBy("smeltmanganeseore", has(ItemList.itemIngotManganese.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmanganeseore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmanganeseore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreMeutoite), RecipeCategory.MISC, ItemList.itemIngotMeutoite.get(), 0.75F, 40)
                 .unlockedBy("smeltmeutoiteore", has(ItemList.itemIngotMeutoite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmeutoiteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmeutoiteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreMidasium), RecipeCategory.MISC, ItemList.itemIngotMidasium.get(), 0.75F, 40)
                 .unlockedBy("smeltmidasiumore", has(ItemList.itemIngotMidasium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmidasiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmidasiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreMithril), RecipeCategory.MISC, ItemList.itemIngotMithril.get(), 0.75F, 40)
                 .unlockedBy("smeltmithrilore", has(ItemList.itemIngotMithril.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmithrilore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmithrilore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreMolybdenum), RecipeCategory.MISC, ItemList.itemIngotMolybdenum.get(), 0.75F, 40)
                 .unlockedBy("smeltmolybdenumore", has(ItemList.itemIngotMolybdenum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmolybdenumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmolybdenumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreNeodymium), RecipeCategory.MISC, ItemList.itemIngotNeodymium.get(), 0.75F, 40)
                 .unlockedBy("smeltneodymiumore", has(ItemList.itemIngotNeodymium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltneodymiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltneodymiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreNeptunium), RecipeCategory.MISC, ItemList.itemIngotNeptunium.get(), 0.75F, 40)
                 .unlockedBy("smeltneptuniumore", has(ItemList.itemIngotNeptunium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltneptuniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltneptuniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreNickel), RecipeCategory.MISC, ItemList.itemIngotNickel.get(), 0.75F, 40)
                 .unlockedBy("smeltnickelore", has(ItemList.itemIngotNickel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltnickelore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltnickelore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreNiobium), RecipeCategory.MISC, ItemList.itemIngotNiobium.get(), 0.75F, 40)
                 .unlockedBy("smeltniobiumore", has(ItemList.itemIngotNiobium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltniobiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltniobiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreOrichalcum), RecipeCategory.MISC, ItemList.itemIngotOrichalcum.get(), 0.75F, 40)
                 .unlockedBy("smeltorichalcumore", has(ItemList.itemIngotOrichalcum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltorichalcumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltorichalcumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreOsmium), RecipeCategory.MISC, ItemList.itemIngotOsmium.get(), 0.75F, 40)
                 .unlockedBy("smeltosmiumore", has(ItemList.itemIngotOsmium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltosmiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltosmiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreOureclase), RecipeCategory.MISC, ItemList.itemIngotOureclase.get(), 0.75F, 40)
                 .unlockedBy("smeltoureclaseore", has(ItemList.itemIngotOureclase.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltoureclaseore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltoureclaseore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.orePalladium), RecipeCategory.MISC, ItemList.itemIngotPalladium.get(), 0.75F, 40)
                 .unlockedBy("smeltpalladiumore", has(ItemList.itemIngotPalladium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltpalladiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltpalladiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.orePlatinum), RecipeCategory.MISC, ItemList.itemIngotPlatinum.get(), 0.75F, 40)
                 .unlockedBy("smeltplatinumore", has(ItemList.itemIngotPlatinum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltplatinumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltplatinumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.orePlutonium), RecipeCategory.MISC, ItemList.itemIngotPlutonium.get(), 0.75F, 40)
                 .unlockedBy("smeltplutoniumore", has(ItemList.itemIngotPlutonium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltplutoniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltplutoniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.orePolonium), RecipeCategory.MISC, ItemList.itemIngotPolonium.get(), 0.75F, 40)
                 .unlockedBy("smeltpoloniumore", has(ItemList.itemIngotPolonium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltpoloniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltpoloniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.orePromethium), RecipeCategory.MISC, ItemList.itemIngotPromethium.get(), 0.75F, 40)
                 .unlockedBy("smeltpromethiumore", has(ItemList.itemIngotPromethium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltpromethiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltpromethiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreRhenium), RecipeCategory.MISC, ItemList.itemIngotRhenium.get(), 0.75F, 40)
                 .unlockedBy("smeltrheniumore", has(ItemList.itemIngotRhenium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrheniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrheniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreRhodium), RecipeCategory.MISC, ItemList.itemIngotRhodium.get(), 0.75F, 40)
                 .unlockedBy("smeltrhodiumore", has(ItemList.itemIngotRhodium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrhodiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrhodiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreRubracium), RecipeCategory.MISC, ItemList.itemIngotRubracium.get(), 0.75F, 40)
                 .unlockedBy("smeltrubraciumore", has(ItemList.itemIngotRubracium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrubraciumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrubraciumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreRuthenium), RecipeCategory.MISC, ItemList.itemIngotRuthenium.get(), 0.75F, 40)
                 .unlockedBy("smeltrutheniumore", has(ItemList.itemIngotRuthenium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrutheniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrutheniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreSanguinite), RecipeCategory.MISC, ItemList.itemIngotSanguinite.get(), 0.75F, 40)
                 .unlockedBy("smeltsanguiniteore", has(ItemList.itemIngotSanguinite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltsanguiniteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltsanguiniteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreShadowIron), RecipeCategory.MISC, ItemList.itemIngotShadowIron.get(), 0.75F, 40)
                 .unlockedBy("smeltshadowironore", has(ItemList.itemIngotShadowIron.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltshadowironore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltshadowironore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreSilver), RecipeCategory.MISC, ItemList.itemIngotSilver.get(), 0.75F, 40)
                 .unlockedBy("smeltsilverore", has(ItemList.itemIngotSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltsilverore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltsilverore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTantalum), RecipeCategory.MISC, ItemList.itemIngotTantalum.get(), 0.75F, 40)
                 .unlockedBy("smelttantalumore", has(ItemList.itemIngotTantalum.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttantalumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttantalumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTartarite), RecipeCategory.MISC, ItemList.itemIngotTartarite.get(), 0.75F, 40)
                 .unlockedBy("smelttartariteore", has(ItemList.itemIngotTartarite.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttartariteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttartariteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTechnetium), RecipeCategory.MISC, ItemList.itemIngotTechnetium.get(), 0.75F, 40)
                 .unlockedBy("smelttechnetiumore", has(ItemList.itemIngotTechnetium.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttechnetiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttechnetiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreThallium), RecipeCategory.MISC, ItemList.itemIngotThallium.get(), 0.75F, 40)
                 .unlockedBy("smeltthalliumore", has(ItemList.itemIngotThallium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltthalliumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltthalliumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTin), RecipeCategory.MISC, ItemList.itemIngotTin.get(), 0.75F, 40)
                 .unlockedBy("smelttinore", has(ItemList.itemIngotTin.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttinore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttinore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTitanium), RecipeCategory.MISC, ItemList.itemIngotTitanium.get(), 0.75F, 40)
                 .unlockedBy("smelttitaniumore", has(ItemList.itemIngotTitanium.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttitaniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttitaniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTritium), RecipeCategory.MISC, ItemList.itemIngotTritium.get(), 0.75F, 40)
                 .unlockedBy("smelttritiumore", has(ItemList.itemIngotTritium.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttritiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttritiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreTungsten), RecipeCategory.MISC, ItemList.itemIngotTungsten.get(), 0.75F, 40)
                 .unlockedBy("smelttungstenore", has(ItemList.itemIngotTungsten.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttungstenore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttungstenore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreUnobtainium), RecipeCategory.MISC, ItemList.itemIngotUnobtainium.get(), 0.75F, 40)
                 .unlockedBy("smeltunobtainiumore", has(ItemList.itemIngotUnobtainium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltunobtainiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltunobtainiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreUranium), RecipeCategory.MISC, ItemList.itemIngotUranium.get(), 0.75f, 40)
                 .unlockedBy("smelturaniumore", has(ItemList.itemIngotUranium.get()))
-                .save(consumer, new ResourceLocation("extraores:smelturaniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smelturaniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreVanadium), RecipeCategory.MISC, ItemList.itemIngotVanadium.get(), 0.75F, 40)
                 .unlockedBy("smeltvanadiumore", has(ItemList.itemIngotVanadium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltvanadiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltvanadiumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreVibranium), RecipeCategory.MISC, ItemList.itemIngotVibranium.get(), 0.75F, 40)
                 .unlockedBy("smeltvibraniumore", has(ItemList.itemIngotVibranium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltvibraniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltvibraniumore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreVulcanite), RecipeCategory.MISC, ItemList.itemIngotVulcanite.get(), 0.75F, 40)
                 .unlockedBy("smeltvulcaniteore", has(ItemList.itemIngotVulcanite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltvulcaniteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltvulcaniteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreVyroxeres), RecipeCategory.MISC, ItemList.itemIngotVyroxeres.get(), 0.75F, 40)
                 .unlockedBy("smeltvyroxeresore", has(ItemList.itemIngotVyroxeres.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltvyroxeresore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltvyroxeresore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreYellorite), RecipeCategory.MISC, ItemList.itemIngotYellorite.get(), 0.75F, 40)
                 .unlockedBy("smeltyelloriteore", has(ItemList.itemIngotYellorite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltyelloriteore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltyelloriteore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreZinc), RecipeCategory.MISC, ItemList.itemIngotZinc.get(), 0.75F, 40)
                 .unlockedBy("smeltzincore", has(ItemList.itemIngotZinc.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltzincore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltzincore"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.oreZirconium), RecipeCategory.MISC, ItemList.itemIngotZirconium.get(), 0.75F, 40)
                 .unlockedBy("smeltzirconiumore", has(ItemList.itemIngotZirconium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltzirconiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltzirconiumore"));
         //Smelting Raw
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAdamantine), RecipeCategory.MISC, ItemList.itemIngotAdamantine.get(), 0.75F, 40)
                 .unlockedBy("smeltrawadamantine", has(ItemList.itemIngotAdamantine.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawadamantine"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawadamantine"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAldourite), RecipeCategory.MISC, ItemList.itemIngotAldourite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawaldourite", has(ItemList.itemIngotAldourite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawaldourite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawaldourite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAluminum), RecipeCategory.MISC, ItemList.itemIngotAluminum.get(), 0.75F, 40)
                 .unlockedBy("smeltrawaluminum", has(ItemList.itemIngotAluminum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawaluminum"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawaluminum"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAmericium), RecipeCategory.MISC, ItemList.itemIngotAmericium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawamericium", has(ItemList.itemIngotAmericium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawamericium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawamericium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAmordrine), RecipeCategory.MISC, ItemList.itemIngotAmordrine.get(), 0.75F, 40)
                 .unlockedBy("smeltrawamordrine", has(ItemList.itemIngotAmordrine.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawamordrine"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawamordrine"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAngmallen), RecipeCategory.MISC, ItemList.itemIngotAngmallen.get(), 0.75F, 40)
                 .unlockedBy("smeltrawangmallen", has(ItemList.itemIngotAngmallen.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawangmallen"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawangmallen"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAstralSilver), RecipeCategory.MISC, ItemList.itemIngotAstralSilver.get(), 0.75F, 40)
                 .unlockedBy("smeltrawastralsilver", has(ItemList.itemIngotAstralSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawastralsilver"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawastralsilver"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAtlarus), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 40)
                 .unlockedBy("smeltrawatlarus", has(ItemList.itemIngotAtlarus.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawatlarus"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawatlarus"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawAzureSilver), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 40)
                 .unlockedBy("smeltrawazuresilver", has(ItemList.itemIngotAzureSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawazuresilver"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawazuresilver"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawBismuth), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 40)
                 .unlockedBy("smeltrawbismuth", has(ItemList.itemIngotBismuth.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawbismuth"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawbismuth"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawBlackSteel), RecipeCategory.MISC, ItemList.itemIngotBlackSteel.get(), 0.75F, 40)
                 .unlockedBy("smeltrawblacksteel", has(ItemList.itemIngotBlackSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawblacksteel"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawblacksteel"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCadmium), RecipeCategory.MISC, ItemList.itemIngotCadmium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawcadmium", has(ItemList.itemIngotCadmium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawcadmium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawcadmium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCarmot), RecipeCategory.MISC, ItemList.itemIngotCarmot.get(), 0.75F, 40)
                 .unlockedBy("smeltrawcarmot", has(ItemList.itemIngotCarmot.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawcarmot"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawcarmot"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCelenegil), RecipeCategory.MISC, ItemList.itemIngotCelenegil.get(), 0.75F, 40)
                 .unlockedBy("smeltrawcelenegil", has(ItemList.itemIngotCelenegil.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawcelenegil"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawcelenegil"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCeruclase), RecipeCategory.MISC, ItemList.itemIngotCeruclase.get(), 0.75F, 40)
                 .unlockedBy("smeltrawceruclase", has(ItemList.itemIngotCeruclase.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawceruclase"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawceruclase"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawChromium), RecipeCategory.MISC, ItemList.itemIngotChromium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawchromium", has(ItemList.itemIngotChromium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawchromium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawchromium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCobalt), RecipeCategory.MISC, ItemList.itemIngotCobalt.get(), 0.75F, 40)
                 .unlockedBy("smeltrawcobalt", has(ItemList.itemIngotCobalt.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawcobalt"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawcobalt"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCopper), RecipeCategory.MISC, ItemList.itemIngotCopper.get(), 0.75F, 40)
                 .unlockedBy("smeltrawcopper", has(ItemList.itemIngotCopper.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawcopper"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawcopper"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawCrimsonSteel), RecipeCategory.MISC, ItemList.itemIngotCrimsonSteel.get(), 0.75F, 40)
                 .unlockedBy("smeltrawcrimsonsteel", has(ItemList.itemIngotCrimsonSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawcrimsonsteel"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawcrimsonsteel"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawDeepIron), RecipeCategory.MISC, ItemList.itemIngotDeepIron.get(), 0.75F, 40)
                 .unlockedBy("smeltrawdeepiron", has(ItemList.itemIngotDeepIron.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawdeepiron"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawdeepiron"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawDesichalkos), RecipeCategory.MISC, ItemList.itemIngotDesichalkos.get(), 0.75F, 40)
                 .unlockedBy("smeltrawdesichalkos", has(ItemList.itemIngotDesichalkos.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawdesichalkos"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawdesichalkos"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawEximite), RecipeCategory.MISC, ItemList.itemIngotEximite.get(), 0.75F, 40)
                 .unlockedBy("smeltraweximite", has(ItemList.itemIngotEximite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltraweximite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltraweximite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawGallium), RecipeCategory.MISC, ItemList.itemIngotGallium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawgallium", has(ItemList.itemIngotGallium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawgallium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawgallium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawHaderoth), RecipeCategory.MISC, ItemList.itemIngotHaderoth.get(), 0.75F, 40)
                 .unlockedBy("smeltrawhaderoth", has(ItemList.itemIngotHaderoth.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawhaderoth"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawhaderoth"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawHepatizon), RecipeCategory.MISC, ItemList.itemIngotHepatizon.get(), 0.75F, 40)
                 .unlockedBy("smeltrawhepatizon", has(ItemList.itemIngotHepatizon.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawhepatizon"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawhepatizon"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawIgnatius), RecipeCategory.MISC, ItemList.itemIngotIgnatius.get(), 0.75F, 40)
                 .unlockedBy("smeltrawignatius", has(ItemList.itemIngotIgnatius.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawignatius"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawignatius"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawIndium), RecipeCategory.MISC, ItemList.itemIngotIndium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawindium", has(ItemList.itemIngotIndium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawindium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawindium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawInfuscolium), RecipeCategory.MISC, ItemList.itemIngotInfuscolium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawinfuscolium", has(ItemList.itemIngotInfuscolium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawinfuscolium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawinfuscolium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawInolashite), RecipeCategory.MISC, ItemList.itemIngotInolashite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawinolashite", has(ItemList.itemIngotInolashite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawinolashite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawinolashite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawIridium), RecipeCategory.MISC, ItemList.itemIngotIridium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawiridium", has(ItemList.itemIngotIridium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawiridium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawiridium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawKalendrite), RecipeCategory.MISC, ItemList.itemIngotKalendrite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawkalendrite", has(ItemList.itemIngotKalendrite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawkalendrite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawkalendrite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawLead), RecipeCategory.MISC, ItemList.itemIngotLead.get(), 0.75F, 40)
                 .unlockedBy("smeltrawlead", has(ItemList.itemIngotLead.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawlead"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawlead"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawLemurite), RecipeCategory.MISC, ItemList.itemIngotLemurite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawlemurite", has(ItemList.itemIngotLemurite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawlemurite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawlemurite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawManganese), RecipeCategory.MISC, ItemList.itemIngotManganese.get(), 0.75F, 40)
                 .unlockedBy("smeltrawmanganese", has(ItemList.itemIngotManganese.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawmanganese"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawmanganese"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawMeutoite), RecipeCategory.MISC, ItemList.itemIngotMeutoite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawmeutoite", has(ItemList.itemIngotMeutoite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawmeutoite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawmeutoite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawMidasium), RecipeCategory.MISC, ItemList.itemIngotMidasium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawmidasium", has(ItemList.itemIngotMidasium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawmidasium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawmidasium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawMithril), RecipeCategory.MISC, ItemList.itemIngotMithril.get(), 0.75F, 40)
                 .unlockedBy("smeltrawmithril", has(ItemList.itemIngotMithril.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawmithril"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawmithril"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawMolybdenum), RecipeCategory.MISC, ItemList.itemIngotMolybdenum.get(), 0.75F, 40)
                 .unlockedBy("smeltrawmolybdenum", has(ItemList.itemIngotMolybdenum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawmolybdenum"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawmolybdenum"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawNeodymium), RecipeCategory.MISC, ItemList.itemIngotNeodymium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawneodymium", has(ItemList.itemIngotNeodymium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawneodymium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawneodymium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawNeptunium), RecipeCategory.MISC, ItemList.itemIngotNeptunium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawneptunium", has(ItemList.itemIngotNeptunium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawneptunium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawneptunium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawNickel), RecipeCategory.MISC, ItemList.itemIngotNickel.get(), 0.75F, 40)
                 .unlockedBy("smeltrawnickel", has(ItemList.itemIngotNickel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawnickel"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawnickel"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawNiobium), RecipeCategory.MISC, ItemList.itemIngotNiobium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawniobium", has(ItemList.itemIngotNiobium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawniobium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawniobium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawOrichalcum), RecipeCategory.MISC, ItemList.itemIngotOrichalcum.get(), 0.75F, 40)
                 .unlockedBy("smeltraworichalcum", has(ItemList.itemIngotOrichalcum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltraworichalcum"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltraworichalcum"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawOsmium), RecipeCategory.MISC, ItemList.itemIngotOsmium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawosmium", has(ItemList.itemIngotOureclase.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawosmium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawosmium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawOureclase), RecipeCategory.MISC, ItemList.itemIngotOureclase.get(), 0.75F, 40)
                 .unlockedBy("smeltrawoureclase", has(ItemList.itemIngotOureclase.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawoureclase"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawoureclase"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawPalladium), RecipeCategory.MISC, ItemList.itemIngotPalladium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawpalladium", has(ItemList.itemIngotPalladium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawpalladium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawpalladium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawPlatinum), RecipeCategory.MISC, ItemList.itemIngotPlatinum.get(), 0.75F, 40)
                 .unlockedBy("smeltrawplatinum", has(ItemList.itemIngotPlatinum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawplatinum"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawplatinum"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawPlutonium), RecipeCategory.MISC, ItemList.itemIngotPlutonium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawplutonium", has(ItemList.itemIngotPlutonium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawplutonium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawplutonium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawPolonium), RecipeCategory.MISC, ItemList.itemIngotPolonium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawpolonium", has(ItemList.itemIngotPolonium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawpolonium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawpolonium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawPromethium), RecipeCategory.MISC, ItemList.itemIngotPromethium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawpromethium", has(ItemList.itemIngotPromethium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawpromethium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawpromethium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawRhenium), RecipeCategory.MISC, ItemList.itemIngotRhenium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawrhenium", has(ItemList.itemIngotRhenium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawrhenium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawrhenium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawRhodium), RecipeCategory.MISC, ItemList.itemIngotRhodium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawrhodium", has(ItemList.itemIngotRhodium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawrhodium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawrhodium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawRubracium), RecipeCategory.MISC, ItemList.itemIngotRubracium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawrubracium", has(ItemList.itemIngotRubracium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawrubracium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawrubracium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawRuthenium), RecipeCategory.MISC, ItemList.itemIngotRuthenium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawruthenium", has(ItemList.itemIngotRuthenium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawruthenium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawruthenium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawSanguinite), RecipeCategory.MISC, ItemList.itemIngotSanguinite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawsanguinite", has(ItemList.itemIngotSanguinite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawsanguinite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawsanguinite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawShadowIron), RecipeCategory.MISC, ItemList.itemIngotShadowIron.get(), 0.75F, 40)
                 .unlockedBy("smeltrawshadowiron", has(ItemList.itemIngotShadowIron.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawshadowiron"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawshadowiron"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawSilver), RecipeCategory.MISC, ItemList.itemIngotSilver.get(), 0.75F, 40)
                 .unlockedBy("smeltrawsilver", has(ItemList.itemIngotSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawsilver"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawsilver"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTantalum), RecipeCategory.MISC, ItemList.itemIngotTantalum.get(), 0.75F, 40)
                 .unlockedBy("smeltrawtantalum", has(ItemList.itemIngotTantalum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawtantalum"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawtantalum"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTartarite), RecipeCategory.MISC, ItemList.itemIngotTartarite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawtartarite", has(ItemList.itemIngotTartarite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawtartarite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawtartarite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTechnetium), RecipeCategory.MISC, ItemList.itemIngotTechnetium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawtechnetium", has(ItemList.itemIngotTechnetium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawtechnetium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawtechnetium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawThallium), RecipeCategory.MISC, ItemList.itemIngotThallium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawthallium", has(ItemList.itemIngotThallium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawthallium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawthallium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTin), RecipeCategory.MISC, ItemList.itemIngotTin.get(), 0.75F, 40)
                 .unlockedBy("smeltrawtin", has(ItemList.itemIngotTin.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawtin"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawtin"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTitanium), RecipeCategory.MISC, ItemList.itemIngotTitanium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawtitanium", has(ItemList.itemIngotTitanium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawtitanium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawtitanium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTritium), RecipeCategory.MISC, ItemList.itemIngotTritium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawtritium", has(ItemList.itemIngotTritium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawtritium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawtritium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawTungsten), RecipeCategory.MISC, ItemList.itemIngotTungsten.get(), 0.75F, 40)
                 .unlockedBy("smeltrawtungsten", has(ItemList.itemIngotTungsten.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawtungsten"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawtungsten"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawUnobtainium), RecipeCategory.MISC, ItemList.itemIngotUnobtainium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawunobtainium", has(ItemList.itemIngotUnobtainium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawunobtainium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawunobtainium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawUranium), RecipeCategory.MISC, ItemList.itemIngotUranium.get(), 0.75f, 40)
                 .unlockedBy("smeltrawuranium", has(ItemList.itemIngotUranium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawuranium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawuranium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawVanadium), RecipeCategory.MISC, ItemList.itemIngotVanadium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawvanadium", has(ItemList.itemIngotVanadium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawvanadium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawvanadium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawVibranium), RecipeCategory.MISC, ItemList.itemIngotVibranium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawvibranium", has(ItemList.itemIngotVibranium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawvibranium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawvibranium"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawVulcanite), RecipeCategory.MISC, ItemList.itemIngotVulcanite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawvulcanite", has(ItemList.itemIngotVulcanite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawvulcanite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawvulcanite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawVyroxeres), RecipeCategory.MISC, ItemList.itemIngotVyroxeres.get(), 0.75F, 40)
                 .unlockedBy("smeltrawvyroxeres", has(ItemList.itemIngotVyroxeres.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawvyroxeres"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawvyroxeres"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawYellorite), RecipeCategory.MISC, ItemList.itemIngotYellorite.get(), 0.75F, 40)
                 .unlockedBy("smeltrawyellorite", has(ItemList.itemIngotYellorite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawyellorite"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawyellorite"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawZinc), RecipeCategory.MISC, ItemList.itemIngotZinc.get(), 0.75F, 40)
                 .unlockedBy("smeltrawzinc", has(ItemList.itemIngotZinc.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawzinc"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawzinc"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.rawZirconium), RecipeCategory.MISC, ItemList.itemIngotZirconium.get(), 0.75F, 40)
                 .unlockedBy("smeltrawzirconium", has(ItemList.itemIngotZirconium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrawzirconium"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrawzirconium"));
         //Smelting Dust
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAdamantine), RecipeCategory.MISC, ItemList.itemIngotAdamantine.get(), 0.75F, 20)
                 .unlockedBy("smeltadamantinedust", has(ItemList.itemIngotAdamantine.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltadamantinedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltadamantinedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAldourite), RecipeCategory.MISC, ItemList.itemIngotAldourite.get(), 0.75F, 20)
                 .unlockedBy("smeltaldouritedust", has(ItemList.itemIngotAldourite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltaldouritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltaldouritedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAluminum), RecipeCategory.MISC, ItemList.itemIngotAluminum.get(), 0.75F, 20)
                 .unlockedBy("smeltaluminumdust", has(ItemList.itemIngotAluminum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltaluminumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltaluminumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAmericium), RecipeCategory.MISC, ItemList.itemIngotAmericium.get(), 0.75F, 20)
                 .unlockedBy("smeltamericiumdust", has(ItemList.itemIngotAmericium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltamericiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltamericiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAmordrine), RecipeCategory.MISC, ItemList.itemIngotAmordrine.get(), 0.75F, 20)
                 .unlockedBy("smeltamordrinedust", has(ItemList.itemIngotAmordrine.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltamordrinedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltamordrinedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAngmallen), RecipeCategory.MISC, ItemList.itemIngotAngmallen.get(), 0.75F, 20)
                 .unlockedBy("smeltangmallendust", has(ItemList.itemIngotAngmallen.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltangmallendust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltangmallendust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAstralSilver), RecipeCategory.MISC, ItemList.itemIngotAstralSilver.get(), 0.75F, 20)
                 .unlockedBy("smeltastralsilverdust", has(ItemList.itemIngotAstralSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltastralsilverdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltastralsilverdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAtlarus), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 20)
                 .unlockedBy("smeltatlarusdust", has(ItemList.itemIngotAtlarus.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltatlarusdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltatlarusdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustAzureSilver), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 20)
                 .unlockedBy("smeltazuresilverdust", has(ItemList.itemIngotAzureSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltazuresilverdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltazuresilverdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustBismuth), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 20)
                 .unlockedBy("smeltbismuthdust", has(ItemList.itemIngotBismuth.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltbismuthdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltbismuthdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustBlackSteel), RecipeCategory.MISC, ItemList.itemIngotBlackSteel.get(), 0.75F, 20)
                 .unlockedBy("smeltblacksteeldust", has(ItemList.itemIngotBlackSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltblacksteeldust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltblacksteeldust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCadmium), RecipeCategory.MISC, ItemList.itemIngotCadmium.get(), 0.75F, 20)
                 .unlockedBy("smeltcadmiumdust", has(ItemList.itemIngotCadmium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcadmiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcadmiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCarmot), RecipeCategory.MISC, ItemList.itemIngotCarmot.get(), 0.75F, 20)
                 .unlockedBy("smeltcarmotdust", has(ItemList.itemIngotCarmot.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcarmotdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcarmotdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCelenegil), RecipeCategory.MISC, ItemList.itemIngotCelenegil.get(), 0.75F, 20)
                 .unlockedBy("smeltcelenegildust", has(ItemList.itemIngotCelenegil.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcelenegildust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcelenegildust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCeruclase), RecipeCategory.MISC, ItemList.itemIngotCeruclase.get(), 0.75F, 20)
                 .unlockedBy("smeltceruclasedust", has(ItemList.itemIngotCeruclase.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltceruclasedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltceruclasedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustChromium), RecipeCategory.MISC, ItemList.itemIngotChromium.get(), 0.75F, 20)
                 .unlockedBy("smeltchromiumdust", has(ItemList.itemIngotChromium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltchromiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltchromiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCobalt), RecipeCategory.MISC, ItemList.itemIngotCobalt.get(), 0.75F, 20)
                 .unlockedBy("smeltcobaltdust", has(ItemList.itemIngotCobalt.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcobaltdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcobaltdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCopper), RecipeCategory.MISC, ItemList.itemIngotCopper.get(), 0.75F, 20)
                 .unlockedBy("smeltcopperdust", has(ItemList.itemIngotCopper.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcopperdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcopperdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustCrimsonSteel), RecipeCategory.MISC, ItemList.itemIngotCrimsonSteel.get(), 0.75F, 20)
                 .unlockedBy("smeltcrimsonsteeldust", has(ItemList.itemIngotCrimsonSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltcrimsonsteeldust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltcrimsonsteeldust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustDeepIron), RecipeCategory.MISC, ItemList.itemIngotDeepIron.get(), 0.75F, 20)
                 .unlockedBy("smeltdeepirondust", has(ItemList.itemIngotDeepIron.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltdeepirondust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltdeepirondust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustDesichalkos), RecipeCategory.MISC, ItemList.itemIngotDesichalkos.get(), 0.75F, 20)
                 .unlockedBy("smeltdesichalkosdust", has(ItemList.itemIngotDesichalkos.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltdesichalkosdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltdesichalkosdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustEximite), RecipeCategory.MISC, ItemList.itemIngotEximite.get(), 0.75F, 20)
                 .unlockedBy("smelteximitedust", has(ItemList.itemIngotEximite.get()))
-                .save(consumer, new ResourceLocation("extraores:smelteximitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelteximitedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustGallium), RecipeCategory.MISC, ItemList.itemIngotGallium.get(), 0.75F, 20)
                 .unlockedBy("smeltgalliumdust", has(ItemList.itemIngotGallium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltgalliumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltgalliumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustHaderoth), RecipeCategory.MISC, ItemList.itemIngotHaderoth.get(), 0.75F, 20)
                 .unlockedBy("smelthaderothdust", has(ItemList.itemIngotHaderoth.get()))
-                .save(consumer, new ResourceLocation("extraores:smelthaderothdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelthaderothdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustHepatizon), RecipeCategory.MISC, ItemList.itemIngotHepatizon.get(), 0.75F, 20)
                 .unlockedBy("smelthepatizondust", has(ItemList.itemIngotHepatizon.get()))
-                .save(consumer, new ResourceLocation("extraores:smelthepatizondust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelthepatizondust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustIgnatius), RecipeCategory.MISC, ItemList.itemIngotIgnatius.get(), 0.75F, 20)
                 .unlockedBy("smeltignatiusdust", has(ItemList.itemIngotIgnatius.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltignatiusdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltignatiusdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustIndium), RecipeCategory.MISC, ItemList.itemIngotIndium.get(), 0.75F, 20)
                 .unlockedBy("smeltindiumdust", has(ItemList.itemIngotIndium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltindiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltindiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustInfuscolium), RecipeCategory.MISC, ItemList.itemIngotInfuscolium.get(), 0.75F, 20)
                 .unlockedBy("smeltinfuscoliumdust", has(ItemList.itemIngotInfuscolium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltinfuscoliumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltinfuscoliumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustInolashite), RecipeCategory.MISC, ItemList.itemIngotInolashite.get(), 0.75F, 20)
                 .unlockedBy("smeltinolashitedust", has(ItemList.itemIngotInolashite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltinolashitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltinolashitedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustIridium), RecipeCategory.MISC, ItemList.itemIngotIridium.get(), 0.75F, 20)
                 .unlockedBy("smeltiridiumdust", has(ItemList.itemIngotIridium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltiridiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltiridiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustKalendrite), RecipeCategory.MISC, ItemList.itemIngotKalendrite.get(), 0.75F, 20)
                 .unlockedBy("smeltkalendritedust", has(ItemList.itemIngotKalendrite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltkalendritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltkalendritedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustLead), RecipeCategory.MISC, ItemList.itemIngotLead.get(), 0.75F, 20)
                 .unlockedBy("smeltleaddust", has(ItemList.itemIngotLead.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltleaddust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltleaddust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustLemurite), RecipeCategory.MISC, ItemList.itemIngotLemurite.get(), 0.75F, 20)
                 .unlockedBy("smeltlemuritedust", has(ItemList.itemIngotLemurite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltlemuritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltlemuritedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustManganese), RecipeCategory.MISC, ItemList.itemIngotManganese.get(), 0.75F, 20)
                 .unlockedBy("smeltmanganesedust", has(ItemList.itemIngotManganese.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmanganesedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmanganesedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustMeutoite), RecipeCategory.MISC, ItemList.itemIngotMeutoite.get(), 0.75F, 20)
                 .unlockedBy("smeltmeutoitedust", has(ItemList.itemIngotMeutoite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmeutoitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmeutoitedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustMidasium), RecipeCategory.MISC, ItemList.itemIngotMidasium.get(), 0.75F, 20)
                 .unlockedBy("smeltmidasiumdust", has(ItemList.itemIngotMidasium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmidasiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmidasiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustMithril), RecipeCategory.MISC, ItemList.itemIngotMithril.get(), 0.75F, 20)
                 .unlockedBy("smeltmithrildust", has(ItemList.itemIngotMithril.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmithrildust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmithrildust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustMolybdenum), RecipeCategory.MISC, ItemList.itemIngotMolybdenum.get(), 0.75F, 20)
                 .unlockedBy("smeltmolybdenumdust", has(ItemList.itemIngotMolybdenum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltmolybdenumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltmolybdenumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustNeodymium), RecipeCategory.MISC, ItemList.itemIngotNeodymium.get(), 0.75F, 20)
                 .unlockedBy("smeltneodymiumdust", has(ItemList.itemIngotNeodymium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltneodymiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltneodymiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustNeptunium), RecipeCategory.MISC, ItemList.itemIngotNeptunium.get(), 0.75F, 20)
                 .unlockedBy("smeltneptuniumdust", has(ItemList.itemIngotNeptunium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltneptuniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltneptuniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustNickel), RecipeCategory.MISC, ItemList.itemIngotNickel.get(), 0.75F, 20)
                 .unlockedBy("smeltnickeldust", has(ItemList.itemIngotNickel.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltnickeldust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltnickeldust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustNiobium), RecipeCategory.MISC, ItemList.itemIngotNiobium.get(), 0.75F, 20)
                 .unlockedBy("smeltniobiumdust", has(ItemList.itemIngotNiobium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltniobiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltniobiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustOrichalcum), RecipeCategory.MISC, ItemList.itemIngotOrichalcum.get(), 0.75F, 20)
                 .unlockedBy("smeltorichalcumdust", has(ItemList.itemIngotOrichalcum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltorichalcumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltorichalcumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustOsmium), RecipeCategory.MISC, ItemList.itemIngotOsmium.get(), 0.75F, 20)
                 .unlockedBy("smeltosmiumdust", has(ItemList.itemIngotOsmium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltosmiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltosmiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustOureclase), RecipeCategory.MISC, ItemList.itemIngotOureclase.get(), 0.75F, 20)
                 .unlockedBy("smeltoureclasedust", has(ItemList.itemIngotOureclase.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltoureclasedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltoureclasedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustPalladium), RecipeCategory.MISC, ItemList.itemIngotPalladium.get(), 0.75F, 20)
                 .unlockedBy("smeltpalladiumdust", has(ItemList.itemIngotPalladium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltpalladiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltpalladiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustPlatinum), RecipeCategory.MISC, ItemList.itemIngotPlatinum.get(), 0.75F, 20)
                 .unlockedBy("smeltplatinumdust", has(ItemList.itemIngotPlatinum.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltplatinumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltplatinumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustPlutonium), RecipeCategory.MISC, ItemList.itemIngotPlutonium.get(), 0.75F, 20)
                 .unlockedBy("smeltplutoniumdust", has(ItemList.itemIngotPlutonium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltplutoniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltplutoniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustPolonium), RecipeCategory.MISC, ItemList.itemIngotPolonium.get(), 0.75F, 20)
                 .unlockedBy("smeltpoloniumdust", has(ItemList.itemIngotPolonium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltpoloniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltpoloniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustPromethium), RecipeCategory.MISC, ItemList.itemIngotPromethium.get(), 0.75F, 20)
                 .unlockedBy("smeltpromethiumdust", has(ItemList.itemIngotPromethium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltpromethiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltpromethiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustRhenium), RecipeCategory.MISC, ItemList.itemIngotRhenium.get(), 0.75F, 20)
                 .unlockedBy("smeltrheniumdust", has(ItemList.itemIngotRhenium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrheniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrheniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustRhodium), RecipeCategory.MISC, ItemList.itemIngotRhodium.get(), 0.75F, 20)
                 .unlockedBy("smeltrhodiumdust", has(ItemList.itemIngotRhodium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrhodiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrhodiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustRubracium), RecipeCategory.MISC, ItemList.itemIngotRubracium.get(), 0.75F, 20)
                 .unlockedBy("smeltrubraciumdust", has(ItemList.itemIngotRubracium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrubraciumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrubraciumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustRuthenium), RecipeCategory.MISC, ItemList.itemIngotRuthenium.get(), 0.75F, 20)
                 .unlockedBy("smeltrutheniumdust", has(ItemList.itemIngotRuthenium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltrutheniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltrutheniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustSanguinite), RecipeCategory.MISC, ItemList.itemIngotSanguinite.get(), 0.75F, 20)
                 .unlockedBy("smeltsanguinitedust", has(ItemList.itemIngotSanguinite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltsanguinitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltsanguinitedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustShadowIron), RecipeCategory.MISC, ItemList.itemIngotShadowIron.get(), 0.75F, 20)
                 .unlockedBy("smeltshadowirondust", has(ItemList.itemIngotShadowIron.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltshadowirondust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltshadowirondust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustSilver), RecipeCategory.MISC, ItemList.itemIngotSilver.get(), 0.75F, 20)
                 .unlockedBy("smeltsilverdust", has(ItemList.itemIngotSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltsilverdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltsilverdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTantalum), RecipeCategory.MISC, ItemList.itemIngotTantalum.get(), 0.75F, 20)
                 .unlockedBy("smelttantalumdust", has(ItemList.itemIngotTantalum.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttantalumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttantalumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTartarite), RecipeCategory.MISC, ItemList.itemIngotTartarite.get(), 0.75F, 20)
                 .unlockedBy("smelttartaritedust", has(ItemList.itemIngotTartarite.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttartaritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttartaritedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTechnetium), RecipeCategory.MISC, ItemList.itemIngotTechnetium.get(), 0.75F, 20)
                 .unlockedBy("smelttechnetiumdust", has(ItemList.itemIngotTechnetium.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttechnetiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttechnetiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustThallium), RecipeCategory.MISC, ItemList.itemIngotThallium.get(), 0.75F, 20)
                 .unlockedBy("smeltthalliumdust", has(ItemList.itemIngotThallium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltthalliumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltthalliumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTin), RecipeCategory.MISC, ItemList.itemIngotTin.get(), 0.75F, 20)
                 .unlockedBy("smelttindust", has(ItemList.itemIngotTin.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttindust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttindust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTitanium), RecipeCategory.MISC, ItemList.itemIngotTitanium.get(), 0.75F, 20)
                 .unlockedBy("smelttitaniumdust", has(ItemList.itemIngotTitanium.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttitaniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttitaniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTritium), RecipeCategory.MISC, ItemList.itemIngotTritium.get(), 0.75F, 20)
                 .unlockedBy("smelttritiumdust", has(ItemList.itemIngotTritium.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttritiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttritiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustTungsten), RecipeCategory.MISC, ItemList.itemIngotTungsten.get(), 0.75F, 20)
                 .unlockedBy("smelttungstendust", has(ItemList.itemIngotTungsten.get()))
-                .save(consumer, new ResourceLocation("extraores:smelttungstendust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelttungstendust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustUnobtainium), RecipeCategory.MISC, ItemList.itemIngotUnobtainium.get(), 0.75F, 20)
                 .unlockedBy("smeltunobtainiumdust", has(ItemList.itemIngotUnobtainium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltunobtainiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltunobtainiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustUranium), RecipeCategory.MISC, ItemList.itemIngotUranium.get(), 0.75f, 20)
                 .unlockedBy("smelturaniumdust", has(ItemList.itemIngotUranium.get()))
-                .save(consumer, new ResourceLocation("extraores:smelturaniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smelturaniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustVanadium), RecipeCategory.MISC, ItemList.itemIngotVanadium.get(), 0.75F, 20)
                 .unlockedBy("smeltvanadiumdust", has(ItemList.itemIngotVanadium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltvanadiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltvanadiumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustVibranium), RecipeCategory.MISC, ItemList.itemIngotVibranium.get(), 0.75F, 20)
                 .unlockedBy("smeltvibraniumdust", has(ItemList.itemIngotVibranium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltvibraniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltvibraniumdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustVulcanite), RecipeCategory.MISC, ItemList.itemIngotVulcanite.get(), 0.75F, 20)
                 .unlockedBy("smeltvulcanitedust", has(ItemList.itemIngotVulcanite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltvulcanitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltvulcanitedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustVyroxeres), RecipeCategory.MISC, ItemList.itemIngotVyroxeres.get(), 0.75F, 20)
                 .unlockedBy("smeltvyroxeresdust", has(ItemList.itemIngotVyroxeres.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltvyroxeresdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltvyroxeresdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustYellorite), RecipeCategory.MISC, ItemList.itemIngotYellorite.get(), 0.75F, 20)
                 .unlockedBy("smeltyelloritedust", has(ItemList.itemIngotYellorite.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltyelloritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltyelloritedust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustZinc), RecipeCategory.MISC, ItemList.itemIngotZinc.get(), 0.75F, 20)
                 .unlockedBy("smeltzincdust", has(ItemList.itemIngotZinc.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltzincdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltzincdust"));
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ItemTagList.dustZirconium), RecipeCategory.MISC, ItemList.itemIngotZirconium.get(), 0.75F, 20)
                 .unlockedBy("smeltzirconiumdust", has(ItemList.itemIngotZirconium.get()))
-                .save(consumer, new ResourceLocation("extraores:smeltzirconiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:smeltzirconiumdust"));
     }
 
-    protected void buildBlastingRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildBlastingRecipes(RecipeOutput consumer)
     {
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAdamantine.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAdamantine.get(), 0.75F, 20)
                 .unlockedBy("blastadamantineore", has(ItemList.itemIngotAdamantine.get()))
-                .save(consumer, new ResourceLocation("extraores:blastadamantineore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastadamantineore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAldourite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAldourite.get(), 0.75F, 20)
                 .unlockedBy("blastaldouriteore", has(ItemList.itemIngotAldourite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastaldouriteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastaldouriteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAluminum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAluminum.get(), 0.75F, 20)
                 .unlockedBy("blastaluminumore", has(ItemList.itemIngotAluminum.get()))
-                .save(consumer, new ResourceLocation("extraores:blastaluminumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastaluminumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAmericium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAmericium.get(), 0.75F, 20)
                 .unlockedBy("blastamericiumore", has(ItemList.itemIngotAmericium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastamericiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastamericiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAmordrine.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAmordrine.get(), 0.75F, 20)
                 .unlockedBy("blastamordrineore", has(ItemList.itemIngotAmordrine.get()))
-                .save(consumer, new ResourceLocation("extraores:blastamordrineore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastamordrineore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAngmallen.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAngmallen.get(), 0.75F, 20)
                 .unlockedBy("blastangmallenore", has(ItemList.itemIngotAngmallen.get()))
-                .save(consumer, new ResourceLocation("extraores:blastangmallenore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastangmallenore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAstralSilver.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAstralSilver.get(), 0.75F, 20)
                 .unlockedBy("blastastralsilverore", has(ItemList.itemIngotAstralSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:blastastralsilverore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastastralsilverore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAtlarus.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 20)
                 .unlockedBy("blastatlarusore", has(ItemList.itemIngotAtlarus.get()))
-                .save(consumer, new ResourceLocation("extraores:blastatlarusore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastatlarusore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAzureSilver.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 20)
                 .unlockedBy("blastazuresilverore", has(ItemList.itemIngotAzureSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:blastazuresilverore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastazuresilverore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreBismuth.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 20)
                 .unlockedBy("blastbismuthore", has(ItemList.itemIngotBismuth.get()))
-                .save(consumer, new ResourceLocation("extraores:blastbismuthore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastbismuthore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreBlackSteel.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotBlackSteel.get(), 0.75F, 20)
                 .unlockedBy("blastblacksteelore", has(ItemList.itemIngotBlackSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:blastblacksteelore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastblacksteelore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCadmium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCadmium.get(), 0.75F, 20)
                 .unlockedBy("blastcadmiumore", has(ItemList.itemIngotCadmium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcadmiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcadmiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCarmot.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCarmot.get(), 0.75F, 20)
                 .unlockedBy("blastcarmotore", has(ItemList.itemIngotCarmot.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcarmotore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcarmotore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCelenegil.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCelenegil.get(), 0.75F, 20)
                 .unlockedBy("blastcelenegilore", has(ItemList.itemIngotCelenegil.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcelenegilore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcelenegilore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCeruclase.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCeruclase.get(), 0.75F, 20)
                 .unlockedBy("blastceruclaseore", has(ItemList.itemIngotCeruclase.get()))
-                .save(consumer, new ResourceLocation("extraores:blastceruclaseore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastceruclaseore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreChromium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotChromium.get(), 0.75F, 20)
                 .unlockedBy("blastchromiumore", has(ItemList.itemIngotChromium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastchromiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastchromiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCobalt.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCobalt.get(), 0.75F, 20)
                 .unlockedBy("blastcobaltore", has(ItemList.itemIngotCobalt.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcobaltore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcobaltore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCopper.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCopper.get(), 0.75F, 20)
                 .unlockedBy("blastcopperore", has(ItemList.itemIngotCopper.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcopperore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcopperore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCrimsonSteel.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCrimsonSteel.get(), 0.75F, 20)
                 .unlockedBy("blastcrimsonsteelore", has(ItemList.itemIngotCrimsonSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcrimsonsteelore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcrimsonsteelore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreDeepIron.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotDeepIron.get(), 0.75F, 20)
                 .unlockedBy("blastdeepironore", has(ItemList.itemIngotDeepIron.get()))
-                .save(consumer, new ResourceLocation("extraores:blastdeepironore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastdeepironore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreDesichalkos.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotDesichalkos.get(), 0.75F, 20)
                 .unlockedBy("blastdesichalkosore", has(ItemList.itemIngotDesichalkos.get()))
-                .save(consumer, new ResourceLocation("extraores:blastdesichalkosore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastdesichalkosore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreEximite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotEximite.get(), 0.75F, 20)
                 .unlockedBy("blasteximiteore", has(ItemList.itemIngotEximite.get()))
-                .save(consumer, new ResourceLocation("extraores:blasteximiteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasteximiteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreGallium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotGallium.get(), 0.75F, 20)
                 .unlockedBy("blastgalliumore", has(ItemList.itemIngotGallium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastgalliumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastgalliumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreHaderoth.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotHaderoth.get(), 0.75F, 20)
                 .unlockedBy("blasthaderothore", has(ItemList.itemIngotHaderoth.get()))
-                .save(consumer, new ResourceLocation("extraores:blasthaderothore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasthaderothore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreHepatizon.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotHepatizon.get(), 0.75F, 20)
                 .unlockedBy("blasthepatizonore", has(ItemList.itemIngotHepatizon.get()))
-                .save(consumer, new ResourceLocation("extraores:blasthepatizonore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasthepatizonore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreIgnatius.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotIgnatius.get(), 0.75F, 20)
                 .unlockedBy("blastignatiusore", has(ItemList.itemIngotIgnatius.get()))
-                .save(consumer, new ResourceLocation("extraores:blastignatiusore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastignatiusore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreIndium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotIndium.get(), 0.75F, 20)
                 .unlockedBy("blastindiumore", has(ItemList.itemIngotIndium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastindiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastindiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreInfuscolium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotInfuscolium.get(), 0.75F, 20)
                 .unlockedBy("blastinfuscoliumore", has(ItemList.itemIngotInfuscolium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastinfuscoliumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastinfuscoliumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreInolashite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotInolashite.get(), 0.75F, 20)
                 .unlockedBy("blastinolashiteore", has(ItemList.itemIngotInolashite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastinolashiteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastinolashiteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreIridium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotIridium.get(), 0.75F, 20)
                 .unlockedBy("blastiridiumore", has(ItemList.itemIngotIridium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastiridiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastiridiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreKalendrite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotKalendrite.get(), 0.75F, 20)
                 .unlockedBy("blastkalendriteore", has(ItemList.itemIngotKalendrite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastkalendriteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastkalendriteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreLead.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotLead.get(), 0.75F, 20)
                 .unlockedBy("blastleadore", has(ItemList.itemIngotLead.get()))
-                .save(consumer, new ResourceLocation("extraores:blastleadore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastleadore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreLemurite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotLemurite.get(), 0.75F, 20)
                 .unlockedBy("blastlemuriteore", has(ItemList.itemIngotLemurite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastlemuriteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastlemuriteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreManganese.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotManganese.get(), 0.75F, 20)
                 .unlockedBy("blastmanganeseore", has(ItemList.itemIngotManganese.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmanganeseore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmanganeseore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreMeutoite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotMeutoite.get(), 0.75F, 20)
                 .unlockedBy("blastmeutoiteore", has(ItemList.itemIngotMeutoite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmeutoiteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmeutoiteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreMidasium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotMidasium.get(), 0.75F, 20)
                 .unlockedBy("blastmidasiumore", has(ItemList.itemIngotMidasium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmidasiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmidasiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreMithril.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotMithril.get(), 0.75F, 20)
                 .unlockedBy("blastmithrilore", has(ItemList.itemIngotMithril.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmithrilore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmithrilore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreMolybdenum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotMolybdenum.get(), 0.75F, 20)
                 .unlockedBy("blastmolybdenumore", has(ItemList.itemIngotMolybdenum.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmolybdenumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmolybdenumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreNeodymium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotNeodymium.get(), 0.75F, 20)
                 .unlockedBy("blastneodymiumore", has(ItemList.itemIngotNeodymium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastneodymiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastneodymiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreNeptunium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotNeptunium.get(), 0.75F, 20)
                 .unlockedBy("blastneptuniumore", has(ItemList.itemIngotNeptunium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastneptuniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastneptuniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreNickel.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotNickel.get(), 0.75F, 20)
                 .unlockedBy("blastnickelore", has(ItemList.itemIngotNickel.get()))
-                .save(consumer, new ResourceLocation("extraores:blastnickelore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastnickelore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreNiobium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotNiobium.get(), 0.75F, 20)
                 .unlockedBy("blastniobiumore", has(ItemList.itemIngotNiobium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastniobiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastniobiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreOrichalcum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotOrichalcum.get(), 0.75F, 20)
                 .unlockedBy("blastorichalcumore", has(ItemList.itemIngotOrichalcum.get()))
-                .save(consumer, new ResourceLocation("extraores:blastorichalcumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastorichalcumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreOureclase.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotOureclase.get(), 0.75F, 20)
                 .unlockedBy("blastoureclaseore", has(ItemList.itemIngotOureclase.get()))
-                .save(consumer, new ResourceLocation("extraores:blastoureclaseore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastoureclaseore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePalladium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPalladium.get(), 0.75F, 20)
                 .unlockedBy("blastpalladiumore", has(ItemList.itemIngotPalladium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastpalladiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastpalladiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePlatinum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPlatinum.get(), 0.75F, 20)
                 .unlockedBy("blastplatinumore", has(ItemList.itemIngotPlatinum.get()))
-                .save(consumer, new ResourceLocation("extraores:blastplatinumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastplatinumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePlutonium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPlutonium.get(), 0.75F, 20)
                 .unlockedBy("blastplutoniumore", has(ItemList.itemIngotPlutonium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastplutoniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastplutoniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePolonium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPolonium.get(), 0.75F, 20)
                 .unlockedBy("blastpoloniumore", has(ItemList.itemIngotPolonium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastpoloniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastpoloniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePromethium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPromethium.get(), 0.75F, 20)
                 .unlockedBy("blastpromethiumore", has(ItemList.itemIngotPromethium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastpromethiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastpromethiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreRhenium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotRhenium.get(), 0.75F, 20)
                 .unlockedBy("blastrheniumore", has(ItemList.itemIngotRhenium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastrheniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastrheniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreRhodium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotRhodium.get(), 0.75F, 20)
                 .unlockedBy("blastrhodiumore", has(ItemList.itemIngotRhodium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastrhodiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastrhodiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreRubracium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotRubracium.get(), 0.75F, 20)
                 .unlockedBy("blastrubraciumore", has(ItemList.itemIngotRubracium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastrubraciumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastrubraciumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreRuthenium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotRuthenium.get(), 0.75F, 20)
                 .unlockedBy("blastrutheniumore", has(ItemList.itemIngotRuthenium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastrutheniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastrutheniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreSanguinite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotSanguinite.get(), 0.75F, 20)
                 .unlockedBy("blastsanguiniteore", has(ItemList.itemIngotSanguinite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastsanguiniteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastsanguiniteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreShadowIron.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotShadowIron.get(), 0.75F, 20)
                 .unlockedBy("blastshadowironore", has(ItemList.itemIngotShadowIron.get()))
-                .save(consumer, new ResourceLocation("extraores:blastshadowironore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastshadowironore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreSilver.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotSilver.get(), 0.75F, 20)
                 .unlockedBy("blastsilverore", has(ItemList.itemIngotSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:blastsilverore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastsilverore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTantalum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTantalum.get(), 0.75F, 20)
                 .unlockedBy("blasttantalumore", has(ItemList.itemIngotTantalum.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttantalumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttantalumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTartarite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTartarite.get(), 0.75F, 20)
                 .unlockedBy("blasttartariteore", has(ItemList.itemIngotTartarite.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttartariteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttartariteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTechnetium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTechnetium.get(), 0.75F, 20)
                 .unlockedBy("blasttechnetiumore", has(ItemList.itemIngotTechnetium.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttechnetiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttechnetiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreThallium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotThallium.get(), 0.75F, 20)
                 .unlockedBy("blastthalliumore", has(ItemList.itemIngotThallium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastthalliumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastthalliumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTin.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTin.get(), 0.75F, 20)
                 .unlockedBy("blasttinore", has(ItemList.itemIngotTin.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttinore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttinore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTitanium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTitanium.get(), 0.75F, 20)
                 .unlockedBy("blasttitaniumore", has(ItemList.itemIngotTitanium.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttitaniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttitaniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTritium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTritium.get(), 0.75F, 20)
                 .unlockedBy("blasttritiumore", has(ItemList.itemIngotTritium.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttritiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttritiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTungsten.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTungsten.get(), 0.75F, 20)
                 .unlockedBy("blasttungstenore", has(ItemList.itemIngotTungsten.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttungstenore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttungstenore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreUnobtainium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotUnobtainium.get(), 0.75F, 20)
                 .unlockedBy("blastunobtainiumore", has(ItemList.itemIngotUnobtainium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastunobtainiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastunobtainiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreUranium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotUranium.get(), 0.75f, 20)
                 .unlockedBy("blasturaniumore", has(ItemList.itemIngotUranium.get()))
-                .save(consumer, new ResourceLocation("extraores:blasturaniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blasturaniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVanadium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotVanadium.get(), 0.75F, 20)
                 .unlockedBy("blastvanadiumore", has(ItemList.itemIngotVanadium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastvanadiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastvanadiumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVibranium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotVibranium.get(), 0.75F, 20)
                 .unlockedBy("blastvibraniumore", has(ItemList.itemIngotVibranium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastvibraniumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastvibraniumore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVulcanite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotVulcanite.get(), 0.75F, 20)
                 .unlockedBy("blastvulcaniteore", has(ItemList.itemIngotVulcanite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastvulcaniteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastvulcaniteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVyroxeres.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotVyroxeres.get(), 0.75F, 20)
                 .unlockedBy("blastvyroxeresore", has(ItemList.itemIngotVyroxeres.get()))
-                .save(consumer, new ResourceLocation("extraores:blastvyroxeresore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastvyroxeresore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreYellorite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotYellorite.get(), 0.75F, 20)
                 .unlockedBy("blastyelloriteore", has(ItemList.itemIngotYellorite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastyelloriteore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastyelloriteore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreZinc.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotZinc.get(), 0.75F, 20)
                 .unlockedBy("blastzincore", has(ItemList.itemIngotZinc.get()))
-                .save(consumer, new ResourceLocation("extraores:blastzincore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastzincore"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreZirconium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotZirconium.get(), 0.75F, 20)
                 .unlockedBy("blastzirconiumore", has(ItemList.itemIngotZirconium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastzirconiumore"));
+                .save(consumer, ResourceLocation.parse("extraores:blastzirconiumore"));
         //Blasting Dust
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAdamantine.get()), RecipeCategory.MISC, ItemList.itemIngotAdamantine.get(), 0.75F, 10)
                 .unlockedBy("blastadamantinedust", has(ItemList.itemIngotAdamantine.get()))
-                .save(consumer, new ResourceLocation("extraores:blastadamantinedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastadamantinedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAldourite.get()), RecipeCategory.MISC, ItemList.itemIngotAldourite.get(), 0.75F, 10)
                 .unlockedBy("blastaldouritedust", has(ItemList.itemIngotAldourite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastaldouritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastaldouritedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAluminum.get()), RecipeCategory.MISC, ItemList.itemIngotAluminum.get(), 0.75F, 10)
                 .unlockedBy("blastaluminumdust", has(ItemList.itemIngotAluminum.get()))
-                .save(consumer, new ResourceLocation("extraores:blastaluminumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastaluminumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAmericium.get()), RecipeCategory.MISC, ItemList.itemIngotAmericium.get(), 0.75F, 10)
                 .unlockedBy("blastamericiumdust", has(ItemList.itemIngotAmericium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastamericiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastamericiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAmordrine.get()), RecipeCategory.MISC, ItemList.itemIngotAmordrine.get(), 0.75F, 10)
                 .unlockedBy("blastamordrinedust", has(ItemList.itemIngotAmordrine.get()))
-                .save(consumer, new ResourceLocation("extraores:blastamordrinedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastamordrinedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAngmallen.get()), RecipeCategory.MISC, ItemList.itemIngotAngmallen.get(), 0.75F, 10)
                 .unlockedBy("blastangmallendust", has(ItemList.itemIngotAngmallen.get()))
-                .save(consumer, new ResourceLocation("extraores:blastangmallendust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastangmallendust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAstralSilver.get()), RecipeCategory.MISC, ItemList.itemIngotAstralSilver.get(), 0.75F, 10)
                 .unlockedBy("blastastralsilverdust", has(ItemList.itemIngotAstralSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:blastastralsilverdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastastralsilverdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAtlarus.get()), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 10)
                 .unlockedBy("blastatlarusdust", has(ItemList.itemIngotAtlarus.get()))
-                .save(consumer, new ResourceLocation("extraores:blastatlarusdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastatlarusdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAzureSilver.get()), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 10)
                 .unlockedBy("blastazuresilverdust", has(ItemList.itemIngotAzureSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:blastazuresilverdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastazuresilverdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustBismuth.get()), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 10)
                 .unlockedBy("blastbismuthdust", has(ItemList.itemIngotBismuth.get()))
-                .save(consumer, new ResourceLocation("extraores:blastbismuthdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastbismuthdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustBlackSteel.get()), RecipeCategory.MISC, ItemList.itemIngotBlackSteel.get(), 0.75F, 10)
                 .unlockedBy("blastblacksteeldust", has(ItemList.itemIngotBlackSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:blastblacksteeldust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastblacksteeldust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCadmium.get()), RecipeCategory.MISC, ItemList.itemIngotCadmium.get(), 0.75F, 10)
                 .unlockedBy("blastcadmiumdust", has(ItemList.itemIngotCadmium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcadmiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcadmiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCarmot.get()), RecipeCategory.MISC, ItemList.itemIngotCarmot.get(), 0.75F, 10)
                 .unlockedBy("blastcarmotdust", has(ItemList.itemIngotCarmot.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcarmotdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcarmotdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCelenegil.get()), RecipeCategory.MISC, ItemList.itemIngotCelenegil.get(), 0.75F, 10)
                 .unlockedBy("blastcelenegildust", has(ItemList.itemIngotCelenegil.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcelenegildust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcelenegildust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCeruclase.get()), RecipeCategory.MISC, ItemList.itemIngotCeruclase.get(), 0.75F, 10)
                 .unlockedBy("blastceruclasedust", has(ItemList.itemIngotCeruclase.get()))
-                .save(consumer, new ResourceLocation("extraores:blastceruclasedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastceruclasedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustChromium.get()), RecipeCategory.MISC, ItemList.itemIngotChromium.get(), 0.75F, 10)
                 .unlockedBy("blastchromiumdust", has(ItemList.itemIngotChromium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastchromiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastchromiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCobalt.get()), RecipeCategory.MISC, ItemList.itemIngotCobalt.get(), 0.75F, 10)
                 .unlockedBy("blastcobaltdust", has(ItemList.itemIngotCobalt.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcobaltdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcobaltdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCopper.get()), RecipeCategory.MISC, ItemList.itemIngotCopper.get(), 0.75F, 10)
                 .unlockedBy("blastcopperdust", has(ItemList.itemIngotCopper.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcopperdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcopperdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCrimsonSteel.get()), RecipeCategory.MISC, ItemList.itemIngotCrimsonSteel.get(), 0.75F, 10)
                 .unlockedBy("blastcrimsonsteeldust", has(ItemList.itemIngotCrimsonSteel.get()))
-                .save(consumer, new ResourceLocation("extraores:blastcrimsonsteeldust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastcrimsonsteeldust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustDeepIron.get()), RecipeCategory.MISC, ItemList.itemIngotDeepIron.get(), 0.75F, 10)
                 .unlockedBy("blastdeepirondust", has(ItemList.itemIngotDeepIron.get()))
-                .save(consumer, new ResourceLocation("extraores:blastdeepirondust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastdeepirondust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustDesichalkos.get()), RecipeCategory.MISC, ItemList.itemIngotDesichalkos.get(), 0.75F, 10)
                 .unlockedBy("blastdesichalkosdust", has(ItemList.itemIngotDesichalkos.get()))
-                .save(consumer, new ResourceLocation("extraores:blastdesichalkosdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastdesichalkosdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustEximite.get()), RecipeCategory.MISC, ItemList.itemIngotEximite.get(), 0.75F, 10)
                 .unlockedBy("blasteximitedust", has(ItemList.itemIngotEximite.get()))
-                .save(consumer, new ResourceLocation("extraores:blasteximitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasteximitedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustGallium.get()), RecipeCategory.MISC, ItemList.itemIngotGallium.get(), 0.75F, 10)
                 .unlockedBy("blastgalliumdust", has(ItemList.itemIngotGallium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastgalliumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastgalliumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustHaderoth.get()), RecipeCategory.MISC, ItemList.itemIngotHaderoth.get(), 0.75F, 10)
                 .unlockedBy("blasthaderothdust", has(ItemList.itemIngotHaderoth.get()))
-                .save(consumer, new ResourceLocation("extraores:blasthaderothdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasthaderothdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustHepatizon.get()), RecipeCategory.MISC, ItemList.itemIngotHepatizon.get(), 0.75F, 10)
                 .unlockedBy("blasthepatizondust", has(ItemList.itemIngotHepatizon.get()))
-                .save(consumer, new ResourceLocation("extraores:blasthepatizondust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasthepatizondust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustIgnatius.get()), RecipeCategory.MISC, ItemList.itemIngotIgnatius.get(), 0.75F, 10)
                 .unlockedBy("blastignatiusdust", has(ItemList.itemIngotIgnatius.get()))
-                .save(consumer, new ResourceLocation("extraores:blastignatiusdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastignatiusdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustIndium.get()), RecipeCategory.MISC, ItemList.itemIngotIndium.get(), 0.75F, 10)
                 .unlockedBy("blastindiumdust", has(ItemList.itemIngotIndium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastindiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastindiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustInfuscolium.get()), RecipeCategory.MISC, ItemList.itemIngotInfuscolium.get(), 0.75F, 10)
                 .unlockedBy("blastinfuscoliumdust", has(ItemList.itemIngotInfuscolium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastinfuscoliumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastinfuscoliumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustInolashite.get()), RecipeCategory.MISC, ItemList.itemIngotInolashite.get(), 0.75F, 10)
                 .unlockedBy("blastinolashitedust", has(ItemList.itemIngotInolashite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastinolashitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastinolashitedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustIridium.get()), RecipeCategory.MISC, ItemList.itemIngotIridium.get(), 0.75F, 10)
                 .unlockedBy("blastiridiumdust", has(ItemList.itemIngotIridium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastiridiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastiridiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustKalendrite.get()), RecipeCategory.MISC, ItemList.itemIngotKalendrite.get(), 0.75F, 10)
                 .unlockedBy("blastkalendritedust", has(ItemList.itemIngotKalendrite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastkalendritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastkalendritedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustLead.get()), RecipeCategory.MISC, ItemList.itemIngotLead.get(), 0.75F, 10)
                 .unlockedBy("blastleaddust", has(ItemList.itemIngotLead.get()))
-                .save(consumer, new ResourceLocation("extraores:blastleaddust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastleaddust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustLemurite.get()), RecipeCategory.MISC, ItemList.itemIngotLemurite.get(), 0.75F, 10)
                 .unlockedBy("blastlemuritedust", has(ItemList.itemIngotLemurite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastlemuritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastlemuritedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustManganese.get()), RecipeCategory.MISC, ItemList.itemIngotManganese.get(), 0.75F, 10)
                 .unlockedBy("blastmanganesedust", has(ItemList.itemIngotManganese.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmanganesedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmanganesedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustMeutoite.get()), RecipeCategory.MISC, ItemList.itemIngotMeutoite.get(), 0.75F, 10)
                 .unlockedBy("blastmeutoitedust", has(ItemList.itemIngotMeutoite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmeutoitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmeutoitedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustMidasium.get()), RecipeCategory.MISC, ItemList.itemIngotMidasium.get(), 0.75F, 10)
                 .unlockedBy("blastmidasiumdust", has(ItemList.itemIngotMidasium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmidasiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmidasiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustMithril.get()), RecipeCategory.MISC, ItemList.itemIngotMithril.get(), 0.75F, 10)
                 .unlockedBy("blastmithrildust", has(ItemList.itemIngotMithril.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmithrildust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmithrildust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustMolybdenum.get()), RecipeCategory.MISC, ItemList.itemIngotMolybdenum.get(), 0.75F, 10)
                 .unlockedBy("blastmolybdenumdust", has(ItemList.itemIngotMolybdenum.get()))
-                .save(consumer, new ResourceLocation("extraores:blastmolybdenumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastmolybdenumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustNeodymium.get()), RecipeCategory.MISC, ItemList.itemIngotNeodymium.get(), 0.75F, 10)
                 .unlockedBy("blastneodymiumdust", has(ItemList.itemIngotNeodymium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastneodymiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastneodymiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustNeptunium.get()), RecipeCategory.MISC, ItemList.itemIngotNeptunium.get(), 0.75F, 10)
                 .unlockedBy("blastneptuniumdust", has(ItemList.itemIngotNeptunium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastneptuniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastneptuniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustNickel.get()), RecipeCategory.MISC, ItemList.itemIngotNickel.get(), 0.75F, 10)
                 .unlockedBy("blastnickeldust", has(ItemList.itemIngotNickel.get()))
-                .save(consumer, new ResourceLocation("extraores:blastnickeldust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastnickeldust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustNiobium.get()), RecipeCategory.MISC, ItemList.itemIngotNiobium.get(), 0.75F, 10)
                 .unlockedBy("blastniobiumdust", has(ItemList.itemIngotNiobium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastniobiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastniobiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustOrichalcum.get()), RecipeCategory.MISC, ItemList.itemIngotOrichalcum.get(), 0.75F, 10)
                 .unlockedBy("blastorichalcumdust", has(ItemList.itemIngotOrichalcum.get()))
-                .save(consumer, new ResourceLocation("extraores:blastorichalcumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastorichalcumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustOureclase.get()), RecipeCategory.MISC, ItemList.itemIngotOureclase.get(), 0.75F, 10)
                 .unlockedBy("blastoureclasedust", has(ItemList.itemIngotOureclase.get()))
-                .save(consumer, new ResourceLocation("extraores:blastoureclasedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastoureclasedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPalladium.get()), RecipeCategory.MISC, ItemList.itemIngotPalladium.get(), 0.75F, 10)
                 .unlockedBy("blastpalladiumdust", has(ItemList.itemIngotPalladium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastpalladiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastpalladiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPlatinum.get()), RecipeCategory.MISC, ItemList.itemIngotPlatinum.get(), 0.75F, 10)
                 .unlockedBy("blastplatinumdust", has(ItemList.itemIngotPlatinum.get()))
-                .save(consumer, new ResourceLocation("extraores:blastplatinumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastplatinumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPlutonium.get()), RecipeCategory.MISC, ItemList.itemIngotPlutonium.get(), 0.75F, 10)
                 .unlockedBy("blastplutoniumdust", has(ItemList.itemIngotPlutonium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastplutoniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastplutoniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPolonium.get()), RecipeCategory.MISC, ItemList.itemIngotPolonium.get(), 0.75F, 10)
                 .unlockedBy("blastpoloniumdust", has(ItemList.itemIngotPolonium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastpoloniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastpoloniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPromethium.get()), RecipeCategory.MISC, ItemList.itemIngotPromethium.get(), 0.75F, 10)
                 .unlockedBy("blastpromethiumdust", has(ItemList.itemIngotPromethium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastpromethiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastpromethiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustRhenium.get()), RecipeCategory.MISC, ItemList.itemIngotRhenium.get(), 0.75F, 10)
                 .unlockedBy("blastrheniumdust", has(ItemList.itemIngotRhenium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastrheniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastrheniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustRhodium.get()), RecipeCategory.MISC, ItemList.itemIngotRhodium.get(), 0.75F, 10)
                 .unlockedBy("blastrhodiumdust", has(ItemList.itemIngotRhodium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastrhodiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastrhodiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustRubracium.get()), RecipeCategory.MISC, ItemList.itemIngotRubracium.get(), 0.75F, 10)
                 .unlockedBy("blastrubraciumdust", has(ItemList.itemIngotRubracium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastrubraciumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastrubraciumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustRuthenium.get()), RecipeCategory.MISC, ItemList.itemIngotRuthenium.get(), 0.75F, 10)
                 .unlockedBy("blastrutheniumdust", has(ItemList.itemIngotRuthenium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastrutheniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastrutheniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustSanguinite.get()), RecipeCategory.MISC, ItemList.itemIngotSanguinite.get(), 0.75F, 10)
                 .unlockedBy("blastsanguinitedust", has(ItemList.itemIngotSanguinite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastsanguinitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastsanguinitedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustShadowIron.get()), RecipeCategory.MISC, ItemList.itemIngotShadowIron.get(), 0.75F, 10)
                 .unlockedBy("blastshadowirondust", has(ItemList.itemIngotShadowIron.get()))
-                .save(consumer, new ResourceLocation("extraores:blastshadowirondust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastshadowirondust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustSilver.get()), RecipeCategory.MISC, ItemList.itemIngotSilver.get(), 0.75F, 10)
                 .unlockedBy("blastsilverdust", has(ItemList.itemIngotSilver.get()))
-                .save(consumer, new ResourceLocation("extraores:blastsilverdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastsilverdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTantalum.get()), RecipeCategory.MISC, ItemList.itemIngotTantalum.get(), 0.75F, 10)
                 .unlockedBy("blasttantalumdust", has(ItemList.itemIngotTantalum.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttantalumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttantalumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTartarite.get()), RecipeCategory.MISC, ItemList.itemIngotTartarite.get(), 0.75F, 10)
                 .unlockedBy("blasttartaritedust", has(ItemList.itemIngotTartarite.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttartaritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttartaritedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTechnetium.get()), RecipeCategory.MISC, ItemList.itemIngotTechnetium.get(), 0.75F, 10)
                 .unlockedBy("blasttechnetiumdust", has(ItemList.itemIngotTechnetium.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttechnetiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttechnetiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustThallium.get()), RecipeCategory.MISC, ItemList.itemIngotThallium.get(), 0.75F, 10)
                 .unlockedBy("blastthalliumdust", has(ItemList.itemIngotThallium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastthalliumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastthalliumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTin.get()), RecipeCategory.MISC, ItemList.itemIngotTin.get(), 0.75F, 10)
                 .unlockedBy("blasttindust", has(ItemList.itemIngotTin.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttindust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttindust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTitanium.get()), RecipeCategory.MISC, ItemList.itemIngotTitanium.get(), 0.75F, 10)
                 .unlockedBy("blasttitaniumdust", has(ItemList.itemIngotTitanium.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttitaniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttitaniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTritium.get()), RecipeCategory.MISC, ItemList.itemIngotTritium.get(), 0.75F, 10)
                 .unlockedBy("blasttritiumdust", has(ItemList.itemIngotTritium.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttritiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttritiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTungsten.get()), RecipeCategory.MISC, ItemList.itemIngotTungsten.get(), 0.75F, 10)
                 .unlockedBy("blasttungstendust", has(ItemList.itemIngotTungsten.get()))
-                .save(consumer, new ResourceLocation("extraores:blasttungstendust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasttungstendust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustUnobtainium.get()), RecipeCategory.MISC, ItemList.itemIngotUnobtainium.get(), 0.75F, 10)
                 .unlockedBy("blastunobtainiumdust", has(ItemList.itemIngotUnobtainium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastunobtainiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastunobtainiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustUranium.get()), RecipeCategory.MISC, ItemList.itemIngotUranium.get(), 0.75f, 10)
                 .unlockedBy("blasturaniumdust", has(ItemList.itemIngotUranium.get()))
-                .save(consumer, new ResourceLocation("extraores:blasturaniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blasturaniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVanadium.get()), RecipeCategory.MISC, ItemList.itemIngotVanadium.get(), 0.75F, 10)
                 .unlockedBy("blastvanadiumdust", has(ItemList.itemIngotVanadium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastvanadiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastvanadiumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVibranium.get()), RecipeCategory.MISC, ItemList.itemIngotVibranium.get(), 0.75F, 10)
                 .unlockedBy("blastvibraniumdust", has(ItemList.itemIngotVibranium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastvibraniumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastvibraniumdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVulcanite.get()), RecipeCategory.MISC, ItemList.itemIngotVulcanite.get(), 0.75F, 10)
                 .unlockedBy("blastvulcanitedust", has(ItemList.itemIngotVulcanite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastvulcanitedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastvulcanitedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVyroxeres.get()), RecipeCategory.MISC, ItemList.itemIngotVyroxeres.get(), 0.75F, 10)
                 .unlockedBy("blastvyroxeresdust", has(ItemList.itemIngotVyroxeres.get()))
-                .save(consumer, new ResourceLocation("extraores:blastvyroxeresdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastvyroxeresdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustYellorite.get()), RecipeCategory.MISC, ItemList.itemIngotYellorite.get(), 0.75F, 10)
                 .unlockedBy("blastyelloritedust", has(ItemList.itemIngotYellorite.get()))
-                .save(consumer, new ResourceLocation("extraores:blastyelloritedust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastyelloritedust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustZinc.get()), RecipeCategory.MISC, ItemList.itemIngotZinc.get(), 0.75F, 10)
                 .unlockedBy("blastzincdust", has(ItemList.itemIngotZinc.get()))
-                .save(consumer, new ResourceLocation("extraores:blastzincdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastzincdust"));
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustZirconium.get()), RecipeCategory.MISC, ItemList.itemIngotZirconium.get(), 0.75F, 10)
                 .unlockedBy("blastzirconiumdust", has(ItemList.itemIngotZirconium.get()))
-                .save(consumer, new ResourceLocation("extraores:blastzirconiumdust"));
+                .save(consumer, ResourceLocation.parse("extraores:blastzirconiumdust"));
     }
 
-    protected void buildMekanismInjecting(Consumer<FinishedRecipe> consumer)
+    protected void buildMekanismInjecting(RecipeOutput consumer)
     {
         //Ore
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAdamantine.get(), 4))
-                .addCriterion("injectadamantineore", has(BlockList.blockOreAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:injectadamantineore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAldourite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAldourite.get(), 4))
-                .addCriterion("injectaldouriteore", has(BlockList.blockOreAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectaldouriteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAluminum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAluminum.get(), 4))
-                .addCriterion("injectaluminumore", has(BlockList.blockOreAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectaluminumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAmericium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAmericium.get(), 4))
-                .addCriterion("injectamericiumore", has(BlockList.blockOreAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectamericiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAmordrine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAmordrine.get(), 4))
-                .addCriterion("injectamordrineore", has(BlockList.blockOreAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:injectamordrineore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAngmallen), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAngmallen.get(), 4))
-                .addCriterion("injectangmallenore", has(BlockList.blockOreAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:injectangmallenore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAstralSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAstralSilver.get(), 4))
-                .addCriterion("injectastralsilverore", has(BlockList.blockOreAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:injectastralsilverore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAtlarus), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAtlarus.get(), 4))
-                .addCriterion("injectatlarusore", has(BlockList.blockOreAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:injectatlarusore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAzureSilver),IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardAzureSilver.get(),4))
-                .addCriterion("injectazuresilverore",has(BlockList.blockOreAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:injectazuresilverore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreBismuth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardBismuth.get(), 4))
-                .addCriterion("injectbismuthore", has(BlockList.blockOreBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:injectbismuthore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreBlackSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardBlackSteel.get(), 4))
-                .addCriterion("injectblacksteelore", has(BlockList.blockOreBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:injectblacksteelore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCadmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCadmium.get(), 4))
-                .addCriterion("injectcadmiumore", has(BlockList.blockOreCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectcadmiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCarmot), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCarmot.get(), 4))
-                .addCriterion("injectcarmotore", has(BlockList.blockOreCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:injectcarmotore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCelenegil), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCelenegil.get(), 4))
-                .addCriterion("injectcelenegilore", has(BlockList.blockOreCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:injectcelenegilore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCeruclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCeruclase.get(), 4))
-                .addCriterion("injectceruclaseore", has(BlockList.blockOreCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:injectceruclaseore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreChromium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardChromium.get(), 4))
-                .addCriterion("injectchromiumore", has(BlockList.blockOreChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectchromiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCobalt), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCobalt.get(), 4))
-                .addCriterion("injectcobaltore", has(BlockList.blockOreCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:injectcobaltore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCopper.get(), 4))
-                .addCriterion("injectcopperore", has(BlockList.blockOreCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:injectcopperore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCrimsonSteel.get(), 4))
-                .addCriterion("injectcrimsonsteelore", has(BlockList.blockOreCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:injectcrimsonsteelore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardDeepIron.get(), 4))
-                .addCriterion("injectdeepironore", has(BlockList.blockOreDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:injectdeepironore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreDesichalkos), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardDesichalkos.get(), 4))
-                .addCriterion("injectdesichalkosore", has(BlockList.blockOreDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:injectdesichalkosore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreEximite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardEximite.get(), 4))
-                .addCriterion("injecteximiteore", has(BlockList.blockOreEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:injecteximiteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreGallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardGallium.get(), 4))
-                .addCriterion("injectgalliumore", has(BlockList.blockOreGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectgalliumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreHaderoth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardHaderoth.get(), 4))
-                .addCriterion("injecthaderothore", has(BlockList.blockOreHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:injecthaderothore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreHepatizon), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardHepatizon.get(), 4))
-                .addCriterion("injecthepatizonore", has(BlockList.blockOreHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:injecthepatizonore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreIgnatius), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardIgnatius.get(), 4))
-                .addCriterion("injectignatiusore", has(BlockList.blockOreIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:injectignatiusore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreIndium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardIndium.get(), 4))
-                .addCriterion("injectindiumore", has(BlockList.blockOreIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectindiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreInfuscolium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardInfuscolium.get(), 4))
-                .addCriterion("injectinfuscoliumore", has(BlockList.blockOreInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectinfuscoliumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreInolashite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardInolashite.get(), 4))
-                .addCriterion("injectinolashiteore", has(BlockList.blockOreInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectinolashiteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreIridium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardIridium.get(), 4))
-                .addCriterion("injectiridiumore", has(BlockList.blockOreIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectiridiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreKalendrite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardKalendrite.get(), 4))
-                .addCriterion("injectkalendriteore", has(BlockList.blockOreKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectkalendriteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreLead), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardLead.get(), 4))
-                .addCriterion("injectleadore", has(BlockList.blockOreLead.get()))
-                .build(consumer, new ResourceLocation("extraores:injectleadore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreLemurite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardLemurite.get(), 4))
-                .addCriterion("injectlemuriteore", has(BlockList.blockOreLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectlemuriteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreManganese), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardManganese.get(), 4))
-                .addCriterion("injectmanganeseore", has(BlockList.blockOreManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:injectmanganeseore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreMeutoite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardMeutoite.get(), 4))
-                .addCriterion("injectmeutoiteore", has(BlockList.blockOreMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectmeutoiteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreMidasium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardMidasium.get(), 4))
-                .addCriterion("injectmidasiumore", has(BlockList.blockOreMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectmidasiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreMithril), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardMithril.get(), 4))
-                .addCriterion("injectmithrilore", has(BlockList.blockOreMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:injectmithrilore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreMolybdenum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardMolybdenum.get(), 4))
-                .addCriterion("injectmolybdenumore", has(BlockList.blockOreMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectmolybdenumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreNeodymium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardNeodymium.get(), 4))
-                .addCriterion("injectneodymiumore", has(BlockList.blockOreNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectneodymiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreNeptunium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardNeptunium.get(), 4))
-                .addCriterion("injectneptuniumore", has(BlockList.blockOreNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectneptuniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreNickel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardNickel.get(), 4))
-                .addCriterion("injectnickelore", has(BlockList.blockOreNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:injectnickelore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreNiobium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardNiobium.get(), 4))
-                .addCriterion("injectniobiumore", has(BlockList.blockOreNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectniobiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreOrichalcum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardOrichalcum.get(), 4))
-                .addCriterion("injectorichalcumore", has(BlockList.blockOreOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectorichalcumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreOsmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardOsmium.get(), 4))
-                .addCriterion("injectosmiumore", has(BlockList.blockOreOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectosmiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreOureclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardOureclase.get(), 4))
-                .addCriterion("injectoureclaseore", has(BlockList.blockOreOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:injectoureclaseore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePalladium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPalladium.get(), 4))
-                .addCriterion("injectpalladiumore", has(BlockList.blockOrePalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectpalladiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePlatinum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPlatinum.get(), 4))
-                .addCriterion("injectplatinumore", has(BlockList.blockOrePlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectplatinumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePlutonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPlutonium.get(), 4))
-                .addCriterion("injectplutoniumore", has(BlockList.blockOrePlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectplutoniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePolonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPolonium.get(), 4))
-                .addCriterion("injectpoloniumore", has(BlockList.blockOrePolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectpoloniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePromethium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPromethium.get(), 4))
-                .addCriterion("injectpromethiumore", has(BlockList.blockOrePromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectpromethiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreRhenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardRhenium.get(), 4))
-                .addCriterion("injectrheniumore", has(BlockList.blockOreRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrheniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreRhodium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardRhodium.get(), 4))
-                .addCriterion("injectrhodiumore", has(BlockList.blockOreRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrhodiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreRubracium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardRubracium.get(), 4))
-                .addCriterion("injectrubraciumore", has(BlockList.blockOreRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrubraciumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreRuthenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardRuthenium.get(), 4))
-                .addCriterion("injectrutheniumore", has(BlockList.blockOreRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrutheniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreSanguinite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardSanguinite.get(), 4))
-                .addCriterion("injectsanguiniteore", has(BlockList.blockOreSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectsanguiniteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreShadowIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardShadowIron.get(), 4))
-                .addCriterion("injectshadowironore", has(BlockList.blockOreShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:injectshadowironore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardSilver.get(), 4))
-                .addCriterion("injectsilverore", has(BlockList.blockOreSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:injectsilverore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTantalum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTantalum.get(), 4))
-                .addCriterion("injecttantalumore", has(BlockList.blockOreTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:injecttantalumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTartarite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTartarite.get(), 4))
-                .addCriterion("injecttartariteore", has(BlockList.blockOreTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:injecttartariteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTechnetium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTechnetium.get(), 4))
-                .addCriterion("injecttechnetiumore", has(BlockList.blockOreTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:injecttechnetiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreThallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardThallium.get(), 4))
-                .addCriterion("injectthalliumore", has(BlockList.blockOreThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectthalliumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTin), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTin.get(), 4))
-                .addCriterion("injecttinore", has(BlockList.blockOreTin.get()))
-                .build(consumer, new ResourceLocation("extraores:injecttinore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTritium.get(), 4))
-                .addCriterion("injecttritiumore", has(BlockList.blockOreTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:injecttritiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTungsten.get(), 4))
-                .addCriterion("injecttungstenore", has(BlockList.blockOreTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:injecttungstenore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreUnobtainium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardUnobtainium.get(), 4))
-                .addCriterion("injectunobtainiumore", has(BlockList.blockOreUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectunobtainiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreUranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardUranium.get(), 4))
-                .addCriterion("injecturaniumore", has(BlockList.blockOreUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:injecturaniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardVanadium.get(), 4))
-                .addCriterion("injectvanadiumore", has(BlockList.blockOreVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectvanadiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardVibranium.get(), 4))
-                .addCriterion("injectvibraniumore", has(BlockList.blockOreVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectvibraniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardVulcanite.get(), 4))
-                .addCriterion("injectvulcaniteore", has(BlockList.blockOreVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectvulcaniteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVyroxeres), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardVyroxeres.get(), 4))
-                .addCriterion("injectvyroxeresore", has(BlockList.blockOreVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:injectvyroxeresore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreYellorite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardYellorite.get(), 4))
-                .addCriterion("injectyelloriteore", has(BlockList.blockOreYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectyelloriteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreZinc), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardZinc.get(), 4))
-                .addCriterion("injectzincore", has(BlockList.blockOreZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:injectzincore"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreZirconium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardZirconium.get(), 4))
-                .addCriterion("injectzirconiumore", has(BlockList.blockOreZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectzirconiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAdamantine.get(), 4))
+                .unlockedBy("injectadamantineore", has(BlockList.blockOreAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectadamantineore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAldourite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAldourite.get(), 4))
+                .unlockedBy("injectaldouriteore", has(BlockList.blockOreAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectaldouriteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAluminum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAluminum.get(), 4))
+                .unlockedBy("injectaluminumore", has(BlockList.blockOreAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectaluminumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAmericium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAmericium.get(), 4))
+                .unlockedBy("injectamericiumore", has(BlockList.blockOreAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectamericiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAmordrine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAmordrine.get(), 4))
+                .unlockedBy("injectamordrineore", has(BlockList.blockOreAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectamordrineore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAngmallen), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAngmallen.get(), 4))
+                .unlockedBy("injectangmallenore", has(BlockList.blockOreAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectangmallenore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAstralSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAstralSilver.get(), 4))
+                .unlockedBy("injectastralsilverore", has(BlockList.blockOreAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectastralsilverore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAtlarus), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAtlarus.get(), 4))
+                .unlockedBy("injectatlarusore", has(BlockList.blockOreAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectatlarusore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAzureSilver),GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1),new ItemStack(ItemList.itemShardAzureSilver.get(),4))
+                .unlockedBy("injectazuresilverore",has(BlockList.blockOreAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:injectazuresilverore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreBismuth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardBismuth.get(), 4))
+                .unlockedBy("injectbismuthore", has(BlockList.blockOreBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectbismuthore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreBlackSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardBlackSteel.get(), 4))
+                .unlockedBy("injectblacksteelore", has(BlockList.blockOreBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectblacksteelore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCadmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCadmium.get(), 4))
+                .unlockedBy("injectcadmiumore", has(BlockList.blockOreCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectcadmiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCarmot), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCarmot.get(), 4))
+                .unlockedBy("injectcarmotore", has(BlockList.blockOreCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectcarmotore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCelenegil), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCelenegil.get(), 4))
+                .unlockedBy("injectcelenegilore", has(BlockList.blockOreCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectcelenegilore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCeruclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCeruclase.get(), 4))
+                .unlockedBy("injectceruclaseore", has(BlockList.blockOreCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectceruclaseore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreChromium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardChromium.get(), 4))
+                .unlockedBy("injectchromiumore", has(BlockList.blockOreChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectchromiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCobalt), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCobalt.get(), 4))
+                .unlockedBy("injectcobaltore", has(BlockList.blockOreCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectcobaltore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCopper), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCopper.get(), 4))
+                .unlockedBy("injectcopperore", has(BlockList.blockOreCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectcopperore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreCrimsonSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCrimsonSteel.get(), 4))
+                .unlockedBy("injectcrimsonsteelore", has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectcrimsonsteelore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreDeepIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardDeepIron.get(), 4))
+                .unlockedBy("injectdeepironore", has(BlockList.blockOreDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectdeepironore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreDesichalkos), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardDesichalkos.get(), 4))
+                .unlockedBy("injectdesichalkosore", has(BlockList.blockOreDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectdesichalkosore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreEximite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardEximite.get(), 4))
+                .unlockedBy("injecteximiteore", has(BlockList.blockOreEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecteximiteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreGallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardGallium.get(), 4))
+                .unlockedBy("injectgalliumore", has(BlockList.blockOreGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectgalliumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreHaderoth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardHaderoth.get(), 4))
+                .unlockedBy("injecthaderothore", has(BlockList.blockOreHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecthaderothore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreHepatizon), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardHepatizon.get(), 4))
+                .unlockedBy("injecthepatizonore", has(BlockList.blockOreHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecthepatizonore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreIgnatius), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardIgnatius.get(), 4))
+                .unlockedBy("injectignatiusore", has(BlockList.blockOreIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectignatiusore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreIndium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardIndium.get(), 4))
+                .unlockedBy("injectindiumore", has(BlockList.blockOreIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectindiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreInfuscolium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardInfuscolium.get(), 4))
+                .unlockedBy("injectinfuscoliumore", has(BlockList.blockOreInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectinfuscoliumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreInolashite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardInolashite.get(), 4))
+                .unlockedBy("injectinolashiteore", has(BlockList.blockOreInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectinolashiteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreIridium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardIridium.get(), 4))
+                .unlockedBy("injectiridiumore", has(BlockList.blockOreIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectiridiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreKalendrite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardKalendrite.get(), 4))
+                .unlockedBy("injectkalendriteore", has(BlockList.blockOreKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectkalendriteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreLead), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardLead.get(), 4))
+                .unlockedBy("injectleadore", has(BlockList.blockOreLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectleadore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreLemurite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardLemurite.get(), 4))
+                .unlockedBy("injectlemuriteore", has(BlockList.blockOreLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectlemuriteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreManganese), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardManganese.get(), 4))
+                .unlockedBy("injectmanganeseore", has(BlockList.blockOreManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectmanganeseore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreMeutoite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardMeutoite.get(), 4))
+                .unlockedBy("injectmeutoiteore", has(BlockList.blockOreMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectmeutoiteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreMidasium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardMidasium.get(), 4))
+                .unlockedBy("injectmidasiumore", has(BlockList.blockOreMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectmidasiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreMithril), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardMithril.get(), 4))
+                .unlockedBy("injectmithrilore", has(BlockList.blockOreMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectmithrilore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreMolybdenum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardMolybdenum.get(), 4))
+                .unlockedBy("injectmolybdenumore", has(BlockList.blockOreMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectmolybdenumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreNeodymium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardNeodymium.get(), 4))
+                .unlockedBy("injectneodymiumore", has(BlockList.blockOreNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectneodymiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreNeptunium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardNeptunium.get(), 4))
+                .unlockedBy("injectneptuniumore", has(BlockList.blockOreNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectneptuniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreNickel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardNickel.get(), 4))
+                .unlockedBy("injectnickelore", has(BlockList.blockOreNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectnickelore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreNiobium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardNiobium.get(), 4))
+                .unlockedBy("injectniobiumore", has(BlockList.blockOreNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectniobiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreOrichalcum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardOrichalcum.get(), 4))
+                .unlockedBy("injectorichalcumore", has(BlockList.blockOreOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectorichalcumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreOsmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardOsmium.get(), 4))
+                .unlockedBy("injectosmiumore", has(BlockList.blockOreOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectosmiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreOureclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardOureclase.get(), 4))
+                .unlockedBy("injectoureclaseore", has(BlockList.blockOreOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectoureclaseore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePalladium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPalladium.get(), 4))
+                .unlockedBy("injectpalladiumore", has(BlockList.blockOrePalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectpalladiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePlatinum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPlatinum.get(), 4))
+                .unlockedBy("injectplatinumore", has(BlockList.blockOrePlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectplatinumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePlutonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPlutonium.get(), 4))
+                .unlockedBy("injectplutoniumore", has(BlockList.blockOrePlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectplutoniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePolonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPolonium.get(), 4))
+                .unlockedBy("injectpoloniumore", has(BlockList.blockOrePolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectpoloniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.orePromethium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPromethium.get(), 4))
+                .unlockedBy("injectpromethiumore", has(BlockList.blockOrePromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectpromethiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreRhenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardRhenium.get(), 4))
+                .unlockedBy("injectrheniumore", has(BlockList.blockOreRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrheniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreRhodium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardRhodium.get(), 4))
+                .unlockedBy("injectrhodiumore", has(BlockList.blockOreRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrhodiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreRubracium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardRubracium.get(), 4))
+                .unlockedBy("injectrubraciumore", has(BlockList.blockOreRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrubraciumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreRuthenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardRuthenium.get(), 4))
+                .unlockedBy("injectrutheniumore", has(BlockList.blockOreRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrutheniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreSanguinite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardSanguinite.get(), 4))
+                .unlockedBy("injectsanguiniteore", has(BlockList.blockOreSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectsanguiniteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreShadowIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardShadowIron.get(), 4))
+                .unlockedBy("injectshadowironore", has(BlockList.blockOreShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectshadowironore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardSilver.get(), 4))
+                .unlockedBy("injectsilverore", has(BlockList.blockOreSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectsilverore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTantalum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTantalum.get(), 4))
+                .unlockedBy("injecttantalumore", has(BlockList.blockOreTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecttantalumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTartarite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTartarite.get(), 4))
+                .unlockedBy("injecttartariteore", has(BlockList.blockOreTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecttartariteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTechnetium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTechnetium.get(), 4))
+                .unlockedBy("injecttechnetiumore", has(BlockList.blockOreTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecttechnetiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreThallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardThallium.get(), 4))
+                .unlockedBy("injectthalliumore", has(BlockList.blockOreThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectthalliumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTin), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTin.get(), 4))
+                .unlockedBy("injecttinore", has(BlockList.blockOreTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecttinore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTritium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTritium.get(), 4))
+                .unlockedBy("injecttritiumore", has(BlockList.blockOreTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecttritiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreTungsten), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTungsten.get(), 4))
+                .unlockedBy("injecttungstenore", has(BlockList.blockOreTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecttungstenore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreUnobtainium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardUnobtainium.get(), 4))
+                .unlockedBy("injectunobtainiumore", has(BlockList.blockOreUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectunobtainiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreUranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardUranium.get(), 4))
+                .unlockedBy("injecturaniumore", has(BlockList.blockOreUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injecturaniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVanadium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardVanadium.get(), 4))
+                .unlockedBy("injectvanadiumore", has(BlockList.blockOreVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectvanadiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVibranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardVibranium.get(), 4))
+                .unlockedBy("injectvibraniumore", has(BlockList.blockOreVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectvibraniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVulcanite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardVulcanite.get(), 4))
+                .unlockedBy("injectvulcaniteore", has(BlockList.blockOreVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectvulcaniteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreVyroxeres), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardVyroxeres.get(), 4))
+                .unlockedBy("injectvyroxeresore", has(BlockList.blockOreVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectvyroxeresore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreYellorite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardYellorite.get(), 4))
+                .unlockedBy("injectyelloriteore", has(BlockList.blockOreYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectyelloriteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreZinc), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardZinc.get(), 4))
+                .unlockedBy("injectzincore", has(BlockList.blockOreZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectzincore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreZirconium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardZirconium.get(), 4))
+                .unlockedBy("injectzirconiumore", has(BlockList.blockOreZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectzirconiumore"));
         //Raw
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAdamantine.get(), 4))
-                .addCriterion("injectrawadamantine", has(ItemList.itemRawAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawadamantine"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAldourite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAldourite.get(), 4))
-                .addCriterion("injectrawaldourite", has(ItemList.itemRawAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawaldourite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAluminum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAluminum.get(), 4))
-                .addCriterion("injectrawaluminum", has(ItemList.itemRawAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawaluminum"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAmericium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAmericium.get(), 4))
-                .addCriterion("injectrawamericium", has(ItemList.itemRawAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawamericium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAmordrine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAmordrine.get(), 4))
-                .addCriterion("injectrawamordrine", has(ItemList.itemRawAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawamordrine"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAngmallen), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAngmallen.get(), 4))
-                .addCriterion("injectrawangmallen", has(ItemList.itemRawAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawangmallen"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAstralSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAstralSilver.get(), 4))
-                .addCriterion("injectrawastralsilver", has(ItemList.itemRawAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawastralsilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAtlarus), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardAtlarus.get(), 4))
-                .addCriterion("injectrawatlarus", has(ItemList.itemRawAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawatlarus"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAzureSilver),IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")),1)),new ItemStack(ItemList.itemShardAzureSilver.get(),4))
-                .addCriterion("injectrawazuresilver",has(ItemList.itemRawAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:injectrawazuresilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardBismuth.get(), 4))
-                .addCriterion("injectrawbismuth", has(ItemList.itemRawBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawbismuth"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawBlackSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardBlackSteel.get(), 4))
-                .addCriterion("injectrawblacksteel", has(ItemList.itemRawBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawblacksteel"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCadmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCadmium.get(), 4))
-                .addCriterion("injectrawcadmium", has(ItemList.itemRawCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawcadmium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCarmot), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCarmot.get(), 4))
-                .addCriterion("injectrawcarmot", has(ItemList.itemRawCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawcarmot"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCelenegil), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCelenegil.get(), 4))
-                .addCriterion("injectrawcelenegil", has(ItemList.itemRawCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawcelenegil"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCeruclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCeruclase.get(), 4))
-                .addCriterion("injectrawceruclase", has(ItemList.itemRawCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawceruclase"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawChromium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardChromium.get(), 4))
-                .addCriterion("injectrawchromium", has(ItemList.itemRawChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawchromium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCobalt), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCobalt.get(), 4))
-                .addCriterion("injectrawcobalt", has(ItemList.itemRawCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawcobalt"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCopper.get(), 4))
-                .addCriterion("injectrawcopper", has(ItemList.itemRawCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawcopper"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardCrimsonSteel.get(), 4))
-                .addCriterion("injectrawcrimsonsteel", has(ItemList.itemRawCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawcrimsonsteel"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardDeepIron.get(), 4))
-                .addCriterion("injectrawdeepiron", has(ItemList.itemRawDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawdeepiron"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawDesichalkos), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardDesichalkos.get(), 4))
-                .addCriterion("injectrawdesichalkos", has(ItemList.itemRawDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawdesichalkos"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawEximite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardEximite.get(), 4))
-                .addCriterion("injectraweximite", has(ItemList.itemRawEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectraweximite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawGallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardGallium.get(), 4))
-                .addCriterion("injectrawgallium", has(ItemList.itemRawGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawgallium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawHaderoth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardHaderoth.get(), 4))
-                .addCriterion("injectrawhaderoth", has(ItemList.itemRawHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawhaderoth"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawHepatizon), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardHepatizon.get(), 4))
-                .addCriterion("injectrawhepatizon", has(ItemList.itemRawHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawhepatizon"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawIgnatius), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardIgnatius.get(), 4))
-                .addCriterion("injectrawignatius", has(ItemList.itemRawIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawignatius"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawIndium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardIndium.get(), 4))
-                .addCriterion("injectrawindium", has(ItemList.itemRawIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawindium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawInfuscolium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardInfuscolium.get(), 4))
-                .addCriterion("injectrawinfuscolium", has(ItemList.itemRawInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawinfuscolium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawInolashite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardInolashite.get(), 4))
-                .addCriterion("injectrawinolashite", has(ItemList.itemRawInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawinolashite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawIridium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardIridium.get(), 4))
-                .addCriterion("injectrawiridium", has(ItemList.itemRawIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawiridium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawKalendrite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardKalendrite.get(), 4))
-                .addCriterion("injectrawkalendrite", has(ItemList.itemRawKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawkalendrite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawLead), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardLead.get(), 4))
-                .addCriterion("injectrawlead", has(ItemList.itemRawLead.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawlead"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawLemurite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardLemurite.get(), 4))
-                .addCriterion("injectrawlemurite", has(ItemList.itemRawLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawlemurite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawManganese), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardManganese.get(), 4))
-                .addCriterion("injectrawmanganese", has(ItemList.itemRawManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawmanganese"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawMeutoite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardMeutoite.get(), 4))
-                .addCriterion("injectrawmeutoite", has(ItemList.itemRawMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawmeutoite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawMidasium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardMidasium.get(), 4))
-                .addCriterion("injectrawmidasium", has(ItemList.itemRawMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawmidasium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawMithril), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardMithril.get(), 4))
-                .addCriterion("injectrawmithril", has(ItemList.itemRawMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawmithril"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawMolybdenum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardMolybdenum.get(), 4))
-                .addCriterion("injectrawmolybdenum", has(ItemList.itemRawMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawmolybdenum"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawNeodymium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardNeodymium.get(), 4))
-                .addCriterion("injectrawneodymium", has(ItemList.itemRawNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawneodymium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawNeptunium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardNeptunium.get(), 4))
-                .addCriterion("injectrawneptunium", has(ItemList.itemRawNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawneptunium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawNickel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardNickel.get(), 4))
-                .addCriterion("injectrawnickel", has(ItemList.itemRawNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawnickel"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawNiobium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardNiobium.get(), 4))
-                .addCriterion("injectrawniobium", has(ItemList.itemRawNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawniobium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawOrichalcum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardOrichalcum.get(), 4))
-                .addCriterion("injectraworichalcum", has(ItemList.itemRawOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectraworichalcum"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawOsmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardOsmium.get(), 4))
-                .addCriterion("injectrawosmium", has(ItemList.itemRawOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawosmium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawOureclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardOureclase.get(), 4))
-                .addCriterion("injectrawoureclase", has(ItemList.itemRawOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawoureclase"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPalladium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPalladium.get(), 4))
-                .addCriterion("injectrawpalladium", has(ItemList.itemRawPalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawpalladium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPlatinum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPlatinum.get(), 4))
-                .addCriterion("injectrawplatinum", has(ItemList.itemRawPlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawplatinum"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPlutonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPlutonium.get(), 4))
-                .addCriterion("injectrawplutonium", has(ItemList.itemRawPlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawplutonium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPolonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPolonium.get(), 4))
-                .addCriterion("injectrawpolonium", has(ItemList.itemRawPolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawpolonium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPromethium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardPromethium.get(), 4))
-                .addCriterion("injectrawpromethium", has(ItemList.itemRawPromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawpromethium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawRhenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardRhenium.get(), 4))
-                .addCriterion("injectrawrhenium", has(ItemList.itemRawRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawrhenium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawRhodium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardRhodium.get(), 4))
-                .addCriterion("injectrawrhodium", has(ItemList.itemRawRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawrhodium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawRubracium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardRubracium.get(), 4))
-                .addCriterion("injectrawrubracium", has(ItemList.itemRawRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawrubracium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawRuthenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardRuthenium.get(), 4))
-                .addCriterion("injectrawruthenium", has(ItemList.itemRawRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawruthenium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawSanguinite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardSanguinite.get(), 4))
-                .addCriterion("injectrawsanguinite", has(ItemList.itemRawSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawsanguinite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawShadowIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardShadowIron.get(), 4))
-                .addCriterion("injectrawshadowiron", has(ItemList.itemRawShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawshadowiron"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardSilver.get(), 4))
-                .addCriterion("injectrawsilver", has(ItemList.itemRawSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawsilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTantalum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTantalum.get(), 4))
-                .addCriterion("injectrawtantalum", has(ItemList.itemRawTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawtantalum"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTartarite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTartarite.get(), 4))
-                .addCriterion("injectrawtartarite", has(ItemList.itemRawTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawtartarite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTechnetium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTechnetium.get(), 4))
-                .addCriterion("injectrawtechnetium", has(ItemList.itemRawTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawtechnetium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawThallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardThallium.get(), 4))
-                .addCriterion("injectrawthallium", has(ItemList.itemRawThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawthallium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTin), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTin.get(), 4))
-                .addCriterion("injectrawtin", has(ItemList.itemRawTin.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawtin"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTitanium.get(), 4))
-                .addCriterion("injectrawtitanium", has(ItemList.itemRawTitanium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawtitanium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTritium.get(), 4))
-                .addCriterion("injectrawtritium", has(ItemList.itemRawTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawtritium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardTungsten.get(), 4))
-                .addCriterion("injectrawtungsten", has(ItemList.itemRawTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawtungsten"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawUnobtainium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardUnobtainium.get(), 4))
-                .addCriterion("injectrawunobtainium", has(ItemList.itemRawUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawunobtainium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawUranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardUranium.get(), 4))
-                .addCriterion("injectrawuranium", has(ItemList.itemRawUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawuranium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardVanadium.get(), 4))
-                .addCriterion("injectrawvanadium", has(ItemList.itemRawVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawvanadium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardVibranium.get(), 4))
-                .addCriterion("injectrawvibranium", has(ItemList.itemRawVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawvibranium"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardVulcanite.get(), 4))
-                .addCriterion("injectrawvulcanite", has(ItemList.itemRawVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawvulcanite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVyroxeres), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardVyroxeres.get(), 4))
-                .addCriterion("injectrawvyroxeres", has(ItemList.itemRawVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawvyroxeres"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawYellorite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardYellorite.get(), 4))
-                .addCriterion("injectrawyellorite", has(ItemList.itemRawYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawyellorite"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawZinc), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardZinc.get(), 4))
-                .addCriterion("injectrawzinc", has(ItemList.itemRawZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawzinc"));
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawZirconium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:hydrogen_chloride")), 1)), new ItemStack(ItemList.itemShardZirconium.get(), 4))
-                .addCriterion("injectrawzirconium", has(ItemList.itemRawZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:injectrawzirconium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAdamantine.get(), 4))
+                .unlockedBy("injectrawadamantine", has(ItemList.itemRawAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawadamantine"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAldourite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAldourite.get(), 4))
+                .unlockedBy("injectrawaldourite", has(ItemList.itemRawAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawaldourite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAluminum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAluminum.get(), 4))
+                .unlockedBy("injectrawaluminum", has(ItemList.itemRawAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawaluminum"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAmericium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAmericium.get(), 4))
+                .unlockedBy("injectrawamericium", has(ItemList.itemRawAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawamericium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAmordrine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAmordrine.get(), 4))
+                .unlockedBy("injectrawamordrine", has(ItemList.itemRawAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawamordrine"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAngmallen), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAngmallen.get(), 4))
+                .unlockedBy("injectrawangmallen", has(ItemList.itemRawAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawangmallen"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAstralSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAstralSilver.get(), 4))
+                .unlockedBy("injectrawastralsilver", has(ItemList.itemRawAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawastralsilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAtlarus), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAtlarus.get(), 4))
+                .unlockedBy("injectrawatlarus", has(ItemList.itemRawAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawatlarus"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAzureSilver),GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1),new ItemStack(ItemList.itemShardAzureSilver.get(),4))
+                .unlockedBy("injectrawazuresilver",has(ItemList.itemRawAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:injectrawazuresilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardBismuth.get(), 4))
+                .unlockedBy("injectrawbismuth", has(ItemList.itemRawBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawbismuth"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawBlackSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardBlackSteel.get(), 4))
+                .unlockedBy("injectrawblacksteel", has(ItemList.itemRawBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawblacksteel"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCadmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCadmium.get(), 4))
+                .unlockedBy("injectrawcadmium", has(ItemList.itemRawCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawcadmium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCarmot), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCarmot.get(), 4))
+                .unlockedBy("injectrawcarmot", has(ItemList.itemRawCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawcarmot"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCelenegil), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCelenegil.get(), 4))
+                .unlockedBy("injectrawcelenegil", has(ItemList.itemRawCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawcelenegil"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCeruclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCeruclase.get(), 4))
+                .unlockedBy("injectrawceruclase", has(ItemList.itemRawCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawceruclase"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawChromium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardChromium.get(), 4))
+                .unlockedBy("injectrawchromium", has(ItemList.itemRawChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawchromium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCobalt), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCobalt.get(), 4))
+                .unlockedBy("injectrawcobalt", has(ItemList.itemRawCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawcobalt"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCopper), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCopper.get(), 4))
+                .unlockedBy("injectrawcopper", has(ItemList.itemRawCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawcopper"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawCrimsonSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardCrimsonSteel.get(), 4))
+                .unlockedBy("injectrawcrimsonsteel", has(ItemList.itemRawCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawcrimsonsteel"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawDeepIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardDeepIron.get(), 4))
+                .unlockedBy("injectrawdeepiron", has(ItemList.itemRawDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawdeepiron"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawDesichalkos), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardDesichalkos.get(), 4))
+                .unlockedBy("injectrawdesichalkos", has(ItemList.itemRawDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawdesichalkos"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawEximite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardEximite.get(), 4))
+                .unlockedBy("injectraweximite", has(ItemList.itemRawEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectraweximite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawGallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardGallium.get(), 4))
+                .unlockedBy("injectrawgallium", has(ItemList.itemRawGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawgallium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawHaderoth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardHaderoth.get(), 4))
+                .unlockedBy("injectrawhaderoth", has(ItemList.itemRawHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawhaderoth"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawHepatizon), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardHepatizon.get(), 4))
+                .unlockedBy("injectrawhepatizon", has(ItemList.itemRawHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawhepatizon"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawIgnatius), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardIgnatius.get(), 4))
+                .unlockedBy("injectrawignatius", has(ItemList.itemRawIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawignatius"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawIndium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardIndium.get(), 4))
+                .unlockedBy("injectrawindium", has(ItemList.itemRawIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawindium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawInfuscolium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardInfuscolium.get(), 4))
+                .unlockedBy("injectrawinfuscolium", has(ItemList.itemRawInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawinfuscolium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawInolashite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardInolashite.get(), 4))
+                .unlockedBy("injectrawinolashite", has(ItemList.itemRawInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawinolashite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawIridium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardIridium.get(), 4))
+                .unlockedBy("injectrawiridium", has(ItemList.itemRawIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawiridium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawKalendrite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardKalendrite.get(), 4))
+                .unlockedBy("injectrawkalendrite", has(ItemList.itemRawKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawkalendrite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawLead), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardLead.get(), 4))
+                .unlockedBy("injectrawlead", has(ItemList.itemRawLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawlead"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawLemurite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardLemurite.get(), 4))
+                .unlockedBy("injectrawlemurite", has(ItemList.itemRawLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawlemurite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawManganese), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardManganese.get(), 4))
+                .unlockedBy("injectrawmanganese", has(ItemList.itemRawManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawmanganese"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawMeutoite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardMeutoite.get(), 4))
+                .unlockedBy("injectrawmeutoite", has(ItemList.itemRawMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawmeutoite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawMidasium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardMidasium.get(), 4))
+                .unlockedBy("injectrawmidasium", has(ItemList.itemRawMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawmidasium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawMithril), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardMithril.get(), 4))
+                .unlockedBy("injectrawmithril", has(ItemList.itemRawMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawmithril"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawMolybdenum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardMolybdenum.get(), 4))
+                .unlockedBy("injectrawmolybdenum", has(ItemList.itemRawMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawmolybdenum"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawNeodymium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardNeodymium.get(), 4))
+                .unlockedBy("injectrawneodymium", has(ItemList.itemRawNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawneodymium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawNeptunium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardNeptunium.get(), 4))
+                .unlockedBy("injectrawneptunium", has(ItemList.itemRawNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawneptunium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawNickel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardNickel.get(), 4))
+                .unlockedBy("injectrawnickel", has(ItemList.itemRawNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawnickel"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawNiobium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardNiobium.get(), 4))
+                .unlockedBy("injectrawniobium", has(ItemList.itemRawNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawniobium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawOrichalcum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardOrichalcum.get(), 4))
+                .unlockedBy("injectraworichalcum", has(ItemList.itemRawOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectraworichalcum"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawOsmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardOsmium.get(), 4))
+                .unlockedBy("injectrawosmium", has(ItemList.itemRawOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawosmium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawOureclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardOureclase.get(), 4))
+                .unlockedBy("injectrawoureclase", has(ItemList.itemRawOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawoureclase"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPalladium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPalladium.get(), 4))
+                .unlockedBy("injectrawpalladium", has(ItemList.itemRawPalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawpalladium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPlatinum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPlatinum.get(), 4))
+                .unlockedBy("injectrawplatinum", has(ItemList.itemRawPlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawplatinum"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPlutonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPlutonium.get(), 4))
+                .unlockedBy("injectrawplutonium", has(ItemList.itemRawPlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawplutonium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPolonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPolonium.get(), 4))
+                .unlockedBy("injectrawpolonium", has(ItemList.itemRawPolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawpolonium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawPromethium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardPromethium.get(), 4))
+                .unlockedBy("injectrawpromethium", has(ItemList.itemRawPromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawpromethium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawRhenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardRhenium.get(), 4))
+                .unlockedBy("injectrawrhenium", has(ItemList.itemRawRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawrhenium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawRhodium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardRhodium.get(), 4))
+                .unlockedBy("injectrawrhodium", has(ItemList.itemRawRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawrhodium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawRubracium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardRubracium.get(), 4))
+                .unlockedBy("injectrawrubracium", has(ItemList.itemRawRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawrubracium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawRuthenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardRuthenium.get(), 4))
+                .unlockedBy("injectrawruthenium", has(ItemList.itemRawRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawruthenium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawSanguinite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardSanguinite.get(), 4))
+                .unlockedBy("injectrawsanguinite", has(ItemList.itemRawSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawsanguinite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawShadowIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardShadowIron.get(), 4))
+                .unlockedBy("injectrawshadowiron", has(ItemList.itemRawShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawshadowiron"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardSilver.get(), 4))
+                .unlockedBy("injectrawsilver", has(ItemList.itemRawSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawsilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTantalum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTantalum.get(), 4))
+                .unlockedBy("injectrawtantalum", has(ItemList.itemRawTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawtantalum"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTartarite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTartarite.get(), 4))
+                .unlockedBy("injectrawtartarite", has(ItemList.itemRawTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawtartarite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTechnetium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTechnetium.get(), 4))
+                .unlockedBy("injectrawtechnetium", has(ItemList.itemRawTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawtechnetium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawThallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardThallium.get(), 4))
+                .unlockedBy("injectrawthallium", has(ItemList.itemRawThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawthallium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTin), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTin.get(), 4))
+                .unlockedBy("injectrawtin", has(ItemList.itemRawTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawtin"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTitanium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTitanium.get(), 4))
+                .unlockedBy("injectrawtitanium", has(ItemList.itemRawTitanium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawtitanium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTritium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTritium.get(), 4))
+                .unlockedBy("injectrawtritium", has(ItemList.itemRawTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawtritium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawTungsten), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardTungsten.get(), 4))
+                .unlockedBy("injectrawtungsten", has(ItemList.itemRawTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawtungsten"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawUnobtainium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardUnobtainium.get(), 4))
+                .unlockedBy("injectrawunobtainium", has(ItemList.itemRawUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawunobtainium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawUranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardUranium.get(), 4))
+                .unlockedBy("injectrawuranium", has(ItemList.itemRawUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawuranium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVanadium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardVanadium.get(), 4))
+                .unlockedBy("injectrawvanadium", has(ItemList.itemRawVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawvanadium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVibranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardVibranium.get(), 4))
+                .unlockedBy("injectrawvibranium", has(ItemList.itemRawVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawvibranium"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVulcanite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardVulcanite.get(), 4))
+                .unlockedBy("injectrawvulcanite", has(ItemList.itemRawVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawvulcanite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawVyroxeres), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardVyroxeres.get(), 4))
+                .unlockedBy("injectrawvyroxeres", has(ItemList.itemRawVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawvyroxeres"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawYellorite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardYellorite.get(), 4))
+                .unlockedBy("injectrawyellorite", has(ItemList.itemRawYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawyellorite"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawZinc), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardZinc.get(), 4))
+                .unlockedBy("injectrawzinc", has(ItemList.itemRawZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawzinc"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawZirconium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardZirconium.get(), 4))
+                .unlockedBy("injectrawzirconium", has(ItemList.itemRawZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawzirconium"));
     }
 
-    protected void buildMekanismPurifying(Consumer<FinishedRecipe> consumer)
+    protected void buildMekanismPurifying(RecipeOutput consumer)
     {
         //Ore
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAdamantine.get(), 3))
-                .addCriterion("purifyadamantineore", has(BlockList.blockOreAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyadamantineore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAldourite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAldourite.get(), 3))
-                .addCriterion("purifyaldouriteore", has(BlockList.blockOreAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyaldouriteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAluminum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAluminum.get(), 3))
-                .addCriterion("purifyaluminumore", has(BlockList.blockOreAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyaluminumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAmericium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAmericium.get(), 3))
-                .addCriterion("purifyamericiumore", has(BlockList.blockOreAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyamericiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAmordrine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAmordrine.get(), 3))
-                .addCriterion("purifyamordrineore", has(BlockList.blockOreAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyamordrineore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAngmallen), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAngmallen.get(), 3))
-                .addCriterion("purifyangmallenore", has(BlockList.blockOreAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyangmallenore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAstralSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAstralSilver.get(), 3))
-                .addCriterion("purifyastralsilverore", has(BlockList.blockOreAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyastralsilverore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAtlarus), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAtlarus.get(), 3))
-                .addCriterion("purifyatlarusore", has(BlockList.blockOreAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyatlarusore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAzureSilver),IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpAzureSilver.get(),3))
-                .addCriterion("purifyazuresilverore",has(BlockList.blockOreAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:purifyazuresilverore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreBismuth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpBismuth.get(), 3))
-                .addCriterion("purifybismuthore", has(BlockList.blockOreBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:purifybismuthore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreBlackSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpBlackSteel.get(), 3))
-                .addCriterion("purifyblacksteelore", has(BlockList.blockOreBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyblacksteelore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCadmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCadmium.get(), 3))
-                .addCriterion("purifycadmiumore", has(BlockList.blockOreCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycadmiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCarmot), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCarmot.get(), 3))
-                .addCriterion("purifycarmotore", has(BlockList.blockOreCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycarmotore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCelenegil), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCelenegil.get(), 3))
-                .addCriterion("purifycelenegilore", has(BlockList.blockOreCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycelenegilore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCeruclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCeruclase.get(), 3))
-                .addCriterion("purifyceruclaseore", has(BlockList.blockOreCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyceruclaseore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreChromium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpChromium.get(), 3))
-                .addCriterion("purifychromiumore", has(BlockList.blockOreChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifychromiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCobalt), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCobalt.get(), 3))
-                .addCriterion("purifycobaltore", has(BlockList.blockOreCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycobaltore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCopper.get(), 3))
-                .addCriterion("purifycopperore", has(BlockList.blockOreCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycopperore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCrimsonSteel.get(), 3))
-                .addCriterion("purifycrimsonsteelore", has(BlockList.blockOreCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycrimsonsteelore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpDeepIron.get(), 3))
-                .addCriterion("purifydeepironore", has(BlockList.blockOreDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:purifydeepironore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreDesichalkos), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpDesichalkos.get(), 3))
-                .addCriterion("purifydesichalkosore", has(BlockList.blockOreDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:purifydesichalkosore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreEximite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpEximite.get(), 3))
-                .addCriterion("purifyeximiteore", has(BlockList.blockOreEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyeximiteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreGallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpGallium.get(), 3))
-                .addCriterion("purifygalliumore", has(BlockList.blockOreGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifygalliumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreHaderoth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpHaderoth.get(), 3))
-                .addCriterion("purifyhaderothore", has(BlockList.blockOreHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyhaderothore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreHepatizon), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpHepatizon.get(), 3))
-                .addCriterion("purifyhepatizonore", has(BlockList.blockOreHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyhepatizonore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreIgnatius), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIgnatius.get(), 3))
-                .addCriterion("purifyignatiusore", has(BlockList.blockOreIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyignatiusore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreIndium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIndium.get(), 3))
-                .addCriterion("purifyindiumore", has(BlockList.blockOreIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyindiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreInfuscolium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpInfuscolium.get(), 3))
-                .addCriterion("purifyinfuscoliumore", has(BlockList.blockOreInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyinfuscoliumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreInolashite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpInolashite.get(), 3))
-                .addCriterion("purifyinolashiteore", has(BlockList.blockOreInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyinolashiteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreIridium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIridium.get(), 3))
-                .addCriterion("purifyiridiumore", has(BlockList.blockOreIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyiridiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreKalendrite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpKalendrite.get(), 3))
-                .addCriterion("purifykalendriteore", has(BlockList.blockOreKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifykalendriteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreLead), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpLead.get(), 3))
-                .addCriterion("purifyleadore", has(BlockList.blockOreLead.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyleadore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreLemurite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpLemurite.get(), 3))
-                .addCriterion("purifylemuriteore", has(BlockList.blockOreLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifylemuriteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreManganese), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpManganese.get(), 3))
-                .addCriterion("purifymanganeseore", has(BlockList.blockOreManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymanganeseore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreMeutoite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMeutoite.get(), 3))
-                .addCriterion("purifymeutoiteore", has(BlockList.blockOreMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymeutoiteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreMidasium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMidasium.get(), 3))
-                .addCriterion("purifymidasiumore", has(BlockList.blockOreMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymidasiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreMithril), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMithril.get(), 3))
-                .addCriterion("purifymithrilore", has(BlockList.blockOreMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymithrilore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreMolybdenum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMolybdenum.get(), 3))
-                .addCriterion("purifymolybdenumore", has(BlockList.blockOreMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymolybdenumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreNeodymium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNeodymium.get(), 3))
-                .addCriterion("purifyneodymiumore", has(BlockList.blockOreNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyneodymiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreNeptunium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNeptunium.get(), 3))
-                .addCriterion("purifyneptuniumore", has(BlockList.blockOreNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyneptuniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreNickel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNickel.get(), 3))
-                .addCriterion("purifynickelore", has(BlockList.blockOreNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifynickelore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreNiobium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNiobium.get(), 3))
-                .addCriterion("purifyniobiumore", has(BlockList.blockOreNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyniobiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreOrichalcum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOrichalcum.get(), 3))
-                .addCriterion("purifyorichalcumore", has(BlockList.blockOreOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyorichalcumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreOsmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOsmium.get(), 3))
-                .addCriterion("purifyosmiumore", has(BlockList.blockOreOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyosmiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreOureclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOureclase.get(), 3))
-                .addCriterion("purifyoureclaseore", has(BlockList.blockOreOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyoureclaseore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePalladium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPalladium.get(), 3))
-                .addCriterion("purifypalladiumore", has(BlockList.blockOrePalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifypalladiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePlatinum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPlatinum.get(), 3))
-                .addCriterion("purifyplatinumore", has(BlockList.blockOrePlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyplatinumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePlutonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPlutonium.get(), 3))
-                .addCriterion("purifyplutoniumore", has(BlockList.blockOrePlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyplutoniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePolonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPolonium.get(), 3))
-                .addCriterion("purifypoloniumore", has(BlockList.blockOrePolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifypoloniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePromethium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPromethium.get(), 3))
-                .addCriterion("purifypromethiumore", has(BlockList.blockOrePromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifypromethiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreRhenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRhenium.get(), 3))
-                .addCriterion("purifyrheniumore", has(BlockList.blockOreRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrheniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreRhodium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRhodium.get(), 3))
-                .addCriterion("purifyrhodiumore", has(BlockList.blockOreRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrhodiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreRubracium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRubracium.get(), 3))
-                .addCriterion("purifyrubraciumore", has(BlockList.blockOreRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrubraciumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreRuthenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRuthenium.get(), 3))
-                .addCriterion("purifyrutheniumore", has(BlockList.blockOreRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrutheniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreSanguinite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpSanguinite.get(), 3))
-                .addCriterion("purifysanguiniteore", has(BlockList.blockOreSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifysanguiniteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreShadowIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpShadowIron.get(), 3))
-                .addCriterion("purifyshadowironore", has(BlockList.blockOreShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyshadowironore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpSilver.get(), 3))
-                .addCriterion("purifysilverore", has(BlockList.blockOreSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:purifysilverore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTantalum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTantalum.get(), 3))
-                .addCriterion("purifytantalumore", has(BlockList.blockOreTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytantalumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTartarite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTartarite.get(), 3))
-                .addCriterion("purifytartariteore", has(BlockList.blockOreTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytartariteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTechnetium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTechnetium.get(), 3))
-                .addCriterion("purifytechnetiumore", has(BlockList.blockOreTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytechnetiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreThallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpThallium.get(), 3))
-                .addCriterion("purifythalliumore", has(BlockList.blockOreThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifythalliumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTin), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTin.get(), 3))
-                .addCriterion("purifytinore", has(BlockList.blockOreTin.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytinore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTitanium.get(), 3))
-                .addCriterion("purifytitaniumore", has(BlockList.blockOreTitanium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytitaniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTritium.get(), 3))
-                .addCriterion("purifytritiumore", has(BlockList.blockOreTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytritiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTungsten.get(), 3))
-                .addCriterion("purifytungstenore", has(BlockList.blockOreTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytungstenore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreUnobtainium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpUnobtainium.get(), 3))
-                .addCriterion("purifyunobtainiumore", has(BlockList.blockOreUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyunobtainiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreUranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpUranium.get(), 3))
-                .addCriterion("purifyuraniumore", has(BlockList.blockOreUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyuraniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVanadium.get(), 3))
-                .addCriterion("purifyvanadiumore", has(BlockList.blockOreVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyvanadiumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVibranium.get(), 3))
-                .addCriterion("purifyvibraniumore", has(BlockList.blockOreVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyvibraniumore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVulcanite.get(), 3))
-                .addCriterion("purifyvulcaniteore", has(BlockList.blockOreVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyvulcaniteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVyroxeres), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVyroxeres.get(), 3))
-                .addCriterion("purifyvyroxeresore", has(BlockList.blockOreVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyvyroxeresore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreYellorite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpYellorite.get(), 3))
-                .addCriterion("purifyyelloriteore", has(BlockList.blockOreYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyyelloriteore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreZinc), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpZinc.get(), 3))
-                .addCriterion("purifyzincore", has(BlockList.blockOreZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyzincore"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreZirconium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpZirconium.get(), 3))
-                .addCriterion("purifyzirconiumore", has(BlockList.blockOreZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyzirconiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAdamantine.get(), 3))
+                .unlockedBy("purifyadamantineore", has(BlockList.blockOreAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyadamantineore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAldourite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAldourite.get(), 3))
+                .unlockedBy("purifyaldouriteore", has(BlockList.blockOreAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyaldouriteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAluminum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAluminum.get(), 3))
+                .unlockedBy("purifyaluminumore", has(BlockList.blockOreAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyaluminumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAmericium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAmericium.get(), 3))
+                .unlockedBy("purifyamericiumore", has(BlockList.blockOreAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyamericiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAmordrine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAmordrine.get(), 3))
+                .unlockedBy("purifyamordrineore", has(BlockList.blockOreAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyamordrineore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAngmallen), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAngmallen.get(), 3))
+                .unlockedBy("purifyangmallenore", has(BlockList.blockOreAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyangmallenore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAstralSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAstralSilver.get(), 3))
+                .unlockedBy("purifyastralsilverore", has(BlockList.blockOreAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyastralsilverore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAtlarus), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAtlarus.get(), 3))
+                .unlockedBy("purifyatlarusore", has(BlockList.blockOreAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyatlarusore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAzureSilver),GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1),new ItemStack(ItemList.itemClumpAzureSilver.get(),3))
+                .unlockedBy("purifyazuresilverore",has(BlockList.blockOreAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:purifyazuresilverore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreBismuth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBismuth.get(), 3))
+                .unlockedBy("purifybismuthore", has(BlockList.blockOreBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifybismuthore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreBlackSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBlackSteel.get(), 3))
+                .unlockedBy("purifyblacksteelore", has(BlockList.blockOreBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyblacksteelore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCadmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCadmium.get(), 3))
+                .unlockedBy("purifycadmiumore", has(BlockList.blockOreCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycadmiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCarmot), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCarmot.get(), 3))
+                .unlockedBy("purifycarmotore", has(BlockList.blockOreCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycarmotore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCelenegil), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCelenegil.get(), 3))
+                .unlockedBy("purifycelenegilore", has(BlockList.blockOreCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycelenegilore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCeruclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCeruclase.get(), 3))
+                .unlockedBy("purifyceruclaseore", has(BlockList.blockOreCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyceruclaseore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreChromium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpChromium.get(), 3))
+                .unlockedBy("purifychromiumore", has(BlockList.blockOreChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifychromiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCobalt), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCobalt.get(), 3))
+                .unlockedBy("purifycobaltore", has(BlockList.blockOreCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycobaltore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCopper), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCopper.get(), 3))
+                .unlockedBy("purifycopperore", has(BlockList.blockOreCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycopperore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreCrimsonSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCrimsonSteel.get(), 3))
+                .unlockedBy("purifycrimsonsteelore", has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycrimsonsteelore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreDeepIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpDeepIron.get(), 3))
+                .unlockedBy("purifydeepironore", has(BlockList.blockOreDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifydeepironore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreDesichalkos), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpDesichalkos.get(), 3))
+                .unlockedBy("purifydesichalkosore", has(BlockList.blockOreDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifydesichalkosore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreEximite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpEximite.get(), 3))
+                .unlockedBy("purifyeximiteore", has(BlockList.blockOreEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyeximiteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreGallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpGallium.get(), 3))
+                .unlockedBy("purifygalliumore", has(BlockList.blockOreGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifygalliumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreHaderoth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpHaderoth.get(), 3))
+                .unlockedBy("purifyhaderothore", has(BlockList.blockOreHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyhaderothore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreHepatizon), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpHepatizon.get(), 3))
+                .unlockedBy("purifyhepatizonore", has(BlockList.blockOreHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyhepatizonore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreIgnatius), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIgnatius.get(), 3))
+                .unlockedBy("purifyignatiusore", has(BlockList.blockOreIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyignatiusore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreIndium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIndium.get(), 3))
+                .unlockedBy("purifyindiumore", has(BlockList.blockOreIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyindiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreInfuscolium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpInfuscolium.get(), 3))
+                .unlockedBy("purifyinfuscoliumore", has(BlockList.blockOreInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyinfuscoliumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreInolashite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpInolashite.get(), 3))
+                .unlockedBy("purifyinolashiteore", has(BlockList.blockOreInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyinolashiteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreIridium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIridium.get(), 3))
+                .unlockedBy("purifyiridiumore", has(BlockList.blockOreIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyiridiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreKalendrite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpKalendrite.get(), 3))
+                .unlockedBy("purifykalendriteore", has(BlockList.blockOreKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifykalendriteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreLead), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpLead.get(), 3))
+                .unlockedBy("purifyleadore", has(BlockList.blockOreLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyleadore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreLemurite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpLemurite.get(), 3))
+                .unlockedBy("purifylemuriteore", has(BlockList.blockOreLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifylemuriteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreManganese), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpManganese.get(), 3))
+                .unlockedBy("purifymanganeseore", has(BlockList.blockOreManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymanganeseore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreMeutoite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMeutoite.get(), 3))
+                .unlockedBy("purifymeutoiteore", has(BlockList.blockOreMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymeutoiteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreMidasium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMidasium.get(), 3))
+                .unlockedBy("purifymidasiumore", has(BlockList.blockOreMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymidasiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreMithril), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMithril.get(), 3))
+                .unlockedBy("purifymithrilore", has(BlockList.blockOreMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymithrilore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreMolybdenum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMolybdenum.get(), 3))
+                .unlockedBy("purifymolybdenumore", has(BlockList.blockOreMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymolybdenumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreNeodymium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNeodymium.get(), 3))
+                .unlockedBy("purifyneodymiumore", has(BlockList.blockOreNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyneodymiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreNeptunium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNeptunium.get(), 3))
+                .unlockedBy("purifyneptuniumore", has(BlockList.blockOreNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyneptuniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreNickel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNickel.get(), 3))
+                .unlockedBy("purifynickelore", has(BlockList.blockOreNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifynickelore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreNiobium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNiobium.get(), 3))
+                .unlockedBy("purifyniobiumore", has(BlockList.blockOreNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyniobiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreOrichalcum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOrichalcum.get(), 3))
+                .unlockedBy("purifyorichalcumore", has(BlockList.blockOreOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyorichalcumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreOsmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOsmium.get(), 3))
+                .unlockedBy("purifyosmiumore", has(BlockList.blockOreOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyosmiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreOureclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOureclase.get(), 3))
+                .unlockedBy("purifyoureclaseore", has(BlockList.blockOreOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyoureclaseore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePalladium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPalladium.get(), 3))
+                .unlockedBy("purifypalladiumore", has(BlockList.blockOrePalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifypalladiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePlatinum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPlatinum.get(), 3))
+                .unlockedBy("purifyplatinumore", has(BlockList.blockOrePlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyplatinumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePlutonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPlutonium.get(), 3))
+                .unlockedBy("purifyplutoniumore", has(BlockList.blockOrePlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyplutoniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePolonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPolonium.get(), 3))
+                .unlockedBy("purifypoloniumore", has(BlockList.blockOrePolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifypoloniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.orePromethium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPromethium.get(), 3))
+                .unlockedBy("purifypromethiumore", has(BlockList.blockOrePromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifypromethiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreRhenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRhenium.get(), 3))
+                .unlockedBy("purifyrheniumore", has(BlockList.blockOreRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrheniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreRhodium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRhodium.get(), 3))
+                .unlockedBy("purifyrhodiumore", has(BlockList.blockOreRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrhodiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreRubracium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRubracium.get(), 3))
+                .unlockedBy("purifyrubraciumore", has(BlockList.blockOreRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrubraciumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreRuthenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRuthenium.get(), 3))
+                .unlockedBy("purifyrutheniumore", has(BlockList.blockOreRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrutheniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreSanguinite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpSanguinite.get(), 3))
+                .unlockedBy("purifysanguiniteore", has(BlockList.blockOreSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifysanguiniteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreShadowIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpShadowIron.get(), 3))
+                .unlockedBy("purifyshadowironore", has(BlockList.blockOreShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyshadowironore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpSilver.get(), 3))
+                .unlockedBy("purifysilverore", has(BlockList.blockOreSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifysilverore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTantalum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTantalum.get(), 3))
+                .unlockedBy("purifytantalumore", has(BlockList.blockOreTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytantalumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTartarite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTartarite.get(), 3))
+                .unlockedBy("purifytartariteore", has(BlockList.blockOreTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytartariteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTechnetium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTechnetium.get(), 3))
+                .unlockedBy("purifytechnetiumore", has(BlockList.blockOreTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytechnetiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreThallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpThallium.get(), 3))
+                .unlockedBy("purifythalliumore", has(BlockList.blockOreThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifythalliumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTin), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTin.get(), 3))
+                .unlockedBy("purifytinore", has(BlockList.blockOreTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytinore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTitanium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTitanium.get(), 3))
+                .unlockedBy("purifytitaniumore", has(BlockList.blockOreTitanium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytitaniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTritium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTritium.get(), 3))
+                .unlockedBy("purifytritiumore", has(BlockList.blockOreTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytritiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreTungsten), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTungsten.get(), 3))
+                .unlockedBy("purifytungstenore", has(BlockList.blockOreTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytungstenore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreUnobtainium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpUnobtainium.get(), 3))
+                .unlockedBy("purifyunobtainiumore", has(BlockList.blockOreUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyunobtainiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreUranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpUranium.get(), 3))
+                .unlockedBy("purifyuraniumore", has(BlockList.blockOreUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyuraniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVanadium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVanadium.get(), 3))
+                .unlockedBy("purifyvanadiumore", has(BlockList.blockOreVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyvanadiumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVibranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVibranium.get(), 3))
+                .unlockedBy("purifyvibraniumore", has(BlockList.blockOreVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyvibraniumore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVulcanite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVulcanite.get(), 3))
+                .unlockedBy("purifyvulcaniteore", has(BlockList.blockOreVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyvulcaniteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreVyroxeres), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVyroxeres.get(), 3))
+                .unlockedBy("purifyvyroxeresore", has(BlockList.blockOreVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyvyroxeresore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreYellorite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpYellorite.get(), 3))
+                .unlockedBy("purifyyelloriteore", has(BlockList.blockOreYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyyelloriteore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreZinc), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpZinc.get(), 3))
+                .unlockedBy("purifyzincore", has(BlockList.blockOreZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyzincore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreZirconium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpZirconium.get(), 3))
+                .unlockedBy("purifyzirconiumore", has(BlockList.blockOreZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyzirconiumore"));
         //Raw
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAdamantine.get(), 3))
-                .addCriterion("purifyrawadamantine", has(ItemList.itemRawAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawadamantine"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAldourite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAldourite.get(), 3))
-                .addCriterion("purifyrawaldourite", has(ItemList.itemRawAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawaldourite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAluminum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAluminum.get(), 3))
-                .addCriterion("purifyrawaluminum", has(ItemList.itemRawAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawaluminum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAmericium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAmericium.get(), 3))
-                .addCriterion("purifyrawamericium", has(ItemList.itemRawAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawamericium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAmordrine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAmordrine.get(), 3))
-                .addCriterion("purifyrawamordrine", has(ItemList.itemRawAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawamordrine"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAngmallen), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAngmallen.get(), 3))
-                .addCriterion("purifyrawangmallen", has(ItemList.itemRawAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawangmallen"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAstralSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAstralSilver.get(), 3))
-                .addCriterion("purifyrawastralsilver", has(ItemList.itemRawAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawastralsilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAzureSilver),IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpAzureSilver.get(),3))
-                .addCriterion("purifyrawazuresilver",has(ItemList.itemRawAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:purifyrawazuresilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAtlarus), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAtlarus.get(), 3))
-                .addCriterion("purifyrawatlarus", has(ItemList.itemRawAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawatlarus"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpBismuth.get(), 3))
-                .addCriterion("purifyrawbismuth", has(ItemList.itemRawBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawbismuth"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawBlackSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpBlackSteel.get(), 3))
-                .addCriterion("purifyrawblacksteel", has(ItemList.itemRawBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawblacksteel"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCadmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCadmium.get(), 3))
-                .addCriterion("purifyrawcadmium", has(ItemList.itemRawCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawcadmium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCarmot), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCarmot.get(), 3))
-                .addCriterion("purifyrawcarmot", has(ItemList.itemRawCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawcarmot"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCelenegil), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCelenegil.get(), 3))
-                .addCriterion("purifyrawcelenegil", has(ItemList.itemRawCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawcelenegil"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCeruclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCeruclase.get(), 3))
-                .addCriterion("purifyrawceruclase", has(ItemList.itemRawCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawceruclase"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawChromium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpChromium.get(), 3))
-                .addCriterion("purifyrawchromium", has(ItemList.itemRawChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawchromium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCobalt), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCobalt.get(), 3))
-                .addCriterion("purifyrawcobalt", has(ItemList.itemRawCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawcobalt"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCopper.get(), 3))
-                .addCriterion("purifyrawcopper", has(ItemList.itemRawCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawcopper"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCrimsonSteel.get(), 3))
-                .addCriterion("purifyrawcrimsonsteel", has(ItemList.itemRawCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawcrimsonsteel"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpDeepIron.get(), 3))
-                .addCriterion("purifyrawdeepiron", has(ItemList.itemRawDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawdeepiron"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawDesichalkos), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpDesichalkos.get(), 3))
-                .addCriterion("purifyrawdesichalkos", has(ItemList.itemRawDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawdesichalkos"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawEximite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpEximite.get(), 3))
-                .addCriterion("purifyraweximite", has(ItemList.itemRawEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyraweximite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawGallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpGallium.get(), 3))
-                .addCriterion("purifyrawgallium", has(ItemList.itemRawGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawgallium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawHaderoth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpHaderoth.get(), 3))
-                .addCriterion("purifyrawhaderoth", has(ItemList.itemRawHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawhaderoth"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawHepatizon), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpHepatizon.get(), 3))
-                .addCriterion("purifyrawhepatizon", has(ItemList.itemRawHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawhepatizon"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawIgnatius), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIgnatius.get(), 3))
-                .addCriterion("purifyrawignatius", has(ItemList.itemRawIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawignatius"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawIndium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIndium.get(), 3))
-                .addCriterion("purifyrawindium", has(ItemList.itemRawIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawindium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawInfuscolium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpInfuscolium.get(), 3))
-                .addCriterion("purifyrawinfuscolium", has(ItemList.itemRawInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawinfuscolium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawInolashite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpInolashite.get(), 3))
-                .addCriterion("purifyrawinolashite", has(ItemList.itemRawInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawinolashite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawIridium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIridium.get(), 3))
-                .addCriterion("purifyrawiridium", has(ItemList.itemRawIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawiridium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawKalendrite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpKalendrite.get(), 3))
-                .addCriterion("purifyrawkalendrite", has(ItemList.itemRawKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawkalendrite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawLead), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpLead.get(), 3))
-                .addCriterion("purifyrawlead", has(ItemList.itemRawLead.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawlead"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawLemurite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpLemurite.get(), 3))
-                .addCriterion("purifyrawlemurite", has(ItemList.itemRawLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawlemurite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawManganese), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpManganese.get(), 3))
-                .addCriterion("purifyrawmanganese", has(ItemList.itemRawManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawmanganese"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawMeutoite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMeutoite.get(), 3))
-                .addCriterion("purifyrawmeutoite", has(ItemList.itemRawMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawmeutoite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawMidasium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMidasium.get(), 3))
-                .addCriterion("purifyrawmidasium", has(ItemList.itemRawMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawmidasium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawMithril), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMithril.get(), 3))
-                .addCriterion("purifyrawmithril", has(ItemList.itemRawMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawmithril"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawMolybdenum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMolybdenum.get(), 3))
-                .addCriterion("purifyrawmolybdenum", has(ItemList.itemRawMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawmolybdenum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawNeodymium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNeodymium.get(), 3))
-                .addCriterion("purifyrawneodymium", has(ItemList.itemRawNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawneodymium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawNeptunium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNeptunium.get(), 3))
-                .addCriterion("purifyrawneptunium", has(ItemList.itemRawNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawneptunium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawNickel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNickel.get(), 3))
-                .addCriterion("purifyrawnickel", has(ItemList.itemRawNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawnickel"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawNiobium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNiobium.get(), 3))
-                .addCriterion("purifyrawniobium", has(ItemList.itemRawNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawniobium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawOrichalcum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOrichalcum.get(), 3))
-                .addCriterion("purifyraworichalcum", has(ItemList.itemRawOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyraworichalcum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawOsmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOsmium.get(), 3))
-                .addCriterion("purifyrawosmium", has(ItemList.itemRawOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawosmium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawOureclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOureclase.get(), 3))
-                .addCriterion("purifyrawoureclase", has(ItemList.itemRawOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawoureclase"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPalladium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPalladium.get(), 3))
-                .addCriterion("purifyrawpalladium", has(ItemList.itemRawPalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawpalladium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPlatinum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPlatinum.get(), 3))
-                .addCriterion("purifyrawplatinum", has(ItemList.itemRawPlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawplatinum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPlutonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPlutonium.get(), 3))
-                .addCriterion("purifyrawplutonium", has(ItemList.itemRawPlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawplutonium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPolonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPolonium.get(), 3))
-                .addCriterion("purifyrawpolonium", has(ItemList.itemRawPolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawpolonium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPromethium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPromethium.get(), 3))
-                .addCriterion("purifyrawpromethium", has(ItemList.itemRawPromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawpromethium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawRhenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRhenium.get(), 3))
-                .addCriterion("purifyrawrhenium", has(ItemList.itemRawRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawrhenium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawRhodium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRhodium.get(), 3))
-                .addCriterion("purifyrawrhodium", has(ItemList.itemRawRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawrhodium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawRubracium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRubracium.get(), 3))
-                .addCriterion("purifyrawrubracium", has(ItemList.itemRawRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawrubracium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawRuthenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRuthenium.get(), 3))
-                .addCriterion("purifyrawruthenium", has(ItemList.itemRawRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawruthenium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawSanguinite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpSanguinite.get(), 3))
-                .addCriterion("purifyrawsanguinite", has(ItemList.itemRawSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawsanguinite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawShadowIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpShadowIron.get(), 3))
-                .addCriterion("purifyrawshadowiron", has(ItemList.itemRawShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawshadowiron"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpSilver.get(), 3))
-                .addCriterion("purifyrawsilver", has(ItemList.itemRawSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawsilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTantalum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTantalum.get(), 3))
-                .addCriterion("purifyrawtantalum", has(ItemList.itemRawTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawtantalum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTartarite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTartarite.get(), 3))
-                .addCriterion("purifyrawtartarite", has(ItemList.itemRawTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawtartarite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTechnetium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTechnetium.get(), 3))
-                .addCriterion("purifyrawtechnetium", has(ItemList.itemRawTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawtechnetium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawThallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpThallium.get(), 3))
-                .addCriterion("purifyrawthallium", has(ItemList.itemRawThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawthallium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTin), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTin.get(), 3))
-                .addCriterion("purifyrawtin", has(ItemList.itemRawTin.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawtin"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTitanium.get(), 3))
-                .addCriterion("purifyrawtitanium", has(ItemList.itemRawTitanium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawtitanium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTritium.get(), 3))
-                .addCriterion("purifyrawtritium", has(ItemList.itemRawTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawtritium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTungsten.get(), 3))
-                .addCriterion("purifyrawtungsten", has(ItemList.itemRawTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawtungsten"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawUnobtainium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpUnobtainium.get(), 3))
-                .addCriterion("purifyrawunobtainium", has(ItemList.itemRawUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawunobtainium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawUranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpUranium.get(), 3))
-                .addCriterion("purifyrawuranium", has(ItemList.itemRawUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawuranium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVanadium.get(), 3))
-                .addCriterion("purifyrawvanadium", has(ItemList.itemRawVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawvanadium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVibranium.get(), 3))
-                .addCriterion("purifyrawvibranium", has(ItemList.itemRawVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawvibranium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVulcanite.get(), 3))
-                .addCriterion("purifyrawvulcanite", has(ItemList.itemRawVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawvulcanite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVyroxeres), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVyroxeres.get(), 3))
-                .addCriterion("purifyrawvyroxeres", has(ItemList.itemRawVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawvyroxeres"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawYellorite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpYellorite.get(), 3))
-                .addCriterion("purifyrawyellorite", has(ItemList.itemRawYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawyellorite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawZinc), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpZinc.get(), 3))
-                .addCriterion("purifyrawzinc", has(ItemList.itemRawZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawzinc"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawZirconium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpZirconium.get(), 3))
-                .addCriterion("purifyrawzirconium", has(ItemList.itemRawZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrawzirconium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAdamantine.get(), 3))
+                .unlockedBy("purifyrawadamantine", has(ItemList.itemRawAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawadamantine"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAldourite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAldourite.get(), 3))
+                .unlockedBy("purifyrawaldourite", has(ItemList.itemRawAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawaldourite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAluminum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAluminum.get(), 3))
+                .unlockedBy("purifyrawaluminum", has(ItemList.itemRawAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawaluminum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAmericium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAmericium.get(), 3))
+                .unlockedBy("purifyrawamericium", has(ItemList.itemRawAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawamericium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAmordrine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAmordrine.get(), 3))
+                .unlockedBy("purifyrawamordrine", has(ItemList.itemRawAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawamordrine"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAngmallen), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAngmallen.get(), 3))
+                .unlockedBy("purifyrawangmallen", has(ItemList.itemRawAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawangmallen"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAstralSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAstralSilver.get(), 3))
+                .unlockedBy("purifyrawastralsilver", has(ItemList.itemRawAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawastralsilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAzureSilver),GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1),new ItemStack(ItemList.itemClumpAzureSilver.get(),3))
+                .unlockedBy("purifyrawazuresilver",has(ItemList.itemRawAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:purifyrawazuresilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAtlarus), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAtlarus.get(), 3))
+                .unlockedBy("purifyrawatlarus", has(ItemList.itemRawAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawatlarus"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBismuth.get(), 3))
+                .unlockedBy("purifyrawbismuth", has(ItemList.itemRawBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawbismuth"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawBlackSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBlackSteel.get(), 3))
+                .unlockedBy("purifyrawblacksteel", has(ItemList.itemRawBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawblacksteel"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCadmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCadmium.get(), 3))
+                .unlockedBy("purifyrawcadmium", has(ItemList.itemRawCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawcadmium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCarmot), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCarmot.get(), 3))
+                .unlockedBy("purifyrawcarmot", has(ItemList.itemRawCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawcarmot"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCelenegil), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCelenegil.get(), 3))
+                .unlockedBy("purifyrawcelenegil", has(ItemList.itemRawCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawcelenegil"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCeruclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCeruclase.get(), 3))
+                .unlockedBy("purifyrawceruclase", has(ItemList.itemRawCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawceruclase"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawChromium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpChromium.get(), 3))
+                .unlockedBy("purifyrawchromium", has(ItemList.itemRawChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawchromium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCobalt), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCobalt.get(), 3))
+                .unlockedBy("purifyrawcobalt", has(ItemList.itemRawCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawcobalt"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCopper), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCopper.get(), 3))
+                .unlockedBy("purifyrawcopper", has(ItemList.itemRawCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawcopper"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawCrimsonSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCrimsonSteel.get(), 3))
+                .unlockedBy("purifyrawcrimsonsteel", has(ItemList.itemRawCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawcrimsonsteel"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawDeepIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpDeepIron.get(), 3))
+                .unlockedBy("purifyrawdeepiron", has(ItemList.itemRawDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawdeepiron"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawDesichalkos), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpDesichalkos.get(), 3))
+                .unlockedBy("purifyrawdesichalkos", has(ItemList.itemRawDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawdesichalkos"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawEximite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpEximite.get(), 3))
+                .unlockedBy("purifyraweximite", has(ItemList.itemRawEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyraweximite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawGallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpGallium.get(), 3))
+                .unlockedBy("purifyrawgallium", has(ItemList.itemRawGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawgallium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawHaderoth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpHaderoth.get(), 3))
+                .unlockedBy("purifyrawhaderoth", has(ItemList.itemRawHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawhaderoth"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawHepatizon), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpHepatizon.get(), 3))
+                .unlockedBy("purifyrawhepatizon", has(ItemList.itemRawHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawhepatizon"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawIgnatius), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIgnatius.get(), 3))
+                .unlockedBy("purifyrawignatius", has(ItemList.itemRawIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawignatius"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawIndium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIndium.get(), 3))
+                .unlockedBy("purifyrawindium", has(ItemList.itemRawIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawindium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawInfuscolium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpInfuscolium.get(), 3))
+                .unlockedBy("purifyrawinfuscolium", has(ItemList.itemRawInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawinfuscolium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawInolashite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpInolashite.get(), 3))
+                .unlockedBy("purifyrawinolashite", has(ItemList.itemRawInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawinolashite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawIridium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIridium.get(), 3))
+                .unlockedBy("purifyrawiridium", has(ItemList.itemRawIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawiridium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawKalendrite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpKalendrite.get(), 3))
+                .unlockedBy("purifyrawkalendrite", has(ItemList.itemRawKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawkalendrite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawLead), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpLead.get(), 3))
+                .unlockedBy("purifyrawlead", has(ItemList.itemRawLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawlead"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawLemurite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpLemurite.get(), 3))
+                .unlockedBy("purifyrawlemurite", has(ItemList.itemRawLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawlemurite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawManganese), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpManganese.get(), 3))
+                .unlockedBy("purifyrawmanganese", has(ItemList.itemRawManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawmanganese"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawMeutoite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMeutoite.get(), 3))
+                .unlockedBy("purifyrawmeutoite", has(ItemList.itemRawMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawmeutoite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawMidasium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMidasium.get(), 3))
+                .unlockedBy("purifyrawmidasium", has(ItemList.itemRawMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawmidasium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawMithril), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMithril.get(), 3))
+                .unlockedBy("purifyrawmithril", has(ItemList.itemRawMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawmithril"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawMolybdenum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMolybdenum.get(), 3))
+                .unlockedBy("purifyrawmolybdenum", has(ItemList.itemRawMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawmolybdenum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawNeodymium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNeodymium.get(), 3))
+                .unlockedBy("purifyrawneodymium", has(ItemList.itemRawNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawneodymium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawNeptunium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNeptunium.get(), 3))
+                .unlockedBy("purifyrawneptunium", has(ItemList.itemRawNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawneptunium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawNickel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNickel.get(), 3))
+                .unlockedBy("purifyrawnickel", has(ItemList.itemRawNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawnickel"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawNiobium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNiobium.get(), 3))
+                .unlockedBy("purifyrawniobium", has(ItemList.itemRawNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawniobium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawOrichalcum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOrichalcum.get(), 3))
+                .unlockedBy("purifyraworichalcum", has(ItemList.itemRawOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyraworichalcum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawOsmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOsmium.get(), 3))
+                .unlockedBy("purifyrawosmium", has(ItemList.itemRawOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawosmium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawOureclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOureclase.get(), 3))
+                .unlockedBy("purifyrawoureclase", has(ItemList.itemRawOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawoureclase"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPalladium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPalladium.get(), 3))
+                .unlockedBy("purifyrawpalladium", has(ItemList.itemRawPalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawpalladium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPlatinum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPlatinum.get(), 3))
+                .unlockedBy("purifyrawplatinum", has(ItemList.itemRawPlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawplatinum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPlutonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPlutonium.get(), 3))
+                .unlockedBy("purifyrawplutonium", has(ItemList.itemRawPlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawplutonium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPolonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPolonium.get(), 3))
+                .unlockedBy("purifyrawpolonium", has(ItemList.itemRawPolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawpolonium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawPromethium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPromethium.get(), 3))
+                .unlockedBy("purifyrawpromethium", has(ItemList.itemRawPromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawpromethium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawRhenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRhenium.get(), 3))
+                .unlockedBy("purifyrawrhenium", has(ItemList.itemRawRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawrhenium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawRhodium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRhodium.get(), 3))
+                .unlockedBy("purifyrawrhodium", has(ItemList.itemRawRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawrhodium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawRubracium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRubracium.get(), 3))
+                .unlockedBy("purifyrawrubracium", has(ItemList.itemRawRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawrubracium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawRuthenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRuthenium.get(), 3))
+                .unlockedBy("purifyrawruthenium", has(ItemList.itemRawRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawruthenium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawSanguinite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpSanguinite.get(), 3))
+                .unlockedBy("purifyrawsanguinite", has(ItemList.itemRawSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawsanguinite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawShadowIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpShadowIron.get(), 3))
+                .unlockedBy("purifyrawshadowiron", has(ItemList.itemRawShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawshadowiron"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpSilver.get(), 3))
+                .unlockedBy("purifyrawsilver", has(ItemList.itemRawSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawsilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTantalum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTantalum.get(), 3))
+                .unlockedBy("purifyrawtantalum", has(ItemList.itemRawTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawtantalum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTartarite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTartarite.get(), 3))
+                .unlockedBy("purifyrawtartarite", has(ItemList.itemRawTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawtartarite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTechnetium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTechnetium.get(), 3))
+                .unlockedBy("purifyrawtechnetium", has(ItemList.itemRawTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawtechnetium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawThallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpThallium.get(), 3))
+                .unlockedBy("purifyrawthallium", has(ItemList.itemRawThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawthallium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTin), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTin.get(), 3))
+                .unlockedBy("purifyrawtin", has(ItemList.itemRawTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawtin"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTitanium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTitanium.get(), 3))
+                .unlockedBy("purifyrawtitanium", has(ItemList.itemRawTitanium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawtitanium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTritium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTritium.get(), 3))
+                .unlockedBy("purifyrawtritium", has(ItemList.itemRawTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawtritium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawTungsten), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTungsten.get(), 3))
+                .unlockedBy("purifyrawtungsten", has(ItemList.itemRawTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawtungsten"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawUnobtainium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpUnobtainium.get(), 3))
+                .unlockedBy("purifyrawunobtainium", has(ItemList.itemRawUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawunobtainium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawUranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpUranium.get(), 3))
+                .unlockedBy("purifyrawuranium", has(ItemList.itemRawUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawuranium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVanadium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVanadium.get(), 3))
+                .unlockedBy("purifyrawvanadium", has(ItemList.itemRawVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawvanadium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVibranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVibranium.get(), 3))
+                .unlockedBy("purifyrawvibranium", has(ItemList.itemRawVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawvibranium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVulcanite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVulcanite.get(), 3))
+                .unlockedBy("purifyrawvulcanite", has(ItemList.itemRawVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawvulcanite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawVyroxeres), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVyroxeres.get(), 3))
+                .unlockedBy("purifyrawvyroxeres", has(ItemList.itemRawVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawvyroxeres"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawYellorite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpYellorite.get(), 3))
+                .unlockedBy("purifyrawyellorite", has(ItemList.itemRawYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawyellorite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawZinc), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpZinc.get(), 3))
+                .unlockedBy("purifyrawzinc", has(ItemList.itemRawZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawzinc"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawZirconium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpZirconium.get(), 3))
+                .unlockedBy("purifyrawzirconium", has(ItemList.itemRawZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawzirconium"));
         //Shard
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAdamantine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAdamantine.get()))
-                .addCriterion("purifyadamantine", has(ItemList.itemShardAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyadamantine"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAldourite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAldourite.get()))
-                .addCriterion("purifyaldourite", has(ItemList.itemShardAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyaldourite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAluminum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAluminum.get()))
-                .addCriterion("purifyaluminum", has(ItemList.itemShardAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyaluminum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAmericium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAmericium.get()))
-                .addCriterion("purifyamericium", has(ItemList.itemShardAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyamericium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAmordrine), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAmordrine.get()))
-                .addCriterion("purifyamordrine", has(ItemList.itemShardAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyamordrine"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAngmallen), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAngmallen.get()))
-                .addCriterion("purifyangmallen", has(ItemList.itemShardAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyangmallen"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAstralSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAstralSilver.get()))
-                .addCriterion("purifyastralsilver", has(ItemList.itemShardAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyastralsilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAtlarus), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpAtlarus.get()))
-                .addCriterion("purifyatlarus", has(ItemList.itemShardAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyatlarus"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAzureSilver),IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")),1)),new ItemStack(ItemList.itemClumpAzureSilver.get()))
-                .addCriterion("purifyazuresilver",has(ItemList.itemShardAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:purifyazuresilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardBismuth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpBismuth.get()))
-                .addCriterion("purifybismuth", has(ItemList.itemShardBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:purifybismuth"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardBlackSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpBlackSteel.get()))
-                .addCriterion("purifyblacksteel", has(ItemList.itemShardBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyblacksteel"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCadmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCadmium.get()))
-                .addCriterion("purifycadmium", has(ItemList.itemShardCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycadmium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCarmot), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCarmot.get()))
-                .addCriterion("purifycarmot", has(ItemList.itemShardCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycarmot"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCelenegil), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCelenegil.get()))
-                .addCriterion("purifycelenegil", has(ItemList.itemShardCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycelenegil"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCeruclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCeruclase.get()))
-                .addCriterion("purifyceruclase", has(ItemList.itemShardCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyceruclase"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardChromium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpChromium.get()))
-                .addCriterion("purifychromium", has(ItemList.itemShardChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifychromium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCobalt), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCobalt.get()))
-                .addCriterion("purifycobalt", has(ItemList.itemShardCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycobalt"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCopper), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCopper.get()))
-                .addCriterion("purifycopper", has(ItemList.itemShardCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycopper"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCrimsonSteel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpCrimsonSteel.get()))
-                .addCriterion("purifycrimsonsteel", has(ItemList.itemShardCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifycrimsonsteel"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardDeepIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpDeepIron.get()))
-                .addCriterion("purifydeepiron", has(ItemList.itemShardDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:purifydeepiron"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardDesichalkos), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpDesichalkos.get()))
-                .addCriterion("purifydesichalkos", has(ItemList.itemShardDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:purifydesichalkos"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardEximite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpEximite.get()))
-                .addCriterion("purifyeximite", has(ItemList.itemShardEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyeximite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardGallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpGallium.get()))
-                .addCriterion("purifygallium", has(ItemList.itemShardGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifygallium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardHaderoth), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpHaderoth.get()))
-                .addCriterion("purifyhaderoth", has(ItemList.itemShardHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyhaderoth"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardHepatizon), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpHepatizon.get()))
-                .addCriterion("purifyhepatizon", has(ItemList.itemShardHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyhepatizon"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardIgnatius), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIgnatius.get()))
-                .addCriterion("purifyignatius", has(ItemList.itemShardIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyignatius"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardIndium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIndium.get()))
-                .addCriterion("purifyindium", has(ItemList.itemShardIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyindium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardInfuscolium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpInfuscolium.get()))
-                .addCriterion("purifyinfuscolium", has(ItemList.itemShardInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyinfuscolium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardInolashite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpInolashite.get()))
-                .addCriterion("purifyinolashite", has(ItemList.itemShardInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyinolashite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardIridium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpIridium.get()))
-                .addCriterion("purifyiridium", has(ItemList.itemShardIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyiridium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardKalendrite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpKalendrite.get()))
-                .addCriterion("purifykalendrite", has(ItemList.itemShardKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifykalendrite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardLead), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpLead.get()))
-                .addCriterion("purifylead", has(ItemList.itemShardLead.get()))
-                .build(consumer, new ResourceLocation("extraores:purifylead"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardLemurite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpLemurite.get()))
-                .addCriterion("purifylemurite", has(ItemList.itemShardLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifylemurite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardManganese), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpManganese.get()))
-                .addCriterion("purifymanganese", has(ItemList.itemShardManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymanganese"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardMeutoite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMeutoite.get()))
-                .addCriterion("purifymeutoite", has(ItemList.itemShardMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymeutoite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardMidasium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMidasium.get()))
-                .addCriterion("purifymidasium", has(ItemList.itemShardMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymidasium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardMithril), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMithril.get()))
-                .addCriterion("purifymithril", has(ItemList.itemShardMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymithril"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardMolybdenum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpMolybdenum.get()))
-                .addCriterion("purifymolybdenum", has(ItemList.itemShardMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifymolybdenum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardNeodymium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNeodymium.get()))
-                .addCriterion("purifyneodymium", has(ItemList.itemShardNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyneodymium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardNeptunium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNeptunium.get()))
-                .addCriterion("purifyneptunium", has(ItemList.itemShardNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyneptunium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardNickel), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNickel.get()))
-                .addCriterion("purifynickel", has(ItemList.itemShardNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:purifynickel"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardNiobium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpNiobium.get()))
-                .addCriterion("purifyniobium", has(ItemList.itemShardNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyniobium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardOrichalcum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOrichalcum.get()))
-                .addCriterion("purifyorichalcum", has(ItemList.itemShardOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyorichalcum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardOsmium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOsmium.get()))
-                .addCriterion("purifyosmium", has(ItemList.itemShardOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyosmium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardOureclase), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpOureclase.get()))
-                .addCriterion("purifyoureclase", has(ItemList.itemShardOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyoureclase"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPalladium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPalladium.get()))
-                .addCriterion("purifypalladium", has(ItemList.itemShardPalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifypalladium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPlatinum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPlatinum.get()))
-                .addCriterion("purifyplatinum", has(ItemList.itemShardPlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyplatinum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPlutonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPlutonium.get()))
-                .addCriterion("purifyplutonium", has(ItemList.itemShardPlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyplutonium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPolonium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPolonium.get()))
-                .addCriterion("purifypolonium", has(ItemList.itemShardPolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifypolonium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPromethium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpPromethium.get()))
-                .addCriterion("purifypromethium", has(ItemList.itemShardPromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifypromethium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardRhenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRhenium.get()))
-                .addCriterion("purifyrhenium", has(ItemList.itemShardRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrhenium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardRhodium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRhodium.get()))
-                .addCriterion("purifyrhodium", has(ItemList.itemShardRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrhodium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardRubracium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRubracium.get()))
-                .addCriterion("purifyrubracium", has(ItemList.itemShardRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyrubracium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardRuthenium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpRuthenium.get()))
-                .addCriterion("purifyruthenium", has(ItemList.itemShardRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyruthenium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardSanguinite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpSanguinite.get()))
-                .addCriterion("purifysanguinite", has(ItemList.itemShardSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifysanguinite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardShadowIron), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpShadowIron.get()))
-                .addCriterion("purifyshadowiron", has(ItemList.itemShardShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyshadowiron"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardSilver), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpSilver.get()))
-                .addCriterion("purifysilver", has(ItemList.itemShardSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:purifysilver"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTantalum), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTantalum.get()))
-                .addCriterion("purifytantalum", has(ItemList.itemShardTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytantalum"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTartarite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTartarite.get()))
-                .addCriterion("purifytartarite", has(ItemList.itemShardTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytartarite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTechnetium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTechnetium.get()))
-                .addCriterion("purifytechnetium", has(ItemList.itemShardTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytechnetium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardThallium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpThallium.get()))
-                .addCriterion("purifythallium", has(ItemList.itemShardThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifythallium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTin), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTin.get()))
-                .addCriterion("purifytin", has(ItemList.itemShardTin.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytin"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTitanium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTitanium.get()))
-                .addCriterion("purifytitanium", has(ItemList.itemShardTitanium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytitanium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTritium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTritium.get()))
-                .addCriterion("purifytritium", has(ItemList.itemShardTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytritium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTungsten), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpTungsten.get()))
-                .addCriterion("purifytungsten", has(ItemList.itemShardTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:purifytungsten"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardUnobtainium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpUnobtainium.get()))
-                .addCriterion("purifyunobtainium", has(ItemList.itemShardUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyunobtainium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardUranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpUranium.get()))
-                .addCriterion("purifyuranium", has(ItemList.itemShardUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyuranium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVanadium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVanadium.get()))
-                .addCriterion("purifyvanadium", has(ItemList.itemShardVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyvanadium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVibranium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVibranium.get()))
-                .addCriterion("purifyvibranium", has(ItemList.itemShardVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyvibranium"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVulcanite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVulcanite.get()))
-                .addCriterion("purifyvulcanite", has(ItemList.itemShardVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyvulcanite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVyroxeres), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpVyroxeres.get()))
-                .addCriterion("purifyvyroxeres", has(ItemList.itemShardVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyvyroxeres"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardYellorite), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpYellorite.get()))
-                .addCriterion("purifyyellorite", has(ItemList.itemShardYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyyellorite"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardZinc), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpZinc.get()))
-                .addCriterion("purifyzinc", has(ItemList.itemShardZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyzinc"));
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardZirconium), IngredientCreatorAccess.gas().from(new GasStack(MekanismAPI.gasRegistry().getValue(new ResourceLocation("mekanism:oxygen")), 1)), new ItemStack(ItemList.itemClumpZirconium.get()))
-                .addCriterion("purifyzirconium", has(ItemList.itemShardZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:purifyzirconium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAdamantine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAdamantine.get()))
+                .unlockedBy("purifyadamantine", has(ItemList.itemShardAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyadamantine"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAldourite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAldourite.get()))
+                .unlockedBy("purifyaldourite", has(ItemList.itemShardAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyaldourite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAluminum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAluminum.get()))
+                .unlockedBy("purifyaluminum", has(ItemList.itemShardAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyaluminum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAmericium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAmericium.get()))
+                .unlockedBy("purifyamericium", has(ItemList.itemShardAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyamericium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAmordrine), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAmordrine.get()))
+                .unlockedBy("purifyamordrine", has(ItemList.itemShardAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyamordrine"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAngmallen), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAngmallen.get()))
+                .unlockedBy("purifyangmallen", has(ItemList.itemShardAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyangmallen"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAstralSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAstralSilver.get()))
+                .unlockedBy("purifyastralsilver", has(ItemList.itemShardAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyastralsilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAtlarus), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAtlarus.get()))
+                .unlockedBy("purifyatlarus", has(ItemList.itemShardAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyatlarus"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAzureSilver),GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1),new ItemStack(ItemList.itemClumpAzureSilver.get()))
+                .unlockedBy("purifyazuresilver",has(ItemList.itemShardAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:purifyazuresilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardBismuth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBismuth.get()))
+                .unlockedBy("purifybismuth", has(ItemList.itemShardBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifybismuth"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardBlackSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBlackSteel.get()))
+                .unlockedBy("purifyblacksteel", has(ItemList.itemShardBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyblacksteel"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCadmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCadmium.get()))
+                .unlockedBy("purifycadmium", has(ItemList.itemShardCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycadmium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCarmot), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCarmot.get()))
+                .unlockedBy("purifycarmot", has(ItemList.itemShardCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycarmot"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCelenegil), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCelenegil.get()))
+                .unlockedBy("purifycelenegil", has(ItemList.itemShardCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycelenegil"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCeruclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCeruclase.get()))
+                .unlockedBy("purifyceruclase", has(ItemList.itemShardCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyceruclase"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardChromium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpChromium.get()))
+                .unlockedBy("purifychromium", has(ItemList.itemShardChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifychromium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCobalt), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCobalt.get()))
+                .unlockedBy("purifycobalt", has(ItemList.itemShardCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycobalt"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCopper), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCopper.get()))
+                .unlockedBy("purifycopper", has(ItemList.itemShardCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycopper"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardCrimsonSteel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpCrimsonSteel.get()))
+                .unlockedBy("purifycrimsonsteel", has(ItemList.itemShardCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifycrimsonsteel"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardDeepIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpDeepIron.get()))
+                .unlockedBy("purifydeepiron", has(ItemList.itemShardDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifydeepiron"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardDesichalkos), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpDesichalkos.get()))
+                .unlockedBy("purifydesichalkos", has(ItemList.itemShardDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifydesichalkos"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardEximite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpEximite.get()))
+                .unlockedBy("purifyeximite", has(ItemList.itemShardEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyeximite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardGallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpGallium.get()))
+                .unlockedBy("purifygallium", has(ItemList.itemShardGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifygallium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardHaderoth), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpHaderoth.get()))
+                .unlockedBy("purifyhaderoth", has(ItemList.itemShardHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyhaderoth"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardHepatizon), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpHepatizon.get()))
+                .unlockedBy("purifyhepatizon", has(ItemList.itemShardHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyhepatizon"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardIgnatius), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIgnatius.get()))
+                .unlockedBy("purifyignatius", has(ItemList.itemShardIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyignatius"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardIndium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIndium.get()))
+                .unlockedBy("purifyindium", has(ItemList.itemShardIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyindium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardInfuscolium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpInfuscolium.get()))
+                .unlockedBy("purifyinfuscolium", has(ItemList.itemShardInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyinfuscolium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardInolashite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpInolashite.get()))
+                .unlockedBy("purifyinolashite", has(ItemList.itemShardInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyinolashite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardIridium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpIridium.get()))
+                .unlockedBy("purifyiridium", has(ItemList.itemShardIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyiridium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardKalendrite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpKalendrite.get()))
+                .unlockedBy("purifykalendrite", has(ItemList.itemShardKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifykalendrite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardLead), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpLead.get()))
+                .unlockedBy("purifylead", has(ItemList.itemShardLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifylead"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardLemurite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpLemurite.get()))
+                .unlockedBy("purifylemurite", has(ItemList.itemShardLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifylemurite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardManganese), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpManganese.get()))
+                .unlockedBy("purifymanganese", has(ItemList.itemShardManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymanganese"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardMeutoite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMeutoite.get()))
+                .unlockedBy("purifymeutoite", has(ItemList.itemShardMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymeutoite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardMidasium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMidasium.get()))
+                .unlockedBy("purifymidasium", has(ItemList.itemShardMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymidasium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardMithril), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMithril.get()))
+                .unlockedBy("purifymithril", has(ItemList.itemShardMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymithril"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardMolybdenum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpMolybdenum.get()))
+                .unlockedBy("purifymolybdenum", has(ItemList.itemShardMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifymolybdenum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardNeodymium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNeodymium.get()))
+                .unlockedBy("purifyneodymium", has(ItemList.itemShardNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyneodymium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardNeptunium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNeptunium.get()))
+                .unlockedBy("purifyneptunium", has(ItemList.itemShardNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyneptunium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardNickel), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNickel.get()))
+                .unlockedBy("purifynickel", has(ItemList.itemShardNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifynickel"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardNiobium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpNiobium.get()))
+                .unlockedBy("purifyniobium", has(ItemList.itemShardNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyniobium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardOrichalcum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOrichalcum.get()))
+                .unlockedBy("purifyorichalcum", has(ItemList.itemShardOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyorichalcum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardOsmium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOsmium.get()))
+                .unlockedBy("purifyosmium", has(ItemList.itemShardOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyosmium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardOureclase), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpOureclase.get()))
+                .unlockedBy("purifyoureclase", has(ItemList.itemShardOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyoureclase"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPalladium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPalladium.get()))
+                .unlockedBy("purifypalladium", has(ItemList.itemShardPalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifypalladium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPlatinum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPlatinum.get()))
+                .unlockedBy("purifyplatinum", has(ItemList.itemShardPlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyplatinum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPlutonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPlutonium.get()))
+                .unlockedBy("purifyplutonium", has(ItemList.itemShardPlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyplutonium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPolonium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPolonium.get()))
+                .unlockedBy("purifypolonium", has(ItemList.itemShardPolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifypolonium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardPromethium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpPromethium.get()))
+                .unlockedBy("purifypromethium", has(ItemList.itemShardPromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifypromethium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardRhenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRhenium.get()))
+                .unlockedBy("purifyrhenium", has(ItemList.itemShardRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrhenium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardRhodium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRhodium.get()))
+                .unlockedBy("purifyrhodium", has(ItemList.itemShardRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrhodium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardRubracium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRubracium.get()))
+                .unlockedBy("purifyrubracium", has(ItemList.itemShardRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrubracium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardRuthenium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpRuthenium.get()))
+                .unlockedBy("purifyruthenium", has(ItemList.itemShardRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyruthenium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardSanguinite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpSanguinite.get()))
+                .unlockedBy("purifysanguinite", has(ItemList.itemShardSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifysanguinite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardShadowIron), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpShadowIron.get()))
+                .unlockedBy("purifyshadowiron", has(ItemList.itemShardShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyshadowiron"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardSilver), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpSilver.get()))
+                .unlockedBy("purifysilver", has(ItemList.itemShardSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifysilver"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTantalum), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTantalum.get()))
+                .unlockedBy("purifytantalum", has(ItemList.itemShardTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytantalum"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTartarite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTartarite.get()))
+                .unlockedBy("purifytartarite", has(ItemList.itemShardTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytartarite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTechnetium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTechnetium.get()))
+                .unlockedBy("purifytechnetium", has(ItemList.itemShardTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytechnetium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardThallium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpThallium.get()))
+                .unlockedBy("purifythallium", has(ItemList.itemShardThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifythallium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTin), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTin.get()))
+                .unlockedBy("purifytin", has(ItemList.itemShardTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytin"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTitanium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTitanium.get()))
+                .unlockedBy("purifytitanium", has(ItemList.itemShardTitanium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytitanium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTritium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTritium.get()))
+                .unlockedBy("purifytritium", has(ItemList.itemShardTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytritium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardTungsten), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpTungsten.get()))
+                .unlockedBy("purifytungsten", has(ItemList.itemShardTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifytungsten"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardUnobtainium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpUnobtainium.get()))
+                .unlockedBy("purifyunobtainium", has(ItemList.itemShardUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyunobtainium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardUranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpUranium.get()))
+                .unlockedBy("purifyuranium", has(ItemList.itemShardUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyuranium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVanadium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVanadium.get()))
+                .unlockedBy("purifyvanadium", has(ItemList.itemShardVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyvanadium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVibranium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVibranium.get()))
+                .unlockedBy("purifyvibranium", has(ItemList.itemShardVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyvibranium"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVulcanite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVulcanite.get()))
+                .unlockedBy("purifyvulcanite", has(ItemList.itemShardVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyvulcanite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardVyroxeres), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpVyroxeres.get()))
+                .unlockedBy("purifyvyroxeres", has(ItemList.itemShardVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyvyroxeres"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardYellorite), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpYellorite.get()))
+                .unlockedBy("purifyyellorite", has(ItemList.itemShardYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyyellorite"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardZinc), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpZinc.get()))
+                .unlockedBy("purifyzinc", has(ItemList.itemShardZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyzinc"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardZirconium), GasStackIngredient.of(IngredientCreatorAccess.gas().of(MekanismAPI.GAS_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpZirconium.get()))
+                .unlockedBy("purifyzirconium", has(ItemList.itemShardZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyzirconium"));
     }
 
-    protected void buildMekanismCrushing(Consumer<FinishedRecipe> consumer)
+    protected void buildMekanismCrushing(RecipeOutput consumer)
     {
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAdamantine), new ItemStack(ItemList.itemDirtyDustAdamantine.get()))
-                .addCriterion("crushadamantine", has(ItemList.itemClumpAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:crushadamantine"));
+                .unlockedBy("crushadamantine", has(ItemList.itemClumpAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushadamantine"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAldourite), new ItemStack(ItemList.itemDirtyDustAldourite.get()))
-                .addCriterion("crushaldourite", has(ItemList.itemClumpAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushaldourite"));
+                .unlockedBy("crushaldourite", has(ItemList.itemClumpAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushaldourite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAluminum), new ItemStack(ItemList.itemDirtyDustAluminum.get()))
-                .addCriterion("crushaluminum", has(ItemList.itemClumpAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:crushaluminum"));
+                .unlockedBy("crushaluminum", has(ItemList.itemClumpAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushaluminum"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAmericium), new ItemStack(ItemList.itemDirtyDustAmericium.get()))
-                .addCriterion("crushamericium", has(ItemList.itemClumpAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushamericium"));
+                .unlockedBy("crushamericium", has(ItemList.itemClumpAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushamericium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAmordrine), new ItemStack(ItemList.itemDirtyDustAmordrine.get()))
-                .addCriterion("crushamordrine", has(ItemList.itemClumpAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:crushamordrine"));
+                .unlockedBy("crushamordrine", has(ItemList.itemClumpAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushamordrine"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAngmallen), new ItemStack(ItemList.itemDirtyDustAngmallen.get()))
-                .addCriterion("crushangmallen", has(ItemList.itemClumpAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:crushangmallen"));
+                .unlockedBy("crushangmallen", has(ItemList.itemClumpAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushangmallen"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAstralSilver), new ItemStack(ItemList.itemDirtyDustAstralSilver.get()))
-                .addCriterion("crushastralsilver", has(ItemList.itemClumpAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:crushastralsilver"));
+                .unlockedBy("crushastralsilver", has(ItemList.itemClumpAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushastralsilver"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAtlarus), new ItemStack(ItemList.itemDirtyDustAtlarus.get()))
-                .addCriterion("crushatlarus", has(ItemList.itemClumpAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:crushatlarus"));
+                .unlockedBy("crushatlarus", has(ItemList.itemClumpAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushatlarus"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAzureSilver),new ItemStack(ItemList.itemDirtyDustAzureSilver.get()))
-                .addCriterion("crushazuresilver",has(ItemList.itemClumpAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:crushazuresilver"));
+                .unlockedBy("crushazuresilver",has(ItemList.itemClumpAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:crushazuresilver"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpBismuth), new ItemStack(ItemList.itemDirtyDustBismuth.get()))
-                .addCriterion("crushbismuth", has(ItemList.itemClumpBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:crushbismuth"));
+                .unlockedBy("crushbismuth", has(ItemList.itemClumpBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushbismuth"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpBlackSteel), new ItemStack(ItemList.itemDirtyDustBlackSteel.get()))
-                .addCriterion("crushblacksteel", has(ItemList.itemClumpBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:crushblacksteel"));
+                .unlockedBy("crushblacksteel", has(ItemList.itemClumpBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushblacksteel"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCadmium), new ItemStack(ItemList.itemDirtyDustCadmium.get()))
-                .addCriterion("crushcadmium", has(ItemList.itemClumpCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushcadmium"));
+                .unlockedBy("crushcadmium", has(ItemList.itemClumpCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushcadmium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCarmot), new ItemStack(ItemList.itemDirtyDustCarmot.get()))
-                .addCriterion("crushcarmot", has(ItemList.itemClumpCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:crushcarmot"));
+                .unlockedBy("crushcarmot", has(ItemList.itemClumpCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushcarmot"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCelenegil), new ItemStack(ItemList.itemDirtyDustCelenegil.get()))
-                .addCriterion("crushcelenegil", has(ItemList.itemClumpCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:crushcelenegil"));
+                .unlockedBy("crushcelenegil", has(ItemList.itemClumpCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushcelenegil"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCeruclase), new ItemStack(ItemList.itemDirtyDustCeruclase.get()))
-                .addCriterion("crushceruclase", has(ItemList.itemClumpCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:crushceruclase"));
+                .unlockedBy("crushceruclase", has(ItemList.itemClumpCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushceruclase"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpChromium), new ItemStack(ItemList.itemDirtyDustChromium.get()))
-                .addCriterion("crushchromium", has(ItemList.itemClumpChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushchromium"));
+                .unlockedBy("crushchromium", has(ItemList.itemClumpChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushchromium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCobalt), new ItemStack(ItemList.itemDirtyDustCobalt.get()))
-                .addCriterion("crushcobalt", has(ItemList.itemClumpCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:crushcobalt"));
+                .unlockedBy("crushcobalt", has(ItemList.itemClumpCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushcobalt"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCopper), new ItemStack(ItemList.itemDirtyDustCopper.get()))
-                .addCriterion("crushcopper", has(ItemList.itemClumpCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:crushcopper"));
+                .unlockedBy("crushcopper", has(ItemList.itemClumpCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushcopper"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpCrimsonSteel), new ItemStack(ItemList.itemDirtyDustCrimsonSteel.get()))
-                .addCriterion("crushcrimsonsteel", has(ItemList.itemClumpCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:crushcrimsonsteel"));
+                .unlockedBy("crushcrimsonsteel", has(ItemList.itemClumpCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushcrimsonsteel"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpDeepIron), new ItemStack(ItemList.itemDirtyDustDeepIron.get()))
-                .addCriterion("crushdeepiron", has(ItemList.itemClumpDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:crushdeepiron"));
+                .unlockedBy("crushdeepiron", has(ItemList.itemClumpDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushdeepiron"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpDesichalkos), new ItemStack(ItemList.itemDirtyDustDesichalkos.get()))
-                .addCriterion("crushdesichalkos", has(ItemList.itemClumpDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:crushdesichalkos"));
+                .unlockedBy("crushdesichalkos", has(ItemList.itemClumpDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushdesichalkos"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpEximite), new ItemStack(ItemList.itemDirtyDustEximite.get()))
-                .addCriterion("crusheximite", has(ItemList.itemClumpEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:crusheximite"));
+                .unlockedBy("crusheximite", has(ItemList.itemClumpEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crusheximite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpGallium), new ItemStack(ItemList.itemDirtyDustGallium.get()))
-                .addCriterion("crushgallium", has(ItemList.itemClumpGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushgallium"));
+                .unlockedBy("crushgallium", has(ItemList.itemClumpGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushgallium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpHaderoth), new ItemStack(ItemList.itemDirtyDustHaderoth.get()))
-                .addCriterion("crushhaderoth", has(ItemList.itemClumpHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:crushhaderoth"));
+                .unlockedBy("crushhaderoth", has(ItemList.itemClumpHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushhaderoth"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpHepatizon), new ItemStack(ItemList.itemDirtyDustHepatizon.get()))
-                .addCriterion("crushhepatizon", has(ItemList.itemClumpHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:crushhepatizon"));
+                .unlockedBy("crushhepatizon", has(ItemList.itemClumpHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushhepatizon"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpIgnatius), new ItemStack(ItemList.itemDirtyDustIgnatius.get()))
-                .addCriterion("crushignatius", has(ItemList.itemClumpIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:crushignatius"));
+                .unlockedBy("crushignatius", has(ItemList.itemClumpIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushignatius"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpIndium), new ItemStack(ItemList.itemDirtyDustIndium.get()))
-                .addCriterion("crushindium", has(ItemList.itemClumpIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushindium"));
+                .unlockedBy("crushindium", has(ItemList.itemClumpIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushindium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpInfuscolium), new ItemStack(ItemList.itemDirtyDustInfuscolium.get()))
-                .addCriterion("crushinfuscolium", has(ItemList.itemClumpInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushinfuscolium"));
+                .unlockedBy("crushinfuscolium", has(ItemList.itemClumpInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushinfuscolium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpInolashite), new ItemStack(ItemList.itemDirtyDustInolashite.get()))
-                .addCriterion("crushinolashite", has(ItemList.itemClumpInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushinolashite"));
+                .unlockedBy("crushinolashite", has(ItemList.itemClumpInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushinolashite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpIridium), new ItemStack(ItemList.itemDirtyDustIridium.get()))
-                .addCriterion("crushiridium", has(ItemList.itemClumpIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushiridium"));
+                .unlockedBy("crushiridium", has(ItemList.itemClumpIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushiridium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpKalendrite), new ItemStack(ItemList.itemDirtyDustKalendrite.get()))
-                .addCriterion("crushkalendrite", has(ItemList.itemClumpKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushkalendrite"));
+                .unlockedBy("crushkalendrite", has(ItemList.itemClumpKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushkalendrite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpLead), new ItemStack(ItemList.itemDirtyDustLead.get()))
-                .addCriterion("crushlead", has(ItemList.itemClumpLead.get()))
-                .build(consumer, new ResourceLocation("extraores:crushlead"));
+                .unlockedBy("crushlead", has(ItemList.itemClumpLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushlead"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpLemurite), new ItemStack(ItemList.itemDirtyDustLemurite.get()))
-                .addCriterion("crushlemurite", has(ItemList.itemClumpLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushlemurite"));
+                .unlockedBy("crushlemurite", has(ItemList.itemClumpLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushlemurite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpManganese), new ItemStack(ItemList.itemDirtyDustManganese.get()))
-                .addCriterion("crushmanganese", has(ItemList.itemClumpManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:crushmanganese"));
+                .unlockedBy("crushmanganese", has(ItemList.itemClumpManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushmanganese"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpMeutoite), new ItemStack(ItemList.itemDirtyDustMeutoite.get()))
-                .addCriterion("crushmeutoite", has(ItemList.itemClumpMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushmeutoite"));
+                .unlockedBy("crushmeutoite", has(ItemList.itemClumpMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushmeutoite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpMidasium), new ItemStack(ItemList.itemDirtyDustMidasium.get()))
-                .addCriterion("crushmidasium", has(ItemList.itemClumpMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushmidasium"));
+                .unlockedBy("crushmidasium", has(ItemList.itemClumpMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushmidasium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpMithril), new ItemStack(ItemList.itemDirtyDustMithril.get()))
-                .addCriterion("crushmithril", has(ItemList.itemClumpMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:crushmithril"));
+                .unlockedBy("crushmithril", has(ItemList.itemClumpMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushmithril"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpMolybdenum), new ItemStack(ItemList.itemDirtyDustMolybdenum.get()))
-                .addCriterion("crushmolybdenum", has(ItemList.itemClumpMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:crushmolybdenum"));
+                .unlockedBy("crushmolybdenum", has(ItemList.itemClumpMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushmolybdenum"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpNeodymium), new ItemStack(ItemList.itemDirtyDustNeodymium.get()))
-                .addCriterion("crushneodymium", has(ItemList.itemClumpNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushneodymium"));
+                .unlockedBy("crushneodymium", has(ItemList.itemClumpNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushneodymium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpNeptunium), new ItemStack(ItemList.itemDirtyDustNeptunium.get()))
-                .addCriterion("crushneptunium", has(ItemList.itemClumpNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushneptunium"));
+                .unlockedBy("crushneptunium", has(ItemList.itemClumpNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushneptunium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpNickel), new ItemStack(ItemList.itemDirtyDustNickel.get()))
-                .addCriterion("crushnickel", has(ItemList.itemClumpNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:crushnickel"));
+                .unlockedBy("crushnickel", has(ItemList.itemClumpNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushnickel"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpNiobium), new ItemStack(ItemList.itemDirtyDustNiobium.get()))
-                .addCriterion("crushniobium", has(ItemList.itemClumpNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushniobium"));
+                .unlockedBy("crushniobium", has(ItemList.itemClumpNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushniobium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpOrichalcum), new ItemStack(ItemList.itemDirtyDustOrichalcum.get()))
-                .addCriterion("crushorichalcum", has(ItemList.itemClumpOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:crushorichalcum"));
+                .unlockedBy("crushorichalcum", has(ItemList.itemClumpOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushorichalcum"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpOsmium), new ItemStack(ItemList.itemDirtyDustOsmium.get()))
-                .addCriterion("crushosmium", has(ItemList.itemClumpOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushosmium"));
+                .unlockedBy("crushosmium", has(ItemList.itemClumpOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushosmium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpOureclase), new ItemStack(ItemList.itemDirtyDustOureclase.get()))
-                .addCriterion("crushoureclase", has(ItemList.itemClumpOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:crushoureclase"));
+                .unlockedBy("crushoureclase", has(ItemList.itemClumpOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushoureclase"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpPalladium), new ItemStack(ItemList.itemDirtyDustPalladium.get()))
-                .addCriterion("crushpalladium", has(ItemList.itemClumpPalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushpalladium"));
+                .unlockedBy("crushpalladium", has(ItemList.itemClumpPalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushpalladium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpPlatinum), new ItemStack(ItemList.itemDirtyDustPlatinum.get()))
-                .addCriterion("crushplatinum", has(ItemList.itemClumpPlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:crushplatinum"));
+                .unlockedBy("crushplatinum", has(ItemList.itemClumpPlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushplatinum"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpPlutonium), new ItemStack(ItemList.itemDirtyDustPlutonium.get()))
-                .addCriterion("crushplutonium", has(ItemList.itemClumpPlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushplutonium"));
+                .unlockedBy("crushplutonium", has(ItemList.itemClumpPlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushplutonium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpPolonium), new ItemStack(ItemList.itemDirtyDustPolonium.get()))
-                .addCriterion("crushpolonium", has(ItemList.itemClumpPolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushpolonium"));
+                .unlockedBy("crushpolonium", has(ItemList.itemClumpPolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushpolonium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpPromethium), new ItemStack(ItemList.itemDirtyDustPromethium.get()))
-                .addCriterion("crushpromethium", has(ItemList.itemClumpPromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushpromethium"));
+                .unlockedBy("crushpromethium", has(ItemList.itemClumpPromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushpromethium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpRhenium), new ItemStack(ItemList.itemDirtyDustRhenium.get()))
-                .addCriterion("crushrhenium", has(ItemList.itemClumpRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushrhenium"));
+                .unlockedBy("crushrhenium", has(ItemList.itemClumpRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushrhenium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpRhodium), new ItemStack(ItemList.itemDirtyDustRhodium.get()))
-                .addCriterion("crushrhodium", has(ItemList.itemClumpRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushrhodium"));
+                .unlockedBy("crushrhodium", has(ItemList.itemClumpRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushrhodium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpRubracium), new ItemStack(ItemList.itemDirtyDustRubracium.get()))
-                .addCriterion("crushrubracium", has(ItemList.itemClumpRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushrubracium"));
+                .unlockedBy("crushrubracium", has(ItemList.itemClumpRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushrubracium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpRuthenium), new ItemStack(ItemList.itemDirtyDustRuthenium.get()))
-                .addCriterion("crushruthenium", has(ItemList.itemClumpRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushruthenium"));
+                .unlockedBy("crushruthenium", has(ItemList.itemClumpRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushruthenium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpSanguinite), new ItemStack(ItemList.itemDirtyDustSanguinite.get()))
-                .addCriterion("crushsanguinite", has(ItemList.itemClumpSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushsanguinite"));
+                .unlockedBy("crushsanguinite", has(ItemList.itemClumpSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushsanguinite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpShadowIron), new ItemStack(ItemList.itemDirtyDustShadowIron.get()))
-                .addCriterion("crushshadowiron", has(ItemList.itemClumpShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:crushshadowiron"));
+                .unlockedBy("crushshadowiron", has(ItemList.itemClumpShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushshadowiron"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpSilver), new ItemStack(ItemList.itemDirtyDustSilver.get()))
-                .addCriterion("crushsilver", has(ItemList.itemClumpSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:crushsilver"));
+                .unlockedBy("crushsilver", has(ItemList.itemClumpSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushsilver"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTantalum), new ItemStack(ItemList.itemDirtyDustTantalum.get()))
-                .addCriterion("crushtantalum", has(ItemList.itemClumpTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:crushtantalum"));
+                .unlockedBy("crushtantalum", has(ItemList.itemClumpTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushtantalum"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTartarite), new ItemStack(ItemList.itemDirtyDustTartarite.get()))
-                .addCriterion("crushtartarite", has(ItemList.itemClumpTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushtartarite"));
+                .unlockedBy("crushtartarite", has(ItemList.itemClumpTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushtartarite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTechnetium), new ItemStack(ItemList.itemDirtyDustTechnetium.get()))
-                .addCriterion("crushtechnetium", has(ItemList.itemClumpTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushtechnetium"));
+                .unlockedBy("crushtechnetium", has(ItemList.itemClumpTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushtechnetium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpThallium), new ItemStack(ItemList.itemDirtyDustThallium.get()))
-                .addCriterion("crushthallium", has(ItemList.itemClumpThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushthallium"));
+                .unlockedBy("crushthallium", has(ItemList.itemClumpThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushthallium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTin), new ItemStack(ItemList.itemDirtyDustTin.get()))
-                .addCriterion("crushtin", has(ItemList.itemClumpTin.get()))
-                .build(consumer, new ResourceLocation("extraores:crushtin"));
+                .unlockedBy("crushtin", has(ItemList.itemClumpTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushtin"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTitanium), new ItemStack(ItemList.itemDirtyDustTitanium.get()))
-                .addCriterion("crushtitanium", has(ItemList.itemClumpTitanium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushtitanium"));
+                .unlockedBy("crushtitanium", has(ItemList.itemClumpTitanium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushtitanium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTritium), new ItemStack(ItemList.itemDirtyDustTritium.get()))
-                .addCriterion("crushtritium", has(ItemList.itemClumpTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushtritium"));
+                .unlockedBy("crushtritium", has(ItemList.itemClumpTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushtritium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpTungsten), new ItemStack(ItemList.itemDirtyDustTungsten.get()))
-                .addCriterion("crushtungsten", has(ItemList.itemClumpTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:crushtungsten"));
+                .unlockedBy("crushtungsten", has(ItemList.itemClumpTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushtungsten"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpUnobtainium), new ItemStack(ItemList.itemDirtyDustUnobtainium.get()))
-                .addCriterion("crushunobtainium", has(ItemList.itemClumpUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushunobtainium"));
+                .unlockedBy("crushunobtainium", has(ItemList.itemClumpUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushunobtainium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpUranium), new ItemStack(ItemList.itemDirtyDustUranium.get()))
-                .addCriterion("crushuranium", has(ItemList.itemClumpUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushuranium"));
+                .unlockedBy("crushuranium", has(ItemList.itemClumpUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushuranium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpVanadium), new ItemStack(ItemList.itemDirtyDustVanadium.get()))
-                .addCriterion("crushvanadium", has(ItemList.itemClumpVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushvanadium"));
+                .unlockedBy("crushvanadium", has(ItemList.itemClumpVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushvanadium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpVibranium), new ItemStack(ItemList.itemDirtyDustVibranium.get()))
-                .addCriterion("crushvibranium", has(ItemList.itemClumpVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushvibranium"));
+                .unlockedBy("crushvibranium", has(ItemList.itemClumpVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushvibranium"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpVulcanite), new ItemStack(ItemList.itemDirtyDustVulcanite.get()))
-                .addCriterion("crushvulcanite", has(ItemList.itemClumpVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushvulcanite"));
+                .unlockedBy("crushvulcanite", has(ItemList.itemClumpVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushvulcanite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpVyroxeres), new ItemStack(ItemList.itemDirtyDustVyroxeres.get()))
-                .addCriterion("crushvyroxeres", has(ItemList.itemClumpVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:crushvyroxeres"));
+                .unlockedBy("crushvyroxeres", has(ItemList.itemClumpVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushvyroxeres"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpYellorite), new ItemStack(ItemList.itemDirtyDustYellorite.get()))
-                .addCriterion("crushyellorite", has(ItemList.itemClumpYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:crushyellorite"));
+                .unlockedBy("crushyellorite", has(ItemList.itemClumpYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushyellorite"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpZinc), new ItemStack(ItemList.itemDirtyDustZinc.get()))
-                .addCriterion("crushzinc", has(ItemList.itemClumpZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:crushzinc"));
+                .unlockedBy("crushzinc", has(ItemList.itemClumpZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushzinc"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpZirconium), new ItemStack(ItemList.itemDirtyDustZirconium.get()))
-                .addCriterion("crushzirconium", has(ItemList.itemClumpZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:crushzirconium"));
+                .unlockedBy("crushzirconium", has(ItemList.itemClumpZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushzirconium"));
     }
 
-    protected void buildMekanismEnriching(Consumer<FinishedRecipe> consumer)
+    protected void buildMekanismEnriching(RecipeOutput consumer)
     {
         //Ore
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine), new ItemStack(ItemList.itemDustAdamantine.get(), 2))
-                .addCriterion("enrichadamantineore", has(BlockList.blockOreAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichadamantineore"));
+                .unlockedBy("enrichadamantineore", has(BlockList.blockOreAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichadamantineore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAldourite), new ItemStack(ItemList.itemDustAldourite.get(), 2))
-                .addCriterion("enrichaldouriteore", has(BlockList.blockOreAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichaldouriteore"));
+                .unlockedBy("enrichaldouriteore", has(BlockList.blockOreAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichaldouriteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAluminum), new ItemStack(ItemList.itemDustAluminum.get(), 2))
-                .addCriterion("enrichaluminumore", has(BlockList.blockOreAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichaluminumore"));
+                .unlockedBy("enrichaluminumore", has(BlockList.blockOreAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichaluminumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAmericium), new ItemStack(ItemList.itemDustAmericium.get(), 2))
-                .addCriterion("enrichamericiumore", has(BlockList.blockOreAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichamericiumore"));
+                .unlockedBy("enrichamericiumore", has(BlockList.blockOreAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichamericiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAmordrine), new ItemStack(ItemList.itemDustAmordrine.get(), 2))
-                .addCriterion("enrichamordrineore", has(BlockList.blockOreAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichamordrineore"));
+                .unlockedBy("enrichamordrineore", has(BlockList.blockOreAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichamordrineore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAngmallen), new ItemStack(ItemList.itemDustAngmallen.get(), 2))
-                .addCriterion("enrichangmallenore", has(BlockList.blockOreAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichangmallenore"));
+                .unlockedBy("enrichangmallenore", has(BlockList.blockOreAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichangmallenore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAstralSilver), new ItemStack(ItemList.itemDustAstralSilver.get(), 2))
-                .addCriterion("enrichastralsilverore", has(BlockList.blockOreAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichastralsilverore"));
+                .unlockedBy("enrichastralsilverore", has(BlockList.blockOreAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichastralsilverore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAzureSilver),new ItemStack(ItemList.itemDustAzureSilver.get(),2))
-                .addCriterion("enrichazuresilverore",has(BlockList.blockOreAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:enrichazuresilver"));
+                .unlockedBy("enrichazuresilverore",has(BlockList.blockOreAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:enrichazuresilver"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAtlarus), new ItemStack(ItemList.itemDustAtlarus.get(), 2))
-                .addCriterion("enrichatlarusore", has(BlockList.blockOreAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichatlarusore"));
+                .unlockedBy("enrichatlarusore", has(BlockList.blockOreAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichatlarusore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreBismuth), new ItemStack(ItemList.itemDustBismuth.get(), 2))
-                .addCriterion("enrichbismuthore", has(BlockList.blockOreBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichbismuthore"));
+                .unlockedBy("enrichbismuthore", has(BlockList.blockOreBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichbismuthore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreBlackSteel), new ItemStack(ItemList.itemDustBlackSteel.get(), 2))
-                .addCriterion("enrichblacksteelore", has(BlockList.blockOreBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichblacksteelore"));
+                .unlockedBy("enrichblacksteelore", has(BlockList.blockOreBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichblacksteelore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCadmium), new ItemStack(ItemList.itemDustCadmium.get(), 2))
-                .addCriterion("enrichcadmiumore", has(BlockList.blockOreCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcadmiumore"));
+                .unlockedBy("enrichcadmiumore", has(BlockList.blockOreCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcadmiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCarmot), new ItemStack(ItemList.itemDustCarmot.get(), 2))
-                .addCriterion("enrichcarmotore", has(BlockList.blockOreCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcarmotore"));
+                .unlockedBy("enrichcarmotore", has(BlockList.blockOreCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcarmotore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCelenegil), new ItemStack(ItemList.itemDustCelenegil.get(), 2))
-                .addCriterion("enrichcelenegilore", has(BlockList.blockOreCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcelenegilore"));
+                .unlockedBy("enrichcelenegilore", has(BlockList.blockOreCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcelenegilore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCeruclase), new ItemStack(ItemList.itemDustCeruclase.get(), 2))
-                .addCriterion("enrichceruclaseore", has(BlockList.blockOreCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichceruclaseore"));
+                .unlockedBy("enrichceruclaseore", has(BlockList.blockOreCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichceruclaseore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreChromium), new ItemStack(ItemList.itemDustChromium.get(), 2))
-                .addCriterion("enrichchromiumore", has(BlockList.blockOreChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichchromiumore"));
+                .unlockedBy("enrichchromiumore", has(BlockList.blockOreChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichchromiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCobalt), new ItemStack(ItemList.itemDustCobalt.get(), 2))
-                .addCriterion("enrichcobaltore", has(BlockList.blockOreCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcobaltore"));
+                .unlockedBy("enrichcobaltore", has(BlockList.blockOreCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcobaltore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCopper), new ItemStack(ItemList.itemDustCopper.get(), 2))
-                .addCriterion("enrichcopperore", has(BlockList.blockOreCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcopperore"));
+                .unlockedBy("enrichcopperore", has(BlockList.blockOreCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcopperore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreCrimsonSteel), new ItemStack(ItemList.itemDustCrimsonSteel.get(), 2))
-                .addCriterion("enrichcrimsonsteelore", has(BlockList.blockOreCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcrimsonsteelore"));
+                .unlockedBy("enrichcrimsonsteelore", has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcrimsonsteelore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreDeepIron), new ItemStack(ItemList.itemDustDeepIron.get(), 2))
-                .addCriterion("enrichdeepironore", has(BlockList.blockOreDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichdeepironore"));
+                .unlockedBy("enrichdeepironore", has(BlockList.blockOreDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichdeepironore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreDesichalkos), new ItemStack(ItemList.itemDustDesichalkos.get(), 2))
-                .addCriterion("enrichdesichalkosore", has(BlockList.blockOreDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichdesichalkosore"));
+                .unlockedBy("enrichdesichalkosore", has(BlockList.blockOreDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichdesichalkosore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreEximite), new ItemStack(ItemList.itemDustEximite.get(), 2))
-                .addCriterion("enricheximiteore", has(BlockList.blockOreEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:enricheximiteore"));
+                .unlockedBy("enricheximiteore", has(BlockList.blockOreEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enricheximiteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreGallium), new ItemStack(ItemList.itemDustGallium.get(), 2))
-                .addCriterion("enrichgalliumore", has(BlockList.blockOreGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichgalliumore"));
+                .unlockedBy("enrichgalliumore", has(BlockList.blockOreGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichgalliumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreHaderoth), new ItemStack(ItemList.itemDustHaderoth.get(), 2))
-                .addCriterion("enrichhaderothore", has(BlockList.blockOreHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichhaderothore"));
+                .unlockedBy("enrichhaderothore", has(BlockList.blockOreHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichhaderothore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreHepatizon), new ItemStack(ItemList.itemDustHepatizon.get(), 2))
-                .addCriterion("enrichhepatizonore", has(BlockList.blockOreHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichhepatizonore"));
+                .unlockedBy("enrichhepatizonore", has(BlockList.blockOreHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichhepatizonore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreIgnatius), new ItemStack(ItemList.itemDustIgnatius.get(), 2))
-                .addCriterion("enrichignatiusore", has(BlockList.blockOreIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichignatiusore"));
+                .unlockedBy("enrichignatiusore", has(BlockList.blockOreIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichignatiusore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreIndium), new ItemStack(ItemList.itemDustIndium.get(), 2))
-                .addCriterion("enrichindiumore", has(BlockList.blockOreIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichindiumore"));
+                .unlockedBy("enrichindiumore", has(BlockList.blockOreIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichindiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreInfuscolium), new ItemStack(ItemList.itemDustInfuscolium.get(), 2))
-                .addCriterion("enrichinfuscoliumore", has(BlockList.blockOreInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichinfuscoliumore"));
+                .unlockedBy("enrichinfuscoliumore", has(BlockList.blockOreInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichinfuscoliumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreInolashite), new ItemStack(ItemList.itemDustInolashite.get(), 2))
-                .addCriterion("enrichinolashiteore", has(BlockList.blockOreInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichinolashiteore"));
+                .unlockedBy("enrichinolashiteore", has(BlockList.blockOreInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichinolashiteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreIridium), new ItemStack(ItemList.itemDustIridium.get(), 2))
-                .addCriterion("enrichiridiumore", has(BlockList.blockOreIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichiridiumore"));
+                .unlockedBy("enrichiridiumore", has(BlockList.blockOreIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichiridiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreKalendrite), new ItemStack(ItemList.itemDustKalendrite.get(), 2))
-                .addCriterion("enrichkalendriteore", has(BlockList.blockOreKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichkalendriteore"));
+                .unlockedBy("enrichkalendriteore", has(BlockList.blockOreKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichkalendriteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreLead), new ItemStack(ItemList.itemDustLead.get(), 2))
-                .addCriterion("enrichleadore", has(BlockList.blockOreLead.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichleadore"));
+                .unlockedBy("enrichleadore", has(BlockList.blockOreLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichleadore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreLemurite), new ItemStack(ItemList.itemDustLemurite.get(), 2))
-                .addCriterion("enrichlemuriteore", has(BlockList.blockOreLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichlemuriteore"));
+                .unlockedBy("enrichlemuriteore", has(BlockList.blockOreLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichlemuriteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreManganese), new ItemStack(ItemList.itemDustManganese.get(), 2))
-                .addCriterion("enrichmanganeseore", has(BlockList.blockOreManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmanganeseore"));
+                .unlockedBy("enrichmanganeseore", has(BlockList.blockOreManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmanganeseore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreMeutoite), new ItemStack(ItemList.itemDustMeutoite.get(), 2))
-                .addCriterion("enrichmeutoiteore", has(BlockList.blockOreMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmeutoiteore"));
+                .unlockedBy("enrichmeutoiteore", has(BlockList.blockOreMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmeutoiteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreMidasium), new ItemStack(ItemList.itemDustMidasium.get(), 2))
-                .addCriterion("enrichmidasiumore", has(BlockList.blockOreMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmidasiumore"));
+                .unlockedBy("enrichmidasiumore", has(BlockList.blockOreMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmidasiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreMithril), new ItemStack(ItemList.itemDustMithril.get(), 2))
-                .addCriterion("enrichmithrilore", has(BlockList.blockOreMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmithrilore"));
+                .unlockedBy("enrichmithrilore", has(BlockList.blockOreMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmithrilore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreMolybdenum), new ItemStack(ItemList.itemDustMolybdenum.get(), 2))
-                .addCriterion("enrichmolybdenumore", has(BlockList.blockOreMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmolybdenumore"));
+                .unlockedBy("enrichmolybdenumore", has(BlockList.blockOreMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmolybdenumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreNeodymium), new ItemStack(ItemList.itemDustNeodymium.get(), 2))
-                .addCriterion("enrichneodymiumore", has(BlockList.blockOreNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichneodymiumore"));
+                .unlockedBy("enrichneodymiumore", has(BlockList.blockOreNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichneodymiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreNeptunium), new ItemStack(ItemList.itemDustNeptunium.get(), 2))
-                .addCriterion("enrichneptuniumore", has(BlockList.blockOreNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichneptuniumore"));
+                .unlockedBy("enrichneptuniumore", has(BlockList.blockOreNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichneptuniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreNickel), new ItemStack(ItemList.itemDustNickel.get(), 2))
-                .addCriterion("enrichnickelore", has(BlockList.blockOreNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichnickelore"));
+                .unlockedBy("enrichnickelore", has(BlockList.blockOreNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichnickelore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreNiobium), new ItemStack(ItemList.itemDustNiobium.get(), 2))
-                .addCriterion("enrichniobiumore", has(BlockList.blockOreNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichniobiumore"));
+                .unlockedBy("enrichniobiumore", has(BlockList.blockOreNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichniobiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreOrichalcum), new ItemStack(ItemList.itemDustOrichalcum.get(), 2))
-                .addCriterion("enrichorichalcumore", has(BlockList.blockOreOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichorichalcumore"));
+                .unlockedBy("enrichorichalcumore", has(BlockList.blockOreOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichorichalcumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreOsmium), new ItemStack(ItemList.itemDustOsmium.get(), 2))
-                .addCriterion("enrichosmiumore", has(BlockList.blockOreOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichosmiumore"));
+                .unlockedBy("enrichosmiumore", has(BlockList.blockOreOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichosmiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreOureclase), new ItemStack(ItemList.itemDustOureclase.get(), 2))
-                .addCriterion("enrichoureclaseore", has(BlockList.blockOreOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichoureclaseore"));
+                .unlockedBy("enrichoureclaseore", has(BlockList.blockOreOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichoureclaseore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.orePalladium), new ItemStack(ItemList.itemDustPalladium.get(), 2))
-                .addCriterion("enrichpalladiumore", has(BlockList.blockOrePalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichpalladiumore"));
+                .unlockedBy("enrichpalladiumore", has(BlockList.blockOrePalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichpalladiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.orePlatinum), new ItemStack(ItemList.itemDustPlatinum.get(), 2))
-                .addCriterion("enrichplatinumore", has(BlockList.blockOrePlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichplatinumore"));
+                .unlockedBy("enrichplatinumore", has(BlockList.blockOrePlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichplatinumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.orePlutonium), new ItemStack(ItemList.itemDustPlutonium.get(), 2))
-                .addCriterion("enrichplutoniumore", has(BlockList.blockOrePlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichplutoniumore"));
+                .unlockedBy("enrichplutoniumore", has(BlockList.blockOrePlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichplutoniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.orePolonium), new ItemStack(ItemList.itemDustPolonium.get(), 2))
-                .addCriterion("enrichpoloniumore", has(BlockList.blockOrePolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichpoloniumore"));
+                .unlockedBy("enrichpoloniumore", has(BlockList.blockOrePolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichpoloniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.orePromethium), new ItemStack(ItemList.itemDustPromethium.get(), 2))
-                .addCriterion("enrichpromethiumore", has(BlockList.blockOrePromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichpromethiumore"));
+                .unlockedBy("enrichpromethiumore", has(BlockList.blockOrePromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichpromethiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreRhenium), new ItemStack(ItemList.itemDustRhenium.get(), 2))
-                .addCriterion("enrichrheniumore", has(BlockList.blockOreRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrheniumore"));
+                .unlockedBy("enrichrheniumore", has(BlockList.blockOreRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrheniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreRhodium), new ItemStack(ItemList.itemDustRhodium.get(), 2))
-                .addCriterion("enrichrhodiumore", has(BlockList.blockOreRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrhodiumore"));
+                .unlockedBy("enrichrhodiumore", has(BlockList.blockOreRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrhodiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreRubracium), new ItemStack(ItemList.itemDustRubracium.get(), 2))
-                .addCriterion("enrichrubraciumore", has(BlockList.blockOreRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrubraciumore"));
+                .unlockedBy("enrichrubraciumore", has(BlockList.blockOreRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrubraciumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreRuthenium), new ItemStack(ItemList.itemDustRuthenium.get(), 2))
-                .addCriterion("enrichrutheniumore", has(BlockList.blockOreRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrutheniumore"));
+                .unlockedBy("enrichrutheniumore", has(BlockList.blockOreRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrutheniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreSanguinite), new ItemStack(ItemList.itemDustSanguinite.get(), 2))
-                .addCriterion("enrichsanguiniteore", has(BlockList.blockOreSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichsanguiniteore"));
+                .unlockedBy("enrichsanguiniteore", has(BlockList.blockOreSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichsanguiniteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreShadowIron), new ItemStack(ItemList.itemDustShadowIron.get(), 2))
-                .addCriterion("enrichshadowironore", has(BlockList.blockOreShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichshadowironore"));
+                .unlockedBy("enrichshadowironore", has(BlockList.blockOreShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichshadowironore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreSilver), new ItemStack(ItemList.itemDustSilver.get(), 2))
-                .addCriterion("enrichsilverore", has(BlockList.blockOreSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichsilverore"));
+                .unlockedBy("enrichsilverore", has(BlockList.blockOreSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichsilverore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTantalum), new ItemStack(ItemList.itemDustTantalum.get(), 2))
-                .addCriterion("enrichtantalumore", has(BlockList.blockOreTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtantalumore"));
+                .unlockedBy("enrichtantalumore", has(BlockList.blockOreTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtantalumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTartarite), new ItemStack(ItemList.itemDustTartarite.get(), 2))
-                .addCriterion("enrichtartariteore", has(BlockList.blockOreTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtartariteore"));
+                .unlockedBy("enrichtartariteore", has(BlockList.blockOreTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtartariteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTechnetium), new ItemStack(ItemList.itemDustTechnetium.get(), 2))
-                .addCriterion("enrichtechnetiumore", has(BlockList.blockOreTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtechnetiumore"));
+                .unlockedBy("enrichtechnetiumore", has(BlockList.blockOreTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtechnetiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreThallium), new ItemStack(ItemList.itemDustThallium.get(), 2))
-                .addCriterion("enrichthalliumore", has(BlockList.blockOreThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichthalliumore"));
+                .unlockedBy("enrichthalliumore", has(BlockList.blockOreThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichthalliumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTin), new ItemStack(ItemList.itemDustTin.get(), 2))
-                .addCriterion("enrichtinore", has(BlockList.blockOreTin.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtinore"));
+                .unlockedBy("enrichtinore", has(BlockList.blockOreTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtinore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTitanium), new ItemStack(ItemList.itemDustTitanium.get(), 2))
-                .addCriterion("enrichtitaniumore", has(BlockList.blockOreTitanium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtitaniumore"));
+                .unlockedBy("enrichtitaniumore", has(BlockList.blockOreTitanium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtitaniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTritium), new ItemStack(ItemList.itemDustTritium.get(), 2))
-                .addCriterion("enrichtritiumore", has(BlockList.blockOreTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtritiumore"));
+                .unlockedBy("enrichtritiumore", has(BlockList.blockOreTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtritiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreTungsten), new ItemStack(ItemList.itemDustTungsten.get(), 2))
-                .addCriterion("enrichtungstenore", has(BlockList.blockOreTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtungstenore"));
+                .unlockedBy("enrichtungstenore", has(BlockList.blockOreTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtungstenore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreUnobtainium), new ItemStack(ItemList.itemDustUnobtainium.get(), 2))
-                .addCriterion("enrichunobtainiumore", has(BlockList.blockOreUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichunobtainiumore"));
+                .unlockedBy("enrichunobtainiumore", has(BlockList.blockOreUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichunobtainiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreUranium), new ItemStack(ItemList.itemDustUranium.get(), 2))
-                .addCriterion("enrichuraniumore", has(BlockList.blockOreUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichuraniumore"));
+                .unlockedBy("enrichuraniumore", has(BlockList.blockOreUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichuraniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreVanadium), new ItemStack(ItemList.itemDustVanadium.get(), 2))
-                .addCriterion("enrichvanadiumore", has(BlockList.blockOreVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichvanadiumore"));
+                .unlockedBy("enrichvanadiumore", has(BlockList.blockOreVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichvanadiumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreVibranium), new ItemStack(ItemList.itemDustVibranium.get(), 2))
-                .addCriterion("enrichvibraniumore", has(BlockList.blockOreVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichvibraniumore"));
+                .unlockedBy("enrichvibraniumore", has(BlockList.blockOreVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichvibraniumore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreVulcanite), new ItemStack(ItemList.itemDustVulcanite.get(), 2))
-                .addCriterion("enrichvulcaniteore", has(BlockList.blockOreVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichvulcaniteore"));
+                .unlockedBy("enrichvulcaniteore", has(BlockList.blockOreVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichvulcaniteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreVyroxeres), new ItemStack(ItemList.itemDustVyroxeres.get(), 2))
-                .addCriterion("enrichvyroxeresore", has(BlockList.blockOreVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichvyroxeresore"));
+                .unlockedBy("enrichvyroxeresore", has(BlockList.blockOreVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichvyroxeresore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreYellorite), new ItemStack(ItemList.itemDustYellorite.get(), 2))
-                .addCriterion("enrichyelloriteore", has(BlockList.blockOreYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichyelloriteore"));
+                .unlockedBy("enrichyelloriteore", has(BlockList.blockOreYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichyelloriteore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreZinc), new ItemStack(ItemList.itemDustZinc.get(), 2))
-                .addCriterion("enrichzincore", has(BlockList.blockOreZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichzincore"));
+                .unlockedBy("enrichzincore", has(BlockList.blockOreZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichzincore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreZirconium), new ItemStack(ItemList.itemDustZirconium.get(), 2))
-                .addCriterion("enrichzirconiumore", has(BlockList.blockOreZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichzirconiumore"));
+                .unlockedBy("enrichzirconiumore", has(BlockList.blockOreZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichzirconiumore"));
         //Raw
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine), new ItemStack(ItemList.itemDustAdamantine.get(), 2))
-                .addCriterion("enrichrawadamantine", has(ItemList.itemRawAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawadamantine"));
+                .unlockedBy("enrichrawadamantine", has(ItemList.itemRawAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawadamantine"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAldourite), new ItemStack(ItemList.itemDustAldourite.get(), 2))
-                .addCriterion("enrichrawaldourite", has(ItemList.itemRawAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawaldourite"));
+                .unlockedBy("enrichrawaldourite", has(ItemList.itemRawAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawaldourite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAluminum), new ItemStack(ItemList.itemDustAluminum.get(), 2))
-                .addCriterion("enrichrawaluminum", has(ItemList.itemRawAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawaluminum"));
+                .unlockedBy("enrichrawaluminum", has(ItemList.itemRawAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawaluminum"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAmericium), new ItemStack(ItemList.itemDustAmericium.get(), 2))
-                .addCriterion("enrichrawamericium", has(ItemList.itemRawAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawamericium"));
+                .unlockedBy("enrichrawamericium", has(ItemList.itemRawAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawamericium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAmordrine), new ItemStack(ItemList.itemDustAmordrine.get(), 2))
-                .addCriterion("enrichrawamordrine", has(ItemList.itemRawAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawamordrine"));
+                .unlockedBy("enrichrawamordrine", has(ItemList.itemRawAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawamordrine"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAngmallen), new ItemStack(ItemList.itemDustAngmallen.get(), 2))
-                .addCriterion("enrichrawangmallen", has(ItemList.itemRawAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawangmallen"));
+                .unlockedBy("enrichrawangmallen", has(ItemList.itemRawAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawangmallen"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAstralSilver), new ItemStack(ItemList.itemDustAstralSilver.get(), 2))
-                .addCriterion("enrichrawastralsilver", has(ItemList.itemRawAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawastralsilver"));
+                .unlockedBy("enrichrawastralsilver", has(ItemList.itemRawAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawastralsilver"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAtlarus), new ItemStack(ItemList.itemDustAtlarus.get(), 2))
-                .addCriterion("enrichrawatlarus", has(ItemList.itemRawAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawatlarus"));
+                .unlockedBy("enrichrawatlarus", has(ItemList.itemRawAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawatlarus"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAzureSilver),new ItemStack(ItemList.itemDustAzureSilver.get(),2))
-                .addCriterion("enrichrawazuresilver",has(ItemList.itemRawAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:enrichrawazuresilver"));
+                .unlockedBy("enrichrawazuresilver",has(ItemList.itemRawAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:enrichrawazuresilver"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), new ItemStack(ItemList.itemDustBismuth.get(), 2))
-                .addCriterion("enrichrawbismuth", has(ItemList.itemRawBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawbismuth"));
+                .unlockedBy("enrichrawbismuth", has(ItemList.itemRawBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawbismuth"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawBlackSteel), new ItemStack(ItemList.itemDustBlackSteel.get(), 2))
-                .addCriterion("enrichrawblacksteel", has(ItemList.itemRawBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawblacksteel"));
+                .unlockedBy("enrichrawblacksteel", has(ItemList.itemRawBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawblacksteel"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCadmium), new ItemStack(ItemList.itemDustCadmium.get(), 2))
-                .addCriterion("enrichrawcadmium", has(ItemList.itemRawCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawcadmium"));
+                .unlockedBy("enrichrawcadmium", has(ItemList.itemRawCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawcadmium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCarmot), new ItemStack(ItemList.itemDustCarmot.get(), 2))
-                .addCriterion("enrichrawcarmot", has(ItemList.itemRawCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawcarmot"));
+                .unlockedBy("enrichrawcarmot", has(ItemList.itemRawCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawcarmot"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCelenegil), new ItemStack(ItemList.itemDustCelenegil.get(), 2))
-                .addCriterion("enrichrawcelenegil", has(ItemList.itemRawCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawcelenegil"));
+                .unlockedBy("enrichrawcelenegil", has(ItemList.itemRawCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawcelenegil"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCeruclase), new ItemStack(ItemList.itemDustCeruclase.get(), 2))
-                .addCriterion("enrichrawceruclase", has(ItemList.itemRawCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawceruclase"));
+                .unlockedBy("enrichrawceruclase", has(ItemList.itemRawCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawceruclase"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawChromium), new ItemStack(ItemList.itemDustChromium.get(), 2))
-                .addCriterion("enrichrawchromium", has(ItemList.itemRawChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawchromium"));
+                .unlockedBy("enrichrawchromium", has(ItemList.itemRawChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawchromium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCobalt), new ItemStack(ItemList.itemDustCobalt.get(), 2))
-                .addCriterion("enrichrawcobalt", has(ItemList.itemRawCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawcobalt"));
+                .unlockedBy("enrichrawcobalt", has(ItemList.itemRawCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawcobalt"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCopper), new ItemStack(ItemList.itemDustCopper.get(), 2))
-                .addCriterion("enrichrawcopper", has(ItemList.itemRawCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawcopper"));
+                .unlockedBy("enrichrawcopper", has(ItemList.itemRawCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawcopper"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawCrimsonSteel), new ItemStack(ItemList.itemDustCrimsonSteel.get(), 2))
-                .addCriterion("enrichrawcrimsonsteel", has(ItemList.itemRawCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawcrimsonsteel"));
+                .unlockedBy("enrichrawcrimsonsteel", has(ItemList.itemRawCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawcrimsonsteel"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawDeepIron), new ItemStack(ItemList.itemDustDeepIron.get(), 2))
-                .addCriterion("enrichrawdeepiron", has(ItemList.itemRawDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawdeepiron"));
+                .unlockedBy("enrichrawdeepiron", has(ItemList.itemRawDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawdeepiron"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawDesichalkos), new ItemStack(ItemList.itemDustDesichalkos.get(), 2))
-                .addCriterion("enrichrawdesichalkos", has(ItemList.itemRawDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawdesichalkos"));
+                .unlockedBy("enrichrawdesichalkos", has(ItemList.itemRawDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawdesichalkos"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawEximite), new ItemStack(ItemList.itemDustEximite.get(), 2))
-                .addCriterion("enrichraweximite", has(ItemList.itemRawEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichraweximite"));
+                .unlockedBy("enrichraweximite", has(ItemList.itemRawEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichraweximite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawGallium), new ItemStack(ItemList.itemDustGallium.get(), 2))
-                .addCriterion("enrichrawgallium", has(ItemList.itemRawGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawgallium"));
+                .unlockedBy("enrichrawgallium", has(ItemList.itemRawGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawgallium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawHaderoth), new ItemStack(ItemList.itemDustHaderoth.get(), 2))
-                .addCriterion("enrichrawhaderoth", has(ItemList.itemRawHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawhaderoth"));
+                .unlockedBy("enrichrawhaderoth", has(ItemList.itemRawHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawhaderoth"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawHepatizon), new ItemStack(ItemList.itemDustHepatizon.get(), 2))
-                .addCriterion("enrichrawhepatizon", has(ItemList.itemRawHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawhepatizon"));
+                .unlockedBy("enrichrawhepatizon", has(ItemList.itemRawHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawhepatizon"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawIgnatius), new ItemStack(ItemList.itemDustIgnatius.get(), 2))
-                .addCriterion("enrichrawignatius", has(ItemList.itemRawIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawignatius"));
+                .unlockedBy("enrichrawignatius", has(ItemList.itemRawIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawignatius"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawIndium), new ItemStack(ItemList.itemDustIndium.get(), 2))
-                .addCriterion("enrichrawindium", has(ItemList.itemRawIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawindium"));
+                .unlockedBy("enrichrawindium", has(ItemList.itemRawIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawindium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawInfuscolium), new ItemStack(ItemList.itemDustInfuscolium.get(), 2))
-                .addCriterion("enrichrawinfuscolium", has(ItemList.itemRawInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawinfuscolium"));
+                .unlockedBy("enrichrawinfuscolium", has(ItemList.itemRawInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawinfuscolium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawInolashite), new ItemStack(ItemList.itemDustInolashite.get(), 2))
-                .addCriterion("enrichrawinolashite", has(ItemList.itemRawInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawinolashite"));
+                .unlockedBy("enrichrawinolashite", has(ItemList.itemRawInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawinolashite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawIridium), new ItemStack(ItemList.itemDustIridium.get(), 2))
-                .addCriterion("enrichrawiridium", has(ItemList.itemRawIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawiridium"));
+                .unlockedBy("enrichrawiridium", has(ItemList.itemRawIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawiridium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawKalendrite), new ItemStack(ItemList.itemDustKalendrite.get(), 2))
-                .addCriterion("enrichrawkalendrite", has(ItemList.itemRawKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawkalendrite"));
+                .unlockedBy("enrichrawkalendrite", has(ItemList.itemRawKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawkalendrite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawLead), new ItemStack(ItemList.itemDustLead.get(), 2))
-                .addCriterion("enrichrawlead", has(ItemList.itemRawLead.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawlead"));
+                .unlockedBy("enrichrawlead", has(ItemList.itemRawLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawlead"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawLemurite), new ItemStack(ItemList.itemDustLemurite.get(), 2))
-                .addCriterion("enrichrawlemurite", has(ItemList.itemRawLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawlemurite"));
+                .unlockedBy("enrichrawlemurite", has(ItemList.itemRawLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawlemurite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawManganese), new ItemStack(ItemList.itemDustManganese.get(), 2))
-                .addCriterion("enrichrawmanganese", has(ItemList.itemRawManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawmanganese"));
+                .unlockedBy("enrichrawmanganese", has(ItemList.itemRawManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawmanganese"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawMeutoite), new ItemStack(ItemList.itemDustMeutoite.get(), 2))
-                .addCriterion("enrichrawmeutoite", has(ItemList.itemRawMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawmeutoite"));
+                .unlockedBy("enrichrawmeutoite", has(ItemList.itemRawMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawmeutoite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawMidasium), new ItemStack(ItemList.itemDustMidasium.get(), 2))
-                .addCriterion("enrichrawmidasium", has(ItemList.itemRawMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawmidasium"));
+                .unlockedBy("enrichrawmidasium", has(ItemList.itemRawMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawmidasium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawMithril), new ItemStack(ItemList.itemDustMithril.get(), 2))
-                .addCriterion("enrichrawmithril", has(ItemList.itemRawMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawmithril"));
+                .unlockedBy("enrichrawmithril", has(ItemList.itemRawMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawmithril"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawMolybdenum), new ItemStack(ItemList.itemDustMolybdenum.get(), 2))
-                .addCriterion("enrichrawmolybdenum", has(ItemList.itemRawMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawmolybdenum"));
+                .unlockedBy("enrichrawmolybdenum", has(ItemList.itemRawMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawmolybdenum"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawNeodymium), new ItemStack(ItemList.itemDustNeodymium.get(), 2))
-                .addCriterion("enrichrawneodymium", has(ItemList.itemRawNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawneodymium"));
+                .unlockedBy("enrichrawneodymium", has(ItemList.itemRawNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawneodymium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawNeptunium), new ItemStack(ItemList.itemDustNeptunium.get(), 2))
-                .addCriterion("enrichrawneptunium", has(ItemList.itemRawNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawneptunium"));
+                .unlockedBy("enrichrawneptunium", has(ItemList.itemRawNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawneptunium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawNickel), new ItemStack(ItemList.itemDustNickel.get(), 2))
-                .addCriterion("enrichrawnickel", has(ItemList.itemRawNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawnickel"));
+                .unlockedBy("enrichrawnickel", has(ItemList.itemRawNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawnickel"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawNiobium), new ItemStack(ItemList.itemDustNiobium.get(), 2))
-                .addCriterion("enrichrawniobium", has(ItemList.itemRawNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawniobium"));
+                .unlockedBy("enrichrawniobium", has(ItemList.itemRawNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawniobium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawOrichalcum), new ItemStack(ItemList.itemDustOrichalcum.get(), 2))
-                .addCriterion("enrichraworichalcum", has(ItemList.itemRawOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichraworichalcum"));
+                .unlockedBy("enrichraworichalcum", has(ItemList.itemRawOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichraworichalcum"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawOsmium), new ItemStack(ItemList.itemDustOsmium.get(), 2))
-                .addCriterion("enrichrawosmium", has(ItemList.itemRawOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawosmium"));
+                .unlockedBy("enrichrawosmium", has(ItemList.itemRawOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawosmium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawOureclase), new ItemStack(ItemList.itemDustOureclase.get(), 2))
-                .addCriterion("enrichrawoureclase", has(ItemList.itemRawOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawoureclase"));
+                .unlockedBy("enrichrawoureclase", has(ItemList.itemRawOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawoureclase"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawPalladium), new ItemStack(ItemList.itemDustPalladium.get(), 2))
-                .addCriterion("enrichrawpalladium", has(ItemList.itemRawPalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawpalladium"));
+                .unlockedBy("enrichrawpalladium", has(ItemList.itemRawPalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawpalladium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawPlatinum), new ItemStack(ItemList.itemDustPlatinum.get(), 2))
-                .addCriterion("enrichrawplatinum", has(ItemList.itemRawPlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawplatinum"));
+                .unlockedBy("enrichrawplatinum", has(ItemList.itemRawPlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawplatinum"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawPlutonium), new ItemStack(ItemList.itemDustPlutonium.get(), 2))
-                .addCriterion("enrichrawplutonium", has(ItemList.itemRawPlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawplutonium"));
+                .unlockedBy("enrichrawplutonium", has(ItemList.itemRawPlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawplutonium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawPolonium), new ItemStack(ItemList.itemDustPolonium.get(), 2))
-                .addCriterion("enrichrawpolonium", has(ItemList.itemRawPolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawpolonium"));
+                .unlockedBy("enrichrawpolonium", has(ItemList.itemRawPolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawpolonium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawPromethium), new ItemStack(ItemList.itemDustPromethium.get(), 2))
-                .addCriterion("enrichrawpromethium", has(ItemList.itemRawPromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawpromethium"));
+                .unlockedBy("enrichrawpromethium", has(ItemList.itemRawPromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawpromethium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawRhenium), new ItemStack(ItemList.itemDustRhenium.get(), 2))
-                .addCriterion("enrichrawrhenium", has(ItemList.itemRawRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawrhenium"));
+                .unlockedBy("enrichrawrhenium", has(ItemList.itemRawRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawrhenium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawRhodium), new ItemStack(ItemList.itemDustRhodium.get(), 2))
-                .addCriterion("enrichrawrhodium", has(ItemList.itemRawRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawrhodium"));
+                .unlockedBy("enrichrawrhodium", has(ItemList.itemRawRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawrhodium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawRubracium), new ItemStack(ItemList.itemDustRubracium.get(), 2))
-                .addCriterion("enrichrawrubracium", has(ItemList.itemRawRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawrubracium"));
+                .unlockedBy("enrichrawrubracium", has(ItemList.itemRawRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawrubracium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawRuthenium), new ItemStack(ItemList.itemDustRuthenium.get(), 2))
-                .addCriterion("enrichrawruthenium", has(ItemList.itemRawRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawruthenium"));
+                .unlockedBy("enrichrawruthenium", has(ItemList.itemRawRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawruthenium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawSanguinite), new ItemStack(ItemList.itemDustSanguinite.get(), 2))
-                .addCriterion("enrichrawsanguinite", has(ItemList.itemRawSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawsanguinite"));
+                .unlockedBy("enrichrawsanguinite", has(ItemList.itemRawSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawsanguinite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawShadowIron), new ItemStack(ItemList.itemDustShadowIron.get(), 2))
-                .addCriterion("enrichrawshadowiron", has(ItemList.itemRawShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawshadowiron"));
+                .unlockedBy("enrichrawshadowiron", has(ItemList.itemRawShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawshadowiron"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawSilver), new ItemStack(ItemList.itemDustSilver.get(), 2))
-                .addCriterion("enrichrawsilver", has(ItemList.itemRawSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawsilver"));
+                .unlockedBy("enrichrawsilver", has(ItemList.itemRawSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawsilver"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTantalum), new ItemStack(ItemList.itemDustTantalum.get(), 2))
-                .addCriterion("enrichrawtantalum", has(ItemList.itemRawTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawtantalum"));
+                .unlockedBy("enrichrawtantalum", has(ItemList.itemRawTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawtantalum"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTartarite), new ItemStack(ItemList.itemDustTartarite.get(), 2))
-                .addCriterion("enrichrawtartarite", has(ItemList.itemRawTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawtartarite"));
+                .unlockedBy("enrichrawtartarite", has(ItemList.itemRawTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawtartarite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTechnetium), new ItemStack(ItemList.itemDustTechnetium.get(), 2))
-                .addCriterion("enrichrawtechnetium", has(ItemList.itemRawTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawtechnetium"));
+                .unlockedBy("enrichrawtechnetium", has(ItemList.itemRawTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawtechnetium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawThallium), new ItemStack(ItemList.itemDustThallium.get(), 2))
-                .addCriterion("enrichrawthallium", has(ItemList.itemRawThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawthallium"));
+                .unlockedBy("enrichrawthallium", has(ItemList.itemRawThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawthallium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTin), new ItemStack(ItemList.itemDustTin.get(), 2))
-                .addCriterion("enrichrawtin", has(ItemList.itemRawTin.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawtin"));
+                .unlockedBy("enrichrawtin", has(ItemList.itemRawTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawtin"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTitanium), new ItemStack(ItemList.itemDustTitanium.get(), 2))
-                .addCriterion("enrichrawtitanium", has(ItemList.itemRawTitanium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawtitanium"));
+                .unlockedBy("enrichrawtitanium", has(ItemList.itemRawTitanium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawtitanium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTritium), new ItemStack(ItemList.itemDustTritium.get(), 2))
-                .addCriterion("enrichrawtritium", has(ItemList.itemRawTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawtritium"));
+                .unlockedBy("enrichrawtritium", has(ItemList.itemRawTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawtritium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawTungsten), new ItemStack(ItemList.itemDustTungsten.get(), 2))
-                .addCriterion("enrichrawtungsten", has(ItemList.itemRawTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawtungsten"));
+                .unlockedBy("enrichrawtungsten", has(ItemList.itemRawTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawtungsten"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawUnobtainium), new ItemStack(ItemList.itemDustUnobtainium.get(), 2))
-                .addCriterion("enrichrawunobtainium", has(ItemList.itemRawUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawunobtainium"));
+                .unlockedBy("enrichrawunobtainium", has(ItemList.itemRawUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawunobtainium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawUranium), new ItemStack(ItemList.itemDustUranium.get(), 2))
-                .addCriterion("enrichrawuranium", has(ItemList.itemRawUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawuranium"));
+                .unlockedBy("enrichrawuranium", has(ItemList.itemRawUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawuranium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawVanadium), new ItemStack(ItemList.itemDustVanadium.get(), 2))
-                .addCriterion("enrichrawvanadium", has(ItemList.itemRawVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawvanadium"));
+                .unlockedBy("enrichrawvanadium", has(ItemList.itemRawVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawvanadium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawVibranium), new ItemStack(ItemList.itemDustVibranium.get(), 2))
-                .addCriterion("enrichrawvibranium", has(ItemList.itemRawVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawvibranium"));
+                .unlockedBy("enrichrawvibranium", has(ItemList.itemRawVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawvibranium"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawVulcanite), new ItemStack(ItemList.itemDustVulcanite.get(), 2))
-                .addCriterion("enrichrawvulcanite", has(ItemList.itemRawVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawvulcanite"));
+                .unlockedBy("enrichrawvulcanite", has(ItemList.itemRawVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawvulcanite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawVyroxeres), new ItemStack(ItemList.itemDustVyroxeres.get(), 2))
-                .addCriterion("enrichrawvyroxeres", has(ItemList.itemRawVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawvyroxeres"));
+                .unlockedBy("enrichrawvyroxeres", has(ItemList.itemRawVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawvyroxeres"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawYellorite), new ItemStack(ItemList.itemDustYellorite.get(), 2))
-                .addCriterion("enrichrawyellorite", has(ItemList.itemRawYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawyellorite"));
+                .unlockedBy("enrichrawyellorite", has(ItemList.itemRawYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawyellorite"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawZinc), new ItemStack(ItemList.itemDustZinc.get(), 2))
-                .addCriterion("enrichrawzinc", has(ItemList.itemRawZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawzinc"));
+                .unlockedBy("enrichrawzinc", has(ItemList.itemRawZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawzinc"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawZirconium), new ItemStack(ItemList.itemDustZirconium.get(), 2))
-                .addCriterion("enrichrawzirconium", has(ItemList.itemRawZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrawzirconium"));
+                .unlockedBy("enrichrawzirconium", has(ItemList.itemRawZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawzirconium"));
         //Dirty Dust
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAdamantine), new ItemStack(ItemList.itemDustAdamantine.get()))
-                .addCriterion("enrichadamantinedirtydust", has(BlockList.blockOreAdamantine.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichadamantinedirtydust"));
+                .unlockedBy("enrichadamantinedirtydust", has(BlockList.blockOreAdamantine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichadamantinedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAldourite), new ItemStack(ItemList.itemDustAldourite.get()))
-                .addCriterion("enrichaldouritedirtydust", has(BlockList.blockOreAldourite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichaldouritedirtydust"));
+                .unlockedBy("enrichaldouritedirtydust", has(BlockList.blockOreAldourite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichaldouritedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAluminum), new ItemStack(ItemList.itemDustAluminum.get()))
-                .addCriterion("enrichaluminumdirtydust", has(BlockList.blockOreAluminum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichaluminumdirtydust"));
+                .unlockedBy("enrichaluminumdirtydust", has(BlockList.blockOreAluminum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichaluminumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAmericium), new ItemStack(ItemList.itemDustAmericium.get()))
-                .addCriterion("enrichamericiumdirtydust", has(BlockList.blockOreAmericium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichamericiumdirtydust"));
+                .unlockedBy("enrichamericiumdirtydust", has(BlockList.blockOreAmericium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichamericiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAmordrine), new ItemStack(ItemList.itemDustAmordrine.get()))
-                .addCriterion("enrichamordrinedirtydust", has(BlockList.blockOreAmordrine.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichamordrinedirtydust"));
+                .unlockedBy("enrichamordrinedirtydust", has(BlockList.blockOreAmordrine.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichamordrinedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAngmallen), new ItemStack(ItemList.itemDustAngmallen.get()))
-                .addCriterion("enrichangmallendirtydust", has(BlockList.blockOreAngmallen.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichangmallendirtydust"));
+                .unlockedBy("enrichangmallendirtydust", has(BlockList.blockOreAngmallen.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichangmallendirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAstralSilver), new ItemStack(ItemList.itemDustAstralSilver.get()))
-                .addCriterion("enrichastralsilverdirtydust", has(BlockList.blockOreAstralSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichastralsilverdirtydust"));
+                .unlockedBy("enrichastralsilverdirtydust", has(BlockList.blockOreAstralSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichastralsilverdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAtlarus), new ItemStack(ItemList.itemDustAtlarus.get()))
-                .addCriterion("enrichatlarusdirtydust", has(BlockList.blockOreAtlarus.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichatlarusdirtydust"));
+                .unlockedBy("enrichatlarusdirtydust", has(BlockList.blockOreAtlarus.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichatlarusdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAzureSilver),new ItemStack(ItemList.itemDustAzureSilver.get()))
-                .addCriterion("enrichazuresilverdirtydust",has(BlockList.blockOreAzureSilver.get()))
-                .build(consumer,new ResourceLocation("extraores:enrichazuresilverdirtydust"));
+                .unlockedBy("enrichazuresilverdirtydust",has(BlockList.blockOreAzureSilver.get()))
+                .build(consumer,ResourceLocation.parse("extraores:enrichazuresilverdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustBismuth), new ItemStack(ItemList.itemDustBismuth.get()))
-                .addCriterion("enrichbismuthdirtydust", has(BlockList.blockOreBismuth.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichbismuthdirtydust"));
+                .unlockedBy("enrichbismuthdirtydust", has(BlockList.blockOreBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichbismuthdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustBlackSteel), new ItemStack(ItemList.itemDustBlackSteel.get()))
-                .addCriterion("enrichblacksteeldirtydust", has(BlockList.blockOreBlackSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichblacksteeldirtydust"));
+                .unlockedBy("enrichblacksteeldirtydust", has(BlockList.blockOreBlackSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichblacksteeldirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCadmium), new ItemStack(ItemList.itemDustCadmium.get()))
-                .addCriterion("enrichcadmiumdirtydust", has(BlockList.blockOreCadmium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcadmiumdirtydust"));
+                .unlockedBy("enrichcadmiumdirtydust", has(BlockList.blockOreCadmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcadmiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCarmot), new ItemStack(ItemList.itemDustCarmot.get()))
-                .addCriterion("enrichcarmotdirtydust", has(BlockList.blockOreCarmot.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcarmotdirtydust"));
+                .unlockedBy("enrichcarmotdirtydust", has(BlockList.blockOreCarmot.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcarmotdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCelenegil), new ItemStack(ItemList.itemDustCelenegil.get()))
-                .addCriterion("enrichcelenegildirtydust", has(BlockList.blockOreCelenegil.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcelenegildirtydust"));
+                .unlockedBy("enrichcelenegildirtydust", has(BlockList.blockOreCelenegil.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcelenegildirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCeruclase), new ItemStack(ItemList.itemDustCeruclase.get()))
-                .addCriterion("enrichceruclasedirtydust", has(BlockList.blockOreCeruclase.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichceruclasedirtydust"));
+                .unlockedBy("enrichceruclasedirtydust", has(BlockList.blockOreCeruclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichceruclasedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustChromium), new ItemStack(ItemList.itemDustChromium.get()))
-                .addCriterion("enrichchromiumdirtydust", has(BlockList.blockOreChromium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichchromiumdirtydust"));
+                .unlockedBy("enrichchromiumdirtydust", has(BlockList.blockOreChromium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichchromiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCobalt), new ItemStack(ItemList.itemDustCobalt.get()))
-                .addCriterion("enrichcobaltdirtydust", has(BlockList.blockOreCobalt.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcobaltdirtydust"));
+                .unlockedBy("enrichcobaltdirtydust", has(BlockList.blockOreCobalt.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcobaltdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCopper), new ItemStack(ItemList.itemDustCopper.get()))
-                .addCriterion("enrichcopperdirtydust", has(BlockList.blockOreCopper.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcopperdirtydust"));
+                .unlockedBy("enrichcopperdirtydust", has(BlockList.blockOreCopper.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcopperdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustCrimsonSteel), new ItemStack(ItemList.itemDustCrimsonSteel.get()))
-                .addCriterion("enrichcrimsonsteeldirtydust", has(BlockList.blockOreCrimsonSteel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichcrimsonsteeldirtydust"));
+                .unlockedBy("enrichcrimsonsteeldirtydust", has(BlockList.blockOreCrimsonSteel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichcrimsonsteeldirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustDeepIron), new ItemStack(ItemList.itemDustDeepIron.get()))
-                .addCriterion("enrichdeepirondirtydust", has(BlockList.blockOreDeepIron.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichdeepirondirtydust"));
+                .unlockedBy("enrichdeepirondirtydust", has(BlockList.blockOreDeepIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichdeepirondirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustDesichalkos), new ItemStack(ItemList.itemDustDesichalkos.get()))
-                .addCriterion("enrichdesichalkosdirtydust", has(BlockList.blockOreDesichalkos.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichdesichalkosdirtydust"));
+                .unlockedBy("enrichdesichalkosdirtydust", has(BlockList.blockOreDesichalkos.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichdesichalkosdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustEximite), new ItemStack(ItemList.itemDustEximite.get()))
-                .addCriterion("enricheximitedirtydust", has(BlockList.blockOreEximite.get()))
-                .build(consumer, new ResourceLocation("extraores:enricheximitedirtydust"));
+                .unlockedBy("enricheximitedirtydust", has(BlockList.blockOreEximite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enricheximitedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustGallium), new ItemStack(ItemList.itemDustGallium.get()))
-                .addCriterion("enrichgalliumdirtydust", has(BlockList.blockOreGallium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichgalliumdirtydust"));
+                .unlockedBy("enrichgalliumdirtydust", has(BlockList.blockOreGallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichgalliumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustHaderoth), new ItemStack(ItemList.itemDustHaderoth.get()))
-                .addCriterion("enrichhaderothdirtydust", has(BlockList.blockOreHaderoth.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichhaderothdirtydust"));
+                .unlockedBy("enrichhaderothdirtydust", has(BlockList.blockOreHaderoth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichhaderothdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustHepatizon), new ItemStack(ItemList.itemDustHepatizon.get()))
-                .addCriterion("enrichhepatizondirtydust", has(BlockList.blockOreHepatizon.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichhepatizondirtydust"));
+                .unlockedBy("enrichhepatizondirtydust", has(BlockList.blockOreHepatizon.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichhepatizondirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustIgnatius), new ItemStack(ItemList.itemDustIgnatius.get()))
-                .addCriterion("enrichignatiusdirtydust", has(BlockList.blockOreIgnatius.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichignatiusdirtydust"));
+                .unlockedBy("enrichignatiusdirtydust", has(BlockList.blockOreIgnatius.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichignatiusdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustIndium), new ItemStack(ItemList.itemDustIndium.get()))
-                .addCriterion("enrichindiumdirtydust", has(BlockList.blockOreIndium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichindiumdirtydust"));
+                .unlockedBy("enrichindiumdirtydust", has(BlockList.blockOreIndium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichindiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustInfuscolium), new ItemStack(ItemList.itemDustInfuscolium.get()))
-                .addCriterion("enrichinfuscoliumdirtydust", has(BlockList.blockOreInfuscolium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichinfuscoliumdirtydust"));
+                .unlockedBy("enrichinfuscoliumdirtydust", has(BlockList.blockOreInfuscolium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichinfuscoliumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustInolashite), new ItemStack(ItemList.itemDustInolashite.get()))
-                .addCriterion("enrichinolashitedirtydust", has(BlockList.blockOreInolashite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichinolashitedirtydust"));
+                .unlockedBy("enrichinolashitedirtydust", has(BlockList.blockOreInolashite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichinolashitedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustIridium), new ItemStack(ItemList.itemDustIridium.get()))
-                .addCriterion("enrichiridiumdirtydust", has(BlockList.blockOreIridium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichiridiumdirtydust"));
+                .unlockedBy("enrichiridiumdirtydust", has(BlockList.blockOreIridium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichiridiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustKalendrite), new ItemStack(ItemList.itemDustKalendrite.get()))
-                .addCriterion("enrichkalendritedirtydust", has(BlockList.blockOreKalendrite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichkalendritedirtydust"));
+                .unlockedBy("enrichkalendritedirtydust", has(BlockList.blockOreKalendrite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichkalendritedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustLead), new ItemStack(ItemList.itemDustLead.get()))
-                .addCriterion("enrichleaddirtydust", has(BlockList.blockOreLead.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichleaddirtydust"));
+                .unlockedBy("enrichleaddirtydust", has(BlockList.blockOreLead.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichleaddirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustLemurite), new ItemStack(ItemList.itemDustLemurite.get()))
-                .addCriterion("enrichlemuritedirtydust", has(BlockList.blockOreLemurite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichlemuritedirtydust"));
+                .unlockedBy("enrichlemuritedirtydust", has(BlockList.blockOreLemurite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichlemuritedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustManganese), new ItemStack(ItemList.itemDustManganese.get()))
-                .addCriterion("enrichmanganesedirtydust", has(BlockList.blockOreManganese.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmanganesedirtydust"));
+                .unlockedBy("enrichmanganesedirtydust", has(BlockList.blockOreManganese.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmanganesedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustMeutoite), new ItemStack(ItemList.itemDustMeutoite.get()))
-                .addCriterion("enrichmeutoitedirtydust", has(BlockList.blockOreMeutoite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmeutoitedirtydust"));
+                .unlockedBy("enrichmeutoitedirtydust", has(BlockList.blockOreMeutoite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmeutoitedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustMidasium), new ItemStack(ItemList.itemDustMidasium.get()))
-                .addCriterion("enrichmidasiumdirtydust", has(BlockList.blockOreMidasium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmidasiumdirtydust"));
+                .unlockedBy("enrichmidasiumdirtydust", has(BlockList.blockOreMidasium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmidasiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustMithril), new ItemStack(ItemList.itemDustMithril.get()))
-                .addCriterion("enrichmithrildirtydust", has(BlockList.blockOreMithril.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmithrildirtydust"));
+                .unlockedBy("enrichmithrildirtydust", has(BlockList.blockOreMithril.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmithrildirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustMolybdenum), new ItemStack(ItemList.itemDustMolybdenum.get()))
-                .addCriterion("enrichmolybdenumdirtydust", has(BlockList.blockOreMolybdenum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichmolybdenumdirtydust"));
+                .unlockedBy("enrichmolybdenumdirtydust", has(BlockList.blockOreMolybdenum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichmolybdenumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustNeodymium), new ItemStack(ItemList.itemDustNeodymium.get()))
-                .addCriterion("enrichneodymiumdirtydust", has(BlockList.blockOreNeodymium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichneodymiumdirtydust"));
+                .unlockedBy("enrichneodymiumdirtydust", has(BlockList.blockOreNeodymium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichneodymiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustNeptunium), new ItemStack(ItemList.itemDustNeptunium.get()))
-                .addCriterion("enrichneptuniumdirtydust", has(BlockList.blockOreNeptunium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichneptuniumdirtydust"));
+                .unlockedBy("enrichneptuniumdirtydust", has(BlockList.blockOreNeptunium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichneptuniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustNickel), new ItemStack(ItemList.itemDustNickel.get()))
-                .addCriterion("enrichnickeldirtydust", has(BlockList.blockOreNickel.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichnickeldirtydust"));
+                .unlockedBy("enrichnickeldirtydust", has(BlockList.blockOreNickel.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichnickeldirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustNiobium), new ItemStack(ItemList.itemDustNiobium.get()))
-                .addCriterion("enrichniobiumdirtydust", has(BlockList.blockOreNiobium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichniobiumdirtydust"));
+                .unlockedBy("enrichniobiumdirtydust", has(BlockList.blockOreNiobium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichniobiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustOrichalcum), new ItemStack(ItemList.itemDustOrichalcum.get()))
-                .addCriterion("enrichorichalcumdirtydust", has(BlockList.blockOreOrichalcum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichorichalcumdirtydust"));
+                .unlockedBy("enrichorichalcumdirtydust", has(BlockList.blockOreOrichalcum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichorichalcumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustOsmium), new ItemStack(ItemList.itemDustOsmium.get()))
-                .addCriterion("enrichosmiumdirtydust", has(BlockList.blockOreOsmium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichosmiumdirtydust"));
+                .unlockedBy("enrichosmiumdirtydust", has(BlockList.blockOreOsmium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichosmiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustOureclase), new ItemStack(ItemList.itemDustOureclase.get()))
-                .addCriterion("enrichoureclasedirtydust", has(BlockList.blockOreOureclase.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichoureclasedirtydust"));
+                .unlockedBy("enrichoureclasedirtydust", has(BlockList.blockOreOureclase.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichoureclasedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustPalladium), new ItemStack(ItemList.itemDustPalladium.get()))
-                .addCriterion("enrichpalladiumdirtydust", has(BlockList.blockOrePalladium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichpalladiumdirtydust"));
+                .unlockedBy("enrichpalladiumdirtydust", has(BlockList.blockOrePalladium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichpalladiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustPlatinum), new ItemStack(ItemList.itemDustPlatinum.get()))
-                .addCriterion("enrichplatinumdirtydust", has(BlockList.blockOrePlatinum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichplatinumdirtydust"));
+                .unlockedBy("enrichplatinumdirtydust", has(BlockList.blockOrePlatinum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichplatinumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustPlutonium), new ItemStack(ItemList.itemDustPlutonium.get()))
-                .addCriterion("enrichplutoniumdirtydust", has(BlockList.blockOrePlutonium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichplutoniumdirtydust"));
+                .unlockedBy("enrichplutoniumdirtydust", has(BlockList.blockOrePlutonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichplutoniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustPolonium), new ItemStack(ItemList.itemDustPolonium.get()))
-                .addCriterion("enrichpoloniumdirtydust", has(BlockList.blockOrePolonium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichpoloniumdirtydust"));
+                .unlockedBy("enrichpoloniumdirtydust", has(BlockList.blockOrePolonium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichpoloniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustPromethium), new ItemStack(ItemList.itemDustPromethium.get()))
-                .addCriterion("enrichpromethiumdirtydust", has(BlockList.blockOrePromethium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichpromethiumdirtydust"));
+                .unlockedBy("enrichpromethiumdirtydust", has(BlockList.blockOrePromethium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichpromethiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustRhenium), new ItemStack(ItemList.itemDustRhenium.get()))
-                .addCriterion("enrichrheniumdirtydust", has(BlockList.blockOreRhenium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrheniumdirtydust"));
+                .unlockedBy("enrichrheniumdirtydust", has(BlockList.blockOreRhenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrheniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustRhodium), new ItemStack(ItemList.itemDustRhodium.get()))
-                .addCriterion("enrichrhodiumdirtydust", has(BlockList.blockOreRhodium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrhodiumdirtydust"));
+                .unlockedBy("enrichrhodiumdirtydust", has(BlockList.blockOreRhodium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrhodiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustRubracium), new ItemStack(ItemList.itemDustRubracium.get()))
-                .addCriterion("enrichrubraciumdirtydust", has(BlockList.blockOreRubracium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrubraciumdirtydust"));
+                .unlockedBy("enrichrubraciumdirtydust", has(BlockList.blockOreRubracium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrubraciumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustRuthenium), new ItemStack(ItemList.itemDustRuthenium.get()))
-                .addCriterion("enrichrutheniumdirtydust", has(BlockList.blockOreRuthenium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichrutheniumdirtydust"));
+                .unlockedBy("enrichrutheniumdirtydust", has(BlockList.blockOreRuthenium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrutheniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustSanguinite), new ItemStack(ItemList.itemDustSanguinite.get()))
-                .addCriterion("enrichsanguinitedirtydust", has(BlockList.blockOreSanguinite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichsanguinitedirtydust"));
+                .unlockedBy("enrichsanguinitedirtydust", has(BlockList.blockOreSanguinite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichsanguinitedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustShadowIron), new ItemStack(ItemList.itemDustShadowIron.get()))
-                .addCriterion("enrichshadowirondirtydust", has(BlockList.blockOreShadowIron.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichshadowirondirtydust"));
+                .unlockedBy("enrichshadowirondirtydust", has(BlockList.blockOreShadowIron.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichshadowirondirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustSilver), new ItemStack(ItemList.itemDustSilver.get()))
-                .addCriterion("enrichsilverdirtydust", has(BlockList.blockOreSilver.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichsilverdirtydust"));
+                .unlockedBy("enrichsilverdirtydust", has(BlockList.blockOreSilver.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichsilverdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTantalum), new ItemStack(ItemList.itemDustTantalum.get()))
-                .addCriterion("enrichtantalumdirtydust", has(BlockList.blockOreTantalum.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtantalumdirtydust"));
+                .unlockedBy("enrichtantalumdirtydust", has(BlockList.blockOreTantalum.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtantalumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTartarite), new ItemStack(ItemList.itemDustTartarite.get()))
-                .addCriterion("enrichtartaritedirtydust", has(BlockList.blockOreTartarite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtartaritedirtydust"));
+                .unlockedBy("enrichtartaritedirtydust", has(BlockList.blockOreTartarite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtartaritedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTechnetium), new ItemStack(ItemList.itemDustTechnetium.get()))
-                .addCriterion("enrichtechnetiumdirtydust", has(BlockList.blockOreTechnetium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtechnetiumdirtydust"));
+                .unlockedBy("enrichtechnetiumdirtydust", has(BlockList.blockOreTechnetium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtechnetiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustThallium), new ItemStack(ItemList.itemDustThallium.get()))
-                .addCriterion("enrichthalliumdirtydust", has(BlockList.blockOreThallium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichthalliumdirtydust"));
+                .unlockedBy("enrichthalliumdirtydust", has(BlockList.blockOreThallium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichthalliumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTin), new ItemStack(ItemList.itemDustTin.get()))
-                .addCriterion("enrichtindirtydust", has(BlockList.blockOreTin.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtindirtydust"));
+                .unlockedBy("enrichtindirtydust", has(BlockList.blockOreTin.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtindirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTitanium), new ItemStack(ItemList.itemDustTitanium.get()))
-                .addCriterion("enrichtitaniumdirtydust", has(BlockList.blockOreTitanium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtitaniumdirtydust"));
+                .unlockedBy("enrichtitaniumdirtydust", has(BlockList.blockOreTitanium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtitaniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTritium), new ItemStack(ItemList.itemDustTritium.get()))
-                .addCriterion("enrichtritiumdirtydust", has(BlockList.blockOreTritium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtritiumdirtydust"));
+                .unlockedBy("enrichtritiumdirtydust", has(BlockList.blockOreTritium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtritiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustTungsten), new ItemStack(ItemList.itemDustTungsten.get()))
-                .addCriterion("enrichtungstendirtydust", has(BlockList.blockOreTungsten.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichtungstendirtydust"));
+                .unlockedBy("enrichtungstendirtydust", has(BlockList.blockOreTungsten.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichtungstendirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustUnobtainium), new ItemStack(ItemList.itemDustUnobtainium.get()))
-                .addCriterion("enrichunobtainiumdirtydust", has(BlockList.blockOreUnobtainium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichunobtainiumdirtydust"));
+                .unlockedBy("enrichunobtainiumdirtydust", has(BlockList.blockOreUnobtainium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichunobtainiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustUranium), new ItemStack(ItemList.itemDustUranium.get()))
-                .addCriterion("enrichuraniumdirtydust", has(BlockList.blockOreUranium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichuraniumdirtydust"));
+                .unlockedBy("enrichuraniumdirtydust", has(BlockList.blockOreUranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichuraniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustVanadium), new ItemStack(ItemList.itemDustVanadium.get()))
-                .addCriterion("enrichvanadiumdirtydust", has(BlockList.blockOreVanadium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichvanadiumdirtydust"));
+                .unlockedBy("enrichvanadiumdirtydust", has(BlockList.blockOreVanadium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichvanadiumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustVibranium), new ItemStack(ItemList.itemDustVibranium.get()))
-                .addCriterion("enrichvibraniumdirtydust", has(BlockList.blockOreVibranium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichvibraniumdirtydust"));
+                .unlockedBy("enrichvibraniumdirtydust", has(BlockList.blockOreVibranium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichvibraniumdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustVulcanite), new ItemStack(ItemList.itemDustVulcanite.get()))
-                .addCriterion("enrichvulcanitedirtydust", has(BlockList.blockOreVulcanite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichvulcanitedirtydust"));
+                .unlockedBy("enrichvulcanitedirtydust", has(BlockList.blockOreVulcanite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichvulcanitedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustVyroxeres), new ItemStack(ItemList.itemDustVyroxeres.get()))
-                .addCriterion("enrichvyroxeresdirtydust", has(BlockList.blockOreVyroxeres.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichvyroxeresdirtydust"));
+                .unlockedBy("enrichvyroxeresdirtydust", has(BlockList.blockOreVyroxeres.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichvyroxeresdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustYellorite), new ItemStack(ItemList.itemDustYellorite.get()))
-                .addCriterion("enrichyelloritedirtydust", has(BlockList.blockOreYellorite.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichyelloritedirtydust"));
+                .unlockedBy("enrichyelloritedirtydust", has(BlockList.blockOreYellorite.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichyelloritedirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustZinc), new ItemStack(ItemList.itemDustZinc.get()))
-                .addCriterion("enrichzincdirtydust", has(BlockList.blockOreZinc.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichzincdirtydust"));
+                .unlockedBy("enrichzincdirtydust", has(BlockList.blockOreZinc.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichzincdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustZirconium), new ItemStack(ItemList.itemDustZirconium.get()))
-                .addCriterion("enrichzirconiumdirtydust", has(BlockList.blockOreZirconium.get()))
-                .build(consumer, new ResourceLocation("extraores:enrichzirconiumdirtydust"));
+                .unlockedBy("enrichzirconiumdirtydust", has(BlockList.blockOreZirconium.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichzirconiumdirtydust"));
     }
 }

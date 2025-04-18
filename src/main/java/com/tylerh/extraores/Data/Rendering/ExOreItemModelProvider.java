@@ -2,16 +2,15 @@ package com.tylerh.extraores.Data.Rendering;
 
 import com.tylerh.extraores.Init.ItemList;
 import com.tylerh.extraores.Util.ModInfo;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ExOreItemModelProvider extends ItemModelProvider
 {
-    public ExOreItemModelProvider(PackOutput output,ExistingFileHelper existingFileHelper)
+    public ExOreItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper)
     {
         super(output, ModInfo.MOD_ID, existingFileHelper);
     }
@@ -496,7 +495,7 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemGemTourmaline);
         simpleItem(ItemList.itemGemTurquoise);
     }
-    private void simpleItem(RegistryObject<Item> itemRegistryObject)
+    private void simpleItem(DeferredItem<Item> itemRegistryObject)
     {
         basicItem(itemRegistryObject.get());
     }

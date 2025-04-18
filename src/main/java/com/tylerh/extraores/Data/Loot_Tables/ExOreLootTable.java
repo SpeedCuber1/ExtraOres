@@ -3,19 +3,22 @@ package com.tylerh.extraores.Data.Loot_Tables;
 import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Init.InitBlocks;
 import com.tylerh.extraores.Init.ItemList;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.Set;
 
 public class ExOreLootTable extends BlockLootSubProvider
 {
-    public ExOreLootTable()
+    public ExOreLootTable(HolderLookup.Provider provider)
     {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(),provider);
     }
 
     @Override
@@ -338,17 +341,17 @@ public class ExOreLootTable extends BlockLootSubProvider
         createStandardTable(BlockList.blockZinc);
         createStandardTable(BlockList.blockZirconium);
     }
-    private void createStandardTable(RegistryObject<Block> blockRegistryObject)
+    private void createStandardTable(DeferredBlock<Block> blockRegistryObject)
     {
         dropSelf(blockRegistryObject.get());
     }
-    private void createFortune(RegistryObject<Block> blockRegistryObject,RegistryObject<Item> itemRegistryObject)
+    private void createFortune(DeferredBlock<Block> blockRegistryObject, DeferredItem<Item> itemRegistryObject)
     {
         add(blockRegistryObject.get(),(block) -> createOreDrop(blockRegistryObject.get(),itemRegistryObject.get()));
     }
     @Override
     protected Iterable<Block> getKnownBlocks()
     {
-        return InitBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return InitBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
     }
 }
