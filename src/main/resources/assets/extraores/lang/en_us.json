@@ -1,5 +1,13 @@
 {
   "itemgroup.extraores": "Extra Ores",
+  "extraores.root" : "Extra Ores",
+  "extraores.root.desc" : "Start Mining Resources",
+  "extraores.adamantine" : "It Really DOES Exist",
+  "extraores.adamantine.desc" : "Mine Adamantine Ore",
+  "extraores.agate" : "Oh Look It's A Gate",
+  "extraores.agate.desc" : "Mine Agate Ore",
+  "extarores.aldourite" : "They're HERE Too!?",
+  "extraores.aldourite.desc" : "Mine Aldourite Ore",
   "block.extraores.adamantineore": "Adamantine Ore",
   "block.extraores.agateore": "Agate Ore",
   "block.extraores.aldouriteore": "Aldourite Ore",
