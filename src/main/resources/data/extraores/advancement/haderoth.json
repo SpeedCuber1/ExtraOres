@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:eximite",
+  "criteria": {
+    "haderoth": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawhaderoth"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Haderoth Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:haderothore"
+    },
+    "title": {
+      "translate": "Who Named This!!!??"
+    }
+  },
+  "requirements": [
+    [
+      "haderoth"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifytritium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifytritium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tritiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifytritium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifytritium"
+    ]
+  }
+}

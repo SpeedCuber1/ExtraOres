@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawrubracium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawrubracium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawrubracium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectrawrubracium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawrubracium"
+    ]
+  }
+}

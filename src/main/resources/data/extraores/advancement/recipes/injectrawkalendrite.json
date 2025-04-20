@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawkalendrite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawkalendrite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawkalendrite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectrawkalendrite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawkalendrite"
+    ]
+  }
+}

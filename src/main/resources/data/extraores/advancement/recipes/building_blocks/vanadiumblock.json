@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vanadiumblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "vanadiumblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vanadiumblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "vanadiumblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vanadiumblock"
+    ]
+  }
+}

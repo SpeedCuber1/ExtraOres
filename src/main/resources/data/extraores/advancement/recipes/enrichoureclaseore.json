@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichoureclaseore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:oureclaseore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichoureclaseore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichoureclaseore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichoureclaseore"
+    ]
+  }
+}

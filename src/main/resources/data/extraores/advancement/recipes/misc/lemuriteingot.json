@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:lemuriteingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "lemuriteingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:lemuriteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "lemuriteingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:lemuriteingot"
+    ]
+  }
+}

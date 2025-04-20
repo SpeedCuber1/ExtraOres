@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltmithrilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltmithrilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:mithrilingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltmithrilore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltmithrilore"
+    ]
+  }
+}

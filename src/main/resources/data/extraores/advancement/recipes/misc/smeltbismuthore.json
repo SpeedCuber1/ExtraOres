@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltbismuthore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltbismuthore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:bismuthingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltbismuthore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltbismuthore"
+    ]
+  }
+}

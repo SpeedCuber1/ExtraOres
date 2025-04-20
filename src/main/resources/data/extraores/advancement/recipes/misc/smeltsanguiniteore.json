@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltsanguiniteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltsanguiniteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:sanguiniteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltsanguiniteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltsanguiniteore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawtantalum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawtantalum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawtantalum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawtantalum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawtantalum"
+    ]
+  }
+}

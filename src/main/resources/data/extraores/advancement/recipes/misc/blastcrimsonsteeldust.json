@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastcrimsonsteeldust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:crimsonsteelingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastcrimsonsteeldust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastcrimsonsteeldust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastcrimsonsteeldust"
+    ]
+  }
+}

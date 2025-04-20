@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:ruthenium",
+  "criteria": {
+    "silver": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawsilver"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Silver Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:silverore"
+    },
+    "title": {
+      "translate": "Take a Moment and Reflect on Your Life"
+    }
+  },
+  "requirements": [
+    [
+      "silver"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

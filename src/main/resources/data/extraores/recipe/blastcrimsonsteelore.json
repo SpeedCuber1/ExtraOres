@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 20,
+  "experience": 0.75,
+  "ingredient": {
+    "item": "extraores:crimsonsteelore"
+  },
+  "result": {
+    "count": 1,
+    "id": "extraores:crimsonsteelingot"
+  }
+}

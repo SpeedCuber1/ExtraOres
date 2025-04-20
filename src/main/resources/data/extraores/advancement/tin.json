@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:thallium",
+  "criteria": {
+    "tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawtin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Tin Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:tinore"
+    },
+    "title": {
+      "translate": "Where's the Lion and the Scarecrow"
+    }
+  },
+  "requirements": [
+    [
+      "tin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

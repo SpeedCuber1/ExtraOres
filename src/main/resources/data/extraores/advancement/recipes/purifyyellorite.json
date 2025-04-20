@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyyellorite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyyellorite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:yelloriteshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyyellorite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyyellorite"
+    ]
+  }
+}

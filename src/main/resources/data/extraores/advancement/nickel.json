@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:neptunium",
+  "criteria": {
+    "nickel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawnickel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Nickel Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:nickelore"
+    },
+    "title": {
+      "translate": "If I Had a Nickel"
+    }
+  },
+  "requirements": [
+    [
+      "nickel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

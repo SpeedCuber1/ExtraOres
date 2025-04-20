@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichrawaluminum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawaluminum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichrawaluminum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichrawaluminum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawaluminum"
+    ]
+  }
+}

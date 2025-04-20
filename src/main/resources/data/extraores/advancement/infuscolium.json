@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:hepatizon",
+  "criteria": {
+    "infuscolium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawinfuscolium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Infuscolium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:infuscoliumore"
+    },
+    "title": {
+      "translate": "Infuse All the Things"
+    }
+  },
+  "requirements": [
+    [
+      "infuscolium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

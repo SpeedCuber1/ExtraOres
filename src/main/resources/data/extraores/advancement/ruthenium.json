@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:rhodium",
+  "criteria": {
+    "ruthenium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawruthenium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Ruthenium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:rutheniumore"
+    },
+    "title": {
+      "translate": "Completely Ruthless"
+    }
+  },
+  "requirements": [
+    [
+      "ruthenium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

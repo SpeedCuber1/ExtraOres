@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichrawtin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawtin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichrawtin"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichrawtin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawtin"
+    ]
+  }
+}

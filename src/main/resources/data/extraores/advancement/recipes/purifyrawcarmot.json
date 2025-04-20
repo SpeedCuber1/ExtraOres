@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawcarmot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawcarmot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawcarmot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawcarmot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawcarmot"
+    ]
+  }
+}

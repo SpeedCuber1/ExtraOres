@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawvyroxeres"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawvyroxeres": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawvyroxeres"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectrawvyroxeres"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawvyroxeres"
+    ]
+  }
+}

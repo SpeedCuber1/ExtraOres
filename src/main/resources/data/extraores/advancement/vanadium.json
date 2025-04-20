@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:uranium",
+  "criteria": {
+    "vanadium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawvanadium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Vanadium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:vanadiumore"
+    },
+    "title": {
+      "translate": "Hand Me That Impact Gun"
+    }
+  },
+  "requirements": [
+    [
+      "vanadium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

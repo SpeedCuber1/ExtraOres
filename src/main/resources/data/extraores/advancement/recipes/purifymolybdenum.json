@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifymolybdenum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifymolybdenum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:molybdenumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifymolybdenum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifymolybdenum"
+    ]
+  }
+}

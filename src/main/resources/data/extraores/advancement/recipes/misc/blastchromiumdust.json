@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastchromiumdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:chromiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastchromiumdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastchromiumdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastchromiumdust"
+    ]
+  }
+}

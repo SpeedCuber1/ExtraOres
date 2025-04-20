@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:promethiumblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "promethiumblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:promethiumblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "promethiumblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:promethiumblock"
+    ]
+  }
+}

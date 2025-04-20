@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastshadowironore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:shadowironingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastshadowironore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastshadowironore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastshadowironore"
+    ]
+  }
+}

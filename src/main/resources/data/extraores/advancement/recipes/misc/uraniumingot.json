@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:uraniumingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "uraniumingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:uraniumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "uraniumingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:uraniumingot"
+    ]
+  }
+}

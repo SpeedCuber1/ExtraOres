@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawyellorite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawyellorite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:yelloriteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawyellorite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawyellorite"
+    ]
+  }
+}

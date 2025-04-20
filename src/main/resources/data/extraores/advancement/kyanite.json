@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:jasper",
+  "criteria": {
+    "kyanite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:kyanite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Kyanite Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:kyaniteore"
+    },
+    "title": {
+      "translate": "Bridge on the River Kyanite"
+    }
+  },
+  "requirements": [
+    [
+      "kyanite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

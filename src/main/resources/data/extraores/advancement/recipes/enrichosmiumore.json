@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichosmiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:osmiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichosmiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichosmiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichosmiumore"
+    ]
+  }
+}

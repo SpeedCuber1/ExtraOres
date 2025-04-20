@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawamericium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawamericium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:americiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawamericium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawamericium"
+    ]
+  }
+}

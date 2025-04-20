@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawtartarite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawtartarite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tartariteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawtartarite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawtartarite"
+    ]
+  }
+}

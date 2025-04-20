@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "count": 1,
+    "tag": "mekanism:clumps/angmallen"
+  },
+  "output": {
+    "count": 1,
+    "id": "extraores:angmallendirtydust"
+  }
+}

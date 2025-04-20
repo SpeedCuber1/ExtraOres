@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastvulcanitedust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vulcaniteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastvulcanitedust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastvulcanitedust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastvulcanitedust"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:purifying",
+  "chemical_input": {
+    "amount": 1,
+    "gas": "mekanism:oxygen"
+  },
+  "item_input": {
+    "count": 1,
+    "tag": "mekanism:shards/shadowiron"
+  },
+  "output": {
+    "count": 1,
+    "id": "extraores:shadowironclump"
+  }
+}

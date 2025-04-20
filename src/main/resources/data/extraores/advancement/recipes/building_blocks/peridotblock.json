@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:peridotblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "peridotblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:peridotblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "peridotblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:peridotblock"
+    ]
+  }
+}

@@ -244,7 +244,7 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.placedFeatureSapphire,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureSapphire),rate,height);
             PlacedFeatureList.placedFeatureShadowIron = createKey("shadowironore");
-            height = ModInfo.HEIGHT_NORMAL;
+            height = ModInfo.HEIGHT_NETHER;
             register(context,PlacedFeatureList.placedFeatureShadowIron,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureShadowIron),rate,height);
             PlacedFeatureList.placedFeatureSilver = createKey("silverore");
             height = ModInfo.HEIGHT_NORMAL;

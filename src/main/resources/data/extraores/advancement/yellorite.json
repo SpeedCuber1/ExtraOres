@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:vibranium",
+  "criteria": {
+    "yellorite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawyellorite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Yellorite Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:yelloriteore"
+    },
+    "title": {
+      "translate": "This Seems Like I Could Use It Somewhere"
+    }
+  },
+  "requirements": [
+    [
+      "yellorite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

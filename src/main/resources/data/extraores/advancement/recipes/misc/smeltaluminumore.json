@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltaluminumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltaluminumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:aluminumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltaluminumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltaluminumore"
+    ]
+  }
+}

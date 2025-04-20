@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:tourmaline",
+  "criteria": {
+    "turquoise": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:turquoise"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Turquoise Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:turquoiseore"
+    },
+    "title": {
+      "translate": "The Color of Dreams"
+    }
+  },
+  "requirements": [
+    [
+      "turquoise"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

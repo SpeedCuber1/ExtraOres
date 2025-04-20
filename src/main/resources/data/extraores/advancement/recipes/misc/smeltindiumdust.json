@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltindiumdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltindiumdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:indiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltindiumdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltindiumdust"
+    ]
+  }
+}

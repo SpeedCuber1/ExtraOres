@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:meutoite",
+  "criteria": {
+    "mithril": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawmithril"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Mithril Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:mithrilore"
+    },
+    "title": {
+      "translate": "Are We Playing Minecraft or Runescape?"
+    }
+  },
+  "requirements": [
+    [
+      "mithril"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

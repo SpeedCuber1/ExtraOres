@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastpromethiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:promethiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastpromethiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastpromethiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastpromethiumore"
+    ]
+  }
+}

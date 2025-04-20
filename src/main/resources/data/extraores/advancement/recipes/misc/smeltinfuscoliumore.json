@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltinfuscoliumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltinfuscoliumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:infuscoliumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltinfuscoliumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltinfuscoliumore"
+    ]
+  }
+}

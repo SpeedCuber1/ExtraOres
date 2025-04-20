@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:aluminum",
+  "criteria": {
+    "americium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawamericium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Americium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:americiumore"
+    },
+    "title": {
+      "translate": "Where There's Smoke..."
+    }
+  },
+  "requirements": [
+    [
+      "americium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichsilverore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:silverore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichsilverore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichsilverore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichsilverore"
+    ]
+  }
+}

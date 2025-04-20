@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawmolybdenum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawmolybdenum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawmolybdenum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectrawmolybdenum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawmolybdenum"
+    ]
+  }
+}

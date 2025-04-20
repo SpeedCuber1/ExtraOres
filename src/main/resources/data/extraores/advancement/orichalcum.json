@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:mithril",
+  "criteria": {
+    "orichalcum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:raworichalcum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Orichalcum Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:orichalcumore"
+    },
+    "title": {
+      "translate": "Nothing Original Here"
+    }
+  },
+  "requirements": [
+    [
+      "orichalcum"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

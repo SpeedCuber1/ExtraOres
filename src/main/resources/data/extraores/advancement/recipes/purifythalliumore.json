@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifythalliumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifythalliumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:thalliumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifythalliumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifythalliumore"
+    ]
+  }
+}

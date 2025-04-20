@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "extraores:desichalkosblock"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "extraores:desichalkosingot"
+  }
+}

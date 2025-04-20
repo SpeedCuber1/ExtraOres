@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:plutonium",
+  "criteria": {
+    "polonium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawpolonium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Polonium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:poloniumore"
+    },
+    "title": {
+      "translate": "Where's Marconium When You Need It"
+    }
+  },
+  "requirements": [
+    [
+      "polonium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

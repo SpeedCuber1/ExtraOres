@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawmithril"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawmithril": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawmithril"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawmithril"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawmithril"
+    ]
+  }
+}

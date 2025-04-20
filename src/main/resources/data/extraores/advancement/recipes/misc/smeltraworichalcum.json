@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltraworichalcum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltraworichalcum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:orichalcumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltraworichalcum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltraworichalcum"
+    ]
+  }
+}

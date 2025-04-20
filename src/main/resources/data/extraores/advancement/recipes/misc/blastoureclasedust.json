@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastoureclasedust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:oureclaseingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastoureclasedust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastoureclasedust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastoureclasedust"
+    ]
+  }
+}

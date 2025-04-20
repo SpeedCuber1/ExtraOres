@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:midasium",
+  "criteria": {
+    "sanguinite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawsanguinite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Sanguinite Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:sanguiniteore"
+    },
+    "title": {
+      "translate": "Sanguine Love"
+    }
+  },
+  "requirements": [
+    [
+      "sanguinite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

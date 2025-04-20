@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "extraores:ametrineblock"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "extraores:ametrine"
+  }
+}

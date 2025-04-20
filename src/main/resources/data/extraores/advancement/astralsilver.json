@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:angmallen",
+  "criteria": {
+    "astralsilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawastralsilver"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Astral Silver Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:astralsilverore"
+    },
+    "title": {
+      "translate": "By the Power of the Stars"
+    }
+  },
+  "requirements": [
+    [
+      "astralsilver"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastgalliumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:galliumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastgalliumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastgalliumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastgalliumore"
+    ]
+  }
+}

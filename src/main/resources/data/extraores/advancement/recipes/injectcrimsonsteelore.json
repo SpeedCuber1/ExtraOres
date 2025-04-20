@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectcrimsonsteelore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectcrimsonsteelore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:crimsonsteelore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectcrimsonsteelore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectcrimsonsteelore"
+    ]
+  }
+}

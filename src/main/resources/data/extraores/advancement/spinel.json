@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:sapphire",
+  "criteria": {
+    "spinel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:spinel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Spinel Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:spinelore"
+    },
+    "title": {
+      "translate": "Not Completely Spineless"
+    }
+  },
+  "requirements": [
+    [
+      "spinel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

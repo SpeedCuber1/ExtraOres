@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastcobaltore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:cobaltingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastcobaltore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastcobaltore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastcobaltore"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:quartz",
+  "criteria": {
+    "ruby": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:ruby"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Ruby Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:rubyore"
+    },
+    "title": {
+      "translate": "That's Like 50,000 Carats"
+    }
+  },
+  "requirements": [
+    [
+      "ruby"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:palladium",
+  "criteria": {
+    "platinum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawplatinum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Platinum Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:platinumore"
+    },
+    "title": {
+      "translate": "101 Greatest Platinum Hits"
+    }
+  },
+  "requirements": [
+    [
+      "platinum"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

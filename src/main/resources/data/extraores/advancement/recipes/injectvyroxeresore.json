@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectvyroxeresore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectvyroxeresore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vyroxeresore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectvyroxeresore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectvyroxeresore"
+    ]
+  }
+}

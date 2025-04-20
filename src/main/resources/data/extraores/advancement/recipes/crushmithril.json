@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "crushmithril": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:mithrilclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:crushmithril"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "crushmithril"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:crushmithril"
+    ]
+  }
+}

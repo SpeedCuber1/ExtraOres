@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:promethium",
+  "criteria": {
+    "rubracium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawrubracium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Rubracium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:rubraciumore"
+    },
+    "title": {
+      "translate": "There's the Rub"
+    }
+  },
+  "requirements": [
+    [
+      "rubracium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

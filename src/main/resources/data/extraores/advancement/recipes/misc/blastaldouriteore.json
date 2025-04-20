@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastaldouriteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:aldouriteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastaldouriteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastaldouriteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastaldouriteore"
+    ]
+  }
+}

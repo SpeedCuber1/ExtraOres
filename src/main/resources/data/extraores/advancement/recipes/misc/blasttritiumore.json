@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blasttritiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tritiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blasttritiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blasttritiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blasttritiumore"
+    ]
+  }
+}

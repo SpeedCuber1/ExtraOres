@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyzirconium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyzirconium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:zirconiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyzirconium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyzirconium"
+    ]
+  }
+}

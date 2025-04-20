@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:zinc",
+  "criteria": {
+    "zirconium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawzirconium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Zirconium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:zirconiumore"
+    },
+    "title": {
+      "translate": "Shining Bright Like a...Oh Wait"
+    }
+  },
+  "requirements": [
+    [
+      "zirconium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

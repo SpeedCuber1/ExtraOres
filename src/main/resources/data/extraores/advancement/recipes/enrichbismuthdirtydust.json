@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichbismuthdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:bismuthore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichbismuthdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichbismuthdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichbismuthdirtydust"
+    ]
+  }
+}

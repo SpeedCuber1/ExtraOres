@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:astralsilver",
+  "criteria": {
+    "atlarus": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawatlarus"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Atlarus Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:atlarusore"
+    },
+    "title": {
+      "translate": "Let Me Map the World"
+    }
+  },
+  "requirements": [
+    [
+      "atlarus"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

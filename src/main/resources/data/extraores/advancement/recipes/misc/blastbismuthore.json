@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastbismuthore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:bismuthingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastbismuthore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastbismuthore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastbismuthore"
+    ]
+  }
+}

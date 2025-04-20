@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastcarmotore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:carmotingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastcarmotore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastcarmotore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastcarmotore"
+    ]
+  }
+}

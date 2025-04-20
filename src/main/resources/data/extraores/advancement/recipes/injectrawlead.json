@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawlead"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawlead": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawlead"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectrawlead"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawlead"
+    ]
+  }
+}

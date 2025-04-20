@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastiridiumdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:iridiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastiridiumdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastiridiumdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastiridiumdust"
+    ]
+  }
+}

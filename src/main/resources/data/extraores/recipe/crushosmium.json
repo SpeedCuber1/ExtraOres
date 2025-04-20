@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "count": 1,
+    "tag": "mekanism:clumps/osmium"
+  },
+  "output": {
+    "count": 1,
+    "id": "extraores:osmiumdirtydust"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawrubracium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawrubracium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawrubracium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawrubracium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawrubracium"
+    ]
+  }
+}

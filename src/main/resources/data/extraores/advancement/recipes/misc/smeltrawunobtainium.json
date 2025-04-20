@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawunobtainium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawunobtainium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:unobtainiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawunobtainium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawunobtainium"
+    ]
+  }
+}

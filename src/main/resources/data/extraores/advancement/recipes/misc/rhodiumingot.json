@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rhodiumingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "rhodiumingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rhodiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "rhodiumingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rhodiumingot"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 20,
+  "experience": 0.75,
+  "ingredient": {
+    "tag": "forge:dusts/cobalt"
+  },
+  "result": {
+    "count": 1,
+    "id": "extraores:cobaltingot"
+  }
+}

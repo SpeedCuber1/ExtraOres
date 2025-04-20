@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectshadowironore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectshadowironore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:shadowironore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectshadowironore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectshadowironore"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:aldourite",
+  "criteria": {
+    "ceruclase": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawceruclase"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Ceruclase Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:ceruclaseore"
+    },
+    "title": {
+      "translate": "Ceruclase City"
+    }
+  },
+  "requirements": [
+    [
+      "ceruclase"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

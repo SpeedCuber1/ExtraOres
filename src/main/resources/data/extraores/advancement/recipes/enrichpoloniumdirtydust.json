@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichpoloniumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:poloniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichpoloniumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichpoloniumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichpoloniumdirtydust"
+    ]
+  }
+}

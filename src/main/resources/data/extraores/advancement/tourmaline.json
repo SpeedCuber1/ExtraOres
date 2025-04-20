@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:topaz",
+  "criteria": {
+    "tourmaline": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tourmaline"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Tourmaline Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:tourmalineore"
+    },
+    "title": {
+      "translate": "Going on Tour"
+    }
+  },
+  "requirements": [
+    [
+      "tourmaline"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

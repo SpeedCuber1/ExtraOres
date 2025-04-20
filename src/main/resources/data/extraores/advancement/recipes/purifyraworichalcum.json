@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyraworichalcum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyraworichalcum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:raworichalcum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyraworichalcum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyraworichalcum"
+    ]
+  }
+}

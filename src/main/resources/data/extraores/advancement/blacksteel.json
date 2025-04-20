@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:azuresilver",
+  "criteria": {
+    "blacksteel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawblacksteel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Black Steel"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:blacksteelore"
+    },
+    "title": {
+      "translate": "It's Like Steel but Black"
+    }
+  },
+  "requirements": [
+    [
+      "blacksteel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastceruclaseore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:ceruclaseingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastceruclaseore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastceruclaseore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastceruclaseore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "crushtechnetium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:technetiumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:crushtechnetium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "crushtechnetium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:crushtechnetium"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawamordrine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawamordrine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawamordrine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawamordrine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawamordrine"
+    ]
+  }
+}

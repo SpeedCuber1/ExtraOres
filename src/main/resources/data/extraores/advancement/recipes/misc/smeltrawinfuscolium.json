@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawinfuscolium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawinfuscolium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:infuscoliumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawinfuscolium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawinfuscolium"
+    ]
+  }
+}

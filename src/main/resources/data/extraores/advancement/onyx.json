@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:malachite",
+  "criteria": {
+    "onyx": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:onyx"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Onyx Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:onyxore"
+    },
+    "title": {
+      "translate": "Hooked on Onyx"
+    }
+  },
+  "requirements": [
+    [
+      "onyx"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

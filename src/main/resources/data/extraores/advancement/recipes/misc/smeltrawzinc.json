@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawzinc"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawzinc": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:zincingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawzinc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawzinc"
+    ]
+  }
+}

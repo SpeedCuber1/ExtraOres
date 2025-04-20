@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawangmallen"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawangmallen": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawangmallen"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawangmallen"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawangmallen"
+    ]
+  }
+}

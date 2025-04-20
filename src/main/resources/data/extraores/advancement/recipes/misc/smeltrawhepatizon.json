@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawhepatizon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawhepatizon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:hepatizoningot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawhepatizon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawhepatizon"
+    ]
+  }
+}

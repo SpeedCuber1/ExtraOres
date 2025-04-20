@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:deepiron",
+  "criteria": {
+    "desichalkos": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawdesichalkos"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Desichalkis Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:desichalkosore"
+    },
+    "title": {
+      "translate": "Ores R Us"
+    }
+  },
+  "requirements": [
+    [
+      "desichalkos"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

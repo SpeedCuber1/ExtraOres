@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:chrysocolla",
+  "criteria": {
+    "citrine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:citrine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Citrine Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:citrineore"
+    },
+    "title": {
+      "translate": "Looks Like Citrus"
+    }
+  },
+  "requirements": [
+    [
+      "citrine"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

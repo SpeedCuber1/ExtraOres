@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:infuscolium",
+  "criteria": {
+    "inolashite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawinolashite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Inolashite Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:inolashiteore"
+    },
+    "title": {
+      "translate": "In All That's...Well You Know"
+    }
+  },
+  "requirements": [
+    [
+      "inolashite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichmithrilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:mithrilore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichmithrilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichmithrilore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichmithrilore"
+    ]
+  }
+}

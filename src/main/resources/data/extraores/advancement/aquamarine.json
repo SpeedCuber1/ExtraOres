@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:ametrine",
+  "criteria": {
+    "aquamarine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:aquamarine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Aquamarine Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:aquamarineore"
+    },
+    "title": {
+      "translate": "I'm in the Aquamarines Now"
+    }
+  },
+  "requirements": [
+    [
+      "aquamarine"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

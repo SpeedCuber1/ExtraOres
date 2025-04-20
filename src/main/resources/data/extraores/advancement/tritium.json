@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:tartarite",
+  "criteria": {
+    "tritium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawtritium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Tritium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:tritiumore"
+    },
+    "title": {
+      "translate": "The Power of the Sum"
+    }
+  },
+  "requirements": [
+    [
+      "tritium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

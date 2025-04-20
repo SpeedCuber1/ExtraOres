@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:ceruclasae",
+  "criteria": {
+    "ignatius": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawignatius"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Ignatius Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:ignatiusore"
+    },
+    "title": {
+      "translate": "Now Even More Ignitable"
+    }
+  },
+  "requirements": [
+    [
+      "ignatius"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

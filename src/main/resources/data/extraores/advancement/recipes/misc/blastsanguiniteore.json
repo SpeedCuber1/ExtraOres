@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastsanguiniteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:sanguiniteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastsanguiniteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastsanguiniteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastsanguiniteore"
+    ]
+  }
+}

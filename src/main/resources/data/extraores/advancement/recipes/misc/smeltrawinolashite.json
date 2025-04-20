@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawinolashite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawinolashite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:inolashiteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawinolashite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawinolashite"
+    ]
+  }
+}

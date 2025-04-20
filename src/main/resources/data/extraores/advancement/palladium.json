@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:osmium",
+  "criteria": {
+    "palladium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawpalladium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Palladium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:palladiumore"
+    },
+    "title": {
+      "translate": "Now Showing at the Palladium"
+    }
+  },
+  "requirements": [
+    [
+      "palladium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

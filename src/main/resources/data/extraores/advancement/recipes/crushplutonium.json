@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "crushplutonium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:plutoniumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:crushplutonium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "crushplutonium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:crushplutonium"
+    ]
+  }
+}

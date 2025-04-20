@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:root",
+  "criteria": {
+    "agate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:agate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.agate.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:agateore"
+    },
+    "title": {
+      "translate": "extraores.agate"
+    }
+  },
+  "requirements": [
+    [
+      "agate"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

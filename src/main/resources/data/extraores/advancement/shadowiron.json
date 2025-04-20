@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:sanguinite",
+  "criteria": {
+    "shadowiron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawshadowiron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Shadow Iron Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:shadowironore"
+    },
+    "title": {
+      "translate": "You Are the Shadow in the Night"
+    }
+  },
+  "requirements": [
+    [
+      "shadowiron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

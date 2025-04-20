@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:tritium",
+  "criteria": {
+    "unobtainium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawunobtainium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Unobtainium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:unobtainiumore"
+    },
+    "title": {
+      "translate": "Now Even More Obtainable"
+    }
+  },
+  "requirements": [
+    [
+      "unobtainium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

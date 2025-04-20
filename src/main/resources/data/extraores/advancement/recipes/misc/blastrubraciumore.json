@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastrubraciumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rubraciumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastrubraciumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastrubraciumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastrubraciumore"
+    ]
+  }
+}

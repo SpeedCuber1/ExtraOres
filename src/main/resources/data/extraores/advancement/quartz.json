@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:phoenixite",
+  "criteria": {
+    "quartz": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:quartz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Quartz Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:quartzore"
+    },
+    "title": {
+      "translate": "Steady Timekeeper"
+    }
+  },
+  "requirements": [
+    [
+      "quartz"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

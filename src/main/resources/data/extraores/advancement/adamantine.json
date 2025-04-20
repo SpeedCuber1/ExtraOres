@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:root",
+  "criteria": {
+    "adamantine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawadamantine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.adamantine.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:adamantineore"
+    },
+    "title": {
+      "translate": "extraores.adamantine"
+    }
+  },
+  "requirements": [
+    [
+      "adamantine"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 40,
+  "experience": 0.75,
+  "ingredient": {
+    "tag": "forge:ores/tin"
+  },
+  "result": {
+    "count": 1,
+    "id": "extraores:tiningot"
+  }
+}

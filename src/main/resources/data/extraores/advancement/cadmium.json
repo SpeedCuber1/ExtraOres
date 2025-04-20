@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:bismuth",
+  "criteria": {
+    "cadmium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawcadmium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Cadmium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:cadmiumore"
+    },
+    "title": {
+      "translate": "The Cadmium Can"
+    }
+  },
+  "requirements": [
+    [
+      "cadmium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastcelenegilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:celenegilingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastcelenegilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastcelenegilore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastcelenegilore"
+    ]
+  }
+}

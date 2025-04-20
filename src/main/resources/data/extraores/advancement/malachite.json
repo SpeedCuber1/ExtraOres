@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:kyanite",
+  "criteria": {
+    "malachite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:malachite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Malachite Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:malachiteore"
+    },
+    "title": {
+      "translate": "Full of Malice"
+    }
+  },
+  "requirements": [
+    [
+      "malachite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

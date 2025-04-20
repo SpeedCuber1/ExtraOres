@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltangmallendust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltangmallendust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:angmalleningot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltangmallendust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltangmallendust"
+    ]
+  }
+}

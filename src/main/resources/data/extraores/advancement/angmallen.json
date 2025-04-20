@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:amordrine",
+  "criteria": {
+    "angmallen": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawangmallen"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Angmallen Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:angmallenore"
+    },
+    "title": {
+      "translate": "It's Angelic"
+    }
+  },
+  "requirements": [
+    [
+      "angmallen"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectneptuniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectneptuniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:neptuniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectneptuniumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectneptuniumore"
+    ]
+  }
+}

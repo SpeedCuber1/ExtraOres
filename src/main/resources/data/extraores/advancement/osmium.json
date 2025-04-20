@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:niobium",
+  "criteria": {
+    "osmium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawosmium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Osmium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:osmiumore"
+    },
+    "title": {
+      "translate": "The Wonderful Wizard of Osmium"
+    }
+  },
+  "requirements": [
+    [
+      "osmium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

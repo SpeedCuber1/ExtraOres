@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichrawneodymium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawneodymium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichrawneodymium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichrawneodymium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawneodymium"
+    ]
+  }
+}

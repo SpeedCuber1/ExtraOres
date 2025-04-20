@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawpolonium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawpolonium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:poloniumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawpolonium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawpolonium"
+    ]
+  }
+}

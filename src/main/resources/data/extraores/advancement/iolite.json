@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:garnet",
+  "criteria": {
+    "iolite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:iolite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Iolite Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:ioliteore"
+    },
+    "title": {
+      "translate": "In the Light of the Eye"
+    }
+  },
+  "requirements": [
+    [
+      "iolite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

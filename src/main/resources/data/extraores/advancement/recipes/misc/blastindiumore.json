@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastindiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:indiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastindiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastindiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastindiumore"
+    ]
+  }
+}

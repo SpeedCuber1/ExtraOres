@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "ametrineblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:ametrineblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:ametrineblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "ametrineblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:ametrineblock"
+    ]
+  }
+}

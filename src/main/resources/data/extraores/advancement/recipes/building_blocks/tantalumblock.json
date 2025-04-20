@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tantalumblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "tantalumblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tantalumblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "tantalumblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tantalumblock"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawvibranium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawvibranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawvibranium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectrawvibranium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawvibranium"
+    ]
+  }
+}

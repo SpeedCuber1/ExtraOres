@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawneptunium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawneptunium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawneptunium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectrawneptunium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawneptunium"
+    ]
+  }
+}

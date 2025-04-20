@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyazuresilverore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyazuresilverore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:azuresilverore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyazuresilverore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyazuresilverore"
+    ]
+  }
+}

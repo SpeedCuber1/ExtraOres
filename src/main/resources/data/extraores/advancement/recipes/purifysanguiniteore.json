@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifysanguiniteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifysanguiniteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:sanguiniteore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifysanguiniteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifysanguiniteore"
+    ]
+  }
+}

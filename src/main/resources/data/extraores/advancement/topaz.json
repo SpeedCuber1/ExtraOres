@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:tanzanite",
+  "criteria": {
+    "topaz": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:topaz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Topaz Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:topazore"
+    },
+    "title": {
+      "translate": "On Top of the World"
+    }
+  },
+  "requirements": [
+    [
+      "topaz"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

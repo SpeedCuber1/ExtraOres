@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichtartariteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tartariteore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichtartariteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichtartariteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichtartariteore"
+    ]
+  }
+}

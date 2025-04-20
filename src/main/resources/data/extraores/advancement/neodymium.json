@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:molybdenum",
+  "criteria": {
+    "neodymium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawneodymium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Neodymium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:neodymiumore"
+    },
+    "title": {
+      "translate": "A Magnetic Personality"
+    }
+  },
+  "requirements": [
+    [
+      "neodymium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

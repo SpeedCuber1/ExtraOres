@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrawmeutoite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrawmeutoite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:meutoiteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrawmeutoite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrawmeutoite"
+    ]
+  }
+}

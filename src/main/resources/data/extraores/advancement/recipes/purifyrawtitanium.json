@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawtitanium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawtitanium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawtitanium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawtitanium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawtitanium"
+    ]
+  }
+}

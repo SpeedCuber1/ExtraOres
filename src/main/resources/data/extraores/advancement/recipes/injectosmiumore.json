@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectosmiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectosmiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:osmiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectosmiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectosmiumore"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:technetium",
+  "criteria": {
+    "thallium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawthallium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Thallium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:thalliumore"
+    },
+    "title": {
+      "translate": "Bring Me the Prussian Blue STAT"
+    }
+  },
+  "requirements": [
+    [
+      "thallium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

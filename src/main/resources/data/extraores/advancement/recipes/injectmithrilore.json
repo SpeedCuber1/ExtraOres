@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectmithrilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectmithrilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:mithrilore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectmithrilore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectmithrilore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastoureclaseore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:oureclaseingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastoureclaseore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastoureclaseore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastoureclaseore"
+    ]
+  }
+}

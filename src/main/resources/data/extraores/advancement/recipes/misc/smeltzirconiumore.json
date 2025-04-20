@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltzirconiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltzirconiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:zirconiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltzirconiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltzirconiumore"
+    ]
+  }
+}

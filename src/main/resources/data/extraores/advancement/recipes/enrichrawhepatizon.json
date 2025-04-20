@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichrawhepatizon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawhepatizon"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichrawhepatizon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichrawhepatizon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichrawhepatizon"
+    ]
+  }
+}

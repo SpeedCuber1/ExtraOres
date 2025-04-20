@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltignatiusore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltignatiusore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:ignatiusingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltignatiusore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltignatiusore"
+    ]
+  }
+}

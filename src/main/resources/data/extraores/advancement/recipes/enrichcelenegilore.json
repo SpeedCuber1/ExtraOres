@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichcelenegilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:celenegilore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichcelenegilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichcelenegilore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichcelenegilore"
+    ]
+  }
+}

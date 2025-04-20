@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawosmium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawosmium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawosmium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "injectrawosmium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawosmium"
+    ]
+  }
+}

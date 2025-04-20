@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichosmiumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:osmiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichosmiumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichosmiumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichosmiumdirtydust"
+    ]
+  }
+}

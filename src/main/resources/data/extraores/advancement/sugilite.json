@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:spinel",
+  "criteria": {
+    "sugilite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:sugilite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Sugilite Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:sugiliteore"
+    },
+    "title": {
+      "translate": "Give Me Some Sugar"
+    }
+  },
+  "requirements": [
+    [
+      "sugilite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

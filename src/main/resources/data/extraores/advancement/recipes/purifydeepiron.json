@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifydeepiron"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifydeepiron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepironshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifydeepiron"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifydeepiron"
+    ]
+  }
+}

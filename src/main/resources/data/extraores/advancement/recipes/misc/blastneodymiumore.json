@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastneodymiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:neodymiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastneodymiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastneodymiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastneodymiumore"
+    ]
+  }
+}

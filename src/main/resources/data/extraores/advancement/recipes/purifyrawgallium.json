@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawgallium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawgallium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawgallium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawgallium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawgallium"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyplutonium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyplutonium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:plutoniumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyplutonium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyplutonium"
+    ]
+  }
+}

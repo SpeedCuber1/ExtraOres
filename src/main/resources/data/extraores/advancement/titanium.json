@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:tin",
+  "criteria": {
+    "titanium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawtitanium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Titanium Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:titaniumore"
+    },
+    "title": {
+      "translate": "Stronger Than Steel"
+    }
+  },
+  "requirements": [
+    [
+      "titanium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

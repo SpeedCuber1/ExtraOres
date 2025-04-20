@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:titanium",
+  "criteria": {
+    "tungsten": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawtungsten"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Tungsten Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:tungstenore"
+    },
+    "title": {
+      "translate": "Illuminating"
+    }
+  },
+  "requirements": [
+    [
+      "tungsten"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

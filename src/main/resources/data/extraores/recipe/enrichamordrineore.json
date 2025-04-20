@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "count": 1,
+    "tag": "forge:ores/amordrine"
+  },
+  "output": {
+    "count": 2,
+    "id": "extraores:amordrinedust"
+  }
+}

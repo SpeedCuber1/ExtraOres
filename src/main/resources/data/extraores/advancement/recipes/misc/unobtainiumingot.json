@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:unobtainiumingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "unobtainiumingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:unobtainiumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "unobtainiumingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:unobtainiumingot"
+    ]
+  }
+}

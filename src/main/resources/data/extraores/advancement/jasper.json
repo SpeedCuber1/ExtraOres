@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:jade",
+  "criteria": {
+    "jasper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:jasper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "Mine Jasper Ore"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:jasperore"
+    },
+    "title": {
+      "translate": "Jasper's Here"
+    }
+  },
+  "requirements": [
+    [
+      "jasper"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

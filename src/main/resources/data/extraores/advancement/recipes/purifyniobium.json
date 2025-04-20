@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyniobium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyniobium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:niobiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyniobium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyniobium"
+    ]
+  }
+}

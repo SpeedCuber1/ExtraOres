@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyangmallenore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyangmallenore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:angmallenore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyangmallenore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyangmallenore"
+    ]
+  }
+}

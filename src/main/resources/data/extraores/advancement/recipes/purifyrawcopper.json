@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawcopper"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawcopper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawcopper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyrawcopper"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawcopper"
+    ]
+  }
+}

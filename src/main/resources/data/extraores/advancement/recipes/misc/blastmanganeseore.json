@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blastmanganeseore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:manganeseingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blastmanganeseore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blastmanganeseore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blastmanganeseore"
+    ]
+  }
+}

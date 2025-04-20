@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichaldouriteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:aldouriteore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichaldouriteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichaldouriteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichaldouriteore"
+    ]
+  }
+}

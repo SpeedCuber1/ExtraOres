@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltadamantineore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltadamantineore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:adamantineingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltadamantineore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltadamantineore"
+    ]
+  }
+}

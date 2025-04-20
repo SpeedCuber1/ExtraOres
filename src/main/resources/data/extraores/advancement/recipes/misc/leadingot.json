@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:leadingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "leadingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:leadingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "leadingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:leadingot"
+    ]
+  }
+}

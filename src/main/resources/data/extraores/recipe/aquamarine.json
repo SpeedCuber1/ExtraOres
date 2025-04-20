@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "extraores:aquamarineblock"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "extraores:aquamarine"
+  }
+}

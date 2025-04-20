@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:smeltrutheniumdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "smeltrutheniumdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rutheniumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "smeltrutheniumdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:smeltrutheniumdust"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichtungstenore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tungstenore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichtungstenore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichtungstenore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichtungstenore"
+    ]
+  }
+}

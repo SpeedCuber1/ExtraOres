@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blasttinore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tiningot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blasttinore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "blasttinore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blasttinore"
+    ]
+  }
+}

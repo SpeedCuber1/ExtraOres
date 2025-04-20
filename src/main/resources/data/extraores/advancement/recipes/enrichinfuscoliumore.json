@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "enrichinfuscoliumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:infuscoliumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:enrichinfuscoliumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "enrichinfuscoliumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:enrichinfuscoliumore"
+    ]
+  }
+}

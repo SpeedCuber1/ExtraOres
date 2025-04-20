@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyvibraniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyvibraniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vibraniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "purifyvibraniumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyvibraniumore"
+    ]
+  }
+}
