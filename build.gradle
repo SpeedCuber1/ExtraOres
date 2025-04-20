@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.145'
+    id 'net.neoforged.gradle.userdev' version '7.0.170'
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -103,9 +103,9 @@ dependencies {
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    runtimeOnly "mezz.jei:jei-${minecraft_version}.1-neoforge:${jei_version}"
-    runtimeOnly "mekanism:Mekanism:1.21-10.6.7.54"
-    compileOnly "mekanism:Mekanism:1.21-10.6.7.54:api"
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+    runtimeOnly "mekanism:Mekanism:${minecraft_version}-${mekanism_version}"
+    compileOnly "mekanism:Mekanism:${minecraft_version}-${mekanism_version}:api"
     // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
     // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
