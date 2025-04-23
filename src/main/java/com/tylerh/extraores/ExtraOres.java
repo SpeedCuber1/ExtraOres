@@ -4,10 +4,12 @@ import com.tylerh.extraores.Init.BlockList;
 import com.tylerh.extraores.Init.InitBlocks;
 import com.tylerh.extraores.Init.ItemList;
 import com.tylerh.extraores.Util.ExOreCreativeTab;
+import com.tylerh.extraores.Util.ExOresConfig;
 import com.tylerh.extraores.Util.ModInfo;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
@@ -16,6 +18,8 @@ public class ExtraOres
 {
     public ExtraOres(IEventBus bus, ModContainer container)
     {
+        container.registerConfig(ModConfig.Type.STARTUP, ExOresConfig.SPEC,"extraores-common.toml");
+        ExOresConfig.initConfig();
         bus.addListener(this::onCommonSetup);
         ExOreCreativeTab.CREATIVE_TABS.register(bus);
         InitBlocks.BLOCKS.register(bus);
