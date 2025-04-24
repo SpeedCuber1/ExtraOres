@@ -5,7 +5,6 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 public class ConfiguredFeatureList
 {
-    //Ore Normal
     public static ResourceKey<ConfiguredFeature<?,?>> featureAdamantine;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAgate;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAldourite;

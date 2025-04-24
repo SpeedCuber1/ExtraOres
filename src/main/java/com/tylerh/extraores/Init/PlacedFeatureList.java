@@ -5,7 +5,6 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class PlacedFeatureList
 {
-    //Ore Normal
     public static ResourceKey<PlacedFeature> featureAdamantinePlaced;
     public static ResourceKey<PlacedFeature> featureAgatePlaced;
     public static ResourceKey<PlacedFeature> featureAldouritePlaced;

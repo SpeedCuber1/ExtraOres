@@ -5,7 +5,6 @@ import com.tylerh.extraores.Init.ConfiguredFeatureList;
 import com.tylerh.extraores.Init.PlacedFeatureList;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.core.Holder;
-import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -22,7 +21,7 @@ public class ExOrePlacedFeature
     {
         int rate = ExOreWorldGenConfig.spawnRate.get();
         int height;
-        HolderGetter<ConfiguredFeature<?,?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
+        var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
         if(ConfigRegistryList.registerAdamantine.get())
         {
             PlacedFeatureList.featureAdamantinePlaced = createKey("adamantineore");

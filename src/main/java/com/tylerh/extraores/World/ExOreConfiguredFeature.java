@@ -44,8 +44,8 @@ public class ExOreConfiguredFeature
             ConfiguredFeatureList.featureAgate = registerKey("agateore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreAgate.get().defaultBlockState()),
-                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAgate.get().defaultBlockState()),
-                    OreConfiguration.target(endReplaceables,BlockList.blockEnderOreAgate.get().defaultBlockState())
+                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAgate.get().defaultBlockState())
+                    //OreConfiguration.target(endReplaceables,BlockList.blockEnderOreAgate.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureAgate,Feature.ORE,new OreConfiguration(target,size));
         }
