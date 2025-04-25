@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:raw_materials/mithril"
+    "tag": "c:raw_materials/mithril"
   },
   "result": {
     "count": 1,

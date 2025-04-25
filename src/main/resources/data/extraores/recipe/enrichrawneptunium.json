@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/neptunium"
+    "tag": "c:raw_materials/neptunium"
   },
   "output": {
     "count": 2,

@@ -2,14 +2,15 @@
   "type": "mekanism:injecting",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:hydrogen_chloride"
+    "chemical": "mekanism:hydrogen_chloride"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:ores/rhodium"
+    "tag": "c:ores/rhodium"
   },
   "output": {
     "count": 4,
     "id": "extraores:rhodiumshard"
-  }
+  },
+  "per_tick_usage": true
 }

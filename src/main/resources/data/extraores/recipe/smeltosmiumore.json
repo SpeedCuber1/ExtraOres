@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/osmium"
+    "tag": "c:ores/osmium"
   },
   "result": {
     "count": 1,

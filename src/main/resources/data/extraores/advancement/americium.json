@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Americium Ore"
+      "translate": "extraores.americium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:americiumore"
     },
     "title": {
-      "translate": "Where There's Smoke..."
+      "translate": "extraores.americium"
     }
   },
   "requirements": [

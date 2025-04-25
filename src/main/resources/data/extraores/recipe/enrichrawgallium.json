@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/gallium"
+    "tag": "c:raw_materials/gallium"
   },
   "output": {
     "count": 2,

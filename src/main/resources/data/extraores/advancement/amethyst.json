@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Amethyst Ore"
+      "translate": "extraores.amethyst.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:amethystore"
     },
     "title": {
-      "translate": "Demystify Your Life"
+      "translate": "extraores.amethyst"
     }
   },
   "requirements": [

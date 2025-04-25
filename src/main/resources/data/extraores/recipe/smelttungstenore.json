@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/tungsten"
+    "tag": "c:ores/tungsten"
   },
   "result": {
     "count": 1,

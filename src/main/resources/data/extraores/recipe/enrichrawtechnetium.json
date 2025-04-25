@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/technetium"
+    "tag": "c:raw_materials/technetium"
   },
   "output": {
     "count": 2,

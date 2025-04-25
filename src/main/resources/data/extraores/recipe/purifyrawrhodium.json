@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:raw_materials/rhodium"
+    "tag": "c:raw_materials/rhodium"
   },
   "output": {
     "count": 3,
     "id": "extraores:rhodiumclump"
-  }
+  },
+  "per_tick_usage": true
 }

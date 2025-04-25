@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/palladium"
+    "tag": "c:ores/palladium"
   },
   "output": {
     "count": 2,

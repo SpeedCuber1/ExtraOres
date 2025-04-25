@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/amordrine"
+    "tag": "c:dusts/amordrine"
   },
   "result": {
     "count": 1,

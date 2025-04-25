@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/sanguinite"
+    "tag": "c:ores/sanguinite"
   },
   "result": {
     "count": 1,

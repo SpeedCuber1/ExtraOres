@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:raw_materials/aluminum"
+    "tag": "c:raw_materials/aluminum"
   },
   "output": {
     "count": 3,
     "id": "extraores:aluminumclump"
-  }
+  },
+  "per_tick_usage": true
 }

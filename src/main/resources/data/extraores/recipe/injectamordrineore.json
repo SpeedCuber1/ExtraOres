@@ -2,14 +2,15 @@
   "type": "mekanism:injecting",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:hydrogen_chloride"
+    "chemical": "mekanism:hydrogen_chloride"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:ores/amordrine"
+    "tag": "c:ores/amordrine"
   },
   "output": {
     "count": 4,
     "id": "extraores:amordrineshard"
-  }
+  },
+  "per_tick_usage": true
 }

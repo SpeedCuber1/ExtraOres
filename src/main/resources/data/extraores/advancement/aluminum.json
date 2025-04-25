@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Aluminum Ore"
+      "translate": "extraores.aluminum.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:aluminumore"
     },
     "title": {
-      "translate": "Soda Anyone?"
+      "translate": "extraores.aluminum"
     }
   },
   "requirements": [

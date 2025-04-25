@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/carmot"
+    "tag": "c:ores/carmot"
   },
   "result": {
     "count": 1,

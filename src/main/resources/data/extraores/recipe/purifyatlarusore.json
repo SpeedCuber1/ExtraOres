@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:ores/atlarus"
+    "tag": "c:ores/atlarus"
   },
   "output": {
     "count": 3,
     "id": "extraores:atlarusclump"
-  }
+  },
+  "per_tick_usage": true
 }

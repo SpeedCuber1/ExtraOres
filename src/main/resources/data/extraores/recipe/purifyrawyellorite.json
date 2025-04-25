@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:raw_materials/yellorite"
+    "tag": "c:raw_materials/yellorite"
   },
   "output": {
     "count": 3,
     "id": "extraores:yelloriteclump"
-  }
+  },
+  "per_tick_usage": true
 }

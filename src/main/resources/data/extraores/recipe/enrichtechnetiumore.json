@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/technetium"
+    "tag": "c:ores/technetium"
   },
   "output": {
     "count": 2,

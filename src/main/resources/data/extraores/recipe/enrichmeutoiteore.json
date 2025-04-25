@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/meutoite"
+    "tag": "c:ores/meutoite"
   },
   "output": {
     "count": 2,

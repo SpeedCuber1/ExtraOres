@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/aldourite"
+    "tag": "c:ores/aldourite"
   },
   "output": {
     "count": 2,

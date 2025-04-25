@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/desichalkos"
+    "tag": "c:ores/desichalkos"
   },
   "output": {
     "count": 2,

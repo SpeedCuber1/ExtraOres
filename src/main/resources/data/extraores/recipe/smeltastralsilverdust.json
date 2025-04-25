@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/astralsilver"
+    "tag": "c:dusts/astralsilver"
   },
   "result": {
     "count": 1,

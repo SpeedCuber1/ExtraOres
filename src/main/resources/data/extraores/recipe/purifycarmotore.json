@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:ores/carmot"
+    "tag": "c:ores/carmot"
   },
   "output": {
     "count": 3,
     "id": "extraores:carmotclump"
-  }
+  },
+  "per_tick_usage": true
 }

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/kalendrite"
+    "tag": "c:ores/kalendrite"
   },
   "output": {
     "count": 2,

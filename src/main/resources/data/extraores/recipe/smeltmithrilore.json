@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/mithril"
+    "tag": "c:ores/mithril"
   },
   "result": {
     "count": 1,

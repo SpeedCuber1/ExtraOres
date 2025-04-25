@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/yellorite"
+    "tag": "c:dusts/yellorite"
   },
   "result": {
     "count": 1,

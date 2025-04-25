@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/vanadium"
+    "tag": "c:dusts/vanadium"
   },
   "result": {
     "count": 1,

@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/lead"
+    "tag": "c:ores/lead"
   },
   "result": {
     "count": 1,

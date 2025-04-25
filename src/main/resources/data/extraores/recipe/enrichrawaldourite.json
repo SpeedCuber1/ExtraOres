@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/aldourite"
+    "tag": "c:raw_materials/aldourite"
   },
   "output": {
     "count": 2,

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/haderoth"
+    "tag": "c:ores/haderoth"
   },
   "output": {
     "count": 2,

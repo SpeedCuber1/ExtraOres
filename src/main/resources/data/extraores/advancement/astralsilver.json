@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Astral Silver Ore"
+      "translate": "extraores.astralsilver.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:astralsilverore"
     },
     "title": {
-      "translate": "By the Power of the Stars"
+      "translate": "extraores.astralsilver"
     }
   },
   "requirements": [

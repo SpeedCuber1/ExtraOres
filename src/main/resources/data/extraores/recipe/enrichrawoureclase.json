@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/oureclase"
+    "tag": "c:raw_materials/oureclase"
   },
   "output": {
     "count": 2,

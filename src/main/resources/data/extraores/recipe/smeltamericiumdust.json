@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/americium"
+    "tag": "c:dusts/americium"
   },
   "result": {
     "count": 1,

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/rhenium"
+    "tag": "c:raw_materials/rhenium"
   },
   "output": {
     "count": 2,

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/infuscolium"
+    "tag": "c:ores/infuscolium"
   },
   "output": {
     "count": 2,

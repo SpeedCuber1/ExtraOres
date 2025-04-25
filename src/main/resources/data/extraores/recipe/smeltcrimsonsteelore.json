@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/crimsonsteel"
+    "tag": "c:ores/crimsonsteel"
   },
   "result": {
     "count": 1,

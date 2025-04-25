@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Atlarus Ore"
+      "translate": "extraores.atlarus.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:atlarusore"
     },
     "title": {
-      "translate": "Let Me Map the World"
+      "translate": "extraores.atlarus"
     }
   },
   "requirements": [

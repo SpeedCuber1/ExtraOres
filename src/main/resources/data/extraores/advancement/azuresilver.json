@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Azure Silver Ore"
+      "translate": "extraores.azuresilver.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:azuresilverore"
     },
     "title": {
-      "translate": "As You're Sitting There..."
+      "translate": "extraores.azuresilver"
     }
   },
   "requirements": [

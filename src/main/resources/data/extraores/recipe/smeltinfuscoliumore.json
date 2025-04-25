@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/infuscolium"
+    "tag": "c:ores/infuscolium"
   },
   "result": {
     "count": 1,

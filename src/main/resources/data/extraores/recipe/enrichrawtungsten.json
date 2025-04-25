@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/tungsten"
+    "tag": "c:raw_materials/tungsten"
   },
   "output": {
     "count": 2,

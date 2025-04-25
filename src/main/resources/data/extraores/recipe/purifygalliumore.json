@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:ores/gallium"
+    "tag": "c:ores/gallium"
   },
   "output": {
     "count": 3,
     "id": "extraores:galliumclump"
-  }
+  },
+  "per_tick_usage": true
 }

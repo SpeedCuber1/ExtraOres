@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Ametrine Ore"
+      "translate": "extraores.ametrine.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:ametrineore"
     },
     "title": {
-      "translate": "Take the AM Train"
+      "translate": "extraores.ametrine"
     }
   },
   "requirements": [

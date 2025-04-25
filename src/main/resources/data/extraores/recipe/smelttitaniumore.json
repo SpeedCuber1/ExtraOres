@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/titanium"
+    "tag": "c:ores/titanium"
   },
   "result": {
     "count": 1,

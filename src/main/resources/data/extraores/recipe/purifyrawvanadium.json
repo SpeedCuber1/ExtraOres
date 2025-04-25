@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:raw_materials/vanadium"
+    "tag": "c:raw_materials/vanadium"
   },
   "output": {
     "count": 3,
     "id": "extraores:vanadiumclump"
-  }
+  },
+  "per_tick_usage": true
 }

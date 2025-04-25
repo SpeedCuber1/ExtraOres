@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/ruthenium"
+    "tag": "c:raw_materials/ruthenium"
   },
   "output": {
     "count": 2,

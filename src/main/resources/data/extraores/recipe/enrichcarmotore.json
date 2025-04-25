@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/carmot"
+    "tag": "c:ores/carmot"
   },
   "output": {
     "count": 2,

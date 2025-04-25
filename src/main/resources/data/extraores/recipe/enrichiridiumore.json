@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/iridium"
+    "tag": "c:ores/iridium"
   },
   "output": {
     "count": 2,

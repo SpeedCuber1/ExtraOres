@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/polonium"
+    "tag": "c:raw_materials/polonium"
   },
   "output": {
     "count": 2,

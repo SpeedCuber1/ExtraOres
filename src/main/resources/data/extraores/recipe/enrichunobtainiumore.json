@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/unobtainium"
+    "tag": "c:ores/unobtainium"
   },
   "output": {
     "count": 2,

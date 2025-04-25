@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/niobium"
+    "tag": "c:ores/niobium"
   },
   "result": {
     "count": 1,

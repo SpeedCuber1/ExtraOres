@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/celenegil"
+    "tag": "c:dusts/celenegil"
   },
   "result": {
     "count": 1,

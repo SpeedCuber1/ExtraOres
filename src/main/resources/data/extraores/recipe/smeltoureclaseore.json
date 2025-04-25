@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/oureclase"
+    "tag": "c:ores/oureclase"
   },
   "result": {
     "count": 1,

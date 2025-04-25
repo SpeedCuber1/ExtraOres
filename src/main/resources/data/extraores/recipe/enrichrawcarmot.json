@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/carmot"
+    "tag": "c:raw_materials/carmot"
   },
   "output": {
     "count": 2,

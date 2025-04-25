@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/plutonium"
+    "tag": "c:dusts/plutonium"
   },
   "result": {
     "count": 1,

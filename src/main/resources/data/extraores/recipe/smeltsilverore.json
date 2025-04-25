@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/silver"
+    "tag": "c:ores/silver"
   },
   "result": {
     "count": 1,

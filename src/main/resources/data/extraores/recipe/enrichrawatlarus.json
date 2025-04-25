@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/atlarus"
+    "tag": "c:raw_materials/atlarus"
   },
   "output": {
     "count": 2,

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/tritium"
+    "tag": "c:ores/tritium"
   },
   "output": {
     "count": 2,

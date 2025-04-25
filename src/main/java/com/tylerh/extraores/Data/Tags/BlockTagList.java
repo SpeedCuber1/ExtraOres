@@ -214,6 +214,6 @@ public class BlockTagList
 
     private static TagKey<Block> tag(String name)
     {
-        return BlockTags.create(ResourceLocation.fromNamespaceAndPath("forge",name));
+        return BlockTags.create(ResourceLocation.fromNamespaceAndPath("c",name));
     }
 }

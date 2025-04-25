@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/rubracium"
+    "tag": "c:ores/rubracium"
   },
   "output": {
     "count": 2,

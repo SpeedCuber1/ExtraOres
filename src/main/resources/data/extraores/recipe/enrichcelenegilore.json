@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/celenegil"
+    "tag": "c:ores/celenegil"
   },
   "output": {
     "count": 2,

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/mithril"
+    "tag": "c:ores/mithril"
   },
   "output": {
     "count": 2,

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/thallium"
+    "tag": "c:ores/thallium"
   },
   "output": {
     "count": 2,

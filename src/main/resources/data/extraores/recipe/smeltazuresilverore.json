@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/azuresilver"
+    "tag": "c:ores/azuresilver"
   },
   "result": {
     "count": 1,

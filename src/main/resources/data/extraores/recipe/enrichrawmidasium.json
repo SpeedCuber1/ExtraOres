@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/midasium"
+    "tag": "c:raw_materials/midasium"
   },
   "output": {
     "count": 2,

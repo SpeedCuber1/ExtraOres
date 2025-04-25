@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/cobalt"
+    "tag": "c:ores/cobalt"
   },
   "result": {
     "count": 1,

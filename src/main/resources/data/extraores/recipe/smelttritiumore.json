@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/tritium"
+    "tag": "c:ores/tritium"
   },
   "result": {
     "count": 1,

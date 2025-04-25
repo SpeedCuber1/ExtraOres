@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/neodymium"
+    "tag": "c:ores/neodymium"
   },
   "result": {
     "count": 1,

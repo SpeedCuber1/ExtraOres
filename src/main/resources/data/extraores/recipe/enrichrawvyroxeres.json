@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/vyroxeres"
+    "tag": "c:raw_materials/vyroxeres"
   },
   "output": {
     "count": 2,

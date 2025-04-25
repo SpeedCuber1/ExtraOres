@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/aluminum"
+    "tag": "c:dusts/aluminum"
   },
   "result": {
     "count": 1,

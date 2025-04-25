@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:raw_materials/shadowiron"
+    "tag": "c:raw_materials/shadowiron"
   },
   "output": {
     "count": 3,
     "id": "extraores:shadowironclump"
-  }
+  },
+  "per_tick_usage": true
 }

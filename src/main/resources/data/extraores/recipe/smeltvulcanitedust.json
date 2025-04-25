@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/vulcanite"
+    "tag": "c:dusts/vulcanite"
   },
   "result": {
     "count": 1,

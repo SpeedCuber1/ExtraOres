@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/vyroxeres"
+    "tag": "c:ores/vyroxeres"
   },
   "output": {
     "count": 2,

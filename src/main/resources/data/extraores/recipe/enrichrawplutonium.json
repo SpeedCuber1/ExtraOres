@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/plutonium"
+    "tag": "c:raw_materials/plutonium"
   },
   "output": {
     "count": 2,

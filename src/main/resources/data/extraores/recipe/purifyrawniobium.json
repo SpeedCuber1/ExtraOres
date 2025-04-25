@@ -2,14 +2,15 @@
   "type": "mekanism:purifying",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:oxygen"
+    "chemical": "mekanism:oxygen"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:raw_materials/niobium"
+    "tag": "c:raw_materials/niobium"
   },
   "output": {
     "count": 3,
     "id": "extraores:niobiumclump"
-  }
+  },
+  "per_tick_usage": true
 }

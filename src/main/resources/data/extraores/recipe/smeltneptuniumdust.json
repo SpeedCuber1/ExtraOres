@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/neptunium"
+    "tag": "c:dusts/neptunium"
   },
   "result": {
     "count": 1,

@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:raw_materials/inolashite"
+    "tag": "c:raw_materials/inolashite"
   },
   "output": {
     "count": 2,

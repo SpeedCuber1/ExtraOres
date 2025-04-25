@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Amordrine Ore"
+      "translate": "extraores.amordrine.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:amordrineore"
     },
     "title": {
-      "translate": "That's Amordrine"
+      "translate": "extraores.amordrine"
     }
   },
   "requirements": [

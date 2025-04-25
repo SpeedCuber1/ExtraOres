@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/vulcanite"
+    "tag": "c:ores/vulcanite"
   },
   "output": {
     "count": 2,

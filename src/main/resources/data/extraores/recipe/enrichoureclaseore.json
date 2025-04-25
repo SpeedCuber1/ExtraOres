@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/oureclase"
+    "tag": "c:ores/oureclase"
   },
   "output": {
     "count": 2,

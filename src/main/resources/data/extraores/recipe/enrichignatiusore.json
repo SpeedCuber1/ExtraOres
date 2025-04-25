@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/ignatius"
+    "tag": "c:ores/ignatius"
   },
   "output": {
     "count": 2,

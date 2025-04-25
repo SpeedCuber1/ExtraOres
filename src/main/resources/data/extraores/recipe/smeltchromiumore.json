@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:ores/chromium"
+    "tag": "c:ores/chromium"
   },
   "result": {
     "count": 1,

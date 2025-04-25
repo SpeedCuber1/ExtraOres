@@ -4,7 +4,7 @@
   "cookingtime": 20,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:dusts/manganese"
+    "tag": "c:dusts/manganese"
   },
   "result": {
     "count": 1,

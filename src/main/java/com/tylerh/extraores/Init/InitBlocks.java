@@ -2,6 +2,7 @@ package com.tylerh.extraores.Init;
 
 import com.tylerh.extraores.Blocks.BlockEXOre;
 import com.tylerh.extraores.Items.*;
+import com.tylerh.extraores.Util.ExOresConfig;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -22,48 +23,87 @@ public class InitBlocks
     }
     public static void registerBlocks()
     {
+        if(ExOresConfig.Adamantine)
+        {
             BlockList.blockOreAdamantine = register("adamantineore", () -> new BlockEXOre( 1.5F, 1.5F));
             BlockList.blockAdamantine = register("adamantineblock", () -> new BlockEXOre( 1.5F, 1.5F));
             BlockList.blockDeepslateOreAdamantine = register("deepslateadamantineore", () -> new BlockEXOre( 1.5F, 1.5F, SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Agate)
+        {
             BlockList.blockOreAgate = register("agateore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAgate = register("agateblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAgate = register("deepslateagateore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
             BlockList.blockEnderOreAgate = register("enderagateore", () -> new BlockEXOre(1.5F,1.5F));
+        }
+        if(ExOresConfig.Aldourite)
+        {
             BlockList.blockOreAldourite = register("aldouriteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAldourite = register("aldouriteblock", () -> new BlockEXOre(1.5F,1.5F));
+        }
+        if(ExOresConfig.Aluminum)
+        {
             BlockList.blockOreAluminum = register("aluminumore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAluminum = register("aluminumblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAluminum = register("deepslatealuminumore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Americium)
+        {
             BlockList.blockOreAmericium = register("americiumore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAmericium = register("americiumblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAmericium = register("deepslateamericiumore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Amethyst)
+        {
             BlockList.blockOreAmethyst = register("amethystore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAmethyst = register("amethystblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAmethyst = register("deepslateamethystore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
             BlockList.blockEnderOreAmethyst = register("enderamethystore", () -> new BlockEXOre(1.5F,1.5F));
+        }
+        if(ExOresConfig.Adamantine)
+        {
             BlockList.blockOreAmetrine = register("ametrineore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAmetrine = register("ametrineblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAmetrine = register("deepslateametrineore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
             BlockList.blockEnderOreAmetrine = register("enderametrineore", () -> new BlockEXOre(1.5F,1.5F));
+        }
+        if(ExOresConfig.Amordrine)
+        {
             BlockList.blockOreAmordrine = register("amordrineore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAmordrine = register("amordrineblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAmordrine = register("deepslateamordrineore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Angmallen)
+        {
             BlockList.blockOreAngmallen = register("angmallenore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAngmallen = register("angmallenblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAngmallen = register("deepslateangmallenore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Aquamarine)
+        {
             BlockList.blockOreAquamarine = register("aquamarineore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAquamarine = register("aquamarineblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAquamarine = register("deepslateaquamarineore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
             BlockList.blockEnderOreAquamarine = register("enderaquamarineore", () -> new BlockEXOre(1.5F,1.F));
+        }
+        if(ExOresConfig.AstralSilver)
+        {
             BlockList.blockOreAstralSilver = register("astralsilverore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAstralSilver = register("astralsilverblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAstralSilver = register("deepslateastralsilverore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Atlarus)
+        {
             BlockList.blockOreAtlarus = register("atlarusore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAtlarus = register("atlarusblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAtlarus = register("deepslateatlarusore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.AzureSilver)
+        {
             BlockList.blockOreAzureSilver = register("azuresilverore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAzureSilver = register("azuresilverblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAzureSilver = register("deepslateazuresilverore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
             BlockList.blockOreBismuth = register("bismuthore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockBismuth = register("bismuthblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreBismuth = register("deepslatebismuthore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));

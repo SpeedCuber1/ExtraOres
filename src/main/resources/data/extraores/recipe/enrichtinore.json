@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/tin"
+    "tag": "c:ores/tin"
   },
   "output": {
     "count": 2,

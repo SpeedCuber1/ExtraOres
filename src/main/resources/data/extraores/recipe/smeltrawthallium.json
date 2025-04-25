@@ -4,7 +4,7 @@
   "cookingtime": 40,
   "experience": 0.75,
   "ingredient": {
-    "tag": "forge:raw_materials/thallium"
+    "tag": "c:raw_materials/thallium"
   },
   "result": {
     "count": 1,

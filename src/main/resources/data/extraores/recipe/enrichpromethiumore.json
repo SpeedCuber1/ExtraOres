@@ -2,7 +2,7 @@
   "type": "mekanism:enriching",
   "input": {
     "count": 1,
-    "tag": "forge:ores/promethium"
+    "tag": "c:ores/promethium"
   },
   "output": {
     "count": 2,

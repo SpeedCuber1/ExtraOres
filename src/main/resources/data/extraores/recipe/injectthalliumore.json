@@ -2,14 +2,15 @@
   "type": "mekanism:injecting",
   "chemical_input": {
     "amount": 1,
-    "gas": "mekanism:hydrogen_chloride"
+    "chemical": "mekanism:hydrogen_chloride"
   },
   "item_input": {
     "count": 1,
-    "tag": "forge:ores/thallium"
+    "tag": "c:ores/thallium"
   },
   "output": {
     "count": 4,
     "id": "extraores:thalliumshard"
-  }
+  },
+  "per_tick_usage": true
 }
