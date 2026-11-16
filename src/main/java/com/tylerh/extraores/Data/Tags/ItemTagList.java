@@ -1,8 +1,8 @@
 package com.tylerh.extraores.Data.Tags;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.resources.ResourceLocation;
 public class ItemTagList
 {
     //Ores
@@ -697,6 +697,6 @@ public class ItemTagList
     
     private static TagKey<Item> tag(String modid, String name)
     {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(modid,name));
+        return ItemTags.create(Identifier.fromNamespaceAndPath(modid,name));
     }
 }

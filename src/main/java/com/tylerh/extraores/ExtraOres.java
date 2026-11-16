@@ -10,7 +10,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 @Mod(ModInfo.MOD_ID)
@@ -20,17 +19,12 @@ public class ExtraOres
     {
         container.registerConfig(ModConfig.Type.STARTUP, ExOresConfig.SPEC,"extraores-common.toml");
         ExOresConfig.initConfig();
-        bus.addListener(this::onCommonSetup);
         ExOreCreativeTab.CREATIVE_TABS.register(bus);
         InitBlocks.BLOCKS.register(bus);
         InitBlocks.ITEMS.register(bus);
         InitBlocks.registerBlocks();
         InitBlocks.registerItems();
         bus.addListener(this::addCreative);
-    }
-    public void onCommonSetup(FMLCommonSetupEvent event)
-    {
-
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
