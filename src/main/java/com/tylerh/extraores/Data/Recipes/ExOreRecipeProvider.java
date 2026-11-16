@@ -35,7 +35,7 @@ public class ExOreRecipeProvider extends RecipeProvider
         buildShapedRecipes();
         buildShapelessRecipes();
         buildSmeltingRecipes();
-        //buildBlastingRecipes();
+        buildBlastingRecipes();
         /*buildMekanismInjecting(consumer);
         buildMekanismPurifying(consumer);
         buildMekanismCrushing(consumer);
@@ -1181,457 +1181,70 @@ public class ExOreRecipeProvider extends RecipeProvider
         oreSmelting(RecipeSmeltablesList.smeltingAstralSilver,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAstralSilver,0.25F,200,"astralsilver");
         oreSmelting(RecipeSmeltablesList.smeltingAtlarus,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAtlarus,0.25F,200,"atlarus");
         oreSmelting(RecipeSmeltablesList.smeltingAzureSilver,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAzureSilver,0.25F,200,"azuresilver");
+        oreSmelting(RecipeSmeltablesList.smeltingBismuth,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotBismuth,0.25F,200,"bismuth");
+        oreSmelting(RecipeSmeltablesList.smeltingBlackSteel,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotBlackSteel,0.25F,200,"blacksteel");
+        oreSmelting(RecipeSmeltablesList.smeltingCadmium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCadmium,0.25F,200,"cadmium");
+        oreSmelting(RecipeSmeltablesList.smeltingCarmot,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCarmot,0.25F,200,"carmot");
+        oreSmelting(RecipeSmeltablesList.smeltingCelenegil,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCelenegil,0.25F,200,"celenegil");
+        oreSmelting(RecipeSmeltablesList.smeltingCeruclase,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCeruclase,0.25F,200,"ceruclase");
+        oreSmelting(RecipeSmeltablesList.smeltingChromium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotChromium,0.25F,200,"chromium");
+        oreSmelting(RecipeSmeltablesList.smeltingCobalt,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCobalt,0.25F,200,"cobalt");
+        oreSmelting(RecipeSmeltablesList.smeltingCopper,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCopper,0.25F,200,"copper");
+        oreSmelting(RecipeSmeltablesList.smeltingCrimsonSteel,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCrimsonSteel,0.25F,200,"crimsonsteel");
+        oreSmelting(RecipeSmeltablesList.smeltingDeepIron,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotDeepIron,0.25F,200,"deepiron");
+        oreSmelting(RecipeSmeltablesList.smeltingDesichalkos,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotDesichalkos,0.25F,200,"desichalkos");
+        oreSmelting(RecipeSmeltablesList.smeltingEximite,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotEximite,0.25F,200,"eximite");
+        oreSmelting(RecipeSmeltablesList.smeltingGallium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotGallium,0.25F,200,"gallium");
+        oreSmelting(RecipeSmeltablesList.smeltingHaderoth,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotHaderoth,0.25F,200,"haderoth");
+        oreSmelting(RecipeSmeltablesList.smeltingHepatizon,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotHepatizon,0.25F,200,"hepatizon");
+        oreSmelting(RecipeSmeltablesList.smeltingIgnatius,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotIgnatius,0.25F,200,"ignatius");
+        oreSmelting(RecipeSmeltablesList.smeltingIndium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotIndium,0.25F,200,"indium");
+        oreSmelting(RecipeSmeltablesList.smeltingInfuscolium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotInfuscolium,0.25F,200,"infuscolium");
+        oreSmelting(RecipeSmeltablesList.smeltingInolashite,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotInolashite,0.25F,200,"inolashite");
+        oreSmelting(RecipeSmeltablesList.smeltingIridium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotIridium,0.25F,200,"iridium");
+        oreSmelting(RecipeSmeltablesList.smeltingKalendrite,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotKalendrite,0.25F,200,"kalendrite");
     }
-    /*
     protected void buildBlastingRecipes()
     {
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAdamantine.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAdamantine.get(), 0.75F, 20)
-                .unlockedBy("blastadamantineore", has(ItemList.itemIngotAdamantine.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastadamantineore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAldourite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAldourite.get(), 0.75F, 20)
-                .unlockedBy("blastaldouriteore", has(ItemList.itemIngotAldourite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastaldouriteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAluminum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAluminum.get(), 0.75F, 20)
-                .unlockedBy("blastaluminumore", has(ItemList.itemIngotAluminum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastaluminumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAmericium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAmericium.get(), 0.75F, 20)
-                .unlockedBy("blastamericiumore", has(ItemList.itemIngotAmericium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastamericiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAmordrine.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAmordrine.get(), 0.75F, 20)
-                .unlockedBy("blastamordrineore", has(ItemList.itemIngotAmordrine.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastamordrineore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAngmallen.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAngmallen.get(), 0.75F, 20)
-                .unlockedBy("blastangmallenore", has(ItemList.itemIngotAngmallen.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastangmallenore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAstralSilver.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAstralSilver.get(), 0.75F, 20)
-                .unlockedBy("blastastralsilverore", has(ItemList.itemIngotAstralSilver.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastastralsilverore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAtlarus.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 20)
-                .unlockedBy("blastatlarusore", has(ItemList.itemIngotAtlarus.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastatlarusore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreAzureSilver.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 20)
-                .unlockedBy("blastazuresilverore", has(ItemList.itemIngotAzureSilver.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastazuresilverore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreBismuth.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 20)
-                .unlockedBy("blastbismuthore", has(ItemList.itemIngotBismuth.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastbismuthore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreBlackSteel.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotBlackSteel.get(), 0.75F, 20)
-                .unlockedBy("blastblacksteelore", has(ItemList.itemIngotBlackSteel.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastblacksteelore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCadmium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCadmium.get(), 0.75F, 20)
-                .unlockedBy("blastcadmiumore", has(ItemList.itemIngotCadmium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcadmiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCarmot.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCarmot.get(), 0.75F, 20)
-                .unlockedBy("blastcarmotore", has(ItemList.itemIngotCarmot.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcarmotore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCelenegil.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCelenegil.get(), 0.75F, 20)
-                .unlockedBy("blastcelenegilore", has(ItemList.itemIngotCelenegil.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcelenegilore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCeruclase.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCeruclase.get(), 0.75F, 20)
-                .unlockedBy("blastceruclaseore", has(ItemList.itemIngotCeruclase.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastceruclaseore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreChromium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotChromium.get(), 0.75F, 20)
-                .unlockedBy("blastchromiumore", has(ItemList.itemIngotChromium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastchromiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCobalt.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCobalt.get(), 0.75F, 20)
-                .unlockedBy("blastcobaltore", has(ItemList.itemIngotCobalt.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcobaltore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCopper.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCopper.get(), 0.75F, 20)
-                .unlockedBy("blastcopperore", has(ItemList.itemIngotCopper.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcopperore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreCrimsonSteel.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotCrimsonSteel.get(), 0.75F, 20)
-                .unlockedBy("blastcrimsonsteelore", has(ItemList.itemIngotCrimsonSteel.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcrimsonsteelore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreDeepIron.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotDeepIron.get(), 0.75F, 20)
-                .unlockedBy("blastdeepironore", has(ItemList.itemIngotDeepIron.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastdeepironore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreDesichalkos.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotDesichalkos.get(), 0.75F, 20)
-                .unlockedBy("blastdesichalkosore", has(ItemList.itemIngotDesichalkos.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastdesichalkosore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreEximite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotEximite.get(), 0.75F, 20)
-                .unlockedBy("blasteximiteore", has(ItemList.itemIngotEximite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasteximiteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreGallium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotGallium.get(), 0.75F, 20)
-                .unlockedBy("blastgalliumore", has(ItemList.itemIngotGallium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastgalliumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreHaderoth.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotHaderoth.get(), 0.75F, 20)
-                .unlockedBy("blasthaderothore", has(ItemList.itemIngotHaderoth.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasthaderothore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreHepatizon.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotHepatizon.get(), 0.75F, 20)
-                .unlockedBy("blasthepatizonore", has(ItemList.itemIngotHepatizon.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasthepatizonore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreIgnatius.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotIgnatius.get(), 0.75F, 20)
-                .unlockedBy("blastignatiusore", has(ItemList.itemIngotIgnatius.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastignatiusore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreIndium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotIndium.get(), 0.75F, 20)
-                .unlockedBy("blastindiumore", has(ItemList.itemIngotIndium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastindiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreInfuscolium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotInfuscolium.get(), 0.75F, 20)
-                .unlockedBy("blastinfuscoliumore", has(ItemList.itemIngotInfuscolium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastinfuscoliumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreInolashite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotInolashite.get(), 0.75F, 20)
-                .unlockedBy("blastinolashiteore", has(ItemList.itemIngotInolashite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastinolashiteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreIridium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotIridium.get(), 0.75F, 20)
-                .unlockedBy("blastiridiumore", has(ItemList.itemIngotIridium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastiridiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreKalendrite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotKalendrite.get(), 0.75F, 20)
-                .unlockedBy("blastkalendriteore", has(ItemList.itemIngotKalendrite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastkalendriteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreLead.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotLead.get(), 0.75F, 20)
-                .unlockedBy("blastleadore", has(ItemList.itemIngotLead.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastleadore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreLemurite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotLemurite.get(), 0.75F, 20)
-                .unlockedBy("blastlemuriteore", has(ItemList.itemIngotLemurite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastlemuriteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreManganese.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotManganese.get(), 0.75F, 20)
-                .unlockedBy("blastmanganeseore", has(ItemList.itemIngotManganese.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmanganeseore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreMeutoite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotMeutoite.get(), 0.75F, 20)
-                .unlockedBy("blastmeutoiteore", has(ItemList.itemIngotMeutoite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmeutoiteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreMidasium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotMidasium.get(), 0.75F, 20)
-                .unlockedBy("blastmidasiumore", has(ItemList.itemIngotMidasium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmidasiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreMithril.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotMithril.get(), 0.75F, 20)
-                .unlockedBy("blastmithrilore", has(ItemList.itemIngotMithril.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmithrilore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreMolybdenum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotMolybdenum.get(), 0.75F, 20)
-                .unlockedBy("blastmolybdenumore", has(ItemList.itemIngotMolybdenum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmolybdenumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreNeodymium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotNeodymium.get(), 0.75F, 20)
-                .unlockedBy("blastneodymiumore", has(ItemList.itemIngotNeodymium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastneodymiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreNeptunium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotNeptunium.get(), 0.75F, 20)
-                .unlockedBy("blastneptuniumore", has(ItemList.itemIngotNeptunium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastneptuniumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreNickel.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotNickel.get(), 0.75F, 20)
-                .unlockedBy("blastnickelore", has(ItemList.itemIngotNickel.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastnickelore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreNiobium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotNiobium.get(), 0.75F, 20)
-                .unlockedBy("blastniobiumore", has(ItemList.itemIngotNiobium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastniobiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreOrichalcum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotOrichalcum.get(), 0.75F, 20)
-                .unlockedBy("blastorichalcumore", has(ItemList.itemIngotOrichalcum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastorichalcumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreOureclase.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotOureclase.get(), 0.75F, 20)
-                .unlockedBy("blastoureclaseore", has(ItemList.itemIngotOureclase.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastoureclaseore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePalladium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPalladium.get(), 0.75F, 20)
-                .unlockedBy("blastpalladiumore", has(ItemList.itemIngotPalladium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastpalladiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePlatinum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPlatinum.get(), 0.75F, 20)
-                .unlockedBy("blastplatinumore", has(ItemList.itemIngotPlatinum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastplatinumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePlutonium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPlutonium.get(), 0.75F, 20)
-                .unlockedBy("blastplutoniumore", has(ItemList.itemIngotPlutonium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastplutoniumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePolonium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPolonium.get(), 0.75F, 20)
-                .unlockedBy("blastpoloniumore", has(ItemList.itemIngotPolonium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastpoloniumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOrePromethium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotPromethium.get(), 0.75F, 20)
-                .unlockedBy("blastpromethiumore", has(ItemList.itemIngotPromethium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastpromethiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreRhenium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotRhenium.get(), 0.75F, 20)
-                .unlockedBy("blastrheniumore", has(ItemList.itemIngotRhenium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastrheniumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreRhodium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotRhodium.get(), 0.75F, 20)
-                .unlockedBy("blastrhodiumore", has(ItemList.itemIngotRhodium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastrhodiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreRubracium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotRubracium.get(), 0.75F, 20)
-                .unlockedBy("blastrubraciumore", has(ItemList.itemIngotRubracium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastrubraciumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreRuthenium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotRuthenium.get(), 0.75F, 20)
-                .unlockedBy("blastrutheniumore", has(ItemList.itemIngotRuthenium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastrutheniumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreSanguinite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotSanguinite.get(), 0.75F, 20)
-                .unlockedBy("blastsanguiniteore", has(ItemList.itemIngotSanguinite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastsanguiniteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreShadowIron.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotShadowIron.get(), 0.75F, 20)
-                .unlockedBy("blastshadowironore", has(ItemList.itemIngotShadowIron.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastshadowironore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreSilver.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotSilver.get(), 0.75F, 20)
-                .unlockedBy("blastsilverore", has(ItemList.itemIngotSilver.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastsilverore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTantalum.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTantalum.get(), 0.75F, 20)
-                .unlockedBy("blasttantalumore", has(ItemList.itemIngotTantalum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttantalumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTartarite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTartarite.get(), 0.75F, 20)
-                .unlockedBy("blasttartariteore", has(ItemList.itemIngotTartarite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttartariteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTechnetium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTechnetium.get(), 0.75F, 20)
-                .unlockedBy("blasttechnetiumore", has(ItemList.itemIngotTechnetium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttechnetiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreThallium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotThallium.get(), 0.75F, 20)
-                .unlockedBy("blastthalliumore", has(ItemList.itemIngotThallium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastthalliumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTin.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTin.get(), 0.75F, 20)
-                .unlockedBy("blasttinore", has(ItemList.itemIngotTin.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttinore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTitanium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTitanium.get(), 0.75F, 20)
-                .unlockedBy("blasttitaniumore", has(ItemList.itemIngotTitanium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttitaniumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTritium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTritium.get(), 0.75F, 20)
-                .unlockedBy("blasttritiumore", has(ItemList.itemIngotTritium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttritiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreTungsten.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotTungsten.get(), 0.75F, 20)
-                .unlockedBy("blasttungstenore", has(ItemList.itemIngotTungsten.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttungstenore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreUnobtainium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotUnobtainium.get(), 0.75F, 20)
-                .unlockedBy("blastunobtainiumore", has(ItemList.itemIngotUnobtainium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastunobtainiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreUranium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotUranium.get(), 0.75f, 20)
-                .unlockedBy("blasturaniumore", has(ItemList.itemIngotUranium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasturaniumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVanadium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotVanadium.get(), 0.75F, 20)
-                .unlockedBy("blastvanadiumore", has(ItemList.itemIngotVanadium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastvanadiumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVibranium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotVibranium.get(), 0.75F, 20)
-                .unlockedBy("blastvibraniumore", has(ItemList.itemIngotVibranium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastvibraniumore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVulcanite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotVulcanite.get(), 0.75F, 20)
-                .unlockedBy("blastvulcaniteore", has(ItemList.itemIngotVulcanite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastvulcaniteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreVyroxeres.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotVyroxeres.get(), 0.75F, 20)
-                .unlockedBy("blastvyroxeresore", has(ItemList.itemIngotVyroxeres.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastvyroxeresore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreYellorite.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotYellorite.get(), 0.75F, 20)
-                .unlockedBy("blastyelloriteore", has(ItemList.itemIngotYellorite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastyelloriteore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreZinc.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotZinc.get(), 0.75F, 20)
-                .unlockedBy("blastzincore", has(ItemList.itemIngotZinc.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastzincore"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(BlockList.blockOreZirconium.get().asItem()), RecipeCategory.MISC, ItemList.itemIngotZirconium.get(), 0.75F, 20)
-                .unlockedBy("blastzirconiumore", has(ItemList.itemIngotZirconium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastzirconiumore"));
-        //Blasting Dust
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAdamantine.get()), RecipeCategory.MISC, ItemList.itemIngotAdamantine.get(), 0.75F, 10)
-                .unlockedBy("blastadamantinedust", has(ItemList.itemIngotAdamantine.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastadamantinedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAldourite.get()), RecipeCategory.MISC, ItemList.itemIngotAldourite.get(), 0.75F, 10)
-                .unlockedBy("blastaldouritedust", has(ItemList.itemIngotAldourite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastaldouritedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAluminum.get()), RecipeCategory.MISC, ItemList.itemIngotAluminum.get(), 0.75F, 10)
-                .unlockedBy("blastaluminumdust", has(ItemList.itemIngotAluminum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastaluminumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAmericium.get()), RecipeCategory.MISC, ItemList.itemIngotAmericium.get(), 0.75F, 10)
-                .unlockedBy("blastamericiumdust", has(ItemList.itemIngotAmericium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastamericiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAmordrine.get()), RecipeCategory.MISC, ItemList.itemIngotAmordrine.get(), 0.75F, 10)
-                .unlockedBy("blastamordrinedust", has(ItemList.itemIngotAmordrine.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastamordrinedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAngmallen.get()), RecipeCategory.MISC, ItemList.itemIngotAngmallen.get(), 0.75F, 10)
-                .unlockedBy("blastangmallendust", has(ItemList.itemIngotAngmallen.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastangmallendust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAstralSilver.get()), RecipeCategory.MISC, ItemList.itemIngotAstralSilver.get(), 0.75F, 10)
-                .unlockedBy("blastastralsilverdust", has(ItemList.itemIngotAstralSilver.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastastralsilverdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAtlarus.get()), RecipeCategory.MISC, ItemList.itemIngotAtlarus.get(), 0.75F, 10)
-                .unlockedBy("blastatlarusdust", has(ItemList.itemIngotAtlarus.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastatlarusdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustAzureSilver.get()), RecipeCategory.MISC, ItemList.itemIngotAzureSilver.get(), 0.75F, 10)
-                .unlockedBy("blastazuresilverdust", has(ItemList.itemIngotAzureSilver.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastazuresilverdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustBismuth.get()), RecipeCategory.MISC, ItemList.itemIngotBismuth.get(), 0.75F, 10)
-                .unlockedBy("blastbismuthdust", has(ItemList.itemIngotBismuth.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastbismuthdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustBlackSteel.get()), RecipeCategory.MISC, ItemList.itemIngotBlackSteel.get(), 0.75F, 10)
-                .unlockedBy("blastblacksteeldust", has(ItemList.itemIngotBlackSteel.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastblacksteeldust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCadmium.get()), RecipeCategory.MISC, ItemList.itemIngotCadmium.get(), 0.75F, 10)
-                .unlockedBy("blastcadmiumdust", has(ItemList.itemIngotCadmium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcadmiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCarmot.get()), RecipeCategory.MISC, ItemList.itemIngotCarmot.get(), 0.75F, 10)
-                .unlockedBy("blastcarmotdust", has(ItemList.itemIngotCarmot.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcarmotdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCelenegil.get()), RecipeCategory.MISC, ItemList.itemIngotCelenegil.get(), 0.75F, 10)
-                .unlockedBy("blastcelenegildust", has(ItemList.itemIngotCelenegil.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcelenegildust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCeruclase.get()), RecipeCategory.MISC, ItemList.itemIngotCeruclase.get(), 0.75F, 10)
-                .unlockedBy("blastceruclasedust", has(ItemList.itemIngotCeruclase.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastceruclasedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustChromium.get()), RecipeCategory.MISC, ItemList.itemIngotChromium.get(), 0.75F, 10)
-                .unlockedBy("blastchromiumdust", has(ItemList.itemIngotChromium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastchromiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCobalt.get()), RecipeCategory.MISC, ItemList.itemIngotCobalt.get(), 0.75F, 10)
-                .unlockedBy("blastcobaltdust", has(ItemList.itemIngotCobalt.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcobaltdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCopper.get()), RecipeCategory.MISC, ItemList.itemIngotCopper.get(), 0.75F, 10)
-                .unlockedBy("blastcopperdust", has(ItemList.itemIngotCopper.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcopperdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustCrimsonSteel.get()), RecipeCategory.MISC, ItemList.itemIngotCrimsonSteel.get(), 0.75F, 10)
-                .unlockedBy("blastcrimsonsteeldust", has(ItemList.itemIngotCrimsonSteel.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastcrimsonsteeldust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustDeepIron.get()), RecipeCategory.MISC, ItemList.itemIngotDeepIron.get(), 0.75F, 10)
-                .unlockedBy("blastdeepirondust", has(ItemList.itemIngotDeepIron.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastdeepirondust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustDesichalkos.get()), RecipeCategory.MISC, ItemList.itemIngotDesichalkos.get(), 0.75F, 10)
-                .unlockedBy("blastdesichalkosdust", has(ItemList.itemIngotDesichalkos.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastdesichalkosdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustEximite.get()), RecipeCategory.MISC, ItemList.itemIngotEximite.get(), 0.75F, 10)
-                .unlockedBy("blasteximitedust", has(ItemList.itemIngotEximite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasteximitedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustGallium.get()), RecipeCategory.MISC, ItemList.itemIngotGallium.get(), 0.75F, 10)
-                .unlockedBy("blastgalliumdust", has(ItemList.itemIngotGallium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastgalliumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustHaderoth.get()), RecipeCategory.MISC, ItemList.itemIngotHaderoth.get(), 0.75F, 10)
-                .unlockedBy("blasthaderothdust", has(ItemList.itemIngotHaderoth.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasthaderothdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustHepatizon.get()), RecipeCategory.MISC, ItemList.itemIngotHepatizon.get(), 0.75F, 10)
-                .unlockedBy("blasthepatizondust", has(ItemList.itemIngotHepatizon.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasthepatizondust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustIgnatius.get()), RecipeCategory.MISC, ItemList.itemIngotIgnatius.get(), 0.75F, 10)
-                .unlockedBy("blastignatiusdust", has(ItemList.itemIngotIgnatius.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastignatiusdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustIndium.get()), RecipeCategory.MISC, ItemList.itemIngotIndium.get(), 0.75F, 10)
-                .unlockedBy("blastindiumdust", has(ItemList.itemIngotIndium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastindiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustInfuscolium.get()), RecipeCategory.MISC, ItemList.itemIngotInfuscolium.get(), 0.75F, 10)
-                .unlockedBy("blastinfuscoliumdust", has(ItemList.itemIngotInfuscolium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastinfuscoliumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustInolashite.get()), RecipeCategory.MISC, ItemList.itemIngotInolashite.get(), 0.75F, 10)
-                .unlockedBy("blastinolashitedust", has(ItemList.itemIngotInolashite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastinolashitedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustIridium.get()), RecipeCategory.MISC, ItemList.itemIngotIridium.get(), 0.75F, 10)
-                .unlockedBy("blastiridiumdust", has(ItemList.itemIngotIridium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastiridiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustKalendrite.get()), RecipeCategory.MISC, ItemList.itemIngotKalendrite.get(), 0.75F, 10)
-                .unlockedBy("blastkalendritedust", has(ItemList.itemIngotKalendrite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastkalendritedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustLead.get()), RecipeCategory.MISC, ItemList.itemIngotLead.get(), 0.75F, 10)
-                .unlockedBy("blastleaddust", has(ItemList.itemIngotLead.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastleaddust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustLemurite.get()), RecipeCategory.MISC, ItemList.itemIngotLemurite.get(), 0.75F, 10)
-                .unlockedBy("blastlemuritedust", has(ItemList.itemIngotLemurite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastlemuritedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustManganese.get()), RecipeCategory.MISC, ItemList.itemIngotManganese.get(), 0.75F, 10)
-                .unlockedBy("blastmanganesedust", has(ItemList.itemIngotManganese.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmanganesedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustMeutoite.get()), RecipeCategory.MISC, ItemList.itemIngotMeutoite.get(), 0.75F, 10)
-                .unlockedBy("blastmeutoitedust", has(ItemList.itemIngotMeutoite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmeutoitedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustMidasium.get()), RecipeCategory.MISC, ItemList.itemIngotMidasium.get(), 0.75F, 10)
-                .unlockedBy("blastmidasiumdust", has(ItemList.itemIngotMidasium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmidasiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustMithril.get()), RecipeCategory.MISC, ItemList.itemIngotMithril.get(), 0.75F, 10)
-                .unlockedBy("blastmithrildust", has(ItemList.itemIngotMithril.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmithrildust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustMolybdenum.get()), RecipeCategory.MISC, ItemList.itemIngotMolybdenum.get(), 0.75F, 10)
-                .unlockedBy("blastmolybdenumdust", has(ItemList.itemIngotMolybdenum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastmolybdenumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustNeodymium.get()), RecipeCategory.MISC, ItemList.itemIngotNeodymium.get(), 0.75F, 10)
-                .unlockedBy("blastneodymiumdust", has(ItemList.itemIngotNeodymium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastneodymiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustNeptunium.get()), RecipeCategory.MISC, ItemList.itemIngotNeptunium.get(), 0.75F, 10)
-                .unlockedBy("blastneptuniumdust", has(ItemList.itemIngotNeptunium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastneptuniumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustNickel.get()), RecipeCategory.MISC, ItemList.itemIngotNickel.get(), 0.75F, 10)
-                .unlockedBy("blastnickeldust", has(ItemList.itemIngotNickel.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastnickeldust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustNiobium.get()), RecipeCategory.MISC, ItemList.itemIngotNiobium.get(), 0.75F, 10)
-                .unlockedBy("blastniobiumdust", has(ItemList.itemIngotNiobium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastniobiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustOrichalcum.get()), RecipeCategory.MISC, ItemList.itemIngotOrichalcum.get(), 0.75F, 10)
-                .unlockedBy("blastorichalcumdust", has(ItemList.itemIngotOrichalcum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastorichalcumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustOureclase.get()), RecipeCategory.MISC, ItemList.itemIngotOureclase.get(), 0.75F, 10)
-                .unlockedBy("blastoureclasedust", has(ItemList.itemIngotOureclase.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastoureclasedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPalladium.get()), RecipeCategory.MISC, ItemList.itemIngotPalladium.get(), 0.75F, 10)
-                .unlockedBy("blastpalladiumdust", has(ItemList.itemIngotPalladium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastpalladiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPlatinum.get()), RecipeCategory.MISC, ItemList.itemIngotPlatinum.get(), 0.75F, 10)
-                .unlockedBy("blastplatinumdust", has(ItemList.itemIngotPlatinum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastplatinumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPlutonium.get()), RecipeCategory.MISC, ItemList.itemIngotPlutonium.get(), 0.75F, 10)
-                .unlockedBy("blastplutoniumdust", has(ItemList.itemIngotPlutonium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastplutoniumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPolonium.get()), RecipeCategory.MISC, ItemList.itemIngotPolonium.get(), 0.75F, 10)
-                .unlockedBy("blastpoloniumdust", has(ItemList.itemIngotPolonium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastpoloniumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustPromethium.get()), RecipeCategory.MISC, ItemList.itemIngotPromethium.get(), 0.75F, 10)
-                .unlockedBy("blastpromethiumdust", has(ItemList.itemIngotPromethium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastpromethiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustRhenium.get()), RecipeCategory.MISC, ItemList.itemIngotRhenium.get(), 0.75F, 10)
-                .unlockedBy("blastrheniumdust", has(ItemList.itemIngotRhenium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastrheniumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustRhodium.get()), RecipeCategory.MISC, ItemList.itemIngotRhodium.get(), 0.75F, 10)
-                .unlockedBy("blastrhodiumdust", has(ItemList.itemIngotRhodium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastrhodiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustRubracium.get()), RecipeCategory.MISC, ItemList.itemIngotRubracium.get(), 0.75F, 10)
-                .unlockedBy("blastrubraciumdust", has(ItemList.itemIngotRubracium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastrubraciumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustRuthenium.get()), RecipeCategory.MISC, ItemList.itemIngotRuthenium.get(), 0.75F, 10)
-                .unlockedBy("blastrutheniumdust", has(ItemList.itemIngotRuthenium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastrutheniumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustSanguinite.get()), RecipeCategory.MISC, ItemList.itemIngotSanguinite.get(), 0.75F, 10)
-                .unlockedBy("blastsanguinitedust", has(ItemList.itemIngotSanguinite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastsanguinitedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustShadowIron.get()), RecipeCategory.MISC, ItemList.itemIngotShadowIron.get(), 0.75F, 10)
-                .unlockedBy("blastshadowirondust", has(ItemList.itemIngotShadowIron.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastshadowirondust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustSilver.get()), RecipeCategory.MISC, ItemList.itemIngotSilver.get(), 0.75F, 10)
-                .unlockedBy("blastsilverdust", has(ItemList.itemIngotSilver.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastsilverdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTantalum.get()), RecipeCategory.MISC, ItemList.itemIngotTantalum.get(), 0.75F, 10)
-                .unlockedBy("blasttantalumdust", has(ItemList.itemIngotTantalum.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttantalumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTartarite.get()), RecipeCategory.MISC, ItemList.itemIngotTartarite.get(), 0.75F, 10)
-                .unlockedBy("blasttartaritedust", has(ItemList.itemIngotTartarite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttartaritedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTechnetium.get()), RecipeCategory.MISC, ItemList.itemIngotTechnetium.get(), 0.75F, 10)
-                .unlockedBy("blasttechnetiumdust", has(ItemList.itemIngotTechnetium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttechnetiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustThallium.get()), RecipeCategory.MISC, ItemList.itemIngotThallium.get(), 0.75F, 10)
-                .unlockedBy("blastthalliumdust", has(ItemList.itemIngotThallium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastthalliumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTin.get()), RecipeCategory.MISC, ItemList.itemIngotTin.get(), 0.75F, 10)
-                .unlockedBy("blasttindust", has(ItemList.itemIngotTin.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttindust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTitanium.get()), RecipeCategory.MISC, ItemList.itemIngotTitanium.get(), 0.75F, 10)
-                .unlockedBy("blasttitaniumdust", has(ItemList.itemIngotTitanium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttitaniumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTritium.get()), RecipeCategory.MISC, ItemList.itemIngotTritium.get(), 0.75F, 10)
-                .unlockedBy("blasttritiumdust", has(ItemList.itemIngotTritium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttritiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustTungsten.get()), RecipeCategory.MISC, ItemList.itemIngotTungsten.get(), 0.75F, 10)
-                .unlockedBy("blasttungstendust", has(ItemList.itemIngotTungsten.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasttungstendust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustUnobtainium.get()), RecipeCategory.MISC, ItemList.itemIngotUnobtainium.get(), 0.75F, 10)
-                .unlockedBy("blastunobtainiumdust", has(ItemList.itemIngotUnobtainium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastunobtainiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustUranium.get()), RecipeCategory.MISC, ItemList.itemIngotUranium.get(), 0.75f, 10)
-                .unlockedBy("blasturaniumdust", has(ItemList.itemIngotUranium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blasturaniumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVanadium.get()), RecipeCategory.MISC, ItemList.itemIngotVanadium.get(), 0.75F, 10)
-                .unlockedBy("blastvanadiumdust", has(ItemList.itemIngotVanadium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastvanadiumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVibranium.get()), RecipeCategory.MISC, ItemList.itemIngotVibranium.get(), 0.75F, 10)
-                .unlockedBy("blastvibraniumdust", has(ItemList.itemIngotVibranium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastvibraniumdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVulcanite.get()), RecipeCategory.MISC, ItemList.itemIngotVulcanite.get(), 0.75F, 10)
-                .unlockedBy("blastvulcanitedust", has(ItemList.itemIngotVulcanite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastvulcanitedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustVyroxeres.get()), RecipeCategory.MISC, ItemList.itemIngotVyroxeres.get(), 0.75F, 10)
-                .unlockedBy("blastvyroxeresdust", has(ItemList.itemIngotVyroxeres.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastvyroxeresdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustYellorite.get()), RecipeCategory.MISC, ItemList.itemIngotYellorite.get(), 0.75F, 10)
-                .unlockedBy("blastyelloritedust", has(ItemList.itemIngotYellorite.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastyelloritedust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustZinc.get()), RecipeCategory.MISC, ItemList.itemIngotZinc.get(), 0.75F, 10)
-                .unlockedBy("blastzincdust", has(ItemList.itemIngotZinc.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastzincdust"));
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ItemList.itemDustZirconium.get()), RecipeCategory.MISC, ItemList.itemIngotZirconium.get(), 0.75F, 10)
-                .unlockedBy("blastzirconiumdust", has(ItemList.itemIngotZirconium.get()))
-                .save(consumer, ResourceLocation.parse("extraores:blastzirconiumdust"));
-    }*/
+        oreBlasting(RecipeSmeltablesList.smeltingAdamantine,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAdamantine,0.25F,100,"adamantine");
+        oreBlasting(RecipeSmeltablesList.smeltingAldourite,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAldourite,0.25F,100,"aldourite");
+        oreBlasting(RecipeSmeltablesList.smeltingAluminum,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAluminum,0.25F,100,"aluminum");
+        oreBlasting(RecipeSmeltablesList.smeltingAmericium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAmericium,0.25F,100,"americium");
+        oreBlasting(RecipeSmeltablesList.smeltingAmordrine,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAmordrine,0.25F,100,"amordrine");
+        oreBlasting(RecipeSmeltablesList.smeltingAngmallen,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAngmallen,0.25F,100,"angmallen");
+        oreBlasting(RecipeSmeltablesList.smeltingAstralSilver,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAstralSilver,0.25F,100,"astralsilver");
+        oreBlasting(RecipeSmeltablesList.smeltingAtlarus,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAtlarus,0.25F,100,"atlarus");
+        oreBlasting(RecipeSmeltablesList.smeltingAzureSilver,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotAzureSilver,0.25F,100,"azuresilver");
+        oreBlasting(RecipeSmeltablesList.smeltingBismuth,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotBismuth,0.25F,100,"bismuth");
+        oreBlasting(RecipeSmeltablesList.smeltingBlackSteel,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotBlackSteel,0.25F,100,"blacksteel");
+        oreBlasting(RecipeSmeltablesList.smeltingCadmium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCadmium,0.25F,100,"cadmium");
+        oreBlasting(RecipeSmeltablesList.smeltingCarmot,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCarmot,0.25F,100,"carmot");
+        oreBlasting(RecipeSmeltablesList.smeltingCelenegil,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCelenegil,0.25F,100,"celenegil");
+        oreBlasting(RecipeSmeltablesList.smeltingCeruclase,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCeruclase,0.25F,100,"ceruclase");
+        oreBlasting(RecipeSmeltablesList.smeltingChromium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotChromium,0.25F,100,"chromium");
+        oreBlasting(RecipeSmeltablesList.smeltingCobalt,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCobalt,0.25F,100,"cobalt");
+        oreBlasting(RecipeSmeltablesList.smeltingCopper,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCopper,0.25F,100,"copper");
+        oreBlasting(RecipeSmeltablesList.smeltingCrimsonSteel,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotCrimsonSteel,0.25F,100,"crimsonsteel");
+        oreBlasting(RecipeSmeltablesList.smeltingDeepIron,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotDeepIron,0.25F,100,"deepiron");
+        oreBlasting(RecipeSmeltablesList.smeltingDesichalkos,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotDesichalkos,0.25F,100,"desichalkos");
+        oreBlasting(RecipeSmeltablesList.smeltingEximite,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotEximite,0.25F,100,"eximite");
+        oreBlasting(RecipeSmeltablesList.smeltingGallium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotGallium,0.25F,100,"gallium");
+        oreBlasting(RecipeSmeltablesList.smeltingHaderoth,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotHaderoth,0.25F,100,"haderoth");
+        oreBlasting(RecipeSmeltablesList.smeltingHepatizon,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotHepatizon,0.25F,100,"hepatizon");
+        oreBlasting(RecipeSmeltablesList.smeltingIgnatius,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotIgnatius,0.25F,100,"ignatius");
+        oreBlasting(RecipeSmeltablesList.smeltingIndium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotIndium,0.25F,100,"indium");
+        oreBlasting(RecipeSmeltablesList.smeltingInfuscolium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotInfuscolium,0.25F,100,"infuscolium");
+        oreBlasting(RecipeSmeltablesList.smeltingInolashite,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotInolashite,0.25F,100,"inolashite");
+        oreBlasting(RecipeSmeltablesList.smeltingIridium,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotIridium,0.25F,100,"iridium");
+        oreBlasting(RecipeSmeltablesList.smeltingKalendrite,RecipeCategory.MISC,CookingBookCategory.MISC,ItemList.itemIngotKalendrite,0.25F,100,"kalendrite");
+    }
     /*
     protected void buildMekanismInjecting(RecipeOutput consumer)
     {
         //Ore
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAdamantine.get(), 4),true)
-                .unlockedBy("injectadamantineore", has(BlockList.blockOreAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:injectadamantineore"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreBismuth), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardBismuth.get(), 4),true)
+                .unlockedBy("injectbismuthore", has(BlockList.blockOreBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectbismuthore"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.oreAldourite), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAldourite.get(), 4),true)
                 .unlockedBy("injectaldouriteore", has(BlockList.blockOreAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:injectaldouriteore"));
@@ -1849,9 +1462,9 @@ public class ExOreRecipeProvider extends RecipeProvider
                 .unlockedBy("injectzirconiumore", has(BlockList.blockOreZirconium.get()))
                 .build(consumer, ResourceLocation.parse("extraores:injectzirconiumore"));
         //Raw
-        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAdamantine.get(), 4),true)
-                .unlockedBy("injectrawadamantine", has(ItemList.itemRawAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:injectrawadamantine"));
+        ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardBismuth.get(), 4),true)
+                .unlockedBy("injectrawbismuth", has(ItemList.itemRawBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:injectrawbismuth"));
         ItemStackChemicalToItemStackRecipeBuilder.injecting(IngredientCreatorAccess.item().from(ItemTagList.rawAldourite), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:hydrogen_chloride"))),1), new ItemStack(ItemList.itemShardAldourite.get(), 4),true)
                 .unlockedBy("injectrawaldourite", has(ItemList.itemRawAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:injectrawaldourite"));
@@ -2076,9 +1689,9 @@ public class ExOreRecipeProvider extends RecipeProvider
     protected void buildMekanismPurifying(RecipeOutput consumer)
     {
         //Ore
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAdamantine.get(), 3),true)
-                .unlockedBy("purifyadamantineore", has(BlockList.blockOreAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:purifyadamantineore"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreBismuth), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBismuth.get(), 3),true)
+                .unlockedBy("purifybismuthore", has(BlockList.blockOreBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifybismuthore"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.oreAldourite), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAldourite.get(), 3),true)
                 .unlockedBy("purifyaldouriteore", has(BlockList.blockOreAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:purifyaldouriteore"));
@@ -2299,9 +1912,9 @@ public class ExOreRecipeProvider extends RecipeProvider
                 .unlockedBy("purifyzirconiumore", has(BlockList.blockOreZirconium.get()))
                 .build(consumer, ResourceLocation.parse("extraores:purifyzirconiumore"));
         //Raw
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAdamantine.get(), 3),true)
-                .unlockedBy("purifyrawadamantine", has(ItemList.itemRawAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:purifyrawadamantine"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBismuth.get(), 3),true)
+                .unlockedBy("purifyrawbismuth", has(ItemList.itemRawBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifyrawbismuth"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.rawAldourite), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAldourite.get(), 3),true)
                 .unlockedBy("purifyrawaldourite", has(ItemList.itemRawAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:purifyrawaldourite"));
@@ -2522,9 +2135,9 @@ public class ExOreRecipeProvider extends RecipeProvider
                 .unlockedBy("purifyrawzirconium", has(ItemList.itemRawZirconium.get()))
                 .build(consumer, ResourceLocation.parse("extraores:purifyrawzirconium"));
         //Shard
-        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAdamantine), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAdamantine.get()),true)
-                .unlockedBy("purifyadamantine", has(ItemList.itemShardAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:purifyadamantine"));
+        ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardBismuth), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpBismuth.get()),true)
+                .unlockedBy("purifybismuth", has(ItemList.itemShardBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:purifybismuth"));
         ItemStackChemicalToItemStackRecipeBuilder.purifying(IngredientCreatorAccess.item().from(ItemTagList.shardAldourite), ChemicalStackIngredient.of(IngredientCreatorAccess.chemical().of(MekanismAPI.CHEMICAL_REGISTRY.get(ResourceLocation.parse("mekanism:oxygen"))),1), new ItemStack(ItemList.itemClumpAldourite.get()),true)
                 .unlockedBy("purifyaldourite", has(ItemList.itemShardAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:purifyaldourite"));
@@ -2748,9 +2361,9 @@ public class ExOreRecipeProvider extends RecipeProvider
 
     protected void buildMekanismCrushing(RecipeOutput consumer)
     {
-        ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAdamantine), new ItemStack(ItemList.itemDirtyDustAdamantine.get()))
-                .unlockedBy("crushadamantine", has(ItemList.itemClumpAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:crushadamantine"));
+        ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpBismuth), new ItemStack(ItemList.itemDirtyDustBismuth.get()))
+                .unlockedBy("crushbismuth", has(ItemList.itemClumpBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:crushbismuth"));
         ItemStackToItemStackRecipeBuilder.crushing(IngredientCreatorAccess.item().from(ItemTagList.clumpAldourite), new ItemStack(ItemList.itemDirtyDustAldourite.get()))
                 .unlockedBy("crushaldourite", has(ItemList.itemClumpAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:crushaldourite"));
@@ -2975,9 +2588,9 @@ public class ExOreRecipeProvider extends RecipeProvider
     protected void buildMekanismEnriching(RecipeOutput consumer)
     {
         //Ore
-        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAdamantine), new ItemStack(ItemList.itemDustAdamantine.get(), 2))
-                .unlockedBy("enrichadamantineore", has(BlockList.blockOreAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:enrichadamantineore"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreBismuth), new ItemStack(ItemList.itemDustBismuth.get(), 2))
+                .unlockedBy("enrichbismuthore", has(BlockList.blockOreBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichbismuthore"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.oreAldourite), new ItemStack(ItemList.itemDustAldourite.get(), 2))
                 .unlockedBy("enrichaldouriteore", has(BlockList.blockOreAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:enrichaldouriteore"));
@@ -3198,9 +2811,9 @@ public class ExOreRecipeProvider extends RecipeProvider
                 .unlockedBy("enrichzirconiumore", has(BlockList.blockOreZirconium.get()))
                 .build(consumer, ResourceLocation.parse("extraores:enrichzirconiumore"));
         //Raw
-        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAdamantine), new ItemStack(ItemList.itemDustAdamantine.get(), 2))
-                .unlockedBy("enrichrawadamantine", has(ItemList.itemRawAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:enrichrawadamantine"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawBismuth), new ItemStack(ItemList.itemDustBismuth.get(), 2))
+                .unlockedBy("enrichrawbismuth", has(ItemList.itemRawBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichrawbismuth"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.rawAldourite), new ItemStack(ItemList.itemDustAldourite.get(), 2))
                 .unlockedBy("enrichrawaldourite", has(ItemList.itemRawAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:enrichrawaldourite"));
@@ -3421,9 +3034,9 @@ public class ExOreRecipeProvider extends RecipeProvider
                 .unlockedBy("enrichrawzirconium", has(ItemList.itemRawZirconium.get()))
                 .build(consumer, ResourceLocation.parse("extraores:enrichrawzirconium"));
         //Dirty Dust
-        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAdamantine), new ItemStack(ItemList.itemDustAdamantine.get()))
-                .unlockedBy("enrichadamantinedirtydust", has(BlockList.blockOreAdamantine.get()))
-                .build(consumer, ResourceLocation.parse("extraores:enrichadamantinedirtydust"));
+        ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustBismuth), new ItemStack(ItemList.itemDustBismuth.get()))
+                .unlockedBy("enrichbismuthdirtydust", has(BlockList.blockOreBismuth.get()))
+                .build(consumer, ResourceLocation.parse("extraores:enrichbismuthdirtydust"));
         ItemStackToItemStackRecipeBuilder.enriching(IngredientCreatorAccess.item().from(ItemTagList.dirtyDustAldourite), new ItemStack(ItemList.itemDustAldourite.get()))
                 .unlockedBy("enrichaldouritedirtydust", has(BlockList.blockOreAldourite.get()))
                 .build(consumer, ResourceLocation.parse("extraores:enrichaldouritedirtydust"));
