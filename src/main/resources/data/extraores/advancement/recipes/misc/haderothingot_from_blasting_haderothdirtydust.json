@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_haderothdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:haderothdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:haderothingot_from_blasting_haderothdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_haderothdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:haderothingot_from_blasting_haderothdirtydust"
+    ]
+  }
+}

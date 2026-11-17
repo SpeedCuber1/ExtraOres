@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_haderothshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:haderothshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:haderothingot_from_smelting_haderothshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_haderothshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:haderothingot_from_smelting_haderothshard"
+    ]
+  }
+}

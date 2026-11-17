@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chromiumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:chromiumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:chromiumingot_from_smelting_chromiumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chromiumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:chromiumingot_from_smelting_chromiumclump"
+    ]
+  }
+}

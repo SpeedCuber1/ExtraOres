@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:unobtainiumingot_from_smelting_unobtainiumdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unobtainiumdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:unobtainiumdust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_unobtainiumdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:unobtainiumingot_from_smelting_unobtainiumdust"
+    ]
+  }
+}

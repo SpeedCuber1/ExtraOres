@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_americiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:americiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:americiumingot_from_smelting_americiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_americiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:americiumingot_from_smelting_americiumore"
+    ]
+  }
+}

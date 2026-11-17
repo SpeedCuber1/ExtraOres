@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plutoniumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:plutoniumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:plutoniumingot_from_blasting_plutoniumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plutoniumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:plutoniumingot_from_blasting_plutoniumclump"
+    ]
+  }
+}

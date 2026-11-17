@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kalendriteshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:kalendriteshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:kalendriteingot_from_smelting_kalendriteshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_kalendriteshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:kalendriteingot_from_smelting_kalendriteshard"
+    ]
+  }
+}

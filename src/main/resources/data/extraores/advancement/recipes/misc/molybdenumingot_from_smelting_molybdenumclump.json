@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_molybdenumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:molybdenumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:molybdenumingot_from_smelting_molybdenumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_molybdenumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:molybdenumingot_from_smelting_molybdenumclump"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kalendritedust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:kalendritedust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:kalendriteingot_from_blasting_kalendritedust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_kalendritedust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:kalendriteingot_from_blasting_kalendritedust"
+    ]
+  }
+}

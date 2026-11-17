@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawcobalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawcobalt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:cobaltingot_from_blasting_rawcobalt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawcobalt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:cobaltingot_from_blasting_rawcobalt"
+    ]
+  }
+}

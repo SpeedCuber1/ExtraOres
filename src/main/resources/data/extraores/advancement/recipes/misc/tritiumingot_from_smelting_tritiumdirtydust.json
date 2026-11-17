@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tritiumingot_from_smelting_tritiumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tritiumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tritiumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tritiumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tritiumingot_from_smelting_tritiumdirtydust"
+    ]
+  }
+}

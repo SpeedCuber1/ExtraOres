@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawmidasium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawmidasium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:midasiumingot_from_blasting_rawmidasium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawmidasium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:midasiumingot_from_blasting_rawmidasium"
+    ]
+  }
+}

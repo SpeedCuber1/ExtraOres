@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatepromethiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatepromethiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:promethiumingot_from_blasting_deepslatepromethiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatepromethiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:promethiumingot_from_blasting_deepslatepromethiumore"
+    ]
+  }
+}

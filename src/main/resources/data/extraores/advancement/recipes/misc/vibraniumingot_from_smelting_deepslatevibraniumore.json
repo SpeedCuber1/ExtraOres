@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatevibraniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatevibraniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vibraniumingot_from_smelting_deepslatevibraniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatevibraniumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vibraniumingot_from_smelting_deepslatevibraniumore"
+    ]
+  }
+}

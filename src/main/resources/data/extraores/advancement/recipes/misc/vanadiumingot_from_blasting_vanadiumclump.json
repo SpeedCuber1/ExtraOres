@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vanadiumingot_from_blasting_vanadiumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vanadiumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vanadiumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vanadiumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vanadiumingot_from_blasting_vanadiumclump"
+    ]
+  }
+}

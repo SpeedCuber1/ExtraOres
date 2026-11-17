@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_neodymiumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:neodymiumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:neodymiumingot_from_smelting_neodymiumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_neodymiumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:neodymiumingot_from_smelting_neodymiumclump"
+    ]
+  }
+}

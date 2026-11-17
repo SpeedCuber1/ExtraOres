@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_amordrineclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:amordrineclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:amordrineingot_from_blasting_amordrineclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_amordrineclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:amordrineingot_from_blasting_amordrineclump"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawniobium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawniobium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:niobiumingot_from_blasting_rawniobium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawniobium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:niobiumingot_from_blasting_rawniobium"
+    ]
+  }
+}

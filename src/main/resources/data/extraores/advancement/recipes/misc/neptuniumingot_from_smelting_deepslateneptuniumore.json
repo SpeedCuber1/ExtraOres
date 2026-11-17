@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateneptuniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateneptuniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:neptuniumingot_from_smelting_deepslateneptuniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateneptuniumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:neptuniumingot_from_smelting_deepslateneptuniumore"
+    ]
+  }
+}

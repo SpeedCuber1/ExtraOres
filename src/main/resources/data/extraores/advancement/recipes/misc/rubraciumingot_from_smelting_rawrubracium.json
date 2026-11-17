@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawrubracium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawrubracium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rubraciumingot_from_smelting_rawrubracium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawrubracium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rubraciumingot_from_smelting_rawrubracium"
+    ]
+  }
+}

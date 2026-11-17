@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_molybdenumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:molybdenumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:molybdenumingot_from_blasting_molybdenumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_molybdenumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:molybdenumingot_from_blasting_molybdenumdirtydust"
+    ]
+  }
+}

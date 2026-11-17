@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "tartarite",
+  "ingredient": "extraores:tartariteclump",
+  "result": {
+    "id": "extraores:tartariteingot"
+  }
+}

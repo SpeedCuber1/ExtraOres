@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vulcaniteblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "vulcaniteblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vulcaniteblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "vulcaniteblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vulcaniteblock"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hepatizonshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:hepatizonshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:hepatizoningot_from_blasting_hepatizonshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hepatizonshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:hepatizoningot_from_blasting_hepatizonshard"
+    ]
+  }
+}

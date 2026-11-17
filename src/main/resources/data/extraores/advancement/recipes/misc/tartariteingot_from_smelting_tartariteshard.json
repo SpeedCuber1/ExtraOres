@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_tartariteshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tartariteshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tartariteingot_from_smelting_tartariteshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tartariteshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tartariteingot_from_smelting_tartariteshard"
+    ]
+  }
+}

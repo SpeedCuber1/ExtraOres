@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateatlarusore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateatlarusore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:atlarusingot_from_smelting_deepslateatlarusore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateatlarusore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:atlarusingot_from_smelting_deepslateatlarusore"
+    ]
+  }
+}

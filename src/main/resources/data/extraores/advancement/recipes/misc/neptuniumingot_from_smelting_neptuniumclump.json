@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_neptuniumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:neptuniumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:neptuniumingot_from_smelting_neptuniumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_neptuniumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:neptuniumingot_from_smelting_neptuniumclump"
+    ]
+  }
+}

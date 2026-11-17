@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:zirconiumblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "zirconiumblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:zirconiumblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "zirconiumblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:zirconiumblock"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatecarmotore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatecarmotore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:carmotingot_from_smelting_deepslatecarmotore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatecarmotore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:carmotingot_from_smelting_deepslatecarmotore"
+    ]
+  }
+}

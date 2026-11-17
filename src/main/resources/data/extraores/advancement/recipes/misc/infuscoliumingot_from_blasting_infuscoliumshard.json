@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_infuscoliumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:infuscoliumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:infuscoliumingot_from_blasting_infuscoliumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_infuscoliumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:infuscoliumingot_from_blasting_infuscoliumshard"
+    ]
+  }
+}

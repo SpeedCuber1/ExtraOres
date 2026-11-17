@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_astralsilverore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:astralsilverore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:astralsilveringot_from_blasting_astralsilverore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_astralsilverore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:astralsilveringot_from_blasting_astralsilverore"
+    ]
+  }
+}

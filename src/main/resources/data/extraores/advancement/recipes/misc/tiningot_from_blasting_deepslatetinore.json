@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatetinore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatetinore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tiningot_from_blasting_deepslatetinore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatetinore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tiningot_from_blasting_deepslatetinore"
+    ]
+  }
+}

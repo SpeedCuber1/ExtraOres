@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawignatius": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawignatius"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:ignatiusingot_from_smelting_rawignatius"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawignatius"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:ignatiusingot_from_smelting_rawignatius"
+    ]
+  }
+}

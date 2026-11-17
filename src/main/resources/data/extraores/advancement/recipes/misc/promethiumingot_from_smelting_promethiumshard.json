@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_promethiumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:promethiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:promethiumingot_from_smelting_promethiumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_promethiumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:promethiumingot_from_smelting_promethiumshard"
+    ]
+  }
+}

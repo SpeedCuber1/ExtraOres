@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateinolashiteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateinolashiteore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:inolashiteingot_from_blasting_deepslateinolashiteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateinolashiteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:inolashiteingot_from_blasting_deepslateinolashiteore"
+    ]
+  }
+}

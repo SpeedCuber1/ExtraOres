@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "ceruclaseblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:ceruclaseblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:ceruclaseblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "ceruclaseblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:ceruclaseblock"
+    ]
+  }
+}

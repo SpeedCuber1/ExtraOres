@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_atlarusdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:atlarusdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:atlarusingot_from_smelting_atlarusdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_atlarusdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:atlarusingot_from_smelting_atlarusdirtydust"
+    ]
+  }
+}

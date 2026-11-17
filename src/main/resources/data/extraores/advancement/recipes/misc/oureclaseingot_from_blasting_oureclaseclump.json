@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oureclaseclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:oureclaseclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:oureclaseingot_from_blasting_oureclaseclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oureclaseclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:oureclaseingot_from_blasting_oureclaseclump"
+    ]
+  }
+}

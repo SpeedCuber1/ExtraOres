@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatecopperore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatecopperore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:copperingot_from_smelting_deepslatecopperore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatecopperore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:copperingot_from_smelting_deepslatecopperore"
+    ]
+  }
+}

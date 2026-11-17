@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_platinumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:platinumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:platinumingot_from_smelting_platinumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_platinumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:platinumingot_from_smelting_platinumdirtydust"
+    ]
+  }
+}

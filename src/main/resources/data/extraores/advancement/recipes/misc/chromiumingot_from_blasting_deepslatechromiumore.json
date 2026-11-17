@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatechromiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatechromiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:chromiumingot_from_blasting_deepslatechromiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatechromiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:chromiumingot_from_blasting_deepslatechromiumore"
+    ]
+  }
+}

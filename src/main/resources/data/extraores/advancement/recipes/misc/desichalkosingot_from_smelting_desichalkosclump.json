@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_desichalkosclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:desichalkosclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:desichalkosingot_from_smelting_desichalkosclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_desichalkosclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:desichalkosingot_from_smelting_desichalkosclump"
+    ]
+  }
+}

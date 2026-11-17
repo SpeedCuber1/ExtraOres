@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:spinelblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "spinelblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:spinelblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "spinelblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:spinelblock"
+    ]
+  }
+}

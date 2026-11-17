@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:jasper"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "jasper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:jasper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "jasper"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:jasper"
+    ]
+  }
+}

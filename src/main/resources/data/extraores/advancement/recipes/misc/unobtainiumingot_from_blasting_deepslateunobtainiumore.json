@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateunobtainiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateunobtainiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:unobtainiumingot_from_blasting_deepslateunobtainiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateunobtainiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:unobtainiumingot_from_blasting_deepslateunobtainiumore"
+    ]
+  }
+}

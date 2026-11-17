@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_inolashitedust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:inolashitedust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:inolashiteingot_from_smelting_inolashitedust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_inolashitedust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:inolashiteingot_from_smelting_inolashitedust"
+    ]
+  }
+}

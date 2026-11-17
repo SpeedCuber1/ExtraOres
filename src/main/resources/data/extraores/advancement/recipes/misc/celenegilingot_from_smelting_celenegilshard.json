@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_celenegilshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:celenegilshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:celenegilingot_from_smelting_celenegilshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_celenegilshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:celenegilingot_from_smelting_celenegilshard"
+    ]
+  }
+}

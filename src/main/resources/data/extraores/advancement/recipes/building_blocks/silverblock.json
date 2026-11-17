@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:silverblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "silverblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:silverblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "silverblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:silverblock"
+    ]
+  }
+}

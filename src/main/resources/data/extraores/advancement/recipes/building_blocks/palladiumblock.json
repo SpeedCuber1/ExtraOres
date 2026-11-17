@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:palladiumblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "palladiumblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:palladiumblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "palladiumblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:palladiumblock"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_thalliumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:thalliumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:thalliumingot_from_blasting_thalliumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_thalliumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:thalliumingot_from_blasting_thalliumdirtydust"
+    ]
+  }
+}

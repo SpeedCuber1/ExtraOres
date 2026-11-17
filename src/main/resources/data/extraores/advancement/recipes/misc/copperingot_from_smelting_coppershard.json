@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_coppershard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:coppershard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:copperingot_from_smelting_coppershard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_coppershard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:copperingot_from_smelting_coppershard"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:zincingot_from_blasting_zincdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zincdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:zincdust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_zincdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:zincingot_from_blasting_zincdust"
+    ]
+  }
+}

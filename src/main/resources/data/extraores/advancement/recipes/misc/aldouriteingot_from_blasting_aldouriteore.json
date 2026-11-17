@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aldouriteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:aldouriteore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:aldouriteingot_from_blasting_aldouriteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aldouriteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:aldouriteingot_from_blasting_aldouriteore"
+    ]
+  }
+}

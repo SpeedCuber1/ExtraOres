@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "cadmiumblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:cadmiumblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:cadmiumblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "cadmiumblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:cadmiumblock"
+    ]
+  }
+}

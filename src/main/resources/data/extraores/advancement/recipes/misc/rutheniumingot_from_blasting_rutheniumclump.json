@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rutheniumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rutheniumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rutheniumingot_from_blasting_rutheniumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rutheniumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rutheniumingot_from_blasting_rutheniumclump"
+    ]
+  }
+}

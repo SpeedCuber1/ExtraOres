@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:yelloriteingot_from_blasting_yelloritedust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yelloritedust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:yelloritedust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yelloritedust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:yelloriteingot_from_blasting_yelloritedust"
+    ]
+  }
+}

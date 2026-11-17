@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_angmallendirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:angmallendirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:angmalleningot_from_blasting_angmallendirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_angmallendirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:angmalleningot_from_blasting_angmallendirtydust"
+    ]
+  }
+}

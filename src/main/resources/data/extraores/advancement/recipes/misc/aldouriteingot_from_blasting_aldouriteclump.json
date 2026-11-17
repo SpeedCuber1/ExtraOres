@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aldouriteclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:aldouriteclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:aldouriteingot_from_blasting_aldouriteclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aldouriteclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:aldouriteingot_from_blasting_aldouriteclump"
+    ]
+  }
+}

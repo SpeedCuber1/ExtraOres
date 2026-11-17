@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aluminumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:aluminumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:aluminumingot_from_blasting_aluminumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aluminumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:aluminumingot_from_blasting_aluminumdirtydust"
+    ]
+  }
+}

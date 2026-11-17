@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawcrimsonsteel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawcrimsonsteel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:crimsonsteelingot_from_smelting_rawcrimsonsteel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawcrimsonsteel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:crimsonsteelingot_from_smelting_rawcrimsonsteel"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateazuresilverore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateazuresilverore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:azuresilveringot_from_smelting_deepslateazuresilverore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateazuresilverore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:azuresilveringot_from_smelting_deepslateazuresilverore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawruthenium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawruthenium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rutheniumingot_from_smelting_rawruthenium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawruthenium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rutheniumingot_from_smelting_rawruthenium"
+    ]
+  }
+}

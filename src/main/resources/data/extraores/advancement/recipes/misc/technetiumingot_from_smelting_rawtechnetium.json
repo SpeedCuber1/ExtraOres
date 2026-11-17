@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawtechnetium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawtechnetium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:technetiumingot_from_smelting_rawtechnetium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawtechnetium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:technetiumingot_from_smelting_rawtechnetium"
+    ]
+  }
+}

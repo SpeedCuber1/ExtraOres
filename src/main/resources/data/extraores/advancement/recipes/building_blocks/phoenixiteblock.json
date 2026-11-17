@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:phoenixiteblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "phoenixiteblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:phoenixiteblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "phoenixiteblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:phoenixiteblock"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_platinumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:platinumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:platinumingot_from_smelting_platinumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_platinumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:platinumingot_from_smelting_platinumshard"
+    ]
+  }
+}

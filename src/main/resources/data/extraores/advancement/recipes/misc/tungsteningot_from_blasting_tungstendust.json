@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tungsteningot_from_blasting_tungstendust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tungstendust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tungstendust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tungstendust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tungsteningot_from_blasting_tungstendust"
+    ]
+  }
+}

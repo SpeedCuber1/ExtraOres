@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepironore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepironore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:deepironingot_from_smelting_deepironore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepironore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:deepironingot_from_smelting_deepironore"
+    ]
+  }
+}

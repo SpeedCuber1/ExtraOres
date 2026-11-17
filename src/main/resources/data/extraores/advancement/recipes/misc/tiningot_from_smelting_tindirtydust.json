@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tiningot_from_smelting_tindirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tindirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tindirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tindirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tiningot_from_smelting_tindirtydust"
+    ]
+  }
+}

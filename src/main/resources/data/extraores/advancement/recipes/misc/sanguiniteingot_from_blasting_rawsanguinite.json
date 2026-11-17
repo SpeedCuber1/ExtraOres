@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawsanguinite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawsanguinite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:sanguiniteingot_from_blasting_rawsanguinite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawsanguinite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:sanguiniteingot_from_blasting_rawsanguinite"
+    ]
+  }
+}

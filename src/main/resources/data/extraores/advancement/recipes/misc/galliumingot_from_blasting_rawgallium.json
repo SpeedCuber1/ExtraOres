@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawgallium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawgallium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:galliumingot_from_blasting_rawgallium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawgallium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:galliumingot_from_blasting_rawgallium"
+    ]
+  }
+}

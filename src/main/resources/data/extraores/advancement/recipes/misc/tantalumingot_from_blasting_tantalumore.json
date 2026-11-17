@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_tantalumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tantalumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tantalumingot_from_blasting_tantalumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tantalumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tantalumingot_from_blasting_tantalumore"
+    ]
+  }
+}

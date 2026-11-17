@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_celenegildirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:celenegildirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:celenegilingot_from_blasting_celenegildirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_celenegildirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:celenegilingot_from_blasting_celenegildirtydust"
+    ]
+  }
+}

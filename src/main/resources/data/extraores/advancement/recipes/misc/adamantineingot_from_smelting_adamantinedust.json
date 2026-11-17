@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_adamantinedust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:adamantinedust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:adamantineingot_from_smelting_adamantinedust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_adamantinedust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:adamantineingot_from_smelting_adamantinedust"
+    ]
+  }
+}

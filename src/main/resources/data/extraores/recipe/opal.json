@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "extraores:opalblock"
+  ],
+  "result": {
+    "count": 9,
+    "id": "extraores:opal"
+  }
+}

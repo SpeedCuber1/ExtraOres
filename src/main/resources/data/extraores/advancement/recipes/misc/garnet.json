@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "garnet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:garnet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:garnet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "garnet"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:garnet"
+    ]
+  }
+}

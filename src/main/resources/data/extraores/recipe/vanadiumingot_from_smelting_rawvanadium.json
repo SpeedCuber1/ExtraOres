@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "vanadium",
+  "ingredient": "extraores:rawvanadium",
+  "result": {
+    "id": "extraores:vanadiumingot"
+  }
+}

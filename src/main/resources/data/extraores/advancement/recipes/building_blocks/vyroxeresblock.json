@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vyroxeresblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "vyroxeresblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vyroxeresblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "vyroxeresblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vyroxeresblock"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:malachiteblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "malachiteblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:malachiteblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "malachiteblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:malachiteblock"
+    ]
+  }
+}

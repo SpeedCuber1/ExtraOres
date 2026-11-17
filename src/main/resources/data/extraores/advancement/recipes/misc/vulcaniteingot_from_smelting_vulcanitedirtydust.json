@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vulcaniteingot_from_smelting_vulcanitedirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vulcanitedirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vulcanitedirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vulcanitedirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vulcaniteingot_from_smelting_vulcanitedirtydust"
+    ]
+  }
+}

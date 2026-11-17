@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "extraores:tantalumblock"
+  ],
+  "result": {
+    "count": 9,
+    "id": "extraores:tantalumingot"
+  }
+}

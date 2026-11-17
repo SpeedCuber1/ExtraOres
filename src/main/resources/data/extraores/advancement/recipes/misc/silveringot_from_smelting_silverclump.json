@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silverclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:silverclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:silveringot_from_smelting_silverclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_silverclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:silveringot_from_smelting_silverclump"
+    ]
+  }
+}

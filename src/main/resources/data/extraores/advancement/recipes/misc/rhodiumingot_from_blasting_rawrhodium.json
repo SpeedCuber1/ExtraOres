@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawrhodium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawrhodium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rhodiumingot_from_blasting_rawrhodium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawrhodium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rhodiumingot_from_blasting_rawrhodium"
+    ]
+  }
+}

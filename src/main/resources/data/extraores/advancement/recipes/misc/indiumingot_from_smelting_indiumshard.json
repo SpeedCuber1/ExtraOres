@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_indiumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:indiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:indiumingot_from_smelting_indiumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_indiumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:indiumingot_from_smelting_indiumshard"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blacksteelore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:blacksteelore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blacksteelingot_from_blasting_blacksteelore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blacksteelore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blacksteelingot_from_blasting_blacksteelore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rheniumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rheniumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rheniumingot_from_smelting_rheniumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rheniumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rheniumingot_from_smelting_rheniumshard"
+    ]
+  }
+}

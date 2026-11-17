@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crimsonsteeldust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:crimsonsteeldust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:crimsonsteelingot_from_smelting_crimsonsteeldust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crimsonsteeldust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:crimsonsteelingot_from_smelting_crimsonsteeldust"
+    ]
+  }
+}

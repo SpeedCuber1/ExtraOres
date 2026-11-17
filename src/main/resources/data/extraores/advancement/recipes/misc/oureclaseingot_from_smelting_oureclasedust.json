@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oureclasedust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:oureclasedust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:oureclaseingot_from_smelting_oureclasedust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oureclasedust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:oureclaseingot_from_smelting_oureclasedust"
+    ]
+  }
+}

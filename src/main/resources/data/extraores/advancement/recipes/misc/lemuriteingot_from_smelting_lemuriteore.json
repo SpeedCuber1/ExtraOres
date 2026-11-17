@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lemuriteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:lemuriteore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:lemuriteingot_from_smelting_lemuriteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lemuriteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:lemuriteingot_from_smelting_lemuriteore"
+    ]
+  }
+}

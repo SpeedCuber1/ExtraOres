@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawuranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawuranium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:uraniumingot_from_smelting_rawuranium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawuranium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:uraniumingot_from_smelting_rawuranium"
+    ]
+  }
+}

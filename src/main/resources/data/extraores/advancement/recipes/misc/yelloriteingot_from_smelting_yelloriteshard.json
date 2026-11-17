@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:yelloriteingot_from_smelting_yelloriteshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yelloriteshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:yelloriteshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yelloriteshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:yelloriteingot_from_smelting_yelloriteshard"
+    ]
+  }
+}

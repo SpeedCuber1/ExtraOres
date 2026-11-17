@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vyroxeresingot_from_smelting_vyroxeresclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vyroxeresclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vyroxeresclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vyroxeresclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vyroxeresingot_from_smelting_vyroxeresclump"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "aldouriteingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:aldouriteingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:aldouriteingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "aldouriteingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:aldouriteingot"
+    ]
+  }
+}

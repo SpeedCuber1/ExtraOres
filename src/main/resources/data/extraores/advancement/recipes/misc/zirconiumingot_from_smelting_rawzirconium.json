@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawzirconium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawzirconium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:zirconiumingot_from_smelting_rawzirconium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawzirconium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:zirconiumingot_from_smelting_rawzirconium"
+    ]
+  }
+}

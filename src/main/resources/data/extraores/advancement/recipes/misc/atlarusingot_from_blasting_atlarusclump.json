@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_atlarusclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:atlarusclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:atlarusingot_from_blasting_atlarusclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_atlarusclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:atlarusingot_from_blasting_atlarusclump"
+    ]
+  }
+}

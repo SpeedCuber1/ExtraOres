@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "amordrineingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:amordrineingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:amordrineingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "amordrineingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:amordrineingot"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatetritiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatetritiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tritiumingot_from_blasting_deepslatetritiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatetritiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tritiumingot_from_blasting_deepslatetritiumore"
+    ]
+  }
+}

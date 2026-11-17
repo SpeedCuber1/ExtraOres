@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslaterubraciumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslaterubraciumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rubraciumingot_from_smelting_deepslaterubraciumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslaterubraciumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rubraciumingot_from_smelting_deepslaterubraciumore"
+    ]
+  }
+}

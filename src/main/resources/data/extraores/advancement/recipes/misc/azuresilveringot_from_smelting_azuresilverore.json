@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_azuresilverore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:azuresilverore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:azuresilveringot_from_smelting_azuresilverore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_azuresilverore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:azuresilveringot_from_smelting_azuresilverore"
+    ]
+  }
+}

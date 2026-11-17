@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawosmium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawosmium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:osmiumingot_from_blasting_rawosmium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawosmium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:osmiumingot_from_blasting_rawosmium"
+    ]
+  }
+}

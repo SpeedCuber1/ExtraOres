@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vanadiumingot_from_smelting_vanadiumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vanadiumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vanadiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vanadiumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vanadiumingot_from_smelting_vanadiumshard"
+    ]
+  }
+}

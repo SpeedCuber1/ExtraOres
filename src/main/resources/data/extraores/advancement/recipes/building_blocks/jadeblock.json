@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:jadeblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "jadeblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:jadeblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "jadeblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:jadeblock"
+    ]
+  }
+}

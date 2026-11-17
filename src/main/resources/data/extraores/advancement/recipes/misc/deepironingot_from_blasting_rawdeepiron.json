@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawdeepiron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawdeepiron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:deepironingot_from_blasting_rawdeepiron"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawdeepiron"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:deepironingot_from_blasting_rawdeepiron"
+    ]
+  }
+}

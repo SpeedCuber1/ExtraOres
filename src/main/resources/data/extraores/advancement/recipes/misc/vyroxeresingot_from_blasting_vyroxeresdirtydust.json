@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vyroxeresingot_from_blasting_vyroxeresdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vyroxeresdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vyroxeresdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vyroxeresdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vyroxeresingot_from_blasting_vyroxeresdirtydust"
+    ]
+  }
+}

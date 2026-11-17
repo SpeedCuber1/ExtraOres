@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cadmiumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:cadmiumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:cadmiumingot_from_smelting_cadmiumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cadmiumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:cadmiumingot_from_smelting_cadmiumclump"
+    ]
+  }
+}

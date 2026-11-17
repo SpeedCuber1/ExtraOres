@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vibraniumingot_from_blasting_vibraniumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vibraniumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vibraniumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vibraniumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vibraniumingot_from_blasting_vibraniumdirtydust"
+    ]
+  }
+}

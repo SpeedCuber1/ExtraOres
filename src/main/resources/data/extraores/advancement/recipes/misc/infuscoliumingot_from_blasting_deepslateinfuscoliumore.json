@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateinfuscoliumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateinfuscoliumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:infuscoliumingot_from_blasting_deepslateinfuscoliumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateinfuscoliumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:infuscoliumingot_from_blasting_deepslateinfuscoliumore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silverore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:silverore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:silveringot_from_blasting_silverore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_silverore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:silveringot_from_blasting_silverore"
+    ]
+  }
+}

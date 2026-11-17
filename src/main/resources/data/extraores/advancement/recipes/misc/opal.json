@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:opal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "opal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:opal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "opal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:opal"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_americiumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:americiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:americiumingot_from_smelting_americiumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_americiumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:americiumingot_from_smelting_americiumshard"
+    ]
+  }
+}

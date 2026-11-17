@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rutheniumdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rutheniumdust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rutheniumingot_from_blasting_rutheniumdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rutheniumdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rutheniumingot_from_blasting_rutheniumdust"
+    ]
+  }
+}

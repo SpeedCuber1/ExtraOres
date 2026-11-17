@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatemithrilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatemithrilore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:mithrilingot_from_smelting_deepslatemithrilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatemithrilore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:mithrilingot_from_smelting_deepslatemithrilore"
+    ]
+  }
+}

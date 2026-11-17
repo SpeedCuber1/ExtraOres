@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateplatinumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateplatinumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:platinumingot_from_blasting_deepslateplatinumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateplatinumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:platinumingot_from_blasting_deepslateplatinumore"
+    ]
+  }
+}

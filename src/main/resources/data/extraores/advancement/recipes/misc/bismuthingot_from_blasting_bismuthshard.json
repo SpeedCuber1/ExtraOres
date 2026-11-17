@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bismuthshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:bismuthshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:bismuthingot_from_blasting_bismuthshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bismuthshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:bismuthingot_from_blasting_bismuthshard"
+    ]
+  }
+}

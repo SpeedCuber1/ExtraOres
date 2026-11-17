@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:titaniumingot_from_smelting_titaniumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_titaniumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:titaniumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_titaniumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:titaniumingot_from_smelting_titaniumclump"
+    ]
+  }
+}

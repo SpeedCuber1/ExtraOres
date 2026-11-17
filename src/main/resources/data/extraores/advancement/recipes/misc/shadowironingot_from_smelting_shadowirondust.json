@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_shadowirondust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:shadowirondust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:shadowironingot_from_smelting_shadowirondust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_shadowirondust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:shadowironingot_from_smelting_shadowirondust"
+    ]
+  }
+}

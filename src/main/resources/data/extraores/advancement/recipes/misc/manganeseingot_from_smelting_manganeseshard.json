@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_manganeseshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:manganeseshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:manganeseingot_from_smelting_manganeseshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_manganeseshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:manganeseingot_from_smelting_manganeseshard"
+    ]
+  }
+}

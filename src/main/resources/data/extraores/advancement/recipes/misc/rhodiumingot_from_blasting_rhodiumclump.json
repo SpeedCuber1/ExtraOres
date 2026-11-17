@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rhodiumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rhodiumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rhodiumingot_from_blasting_rhodiumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rhodiumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rhodiumingot_from_blasting_rhodiumclump"
+    ]
+  }
+}

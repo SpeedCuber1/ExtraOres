@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crimsonsteelshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:crimsonsteelshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:crimsonsteelingot_from_blasting_crimsonsteelshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crimsonsteelshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:crimsonsteelingot_from_blasting_crimsonsteelshard"
+    ]
+  }
+}

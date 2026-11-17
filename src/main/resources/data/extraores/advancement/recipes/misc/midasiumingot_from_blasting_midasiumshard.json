@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_midasiumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:midasiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:midasiumingot_from_blasting_midasiumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_midasiumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:midasiumingot_from_blasting_midasiumshard"
+    ]
+  }
+}

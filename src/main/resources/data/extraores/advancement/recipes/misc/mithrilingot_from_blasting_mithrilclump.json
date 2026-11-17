@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mithrilclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:mithrilclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:mithrilingot_from_blasting_mithrilclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mithrilclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:mithrilingot_from_blasting_mithrilclump"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawpalladium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawpalladium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:palladiumingot_from_blasting_rawpalladium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawpalladium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:palladiumingot_from_blasting_rawpalladium"
+    ]
+  }
+}

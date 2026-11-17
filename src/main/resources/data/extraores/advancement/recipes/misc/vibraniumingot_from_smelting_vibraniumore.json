@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vibraniumingot_from_smelting_vibraniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vibraniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vibraniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vibraniumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vibraniumingot_from_smelting_vibraniumore"
+    ]
+  }
+}

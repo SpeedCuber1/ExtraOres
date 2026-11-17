@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslaterhodiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslaterhodiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rhodiumingot_from_smelting_deepslaterhodiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslaterhodiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rhodiumingot_from_smelting_deepslaterhodiumore"
+    ]
+  }
+}

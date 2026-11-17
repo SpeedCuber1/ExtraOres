@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rheniumingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "rheniumingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rheniumingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "rheniumingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rheniumingot"
+    ]
+  }
+}

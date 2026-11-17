@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatehaderothore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatehaderothore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:haderothingot_from_smelting_deepslatehaderothore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatehaderothore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:haderothingot_from_smelting_deepslatehaderothore"
+    ]
+  }
+}

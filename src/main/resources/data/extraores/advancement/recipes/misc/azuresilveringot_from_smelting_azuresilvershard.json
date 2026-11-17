@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_azuresilvershard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:azuresilvershard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:azuresilveringot_from_smelting_azuresilvershard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_azuresilvershard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:azuresilveringot_from_smelting_azuresilvershard"
+    ]
+  }
+}

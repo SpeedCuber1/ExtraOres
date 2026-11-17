@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_carmotshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:carmotshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:carmotingot_from_smelting_carmotshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_carmotshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:carmotingot_from_smelting_carmotshard"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:sapphireblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "sapphireblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:sapphireblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "sapphireblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:sapphireblock"
+    ]
+  }
+}

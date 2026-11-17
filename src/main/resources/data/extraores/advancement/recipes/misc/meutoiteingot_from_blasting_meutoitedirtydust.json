@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_meutoitedirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:meutoitedirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:meutoiteingot_from_blasting_meutoitedirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_meutoitedirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:meutoiteingot_from_blasting_meutoitedirtydust"
+    ]
+  }
+}

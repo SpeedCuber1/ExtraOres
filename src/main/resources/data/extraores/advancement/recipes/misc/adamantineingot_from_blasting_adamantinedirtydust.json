@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_adamantinedirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:adamantinedirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:adamantineingot_from_blasting_adamantinedirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_adamantinedirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:adamantineingot_from_blasting_adamantinedirtydust"
+    ]
+  }
+}

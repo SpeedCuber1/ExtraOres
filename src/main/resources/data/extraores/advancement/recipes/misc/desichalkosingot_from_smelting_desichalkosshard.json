@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_desichalkosshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:desichalkosshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:desichalkosingot_from_smelting_desichalkosshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_desichalkosshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:desichalkosingot_from_smelting_desichalkosshard"
+    ]
+  }
+}

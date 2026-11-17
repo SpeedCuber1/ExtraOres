@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mithrilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:mithrilore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:mithrilingot_from_blasting_mithrilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mithrilore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:mithrilingot_from_blasting_mithrilore"
+    ]
+  }
+}

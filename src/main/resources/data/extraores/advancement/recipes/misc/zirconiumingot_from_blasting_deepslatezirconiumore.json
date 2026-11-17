@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatezirconiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatezirconiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:zirconiumingot_from_blasting_deepslatezirconiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatezirconiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:zirconiumingot_from_blasting_deepslatezirconiumore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vibraniumingot_from_smelting_vibraniumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vibraniumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vibraniumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vibraniumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vibraniumingot_from_smelting_vibraniumclump"
+    ]
+  }
+}

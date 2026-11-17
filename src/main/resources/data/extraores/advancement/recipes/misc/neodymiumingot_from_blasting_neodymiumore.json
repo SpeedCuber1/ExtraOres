@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_neodymiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:neodymiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:neodymiumingot_from_blasting_neodymiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_neodymiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:neodymiumingot_from_blasting_neodymiumore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silverdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:silverdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:silveringot_from_smelting_silverdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_silverdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:silveringot_from_smelting_silverdirtydust"
+    ]
+  }
+}

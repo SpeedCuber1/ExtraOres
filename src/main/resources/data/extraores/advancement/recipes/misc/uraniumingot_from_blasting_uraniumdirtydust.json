@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:uraniumingot_from_blasting_uraniumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_uraniumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:uraniumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_uraniumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:uraniumingot_from_blasting_uraniumdirtydust"
+    ]
+  }
+}

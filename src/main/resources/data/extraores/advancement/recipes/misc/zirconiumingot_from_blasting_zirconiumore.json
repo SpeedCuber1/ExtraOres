@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:zirconiumingot_from_blasting_zirconiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zirconiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:zirconiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_zirconiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:zirconiumingot_from_blasting_zirconiumore"
+    ]
+  }
+}

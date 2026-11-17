@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vulcaniteingot_from_blasting_vulcaniteclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vulcaniteclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vulcaniteclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vulcaniteclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vulcaniteingot_from_blasting_vulcaniteclump"
+    ]
+  }
+}

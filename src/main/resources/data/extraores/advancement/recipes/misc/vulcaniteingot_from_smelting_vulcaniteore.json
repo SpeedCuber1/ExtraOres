@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vulcaniteingot_from_smelting_vulcaniteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vulcaniteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vulcaniteore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vulcaniteore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vulcaniteingot_from_smelting_vulcaniteore"
+    ]
+  }
+}

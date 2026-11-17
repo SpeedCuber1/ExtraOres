@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hepatizondust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:hepatizondust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:hepatizoningot_from_smelting_hepatizondust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hepatizondust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:hepatizoningot_from_smelting_hepatizondust"
+    ]
+  }
+}

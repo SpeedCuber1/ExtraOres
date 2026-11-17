@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawdesichalkos": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawdesichalkos"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:desichalkosingot_from_blasting_rawdesichalkos"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawdesichalkos"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:desichalkosingot_from_blasting_rawdesichalkos"
+    ]
+  }
+}

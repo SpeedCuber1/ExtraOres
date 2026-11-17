@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oureclaseshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:oureclaseshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:oureclaseingot_from_blasting_oureclaseshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oureclaseshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:oureclaseingot_from_blasting_oureclaseshard"
+    ]
+  }
+}

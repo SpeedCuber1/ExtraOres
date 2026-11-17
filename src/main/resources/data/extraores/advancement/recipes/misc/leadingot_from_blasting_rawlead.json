@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawlead": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawlead"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:leadingot_from_blasting_rawlead"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawlead"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:leadingot_from_blasting_rawlead"
+    ]
+  }
+}

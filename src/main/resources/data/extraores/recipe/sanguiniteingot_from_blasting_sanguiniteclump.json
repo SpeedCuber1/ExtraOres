@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "sanguinite",
+  "ingredient": "extraores:sanguiniteclump",
+  "result": {
+    "id": "extraores:sanguiniteingot"
+  }
+}

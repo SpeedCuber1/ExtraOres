@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chromiumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:chromiumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:chromiumingot_from_smelting_chromiumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chromiumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:chromiumingot_from_smelting_chromiumshard"
+    ]
+  }
+}

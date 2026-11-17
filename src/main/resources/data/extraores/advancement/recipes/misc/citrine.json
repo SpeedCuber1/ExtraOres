@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "citrine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:citrine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:citrine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "citrine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:citrine"
+    ]
+  }
+}

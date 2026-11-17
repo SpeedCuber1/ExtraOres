@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tritiumingot_from_blasting_tritiumclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tritiumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tritiumclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tritiumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tritiumingot_from_blasting_tritiumclump"
+    ]
+  }
+}

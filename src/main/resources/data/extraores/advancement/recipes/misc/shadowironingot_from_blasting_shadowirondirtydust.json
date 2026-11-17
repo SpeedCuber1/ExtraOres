@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_shadowirondirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:shadowirondirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:shadowironingot_from_blasting_shadowirondirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_shadowirondirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:shadowironingot_from_blasting_shadowirondirtydust"
+    ]
+  }
+}

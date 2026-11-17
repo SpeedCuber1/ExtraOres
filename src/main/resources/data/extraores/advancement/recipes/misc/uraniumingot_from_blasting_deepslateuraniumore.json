@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateuraniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateuraniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:uraniumingot_from_blasting_deepslateuraniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateuraniumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:uraniumingot_from_blasting_deepslateuraniumore"
+    ]
+  }
+}

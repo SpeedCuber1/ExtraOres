@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatehepatizonore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatehepatizonore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:hepatizoningot_from_blasting_deepslatehepatizonore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatehepatizonore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:hepatizoningot_from_blasting_deepslatehepatizonore"
+    ]
+  }
+}

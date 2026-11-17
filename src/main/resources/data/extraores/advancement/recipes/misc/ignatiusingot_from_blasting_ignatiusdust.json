@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ignatiusdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:ignatiusdust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:ignatiusingot_from_blasting_ignatiusdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ignatiusdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:ignatiusingot_from_blasting_ignatiusdust"
+    ]
+  }
+}

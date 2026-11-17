@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rawamericium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rawamericium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:americiumingot_from_blasting_rawamericium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rawamericium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:americiumingot_from_blasting_rawamericium"
+    ]
+  }
+}

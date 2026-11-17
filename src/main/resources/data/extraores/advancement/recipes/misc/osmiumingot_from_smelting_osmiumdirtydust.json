@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_osmiumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:osmiumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:osmiumingot_from_smelting_osmiumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_osmiumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:osmiumingot_from_smelting_osmiumdirtydust"
+    ]
+  }
+}

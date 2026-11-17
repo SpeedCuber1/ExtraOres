@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "extraores:vanadiumblock"
+  ],
+  "result": {
+    "count": 9,
+    "id": "extraores:vanadiumingot"
+  }
+}

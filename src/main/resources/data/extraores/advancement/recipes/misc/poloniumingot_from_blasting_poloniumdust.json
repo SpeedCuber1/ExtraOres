@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_poloniumdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:poloniumdust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:poloniumingot_from_blasting_poloniumdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_poloniumdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:poloniumingot_from_blasting_poloniumdust"
+    ]
+  }
+}

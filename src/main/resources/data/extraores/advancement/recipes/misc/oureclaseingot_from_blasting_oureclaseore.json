@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oureclaseore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:oureclaseore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:oureclaseingot_from_blasting_oureclaseore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oureclaseore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:oureclaseingot_from_blasting_oureclaseore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "angmallenblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:angmallenblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:angmallenblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "angmallenblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:angmallenblock"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "chrysocollablock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:chrysocollablock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:chrysocollablock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "chrysocollablock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:chrysocollablock"
+    ]
+  }
+}

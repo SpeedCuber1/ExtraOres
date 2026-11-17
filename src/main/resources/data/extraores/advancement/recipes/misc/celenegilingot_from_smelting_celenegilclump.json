@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_celenegilclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:celenegilclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:celenegilingot_from_smelting_celenegilclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_celenegilclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:celenegilingot_from_smelting_celenegilclump"
+    ]
+  }
+}

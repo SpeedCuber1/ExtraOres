@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepirondirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepirondirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:deepironingot_from_smelting_deepirondirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepirondirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:deepironingot_from_smelting_deepirondirtydust"
+    ]
+  }
+}

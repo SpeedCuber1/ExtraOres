@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslatecrimsonsteelore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslatecrimsonsteelore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:crimsonsteelingot_from_blasting_deepslatecrimsonsteelore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslatecrimsonsteelore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:crimsonsteelingot_from_blasting_deepslatecrimsonsteelore"
+    ]
+  }
+}

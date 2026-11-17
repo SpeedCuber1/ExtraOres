@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_tartaritedust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tartaritedust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tartariteingot_from_smelting_tartaritedust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tartaritedust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tartariteingot_from_smelting_tartaritedust"
+    ]
+  }
+}

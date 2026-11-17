@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslateindiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepslateindiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:indiumingot_from_blasting_deepslateindiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslateindiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:indiumingot_from_blasting_deepslateindiumore"
+    ]
+  }
+}

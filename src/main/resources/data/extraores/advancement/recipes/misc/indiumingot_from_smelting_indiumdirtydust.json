@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_indiumdirtydust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:indiumdirtydust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:indiumingot_from_smelting_indiumdirtydust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_indiumdirtydust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:indiumingot_from_smelting_indiumdirtydust"
+    ]
+  }
+}

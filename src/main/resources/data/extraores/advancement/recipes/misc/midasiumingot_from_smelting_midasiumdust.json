@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_midasiumdust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:midasiumdust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:midasiumingot_from_smelting_midasiumdust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_midasiumdust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:midasiumingot_from_smelting_midasiumdust"
+    ]
+  }
+}

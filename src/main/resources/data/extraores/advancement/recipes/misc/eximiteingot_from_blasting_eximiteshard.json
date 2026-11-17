@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_eximiteshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:eximiteshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:eximiteingot_from_blasting_eximiteshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_eximiteshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:eximiteingot_from_blasting_eximiteshard"
+    ]
+  }
+}

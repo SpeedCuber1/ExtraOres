@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:vibraniumingot_from_blasting_vibraniumshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vibraniumshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:vibraniumshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vibraniumshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:vibraniumingot_from_blasting_vibraniumshard"
+    ]
+  }
+}

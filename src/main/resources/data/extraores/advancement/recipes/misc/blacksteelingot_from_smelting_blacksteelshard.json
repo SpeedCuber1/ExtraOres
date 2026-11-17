@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blacksteelshard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:blacksteelshard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:blacksteelingot_from_smelting_blacksteelshard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blacksteelshard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:blacksteelingot_from_smelting_blacksteelshard"
+    ]
+  }
+}

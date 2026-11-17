@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_palladiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:palladiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:palladiumingot_from_smelting_palladiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_palladiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:palladiumingot_from_smelting_palladiumore"
+    ]
+  }
+}

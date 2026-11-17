@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_promethiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:promethiumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:promethiumingot_from_smelting_promethiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_promethiumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:promethiumingot_from_smelting_promethiumore"
+    ]
+  }
+}

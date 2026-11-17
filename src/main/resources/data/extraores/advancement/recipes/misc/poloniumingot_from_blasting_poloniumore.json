@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_poloniumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:poloniumore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:poloniumingot_from_blasting_poloniumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_poloniumore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:poloniumingot_from_blasting_poloniumore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepironclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:deepironclump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:deepironingot_from_blasting_deepironclump"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepironclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:deepironingot_from_blasting_deepironclump"
+    ]
+  }
+}

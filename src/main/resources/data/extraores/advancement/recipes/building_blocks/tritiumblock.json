@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:tritiumblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "tritiumblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:tritiumblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "tritiumblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:tritiumblock"
+    ]
+  }
+}
