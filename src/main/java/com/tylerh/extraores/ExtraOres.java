@@ -83,6 +83,7 @@ public class ExtraOres
         event.accept(BlockList.blockOreJade.get().asItem());
         event.accept(BlockList.blockOreJasper.get().asItem());
         event.accept(BlockList.blockOreKalendrite.get().asItem());
+        event.accept(BlockList.blockOreKryptonite.get().asItem());
         event.accept(BlockList.blockOreKyanite.get().asItem());
         event.accept(BlockList.blockOreLead.get().asItem());
         event.accept(BlockList.blockOreLemurite.get().asItem());
@@ -179,6 +180,7 @@ public class ExtraOres
         event.accept(BlockList.blockDeepslateOreIridium.get().asItem());
         event.accept(BlockList.blockDeepslateOreJade.get().asItem());
         event.accept(BlockList.blockDeepslateOreJasper.get().asItem());
+        event.accept(BlockList.blockDeepslateOreKryptonite.get().asItem());
         event.accept(BlockList.blockDeepslateOreKyanite.get().asItem());
         event.accept(BlockList.blockDeepslateOreLead.get().asItem());
         event.accept(BlockList.blockDeepslateOreMalachite.get().asItem());
@@ -242,6 +244,7 @@ public class ExtraOres
         event.accept(BlockList.blockEnderOreIolite.get().asItem());
         event.accept(BlockList.blockEnderOreJade.get().asItem());
         event.accept(BlockList.blockEnderOreJasper.get().asItem());
+        event.accept(BlockList.blockEnderOreKryptonite.get().asItem());
         event.accept(BlockList.blockEnderOreKyanite.get().asItem());
         event.accept(BlockList.blockEnderOreMalachite.get().asItem());
         event.accept(BlockList.blockEnderOreOnyx.get().asItem());
@@ -299,6 +302,7 @@ public class ExtraOres
         event.accept(BlockList.blockJade.get().asItem());
         event.accept(BlockList.blockJasper.get().asItem());
         event.accept(BlockList.blockKalendrite.get().asItem());
+        event.accept(BlockList.blockKryptonite.get().asItem());
         event.accept(BlockList.blockKyanite.get().asItem());
         event.accept(BlockList.blockLead.get().asItem());
         event.accept(BlockList.blockLemurite.get().asItem());
@@ -821,6 +825,7 @@ public class ExtraOres
         event.accept(ItemList.itemGemIolite.get());
         event.accept(ItemList.itemGemJade.get());
         event.accept(ItemList.itemGemJasper.get());
+        event.accept(ItemList.itemGemKryptonite.get());
         event.accept(ItemList.itemGemKyanite.get());
         event.accept(ItemList.itemGemMalachite.get());
         event.accept(ItemList.itemGemOnyx.get());
