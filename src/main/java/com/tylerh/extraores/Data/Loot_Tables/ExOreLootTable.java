@@ -66,6 +66,7 @@ public class ExOreLootTable extends BlockLootSubProvider
         createFortune(BlockList.blockOreJade,ItemList.itemGemJade);
         createFortune(BlockList.blockOreJasper,ItemList.itemGemJasper);
         createFortune(BlockList.blockOreKalendrite,ItemList.itemRawKalendrite);
+        createFortune(BlockList.blockOreKryptonite,ItemList.itemGemKryptonite);
         createFortune(BlockList.blockOreKyanite,ItemList.itemGemKyanite);
         createFortune(BlockList.blockOreLead,ItemList.itemRawLead);
         createFortune(BlockList.blockOreLemurite,ItemList.itemRawLemurite);
@@ -162,6 +163,7 @@ public class ExOreLootTable extends BlockLootSubProvider
         createFortune(BlockList.blockDeepslateOreIridium,ItemList.itemRawIridium);
         createFortune(BlockList.blockDeepslateOreJade,ItemList.itemGemJade);
         createFortune(BlockList.blockDeepslateOreJasper,ItemList.itemGemJasper);
+        createFortune(BlockList.blockDeepslateOreKryptonite,ItemList.itemGemKryptonite);
         createFortune(BlockList.blockDeepslateOreKyanite,ItemList.itemGemKyanite);
         createFortune(BlockList.blockDeepslateOreLead,ItemList.itemRawLead);
         createFortune(BlockList.blockDeepslateOreMalachite,ItemList.itemGemMalachite);
@@ -225,6 +227,7 @@ public class ExOreLootTable extends BlockLootSubProvider
         createFortune(BlockList.blockEnderOreIolite,ItemList.itemGemIolite);
         createFortune(BlockList.blockEnderOreJade,ItemList.itemGemJade);
         createFortune(BlockList.blockEnderOreJasper,ItemList.itemGemJasper);
+        createFortune(BlockList.blockEnderOreKryptonite,ItemList.itemGemKryptonite);
         createFortune(BlockList.blockEnderOreKyanite,ItemList.itemGemKyanite);
         createFortune(BlockList.blockEnderOreMalachite,ItemList.itemGemMalachite);
         createFortune(BlockList.blockEnderOreOnyx,ItemList.itemGemOnyx);
@@ -282,6 +285,7 @@ public class ExOreLootTable extends BlockLootSubProvider
         createStandardTable(BlockList.blockJade);
         createStandardTable(BlockList.blockJasper);
         createStandardTable(BlockList.blockKalendrite);
+        createStandardTable(BlockList.blockKryptonite);
         createStandardTable(BlockList.blockKyanite);
         createStandardTable(BlockList.blockLead);
         createStandardTable(BlockList.blockLemurite);

@@ -46,6 +46,7 @@ public class ExOresConfig
     private static final ModConfigSpec.BooleanValue registerJade = BUILDER.comment("Enable/Disable Jade").define("Jade",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerJasper = BUILDER.comment("Enable/Disable Jasper").define("Jasper",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerKalendrite = BUILDER.comment("Enable/Disable Kalendrite").define("Kalendrite",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerKryptonite = BUILDER.comment("Enable/Disable Kryptonite").define("Kryptonite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerKyanite = BUILDER.comment("Enable/Disable Kyanite").define("Kyanite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerLead = BUILDER.comment("Enable/Disable Lead").define("Lead",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerLemurite = BUILDER.comment("Enable/Disable Lemurite").define("Lemurite",ModInfo.GUI_DEFAULT_VALUE);
@@ -146,6 +147,7 @@ public class ExOresConfig
     public static boolean Jade;
     public static boolean Jasper;
     public static boolean Kalendrite;
+    public static boolean Kryptonite;
     public static boolean Kyanite;
     public static boolean Lead;
     public static boolean Lemurite;
@@ -248,6 +250,7 @@ public class ExOresConfig
         Jade = registerJade.get();
         Jasper = registerJasper.get();
         Kalendrite = registerKalendrite.get();
+        Kryptonite = registerKryptonite.get();
         Kyanite = registerKyanite.get();
         Lead = registerLead.get();
         Lemurite = registerLemurite.get();

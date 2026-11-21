@@ -46,6 +46,7 @@ public class ConfiguredFeatureList
     public static ResourceKey<ConfiguredFeature<?,?>> featureJade;
     public static ResourceKey<ConfiguredFeature<?,?>> featureJasper;
     public static ResourceKey<ConfiguredFeature<?,?>> featureKalendrite;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureKryptonite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureKyanite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureLead;
     public static ResourceKey<ConfiguredFeature<?,?>> featureLemurite;

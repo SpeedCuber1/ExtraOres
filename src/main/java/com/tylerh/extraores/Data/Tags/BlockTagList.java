@@ -50,6 +50,7 @@ public class BlockTagList
     public static final TagKey<Block> oreJade = tag("ores/jade");
     public static final TagKey<Block> oreJasper = tag("ores/jasper");
     public static final TagKey<Block> oreKalendrite = tag("ores/kalendrite");
+    public static final TagKey<Block> oreKryptonite = tag("ores/kryptonite");
     public static final TagKey<Block> oreKyanite = tag("ores/kyanite");
     public static final TagKey<Block> oreLead = tag("ores/lead");
     public static final TagKey<Block> oreLemurite = tag("ores/lemurite");
@@ -152,6 +153,7 @@ public class BlockTagList
     public static final TagKey<Block> blockJade = tag("storage_blocks/jade");
     public static final TagKey<Block> blockJasper = tag("storage_blocks/jasper");
     public static final TagKey<Block> blockKalendrite = tag("storage_blocks/kalendrite");
+    public static final TagKey<Block> blockKryptonite = tag("storage_blocks/kryptonite");
     public static final TagKey<Block> blockKyanite = tag("storage_blocks/kyanite");
     public static final TagKey<Block> blockLead = tag("storage_blocks/lead");
     public static final TagKey<Block> blockLemurite = tag("storage_blocks/lemurite");

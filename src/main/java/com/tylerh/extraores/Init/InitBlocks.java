@@ -13,6 +13,7 @@ import java.util.function.Supplier;
 
 public class InitBlocks
 {
+    //TODO Add If Checks for Config
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ModInfo.MOD_ID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModInfo.MOD_ID);
     private static <T extends Block> DeferredBlock<T> register(String name, Supplier<T> supplier)
@@ -191,6 +192,10 @@ public class InitBlocks
             BlockList.blockEnderOreJasper = register("enderjasperore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockOreKalendrite = register("kalendriteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockKalendrite = register("kalendriteblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockOreKryptonite = register("kryptoniteore", () -> new BlockEXOre(1.5F,3.0F));
+            BlockList.blockKryptonite = register("kryptoniteblock", () -> new BlockEXOre(1.5F,3.0F));
+            BlockList.blockDeepslateOreKryptonite = register("deepslatekryptoniteore", () -> new BlockEXOre(1.5F,3.0F));
+            BlockList.blockEnderOreKryptonite = register("enderkryptoniteore", () -> new BlockEXOre(1.5F,3.0F));
             BlockList.blockOreKyanite = register("kyaniteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockKyanite = register("kyaniteblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreKyanite = register("deepslatekyaniteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
@@ -573,6 +578,7 @@ public class InitBlocks
             ItemList.itemClumpKalendrite = ITEMS.register("kalendriteclump", ItemEXOre::new);
             ItemList.itemDirtyDustKalendrite = ITEMS.register("kalendritedirtydust", ItemEXOre::new);
             ItemList.itemRawKalendrite = ITEMS.register("rawkalendrite", ItemEXOre::new);
+            ItemList.itemGemKryptonite = ITEMS.register("kryptonite", ItemEXOre::new);
             ItemList.itemGemKyanite = ITEMS.register("kyanite", ItemEXOre::new);
             ItemList.itemIngotLead = ITEMS.register("leadingot", ItemEXOre::new);
             ItemList.itemDustLead = ITEMS.register("leaddust", ItemEXOre::new);
