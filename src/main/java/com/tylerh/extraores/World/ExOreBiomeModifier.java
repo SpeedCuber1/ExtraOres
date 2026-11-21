@@ -450,6 +450,15 @@ public class ExOreBiomeModifier
                     GenerationStep.Decoration.UNDERGROUND_ORES
             ));
         }
+        if(ConfigRegistryList.registerKryptonite.get())
+        {
+            BiomeModifierList.modifierKryptonite = registerKey("kryptoniteore");
+            context.register(BiomeModifierList.modifierKryptonite,new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                    biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                    HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.featureKryptonitePlaced)),
+                    GenerationStep.Decoration.UNDERGROUND_ORES
+            ));
+        }
         if(ConfigRegistryList.registerKyanite.get())
         {
             BiomeModifierList.modifierKyanite = registerKey("kyaniteore");

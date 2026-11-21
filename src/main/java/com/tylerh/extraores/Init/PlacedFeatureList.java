@@ -46,6 +46,7 @@ public class PlacedFeatureList
     public static ResourceKey<PlacedFeature> featureJadePlaced;
     public static ResourceKey<PlacedFeature> featureJasperPlaced;
     public static ResourceKey<PlacedFeature> featureKalendritePlaced;
+    public static ResourceKey<PlacedFeature> featureKryptonitePlaced;
     public static ResourceKey<PlacedFeature> featureKyanitePlaced;
     public static ResourceKey<PlacedFeature> featureLeadPlaced;
     public static ResourceKey<PlacedFeature> featureLemuritePlaced;

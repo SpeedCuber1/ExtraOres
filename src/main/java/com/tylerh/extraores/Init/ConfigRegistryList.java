@@ -46,6 +46,7 @@ public class ConfigRegistryList
     public static ForgeConfigSpec.BooleanValue registerJade;
     public static ForgeConfigSpec.BooleanValue registerJasper;
     public static ForgeConfigSpec.BooleanValue registerKalendrite;
+    public static ForgeConfigSpec.BooleanValue registerKryptonite;
     public static ForgeConfigSpec.BooleanValue registerKyanite;
     public static ForgeConfigSpec.BooleanValue registerLead;
     public static ForgeConfigSpec.BooleanValue registerLemurite;
@@ -148,6 +149,7 @@ public class ConfigRegistryList
         registerJade = builder.comment("Enable/Disable Jade").define("Jade",ModInfo.GUI_DEFAULT_VALUE);
         registerJasper = builder.comment("Enable/Disable Jasper").define("Jasper",ModInfo.GUI_DEFAULT_VALUE);
         registerKalendrite = builder.comment("Enable/Disable Kalendrite").define("Kalendrite", ModInfo.GUI_DEFAULT_VALUE);
+        registerKryptonite = builder.comment("Enable/Disable Kryptonite").define("Kryptonite",ModInfo.GUI_DEFAULT_VALUE);
         registerKyanite = builder.comment("Enable/Disable Kyanite").define("Kyanite",ModInfo.GUI_DEFAULT_VALUE);
         registerLead = builder.comment("Enable/Disable Lead").define("Lead", ModInfo.GUI_DEFAULT_VALUE);
         registerLemurite = builder.comment("Enable/Disable Lemurite").define("Lemurite", ModInfo.GUI_DEFAULT_VALUE);

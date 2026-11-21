@@ -268,6 +268,12 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_NETHER;
             register(context,PlacedFeatureList.featureKalendritePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureKalendrite),rate,height);
         }
+        if(ConfigRegistryList.registerKryptonite.get())
+        {
+            PlacedFeatureList.featureKryptonitePlaced = createKey("kryptoniteore");
+            height = ModInfo.HEIGHT_RARE;
+            register(context,PlacedFeatureList.featureKryptonitePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureKryptonite),rate,height);
+        }
         if(ConfigRegistryList.registerKyanite.get())
         {
             PlacedFeatureList.featureKyanitePlaced = createKey("kyaniteore");

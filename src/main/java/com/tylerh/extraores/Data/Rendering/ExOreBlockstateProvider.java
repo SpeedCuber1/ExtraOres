@@ -61,6 +61,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockOreJade);
         blockWithItem(BlockList.blockOreJasper);
         blockWithItem(BlockList.blockOreKalendrite);
+        blockWithItem(BlockList.blockOreKryptonite);
         blockWithItem(BlockList.blockOreKyanite);
         blockWithItem(BlockList.blockOreLead);
         blockWithItem(BlockList.blockOreLemurite);
@@ -157,6 +158,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockDeepslateOreIridium);
         blockWithItem(BlockList.blockDeepslateOreJade);
         blockWithItem(BlockList.blockDeepslateOreJasper);
+        blockWithItem(BlockList.blockDeepslateOreKryptonite);
         blockWithItem(BlockList.blockDeepslateOreKyanite);
         blockWithItem(BlockList.blockDeepslateOreLead);
         blockWithItem(BlockList.blockDeepslateOreMalachite);
@@ -220,6 +222,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockEnderOreIolite);
         blockWithItem(BlockList.blockEnderOreJade);
         blockWithItem(BlockList.blockEnderOreJasper);
+        blockWithItem(BlockList.blockEnderOreKryptonite);
         blockWithItem(BlockList.blockEnderOreKyanite);
         blockWithItem(BlockList.blockEnderOreMalachite);
         blockWithItem(BlockList.blockEnderOreOnyx);
@@ -277,6 +280,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockJade);
         blockWithItem(BlockList.blockJasper);
         blockWithItem(BlockList.blockKalendrite);
+        blockWithItem(BlockList.blockKryptonite);
         blockWithItem(BlockList.blockKyanite);
         blockWithItem(BlockList.blockLead);
         blockWithItem(BlockList.blockLemurite);

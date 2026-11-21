@@ -3,6 +3,7 @@ package com.tylerh.extraores.Init;
 import com.tylerh.extraores.Blocks.BlockEXOre;
 import com.tylerh.extraores.Items.*;
 import com.tylerh.extraores.Util.ModInfo;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.item.Item;
@@ -275,10 +276,17 @@ public class InitBlocks
             BlockList.blockDeepslateOreJasper = register("deepslatejasperore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
             BlockList.blockEnderOreJasper = register("enderjasperore", () -> new BlockEXOre(1.5F,1.5F));
         }
-        if (ConfigRegistryList.registerKalendrite.get())
+        if(ConfigRegistryList.registerKalendrite.get())
         {
             BlockList.blockOreKalendrite = register("kalendriteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockKalendrite = register("kalendriteblock", () -> new BlockEXOre(1.5F,1.5F));
+        }
+        if(ConfigRegistryList.registerKryptonite.get())
+        {
+            BlockList.blockOreKryptonite = register("kryptoniteore", () -> new BlockEXOre(1.5F,3.0F));
+            BlockList.blockKryptonite = register("kryptoniteblock", () -> new BlockEXOre(1.5F,3.0F));
+            BlockList.blockDeepslateOreKryptonite = register("deepslatekryptoniteore", () -> new BlockEXOre(1.5F,3.0F));
+            BlockList.blockEnderOreKryptonite = register("enderkryptoniteore", () -> new BlockEXOre(1.5F,3.0F));
         }
         if(ConfigRegistryList.registerKyanite.get())
         {
@@ -643,770 +651,775 @@ public class InitBlocks
     {
         if (ConfigRegistryList.registerAdamantine.get())
         {
-            ItemList.itemIngotAdamantine = ITEMS.register("adamantineingot", () -> new ItemEXOre());
-            ItemList.itemDustAdamantine = ITEMS.register("adamantinedust", () -> new ItemEXOre());
-            ItemList.itemShardAdamantine = ITEMS.register("adamantineshard", () -> new ItemEXOre());
-            ItemList.itemClumpAdamantine = ITEMS.register("adamantineclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAdamantine = ITEMS.register("adamantinedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAdamantine = ITEMS.register("rawadamantine", () -> new ItemEXOre());
+            ItemList.itemIngotAdamantine = ITEMS.register("adamantineingot", ItemEXOre::new);
+            ItemList.itemDustAdamantine = ITEMS.register("adamantinedust", ItemEXOre::new);
+            ItemList.itemShardAdamantine = ITEMS.register("adamantineshard", ItemEXOre::new);
+            ItemList.itemClumpAdamantine = ITEMS.register("adamantineclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAdamantine = ITEMS.register("adamantinedirtydust", ItemEXOre::new);
+            ItemList.itemRawAdamantine = ITEMS.register("rawadamantine", ItemEXOre::new);
+            //ItemList.itemPickaxeAdamantine = ITEMS.register("adamantinepickaxe", () -> new PickaxeItem(ExOreToolTier.tierAdamantine,2,4,new Item.Properties()));
         }
         
         if (ConfigRegistryList.registerAgate.get())
         {
-            ItemList.itemGemAgate = ITEMS.register("agate", () -> new ItemEXOre());
+            ItemList.itemGemAgate = ITEMS.register("agate", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAldourite.get())
         {
-            ItemList.itemIngotAldourite = ITEMS.register("aldouriteingot", () -> new ItemEXOre());
-            ItemList.itemDustAldourite = ITEMS.register("aldouritedust", () -> new ItemEXOre());
-            ItemList.itemShardAldourite = ITEMS.register("aldouriteshard", () -> new ItemEXOre());
-            ItemList.itemClumpAldourite = ITEMS.register("aldouriteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAldourite = ITEMS.register("aldouritedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAldourite = ITEMS.register("rawaldourite", () -> new ItemEXOre());
+            ItemList.itemIngotAldourite = ITEMS.register("aldouriteingot", ItemEXOre::new);
+            ItemList.itemDustAldourite = ITEMS.register("aldouritedust", ItemEXOre::new);
+            ItemList.itemShardAldourite = ITEMS.register("aldouriteshard", ItemEXOre::new);
+            ItemList.itemClumpAldourite = ITEMS.register("aldouriteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAldourite = ITEMS.register("aldouritedirtydust", ItemEXOre::new);
+            ItemList.itemRawAldourite = ITEMS.register("rawaldourite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAluminum.get())
         {
-            ItemList.itemIngotAluminum = ITEMS.register("aluminumingot", () -> new ItemEXOre());
-            ItemList.itemDustAluminum = ITEMS.register("aluminumdust", () -> new ItemEXOre());
-            ItemList.itemShardAluminum = ITEMS.register("aluminumshard", () -> new ItemEXOre());
-            ItemList.itemClumpAluminum = ITEMS.register("aluminumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAluminum = ITEMS.register("aluminumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAluminum = ITEMS.register("rawaluminum", () -> new ItemEXOre());
+            ItemList.itemIngotAluminum = ITEMS.register("aluminumingot", ItemEXOre::new);
+            ItemList.itemDustAluminum = ITEMS.register("aluminumdust", ItemEXOre::new);
+            ItemList.itemShardAluminum = ITEMS.register("aluminumshard", ItemEXOre::new);
+            ItemList.itemClumpAluminum = ITEMS.register("aluminumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAluminum = ITEMS.register("aluminumdirtydust", ItemEXOre::new);
+            ItemList.itemRawAluminum = ITEMS.register("rawaluminum", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAmericium.get())
         {
-            ItemList.itemIngotAmericium = ITEMS.register("americiumingot", () -> new ItemEXOre());
-            ItemList.itemDustAmericium = ITEMS.register("americiumdust", () -> new ItemEXOre());
-            ItemList.itemShardAmericium = ITEMS.register("americiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpAmericium = ITEMS.register("americiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAmericium = ITEMS.register("americiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAmericium = ITEMS.register("rawamericium", () -> new ItemEXOre());
+            ItemList.itemIngotAmericium = ITEMS.register("americiumingot", ItemEXOre::new);
+            ItemList.itemDustAmericium = ITEMS.register("americiumdust", ItemEXOre::new);
+            ItemList.itemShardAmericium = ITEMS.register("americiumshard", ItemEXOre::new);
+            ItemList.itemClumpAmericium = ITEMS.register("americiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAmericium = ITEMS.register("americiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawAmericium = ITEMS.register("rawamericium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAmethyst.get())
         {
-            ItemList.itemGemAmethyst = ITEMS.register("amethyst", () -> new ItemEXOre());
+            ItemList.itemGemAmethyst = ITEMS.register("amethyst", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAmetrine.get())
         {
-            ItemList.itemGemAmetrine = ITEMS.register("ametrine", () -> new ItemEXOre());
+            ItemList.itemGemAmetrine = ITEMS.register("ametrine", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAmordrine.get())
         {
-            ItemList.itemIngotAmordrine = ITEMS.register("amordrineingot", () -> new ItemEXOre());
-            ItemList.itemDustAmordrine = ITEMS.register("amordrinedust", () -> new ItemEXOre());
-            ItemList.itemShardAmordrine = ITEMS.register("amordrineshard", () -> new ItemEXOre());
-            ItemList.itemClumpAmordrine = ITEMS.register("amordrineclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAmordrine = ITEMS.register("amordrinedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAmordrine = ITEMS.register("rawamordrine", () -> new ItemEXOre());
+            ItemList.itemIngotAmordrine = ITEMS.register("amordrineingot", ItemEXOre::new);
+            ItemList.itemDustAmordrine = ITEMS.register("amordrinedust", ItemEXOre::new);
+            ItemList.itemShardAmordrine = ITEMS.register("amordrineshard", ItemEXOre::new);
+            ItemList.itemClumpAmordrine = ITEMS.register("amordrineclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAmordrine = ITEMS.register("amordrinedirtydust", ItemEXOre::new);
+            ItemList.itemRawAmordrine = ITEMS.register("rawamordrine", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAngmallen.get())
         {
-            ItemList.itemIngotAngmallen = ITEMS.register("angmalleningot", () -> new ItemEXOre());
-            ItemList.itemDustAngmallen = ITEMS.register("angmallendust", () -> new ItemEXOre());
-            ItemList.itemShardAngmallen = ITEMS.register("angmallenshard", () -> new ItemEXOre());
-            ItemList.itemClumpAngmallen = ITEMS.register("angmallenclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAngmallen = ITEMS.register("angmallendirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAngmallen = ITEMS.register("rawangmallen", () -> new ItemEXOre());
+            ItemList.itemIngotAngmallen = ITEMS.register("angmalleningot", ItemEXOre::new);
+            ItemList.itemDustAngmallen = ITEMS.register("angmallendust", ItemEXOre::new);
+            ItemList.itemShardAngmallen = ITEMS.register("angmallenshard", ItemEXOre::new);
+            ItemList.itemClumpAngmallen = ITEMS.register("angmallenclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAngmallen = ITEMS.register("angmallendirtydust", ItemEXOre::new);
+            ItemList.itemRawAngmallen = ITEMS.register("rawangmallen", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAquamarine.get())
         {
-            ItemList.itemGemAquamarine = ITEMS.register("aquamarine", () -> new ItemEXOre());
+            ItemList.itemGemAquamarine = ITEMS.register("aquamarine", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAstralSilver.get())
         {
-            ItemList.itemIngotAstralSilver = ITEMS.register("astralsilveringot", () -> new ItemEXOre());
-            ItemList.itemDustAstralSilver = ITEMS.register("astralsilverdust", () -> new ItemEXOre());
-            ItemList.itemShardAstralSilver = ITEMS.register("astralsilvershard", () -> new ItemEXOre());
-            ItemList.itemClumpAstralSilver = ITEMS.register("astralsilverclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAstralSilver = ITEMS.register("astralsilverdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAstralSilver = ITEMS.register("rawastralsilver", () -> new ItemEXOre());
+            ItemList.itemIngotAstralSilver = ITEMS.register("astralsilveringot", ItemEXOre::new);
+            ItemList.itemDustAstralSilver = ITEMS.register("astralsilverdust", ItemEXOre::new);
+            ItemList.itemShardAstralSilver = ITEMS.register("astralsilvershard", ItemEXOre::new);
+            ItemList.itemClumpAstralSilver = ITEMS.register("astralsilverclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAstralSilver = ITEMS.register("astralsilverdirtydust", ItemEXOre::new);
+            ItemList.itemRawAstralSilver = ITEMS.register("rawastralsilver", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerAtlarus.get())
         {
-            ItemList.itemIngotAtlarus = ITEMS.register("atlarusingot", () -> new ItemEXOre());
-            ItemList.itemDustAtlarus = ITEMS.register("atlarusdust", () -> new ItemEXOre());
-            ItemList.itemShardAtlarus = ITEMS.register("atlarusshard", () -> new ItemEXOre());
-            ItemList.itemClumpAtlarus = ITEMS.register("atlarusclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAtlarus = ITEMS.register("atlarusdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAtlarus = ITEMS.register("rawatlarus", () -> new ItemEXOre());
+            ItemList.itemIngotAtlarus = ITEMS.register("atlarusingot", ItemEXOre::new);
+            ItemList.itemDustAtlarus = ITEMS.register("atlarusdust", ItemEXOre::new);
+            ItemList.itemShardAtlarus = ITEMS.register("atlarusshard", ItemEXOre::new);
+            ItemList.itemClumpAtlarus = ITEMS.register("atlarusclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAtlarus = ITEMS.register("atlarusdirtydust", ItemEXOre::new);
+            ItemList.itemRawAtlarus = ITEMS.register("rawatlarus", ItemEXOre::new);
         }
         if(ConfigRegistryList.registerAzureSilver.get())
         {
-            ItemList.itemIngotAzureSilver = ITEMS.register("azuresilveringot", () -> new ItemEXOre());
-            ItemList.itemDustAzureSilver = ITEMS.register("azuresilverdust", () -> new ItemEXOre());
-            ItemList.itemShardAzureSilver = ITEMS.register("azuresilvershard", () -> new ItemEXOre());
-            ItemList.itemClumpAzureSilver = ITEMS.register("azuresilverclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustAzureSilver = ITEMS.register("azuresilverdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawAzureSilver = ITEMS.register("rawazuresilver", () -> new ItemEXOre());
+            ItemList.itemIngotAzureSilver = ITEMS.register("azuresilveringot", ItemEXOre::new);
+            ItemList.itemDustAzureSilver = ITEMS.register("azuresilverdust", ItemEXOre::new);
+            ItemList.itemShardAzureSilver = ITEMS.register("azuresilvershard", ItemEXOre::new);
+            ItemList.itemClumpAzureSilver = ITEMS.register("azuresilverclump", ItemEXOre::new);
+            ItemList.itemDirtyDustAzureSilver = ITEMS.register("azuresilverdirtydust", ItemEXOre::new);
+            ItemList.itemRawAzureSilver = ITEMS.register("rawazuresilver", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerBismuth.get())
         {
-            ItemList.itemIngotBismuth = ITEMS.register("bismuthingot", () -> new ItemEXOre());
-            ItemList.itemDustBismuth = ITEMS.register("bismuthdust", () -> new ItemEXOre());
-            ItemList.itemShardBismuth = ITEMS.register("bismuthshard", () -> new ItemEXOre());
-            ItemList.itemClumpBismuth = ITEMS.register("bismuthclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustBismuth = ITEMS.register("bismuthdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawBismuth = ITEMS.register("rawbismuth", () -> new ItemEXOre());
+            ItemList.itemIngotBismuth = ITEMS.register("bismuthingot", ItemEXOre::new);
+            ItemList.itemDustBismuth = ITEMS.register("bismuthdust", ItemEXOre::new);
+            ItemList.itemShardBismuth = ITEMS.register("bismuthshard", ItemEXOre::new);
+            ItemList.itemClumpBismuth = ITEMS.register("bismuthclump", ItemEXOre::new);
+            ItemList.itemDirtyDustBismuth = ITEMS.register("bismuthdirtydust", ItemEXOre::new);
+            ItemList.itemRawBismuth = ITEMS.register("rawbismuth", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerBlackSteel.get())
         {
-            ItemList.itemIngotBlackSteel = ITEMS.register("blacksteelingot", () -> new ItemEXOre());
-            ItemList.itemDustBlackSteel = ITEMS.register("blacksteeldust", () -> new ItemEXOre());
-            ItemList.itemShardBlackSteel = ITEMS.register("blacksteelshard", () -> new ItemEXOre());
-            ItemList.itemClumpBlackSteel = ITEMS.register("blacksteelclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustBlackSteel = ITEMS.register("blacksteeldirtydust", () -> new ItemEXOre());
-            ItemList.itemRawBlackSteel = ITEMS.register("rawblacksteel", () -> new ItemEXOre());
+            ItemList.itemIngotBlackSteel = ITEMS.register("blacksteelingot", ItemEXOre::new);
+            ItemList.itemDustBlackSteel = ITEMS.register("blacksteeldust", ItemEXOre::new);
+            ItemList.itemShardBlackSteel = ITEMS.register("blacksteelshard", ItemEXOre::new);
+            ItemList.itemClumpBlackSteel = ITEMS.register("blacksteelclump", ItemEXOre::new);
+            ItemList.itemDirtyDustBlackSteel = ITEMS.register("blacksteeldirtydust", ItemEXOre::new);
+            ItemList.itemRawBlackSteel = ITEMS.register("rawblacksteel", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerCadmium.get())
         {
-            ItemList.itemIngotCadmium = ITEMS.register("cadmiumingot", () -> new ItemEXOre());
-            ItemList.itemDustCadmium = ITEMS.register("cadmiumdust", () -> new ItemEXOre());
-            ItemList.itemShardCadmium = ITEMS.register("cadmiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpCadmium = ITEMS.register("cadmiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustCadmium = ITEMS.register("cadmiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawCadmium = ITEMS.register("rawcadmium", () -> new ItemEXOre());
+            ItemList.itemIngotCadmium = ITEMS.register("cadmiumingot", ItemEXOre::new);
+            ItemList.itemDustCadmium = ITEMS.register("cadmiumdust", ItemEXOre::new);
+            ItemList.itemShardCadmium = ITEMS.register("cadmiumshard", ItemEXOre::new);
+            ItemList.itemClumpCadmium = ITEMS.register("cadmiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustCadmium = ITEMS.register("cadmiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawCadmium = ITEMS.register("rawcadmium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerCarmot.get())
         {
-            ItemList.itemIngotCarmot = ITEMS.register("carmotingot", () -> new ItemEXOre());
-            ItemList.itemDustCarmot = ITEMS.register("carmotdust", () -> new ItemEXOre());
-            ItemList.itemShardCarmot = ITEMS.register("carmotshard", () -> new ItemEXOre());
-            ItemList.itemClumpCarmot = ITEMS.register("carmotclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustCarmot = ITEMS.register("carmotdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawCarmot = ITEMS.register("rawcarmot", () -> new ItemEXOre());
+            ItemList.itemIngotCarmot = ITEMS.register("carmotingot", ItemEXOre::new);
+            ItemList.itemDustCarmot = ITEMS.register("carmotdust", ItemEXOre::new);
+            ItemList.itemShardCarmot = ITEMS.register("carmotshard", ItemEXOre::new);
+            ItemList.itemClumpCarmot = ITEMS.register("carmotclump", ItemEXOre::new);
+            ItemList.itemDirtyDustCarmot = ITEMS.register("carmotdirtydust", ItemEXOre::new);
+            ItemList.itemRawCarmot = ITEMS.register("rawcarmot", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerCelenegil.get())
         {
-            ItemList.itemIngotCelenegil = ITEMS.register("celenegilingot", () -> new ItemEXOre());
-            ItemList.itemDustCelenegil = ITEMS.register("celenegildust", () -> new ItemEXOre());
-            ItemList.itemShardCelenegil = ITEMS.register("celenegilshard", () -> new ItemEXOre());
-            ItemList.itemClumpCelenegil = ITEMS.register("celenegilclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustCelenegil = ITEMS.register("celenegildirtydust", () -> new ItemEXOre());
-            ItemList.itemRawCelenegil = ITEMS.register("rawcelenegil", () -> new ItemEXOre());
+            ItemList.itemIngotCelenegil = ITEMS.register("celenegilingot", ItemEXOre::new);
+            ItemList.itemDustCelenegil = ITEMS.register("celenegildust", ItemEXOre::new);
+            ItemList.itemShardCelenegil = ITEMS.register("celenegilshard", ItemEXOre::new);
+            ItemList.itemClumpCelenegil = ITEMS.register("celenegilclump", ItemEXOre::new);
+            ItemList.itemDirtyDustCelenegil = ITEMS.register("celenegildirtydust", ItemEXOre::new);
+            ItemList.itemRawCelenegil = ITEMS.register("rawcelenegil", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerCeruclase.get())
         {
-            ItemList.itemIngotCeruclase = ITEMS.register("ceruclaseingot", () -> new ItemEXOre());
-            ItemList.itemDustCeruclase = ITEMS.register("ceruclasedust", () -> new ItemEXOre());
-            ItemList.itemShardCeruclase = ITEMS.register("ceruclaseshard", () -> new ItemEXOre());
-            ItemList.itemClumpCeruclase = ITEMS.register("ceruclaseclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustCeruclase = ITEMS.register("ceruclasedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawCeruclase = ITEMS.register("rawceruclase", () -> new ItemEXOre());
+            ItemList.itemIngotCeruclase = ITEMS.register("ceruclaseingot", ItemEXOre::new);
+            ItemList.itemDustCeruclase = ITEMS.register("ceruclasedust", ItemEXOre::new);
+            ItemList.itemShardCeruclase = ITEMS.register("ceruclaseshard", ItemEXOre::new);
+            ItemList.itemClumpCeruclase = ITEMS.register("ceruclaseclump", ItemEXOre::new);
+            ItemList.itemDirtyDustCeruclase = ITEMS.register("ceruclasedirtydust", ItemEXOre::new);
+            ItemList.itemRawCeruclase = ITEMS.register("rawceruclase", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerChromium.get())
         {
-            ItemList.itemIngotChromium = ITEMS.register("chromiumingot", () -> new ItemEXOre());
-            ItemList.itemDustChromium = ITEMS.register("chromiumdust", () -> new ItemEXOre());
-            ItemList.itemShardChromium = ITEMS.register("chromiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpChromium = ITEMS.register("chromiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustChromium = ITEMS.register("chromiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawChromium = ITEMS.register("rawchromium", () -> new ItemEXOre());
+            ItemList.itemIngotChromium = ITEMS.register("chromiumingot", ItemEXOre::new);
+            ItemList.itemDustChromium = ITEMS.register("chromiumdust", ItemEXOre::new);
+            ItemList.itemShardChromium = ITEMS.register("chromiumshard", ItemEXOre::new);
+            ItemList.itemClumpChromium = ITEMS.register("chromiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustChromium = ITEMS.register("chromiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawChromium = ITEMS.register("rawchromium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerChrysocolla.get())
         {
-            ItemList.itemGemChrysocolla = ITEMS.register("chrysocolla", () -> new ItemEXOre());
+            ItemList.itemGemChrysocolla = ITEMS.register("chrysocolla", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerCitrine.get())
         {
-            ItemList.itemGemCitrine = ITEMS.register("citrine", () -> new ItemEXOre());
+            ItemList.itemGemCitrine = ITEMS.register("citrine", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerCobalt.get())
         {
-            ItemList.itemIngotCobalt = ITEMS.register("cobaltingot", () -> new ItemEXOre());
-            ItemList.itemDustCobalt = ITEMS.register("cobaltdust", () -> new ItemEXOre());
-            ItemList.itemShardCobalt = ITEMS.register("cobaltshard", () -> new ItemEXOre());
-            ItemList.itemClumpCobalt = ITEMS.register("cobaltclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustCobalt = ITEMS.register("cobaltdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawCobalt = ITEMS.register("rawcobalt", () -> new ItemEXOre());
+            ItemList.itemIngotCobalt = ITEMS.register("cobaltingot", ItemEXOre::new);
+            ItemList.itemDustCobalt = ITEMS.register("cobaltdust", ItemEXOre::new);
+            ItemList.itemShardCobalt = ITEMS.register("cobaltshard", ItemEXOre::new);
+            ItemList.itemClumpCobalt = ITEMS.register("cobaltclump", ItemEXOre::new);
+            ItemList.itemDirtyDustCobalt = ITEMS.register("cobaltdirtydust", ItemEXOre::new);
+            ItemList.itemRawCobalt = ITEMS.register("rawcobalt", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerCopper.get())
         {
-            ItemList.itemIngotCopper = ITEMS.register("copperingot", () -> new ItemEXOre());
-            ItemList.itemDustCopper = ITEMS.register("copperdust", () -> new ItemEXOre());
-            ItemList.itemShardCopper = ITEMS.register("coppershard", () -> new ItemEXOre());
-            ItemList.itemClumpCopper = ITEMS.register("copperclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustCopper = ITEMS.register("copperdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawCopper = ITEMS.register("rawcopper", () -> new ItemEXOre());
+            ItemList.itemIngotCopper = ITEMS.register("copperingot", ItemEXOre::new);
+            ItemList.itemDustCopper = ITEMS.register("copperdust", ItemEXOre::new);
+            ItemList.itemShardCopper = ITEMS.register("coppershard", ItemEXOre::new);
+            ItemList.itemClumpCopper = ITEMS.register("copperclump", ItemEXOre::new);
+            ItemList.itemDirtyDustCopper = ITEMS.register("copperdirtydust", ItemEXOre::new);
+            ItemList.itemRawCopper = ITEMS.register("rawcopper", ItemEXOre::new);
         }
         if(ConfigRegistryList.registerCrimsonSteel.get())
         {
-            ItemList.itemIngotCrimsonSteel = ITEMS.register("crimsonsteelingot", () -> new ItemEXOre());
-            ItemList.itemDustCrimsonSteel = ITEMS.register("crimsonsteeldust", () -> new ItemEXOre());
-            ItemList.itemShardCrimsonSteel = ITEMS.register("crimsonsteelshard", () -> new ItemEXOre());
-            ItemList.itemClumpCrimsonSteel = ITEMS.register("crimsonsteelclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustCrimsonSteel = ITEMS.register("crimsonsteeldirtydust", () -> new ItemEXOre());
-            ItemList.itemRawCrimsonSteel = ITEMS.register("rawcrimsonsteel", () -> new ItemEXOre());
+            ItemList.itemIngotCrimsonSteel = ITEMS.register("crimsonsteelingot", ItemEXOre::new);
+            ItemList.itemDustCrimsonSteel = ITEMS.register("crimsonsteeldust", ItemEXOre::new);
+            ItemList.itemShardCrimsonSteel = ITEMS.register("crimsonsteelshard", ItemEXOre::new);
+            ItemList.itemClumpCrimsonSteel = ITEMS.register("crimsonsteelclump", ItemEXOre::new);
+            ItemList.itemDirtyDustCrimsonSteel = ITEMS.register("crimsonsteeldirtydust", ItemEXOre::new);
+            ItemList.itemRawCrimsonSteel = ITEMS.register("rawcrimsonsteel", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerDeepIron.get())
         {
-            ItemList.itemIngotDeepIron = ITEMS.register("deepironingot", () -> new ItemEXOre());
-            ItemList.itemDustDeepIron = ITEMS.register("deepirondust", () -> new ItemEXOre());
-            ItemList.itemShardDeepIron = ITEMS.register("deepironshard", () -> new ItemEXOre());
-            ItemList.itemClumpDeepIron = ITEMS.register("deepironclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustDeepIron = ITEMS.register("deepirondirtydust", () -> new ItemEXOre());
-            ItemList.itemRawDeepIron = ITEMS.register("rawdeepiron", () -> new ItemEXOre());
+            ItemList.itemIngotDeepIron = ITEMS.register("deepironingot", ItemEXOre::new);
+            ItemList.itemDustDeepIron = ITEMS.register("deepirondust", ItemEXOre::new);
+            ItemList.itemShardDeepIron = ITEMS.register("deepironshard", ItemEXOre::new);
+            ItemList.itemClumpDeepIron = ITEMS.register("deepironclump", ItemEXOre::new);
+            ItemList.itemDirtyDustDeepIron = ITEMS.register("deepirondirtydust", ItemEXOre::new);
+            ItemList.itemRawDeepIron = ITEMS.register("rawdeepiron", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerDesichalkos.get())
         {
-            ItemList.itemIngotDesichalkos = ITEMS.register("desichalkosingot", () -> new ItemEXOre());
-            ItemList.itemDustDesichalkos = ITEMS.register("desichalkosdust", () -> new ItemEXOre());
-            ItemList.itemShardDesichalkos = ITEMS.register("desichalkosshard", () -> new ItemEXOre());
-            ItemList.itemClumpDesichalkos = ITEMS.register("desichalkosclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustDesichalkos = ITEMS.register("desichalkosdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawDesichalkos = ITEMS.register("rawdesichalkos", () -> new ItemEXOre());
+            ItemList.itemIngotDesichalkos = ITEMS.register("desichalkosingot", ItemEXOre::new);
+            ItemList.itemDustDesichalkos = ITEMS.register("desichalkosdust", ItemEXOre::new);
+            ItemList.itemShardDesichalkos = ITEMS.register("desichalkosshard", ItemEXOre::new);
+            ItemList.itemClumpDesichalkos = ITEMS.register("desichalkosclump", ItemEXOre::new);
+            ItemList.itemDirtyDustDesichalkos = ITEMS.register("desichalkosdirtydust", ItemEXOre::new);
+            ItemList.itemRawDesichalkos = ITEMS.register("rawdesichalkos", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerEximite.get())
         {
-            ItemList.itemIngotEximite = ITEMS.register("eximiteingot", () -> new ItemEXOre());
-            ItemList.itemDustEximite = ITEMS.register("eximitedust", () -> new ItemEXOre());
-            ItemList.itemShardEximite = ITEMS.register("eximiteshard", () -> new ItemEXOre());
-            ItemList.itemClumpEximite = ITEMS.register("eximiteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustEximite = ITEMS.register("eximitedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawEximite = ITEMS.register("raweximite", () -> new ItemEXOre());
+            ItemList.itemIngotEximite = ITEMS.register("eximiteingot", ItemEXOre::new);
+            ItemList.itemDustEximite = ITEMS.register("eximitedust", ItemEXOre::new);
+            ItemList.itemShardEximite = ITEMS.register("eximiteshard", ItemEXOre::new);
+            ItemList.itemClumpEximite = ITEMS.register("eximiteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustEximite = ITEMS.register("eximitedirtydust", ItemEXOre::new);
+            ItemList.itemRawEximite = ITEMS.register("raweximite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerGallium.get())
         {
-            ItemList.itemIngotGallium = ITEMS.register("galliumingot", () -> new ItemEXOre());
-            ItemList.itemDustGallium = ITEMS.register("galliumdust", () -> new ItemEXOre());
-            ItemList.itemShardGallium = ITEMS.register("galliumshard", () -> new ItemEXOre());
-            ItemList.itemClumpGallium = ITEMS.register("galliumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustGallium = ITEMS.register("galliumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawGallium = ITEMS.register("rawgallium", () -> new ItemEXOre());
+            ItemList.itemIngotGallium = ITEMS.register("galliumingot", ItemEXOre::new);
+            ItemList.itemDustGallium = ITEMS.register("galliumdust", ItemEXOre::new);
+            ItemList.itemShardGallium = ITEMS.register("galliumshard", ItemEXOre::new);
+            ItemList.itemClumpGallium = ITEMS.register("galliumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustGallium = ITEMS.register("galliumdirtydust", ItemEXOre::new);
+            ItemList.itemRawGallium = ITEMS.register("rawgallium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerGarnet.get())
         {
-            ItemList.itemGemGarnet = ITEMS.register("garnet", () -> new ItemEXOre());
+            ItemList.itemGemGarnet = ITEMS.register("garnet", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerHaderoth.get())
         {
-            ItemList.itemIngotHaderoth = ITEMS.register("haderothingot", () -> new ItemEXOre());
-            ItemList.itemDustHaderoth = ITEMS.register("haderothdust", () -> new ItemEXOre());
-            ItemList.itemShardHaderoth = ITEMS.register("haderothshard", () -> new ItemEXOre());
-            ItemList.itemClumpHaderoth = ITEMS.register("haderothclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustHaderoth = ITEMS.register("haderothdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawHaderoth = ITEMS.register("rawhaderoth", () -> new ItemEXOre());
+            ItemList.itemIngotHaderoth = ITEMS.register("haderothingot", ItemEXOre::new);
+            ItemList.itemDustHaderoth = ITEMS.register("haderothdust", ItemEXOre::new);
+            ItemList.itemShardHaderoth = ITEMS.register("haderothshard", ItemEXOre::new);
+            ItemList.itemClumpHaderoth = ITEMS.register("haderothclump", ItemEXOre::new);
+            ItemList.itemDirtyDustHaderoth = ITEMS.register("haderothdirtydust", ItemEXOre::new);
+            ItemList.itemRawHaderoth = ITEMS.register("rawhaderoth", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerHepatizon.get())
         {
-            ItemList.itemIngotHepatizon = ITEMS.register("hepatizoningot", () -> new ItemEXOre());
-            ItemList.itemDustHepatizon = ITEMS.register("hepatizondust", () -> new ItemEXOre());
-            ItemList.itemShardHepatizon = ITEMS.register("hepatizonshard", () -> new ItemEXOre());
-            ItemList.itemClumpHepatizon = ITEMS.register("hepatizonclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustHepatizon = ITEMS.register("hepatizondirtydust", () -> new ItemEXOre());
-            ItemList.itemRawHepatizon = ITEMS.register("rawhepatizon", () -> new ItemEXOre());
+            ItemList.itemIngotHepatizon = ITEMS.register("hepatizoningot", ItemEXOre::new);
+            ItemList.itemDustHepatizon = ITEMS.register("hepatizondust", ItemEXOre::new);
+            ItemList.itemShardHepatizon = ITEMS.register("hepatizonshard", ItemEXOre::new);
+            ItemList.itemClumpHepatizon = ITEMS.register("hepatizonclump", ItemEXOre::new);
+            ItemList.itemDirtyDustHepatizon = ITEMS.register("hepatizondirtydust", ItemEXOre::new);
+            ItemList.itemRawHepatizon = ITEMS.register("rawhepatizon", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerIgnatius.get())
         {
-            ItemList.itemIngotIgnatius = ITEMS.register("ignatiusingot", () -> new ItemEXOre());
-            ItemList.itemDustIgnatius = ITEMS.register("ignatiusdust", () -> new ItemEXOre());
-            ItemList.itemShardIgnatius = ITEMS.register("ignatiusshard", () -> new ItemEXOre());
-            ItemList.itemClumpIgnatius = ITEMS.register("ignatiusclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustIgnatius = ITEMS.register("ignatiusdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawIgnatius = ITEMS.register("rawignatius", () -> new ItemEXOre());
+            ItemList.itemIngotIgnatius = ITEMS.register("ignatiusingot", ItemEXOre::new);
+            ItemList.itemDustIgnatius = ITEMS.register("ignatiusdust", ItemEXOre::new);
+            ItemList.itemShardIgnatius = ITEMS.register("ignatiusshard", ItemEXOre::new);
+            ItemList.itemClumpIgnatius = ITEMS.register("ignatiusclump", ItemEXOre::new);
+            ItemList.itemDirtyDustIgnatius = ITEMS.register("ignatiusdirtydust", ItemEXOre::new);
+            ItemList.itemRawIgnatius = ITEMS.register("rawignatius", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerIndium.get())
         {
-            ItemList.itemIngotIndium = ITEMS.register("indiumingot", () -> new ItemEXOre());
-            ItemList.itemDustIndium = ITEMS.register("indiumdust", () -> new ItemEXOre());
-            ItemList.itemShardIndium = ITEMS.register("indiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpIndium = ITEMS.register("indiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustIndium = ITEMS.register("indiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawIndium = ITEMS.register("rawindium", () -> new ItemEXOre());
+            ItemList.itemIngotIndium = ITEMS.register("indiumingot", ItemEXOre::new);
+            ItemList.itemDustIndium = ITEMS.register("indiumdust", ItemEXOre::new);
+            ItemList.itemShardIndium = ITEMS.register("indiumshard", ItemEXOre::new);
+            ItemList.itemClumpIndium = ITEMS.register("indiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustIndium = ITEMS.register("indiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawIndium = ITEMS.register("rawindium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerInfuscolium.get())
         {
-            ItemList.itemIngotInfuscolium = ITEMS.register("infuscoliumingot", () -> new ItemEXOre());
-            ItemList.itemDustInfuscolium = ITEMS.register("infuscoliumdust", () -> new ItemEXOre());
-            ItemList.itemShardInfuscolium = ITEMS.register("infuscoliumshard", () -> new ItemEXOre());
-            ItemList.itemClumpInfuscolium = ITEMS.register("infuscoliumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustInfuscolium = ITEMS.register("infuscoliumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawInfuscolium = ITEMS.register("rawinfuscolium", () -> new ItemEXOre());
+            ItemList.itemIngotInfuscolium = ITEMS.register("infuscoliumingot", ItemEXOre::new);
+            ItemList.itemDustInfuscolium = ITEMS.register("infuscoliumdust", ItemEXOre::new);
+            ItemList.itemShardInfuscolium = ITEMS.register("infuscoliumshard", ItemEXOre::new);
+            ItemList.itemClumpInfuscolium = ITEMS.register("infuscoliumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustInfuscolium = ITEMS.register("infuscoliumdirtydust", ItemEXOre::new);
+            ItemList.itemRawInfuscolium = ITEMS.register("rawinfuscolium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerInolashite.get())
         {
-            ItemList.itemIngotInolashite = ITEMS.register("inolashiteingot", () -> new ItemEXOre());
-            ItemList.itemDustInolashite = ITEMS.register("inolashitedust", () -> new ItemEXOre());
-            ItemList.itemShardInolashite = ITEMS.register("inolashiteshard", () -> new ItemEXOre());
-            ItemList.itemClumpInolashite = ITEMS.register("inolashiteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustInolashite = ITEMS.register("inolashitedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawInolashite = ITEMS.register("rawinolashite", () -> new ItemEXOre());
+            ItemList.itemIngotInolashite = ITEMS.register("inolashiteingot", ItemEXOre::new);
+            ItemList.itemDustInolashite = ITEMS.register("inolashitedust", ItemEXOre::new);
+            ItemList.itemShardInolashite = ITEMS.register("inolashiteshard", ItemEXOre::new);
+            ItemList.itemClumpInolashite = ITEMS.register("inolashiteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustInolashite = ITEMS.register("inolashitedirtydust", ItemEXOre::new);
+            ItemList.itemRawInolashite = ITEMS.register("rawinolashite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerIolite.get())
         {
-            ItemList.itemGemIolite = ITEMS.register("iolite", () -> new ItemEXOre());
+            ItemList.itemGemIolite = ITEMS.register("iolite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerIridium.get())
         {
-            ItemList.itemIngotIridium = ITEMS.register("iridiumingot", () -> new ItemEXOre());
-            ItemList.itemDustIridium = ITEMS.register("iridiumdust", () -> new ItemEXOre());
-            ItemList.itemShardIridium = ITEMS.register("iridiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpIridium = ITEMS.register("iridiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustIridium = ITEMS.register("iridiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawIridium = ITEMS.register("rawiridium", () -> new ItemEXOre());
+            ItemList.itemIngotIridium = ITEMS.register("iridiumingot", ItemEXOre::new);
+            ItemList.itemDustIridium = ITEMS.register("iridiumdust", ItemEXOre::new);
+            ItemList.itemShardIridium = ITEMS.register("iridiumshard", ItemEXOre::new);
+            ItemList.itemClumpIridium = ITEMS.register("iridiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustIridium = ITEMS.register("iridiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawIridium = ITEMS.register("rawiridium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerJade.get())
         {
-            ItemList.itemGemJade = ITEMS.register("jade", () -> new ItemEXOre());
+            ItemList.itemGemJade = ITEMS.register("jade", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerJasper.get())
         {
-            ItemList.itemGemJasper = ITEMS.register("jasper", () -> new ItemEXOre());
+            ItemList.itemGemJasper = ITEMS.register("jasper", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerKalendrite.get())
         {
-            ItemList.itemIngotKalendrite = ITEMS.register("kalendriteingot", () -> new ItemEXOre());
-            ItemList.itemDustKalendrite = ITEMS.register("kalendritedust", () -> new ItemEXOre());
-            ItemList.itemShardKalendrite = ITEMS.register("kalendriteshard", () -> new ItemEXOre());
-            ItemList.itemClumpKalendrite = ITEMS.register("kalendriteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustKalendrite = ITEMS.register("kalendritedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawKalendrite = ITEMS.register("rawkalendrite", () -> new ItemEXOre());
+            ItemList.itemIngotKalendrite = ITEMS.register("kalendriteingot", ItemEXOre::new);
+            ItemList.itemDustKalendrite = ITEMS.register("kalendritedust", ItemEXOre::new);
+            ItemList.itemShardKalendrite = ITEMS.register("kalendriteshard", ItemEXOre::new);
+            ItemList.itemClumpKalendrite = ITEMS.register("kalendriteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustKalendrite = ITEMS.register("kalendritedirtydust", ItemEXOre::new);
+            ItemList.itemRawKalendrite = ITEMS.register("rawkalendrite", ItemEXOre::new);
+        }
+        if(ConfigRegistryList.registerKryptonite.get())
+        {
+            ItemList.itemGemKryptonite = ITEMS.register("kryptonite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerKyanite.get())
         {
-            ItemList.itemGemKyanite = ITEMS.register("kyanite", () -> new ItemEXOre());
+            ItemList.itemGemKyanite = ITEMS.register("kyanite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerLead.get())
         {
-            ItemList.itemIngotLead = ITEMS.register("leadingot", () -> new ItemEXOre());
-            ItemList.itemDustLead = ITEMS.register("leaddust", () -> new ItemEXOre());
-            ItemList.itemShardLead = ITEMS.register("leadshard", () -> new ItemEXOre());
-            ItemList.itemClumpLead = ITEMS.register("leadclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustLead = ITEMS.register("leaddirtydust", () -> new ItemEXOre());
-            ItemList.itemRawLead = ITEMS.register("rawlead", () -> new ItemEXOre());
+            ItemList.itemIngotLead = ITEMS.register("leadingot", ItemEXOre::new);
+            ItemList.itemDustLead = ITEMS.register("leaddust", ItemEXOre::new);
+            ItemList.itemShardLead = ITEMS.register("leadshard", ItemEXOre::new);
+            ItemList.itemClumpLead = ITEMS.register("leadclump", ItemEXOre::new);
+            ItemList.itemDirtyDustLead = ITEMS.register("leaddirtydust", ItemEXOre::new);
+            ItemList.itemRawLead = ITEMS.register("rawlead", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerLemurite.get())
         {
-            ItemList.itemIngotLemurite = ITEMS.register("lemuriteingot", () -> new ItemEXOre());
-            ItemList.itemDustLemurite = ITEMS.register("lemuritedust", () -> new ItemEXOre());
-            ItemList.itemShardLemurite = ITEMS.register("lemuriteshard", () -> new ItemEXOre());
-            ItemList.itemClumpLemurite = ITEMS.register("lemuriteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustLemurite = ITEMS.register("lemuritedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawLemurite = ITEMS.register("rawlemurite", () -> new ItemEXOre());
+            ItemList.itemIngotLemurite = ITEMS.register("lemuriteingot", ItemEXOre::new);
+            ItemList.itemDustLemurite = ITEMS.register("lemuritedust", ItemEXOre::new);
+            ItemList.itemShardLemurite = ITEMS.register("lemuriteshard", ItemEXOre::new);
+            ItemList.itemClumpLemurite = ITEMS.register("lemuriteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustLemurite = ITEMS.register("lemuritedirtydust", ItemEXOre::new);
+            ItemList.itemRawLemurite = ITEMS.register("rawlemurite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerMalachite.get())
         {
-            ItemList.itemGemMalachite = ITEMS.register("malachite", () -> new ItemEXOre());
+            ItemList.itemGemMalachite = ITEMS.register("malachite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerManganese.get())
         {
-            ItemList.itemIngotManganese = ITEMS.register("manganeseingot", () -> new ItemEXOre());
-            ItemList.itemDustManganese = ITEMS.register("manganesedust", () -> new ItemEXOre());
-            ItemList.itemShardManganese = ITEMS.register("manganeseshard", () -> new ItemEXOre());
-            ItemList.itemClumpManganese = ITEMS.register("manganeseclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustManganese = ITEMS.register("manganesedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawManganese = ITEMS.register("rawmanganese", () -> new ItemEXOre());
+            ItemList.itemIngotManganese = ITEMS.register("manganeseingot", ItemEXOre::new);
+            ItemList.itemDustManganese = ITEMS.register("manganesedust", ItemEXOre::new);
+            ItemList.itemShardManganese = ITEMS.register("manganeseshard", ItemEXOre::new);
+            ItemList.itemClumpManganese = ITEMS.register("manganeseclump", ItemEXOre::new);
+            ItemList.itemDirtyDustManganese = ITEMS.register("manganesedirtydust", ItemEXOre::new);
+            ItemList.itemRawManganese = ITEMS.register("rawmanganese", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerMeutoite.get())
         {
-            ItemList.itemIngotMeutoite = ITEMS.register("meutoiteingot", () -> new ItemEXOre());
-            ItemList.itemDustMeutoite = ITEMS.register("meutoitedust", () -> new ItemEXOre());
-            ItemList.itemShardMeutoite = ITEMS.register("meutoiteshard", () -> new ItemEXOre());
-            ItemList.itemClumpMeutoite = ITEMS.register("meutoiteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustMeutoite = ITEMS.register("meutoitedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawMeutoite = ITEMS.register("rawmeutoite", () -> new ItemEXOre());
+            ItemList.itemIngotMeutoite = ITEMS.register("meutoiteingot", ItemEXOre::new);
+            ItemList.itemDustMeutoite = ITEMS.register("meutoitedust", ItemEXOre::new);
+            ItemList.itemShardMeutoite = ITEMS.register("meutoiteshard", ItemEXOre::new);
+            ItemList.itemClumpMeutoite = ITEMS.register("meutoiteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustMeutoite = ITEMS.register("meutoitedirtydust", ItemEXOre::new);
+            ItemList.itemRawMeutoite = ITEMS.register("rawmeutoite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerMidasium.get())
         {
-            ItemList.itemIngotMidasium = ITEMS.register("midasiumingot", () -> new ItemEXOre());
-            ItemList.itemDustMidasium = ITEMS.register("midasiumdust", () -> new ItemEXOre());
-            ItemList.itemShardMidasium = ITEMS.register("midasiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpMidasium = ITEMS.register("midasiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustMidasium = ITEMS.register("midasiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawMidasium = ITEMS.register("rawmidasium", () -> new ItemEXOre());
+            ItemList.itemIngotMidasium = ITEMS.register("midasiumingot", ItemEXOre::new);
+            ItemList.itemDustMidasium = ITEMS.register("midasiumdust", ItemEXOre::new);
+            ItemList.itemShardMidasium = ITEMS.register("midasiumshard", ItemEXOre::new);
+            ItemList.itemClumpMidasium = ITEMS.register("midasiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustMidasium = ITEMS.register("midasiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawMidasium = ITEMS.register("rawmidasium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerMithril.get())
         {
-            ItemList.itemIngotMithril = ITEMS.register("mithrilingot", () -> new ItemEXOre());
-            ItemList.itemDustMithril = ITEMS.register("mithrildust", () -> new ItemEXOre());
-            ItemList.itemShardMithril = ITEMS.register("mithrilshard", () -> new ItemEXOre());
-            ItemList.itemClumpMithril = ITEMS.register("mithrilclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustMithril = ITEMS.register("mithrildirtydust", () -> new ItemEXOre());
-            ItemList.itemRawMithril = ITEMS.register("rawmithril", () -> new ItemEXOre());
+            ItemList.itemIngotMithril = ITEMS.register("mithrilingot", ItemEXOre::new);
+            ItemList.itemDustMithril = ITEMS.register("mithrildust", ItemEXOre::new);
+            ItemList.itemShardMithril = ITEMS.register("mithrilshard", ItemEXOre::new);
+            ItemList.itemClumpMithril = ITEMS.register("mithrilclump", ItemEXOre::new);
+            ItemList.itemDirtyDustMithril = ITEMS.register("mithrildirtydust", ItemEXOre::new);
+            ItemList.itemRawMithril = ITEMS.register("rawmithril", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerMolybdenum.get())
         {
-            ItemList.itemIngotMolybdenum = ITEMS.register("molybdenumingot", () -> new ItemEXOre());
-            ItemList.itemDustMolybdenum = ITEMS.register("molybdenumdust", () -> new ItemEXOre());
-            ItemList.itemShardMolybdenum = ITEMS.register("molybdenumshard", () -> new ItemEXOre());
-            ItemList.itemClumpMolybdenum = ITEMS.register("molybdenumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustMolybdenum = ITEMS.register("molybdenumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawMolybdenum = ITEMS.register("rawmolybdenum", () -> new ItemEXOre());
+            ItemList.itemIngotMolybdenum = ITEMS.register("molybdenumingot", ItemEXOre::new);
+            ItemList.itemDustMolybdenum = ITEMS.register("molybdenumdust", ItemEXOre::new);
+            ItemList.itemShardMolybdenum = ITEMS.register("molybdenumshard", ItemEXOre::new);
+            ItemList.itemClumpMolybdenum = ITEMS.register("molybdenumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustMolybdenum = ITEMS.register("molybdenumdirtydust", ItemEXOre::new);
+            ItemList.itemRawMolybdenum = ITEMS.register("rawmolybdenum", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerNeodymium.get())
         {
-            ItemList.itemIngotNeodymium = ITEMS.register("neodymiumingot", () -> new ItemEXOre());
-            ItemList.itemDustNeodymium = ITEMS.register("neodymiumdust", () -> new ItemEXOre());
-            ItemList.itemShardNeodymium = ITEMS.register("neodymiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpNeodymium = ITEMS.register("neodymiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustNeodymium = ITEMS.register("neodymiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawNeodymium = ITEMS.register("rawneodymium", () -> new ItemEXOre());
+            ItemList.itemIngotNeodymium = ITEMS.register("neodymiumingot", ItemEXOre::new);
+            ItemList.itemDustNeodymium = ITEMS.register("neodymiumdust", ItemEXOre::new);
+            ItemList.itemShardNeodymium = ITEMS.register("neodymiumshard", ItemEXOre::new);
+            ItemList.itemClumpNeodymium = ITEMS.register("neodymiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustNeodymium = ITEMS.register("neodymiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawNeodymium = ITEMS.register("rawneodymium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerNeptunium.get())
         {
-            ItemList.itemIngotNeptunium = ITEMS.register("neptuniumingot", () -> new ItemEXOre());
-            ItemList.itemDustNeptunium = ITEMS.register("neptuniumdust", () -> new ItemEXOre());
-            ItemList.itemShardNeptunium = ITEMS.register("neptuniumshard", () -> new ItemEXOre());
-            ItemList.itemClumpNeptunium = ITEMS.register("neptuniumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustNeptunium = ITEMS.register("neptuniumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawNeptunium = ITEMS.register("rawneptunium", () -> new ItemEXOre());
+            ItemList.itemIngotNeptunium = ITEMS.register("neptuniumingot", ItemEXOre::new);
+            ItemList.itemDustNeptunium = ITEMS.register("neptuniumdust", ItemEXOre::new);
+            ItemList.itemShardNeptunium = ITEMS.register("neptuniumshard", ItemEXOre::new);
+            ItemList.itemClumpNeptunium = ITEMS.register("neptuniumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustNeptunium = ITEMS.register("neptuniumdirtydust", ItemEXOre::new);
+            ItemList.itemRawNeptunium = ITEMS.register("rawneptunium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerNickel.get())
         {
-            ItemList.itemIngotNickel = ITEMS.register("nickelingot", () -> new ItemEXOre());
-            ItemList.itemDustNickel = ITEMS.register("nickeldust", () -> new ItemEXOre());
-            ItemList.itemShardNickel = ITEMS.register("nickelshard", () -> new ItemEXOre());
-            ItemList.itemClumpNickel = ITEMS.register("nickelclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustNickel = ITEMS.register("nickeldirtydust", () -> new ItemEXOre());
-            ItemList.itemRawNickel = ITEMS.register("rawnickel", () -> new ItemEXOre());
+            ItemList.itemIngotNickel = ITEMS.register("nickelingot", ItemEXOre::new);
+            ItemList.itemDustNickel = ITEMS.register("nickeldust", ItemEXOre::new);
+            ItemList.itemShardNickel = ITEMS.register("nickelshard", ItemEXOre::new);
+            ItemList.itemClumpNickel = ITEMS.register("nickelclump", ItemEXOre::new);
+            ItemList.itemDirtyDustNickel = ITEMS.register("nickeldirtydust", ItemEXOre::new);
+            ItemList.itemRawNickel = ITEMS.register("rawnickel", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerNiobium.get())
         {
-            ItemList.itemIngotNiobium = ITEMS.register("niobiumingot", () -> new ItemEXOre());
-            ItemList.itemDustNiobium = ITEMS.register("niobiumdust", () -> new ItemEXOre());
-            ItemList.itemShardNiobium = ITEMS.register("niobiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpNiobium = ITEMS.register("niobiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustNiobium = ITEMS.register("niobiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawNiobium = ITEMS.register("rawniobium", () -> new ItemEXOre());
+            ItemList.itemIngotNiobium = ITEMS.register("niobiumingot", ItemEXOre::new);
+            ItemList.itemDustNiobium = ITEMS.register("niobiumdust", ItemEXOre::new);
+            ItemList.itemShardNiobium = ITEMS.register("niobiumshard", ItemEXOre::new);
+            ItemList.itemClumpNiobium = ITEMS.register("niobiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustNiobium = ITEMS.register("niobiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawNiobium = ITEMS.register("rawniobium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerOnyx.get())
         {
-            ItemList.itemGemOnyx = ITEMS.register("onyx", () -> new ItemEXOre());
+            ItemList.itemGemOnyx = ITEMS.register("onyx", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerOpal.get())
         {
-            ItemList.itemGemOpal = ITEMS.register("opal", () -> new ItemEXOre());
+            ItemList.itemGemOpal = ITEMS.register("opal", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerOrichalcum.get())
         {
-            ItemList.itemIngotOrichalcum = ITEMS.register("orichalcumingot", () -> new ItemEXOre());
-            ItemList.itemDustOrichalcum = ITEMS.register("orichalcumdust", () -> new ItemEXOre());
-            ItemList.itemShardOrichalcum = ITEMS.register("orichalcumshard", () -> new ItemEXOre());
-            ItemList.itemClumpOrichalcum = ITEMS.register("orichalcumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustOrichalcum = ITEMS.register("orichalcumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawOrichalcum = ITEMS.register("raworichalcum", () -> new ItemEXOre());
+            ItemList.itemIngotOrichalcum = ITEMS.register("orichalcumingot", ItemEXOre::new);
+            ItemList.itemDustOrichalcum = ITEMS.register("orichalcumdust", ItemEXOre::new);
+            ItemList.itemShardOrichalcum = ITEMS.register("orichalcumshard", ItemEXOre::new);
+            ItemList.itemClumpOrichalcum = ITEMS.register("orichalcumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustOrichalcum = ITEMS.register("orichalcumdirtydust", ItemEXOre::new);
+            ItemList.itemRawOrichalcum = ITEMS.register("raworichalcum", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerOsmium.get())
         {
-            ItemList.itemIngotOsmium = ITEMS.register("osmiumingot", () -> new ItemEXOre());
-            ItemList.itemDustOsmium = ITEMS.register("osmiumdust", () -> new ItemEXOre());
-            ItemList.itemShardOsmium = ITEMS.register("osmiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpOsmium = ITEMS.register("osmiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustOsmium = ITEMS.register("osmiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawOsmium = ITEMS.register("rawosmium", () -> new ItemEXOre());
+            ItemList.itemIngotOsmium = ITEMS.register("osmiumingot", ItemEXOre::new);
+            ItemList.itemDustOsmium = ITEMS.register("osmiumdust", ItemEXOre::new);
+            ItemList.itemShardOsmium = ITEMS.register("osmiumshard", ItemEXOre::new);
+            ItemList.itemClumpOsmium = ITEMS.register("osmiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustOsmium = ITEMS.register("osmiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawOsmium = ITEMS.register("rawosmium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerOureclase.get())
         {
-            ItemList.itemIngotOureclase = ITEMS.register("oureclaseingot", () -> new ItemEXOre());
-            ItemList.itemDustOureclase = ITEMS.register("oureclasedust", () -> new ItemEXOre());
-            ItemList.itemShardOureclase = ITEMS.register("oureclaseshard", () -> new ItemEXOre());
-            ItemList.itemClumpOureclase = ITEMS.register("oureclaseclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustOureclase = ITEMS.register("oureclasedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawOureclase = ITEMS.register("rawoureclase", () -> new ItemEXOre());
+            ItemList.itemIngotOureclase = ITEMS.register("oureclaseingot", ItemEXOre::new);
+            ItemList.itemDustOureclase = ITEMS.register("oureclasedust", ItemEXOre::new);
+            ItemList.itemShardOureclase = ITEMS.register("oureclaseshard", ItemEXOre::new);
+            ItemList.itemClumpOureclase = ITEMS.register("oureclaseclump", ItemEXOre::new);
+            ItemList.itemDirtyDustOureclase = ITEMS.register("oureclasedirtydust", ItemEXOre::new);
+            ItemList.itemRawOureclase = ITEMS.register("rawoureclase", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerPalladium.get())
         {
-            ItemList.itemIngotPalladium = ITEMS.register("palladiumingot", () -> new ItemEXOre());
-            ItemList.itemDustPalladium = ITEMS.register("palladiumdust", () -> new ItemEXOre());
-            ItemList.itemShardPalladium = ITEMS.register("palladiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpPalladium = ITEMS.register("palladiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustPalladium = ITEMS.register("palladiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawPalladium = ITEMS.register("rawpalladium", () -> new ItemEXOre());
+            ItemList.itemIngotPalladium = ITEMS.register("palladiumingot", ItemEXOre::new);
+            ItemList.itemDustPalladium = ITEMS.register("palladiumdust", ItemEXOre::new);
+            ItemList.itemShardPalladium = ITEMS.register("palladiumshard", ItemEXOre::new);
+            ItemList.itemClumpPalladium = ITEMS.register("palladiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustPalladium = ITEMS.register("palladiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawPalladium = ITEMS.register("rawpalladium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerPeridot.get())
         {
-            ItemList.itemGemPeridot = ITEMS.register("peridot", () -> new ItemEXOre());
+            ItemList.itemGemPeridot = ITEMS.register("peridot", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerPhoenixite.get())
         {
-            ItemList.itemGemPhoenixite = ITEMS.register("phoenixite", () -> new ItemEXOre());
+            ItemList.itemGemPhoenixite = ITEMS.register("phoenixite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerPlatinum.get())
         {
-            ItemList.itemIngotPlatinum = ITEMS.register("platinumingot", () -> new ItemEXOre());
-            ItemList.itemDustPlatinum = ITEMS.register("platinumdust", () -> new ItemEXOre());
-            ItemList.itemShardPlatinum = ITEMS.register("platinumshard", () -> new ItemEXOre());
-            ItemList.itemClumpPlatinum = ITEMS.register("platinumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustPlatinum = ITEMS.register("platinumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawPlatinum = ITEMS.register("rawplatinum", () -> new ItemEXOre());
+            ItemList.itemIngotPlatinum = ITEMS.register("platinumingot", ItemEXOre::new);
+            ItemList.itemDustPlatinum = ITEMS.register("platinumdust", ItemEXOre::new);
+            ItemList.itemShardPlatinum = ITEMS.register("platinumshard", ItemEXOre::new);
+            ItemList.itemClumpPlatinum = ITEMS.register("platinumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustPlatinum = ITEMS.register("platinumdirtydust", ItemEXOre::new);
+            ItemList.itemRawPlatinum = ITEMS.register("rawplatinum", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerPlutonium.get())
         {
-            ItemList.itemIngotPlutonium = ITEMS.register("plutoniumingot", () -> new ItemEXOre());
-            ItemList.itemDustPlutonium = ITEMS.register("plutoniumdust", () -> new ItemEXOre());
-            ItemList.itemShardPlutonium = ITEMS.register("plutoniumshard", () -> new ItemEXOre());
-            ItemList.itemClumpPlutonium = ITEMS.register("plutoniumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustPlutonium = ITEMS.register("plutoniumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawPlutonium = ITEMS.register("rawplutonium", () -> new ItemEXOre());
+            ItemList.itemIngotPlutonium = ITEMS.register("plutoniumingot", ItemEXOre::new);
+            ItemList.itemDustPlutonium = ITEMS.register("plutoniumdust", ItemEXOre::new);
+            ItemList.itemShardPlutonium = ITEMS.register("plutoniumshard", ItemEXOre::new);
+            ItemList.itemClumpPlutonium = ITEMS.register("plutoniumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustPlutonium = ITEMS.register("plutoniumdirtydust", ItemEXOre::new);
+            ItemList.itemRawPlutonium = ITEMS.register("rawplutonium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerPolonium.get())
         {
-            ItemList.itemIngotPolonium = ITEMS.register("poloniumingot", () -> new ItemEXOre());
-            ItemList.itemDustPolonium = ITEMS.register("poloniumdust", () -> new ItemEXOre());
-            ItemList.itemShardPolonium = ITEMS.register("poloniumshard", () -> new ItemEXOre());
-            ItemList.itemClumpPolonium = ITEMS.register("poloniumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustPolonium = ITEMS.register("poloniumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawPolonium = ITEMS.register("rawpolonium", () -> new ItemEXOre());
+            ItemList.itemIngotPolonium = ITEMS.register("poloniumingot", ItemEXOre::new);
+            ItemList.itemDustPolonium = ITEMS.register("poloniumdust", ItemEXOre::new);
+            ItemList.itemShardPolonium = ITEMS.register("poloniumshard", ItemEXOre::new);
+            ItemList.itemClumpPolonium = ITEMS.register("poloniumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustPolonium = ITEMS.register("poloniumdirtydust", ItemEXOre::new);
+            ItemList.itemRawPolonium = ITEMS.register("rawpolonium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerPromethium.get())
         {
-            ItemList.itemIngotPromethium = ITEMS.register("promethiumingot", () -> new ItemEXOre());
-            ItemList.itemDustPromethium = ITEMS.register("promethiumdust", () -> new ItemEXOre());
-            ItemList.itemShardPromethium = ITEMS.register("promethiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpPromethium = ITEMS.register("promethiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustPromethium = ITEMS.register("promethiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawPromethium = ITEMS.register("rawpromethium", () -> new ItemEXOre());
+            ItemList.itemIngotPromethium = ITEMS.register("promethiumingot", ItemEXOre::new);
+            ItemList.itemDustPromethium = ITEMS.register("promethiumdust", ItemEXOre::new);
+            ItemList.itemShardPromethium = ITEMS.register("promethiumshard", ItemEXOre::new);
+            ItemList.itemClumpPromethium = ITEMS.register("promethiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustPromethium = ITEMS.register("promethiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawPromethium = ITEMS.register("rawpromethium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerQuartz.get())
         {
-            ItemList.itemGemQuartz = ITEMS.register("quartz", () -> new ItemEXOre());
+            ItemList.itemGemQuartz = ITEMS.register("quartz", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerRhenium.get())
         {
-            ItemList.itemIngotRhenium = ITEMS.register("rheniumingot", () -> new ItemEXOre());
-            ItemList.itemDustRhenium = ITEMS.register("rheniumdust", () -> new ItemEXOre());
-            ItemList.itemShardRhenium = ITEMS.register("rheniumshard", () -> new ItemEXOre());
-            ItemList.itemClumpRhenium = ITEMS.register("rheniumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustRhenium = ITEMS.register("rheniumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawRhenium = ITEMS.register("rawrhenium", () -> new ItemEXOre());
+            ItemList.itemIngotRhenium = ITEMS.register("rheniumingot", ItemEXOre::new);
+            ItemList.itemDustRhenium = ITEMS.register("rheniumdust", ItemEXOre::new);
+            ItemList.itemShardRhenium = ITEMS.register("rheniumshard", ItemEXOre::new);
+            ItemList.itemClumpRhenium = ITEMS.register("rheniumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustRhenium = ITEMS.register("rheniumdirtydust", ItemEXOre::new);
+            ItemList.itemRawRhenium = ITEMS.register("rawrhenium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerRhodium.get())
         {
-            ItemList.itemIngotRhodium = ITEMS.register("rhodiumingot", () -> new ItemEXOre());
-            ItemList.itemDustRhodium = ITEMS.register("rhodiumdust", () -> new ItemEXOre());
-            ItemList.itemShardRhodium = ITEMS.register("rhodiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpRhodium = ITEMS.register("rhodiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustRhodium = ITEMS.register("rhodiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawRhodium = ITEMS.register("rawrhodium", () -> new ItemEXOre());
+            ItemList.itemIngotRhodium = ITEMS.register("rhodiumingot", ItemEXOre::new);
+            ItemList.itemDustRhodium = ITEMS.register("rhodiumdust", ItemEXOre::new);
+            ItemList.itemShardRhodium = ITEMS.register("rhodiumshard", ItemEXOre::new);
+            ItemList.itemClumpRhodium = ITEMS.register("rhodiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustRhodium = ITEMS.register("rhodiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawRhodium = ITEMS.register("rawrhodium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerRubracium.get())
         {
-            ItemList.itemIngotRubracium = ITEMS.register("rubraciumingot", () -> new ItemEXOre());
-            ItemList.itemDustRubracium = ITEMS.register("rubraciumdust", () -> new ItemEXOre());
-            ItemList.itemShardRubracium = ITEMS.register("rubraciumshard", () -> new ItemEXOre());
-            ItemList.itemClumpRubracium = ITEMS.register("rubraciumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustRubracium = ITEMS.register("rubraciumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawRubracium = ITEMS.register("rawrubracium", () -> new ItemEXOre());
+            ItemList.itemIngotRubracium = ITEMS.register("rubraciumingot", ItemEXOre::new);
+            ItemList.itemDustRubracium = ITEMS.register("rubraciumdust", ItemEXOre::new);
+            ItemList.itemShardRubracium = ITEMS.register("rubraciumshard", ItemEXOre::new);
+            ItemList.itemClumpRubracium = ITEMS.register("rubraciumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustRubracium = ITEMS.register("rubraciumdirtydust", ItemEXOre::new);
+            ItemList.itemRawRubracium = ITEMS.register("rawrubracium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerRuby.get())
         {
-            ItemList.itemGemRuby = ITEMS.register("ruby", () -> new ItemEXOre());
+            ItemList.itemGemRuby = ITEMS.register("ruby", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerRuthenium.get())
         {
-            ItemList.itemIngotRuthenium = ITEMS.register("rutheniumingot", () -> new ItemEXOre());
-            ItemList.itemDustRuthenium = ITEMS.register("rutheniumdust", () -> new ItemEXOre());
-            ItemList.itemShardRuthenium = ITEMS.register("rutheniumshard", () -> new ItemEXOre());
-            ItemList.itemClumpRuthenium = ITEMS.register("rutheniumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustRuthenium = ITEMS.register("rutheniumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawRuthenium = ITEMS.register("rawruthenium", () -> new ItemEXOre());
+            ItemList.itemIngotRuthenium = ITEMS.register("rutheniumingot", ItemEXOre::new);
+            ItemList.itemDustRuthenium = ITEMS.register("rutheniumdust", ItemEXOre::new);
+            ItemList.itemShardRuthenium = ITEMS.register("rutheniumshard", ItemEXOre::new);
+            ItemList.itemClumpRuthenium = ITEMS.register("rutheniumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustRuthenium = ITEMS.register("rutheniumdirtydust", ItemEXOre::new);
+            ItemList.itemRawRuthenium = ITEMS.register("rawruthenium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerSanguinite.get())
         {
-            ItemList.itemIngotSanguinite = ITEMS.register("sanguiniteingot", () -> new ItemEXOre());
-            ItemList.itemDustSanguinite = ITEMS.register("sanguinitedust", () -> new ItemEXOre());
-            ItemList.itemShardSanguinite = ITEMS.register("sanguiniteshard", () -> new ItemEXOre());
-            ItemList.itemClumpSanguinite = ITEMS.register("sanguiniteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustSanguinite = ITEMS.register("sanguinitedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawSanguinite = ITEMS.register("rawsanguinite", () -> new ItemEXOre());
+            ItemList.itemIngotSanguinite = ITEMS.register("sanguiniteingot", ItemEXOre::new);
+            ItemList.itemDustSanguinite = ITEMS.register("sanguinitedust", ItemEXOre::new);
+            ItemList.itemShardSanguinite = ITEMS.register("sanguiniteshard", ItemEXOre::new);
+            ItemList.itemClumpSanguinite = ITEMS.register("sanguiniteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustSanguinite = ITEMS.register("sanguinitedirtydust", ItemEXOre::new);
+            ItemList.itemRawSanguinite = ITEMS.register("rawsanguinite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerSapphire.get())
         {
-            ItemList.itemGemSapphire = ITEMS.register("sapphire", () -> new ItemEXOre());
+            ItemList.itemGemSapphire = ITEMS.register("sapphire", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerShadowIron.get())
         {
-            ItemList.itemIngotShadowIron = ITEMS.register("shadowironingot", () -> new ItemEXOre());
-            ItemList.itemDustShadowIron = ITEMS.register("shadowirondust", () -> new ItemEXOre());
-            ItemList.itemShardShadowIron = ITEMS.register("shadowironshard", () -> new ItemEXOre());
-            ItemList.itemClumpShadowIron = ITEMS.register("shadowironclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustShadowIron = ITEMS.register("shadowirondirtydust", () -> new ItemEXOre());
-            ItemList.itemRawShadowIron = ITEMS.register("rawshadowiron", () -> new ItemEXOre());
+            ItemList.itemIngotShadowIron = ITEMS.register("shadowironingot", ItemEXOre::new);
+            ItemList.itemDustShadowIron = ITEMS.register("shadowirondust", ItemEXOre::new);
+            ItemList.itemShardShadowIron = ITEMS.register("shadowironshard", ItemEXOre::new);
+            ItemList.itemClumpShadowIron = ITEMS.register("shadowironclump", ItemEXOre::new);
+            ItemList.itemDirtyDustShadowIron = ITEMS.register("shadowirondirtydust", ItemEXOre::new);
+            ItemList.itemRawShadowIron = ITEMS.register("rawshadowiron", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerSilver.get())
         {
-            ItemList.itemIngotSilver = ITEMS.register("silveringot", () -> new ItemEXOre());
-            ItemList.itemDustSilver = ITEMS.register("silverdust", () -> new ItemEXOre());
-            ItemList.itemShardSilver = ITEMS.register("silvershard", () -> new ItemEXOre());
-            ItemList.itemClumpSilver = ITEMS.register("silverclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustSilver = ITEMS.register("silverdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawSilver = ITEMS.register("rawsilver", () -> new ItemEXOre());
+            ItemList.itemIngotSilver = ITEMS.register("silveringot", ItemEXOre::new);
+            ItemList.itemDustSilver = ITEMS.register("silverdust", ItemEXOre::new);
+            ItemList.itemShardSilver = ITEMS.register("silvershard", ItemEXOre::new);
+            ItemList.itemClumpSilver = ITEMS.register("silverclump", ItemEXOre::new);
+            ItemList.itemDirtyDustSilver = ITEMS.register("silverdirtydust", ItemEXOre::new);
+            ItemList.itemRawSilver = ITEMS.register("rawsilver", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerSpinel.get())
         {
-            ItemList.itemGemSpinel = ITEMS.register("spinel", () -> new ItemEXOre());
+            ItemList.itemGemSpinel = ITEMS.register("spinel", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerSugilite.get())
         {
-            ItemList.itemGemSugilite = ITEMS.register("sugilite", () -> new ItemEXOre());
+            ItemList.itemGemSugilite = ITEMS.register("sugilite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTantalum.get())
         {
-            ItemList.itemIngotTantalum = ITEMS.register("tantalumingot", () -> new ItemEXOre());
-            ItemList.itemDustTantalum = ITEMS.register("tantalumdust", () -> new ItemEXOre());
-            ItemList.itemShardTantalum = ITEMS.register("tantalumshard", () -> new ItemEXOre());
-            ItemList.itemClumpTantalum = ITEMS.register("tantalumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustTantalum = ITEMS.register("tantalumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawTantalum = ITEMS.register("rawtantalum", () -> new ItemEXOre());
+            ItemList.itemIngotTantalum = ITEMS.register("tantalumingot", ItemEXOre::new);
+            ItemList.itemDustTantalum = ITEMS.register("tantalumdust", ItemEXOre::new);
+            ItemList.itemShardTantalum = ITEMS.register("tantalumshard", ItemEXOre::new);
+            ItemList.itemClumpTantalum = ITEMS.register("tantalumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustTantalum = ITEMS.register("tantalumdirtydust", ItemEXOre::new);
+            ItemList.itemRawTantalum = ITEMS.register("rawtantalum", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTanzanite.get())
         {
-            ItemList.itemGemTanzanite = ITEMS.register("tanzanite", () -> new ItemEXOre());
+            ItemList.itemGemTanzanite = ITEMS.register("tanzanite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTartarite.get())
         {
-            ItemList.itemIngotTartarite = ITEMS.register("tartariteingot", () -> new ItemEXOre());
-            ItemList.itemDustTartarite = ITEMS.register("tartaritedust", () -> new ItemEXOre());
-            ItemList.itemShardTartarite = ITEMS.register("tartariteshard", () -> new ItemEXOre());
-            ItemList.itemClumpTartarite = ITEMS.register("tartariteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustTartarite = ITEMS.register("tartaritedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawTartarite = ITEMS.register("rawtartarite", () -> new ItemEXOre());
+            ItemList.itemIngotTartarite = ITEMS.register("tartariteingot", ItemEXOre::new);
+            ItemList.itemDustTartarite = ITEMS.register("tartaritedust", ItemEXOre::new);
+            ItemList.itemShardTartarite = ITEMS.register("tartariteshard", ItemEXOre::new);
+            ItemList.itemClumpTartarite = ITEMS.register("tartariteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustTartarite = ITEMS.register("tartaritedirtydust", ItemEXOre::new);
+            ItemList.itemRawTartarite = ITEMS.register("rawtartarite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTechnetium.get())
         {
-            ItemList.itemIngotTechnetium = ITEMS.register("technetiumingot", () -> new ItemEXOre());
-            ItemList.itemDustTechnetium = ITEMS.register("technetiumdust", () -> new ItemEXOre());
-            ItemList.itemShardTechnetium = ITEMS.register("technetiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpTechnetium = ITEMS.register("technetiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustTechnetium = ITEMS.register("technetiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawTechnetium = ITEMS.register("rawtechnetium", () -> new ItemEXOre());
+            ItemList.itemIngotTechnetium = ITEMS.register("technetiumingot", ItemEXOre::new);
+            ItemList.itemDustTechnetium = ITEMS.register("technetiumdust", ItemEXOre::new);
+            ItemList.itemShardTechnetium = ITEMS.register("technetiumshard", ItemEXOre::new);
+            ItemList.itemClumpTechnetium = ITEMS.register("technetiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustTechnetium = ITEMS.register("technetiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawTechnetium = ITEMS.register("rawtechnetium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerThallium.get())
         {
-            ItemList.itemIngotThallium = ITEMS.register("thalliumingot", () -> new ItemEXOre());
-            ItemList.itemDustThallium = ITEMS.register("thalliumdust", () -> new ItemEXOre());
-            ItemList.itemShardThallium = ITEMS.register("thalliumshard", () -> new ItemEXOre());
-            ItemList.itemClumpThallium = ITEMS.register("thalliumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustThallium = ITEMS.register("thalliumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawThallium = ITEMS.register("rawthallium", () -> new ItemEXOre());
+            ItemList.itemIngotThallium = ITEMS.register("thalliumingot", ItemEXOre::new);
+            ItemList.itemDustThallium = ITEMS.register("thalliumdust", ItemEXOre::new);
+            ItemList.itemShardThallium = ITEMS.register("thalliumshard", ItemEXOre::new);
+            ItemList.itemClumpThallium = ITEMS.register("thalliumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustThallium = ITEMS.register("thalliumdirtydust", ItemEXOre::new);
+            ItemList.itemRawThallium = ITEMS.register("rawthallium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTin.get())
         {
-            ItemList.itemIngotTin = ITEMS.register("tiningot", () -> new ItemEXOre());
-            ItemList.itemDustTin = ITEMS.register("tindust", () -> new ItemEXOre());
-            ItemList.itemShardTin = ITEMS.register("tinshard", () -> new ItemEXOre());
-            ItemList.itemClumpTin = ITEMS.register("tinclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustTin = ITEMS.register("tindirtydust", () -> new ItemEXOre());
-            ItemList.itemRawTin = ITEMS.register("rawtin", () -> new ItemEXOre());
+            ItemList.itemIngotTin = ITEMS.register("tiningot", ItemEXOre::new);
+            ItemList.itemDustTin = ITEMS.register("tindust", ItemEXOre::new);
+            ItemList.itemShardTin = ITEMS.register("tinshard", ItemEXOre::new);
+            ItemList.itemClumpTin = ITEMS.register("tinclump", ItemEXOre::new);
+            ItemList.itemDirtyDustTin = ITEMS.register("tindirtydust", ItemEXOre::new);
+            ItemList.itemRawTin = ITEMS.register("rawtin", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTitanium.get())
         {
-            ItemList.itemIngotTitanium = ITEMS.register("titaniumingot", () -> new ItemEXOre());
-            ItemList.itemDustTitanium = ITEMS.register("titaniumdust", () -> new ItemEXOre());
-            ItemList.itemShardTitanium = ITEMS.register("titaniumshard", () -> new ItemEXOre());
-            ItemList.itemClumpTitanium = ITEMS.register("titaniumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustTitanium = ITEMS.register("titaniumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawTitanium = ITEMS.register("rawtitanium", () -> new ItemEXOre());
+            ItemList.itemIngotTitanium = ITEMS.register("titaniumingot", ItemEXOre::new);
+            ItemList.itemDustTitanium = ITEMS.register("titaniumdust", ItemEXOre::new);
+            ItemList.itemShardTitanium = ITEMS.register("titaniumshard", ItemEXOre::new);
+            ItemList.itemClumpTitanium = ITEMS.register("titaniumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustTitanium = ITEMS.register("titaniumdirtydust", ItemEXOre::new);
+            ItemList.itemRawTitanium = ITEMS.register("rawtitanium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTopaz.get())
         {
-            ItemList.itemGemTopaz = ITEMS.register("topaz", () -> new ItemEXOre());
+            ItemList.itemGemTopaz = ITEMS.register("topaz", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTourmaline.get())
         {
-            ItemList.itemGemTourmaline = ITEMS.register("tourmaline", () -> new ItemEXOre());
+            ItemList.itemGemTourmaline = ITEMS.register("tourmaline", ItemEXOre::new);
         }
         if(ConfigRegistryList.registerTritium.get())
         {
-            ItemList.itemIngotTritium = ITEMS.register("tritiumingot", () -> new ItemEXOre());
-            ItemList.itemDustTritium = ITEMS.register("tritiumdust", () -> new ItemEXOre());
-            ItemList.itemShardTritium = ITEMS.register("tritiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpTritium = ITEMS.register("tritiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustTritium = ITEMS.register("tritiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawTritium = ITEMS.register("rawtritium", () -> new ItemEXOre());
+            ItemList.itemIngotTritium = ITEMS.register("tritiumingot", ItemEXOre::new);
+            ItemList.itemDustTritium = ITEMS.register("tritiumdust", ItemEXOre::new);
+            ItemList.itemShardTritium = ITEMS.register("tritiumshard", ItemEXOre::new);
+            ItemList.itemClumpTritium = ITEMS.register("tritiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustTritium = ITEMS.register("tritiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawTritium = ITEMS.register("rawtritium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTungsten.get())
         {
-            ItemList.itemIngotTungsten = ITEMS.register("tungsteningot", () -> new ItemEXOre());
-            ItemList.itemDustTungsten = ITEMS.register("tungstendust", () -> new ItemEXOre());
-            ItemList.itemShardTungsten = ITEMS.register("tungstenshard", () -> new ItemEXOre());
-            ItemList.itemClumpTungsten = ITEMS.register("tungstenclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustTungsten = ITEMS.register("tungstendirtydust", () -> new ItemEXOre());
-            ItemList.itemRawTungsten = ITEMS.register("rawtungsten", () -> new ItemEXOre());
+            ItemList.itemIngotTungsten = ITEMS.register("tungsteningot", ItemEXOre::new);
+            ItemList.itemDustTungsten = ITEMS.register("tungstendust", ItemEXOre::new);
+            ItemList.itemShardTungsten = ITEMS.register("tungstenshard", ItemEXOre::new);
+            ItemList.itemClumpTungsten = ITEMS.register("tungstenclump", ItemEXOre::new);
+            ItemList.itemDirtyDustTungsten = ITEMS.register("tungstendirtydust", ItemEXOre::new);
+            ItemList.itemRawTungsten = ITEMS.register("rawtungsten", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerTurquoise.get())
         {
-            ItemList.itemGemTurquoise = ITEMS.register("turquoise", () -> new ItemEXOre());
+            ItemList.itemGemTurquoise = ITEMS.register("turquoise", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerUnobtainium.get())
         {
-            ItemList.itemIngotUnobtainium = ITEMS.register("unobtainiumingot", () -> new ItemEXOre());
-            ItemList.itemDustUnobtainium = ITEMS.register("unobtainiumdust", () -> new ItemEXOre());
-            ItemList.itemShardUnobtainium = ITEMS.register("unobtainiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpUnobtainium = ITEMS.register("unobtainiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustUnobtainium = ITEMS.register("unobtainiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawUnobtainium = ITEMS.register("rawunobtainium", () -> new ItemEXOre());
+            ItemList.itemIngotUnobtainium = ITEMS.register("unobtainiumingot", ItemEXOre::new);
+            ItemList.itemDustUnobtainium = ITEMS.register("unobtainiumdust", ItemEXOre::new);
+            ItemList.itemShardUnobtainium = ITEMS.register("unobtainiumshard", ItemEXOre::new);
+            ItemList.itemClumpUnobtainium = ITEMS.register("unobtainiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustUnobtainium = ITEMS.register("unobtainiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawUnobtainium = ITEMS.register("rawunobtainium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerUranium.get())
         {
-            ItemList.itemIngotUranium = ITEMS.register("uraniumingot", () -> new ItemEXOre());
-            ItemList.itemDustUranium = ITEMS.register("uraniumdust", () -> new ItemEXOre());
-            ItemList.itemShardUranium = ITEMS.register("uraniumshard", () -> new ItemEXOre());
-            ItemList.itemClumpUranium = ITEMS.register("uraniumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustUranium = ITEMS.register("uraniumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawUranium = ITEMS.register("rawuranium", () -> new ItemEXOre());
+            ItemList.itemIngotUranium = ITEMS.register("uraniumingot", ItemEXOre::new);
+            ItemList.itemDustUranium = ITEMS.register("uraniumdust", ItemEXOre::new);
+            ItemList.itemShardUranium = ITEMS.register("uraniumshard", ItemEXOre::new);
+            ItemList.itemClumpUranium = ITEMS.register("uraniumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustUranium = ITEMS.register("uraniumdirtydust", ItemEXOre::new);
+            ItemList.itemRawUranium = ITEMS.register("rawuranium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerVanadium.get())
         {
-            ItemList.itemIngotVanadium = ITEMS.register("vanadiumingot", () -> new ItemEXOre());
-            ItemList.itemDustVanadium = ITEMS.register("vanadiumdust", () -> new ItemEXOre());
-            ItemList.itemShardVanadium = ITEMS.register("vanadiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpVanadium = ITEMS.register("vanadiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustVanadium = ITEMS.register("vanadiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawVanadium = ITEMS.register("rawvanadium", () -> new ItemEXOre());
+            ItemList.itemIngotVanadium = ITEMS.register("vanadiumingot", ItemEXOre::new);
+            ItemList.itemDustVanadium = ITEMS.register("vanadiumdust", ItemEXOre::new);
+            ItemList.itemShardVanadium = ITEMS.register("vanadiumshard", ItemEXOre::new);
+            ItemList.itemClumpVanadium = ITEMS.register("vanadiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustVanadium = ITEMS.register("vanadiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawVanadium = ITEMS.register("rawvanadium", ItemEXOre::new);
         }
         if(ConfigRegistryList.registerVibranium.get())
         {
-            ItemList.itemIngotVibranium = ITEMS.register("vibraniumingot", () -> new ItemEXOre());
-            ItemList.itemDustVibranium = ITEMS.register("vibraniumdust", () -> new ItemEXOre());
-            ItemList.itemShardVibranium = ITEMS.register("vibraniumshard", () -> new ItemEXOre());
-            ItemList.itemClumpVibranium = ITEMS.register("vibraniumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustVibranium = ITEMS.register("vibraniumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawVibranium = ITEMS.register("rawvibranium", () -> new ItemEXOre());
+            ItemList.itemIngotVibranium = ITEMS.register("vibraniumingot", ItemEXOre::new);
+            ItemList.itemDustVibranium = ITEMS.register("vibraniumdust", ItemEXOre::new);
+            ItemList.itemShardVibranium = ITEMS.register("vibraniumshard", ItemEXOre::new);
+            ItemList.itemClumpVibranium = ITEMS.register("vibraniumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustVibranium = ITEMS.register("vibraniumdirtydust", ItemEXOre::new);
+            ItemList.itemRawVibranium = ITEMS.register("rawvibranium", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerVulcanite.get())
         {
-            ItemList.itemIngotVulcanite = ITEMS.register("vulcaniteingot", () -> new ItemEXOre());
-            ItemList.itemDustVulcanite = ITEMS.register("vulcanitedust", () -> new ItemEXOre());
-            ItemList.itemShardVulcanite = ITEMS.register("vulcaniteshard", () -> new ItemEXOre());
-            ItemList.itemClumpVulcanite = ITEMS.register("vulcaniteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustVulcanite = ITEMS.register("vulcanitedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawVulcanite = ITEMS.register("rawvulcanite", () -> new ItemEXOre());
+            ItemList.itemIngotVulcanite = ITEMS.register("vulcaniteingot", ItemEXOre::new);
+            ItemList.itemDustVulcanite = ITEMS.register("vulcanitedust", ItemEXOre::new);
+            ItemList.itemShardVulcanite = ITEMS.register("vulcaniteshard", ItemEXOre::new);
+            ItemList.itemClumpVulcanite = ITEMS.register("vulcaniteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustVulcanite = ITEMS.register("vulcanitedirtydust", ItemEXOre::new);
+            ItemList.itemRawVulcanite = ITEMS.register("rawvulcanite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerVyroxeres.get())
         {
-            ItemList.itemIngotVyroxeres = ITEMS.register("vyroxeresingot", () -> new ItemEXOre());
-            ItemList.itemDustVyroxeres = ITEMS.register("vyroxeresdust", () -> new ItemEXOre());
-            ItemList.itemShardVyroxeres = ITEMS.register("vyroxeresshard", () -> new ItemEXOre());
-            ItemList.itemClumpVyroxeres = ITEMS.register("vyroxeresclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustVyroxeres = ITEMS.register("vyroxeresdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawVyroxeres = ITEMS.register("rawvyroxeres", () -> new ItemEXOre());
+            ItemList.itemIngotVyroxeres = ITEMS.register("vyroxeresingot", ItemEXOre::new);
+            ItemList.itemDustVyroxeres = ITEMS.register("vyroxeresdust", ItemEXOre::new);
+            ItemList.itemShardVyroxeres = ITEMS.register("vyroxeresshard", ItemEXOre::new);
+            ItemList.itemClumpVyroxeres = ITEMS.register("vyroxeresclump", ItemEXOre::new);
+            ItemList.itemDirtyDustVyroxeres = ITEMS.register("vyroxeresdirtydust", ItemEXOre::new);
+            ItemList.itemRawVyroxeres = ITEMS.register("rawvyroxeres", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerYellorite.get())
         {
-            ItemList.itemIngotYellorite = ITEMS.register("yelloriteingot", () -> new ItemEXOre());
-            ItemList.itemDustYellorite = ITEMS.register("yelloritedust", () -> new ItemEXOre());
-            ItemList.itemShardYellorite = ITEMS.register("yelloriteshard", () -> new ItemEXOre());
-            ItemList.itemClumpYellorite = ITEMS.register("yelloriteclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustYellorite = ITEMS.register("yelloritedirtydust", () -> new ItemEXOre());
-            ItemList.itemRawYellorite = ITEMS.register("rawyellorite", () -> new ItemEXOre());
+            ItemList.itemIngotYellorite = ITEMS.register("yelloriteingot", ItemEXOre::new);
+            ItemList.itemDustYellorite = ITEMS.register("yelloritedust", ItemEXOre::new);
+            ItemList.itemShardYellorite = ITEMS.register("yelloriteshard", ItemEXOre::new);
+            ItemList.itemClumpYellorite = ITEMS.register("yelloriteclump", ItemEXOre::new);
+            ItemList.itemDirtyDustYellorite = ITEMS.register("yelloritedirtydust", ItemEXOre::new);
+            ItemList.itemRawYellorite = ITEMS.register("rawyellorite", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerZinc.get())
         {
-            ItemList.itemIngotZinc = ITEMS.register("zincingot", () -> new ItemEXOre());
-            ItemList.itemDustZinc = ITEMS.register("zincdust", () -> new ItemEXOre());
-            ItemList.itemShardZinc = ITEMS.register("zincshard", () -> new ItemEXOre());
-            ItemList.itemClumpZinc = ITEMS.register("zincclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustZinc = ITEMS.register("zincdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawZinc = ITEMS.register("rawzinc", () -> new ItemEXOre());
+            ItemList.itemIngotZinc = ITEMS.register("zincingot", ItemEXOre::new);
+            ItemList.itemDustZinc = ITEMS.register("zincdust", ItemEXOre::new);
+            ItemList.itemShardZinc = ITEMS.register("zincshard", ItemEXOre::new);
+            ItemList.itemClumpZinc = ITEMS.register("zincclump", ItemEXOre::new);
+            ItemList.itemDirtyDustZinc = ITEMS.register("zincdirtydust", ItemEXOre::new);
+            ItemList.itemRawZinc = ITEMS.register("rawzinc", ItemEXOre::new);
         }
         if (ConfigRegistryList.registerZirconium.get())
         {
-            ItemList.itemIngotZirconium = ITEMS.register("zirconiumingot", () -> new ItemEXOre());
-            ItemList.itemDustZirconium = ITEMS.register("zirconiumdust", () -> new ItemEXOre());
-            ItemList.itemShardZirconium = ITEMS.register("zirconiumshard", () -> new ItemEXOre());
-            ItemList.itemClumpZirconium = ITEMS.register("zirconiumclump", () -> new ItemEXOre());
-            ItemList.itemDirtyDustZirconium = ITEMS.register("zirconiumdirtydust", () -> new ItemEXOre());
-            ItemList.itemRawZirconium = ITEMS.register("rawzirconium", () -> new ItemEXOre());
+            ItemList.itemIngotZirconium = ITEMS.register("zirconiumingot", ItemEXOre::new);
+            ItemList.itemDustZirconium = ITEMS.register("zirconiumdust", ItemEXOre::new);
+            ItemList.itemShardZirconium = ITEMS.register("zirconiumshard", ItemEXOre::new);
+            ItemList.itemClumpZirconium = ITEMS.register("zirconiumclump", ItemEXOre::new);
+            ItemList.itemDirtyDustZirconium = ITEMS.register("zirconiumdirtydust", ItemEXOre::new);
+            ItemList.itemRawZirconium = ITEMS.register("rawzirconium", ItemEXOre::new);
         }
     }
 }

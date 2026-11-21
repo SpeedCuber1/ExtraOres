@@ -47,6 +47,7 @@ public class BlockList
     public static RegistryObject<Block> blockOreJade;
     public static RegistryObject<Block> blockOreJasper;
     public static RegistryObject<Block> blockOreKalendrite;
+    public static RegistryObject<Block> blockOreKryptonite;
     public static RegistryObject<Block> blockOreKyanite;
     public static RegistryObject<Block> blockOreLead;
     public static RegistryObject<Block> blockOreLemurite;
@@ -143,6 +144,7 @@ public class BlockList
     public static RegistryObject<Block> blockDeepslateOreIridium;
     public static RegistryObject<Block> blockDeepslateOreJade;
     public static RegistryObject<Block> blockDeepslateOreJasper;
+    public static RegistryObject<Block> blockDeepslateOreKryptonite;
     public static RegistryObject<Block> blockDeepslateOreKyanite;
     public static RegistryObject<Block> blockDeepslateOreLead;
     public static RegistryObject<Block> blockDeepslateOreMalachite;
@@ -206,6 +208,7 @@ public class BlockList
     public static RegistryObject<Block> blockEnderOreIolite;
     public static RegistryObject<Block> blockEnderOreJade;
     public static RegistryObject<Block> blockEnderOreJasper;
+    public static RegistryObject<Block> blockEnderOreKryptonite;
     public static RegistryObject<Block> blockEnderOreKyanite;
     public static RegistryObject<Block> blockEnderOreMalachite;
     public static RegistryObject<Block> blockEnderOreOnyx;
@@ -263,6 +266,7 @@ public class BlockList
     public static RegistryObject<Block> blockJade;
     public static RegistryObject<Block> blockJasper;
     public static RegistryObject<Block> blockKalendrite;
+    public static RegistryObject<Block> blockKryptonite;
     public static RegistryObject<Block> blockKyanite;
     public static RegistryObject<Block> blockLead;
     public static RegistryObject<Block> blockLemurite;

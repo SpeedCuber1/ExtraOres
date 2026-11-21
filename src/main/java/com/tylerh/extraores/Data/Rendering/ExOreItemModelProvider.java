@@ -480,6 +480,7 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemGemIolite);
         simpleItem(ItemList.itemGemJade);
         simpleItem(ItemList.itemGemJasper);
+        simpleItem(ItemList.itemGemKryptonite);
         simpleItem(ItemList.itemGemKyanite);
         simpleItem(ItemList.itemGemMalachite);
         simpleItem(ItemList.itemGemOnyx);

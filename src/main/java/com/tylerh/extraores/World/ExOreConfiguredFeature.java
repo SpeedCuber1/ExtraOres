@@ -44,8 +44,8 @@ public class ExOreConfiguredFeature
             ConfiguredFeatureList.featureAgate = registerKey("agateore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreAgate.get().defaultBlockState()),
-                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAgate.get().defaultBlockState())
-                    //OreConfiguration.target(endReplaceables,BlockList.blockEnderOreAgate.get().defaultBlockState())
+                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAgate.get().defaultBlockState()),
+                    OreConfiguration.target(endReplaceables,BlockList.blockEnderOreAgate.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureAgate,Feature.ORE,new OreConfiguration(target,size));
         }
@@ -404,6 +404,16 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(netherReplaceables,BlockList.blockOreKalendrite.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureKalendrite,Feature.ORE,new OreConfiguration(target,size));
+        }
+        if(ConfigRegistryList.registerKryptonite.get())
+        {
+            ConfiguredFeatureList.featureKryptonite = registerKey("kryptoniteore");
+            target = List.of(
+                    OreConfiguration.target(stoneReplaceables, BlockList.blockOreKryptonite.get().defaultBlockState()),
+                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreKryptonite.get().defaultBlockState()),
+                    OreConfiguration.target(endReplaceables,BlockList.blockEnderOreKryptonite.get().defaultBlockState())
+            );
+            register(context,ConfiguredFeatureList.featureKryptonite,Feature.ORE,new OreConfiguration(target,size));
         }
         if(ConfigRegistryList.registerKyanite.get())
         {

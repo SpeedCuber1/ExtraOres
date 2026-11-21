@@ -8,12 +8,9 @@ import com.tylerh.extraores.Util.ExOreCreativeTab;
 import com.tylerh.extraores.Util.ModInfo;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 
@@ -23,8 +20,6 @@ public class ExtraOres
     public ExtraOres()
     {
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener(this::setup);
-        bus.addListener(this::clientRegistries);
         bus.register(this);
         InitBlocks.BLOCKS.register(bus);
         InitBlocks.ITEMS.register(bus);
@@ -35,14 +30,6 @@ public class ExtraOres
         bus.addListener(this::addCreative);
         InitBlocks.registerBlocks();
         InitBlocks.registerItems();
-    }
-    @SubscribeEvent
-    public void setup(FMLCommonSetupEvent event)
-    {
-
-    }
-    private void clientRegistries(FMLClientSetupEvent event)
-    {
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
