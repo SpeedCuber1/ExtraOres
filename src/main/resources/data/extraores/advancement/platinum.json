@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Platinum Ore"
+      "translate": "extraores.platinum.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:platinumore"
     },
     "title": {
-      "translate": "101 Greatest Platinum Hits"
+      "translate": "extraores.platinum"
     }
   },
   "requirements": [

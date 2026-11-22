@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Phoenixite Ore"
+      "translate": "extraores.phoenixite.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:phoenixiteore"
     },
     "title": {
-      "translate": "Rise from the Ashes"
+      "translate": "extraores.phoenixite"
     }
   },
   "requirements": [

@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Topaz Ore"
+      "translate": "extraores.topaz.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:topazore"
     },
     "title": {
-      "translate": "On Top of the World"
+      "translate": "extraores.topaz"
     }
   },
   "requirements": [

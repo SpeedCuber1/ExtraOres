@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Niobium Ore"
+      "translate": "extraores.niobium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:niobiumore"
     },
     "title": {
-      "translate": "Not Just in Africa"
+      "translate": "extraores.niobium"
     }
   },
   "requirements": [

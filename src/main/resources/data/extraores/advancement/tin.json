@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Tin Ore"
+      "translate": "extraores.tin.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:tinore"
     },
     "title": {
-      "translate": "Where's the Lion and the Scarecrow"
+      "translate": "extraores.tin"
     }
   },
   "requirements": [

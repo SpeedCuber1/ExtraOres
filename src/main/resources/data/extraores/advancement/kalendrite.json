@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Kalendrite Ore"
+      "translate": "extraores.kalendrite.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:kalendriteore"
     },
     "title": {
-      "translate": "A Kaleidoscope of Wonders"
+      "translate": "extraores.kalendrite"
     }
   },
   "requirements": [

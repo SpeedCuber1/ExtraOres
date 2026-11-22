@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Bismuth Ore"
+      "translate": "extraores.bismuth.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:bismuthore"
     },
     "title": {
-      "translate": "Taking Care of Bismuth"
+      "translate": "extraores.bismuth"
     }
   },
   "requirements": [

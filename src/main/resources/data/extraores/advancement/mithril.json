@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Mithril Ore"
+      "translate": "extraores.mithril.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:mithrilore"
     },
     "title": {
-      "translate": "Are We Playing Minecraft or Runescape?"
+      "translate": "extraores.mithril"
     }
   },
   "requirements": [

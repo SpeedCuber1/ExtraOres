@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Orichalcum Ore"
+      "translate": "extraores.orichalcum.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:orichalcumore"
     },
     "title": {
-      "translate": "Nothing Original Here"
+      "translate": "extraores.orichalcum"
     }
   },
   "requirements": [

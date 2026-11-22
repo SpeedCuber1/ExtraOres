@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Shadow Iron Ore"
+      "translate": "extraores.shadowiron.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:shadowironore"
     },
     "title": {
-      "translate": "You Are the Shadow in the Night"
+      "translate": "extraores.shadowiron"
     }
   },
   "requirements": [

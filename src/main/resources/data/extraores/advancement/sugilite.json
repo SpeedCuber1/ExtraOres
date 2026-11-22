@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Sugilite Ore"
+      "translate": "extraores.sugilite.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:sugiliteore"
     },
     "title": {
-      "translate": "Give Me Some Sugar"
+      "translate": "extraores.sugilite"
     }
   },
   "requirements": [

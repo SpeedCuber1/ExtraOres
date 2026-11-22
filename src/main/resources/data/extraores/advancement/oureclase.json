@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Oureclase Ore"
+      "translate": "extraores.oureclase.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:oureclaseore"
     },
     "title": {
-      "translate": "Will You Take Our Case"
+      "translate": "extraores.oureclase"
     }
   },
   "requirements": [

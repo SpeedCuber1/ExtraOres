@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Midasium Ore"
+      "translate": "extraores.midasium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:midasiumore"
     },
     "title": {
-      "translate": "Everything Turns to Gold"
+      "translate": "extraores.midasium"
     }
   },
   "requirements": [

@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Zirconium Ore"
+      "translate": "extraores.zirconium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:zirconiumore"
     },
     "title": {
-      "translate": "Shining Bright Like a...Oh Wait"
+      "translate": "extraores.zirconium"
     }
   },
   "requirements": [

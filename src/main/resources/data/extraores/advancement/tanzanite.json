@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Tanzanite Ore"
+      "translate": "extraores.tanzanite.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:tanzaniteore"
     },
     "title": {
-      "translate": "Coming to You from Tanzania"
+      "translate": "extraores.tanzanite"
     }
   },
   "requirements": [

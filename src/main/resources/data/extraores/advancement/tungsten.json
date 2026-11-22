@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Tungsten Ore"
+      "translate": "extraores.tungsten.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:tungstenore"
     },
     "title": {
-      "translate": "Illuminating"
+      "translate": "extraores.tungsten"
     }
   },
   "requirements": [

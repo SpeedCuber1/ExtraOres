@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Indium Ore"
+      "translate": "extraores.indium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:indiumore"
     },
     "title": {
-      "translate": "It Looks Like Indium Ink"
+      "translate": "extraores.indium"
     }
   },
   "requirements": [

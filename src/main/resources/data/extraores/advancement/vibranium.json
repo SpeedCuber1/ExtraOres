@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Vibranium Ore"
+      "translate": "extraores.vibranium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:vibraniumore"
     },
     "title": {
-      "translate": "You're the Captain Now"
+      "translate": "extraores.vibranium"
     }
   },
   "requirements": [

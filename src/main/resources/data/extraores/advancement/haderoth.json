@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Haderoth Ore"
+      "translate": "extraores.haderoth.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:haderothore"
     },
     "title": {
-      "translate": "Who Named This!!!??"
+      "translate": "extraores.haderoth"
     }
   },
   "requirements": [

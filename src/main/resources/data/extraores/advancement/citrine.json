@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Citrine Ore"
+      "translate": "extraores.citrine.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:citrineore"
     },
     "title": {
-      "translate": "Looks Like Citrus"
+      "translate": "extraores.citrine"
     }
   },
   "requirements": [

@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Ignatius Ore"
+      "translate": "extraores.ignatius.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:ignatiusore"
     },
     "title": {
-      "translate": "Now Even More Ignitable"
+      "translate": "extraores.ignatius"
     }
   },
   "requirements": [

@@ -15,7 +15,7 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "extraores.aluminum.desc"
+      "translate": "extraores.akuminum.desc"
     },
     "icon": {
       "count": 1,

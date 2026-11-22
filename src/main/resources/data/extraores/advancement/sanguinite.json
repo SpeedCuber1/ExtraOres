@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Sanguinite Ore"
+      "translate": "extraores.sanguinite.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:sanguiniteore"
     },
     "title": {
-      "translate": "Sanguine Love"
+      "translate": "extraores.sanguinite"
     }
   },
   "requirements": [

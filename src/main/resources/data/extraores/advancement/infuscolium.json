@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Infuscolium Ore"
+      "translate": "extraores.infuscolium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:infuscoliumore"
     },
     "title": {
-      "translate": "Infuse All the Things"
+      "translate": "extraores.infuscolium"
     }
   },
   "requirements": [

@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Inolashite Ore"
+      "translate": "extraores.inolashite.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:inolashiteore"
     },
     "title": {
-      "translate": "In All That's...Well You Know"
+      "translate": "extraores.inolashite"
     }
   },
   "requirements": [

@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Titanium Ore"
+      "translate": "extraores.titanium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:titaniumore"
     },
     "title": {
-      "translate": "Stronger Than Steel"
+      "translate": "extraores.titanium"
     }
   },
   "requirements": [

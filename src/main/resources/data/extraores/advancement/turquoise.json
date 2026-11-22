@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Turquoise Ore"
+      "translate": "extraores.turquoise.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:turquoiseore"
     },
     "title": {
-      "translate": "The Color of Dreams"
+      "translate": "extraores.turquoise"
     }
   },
   "requirements": [

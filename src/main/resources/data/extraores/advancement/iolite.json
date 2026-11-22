@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Iolite Ore"
+      "translate": "extraores.iolite.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:ioliteore"
     },
     "title": {
-      "translate": "In the Light of the Eye"
+      "translate": "extraores.iolite"
     }
   },
   "requirements": [

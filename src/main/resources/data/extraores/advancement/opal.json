@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Opal Ore"
+      "translate": "extraores.opal.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:opalore"
     },
     "title": {
-      "translate": "No Speeding Here"
+      "translate": "extraores.opal"
     }
   },
   "requirements": [

@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Polonium Ore"
+      "translate": "extraores.polonium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:poloniumore"
     },
     "title": {
-      "translate": "Where's Marconium When You Need It"
+      "translate": "extraores.polonium"
     }
   },
   "requirements": [

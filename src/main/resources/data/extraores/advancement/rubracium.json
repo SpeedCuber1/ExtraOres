@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Rubracium Ore"
+      "translate": "extraores.rubracium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:rubraciumore"
     },
     "title": {
-      "translate": "There's the Rub"
+      "translate": "extraores.rubracium"
     }
   },
   "requirements": [

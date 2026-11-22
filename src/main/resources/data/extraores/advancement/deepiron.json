@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Deep Iron Ore"
+      "translate": "extraores.deepiron.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:deepironore"
     },
     "title": {
-      "translate": "We Need to go EVEN Deeper"
+      "translate": "extraores.deepiron"
     }
   },
   "requirements": [

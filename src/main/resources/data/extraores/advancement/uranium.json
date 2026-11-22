@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Uranium Ore"
+      "translate": "extraores.uranium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:uraniumore"
     },
     "title": {
-      "translate": "Time to get Nuclear"
+      "translate": "extraores.uranium"
     }
   },
   "requirements": [

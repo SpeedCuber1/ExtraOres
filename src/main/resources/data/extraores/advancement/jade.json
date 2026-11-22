@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Jade Ore"
+      "translate": "extraores.jade.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:jadeore"
     },
     "title": {
-      "translate": "It's Jade"
+      "translate": "extraores.jade"
     }
   },
   "requirements": [

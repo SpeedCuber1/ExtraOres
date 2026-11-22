@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Molybdenum Ore"
+      "translate": "extraores.molybdenum.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:molybdenumore"
     },
     "title": {
-      "translate": "Paging Moly B. Denum"
+      "translate": "extraores.molybdenum"
     }
   },
   "requirements": [

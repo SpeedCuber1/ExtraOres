@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Tartarite Ore"
+      "translate": "extraores.tartarite.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:tartariteore"
     },
     "title": {
-      "translate": "I've Got the Sauce"
+      "translate": "extraores.tartarite"
     }
   },
   "requirements": [

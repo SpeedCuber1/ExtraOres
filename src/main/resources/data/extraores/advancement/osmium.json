@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Osmium Ore"
+      "translate": "extraores.osmium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:osmiumore"
     },
     "title": {
-      "translate": "The Wonderful Wizard of Osmium"
+      "translate": "extraores.osmium"
     }
   },
   "requirements": [

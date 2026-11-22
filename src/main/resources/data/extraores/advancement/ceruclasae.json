@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Ceruclase Ore"
+      "translate": "extraores.ceruclase.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:ceruclaseore"
     },
     "title": {
-      "translate": "Ceruclase City"
+      "translate": "extraores.ceruclase"
     }
   },
   "requirements": [

@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Carmot Ore"
+      "translate": "extraores.carmot.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:carmotore"
     },
     "title": {
-      "translate": "Instant Carmot"
+      "translate": "extraores.carmot"
     }
   },
   "requirements": [

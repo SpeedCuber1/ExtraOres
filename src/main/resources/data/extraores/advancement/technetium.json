@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Technetium Ore"
+      "translate": "extraores.technetium.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:technetiumore"
     },
     "title": {
-      "translate": "Technologic"
+      "translate": "extraores.technetium"
     }
   },
   "requirements": [

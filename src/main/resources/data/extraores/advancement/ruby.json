@@ -15,14 +15,14 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Ruby Ore"
+      "translate": "extraores.ruby.desc"
     },
     "icon": {
       "count": 1,
       "id": "extraores:rubyore"
     },
     "title": {
-      "translate": "That's Like 50,000 Carats"
+      "translate": "extraores.ruby"
     }
   },
   "requirements": [
