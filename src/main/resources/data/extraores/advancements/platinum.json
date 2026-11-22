@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:palladium",
+  "criteria": {
+    "platinum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawplatinum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.platinum.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:platinumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.platinum"
+    }
+  },
+  "requirements": [
+    [
+      "platinum"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

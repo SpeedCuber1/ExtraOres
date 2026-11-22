@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:ceruclasae",
+  "criteria": {
+    "ignatius": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawignatius"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.ignatius.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:ignatiusore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.ignatius"
+    }
+  },
+  "requirements": [
+    [
+      "ignatius"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

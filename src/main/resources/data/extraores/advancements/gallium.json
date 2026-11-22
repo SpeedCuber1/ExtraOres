@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:copper",
+  "criteria": {
+    "gallium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawgallium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.gallium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:galliumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.gallium"
+    }
+  },
+  "requirements": [
+    [
+      "gallium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

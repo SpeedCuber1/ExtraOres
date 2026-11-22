@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawoureclase"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawoureclase": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawoureclase"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawoureclase",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawoureclase"
+    ]
+  },
+  "sends_telemetry_event": true
+}

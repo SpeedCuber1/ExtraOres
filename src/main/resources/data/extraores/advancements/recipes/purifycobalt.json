@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifycobalt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifycobalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:cobaltshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifycobalt",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifycobalt"
+    ]
+  },
+  "sends_telemetry_event": true
+}

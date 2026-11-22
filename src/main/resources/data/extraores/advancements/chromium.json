@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:cadmium",
+  "criteria": {
+    "chromium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawchromium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.chromium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:chromiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.chromium"
+    }
+  },
+  "requirements": [
+    [
+      "chromium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

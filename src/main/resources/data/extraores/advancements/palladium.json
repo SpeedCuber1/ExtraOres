@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:osmium",
+  "criteria": {
+    "palladium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawpalladium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.palladium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:palladiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.palladium"
+    }
+  },
+  "requirements": [
+    [
+      "palladium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

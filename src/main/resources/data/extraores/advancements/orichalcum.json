@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:mithril",
+  "criteria": {
+    "orichalcum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:raworichalcum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.orichalcum.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:orichalcumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.orichalcum"
+    }
+  },
+  "requirements": [
+    [
+      "orichalcum"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

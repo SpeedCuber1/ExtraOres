@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:tourmaline",
+  "criteria": {
+    "turquoise": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:turquoise"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.turquoise.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:turquoiseore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.turquoise"
+    }
+  },
+  "requirements": [
+    [
+      "turquoise"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

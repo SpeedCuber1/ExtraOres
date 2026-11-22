@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:molybdenum",
+  "criteria": {
+    "neodymium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawneodymium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.neodymium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:neodymiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.neodymium"
+    }
+  },
+  "requirements": [
+    [
+      "neodymium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

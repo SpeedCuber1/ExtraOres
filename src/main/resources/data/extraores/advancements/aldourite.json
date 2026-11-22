@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:root",
+  "criteria": {
+    "aldourite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawaldourite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.aldourite.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:aldouriteore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.aldourite"
+    }
+  },
+  "requirements": [
+    [
+      "aldourite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

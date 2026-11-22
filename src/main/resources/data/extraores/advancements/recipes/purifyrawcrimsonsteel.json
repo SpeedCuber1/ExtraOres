@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawcrimsonsteel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawcrimsonsteel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcrimsonsteel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawcrimsonsteel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawcrimsonsteel"
+    ]
+  },
+  "sends_telemetry_event": true
+}

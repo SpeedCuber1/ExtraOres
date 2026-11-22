@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:azuresilver",
+  "criteria": {
+    "blacksteel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawblacksteel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.blacksteel.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:blacksteelore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.blacksteel"
+    }
+  },
+  "requirements": [
+    [
+      "blacksteel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

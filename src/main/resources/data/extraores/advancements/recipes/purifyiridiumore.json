@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyiridiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyiridiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:iridiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyiridiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyiridiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

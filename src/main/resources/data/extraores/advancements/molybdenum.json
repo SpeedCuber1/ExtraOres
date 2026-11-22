@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:manganese",
+  "criteria": {
+    "molybdenum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawmolybdenum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.molybdenum.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:molybdenumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.molybdenum"
+    }
+  },
+  "requirements": [
+    [
+      "molybdenum"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

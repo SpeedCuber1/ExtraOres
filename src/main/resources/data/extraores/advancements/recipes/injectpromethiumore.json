@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectpromethiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectpromethiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:promethiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectpromethiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectpromethiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

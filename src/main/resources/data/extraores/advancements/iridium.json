@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:indium",
+  "criteria": {
+    "iridium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawiridium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.iridium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:iridiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.iridium"
+    }
+  },
+  "requirements": [
+    [
+      "iridium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

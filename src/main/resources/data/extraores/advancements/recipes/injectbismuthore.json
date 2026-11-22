@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectbismuthore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectbismuthore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:bismuthore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectbismuthore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectbismuthore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

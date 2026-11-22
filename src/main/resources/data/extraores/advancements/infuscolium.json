@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:hepatizon",
+  "criteria": {
+    "infuscolium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawinfuscolium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.infuscolium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:infuscoliumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.infuscolium"
+    }
+  },
+  "requirements": [
+    [
+      "infuscolium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:quartz",
+  "criteria": {
+    "ruby": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ruby"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.ruby.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:rubyore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.ruby"
+    }
+  },
+  "requirements": [
+    [
+      "ruby"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

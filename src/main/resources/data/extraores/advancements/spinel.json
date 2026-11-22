@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:sapphire",
+  "criteria": {
+    "spinel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:spinel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.spinel.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:spinelore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.spinel"
+    }
+  },
+  "requirements": [
+    [
+      "spinel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

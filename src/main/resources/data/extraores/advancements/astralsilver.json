@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:angmallen",
+  "criteria": {
+    "astralsilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawastralsilver"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.astralsilver.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:astralsilverore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.astralsilver"
+    }
+  },
+  "requirements": [
+    [
+      "astralsilver"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

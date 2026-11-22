@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:neodymium",
+  "criteria": {
+    "neptunium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawneptunium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.neptunium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:neptuniumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.neptunium"
+    }
+  },
+  "requirements": [
+    [
+      "neptunium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

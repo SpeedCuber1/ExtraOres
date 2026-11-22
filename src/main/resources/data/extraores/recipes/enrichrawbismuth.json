@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:raw_materials/bismuth"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "extraores:bismuthdust"
+  }
+}

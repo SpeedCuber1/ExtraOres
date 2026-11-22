@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:vulcanite",
+  "criteria": {
+    "vyroxeres": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawvyroxeres"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.vyroxeres.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:vyroxeresore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.vyroxeres"
+    }
+  },
+  "requirements": [
+    [
+      "vyroxeres"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:desichalkos",
+  "criteria": {
+    "eximite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:raweximite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.eximite.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:eximiteore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.eximite"
+    }
+  },
+  "requirements": [
+    [
+      "eximite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

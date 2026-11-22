@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:cobalt",
+  "criteria": {
+    "copper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcopper"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.copper.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:copperore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.copper"
+    }
+  },
+  "requirements": [
+    [
+      "copper"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:neptunium",
+  "criteria": {
+    "nickel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawnickel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.nickel.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:nickelore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.nickel"
+    }
+  },
+  "requirements": [
+    [
+      "nickel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

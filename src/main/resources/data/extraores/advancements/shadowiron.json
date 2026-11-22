@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:sanguinite",
+  "criteria": {
+    "shadowiron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawshadowiron"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.shadowiron.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:shadowironore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.shadowiron"
+    }
+  },
+  "requirements": [
+    [
+      "shadowiron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

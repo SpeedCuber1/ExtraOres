@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:thallium",
+  "criteria": {
+    "tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawtin"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.tin.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:tinore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.tin"
+    }
+  },
+  "requirements": [
+    [
+      "tin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

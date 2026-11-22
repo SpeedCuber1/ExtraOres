@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectcelenegilore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectcelenegilore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:celenegilore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectcelenegilore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectcelenegilore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

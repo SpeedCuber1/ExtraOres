@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:ignatius",
+  "criteria": {
+    "kalendrite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawkalendrite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.kalendrite.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:kalendriteore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.kalendrite"
+    }
+  },
+  "requirements": [
+    [
+      "kalendrite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

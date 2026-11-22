@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:tungsten",
+  "criteria": {
+    "uranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawuranium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.uranium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:uraniumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.uranium"
+    }
+  },
+  "requirements": [
+    [
+      "uranium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

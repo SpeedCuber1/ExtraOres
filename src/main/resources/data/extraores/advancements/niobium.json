@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:nickel",
+  "criteria": {
+    "niobium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawniobium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.niobium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:niobiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.niobium"
+    }
+  },
+  "requirements": [
+    [
+      "niobium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

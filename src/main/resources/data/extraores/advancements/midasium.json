@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:lemurite",
+  "criteria": {
+    "midasium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawmidasium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.midasium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:midasiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.midasium"
+    }
+  },
+  "requirements": [
+    [
+      "midasium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

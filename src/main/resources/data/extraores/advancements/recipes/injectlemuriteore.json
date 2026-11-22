@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectlemuriteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectlemuriteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:lemuriteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectlemuriteore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectlemuriteore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

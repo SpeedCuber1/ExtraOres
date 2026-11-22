@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:shadowiron",
+  "criteria": {
+    "vulcanite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawvulcanite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.vulcanite.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:vulcaniteore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.vulcanite"
+    }
+  },
+  "requirements": [
+    [
+      "vulcanite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

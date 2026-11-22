@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawignatius"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawignatius": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawignatius"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawignatius",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawignatius"
+    ]
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyhaderothore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyhaderothore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:haderothore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyhaderothore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyhaderothore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

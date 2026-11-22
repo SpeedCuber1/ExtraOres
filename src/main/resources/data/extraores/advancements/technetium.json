@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:tantalum",
+  "criteria": {
+    "technetium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawtechnetium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.technetium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:technetiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.technetium"
+    }
+  },
+  "requirements": [
+    [
+      "technetium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:citrine",
+  "criteria": {
+    "garnet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:garnet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.garnet.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:garnetore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.garnet"
+    }
+  },
+  "requirements": [
+    [
+      "garnet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

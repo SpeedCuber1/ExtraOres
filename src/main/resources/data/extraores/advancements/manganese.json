@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:lead",
+  "criteria": {
+    "manganese": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawmanganese"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.manganese.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:manganeseore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.manganese"
+    }
+  },
+  "requirements": [
+    [
+      "manganese"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:chromium",
+  "criteria": {
+    "cobalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcobalt"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.cobalt.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:cobaltore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.cobalt"
+    }
+  },
+  "requirements": [
+    [
+      "cobalt"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

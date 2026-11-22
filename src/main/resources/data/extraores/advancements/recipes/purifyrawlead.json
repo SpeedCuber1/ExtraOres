@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawlead"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawlead": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawlead"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawlead",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawlead"
+    ]
+  },
+  "sends_telemetry_event": true
+}

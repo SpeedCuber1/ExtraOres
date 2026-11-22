@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyaldouriteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyaldouriteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:aldouriteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyaldouriteore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyaldouriteore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

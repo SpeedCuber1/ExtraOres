@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:americium",
+  "criteria": {
+    "bismuth": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawbismuth"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.bismuth.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:bismuthore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.bismuth"
+    }
+  },
+  "requirements": [
+    [
+      "bismuth"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

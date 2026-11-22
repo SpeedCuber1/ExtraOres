@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:aldourite",
+  "criteria": {
+    "ceruclase": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawceruclase"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.ceruclase.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:ceruclaseore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.ceruclase"
+    }
+  },
+  "requirements": [
+    [
+      "ceruclase"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

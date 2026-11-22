@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyshadowironore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyshadowironore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:shadowironore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyshadowironore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyshadowironore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

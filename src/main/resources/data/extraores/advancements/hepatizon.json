@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:haderoth",
+  "criteria": {
+    "hepatizon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawhepatizon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.hepatizon.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:hepatizonore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.hepatizon"
+    }
+  },
+  "requirements": [
+    [
+      "hepatizon"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

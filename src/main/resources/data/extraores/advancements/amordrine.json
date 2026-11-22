@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:adamantine",
+  "criteria": {
+    "amordrine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawamordrine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.amordrine.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:amordrineore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.amordrine"
+    }
+  },
+  "requirements": [
+    [
+      "amordrine"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

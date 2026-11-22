@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:chrysocolla",
+  "criteria": {
+    "citrine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:citrine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.citrine.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:citrineore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.citrine"
+    }
+  },
+  "requirements": [
+    [
+      "citrine"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawvanadium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawvanadium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawvanadium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawvanadium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawvanadium"
+    ]
+  },
+  "sends_telemetry_event": true
+}

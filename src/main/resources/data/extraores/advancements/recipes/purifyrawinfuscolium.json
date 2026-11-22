@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawinfuscolium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawinfuscolium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawinfuscolium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawinfuscolium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawinfuscolium"
+    ]
+  },
+  "sends_telemetry_event": true
+}

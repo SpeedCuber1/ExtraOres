@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:promethium",
+  "criteria": {
+    "rubracium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawrubracium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.rubracium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:rubraciumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.rubracium"
+    }
+  },
+  "requirements": [
+    [
+      "rubracium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

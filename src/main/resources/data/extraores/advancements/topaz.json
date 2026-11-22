@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:tanzanite",
+  "criteria": {
+    "topaz": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:topaz"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.topaz.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:topazore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.topaz"
+    }
+  },
+  "requirements": [
+    [
+      "topaz"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

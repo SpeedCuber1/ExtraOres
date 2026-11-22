@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectrawazuresilver"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectrawazuresilver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawazuresilver"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectrawazuresilver",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectrawazuresilver"
+    ]
+  },
+  "sends_telemetry_event": true
+}

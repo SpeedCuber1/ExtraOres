@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:niobium",
+  "criteria": {
+    "osmium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawosmium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.osmium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:osmiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.osmium"
+    }
+  },
+  "requirements": [
+    [
+      "osmium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:uranium",
+  "criteria": {
+    "vanadium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawvanadium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.vanadium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:vanadiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.vanadium"
+    }
+  },
+  "requirements": [
+    [
+      "vanadium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

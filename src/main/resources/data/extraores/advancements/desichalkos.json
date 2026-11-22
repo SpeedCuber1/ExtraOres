@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:deepiron",
+  "criteria": {
+    "desichalkos": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawdesichalkos"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.desichalkos.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:desichalkosore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.desichalkos"
+    }
+  },
+  "requirements": [
+    [
+      "desichalkos"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

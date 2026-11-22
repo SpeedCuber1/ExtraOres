@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyinolashiteore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyinolashiteore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:inolashiteore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyinolashiteore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyinolashiteore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

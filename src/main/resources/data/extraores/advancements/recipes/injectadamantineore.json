@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectadamantineore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectadamantineore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:adamantineore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectadamantineore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectadamantineore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

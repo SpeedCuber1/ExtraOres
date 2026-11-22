@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:celenegil",
+  "criteria": {
+    "crimsonsteel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawcrimsonsteel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.crimsonsteel.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:crimsonsteelore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.crimsonsteel"
+    }
+  },
+  "requirements": [
+    [
+      "crimsonsteel"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

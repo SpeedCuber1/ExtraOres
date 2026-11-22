@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 20,
+  "experience": 0.75,
+  "ingredient": {
+    "item": "extraores:azuresilverore"
+  },
+  "result": "extraores:azuresilveringot"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:ores/angmallen"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "extraores:angmallendust"
+  }
+}

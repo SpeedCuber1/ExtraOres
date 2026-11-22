@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:amethyst",
+  "criteria": {
+    "ametrine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:ametrine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.ametrine.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:ametrineore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.ametrine"
+    }
+  },
+  "requirements": [
+    [
+      "ametrine"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

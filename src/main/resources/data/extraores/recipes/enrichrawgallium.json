@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:raw_materials/gallium"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "extraores:galliumdust"
+  }
+}

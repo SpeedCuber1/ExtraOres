@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:injectvanadiumore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "injectvanadiumore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:vanadiumore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "injectvanadiumore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:injectvanadiumore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

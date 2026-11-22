@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyrawmidasium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyrawmidasium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawmidasium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyrawmidasium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyrawmidasium"
+    ]
+  },
+  "sends_telemetry_event": true
+}

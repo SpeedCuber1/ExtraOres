@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifytinore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifytinore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tinore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifytinore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifytinore"
+    ]
+  },
+  "sends_telemetry_event": true
+}

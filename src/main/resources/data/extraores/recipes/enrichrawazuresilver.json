@@ -1,0 +1,12 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "ingredient": {
+      "tag": "forge:raw_materials/azuresilver"
+    }
+  },
+  "output": {
+    "count": 2,
+    "item": "extraores:azuresilverdust"
+  }
+}

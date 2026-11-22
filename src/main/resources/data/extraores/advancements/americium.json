@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:aluminum",
+  "criteria": {
+    "americium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawamericium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.americium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:americiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.americium"
+    }
+  },
+  "requirements": [
+    [
+      "americium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

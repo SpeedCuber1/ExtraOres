@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:onyx",
+  "criteria": {
+    "opal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:opal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.opal.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:opalore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.opal"
+    }
+  },
+  "requirements": [
+    [
+      "opal"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

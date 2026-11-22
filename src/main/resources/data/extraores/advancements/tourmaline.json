@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:topaz",
+  "criteria": {
+    "tourmaline": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:tourmaline"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.tourmaline.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:tourmalineore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.tourmaline"
+    }
+  },
+  "requirements": [
+    [
+      "tourmaline"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

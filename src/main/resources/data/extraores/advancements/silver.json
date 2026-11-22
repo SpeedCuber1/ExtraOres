@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:ruthenium",
+  "criteria": {
+    "silver": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawsilver"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.silver.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:silverore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.silver"
+    }
+  },
+  "requirements": [
+    [
+      "silver"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

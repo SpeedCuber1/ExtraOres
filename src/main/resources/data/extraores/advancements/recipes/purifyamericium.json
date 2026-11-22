@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:purifyamericium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purifyamericium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:americiumshard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purifyamericium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:purifyamericium"
+    ]
+  },
+  "sends_telemetry_event": true
+}

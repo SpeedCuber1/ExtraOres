@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:crimsonsteel",
+  "criteria": {
+    "deepiron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawdeepiron"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.deepiron.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:deepironore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.deepiron"
+    }
+  },
+  "requirements": [
+    [
+      "deepiron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

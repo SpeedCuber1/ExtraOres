@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:zinc",
+  "criteria": {
+    "zirconium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawzirconium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.zirconium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:zirconiumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.zirconium"
+    }
+  },
+  "requirements": [
+    [
+      "zirconium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

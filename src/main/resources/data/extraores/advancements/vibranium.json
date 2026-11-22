@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:unobtainium",
+  "criteria": {
+    "vibranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rawvibranium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.vibranium.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:vibraniumore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.vibranium"
+    }
+  },
+  "requirements": [
+    [
+      "vibranium"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
