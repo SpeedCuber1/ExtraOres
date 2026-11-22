@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:kryptoniteblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "kryptoniteblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:kryptoniteblock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "kryptoniteblock",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:kryptoniteblock"
+    ]
+  },
+  "sends_telemetry_event": false
+}

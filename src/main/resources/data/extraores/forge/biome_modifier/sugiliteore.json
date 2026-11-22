@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#is_overworld",
-  "features": "extraores:sugiliteore",
-  "step": "underground_ores"
-}

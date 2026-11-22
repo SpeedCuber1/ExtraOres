@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:inolashite",
+  "criteria": {
+    "kryptonite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:kryptonite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.kryptonite.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:kryptoniteore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.kryptonite"
+    }
+  },
+  "requirements": [
+    [
+      "kryptonite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
