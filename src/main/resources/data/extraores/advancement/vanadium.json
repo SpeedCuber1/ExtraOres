@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Vanadium Ore"
+      "translate": "extraores.vanadium.desc"
     },
     "icon": {
       "id": "extraores:vanadiumore"
     },
     "title": {
-      "translate": "Hand Me That Impact Gun"
+      "translate": "extraores.vanadium"
     }
   },
   "requirements": [

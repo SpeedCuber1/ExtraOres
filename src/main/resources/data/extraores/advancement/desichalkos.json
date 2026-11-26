@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Desichalkis Ore"
+      "translate": "extraores.desichalkos.desc"
     },
     "icon": {
       "id": "extraores:desichalkosore"
     },
     "title": {
-      "translate": "Ores R Us"
+      "translate": "extraores.desichalkos"
     }
   },
   "requirements": [

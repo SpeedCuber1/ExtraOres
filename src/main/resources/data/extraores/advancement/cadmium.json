@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Cadmium Ore"
+      "translate": "extraores.cadmium.desc"
     },
     "icon": {
       "id": "extraores:cadmiumore"
     },
     "title": {
-      "translate": "The Cadmium Can"
+      "translate": "extraores.cadmium"
     }
   },
   "requirements": [

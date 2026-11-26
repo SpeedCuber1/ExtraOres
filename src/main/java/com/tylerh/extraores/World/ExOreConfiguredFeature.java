@@ -281,6 +281,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(netherReplaceables,BlockList.blockOreKalendrite.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureKalendrite,Feature.ORE,new OreConfiguration(target,size));
+            ConfiguredFeatureList.featureKryptonite = registerKey("kryptoniteore");
+            target = List.of(
+                    OreConfiguration.target(stoneReplaceables,BlockList.blockOreKryptonite.get().defaultBlockState()),
+                    OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreKryptonite.get().defaultBlockState()),
+                    OreConfiguration.target(endReplaceables,BlockList.blockEnderOreKryptonite.get().defaultBlockState())
+            );
+            register(context,ConfiguredFeatureList.featureKryptonite,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureKyanite = registerKey("kyaniteore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreKyanite.get().defaultBlockState()),

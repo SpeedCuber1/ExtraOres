@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Jasper Ore"
+      "translate": "extraores.jasper.desc"
     },
     "icon": {
       "id": "extraores:jasperore"
     },
     "title": {
-      "translate": "Jasper's Here"
+      "translate": "extraores.jasper"
     }
   },
   "requirements": [

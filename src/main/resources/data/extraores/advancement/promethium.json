@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Promethium Ore"
+      "translate": "extraores.promethium.desc"
     },
     "icon": {
       "id": "extraores:promethiumore"
     },
     "title": {
-      "translate": "Prometheus Would Be Pleased"
+      "translate": "extraores.promethium"
     }
   },
   "requirements": [

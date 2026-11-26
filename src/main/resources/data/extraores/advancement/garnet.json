@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Garnet Ore"
+      "translate": "extraores.garnet.desc"
     },
     "icon": {
       "id": "extraores:garnetore"
     },
     "title": {
-      "translate": "Oh Garnet"
+      "translate": "extraores.garnet"
     }
   },
   "requirements": [

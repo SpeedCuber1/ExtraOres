@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Gallium Ore"
+      "translate": "extraores.gallium.desc"
     },
     "icon": {
       "id": "extraores:galliumore"
     },
     "title": {
-      "translate": "Not A Kitchen"
+      "translate": "extraores.gallium"
     }
   },
   "requirements": [

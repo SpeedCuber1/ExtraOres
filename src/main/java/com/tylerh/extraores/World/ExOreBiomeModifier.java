@@ -325,6 +325,12 @@ public class ExOreBiomeModifier
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureKalendrite)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
+        BiomeModifierList.modifierKryptonite = registerKey("kryptoniteore");
+        context.register(BiomeModifierList.modifierKryptonite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureKryptonite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
         BiomeModifierList.modifierKyanite = registerKey("kyaniteore");
         context.register(BiomeModifierList.modifierKyanite,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),

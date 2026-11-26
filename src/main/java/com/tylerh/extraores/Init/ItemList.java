@@ -466,6 +466,7 @@ public class ItemList
     public static DeferredItem<Item> itemGemIolite;
     public static DeferredItem<Item> itemGemJade;
     public static DeferredItem<Item> itemGemJasper;
+    public static DeferredItem<Item> itemGemKryptonite;
     public static DeferredItem<Item> itemGemKyanite;
     public static DeferredItem<Item> itemGemMalachite;
     public static DeferredItem<Item> itemGemOnyx;

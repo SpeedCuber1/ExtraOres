@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Eximite Ore"
+      "translate": "extraores.eximite.desc"
     },
     "icon": {
       "id": "extraores:eximiteore"
     },
     "title": {
-      "translate": "Exit? I Might"
+      "translate": "extraores.eximite"
     }
   },
   "requirements": [

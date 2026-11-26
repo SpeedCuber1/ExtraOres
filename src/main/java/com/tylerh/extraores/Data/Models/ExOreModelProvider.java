@@ -82,6 +82,7 @@ public class ExOreModelProvider extends ModelProvider
         blockWithItem(BlockList.blockOreJade);
         blockWithItem(BlockList.blockOreJasper);
         blockWithItem(BlockList.blockOreKalendrite);
+        blockWithItem(BlockList.blockOreKryptonite);
         blockWithItem(BlockList.blockOreKyanite);
         blockWithItem(BlockList.blockOreLead);
         blockWithItem(BlockList.blockOreLemurite);
@@ -178,6 +179,7 @@ public class ExOreModelProvider extends ModelProvider
         blockWithItem(BlockList.blockDeepslateOreIridium);
         blockWithItem(BlockList.blockDeepslateOreJade);
         blockWithItem(BlockList.blockDeepslateOreJasper);
+        blockWithItem(BlockList.blockDeepslateOreKryptonite);
         blockWithItem(BlockList.blockDeepslateOreKyanite);
         blockWithItem(BlockList.blockDeepslateOreLead);
         blockWithItem(BlockList.blockDeepslateOreMalachite);
@@ -241,6 +243,7 @@ public class ExOreModelProvider extends ModelProvider
         blockWithItem(BlockList.blockEnderOreIolite);
         blockWithItem(BlockList.blockEnderOreJade);
         blockWithItem(BlockList.blockEnderOreJasper);
+        blockWithItem(BlockList.blockEnderOreKryptonite);
         blockWithItem(BlockList.blockEnderOreKyanite);
         blockWithItem(BlockList.blockEnderOreMalachite);
         blockWithItem(BlockList.blockEnderOreOnyx);
@@ -298,6 +301,7 @@ public class ExOreModelProvider extends ModelProvider
         blockWithItem(BlockList.blockJade);
         blockWithItem(BlockList.blockJasper);
         blockWithItem(BlockList.blockKalendrite);
+        blockWithItem(BlockList.blockKryptonite);
         blockWithItem(BlockList.blockKyanite);
         blockWithItem(BlockList.blockLead);
         blockWithItem(BlockList.blockLemurite);
@@ -820,6 +824,7 @@ public class ExOreModelProvider extends ModelProvider
         simpleItem(ItemList.itemGemIolite);
         simpleItem(ItemList.itemGemJade);
         simpleItem(ItemList.itemGemJasper);
+        simpleItem(ItemList.itemGemKryptonite);
         simpleItem(ItemList.itemGemKyanite);
         simpleItem(ItemList.itemGemMalachite);
         simpleItem(ItemList.itemGemOnyx);

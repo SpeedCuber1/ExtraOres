@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Cobalt Ore"
+      "translate": "extraores.cobalt.desc"
     },
     "icon": {
       "id": "extraores:cobaltore"
     },
     "title": {
-      "translate": "Tough as Nails"
+      "translate": "extraores.cobalt"
     }
   },
   "requirements": [

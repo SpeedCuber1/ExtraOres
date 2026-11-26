@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Black Steel"
+      "translate": "extraores.blacksteel.desc"
     },
     "icon": {
       "id": "extraores:blacksteelore"
     },
     "title": {
-      "translate": "It's Like Steel but Black"
+      "translate": "extraores.blacksteel"
     }
   },
   "requirements": [

@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Yellorite Ore"
+      "translate": "extraores.yellorite.desc"
     },
     "icon": {
       "id": "extraores:yelloriteore"
     },
     "title": {
-      "translate": "This Seems Like I Could Use It Somewhere"
+      "translate": "extraores.yellorite"
     }
   },
   "requirements": [

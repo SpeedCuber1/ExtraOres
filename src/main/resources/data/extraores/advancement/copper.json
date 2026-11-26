@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Copper Ore"
+      "translate": "extraores.copper.desc"
     },
     "icon": {
       "id": "extraores:copperore"
     },
     "title": {
-      "translate": "You'll Never Take Me Alive"
+      "translate": "extraores.copper"
     }
   },
   "requirements": [

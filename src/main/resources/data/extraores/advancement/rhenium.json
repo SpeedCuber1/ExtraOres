@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Rhenium Ore"
+      "translate": "extraores.rhenium.desc"
     },
     "icon": {
       "id": "extraores:rheniumore"
     },
     "title": {
-      "translate": "Have You Ever Seen The Rhenium"
+      "translate": "extraores.rhenium"
     }
   },
   "requirements": [

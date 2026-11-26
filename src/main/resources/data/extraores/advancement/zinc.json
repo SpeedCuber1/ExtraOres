@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Zinc Ore"
+      "translate": "extraores.zinc.desc"
     },
     "icon": {
       "id": "extraores:zincore"
     },
     "title": {
-      "translate": "Great Nutritional Value"
+      "translate": "extraores.zinc"
     }
   },
   "requirements": [

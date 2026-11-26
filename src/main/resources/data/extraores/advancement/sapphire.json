@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Sapphire Ore"
+      "translate": "extraores.sapphire.desc"
     },
     "icon": {
       "id": "extraores:sapphireore"
     },
     "title": {
-      "translate": "Truly Stunning"
+      "translate": "extraores.sapphire"
     }
   },
   "requirements": [

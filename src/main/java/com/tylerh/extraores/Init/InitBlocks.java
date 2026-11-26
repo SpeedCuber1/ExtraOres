@@ -18,6 +18,7 @@ public class InitBlocks
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModInfo.MOD_ID);
     public static void registerBlocks()
     {
+        //TODO Fix InitBlocks to use Config
         if(ExOresConfig.Adamantine)
         {
             BlockList.blockOreAdamantine = registerBlock("adamantineore", properties ->  new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
@@ -117,14 +118,23 @@ public class InitBlocks
             BlockList.blockCadmium = registerBlock("cadmiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreCadmium = registerBlock("deepslatecadmiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
         }
+        if(ExOresConfig.Carmot)
+        {
             BlockList.blockOreCarmot = registerBlock("carmotore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockCarmot = registerBlock("carmotblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreCarmot = registerBlock("deepslatecarmotore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Celenegil)
+        {
             BlockList.blockOreCelenegil = registerBlock("celenegilore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockCelenegil = registerBlock("celenegilblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreCelenegil = registerBlock("deepslatecelenegilore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Ceruclase)
+        {
             BlockList.blockOreCeruclase = registerBlock("ceruclaseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockCeruclase = registerBlock("ceruclaseblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
             BlockList.blockOreChromium = registerBlock("chromiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockChromium = registerBlock("chromiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreChromium = registerBlock("deepslatechromiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
@@ -195,6 +205,10 @@ public class InitBlocks
             BlockList.blockEnderOreJasper = registerBlock("enderjasperore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockOreKalendrite = registerBlock("kalendriteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockKalendrite = registerBlock("kalendriteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+            BlockList.blockOreKryptonite = registerBlock("kryptoniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+            BlockList.blockKryptonite = registerBlock("kryptoniteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+            BlockList.blockDeepslateOreKryptonite = registerBlock("deepslatekryptoniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+            BlockList.blockEnderOreKryptonite = registerBlock("enderkryptoniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockOreKyanite = registerBlock("kyaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockKyanite = registerBlock("kyaniteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreKyanite = registerBlock("deepslatekyaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
@@ -577,6 +591,7 @@ public class InitBlocks
             ItemList.itemClumpKalendrite = ITEMS.registerItem("kalendriteclump", ItemEXOre::new);
             ItemList.itemDirtyDustKalendrite = ITEMS.registerItem("kalendritedirtydust", ItemEXOre::new);
             ItemList.itemRawKalendrite = ITEMS.registerItem("rawkalendrite", ItemEXOre::new);
+            ItemList.itemGemKryptonite = ITEMS.registerItem("kryptonite", ItemEXOre::new);
             ItemList.itemGemKyanite = ITEMS.registerItem("kyanite", ItemEXOre::new);
             ItemList.itemIngotLead = ITEMS.registerItem("leadingot", ItemEXOre::new);
             ItemList.itemDustLead = ITEMS.registerItem("leaddust", ItemEXOre::new);

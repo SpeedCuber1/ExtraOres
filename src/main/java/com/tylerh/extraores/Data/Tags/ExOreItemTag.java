@@ -73,6 +73,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreJade).add(BlockList.blockOreJade.get().asItem());
         tag(ItemTagList.oreJasper).add(BlockList.blockOreJasper.get().asItem());
         tag(ItemTagList.oreKalendrite).add(BlockList.blockOreKalendrite.get().asItem());
+        tag(ItemTagList.oreKryptonite).add(BlockList.blockOreKryptonite.get().asItem());
         tag(ItemTagList.oreKyanite).add(BlockList.blockOreKyanite.get().asItem());
         tag(ItemTagList.oreLead).add(BlockList.blockOreLead.get().asItem());
         tag(ItemTagList.oreLemurite).add(BlockList.blockOreLemurite.get().asItem());
@@ -170,6 +171,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreIridium).add(BlockList.blockDeepslateOreIridium.get().asItem());
         tag(ItemTagList.oreJade).add(BlockList.blockDeepslateOreJade.get().asItem());
         tag(ItemTagList.oreJasper).add(BlockList.blockDeepslateOreJasper.get().asItem());
+        tag(ItemTagList.oreKryptonite).add(BlockList.blockDeepslateOreKryptonite.get().asItem());
         tag(ItemTagList.oreKyanite).add(BlockList.blockDeepslateOreKyanite.get().asItem());
         tag(ItemTagList.oreLead).add(BlockList.blockDeepslateOreLead.get().asItem());
         tag(ItemTagList.oreMalachite).add(BlockList.blockDeepslateOreMalachite.get().asItem());
@@ -234,6 +236,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.oreIolite).add(BlockList.blockEnderOreIolite.get().asItem());
         tag(ItemTagList.oreJade).add(BlockList.blockEnderOreJade.get().asItem());
         tag(ItemTagList.oreJasper).add(BlockList.blockEnderOreJasper.get().asItem());
+        tag(ItemTagList.oreKryptonite).add(BlockList.blockEnderOreKryptonite.get().asItem());
         tag(ItemTagList.oreKyanite).add(BlockList.blockEnderOreKyanite.get().asItem());
         tag(ItemTagList.oreMalachite).add(BlockList.blockEnderOreMalachite.get().asItem());
         tag(ItemTagList.oreOnyx).add(BlockList.blockEnderOreOnyx.get().asItem());
@@ -290,6 +293,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.ORES).addTag(ItemTagList.oreJade);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreJasper);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreKalendrite);
+        tag(ItemTagList.ORES).addTag(ItemTagList.oreKryptonite);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreKyanite);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreLead);
         tag(ItemTagList.ORES).addTag(ItemTagList.oreLemurite);
@@ -546,6 +550,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.blockJade).add(BlockList.blockJade.get().asItem());
         tag(ItemTagList.blockJasper).add(BlockList.blockJasper.get().asItem());
         tag(ItemTagList.blockKalendrite).add(BlockList.blockKalendrite.get().asItem());
+        tag(ItemTagList.blockKryptonite).add(BlockList.blockKryptonite.get().asItem());
         tag(ItemTagList.blockKyanite).add(BlockList.blockOreKyanite.get().asItem());
         tag(ItemTagList.blockLead).add(BlockList.blockLead.get().asItem());
         tag(ItemTagList.blockLemurite).add(BlockList.blockLemurite.get().asItem());
@@ -646,6 +651,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockJade);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockJasper);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockKalendrite);
+        tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockKryptonite);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockKyanite);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockLead);
         tag(ItemTagList.STORAGE_BLOCKS).addTag(ItemTagList.blockLemurite);
@@ -1475,6 +1481,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.gemIolite).add(ItemList.itemGemIolite.get());
         tag(ItemTagList.gemJade).add(ItemList.itemGemJade.get());
         tag(ItemTagList.gemJasper).add(ItemList.itemGemJasper.get());
+        tag(ItemTagList.gemKryptonite).add(ItemList.itemGemKryptonite.get());
         tag(ItemTagList.gemKyanite).add(ItemList.itemGemKyanite.get());
         tag(ItemTagList.gemMalachite).add(ItemList.itemGemMalachite.get());
         tag(ItemTagList.gemOnyx).add(ItemList.itemGemOnyx.get());
@@ -1500,6 +1507,7 @@ public class ExOreItemTag extends ItemTagsProvider
         tag(ItemTagList.GEMS).addTag(ItemTagList.gemIolite);
         tag(ItemTagList.GEMS).addTag(ItemTagList.gemJade);
         tag(ItemTagList.GEMS).addTag(ItemTagList.gemJasper);
+        tag(ItemTagList.GEMS).addTag(ItemTagList.gemKryptonite);
         tag(ItemTagList.GEMS).addTag(ItemTagList.gemKyanite);
         tag(ItemTagList.GEMS).addTag(ItemTagList.gemMalachite);
         tag(ItemTagList.GEMS).addTag(ItemTagList.gemOnyx);

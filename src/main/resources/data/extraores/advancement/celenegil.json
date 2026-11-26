@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Celenegil Ore"
+      "translate": "extraores.celenegil.desc"
     },
     "icon": {
       "id": "extraores:celenegilore"
     },
     "title": {
-      "translate": "What EVEN is This!?"
+      "translate": "extraores.celenegil"
     }
   },
   "requirements": [

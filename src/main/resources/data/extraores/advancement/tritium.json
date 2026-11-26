@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Tritium Ore"
+      "translate": "extraores.tritium.desc"
     },
     "icon": {
       "id": "extraores:tritiumore"
     },
     "title": {
-      "translate": "The Power of the Sum"
+      "translate": "extraores.tritium"
     }
   },
   "requirements": [

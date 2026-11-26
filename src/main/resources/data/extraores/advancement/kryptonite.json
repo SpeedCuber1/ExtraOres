@@ -1,0 +1,33 @@
+{
+  "parent": "extraores:jasper",
+  "criteria": {
+    "kryptonite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:kryptonite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.kryptonite.desc"
+    },
+    "icon": {
+      "id": "extraores:kryptoniteore"
+    },
+    "title": {
+      "translate": "extraores.kryptonite"
+    }
+  },
+  "requirements": [
+    [
+      "kryptonite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

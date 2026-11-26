@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Hepatizon Ore"
+      "translate": "extraores.hepatizon.desc"
     },
     "icon": {
       "id": "extraores:hepatizonore"
     },
     "title": {
-      "translate": "Sounds Hypnotic Doesn't It"
+      "translate": "extraores.hepatizon"
     }
   },
   "requirements": [

@@ -48,6 +48,7 @@ public class ItemTagList
     public static final TagKey<Item> oreJade = tag("c","ores/jade");
     public static final TagKey<Item> oreJasper = tag("c","ores/jasper");
     public static final TagKey<Item> oreKalendrite = tag("c","ores/kalendrite");
+    public static final TagKey<Item> oreKryptonite = tag("c", "ores/kryptonite");
     public static final TagKey<Item> oreKyanite = tag("c","ores/kyanite");
     public static final TagKey<Item> oreLead = tag("c","ores/lead");
     public static final TagKey<Item> oreLemurite = tag("c","ores/lemurite");
@@ -150,6 +151,7 @@ public class ItemTagList
     public static final TagKey<Item> blockJade = tag("c","storage_blocks/jade");
     public static final TagKey<Item> blockJasper = tag("c","storage_blocks/jasper");
     public static final TagKey<Item> blockKalendrite = tag("c","storage_blocks/kalendrite");
+    public static final TagKey<Item> blockKryptonite = tag("c", "storage_blocks/kryptonite");
     public static final TagKey<Item> blockKyanite = tag("c","storage_blocks/kyanite");
     public static final TagKey<Item> blockLead = tag("c","storage_blocks/lead");
     public static final TagKey<Item> blockLemurite = tag("c","storage_blocks/lemurite");
@@ -679,6 +681,7 @@ public class ItemTagList
     public static final TagKey<Item> gemIolite = tag("c","gems/iolite");
     public static final TagKey<Item> gemJade = tag("c","gems/jade");
     public static final TagKey<Item> gemJasper = tag("c","gems/jasper");
+    public static final TagKey<Item> gemKryptonite = tag("c", "gems/kryptonite");
     public static final TagKey<Item> gemKyanite = tag("c","gems/kyanite");
     public static final TagKey<Item> gemMalachite = tag("c","gems/malachite");
     public static final TagKey<Item> gemOnyx = tag("c","gems/onyx");

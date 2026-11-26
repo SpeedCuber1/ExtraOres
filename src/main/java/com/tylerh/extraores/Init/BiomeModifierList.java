@@ -46,6 +46,7 @@ public class BiomeModifierList
     public static ResourceKey<BiomeModifier> modifierJade;
     public static ResourceKey<BiomeModifier> modifierJasper;
     public static ResourceKey<BiomeModifier> modifierKalendrite;
+    public static ResourceKey<BiomeModifier> modifierKryptonite;
     public static ResourceKey<BiomeModifier> modifierKyanite;
     public static ResourceKey<BiomeModifier> modifierLead;
     public static ResourceKey<BiomeModifier> modifierLemurite;

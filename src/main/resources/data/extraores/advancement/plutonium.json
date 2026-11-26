@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Plutonium Ore"
+      "translate": "extraores.plutonium.desc"
     },
     "icon": {
       "id": "extraores:plutoniumore"
     },
     "title": {
-      "translate": "Not Responsible For Base Evisceration"
+      "translate": "extraores.plutonium"
     }
   },
   "requirements": [

@@ -70,6 +70,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreJade).add(BlockList.blockOreJade.get());
         tag(BlockTagList.oreJasper).add(BlockList.blockOreJasper.get());
         tag(BlockTagList.oreKalendrite).add(BlockList.blockOreKalendrite.get());
+        tag(BlockTagList.oreKryptonite).add(BlockList.blockOreKryptonite.get());
         tag(BlockTagList.oreKyanite).add(BlockList.blockOreKyanite.get());
         tag(BlockTagList.oreLead).add(BlockList.blockOreLead.get());
         tag(BlockTagList.oreLemurite).add(BlockList.blockOreLemurite.get());
@@ -168,6 +169,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreIridium).add(BlockList.blockDeepslateOreIridium.get());
         tag(BlockTagList.oreJade).add(BlockList.blockDeepslateOreJade.get());
         tag(BlockTagList.oreJasper).add(BlockList.blockDeepslateOreJasper.get());
+        tag(BlockTagList.oreKryptonite).add(BlockList.blockDeepslateOreKryptonite.get());
         tag(BlockTagList.oreKyanite).add(BlockList.blockDeepslateOreKyanite.get());
         tag(BlockTagList.oreLead).add(BlockList.blockDeepslateOreLead.get());
         tag(BlockTagList.oreMalachite).add(BlockList.blockDeepslateOreMalachite.get());
@@ -232,6 +234,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.oreIolite).add(BlockList.blockEnderOreIolite.get());
         tag(BlockTagList.oreJade).add(BlockList.blockEnderOreJade.get());
         tag(BlockTagList.oreJasper).add(BlockList.blockEnderOreJasper.get());
+        tag(BlockTagList.oreKryptonite).add(BlockList.blockEnderOreKryptonite.get());
         tag(BlockTagList.oreKyanite).add(BlockList.blockEnderOreKyanite.get());
         tag(BlockTagList.oreMalachite).add(BlockList.blockEnderOreMalachite.get());
         tag(BlockTagList.oreOnyx).add(BlockList.blockEnderOreOnyx.get());
@@ -288,6 +291,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.ORES).addTag(BlockTagList.oreJade);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreJasper);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreKalendrite);
+        tag(BlockTagList.ORES).addTag(BlockTagList.oreKryptonite);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreKyanite);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreLead);
         tag(BlockTagList.ORES).addTag(BlockTagList.oreLemurite);
@@ -392,6 +396,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.blockJade).add(BlockList.blockJade.get());
         tag(BlockTagList.blockJasper).add(BlockList.blockJasper.get());
         tag(BlockTagList.blockKalendrite).add(BlockList.blockKalendrite.get());
+        tag(BlockTagList.blockKryptonite).add(BlockList.blockKryptonite.get());
         tag(BlockTagList.blockKyanite).add(BlockList.blockKyanite.get());
         tag(BlockTagList.blockLead).add(BlockList.blockLead.get());
         tag(BlockTagList.blockLemurite).add(BlockList.blockLemurite.get());
@@ -492,6 +497,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockJade);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockJasper);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockKalendrite);
+        tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockKryptonite);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockKyanite);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockLead);
         tag(BlockTagList.STORAGE_BLOCKS).addTag(BlockTagList.blockLemurite);
@@ -596,6 +602,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreJade.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreJasper.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreKalendrite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreKryptonite.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreKyanite.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreLead.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreLemurite.get());
@@ -655,7 +662,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreYellorite.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreZinc.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockOreZirconium.get());
-
         //Ore Deepslate
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAdamantine.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreAgate.get());
@@ -694,6 +700,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreIridium.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreJade.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreJasper.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreKryptonite.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreKyanite.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreLead.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreMalachite.get());
@@ -747,6 +754,33 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreYellorite.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreZinc.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockDeepslateOreZirconium.get());
+        //Ores End Stone
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreAgate.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreAmethyst.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreAmetrine.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreAquamarine.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreChrysocolla.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreCitrine.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreGarnet.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreIolite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreJade.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreJasper.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreKryptonite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreKyanite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreMalachite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreOnyx.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreOpal.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOrePeridot.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOrePhoenixite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreQuartz.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreRuby.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreSapphire.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreSpinel.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreSugilite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreTanzanite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreTopaz.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreTourmaline.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockEnderOreTurquoise.get());
         //Blocks
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockAdamantine.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockAgate.get());
@@ -789,6 +823,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockJade.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockJasper.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockKalendrite.get());
+        tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockKryptonite.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockKyanite.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockLead.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(BlockList.blockLemurite.get());
@@ -893,6 +928,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreJade.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreJasper.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreKalendrite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreKryptonite.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreKyanite.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreLead.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreLemurite.get());
@@ -952,7 +988,6 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreYellorite.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreZinc.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockOreZirconium.get());
-
         //Ore Deepslate
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAdamantine.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreAgate.get());
@@ -991,6 +1026,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreIridium.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreJade.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreJasper.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreKryptonite.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreKyanite.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreLead.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreMalachite.get());
@@ -1044,6 +1080,33 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreYellorite.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreZinc.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockDeepslateOreZirconium.get());
+        //Ore End Stone
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreAgate.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreAmethyst.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreAmetrine.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreAquamarine.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreChrysocolla.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreCitrine.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreGarnet.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreIolite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreJade.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreJasper.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreKryptonite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreKyanite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreMalachite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreOnyx.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreOpal.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOrePeridot.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOrePhoenixite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreQuartz.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreRuby.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreSapphire.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreSpinel.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreSugilite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreTanzanite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreTopaz.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreTourmaline.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockEnderOreTurquoise.get());
         //Blocks
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockAdamantine.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockAgate.get());
@@ -1086,6 +1149,7 @@ public class ExOreBlockTag extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockJade.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockJasper.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockKalendrite.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockKryptonite.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockKyanite.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockLead.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(BlockList.blockLemurite.get());

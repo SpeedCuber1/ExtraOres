@@ -79,6 +79,7 @@ public class ExOreLootTableProvider extends BlockLootSubProvider
         dropSelf(BlockList.blockJade.get());
         dropSelf(BlockList.blockJasper.get());
         dropSelf(BlockList.blockKalendrite.get());
+        dropSelf(BlockList.blockKryptonite.get());
         dropSelf(BlockList.blockKyanite.get());
         dropSelf(BlockList.blockLead.get());
         dropSelf(BlockList.blockLemurite.get());
@@ -182,6 +183,7 @@ public class ExOreLootTableProvider extends BlockLootSubProvider
         add(BlockList.blockOreJade.get(), createFortune(BlockList.blockOreJade.get(), ItemList.itemGemJade.get()));
         add(BlockList.blockOreJasper.get(), createFortune(BlockList.blockOreJasper.get(), ItemList.itemGemJasper.get()));
         add(BlockList.blockOreKalendrite.get(), createFortune(BlockList.blockOreKalendrite.get(), ItemList.itemRawKalendrite.get()));
+        add(BlockList.blockOreKryptonite.get(), createFortune(BlockList.blockOreKryptonite.get(), ItemList.itemGemKryptonite.get()));
         add(BlockList.blockOreKyanite.get(), createFortune(BlockList.blockOreKyanite.get(), ItemList.itemGemKyanite.get()));
         add(BlockList.blockOreLead.get(), createFortune(BlockList.blockOreLead.get(), ItemList.itemRawLead.get()));
         add(BlockList.blockOreLemurite.get(), createFortune(BlockList.blockOreLemurite.get(), ItemList.itemRawLemurite.get()));
@@ -278,6 +280,7 @@ public class ExOreLootTableProvider extends BlockLootSubProvider
         add(BlockList.blockDeepslateOreIridium.get(), createFortune(BlockList.blockDeepslateOreIridium.get(), ItemList.itemRawIridium.get()));
         add(BlockList.blockDeepslateOreJade.get(), createFortune(BlockList.blockDeepslateOreJade.get(), ItemList.itemGemJade.get()));
         add(BlockList.blockDeepslateOreJasper.get(), createFortune(BlockList.blockDeepslateOreJasper.get(), ItemList.itemGemJasper.get()));
+        add(BlockList.blockDeepslateOreKryptonite.get(), createFortune(BlockList.blockDeepslateOreKryptonite.get(), ItemList.itemGemKryptonite.get()));
         add(BlockList.blockDeepslateOreKyanite.get(), createFortune(BlockList.blockDeepslateOreKyanite.get(), ItemList.itemGemKyanite.get()));
         add(BlockList.blockDeepslateOreLead.get(), createFortune(BlockList.blockDeepslateOreLead.get(), ItemList.itemRawLead.get()));
         add(BlockList.blockDeepslateOreMalachite.get(), createFortune(BlockList.blockDeepslateOreMalachite.get(), ItemList.itemGemMalachite.get()));
@@ -341,6 +344,7 @@ public class ExOreLootTableProvider extends BlockLootSubProvider
         add(BlockList.blockEnderOreIolite.get(), createFortune(BlockList.blockEnderOreIolite.get(), ItemList.itemGemIolite.get()));
         add(BlockList.blockEnderOreJade.get(), createFortune(BlockList.blockEnderOreJade.get(), ItemList.itemGemJade.get()));
         add(BlockList.blockEnderOreJasper.get(), createFortune(BlockList.blockEnderOreJasper.get(), ItemList.itemGemJasper.get()));
+        add(BlockList.blockEnderOreKryptonite.get(), createFortune(BlockList.blockEnderOreKryptonite.get(), ItemList.itemGemKryptonite.get()));
         add(BlockList.blockEnderOreKyanite.get(), createFortune(BlockList.blockEnderOreKyanite.get(), ItemList.itemGemKyanite.get()));
         add(BlockList.blockEnderOreMalachite.get(), createFortune(BlockList.blockEnderOreMalachite.get(), ItemList.itemGemMalachite.get()));
         add(BlockList.blockEnderOreOnyx.get(), createFortune(BlockList.blockEnderOreOnyx.get(), ItemList.itemGemOnyx.get()));

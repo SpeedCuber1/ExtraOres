@@ -362,6 +362,13 @@ public class ExOreRecipeProvider extends RecipeProvider
                 .define('i', ItemList.itemIngotKalendrite.get())
                 .unlockedBy("kalendriteblock", has(BlockList.blockKalendrite.get()))
                 .save(output);
+        shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockKryptonite.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemKryptonite.get())
+                .unlockedBy("kryptoniteblock", has(BlockList.blockKryptonite.get()))
+                .save(output);
         shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockKyanite.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -935,6 +942,10 @@ public class ExOreRecipeProvider extends RecipeProvider
         shapeless(RecipeCategory.MISC, ItemList.itemIngotKalendrite.get(), 9)
                 .requires(Ingredient.of(BlockList.blockKalendrite.get().asItem()))
                 .unlockedBy("kalendriteingot", has(ItemList.itemIngotKalendrite.get()))
+                .save(output);
+        shapeless(RecipeCategory.MISC, ItemList.itemGemKryptonite.get(), 9)
+                .requires(Ingredient.of(BlockList.blockKryptonite.get().asItem()))
+                .unlockedBy("kryptonite", has(ItemList.itemGemKryptonite.get()))
                 .save(output);
         shapeless(RecipeCategory.MISC, ItemList.itemGemKyanite.get(), 9)
                 .requires(Ingredient.of(BlockList.blockKyanite.get().asItem()))

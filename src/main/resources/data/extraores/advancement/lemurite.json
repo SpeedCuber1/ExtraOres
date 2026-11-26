@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Lemurite Ore"
+      "translate": "extraores.lemurite.desc"
     },
     "icon": {
       "id": "extraores:lemuriteore"
     },
     "title": {
-      "translate": "Now With Rings"
+      "translate": "extraores.lemurite"
     }
   },
   "requirements": [

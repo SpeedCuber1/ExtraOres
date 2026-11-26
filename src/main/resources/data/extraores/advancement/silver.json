@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Silver Ore"
+      "translate": "extraores.silver.desc"
     },
     "icon": {
       "id": "extraores:silverore"
     },
     "title": {
-      "translate": "Take a Moment and Reflect on Your Life"
+      "translate": "extraores.silver"
     }
   },
   "requirements": [

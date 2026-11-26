@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Neodymium Ore"
+      "translate": "extraores.neodymium.desc"
     },
     "icon": {
       "id": "extraores:neodymiumore"
     },
     "title": {
-      "translate": "A Magnetic Personality"
+      "translate": "extraores.neodymium"
     }
   },
   "requirements": [

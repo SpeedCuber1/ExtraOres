@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Rhodium Ore"
+      "translate": "extraores.rhodium.desc"
     },
     "icon": {
       "id": "extraores:rhodiumore"
     },
     "title": {
-      "translate": "On the Rhodium"
+      "translate": "extraores.rhodium"
     }
   },
   "requirements": [

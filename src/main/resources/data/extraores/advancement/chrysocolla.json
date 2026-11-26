@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Chrysocolla Ore"
+      "translate": "extraores.chrysocolla.desc"
     },
     "icon": {
       "id": "extraores:chrysocollaore"
     },
     "title": {
-      "translate": "For Chrysocolla's Sake"
+      "translate": "extraores.chrysocolla"
     }
   },
   "requirements": [

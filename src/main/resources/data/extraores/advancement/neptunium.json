@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Neptunium Ore"
+      "translate": "extraores.neptunium.desc"
     },
     "icon": {
       "id": "extraores:neptuniumore"
     },
     "title": {
-      "translate": "A Gift From Neptune Himself"
+      "translate": "extraores.neptunium"
     }
   },
   "requirements": [

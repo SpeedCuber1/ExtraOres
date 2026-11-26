@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Meutoite Ore"
+      "translate": "extraores.meutoite.desc"
     },
     "icon": {
       "id": "extraores:meutoiteore"
     },
     "title": {
-      "translate": "The Ores Are Mutating"
+      "translate": "extraores.meutoite"
     }
   },
   "requirements": [

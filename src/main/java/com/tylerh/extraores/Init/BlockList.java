@@ -1,5 +1,6 @@
 package com.tylerh.extraores.Init;
 
+
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -47,6 +48,7 @@ public class BlockList
     public static DeferredBlock<Block> blockOreJade;
     public static DeferredBlock<Block> blockOreJasper;
     public static DeferredBlock<Block> blockOreKalendrite;
+    public static DeferredBlock<Block> blockOreKryptonite;
     public static DeferredBlock<Block> blockOreKyanite;
     public static DeferredBlock<Block> blockOreLead;
     public static DeferredBlock<Block> blockOreLemurite;
@@ -143,6 +145,7 @@ public class BlockList
     public static DeferredBlock<Block> blockDeepslateOreIridium;
     public static DeferredBlock<Block> blockDeepslateOreJade;
     public static DeferredBlock<Block> blockDeepslateOreJasper;
+    public static DeferredBlock<Block> blockDeepslateOreKryptonite;
     public static DeferredBlock<Block> blockDeepslateOreKyanite;
     public static DeferredBlock<Block> blockDeepslateOreLead;
     public static DeferredBlock<Block> blockDeepslateOreMalachite;
@@ -206,6 +209,7 @@ public class BlockList
     public static DeferredBlock<Block> blockEnderOreIolite;
     public static DeferredBlock<Block> blockEnderOreJade;
     public static DeferredBlock<Block> blockEnderOreJasper;
+    public static DeferredBlock<Block> blockEnderOreKryptonite;
     public static DeferredBlock<Block> blockEnderOreKyanite;
     public static DeferredBlock<Block> blockEnderOreMalachite;
     public static DeferredBlock<Block> blockEnderOreOnyx;
@@ -263,6 +267,7 @@ public class BlockList
     public static DeferredBlock<Block> blockJade;
     public static DeferredBlock<Block> blockJasper;
     public static DeferredBlock<Block> blockKalendrite;
+    public static DeferredBlock<Block> blockKryptonite;
     public static DeferredBlock<Block> blockKyanite;
     public static DeferredBlock<Block> blockLead;
     public static DeferredBlock<Block> blockLemurite;

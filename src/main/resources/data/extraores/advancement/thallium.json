@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Thallium Ore"
+      "translate": "extraores.thallium.desc"
     },
     "icon": {
       "id": "extraores:thalliumore"
     },
     "title": {
-      "translate": "Bring Me the Prussian Blue STAT"
+      "translate": "extraores.thallium"
     }
   },
   "requirements": [

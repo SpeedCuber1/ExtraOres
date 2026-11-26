@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Lead Ore"
+      "translate": "extraores.lead.desc"
     },
     "icon": {
       "id": "extraores:leadore"
     },
     "title": {
-      "translate": "Everything's Lead-Lined"
+      "translate": "extraores.lead"
     }
   },
   "requirements": [

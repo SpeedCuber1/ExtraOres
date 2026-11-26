@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Vyroxeres Ore"
+      "translate": "extraores.vyroxeres.desc"
     },
     "icon": {
       "id": "extraores:vyroxeresore"
     },
     "title": {
-      "translate": "Sounds Toxic"
+      "translate": "extraores.vyroxeres"
     }
   },
   "requirements": [

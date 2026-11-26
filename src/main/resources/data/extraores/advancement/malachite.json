@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Malachite Ore"
+      "translate": "extraores.malachite.desc"
     },
     "icon": {
       "id": "extraores:malachiteore"
     },
     "title": {
-      "translate": "Full of Malice"
+      "translate": "extraores.malachite"
     }
   },
   "requirements": [

@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Tantalum Ore"
+      "translate": "extraores.tantalum.desc"
     },
     "icon": {
       "id": "extraores:tantalumore"
     },
     "title": {
-      "translate": "Sounds Tantalizing"
+      "translate": "extraores.tantalum"
     }
   },
   "requirements": [

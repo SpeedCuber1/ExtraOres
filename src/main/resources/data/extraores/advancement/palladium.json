@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Palladium Ore"
+      "translate": "extraores.palladium.desc"
     },
     "icon": {
       "id": "extraores:palladiumore"
     },
     "title": {
-      "translate": "Now Showing at the Palladium"
+      "translate": "extraores.palladium"
     }
   },
   "requirements": [

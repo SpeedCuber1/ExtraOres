@@ -1,5 +1,5 @@
 {
-  "parent": "extraores:jasper",
+  "parent": "extraores:kryptonite",
   "criteria": {
     "kyanite": {
       "conditions": {
@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Kyanite Ore"
+      "translate": "extraores.kyanite.desc"
     },
     "icon": {
       "id": "extraores:kyaniteore"
     },
     "title": {
-      "translate": "Bridge on the River Kyanite"
+      "translate": "extraores.kyanite"
     }
   },
   "requirements": [

@@ -15,13 +15,13 @@
   "display": {
     "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
     "description": {
-      "translate": "Mine Manganese Ore"
+      "translate": "extraores.manganese.desc"
     },
     "icon": {
       "id": "extraores:manganeseore"
     },
     "title": {
-      "translate": "Coming to a Comic Near You"
+      "translate": "extraores.manganese"
     }
   },
   "requirements": [
