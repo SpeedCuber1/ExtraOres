@@ -1100,7 +1100,7 @@ public class ExOreLangProvider extends LanguageProvider
         add("extraores.spinel.desc", "Mine Spinel Ore");
         add("extraores.sugilite", "Give Me Some Sugar");
         add("extraores.sugilite.desc", "Mine Sugilite Ore");
-        add("extraores.taaffeite", "You're Using an Unneeded F");
+        add("extraores.taaffeite", "Petrified Taffy");
         add("extraores.taaffeite.desc", "Mine Taaffeite Ore");
         add("extraores.tantalum", "Sounds Tantalizing!");
         add("extraores.tantalum.desc", "Mine Tantalum Ore");
