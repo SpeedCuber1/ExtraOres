@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rubelite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "rubelite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:rubelite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "rubelite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rubelite"
+    ]
+  },
+  "sends_telemetry_event": false
+}

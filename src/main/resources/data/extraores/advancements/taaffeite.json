@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:sugilite",
+  "criteria": {
+    "taaffeite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:taaffeite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.taaffeite.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:taaffeiteore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.taaffeite"
+    }
+  },
+  "requirements": [
+    [
+      "taaffeite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

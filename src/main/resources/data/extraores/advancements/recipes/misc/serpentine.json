@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:serpentine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "serpentine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:serpentine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "serpentine",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:serpentine"
+    ]
+  },
+  "sends_telemetry_event": false
+}

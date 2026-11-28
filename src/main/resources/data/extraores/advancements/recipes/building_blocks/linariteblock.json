@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:linariteblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "linariteblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:linariteblock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "linariteblock",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:linariteblock"
+    ]
+  },
+  "sends_telemetry_event": false
+}

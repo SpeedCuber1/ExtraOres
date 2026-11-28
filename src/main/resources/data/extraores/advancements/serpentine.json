@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:sapphire",
+  "criteria": {
+    "serpentine": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:serpentine"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.serpentine.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:serpentineore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.serpentine"
+    }
+  },
+  "requirements": [
+    [
+      "serpentine"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:turquoise",
+  "criteria": {
+    "zircon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:zircon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.zircon.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:zirconore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.zircon"
+    }
+  },
+  "requirements": [
+    [
+      "zircon"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

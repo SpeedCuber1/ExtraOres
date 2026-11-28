@@ -60,12 +60,26 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .define('i', ItemList.itemIngotAldourite.get())
                 .unlockedBy("aldouriteblock", has(BlockList.blockAldourite.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockAlexandrite.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemAlexandrite.get())
+                .unlockedBy("alexandriteblock", has(BlockList.blockAlexandrite.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockAluminum.get())
                 .pattern("iii")
                 .pattern("iii")
                 .pattern("iii")
                 .define('i', ItemList.itemIngotAluminum.get())
                 .unlockedBy("aluminumblock", has(BlockList.blockAluminum.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockAmber.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemAmber.get())
+                .unlockedBy("amberblock", has(BlockList.blockAmber.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockAmericium.get())
                 .pattern("iii")
@@ -157,6 +171,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .pattern("iii")
                 .define('i', ItemList.itemIngotCarmot.get())
                 .unlockedBy("carmotblock", has(BlockList.blockCarmot.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockCarnelian.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemCarnelian.get())
+                .unlockedBy("carnelianblock", has(BlockList.blockCarnelian.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockCelenegil.get())
                 .pattern("iii")
@@ -256,6 +277,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .define('i', ItemList.itemIngotHaderoth.get())
                 .unlockedBy("haderothblock", has(BlockList.blockHaderoth.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockHeliodor.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemHeliodor.get())
+                .unlockedBy("heliodorblock", has(BlockList.blockHeliodor.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockHepatizon.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -354,6 +382,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .define('i', ItemList.itemIngotLemurite.get())
                 .unlockedBy("lemuriteblock", has(BlockList.blockLemurite.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockLinarite.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemLinarite.get())
+                .unlockedBy("linariteblock", has(BlockList.blockLinarite.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockMalachite.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -388,6 +423,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .pattern("iii")
                 .define('i', ItemList.itemIngotMithril.get())
                 .unlockedBy("mithrilblock", has(BlockList.blockMithril.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockMoissanite.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemMoissanite.get())
+                .unlockedBy("moissaniteblock", has(BlockList.blockMoissanite.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockMolybdenum.get())
                 .pattern("iii")
@@ -529,6 +571,20 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .define('i', ItemList.itemIngotRhodium.get())
                 .unlockedBy("rhodiumblock", has(BlockList.blockRhodium.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockRhodonite.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemRhodonite.get())
+                .unlockedBy("rhodoniteblock", has(BlockList.blockRhodonite.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockRubelite.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemRubelite.get())
+                .unlockedBy("rubeliteblock", has(BlockList.blockRubelite.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockRubracium.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -564,6 +620,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .define('i', ItemList.itemGemSapphire.get())
                 .unlockedBy("sapphireblock", has(BlockList.blockSapphire.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockSerpentine.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemSerpentine.get())
+                .unlockedBy("serpentineblock", has(BlockList.blockSerpentine.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockShadowIron.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -578,6 +641,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .define('i', ItemList.itemIngotSilver.get())
                 .unlockedBy("silverblock", has(BlockList.blockSilver.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockSphene.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemSphene.get())
+                .unlockedBy("spheneblock", has(BlockList.blockSphene.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockSpinel.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -591,6 +661,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .pattern("iii")
                 .define('i', ItemList.itemGemSugilite.get())
                 .unlockedBy("sugiliteore", has(BlockList.blockSugilite.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockTaaffeite.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemTaaffeite.get())
+                .unlockedBy("taaffeiteblock", has(BlockList.blockTaaffeite.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockTantalum.get())
                 .pattern("iii")
@@ -732,6 +809,13 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .define('i', ItemList.itemIngotZinc.get())
                 .unlockedBy("zincblock", has(BlockList.blockZinc.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockZircon.get())
+                .pattern("iii")
+                .pattern("iii")
+                .pattern("iii")
+                .define('i', ItemList.itemGemZircon.get())
+                .unlockedBy("zirconblock", has(BlockList.blockZircon.get()))
+                .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlockList.blockZirconium.get())
                 .pattern("iii")
                 .pattern("iii")
@@ -755,9 +839,17 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .requires(Ingredient.of(BlockList.blockAldourite.get().asItem()))
                 .unlockedBy("aldouriteingot", has(ItemList.itemIngotAldourite.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemAlexandrite.get(), 9)
+                .requires(Ingredient.of(BlockList.blockAlexandrite.get().asItem()))
+                .unlockedBy("alexandrite", has(ItemList.itemGemAlexandrite.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotAluminum.get(), 9)
                 .requires(Ingredient.of(BlockList.blockAluminum.get().asItem()))
                 .unlockedBy("aluminumingot", has(ItemList.itemIngotAluminum.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemAmber.get(), 9)
+                .requires(Ingredient.of(BlockList.blockAmber.get().asItem()))
+                .unlockedBy("amber", has(ItemList.itemGemAmber.get()))
                 .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotAmericium.get(), 9)
                 .requires(Ingredient.of(BlockList.blockAmericium.get().asItem()))
@@ -810,6 +902,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotCarmot.get(), 9)
                 .requires(Ingredient.of(BlockList.blockCarmot.get().asItem()))
                 .unlockedBy("carmotingot", has(ItemList.itemIngotCarmot.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemCarnelian.get(), 9)
+                .requires(Ingredient.of(BlockList.blockCarnelian.get().asItem()))
+                .unlockedBy("carnelian", has(ItemList.itemGemCarnelian.get()))
                 .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotCelenegil.get(), 9)
                 .requires(Ingredient.of(BlockList.blockCelenegil.get().asItem()))
@@ -867,6 +963,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .requires(Ingredient.of(BlockList.blockHaderoth.get().asItem()))
                 .unlockedBy("haderothingot", has(ItemList.itemIngotHaderoth.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemHeliodor.get(), 9)
+                .requires(Ingredient.of(BlockList.blockHeliodor.get().asItem()))
+                .unlockedBy("heliodor", has(ItemList.itemGemHeliodor.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotHepatizon.get(), 9)
                 .requires(Ingredient.of(BlockList.blockHepatizon.get().asItem()))
                 .unlockedBy("hepatizoningot", has(ItemList.itemIngotHepatizon.get()))
@@ -923,6 +1023,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .requires(Ingredient.of(BlockList.blockLemurite.get().asItem()))
                 .unlockedBy("lemuriteingot", has(ItemList.itemIngotLemurite.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemLinarite.get(), 9)
+                .requires(Ingredient.of(BlockList.blockLinarite.get().asItem()))
+                .unlockedBy("linarite", has(ItemList.itemGemLinarite.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemMalachite.get(), 9)
                 .requires(Ingredient.of(BlockList.blockMalachite.get()))
                 .unlockedBy("malachite", has(ItemList.itemGemMalachite.get()))
@@ -942,6 +1046,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotMithril.get(), 9)
                 .requires(Ingredient.of(BlockList.blockMithril.get().asItem()))
                 .unlockedBy("mithrilingot", has(ItemList.itemIngotMithril.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemMoissanite.get(), 9)
+                .requires(Ingredient.of(BlockList.blockMoissanite.get().asItem()))
+                .unlockedBy("moissanite", has(ItemList.itemGemMoissanite.get()))
                 .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotMolybdenum.get(), 9)
                 .requires(Ingredient.of(BlockList.blockMolybdenum.get().asItem()))
@@ -1023,6 +1131,14 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .requires(Ingredient.of(BlockList.blockRhodium.get().asItem()))
                 .unlockedBy("rhodiumingot", has(ItemList.itemIngotRhodium.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemRhodonite.get(), 9)
+                .requires(Ingredient.of(BlockList.blockRhodonite.get().asItem()))
+                .unlockedBy("rhodonite", has(ItemList.itemGemRhodonite.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemRubelite.get(), 9)
+                .requires(Ingredient.of(BlockList.blockRubelite.get().asItem()))
+                .unlockedBy("rubelite", has(ItemList.itemGemRubelite.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotRubracium.get(), 9)
                 .requires(Ingredient.of(BlockList.blockRubracium.get().asItem()))
                 .unlockedBy("rubraciumingot", has(ItemList.itemIngotRubracium.get()))
@@ -1043,6 +1159,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .requires(Ingredient.of(BlockList.blockSapphire.get().asItem()))
                 .unlockedBy("sapphire", has(ItemList.itemGemSapphire.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemSerpentine.get(), 9)
+                .requires(Ingredient.of(BlockList.blockSerpentine.get().asItem()))
+                .unlockedBy("serpentine", has(ItemList.itemGemSerpentine.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotShadowIron.get(), 9)
                 .requires(Ingredient.of(BlockList.blockShadowIron.get().asItem()))
                 .unlockedBy("shadowironingot", has(ItemList.itemIngotShadowIron.get()))
@@ -1051,6 +1171,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
                 .requires(Ingredient.of(BlockList.blockSilver.get().asItem()))
                 .unlockedBy("silveringot", has(ItemList.itemIngotSilver.get()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemSphene.get(), 9)
+                .requires(Ingredient.of(BlockList.blockSphene.get().asItem()))
+                .unlockedBy("sphene", has(ItemList.itemGemSphene.get()))
+                .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemSpinel.get(), 9)
                 .requires(Ingredient.of(BlockList.blockSpinel.get().asItem()))
                 .unlockedBy("spinel", has(ItemList.itemGemSpinel.get()))
@@ -1058,6 +1182,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemSugilite.get(), 9)
                 .requires(Ingredient.of(BlockList.blockSugilite.get().asItem()))
                 .unlockedBy("sugilite", has(ItemList.itemGemSugilite.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemTaaffeite.get(), 9)
+                .requires(Ingredient.of(BlockList.blockTaaffeite.get().asItem()))
+                .unlockedBy("taaffeite", has(ItemList.itemGemTaaffeite.get()))
                 .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotTantalum.get(), 9)
                 .requires(Ingredient.of(BlockList.blockTantalum.get().asItem()))
@@ -1138,6 +1266,10 @@ public class ExOreRecipe extends RecipeProvider implements IConditionBuilder
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotZinc.get(), 9)
                 .requires(Ingredient.of(BlockList.blockZinc.get().asItem()))
                 .unlockedBy("zincingot", has(ItemList.itemIngotZinc.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemGemZircon.get(), 9)
+                .requires(Ingredient.of(BlockList.blockZircon.get().asItem()))
+                .unlockedBy("zircon", has(ItemList.itemGemZircon.get()))
                 .save(consumer);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemList.itemIngotZirconium.get(), 9)
                 .requires(Ingredient.of(BlockList.blockZirconium.get().asItem()))

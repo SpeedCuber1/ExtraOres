@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:taaffeiteblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "taaffeiteblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:taaffeiteblock"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "taaffeiteblock",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:taaffeiteblock"
+    ]
+  },
+  "sends_telemetry_event": false
+}

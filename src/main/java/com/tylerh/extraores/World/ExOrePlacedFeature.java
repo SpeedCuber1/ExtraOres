@@ -40,11 +40,23 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_NETHER;
             register(context,PlacedFeatureList.featureAldouritePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureAldourite),rate,height);
         }
+        if(ConfigRegistryList.registerAlexandrite.get())
+        {
+            PlacedFeatureList.featureAlexandritePlaced = createKey("alexandriteore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureAlexandritePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureAlexandrite),rate,height);
+        }
         if(ConfigRegistryList.registerAluminum.get())
         {
             PlacedFeatureList.featureAluminumPlaced = createKey("aluminumore");
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.featureAluminumPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureAluminum),rate,height);
+        }
+        if(ConfigRegistryList.registerAmber.get())
+        {
+            PlacedFeatureList.featureAmberPlaced = createKey("amberore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureAmberPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureAmber),rate,height);
         }
         if(ConfigRegistryList.registerAmericium.get())
         {
@@ -123,6 +135,12 @@ public class ExOrePlacedFeature
             PlacedFeatureList.featureCarmotPlaced = createKey("carmotore");
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.featureCarmotPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureCarmot),rate,height);
+        }
+        if(ConfigRegistryList.registerCarnelian.get())
+        {
+            PlacedFeatureList.featureCarnelianPlaced = createKey("carnelianore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureCarnelianPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureCarnelian),rate,height);
         }
         if(ConfigRegistryList.registerCelenegil.get())
         {
@@ -208,6 +226,12 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.featureHaderothPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureHaderoth),rate,height);
         }
+        if(ConfigRegistryList.registerHeliodor.get())
+        {
+            PlacedFeatureList.featureHeliodorPlaced = createKey("heliodorore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureHeliodorPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureHeliodor),rate,height);
+        }
         if(ConfigRegistryList.registerHepatizon.get())
         {
             PlacedFeatureList.featureHepatizonPlaced = createKey("hepatizonore");
@@ -292,6 +316,12 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_NETHER;
             register(context,PlacedFeatureList.featureLemuritePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureLemurite),rate,height);
         }
+        if(ConfigRegistryList.registerLinarite.get())
+        {
+            PlacedFeatureList.featureLinaritePlaced = createKey("linariteore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureLinaritePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureLinarite),rate,height);
+        }
         if(ConfigRegistryList.registerMalachite.get())
         {
             PlacedFeatureList.featureMalachitePlaced = createKey("malachiteore");
@@ -321,6 +351,12 @@ public class ExOrePlacedFeature
             PlacedFeatureList.featureMithrilPlaced = createKey("mithrilore");
             height = ModInfo.HEIGHT_RARE;
             register(context,PlacedFeatureList.featureMithrilPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureMithril),rate,height);
+        }
+        if(ConfigRegistryList.registerMoissanite.get())
+        {
+            PlacedFeatureList.featureMoissanitePlaced = createKey("moissaniteore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureMoissanitePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureMoissanite),rate,height);
         }
         if(ConfigRegistryList.registerMolybdenum.get())
         {
@@ -442,6 +478,18 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.featureRhodiumPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureRhodium),rate,height);
         }
+        if(ConfigRegistryList.registerRhodonite.get())
+        {
+            PlacedFeatureList.featureRhodonitePlaced = createKey("rhodoniteore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureRhodonitePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureRhodonite),rate,height);
+        }
+        if(ConfigRegistryList.registerRubelite.get())
+        {
+            PlacedFeatureList.featureRubelitePlaced = createKey("rubeliteore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureRubelitePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureRubelite),rate,height);
+        }
         if(ConfigRegistryList.registerRubracium.get())
         {
             PlacedFeatureList.featureRubraciumPlaced = createKey("rubraciumore");
@@ -472,6 +520,12 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.featureSapphirePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureSapphire),rate,height);
         }
+        if(ConfigRegistryList.registerSerpentine.get())
+        {
+            PlacedFeatureList.featureSerpentinePlaced = createKey("serpentineore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureSerpentinePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureSerpentine),rate,height);
+        }
         if(ConfigRegistryList.registerShadowIron.get())
         {
             PlacedFeatureList.featureShadowIronPlaced = createKey("shadowironore");
@@ -484,6 +538,12 @@ public class ExOrePlacedFeature
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.featureSilverPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureSilver),rate,height);
         }
+        if(ConfigRegistryList.registerSphene.get())
+        {
+            PlacedFeatureList.featureSphenePlaced = createKey("spheneore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureSphenePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureSphene),rate,height);
+        }
         if(ConfigRegistryList.registerSpinel.get())
         {
             PlacedFeatureList.featureSpinelPlaced = createKey("spinelore");
@@ -495,6 +555,12 @@ public class ExOrePlacedFeature
             PlacedFeatureList.featureSugilitePlaced = createKey("sugiliteore");
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.featureSugilitePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureSugilite),rate,height);
+        }
+        if(ConfigRegistryList.registerTaaffeite.get())
+        {
+            PlacedFeatureList.featureTaaffeitePlaced = createKey("taaffeiteore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureTaaffeitePlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureTaaffeite),rate,height);
         }
         if(ConfigRegistryList.registerTantalum.get())
         {
@@ -615,6 +681,12 @@ public class ExOrePlacedFeature
             PlacedFeatureList.featureZincPlaced = createKey("zincore");
             height = ModInfo.HEIGHT_NORMAL;
             register(context,PlacedFeatureList.featureZincPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureZinc),rate,height);
+        }
+        if(ConfigRegistryList.registerZircon.get())
+        {
+            PlacedFeatureList.featureZirconPlaced = createKey("zirconore");
+            height = ModInfo.HEIGHT_NORMAL;
+            register(context,PlacedFeatureList.featureZirconPlaced,configuredFeatures.getOrThrow(ConfiguredFeatureList.featureZircon),rate,height);
         }
         if(ConfigRegistryList.registerZirconium.get())
         {

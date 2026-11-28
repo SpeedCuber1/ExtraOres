@@ -19,11 +19,18 @@ public class ExOreBlockstateProvider extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        addOre();
+        addBlocks();
+    }
+    private void addOre()
+    {
         //Ore Normal
         blockWithItem(BlockList.blockOreAdamantine);
         blockWithItem(BlockList.blockOreAgate);
         blockWithItem(BlockList.blockOreAldourite);
+        blockWithItem(BlockList.blockOreAlexandrite);
         blockWithItem(BlockList.blockOreAluminum);
+        blockWithItem(BlockList.blockOreAmber);
         blockWithItem(BlockList.blockOreAmericium);
         blockWithItem(BlockList.blockOreAmethyst);
         blockWithItem(BlockList.blockOreAmetrine);
@@ -37,6 +44,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockOreBlackSteel);
         blockWithItem(BlockList.blockOreCadmium);
         blockWithItem(BlockList.blockOreCarmot);
+        blockWithItem(BlockList.blockOreCarnelian);
         blockWithItem(BlockList.blockOreCelenegil);
         blockWithItem(BlockList.blockOreCeruclase);
         blockWithItem(BlockList.blockOreChromium);
@@ -51,6 +59,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockOreGallium);
         blockWithItem(BlockList.blockOreGarnet);
         blockWithItem(BlockList.blockOreHaderoth);
+        blockWithItem(BlockList.blockOreHeliodor);
         blockWithItem(BlockList.blockOreHepatizon);
         blockWithItem(BlockList.blockOreIgnatius);
         blockWithItem(BlockList.blockOreIndium);
@@ -65,11 +74,13 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockOreKyanite);
         blockWithItem(BlockList.blockOreLead);
         blockWithItem(BlockList.blockOreLemurite);
+        blockWithItem(BlockList.blockOreLinarite);
         blockWithItem(BlockList.blockOreMalachite);
         blockWithItem(BlockList.blockOreManganese);
         blockWithItem(BlockList.blockOreMeutoite);
         blockWithItem(BlockList.blockOreMidasium);
         blockWithItem(BlockList.blockOreMithril);
+        blockWithItem(BlockList.blockOreMoissanite);
         blockWithItem(BlockList.blockOreMolybdenum);
         blockWithItem(BlockList.blockOreNeodymium);
         blockWithItem(BlockList.blockOreNeptunium);
@@ -90,15 +101,20 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockOreQuartz);
         blockWithItem(BlockList.blockOreRhenium);
         blockWithItem(BlockList.blockOreRhodium);
+        blockWithItem(BlockList.blockOreRhodonite);
+        blockWithItem(BlockList.blockOreRubelite);
         blockWithItem(BlockList.blockOreRubracium);
         blockWithItem(BlockList.blockOreRuby);
         blockWithItem(BlockList.blockOreRuthenium);
         blockWithItem(BlockList.blockOreSanguinite);
         blockWithItem(BlockList.blockOreSapphire);
+        blockWithItem(BlockList.blockOreSerpentine);
         blockWithItem(BlockList.blockOreShadowIron);
         blockWithItem(BlockList.blockOreSilver);
+        blockWithItem(BlockList.blockOreSphene);
         blockWithItem(BlockList.blockOreSpinel);
         blockWithItem(BlockList.blockOreSugilite);
+        blockWithItem(BlockList.blockOreTaaffeite);
         blockWithItem(BlockList.blockOreTantalum);
         blockWithItem(BlockList.blockOreTanzanite);
         blockWithItem(BlockList.blockOreTartarite);
@@ -119,11 +135,14 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockOreVyroxeres);
         blockWithItem(BlockList.blockOreYellorite);
         blockWithItem(BlockList.blockOreZinc);
+        blockWithItem(BlockList.blockOreZircon);
         blockWithItem(BlockList.blockOreZirconium);
         //Ore Deepslate
         blockWithItem(BlockList.blockDeepslateOreAdamantine);
         blockWithItem(BlockList.blockDeepslateOreAgate);
+        blockWithItem(BlockList.blockDeepslateOreAlexandrite);
         blockWithItem(BlockList.blockDeepslateOreAluminum);
+        blockWithItem(BlockList.blockDeepslateOreAmber);
         blockWithItem(BlockList.blockDeepslateOreAmericium);
         blockWithItem(BlockList.blockDeepslateOreAmethyst);
         blockWithItem(BlockList.blockDeepslateOreAmetrine);
@@ -137,6 +156,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockDeepslateOreBlackSteel);
         blockWithItem(BlockList.blockDeepslateOreCadmium);
         blockWithItem(BlockList.blockDeepslateOreCarmot);
+        blockWithItem(BlockList.blockDeepslateOreCarnelian);
         blockWithItem(BlockList.blockDeepslateOreCelenegil);
         blockWithItem(BlockList.blockDeepslateOreChromium);
         blockWithItem(BlockList.blockDeepslateOreChrysocolla);
@@ -150,6 +170,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockDeepslateOreGallium);
         blockWithItem(BlockList.blockDeepslateOreGarnet);
         blockWithItem(BlockList.blockDeepslateOreHaderoth);
+        blockWithItem(BlockList.blockDeepslateOreHeliodor);
         blockWithItem(BlockList.blockDeepslateOreHepatizon);
         blockWithItem(BlockList.blockDeepslateOreIndium);
         blockWithItem(BlockList.blockDeepslateOreInfuscolium);
@@ -161,10 +182,12 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockDeepslateOreKryptonite);
         blockWithItem(BlockList.blockDeepslateOreKyanite);
         blockWithItem(BlockList.blockDeepslateOreLead);
+        blockWithItem(BlockList.blockDeepslateOreLinarite);
         blockWithItem(BlockList.blockDeepslateOreMalachite);
         blockWithItem(BlockList.blockDeepslateOreManganese);
         blockWithItem(BlockList.blockDeepslateOreMeutoite);
         blockWithItem(BlockList.blockDeepslateOreMithril);
+        blockWithItem(BlockList.blockDeepslateOreMoissanite);
         blockWithItem(BlockList.blockDeepslateOreMolybdenum);
         blockWithItem(BlockList.blockDeepslateOreNeodymium);
         blockWithItem(BlockList.blockDeepslateOreNeptunium);
@@ -185,13 +208,18 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockDeepslateOreQuartz);
         blockWithItem(BlockList.blockDeepslateOreRhenium);
         blockWithItem(BlockList.blockDeepslateOreRhodium);
+        blockWithItem(BlockList.blockDeepslateOreRhodonite);
+        blockWithItem(BlockList.blockDeepslateOreRubelite);
+        blockWithItem(BlockList.blockDeepslateOreRubracium);
         blockWithItem(BlockList.blockDeepslateOreRuby);
         blockWithItem(BlockList.blockDeepslateOreRuthenium);
-        blockWithItem(BlockList.blockDeepslateOreRubracium);
         blockWithItem(BlockList.blockDeepslateOreSapphire);
+        blockWithItem(BlockList.blockDeepslateOreSerpentine);
         blockWithItem(BlockList.blockDeepslateOreSilver);
+        blockWithItem(BlockList.blockDeepslateOreSphene);
         blockWithItem(BlockList.blockDeepslateOreSpinel);
         blockWithItem(BlockList.blockDeepslateOreSugilite);
+        blockWithItem(BlockList.blockDeepslateOreTaaffeite);
         blockWithItem(BlockList.blockDeepslateOreTantalum);
         blockWithItem(BlockList.blockDeepslateOreTanzanite);
         blockWithItem(BlockList.blockDeepslateOreTartarite);
@@ -210,39 +238,56 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockDeepslateOreVibranium);
         blockWithItem(BlockList.blockDeepslateOreYellorite);
         blockWithItem(BlockList.blockDeepslateOreZinc);
+        blockWithItem(BlockList.blockDeepslateOreZircon);
         blockWithItem(BlockList.blockDeepslateOreZirconium);
         //Ore End Stone
         blockWithItem(BlockList.blockEnderOreAgate);
+        blockWithItem(BlockList.blockEnderOreAlexandrite);
+        blockWithItem(BlockList.blockEnderOreAmber);
         blockWithItem(BlockList.blockEnderOreAmethyst);
         blockWithItem(BlockList.blockEnderOreAmetrine);
         blockWithItem(BlockList.blockEnderOreAquamarine);
+        blockWithItem(BlockList.blockEnderOreCarnelian);
         blockWithItem(BlockList.blockEnderOreChrysocolla);
         blockWithItem(BlockList.blockEnderOreCitrine);
         blockWithItem(BlockList.blockEnderOreGarnet);
+        blockWithItem(BlockList.blockEnderOreHeliodor);
         blockWithItem(BlockList.blockEnderOreIolite);
         blockWithItem(BlockList.blockEnderOreJade);
         blockWithItem(BlockList.blockEnderOreJasper);
         blockWithItem(BlockList.blockEnderOreKryptonite);
         blockWithItem(BlockList.blockEnderOreKyanite);
+        blockWithItem(BlockList.blockEnderOreLinarite);
         blockWithItem(BlockList.blockEnderOreMalachite);
+        blockWithItem(BlockList.blockEnderOreMoissanite);
         blockWithItem(BlockList.blockEnderOreOnyx);
         blockWithItem(BlockList.blockEnderOreOpal);
         blockWithItem(BlockList.blockEnderOrePeridot);
         blockWithItem(BlockList.blockEnderOrePhoenixite);
         blockWithItem(BlockList.blockEnderOreQuartz);
+        blockWithItem(BlockList.blockEnderOreRhodonite);
+        blockWithItem(BlockList.blockEnderOreRubelite);
         blockWithItem(BlockList.blockEnderOreRuby);
         blockWithItem(BlockList.blockEnderOreSapphire);
+        blockWithItem(BlockList.blockEnderOreSerpentine);
+        blockWithItem(BlockList.blockEnderOreSphene);
         blockWithItem(BlockList.blockEnderOreSpinel);
         blockWithItem(BlockList.blockEnderOreSugilite);
+        blockWithItem(BlockList.blockEnderOreTaaffeite);
         blockWithItem(BlockList.blockEnderOreTanzanite);
         blockWithItem(BlockList.blockEnderOreTopaz);
         blockWithItem(BlockList.blockEnderOreTourmaline);
         blockWithItem(BlockList.blockEnderOreTurquoise);
-        //Blocks
+        blockWithItem(BlockList.blockEnderOreZircon);
+    }
+    private void addBlocks()
+    {
         blockWithItem(BlockList.blockAdamantine);
         blockWithItem(BlockList.blockAgate);
         blockWithItem(BlockList.blockAldourite);
+        blockWithItem(BlockList.blockAlexandrite);
         blockWithItem(BlockList.blockAluminum);
+        blockWithItem(BlockList.blockAmber);
         blockWithItem(BlockList.blockAmericium);
         blockWithItem(BlockList.blockAmethyst);
         blockWithItem(BlockList.blockAmetrine);
@@ -256,6 +301,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockBlackSteel);
         blockWithItem(BlockList.blockCadmium);
         blockWithItem(BlockList.blockCarmot);
+        blockWithItem(BlockList.blockCarnelian);
         blockWithItem(BlockList.blockCelenegil);
         blockWithItem(BlockList.blockCeruclase);
         blockWithItem(BlockList.blockChromium);
@@ -270,6 +316,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockGallium);
         blockWithItem(BlockList.blockGarnet);
         blockWithItem(BlockList.blockHaderoth);
+        blockWithItem(BlockList.blockHeliodor);
         blockWithItem(BlockList.blockHepatizon);
         blockWithItem(BlockList.blockIgnatius);
         blockWithItem(BlockList.blockIndium);
@@ -284,11 +331,13 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockKyanite);
         blockWithItem(BlockList.blockLead);
         blockWithItem(BlockList.blockLemurite);
+        blockWithItem(BlockList.blockLinarite);
         blockWithItem(BlockList.blockMalachite);
         blockWithItem(BlockList.blockManganese);
         blockWithItem(BlockList.blockMeutoite);
         blockWithItem(BlockList.blockMidasium);
         blockWithItem(BlockList.blockMithril);
+        blockWithItem(BlockList.blockMoissanite);
         blockWithItem(BlockList.blockMolybdenum);
         blockWithItem(BlockList.blockNeodymium);
         blockWithItem(BlockList.blockNeptunium);
@@ -309,15 +358,20 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockQuartz);
         blockWithItem(BlockList.blockRhenium);
         blockWithItem(BlockList.blockRhodium);
+        blockWithItem(BlockList.blockRhodonite);
+        blockWithItem(BlockList.blockRubelite);
+        blockWithItem(BlockList.blockRubracium);
         blockWithItem(BlockList.blockRuby);
         blockWithItem(BlockList.blockRuthenium);
-        blockWithItem(BlockList.blockRubracium);
         blockWithItem(BlockList.blockSanguinite);
         blockWithItem(BlockList.blockSapphire);
+        blockWithItem(BlockList.blockSerpentine);
         blockWithItem(BlockList.blockShadowIron);
         blockWithItem(BlockList.blockSilver);
+        blockWithItem(BlockList.blockSphene);
         blockWithItem(BlockList.blockSpinel);
         blockWithItem(BlockList.blockSugilite);
+        blockWithItem(BlockList.blockTaaffeite);
         blockWithItem(BlockList.blockTantalum);
         blockWithItem(BlockList.blockTanzanite);
         blockWithItem(BlockList.blockTartarite);
@@ -338,6 +392,7 @@ public class ExOreBlockstateProvider extends BlockStateProvider
         blockWithItem(BlockList.blockVyroxeres);
         blockWithItem(BlockList.blockYellorite);
         blockWithItem(BlockList.blockZinc);
+        blockWithItem(BlockList.blockZircon);
         blockWithItem(BlockList.blockZirconium);
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject)

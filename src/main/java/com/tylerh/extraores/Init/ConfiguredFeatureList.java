@@ -8,7 +8,9 @@ public class ConfiguredFeatureList
     public static ResourceKey<ConfiguredFeature<?,?>> featureAdamantine;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAgate;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAldourite;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureAlexandrite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAluminum;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureAmber;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAmericium;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAmethyst;
     public static ResourceKey<ConfiguredFeature<?,?>> featureAmetrine;
@@ -22,6 +24,7 @@ public class ConfiguredFeatureList
     public static ResourceKey<ConfiguredFeature<?,?>> featureBlackSteel;
     public static ResourceKey<ConfiguredFeature<?,?>> featureCadmium;
     public static ResourceKey<ConfiguredFeature<?,?>> featureCarmot;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureCarnelian;
     public static ResourceKey<ConfiguredFeature<?,?>> featureCelenegil;
     public static ResourceKey<ConfiguredFeature<?,?>> featureCeruclase;
     public static ResourceKey<ConfiguredFeature<?,?>> featureChromium;
@@ -36,6 +39,7 @@ public class ConfiguredFeatureList
     public static ResourceKey<ConfiguredFeature<?,?>> featureGallium;
     public static ResourceKey<ConfiguredFeature<?,?>> featureGarnet;
     public static ResourceKey<ConfiguredFeature<?,?>> featureHaderoth;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureHeliodor;
     public static ResourceKey<ConfiguredFeature<?,?>> featureHepatizon;
     public static ResourceKey<ConfiguredFeature<?,?>> featureIgnatius;
     public static ResourceKey<ConfiguredFeature<?,?>> featureIndium;
@@ -50,11 +54,13 @@ public class ConfiguredFeatureList
     public static ResourceKey<ConfiguredFeature<?,?>> featureKyanite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureLead;
     public static ResourceKey<ConfiguredFeature<?,?>> featureLemurite;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureLinarite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureMalachite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureManganese;
     public static ResourceKey<ConfiguredFeature<?,?>> featureMeutoite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureMidasium;
     public static ResourceKey<ConfiguredFeature<?,?>> featureMithril;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureMoissanite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureMolybdenum;
     public static ResourceKey<ConfiguredFeature<?,?>> featureNeodymium;
     public static ResourceKey<ConfiguredFeature<?,?>> featureNeptunium;
@@ -75,15 +81,20 @@ public class ConfiguredFeatureList
     public static ResourceKey<ConfiguredFeature<?,?>> featureQuartz;
     public static ResourceKey<ConfiguredFeature<?,?>> featureRhenium;
     public static ResourceKey<ConfiguredFeature<?,?>> featureRhodium;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureRhodonite;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureRubelite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureRubracium;
     public static ResourceKey<ConfiguredFeature<?,?>> featureRuby;
     public static ResourceKey<ConfiguredFeature<?,?>> featureRuthenium;
     public static ResourceKey<ConfiguredFeature<?,?>> featureSanguinite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureSapphire;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureSerpentine;
     public static ResourceKey<ConfiguredFeature<?,?>> featureShadowIron;
     public static ResourceKey<ConfiguredFeature<?,?>> featureSilver;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureSphene;
     public static ResourceKey<ConfiguredFeature<?,?>> featureSpinel;
     public static ResourceKey<ConfiguredFeature<?,?>> featureSugilite;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureTaaffeite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureTantalum;
     public static ResourceKey<ConfiguredFeature<?,?>> featureTanzanite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureTartarite;
@@ -104,5 +115,6 @@ public class ConfiguredFeatureList
     public static ResourceKey<ConfiguredFeature<?,?>> featureVyroxeres;
     public static ResourceKey<ConfiguredFeature<?,?>> featureYellorite;
     public static ResourceKey<ConfiguredFeature<?,?>> featureZinc;
+    public static ResourceKey<ConfiguredFeature<?,?>> featureZircon;
     public static ResourceKey<ConfiguredFeature<?,?>> featureZirconium;
 }

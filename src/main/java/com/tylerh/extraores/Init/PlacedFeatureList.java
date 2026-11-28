@@ -8,7 +8,9 @@ public class PlacedFeatureList
     public static ResourceKey<PlacedFeature> featureAdamantinePlaced;
     public static ResourceKey<PlacedFeature> featureAgatePlaced;
     public static ResourceKey<PlacedFeature> featureAldouritePlaced;
+    public static ResourceKey<PlacedFeature> featureAlexandritePlaced;
     public static ResourceKey<PlacedFeature> featureAluminumPlaced;
+    public static ResourceKey<PlacedFeature> featureAmberPlaced;
     public static ResourceKey<PlacedFeature> featureAmericiumPlaced;
     public static ResourceKey<PlacedFeature> featureAmethystPlaced;
     public static ResourceKey<PlacedFeature> featureAmetrinePlaced;
@@ -22,6 +24,7 @@ public class PlacedFeatureList
     public static ResourceKey<PlacedFeature> featureBlackSteelPlaced;
     public static ResourceKey<PlacedFeature> featureCadmiumPlaced;
     public static ResourceKey<PlacedFeature> featureCarmotPlaced;
+    public static ResourceKey<PlacedFeature> featureCarnelianPlaced;
     public static ResourceKey<PlacedFeature> featureCelenegilPlaced;
     public static ResourceKey<PlacedFeature> featureCeruclasePlaced;
     public static ResourceKey<PlacedFeature> featureChromiumPlaced;
@@ -36,6 +39,7 @@ public class PlacedFeatureList
     public static ResourceKey<PlacedFeature> featureGalliumPlaced;
     public static ResourceKey<PlacedFeature> featureGarnetPlaced;
     public static ResourceKey<PlacedFeature> featureHaderothPlaced;
+    public static ResourceKey<PlacedFeature> featureHeliodorPlaced;
     public static ResourceKey<PlacedFeature> featureHepatizonPlaced;
     public static ResourceKey<PlacedFeature> featureIgnatiusPlaced;
     public static ResourceKey<PlacedFeature> featureIndiumPlaced;
@@ -50,11 +54,13 @@ public class PlacedFeatureList
     public static ResourceKey<PlacedFeature> featureKyanitePlaced;
     public static ResourceKey<PlacedFeature> featureLeadPlaced;
     public static ResourceKey<PlacedFeature> featureLemuritePlaced;
+    public static ResourceKey<PlacedFeature> featureLinaritePlaced;
     public static ResourceKey<PlacedFeature> featureMalachitePlaced;
     public static ResourceKey<PlacedFeature> featureManganesePlaced;
     public static ResourceKey<PlacedFeature> featureMeutoitePlaced;
     public static ResourceKey<PlacedFeature> featureMidasiumPlaced;
     public static ResourceKey<PlacedFeature> featureMithrilPlaced;
+    public static ResourceKey<PlacedFeature> featureMoissanitePlaced;
     public static ResourceKey<PlacedFeature> featureMolybdenumPlaced;
     public static ResourceKey<PlacedFeature> featureNeodymiumPlaced;
     public static ResourceKey<PlacedFeature> featureNeptuniumPlaced;
@@ -75,15 +81,20 @@ public class PlacedFeatureList
     public static ResourceKey<PlacedFeature> featureQuartzPlaced;
     public static ResourceKey<PlacedFeature> featureRheniumPlaced;
     public static ResourceKey<PlacedFeature> featureRhodiumPlaced;
+    public static ResourceKey<PlacedFeature> featureRhodonitePlaced;
+    public static ResourceKey<PlacedFeature> featureRubelitePlaced;
     public static ResourceKey<PlacedFeature> featureRubraciumPlaced;
     public static ResourceKey<PlacedFeature> featureRubyPlaced;
     public static ResourceKey<PlacedFeature> featureRutheniumPlaced;
     public static ResourceKey<PlacedFeature> featureSanguinitePlaced;
     public static ResourceKey<PlacedFeature> featureSapphirePlaced;
+    public static ResourceKey<PlacedFeature> featureSerpentinePlaced;
     public static ResourceKey<PlacedFeature> featureShadowIronPlaced;
     public static ResourceKey<PlacedFeature> featureSilverPlaced;
+    public static ResourceKey<PlacedFeature> featureSphenePlaced;
     public static ResourceKey<PlacedFeature> featureSpinelPlaced;
     public static ResourceKey<PlacedFeature> featureSugilitePlaced;
+    public static ResourceKey<PlacedFeature> featureTaaffeitePlaced;
     public static ResourceKey<PlacedFeature> featureTantalumPlaced;
     public static ResourceKey<PlacedFeature> featureTanzanitePlaced;
     public static ResourceKey<PlacedFeature> featureTartaritePlaced;
@@ -104,5 +115,6 @@ public class PlacedFeatureList
     public static ResourceKey<PlacedFeature> featureVyroxeresPlaced;
     public static ResourceKey<PlacedFeature> featureYelloritePlaced;
     public static ResourceKey<PlacedFeature> featureZincPlaced;
+    public static ResourceKey<PlacedFeature> featureZirconPlaced;
     public static ResourceKey<PlacedFeature> featureZirconiumPlaced;
 }

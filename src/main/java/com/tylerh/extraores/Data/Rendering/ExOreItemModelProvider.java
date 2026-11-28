@@ -471,31 +471,43 @@ public class ExOreItemModelProvider extends ItemModelProvider
         simpleItem(ItemList.itemRawZirconium);
         //Gems
         simpleItem(ItemList.itemGemAgate);
+        simpleItem(ItemList.itemGemAlexandrite);
+        simpleItem(ItemList.itemGemAmber);
         simpleItem(ItemList.itemGemAmethyst);
         simpleItem(ItemList.itemGemAmetrine);
         simpleItem(ItemList.itemGemAquamarine);
+        simpleItem(ItemList.itemGemCarnelian);
         simpleItem(ItemList.itemGemChrysocolla);
         simpleItem(ItemList.itemGemCitrine);
         simpleItem(ItemList.itemGemGarnet);
+        simpleItem(ItemList.itemGemHeliodor);
         simpleItem(ItemList.itemGemIolite);
         simpleItem(ItemList.itemGemJade);
         simpleItem(ItemList.itemGemJasper);
         simpleItem(ItemList.itemGemKryptonite);
         simpleItem(ItemList.itemGemKyanite);
+        simpleItem(ItemList.itemGemLinarite);
         simpleItem(ItemList.itemGemMalachite);
+        simpleItem(ItemList.itemGemMoissanite);
         simpleItem(ItemList.itemGemOnyx);
         simpleItem(ItemList.itemGemOpal);
         simpleItem(ItemList.itemGemPeridot);
         simpleItem(ItemList.itemGemPhoenixite);
         simpleItem(ItemList.itemGemQuartz);
+        simpleItem(ItemList.itemGemRhodonite);
+        simpleItem(ItemList.itemGemRubelite);
         simpleItem(ItemList.itemGemRuby);
         simpleItem(ItemList.itemGemSapphire);
+        simpleItem(ItemList.itemGemSerpentine);
+        simpleItem(ItemList.itemGemSphene);
         simpleItem(ItemList.itemGemSpinel);
         simpleItem(ItemList.itemGemSugilite);
+        simpleItem(ItemList.itemGemTaaffeite);
         simpleItem(ItemList.itemGemTanzanite);
         simpleItem(ItemList.itemGemTopaz);
         simpleItem(ItemList.itemGemTourmaline);
         simpleItem(ItemList.itemGemTurquoise);
+        simpleItem(ItemList.itemGemZircon);
     }
     private void simpleItem(RegistryObject<Item> itemRegistryObject)
     {

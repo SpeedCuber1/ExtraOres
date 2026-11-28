@@ -1,0 +1,39 @@
+{
+  "parent": "extraores:garnet",
+  "criteria": {
+    "heliodor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extraores:heliodor"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.heliodor.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "extraores:heliodorore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extraores.heliodor"
+    }
+  },
+  "requirements": [
+    [
+      "heliodor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

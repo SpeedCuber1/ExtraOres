@@ -8,7 +8,9 @@ public class BiomeModifierList
     public static ResourceKey<BiomeModifier> modifierAdamantine;
     public static ResourceKey<BiomeModifier> modifierAgate;
     public static ResourceKey<BiomeModifier> modifierAldourite;
+    public static ResourceKey<BiomeModifier> modifierAlexandrite;
     public static ResourceKey<BiomeModifier> modifierAluminum;
+    public static ResourceKey<BiomeModifier> modifierAmber;
     public static ResourceKey<BiomeModifier> modifierAmericium;
     public static ResourceKey<BiomeModifier> modifierAmethyst;
     public static ResourceKey<BiomeModifier> modifierAmetrine;
@@ -22,6 +24,7 @@ public class BiomeModifierList
     public static ResourceKey<BiomeModifier> modifierBlackSteel;
     public static ResourceKey<BiomeModifier> modifierCadmium;
     public static ResourceKey<BiomeModifier> modifierCarmot;
+    public static ResourceKey<BiomeModifier> modifierCarnelian;
     public static ResourceKey<BiomeModifier> modifierCelenegil;
     public static ResourceKey<BiomeModifier> modifierCeruclase;
     public static ResourceKey<BiomeModifier> modifierChromium;
@@ -36,6 +39,7 @@ public class BiomeModifierList
     public static ResourceKey<BiomeModifier> modifierGallium;
     public static ResourceKey<BiomeModifier> modifierGarnet;
     public static ResourceKey<BiomeModifier> modifierHaderoth;
+    public static ResourceKey<BiomeModifier> modifierHeliodor;
     public static ResourceKey<BiomeModifier> modifierHepatizon;
     public static ResourceKey<BiomeModifier> modifierIgnatius;
     public static ResourceKey<BiomeModifier> modifierIndium;
@@ -50,11 +54,13 @@ public class BiomeModifierList
     public static ResourceKey<BiomeModifier> modifierKyanite;
     public static ResourceKey<BiomeModifier> modifierLead;
     public static ResourceKey<BiomeModifier> modifierLemurite;
+    public static ResourceKey<BiomeModifier> modifierLinarite;
     public static ResourceKey<BiomeModifier> modifierMalachite;
     public static ResourceKey<BiomeModifier> modifierManganese;
     public static ResourceKey<BiomeModifier> modifierMeutoite;
     public static ResourceKey<BiomeModifier> modifierMidasium;
     public static ResourceKey<BiomeModifier> modifierMithril;
+    public static ResourceKey<BiomeModifier> modifierMoissanite;
     public static ResourceKey<BiomeModifier> modifierMolybdenum;
     public static ResourceKey<BiomeModifier> modifierNeodymium;
     public static ResourceKey<BiomeModifier> modifierNeptunium;
@@ -75,15 +81,20 @@ public class BiomeModifierList
     public static ResourceKey<BiomeModifier> modifierQuartz;
     public static ResourceKey<BiomeModifier> modifierRhenium;
     public static ResourceKey<BiomeModifier> modifierRhodium;
+    public static ResourceKey<BiomeModifier> modifierRhodonite;
+    public static ResourceKey<BiomeModifier> modifierRubelite;
     public static ResourceKey<BiomeModifier> modifierRubracium;
     public static ResourceKey<BiomeModifier> modifierRuby;
     public static ResourceKey<BiomeModifier> modifierRuthenium;
     public static ResourceKey<BiomeModifier> modifierSanguinite;
     public static ResourceKey<BiomeModifier> modifierSapphire;
+    public static ResourceKey<BiomeModifier> modifierSerpentine;
     public static ResourceKey<BiomeModifier> modifierShadowIron;
     public static ResourceKey<BiomeModifier> modifierSilver;
+    public static ResourceKey<BiomeModifier> modifierSphene;
     public static ResourceKey<BiomeModifier> modifierSpinel;
     public static ResourceKey<BiomeModifier> modifierSugilite;
+    public static ResourceKey<BiomeModifier> modifierTaaffeite;
     public static ResourceKey<BiomeModifier> modifierTantalum;
     public static ResourceKey<BiomeModifier> modifierTanzanite;
     public static ResourceKey<BiomeModifier> modifierTartarite;
@@ -104,5 +115,6 @@ public class BiomeModifierList
     public static ResourceKey<BiomeModifier> modifierVyroxeres;
     public static ResourceKey<BiomeModifier> modifierYellorite;
     public static ResourceKey<BiomeModifier> modifierZinc;
+    public static ResourceKey<BiomeModifier> modifierZircon;
     public static ResourceKey<BiomeModifier> modifierZirconium;
 }
