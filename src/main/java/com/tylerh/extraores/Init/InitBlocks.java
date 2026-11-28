@@ -18,7 +18,6 @@ public class InitBlocks
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModInfo.MOD_ID);
     public static void registerBlocks()
     {
-        //TODO Fix InitBlocks to use Config
         if(ExOresConfig.Adamantine)
         {
             BlockList.blockOreAdamantine = registerBlock("adamantineore", properties ->  new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
@@ -135,736 +134,1279 @@ public class InitBlocks
             BlockList.blockOreCeruclase = registerBlock("ceruclaseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockCeruclase = registerBlock("ceruclaseblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
         }
+        if(ExOresConfig.Chromium)
+        {
             BlockList.blockOreChromium = registerBlock("chromiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockChromium = registerBlock("chromiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreChromium = registerBlock("deepslatechromiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Chrysocolla)
+        {
             BlockList.blockOreChrysocolla = registerBlock("chrysocollaore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockChrysocolla = registerBlock("chrysocollablock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreChrysocolla = registerBlock("deepslatechrysocollaore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreChrysocolla = registerBlock("enderchrysocollaore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Citrine)
+        {
             BlockList.blockOreCitrine = registerBlock("citrineore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockCitrine = registerBlock("citrineblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreCitrine = registerBlock("deepslatecitrineore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreCitrine = registerBlock("endercitrineore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Cobalt)
+        {
             BlockList.blockOreCobalt = registerBlock("cobaltore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockCobalt = registerBlock("cobaltblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreCobalt = registerBlock("deepslatecobaltore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Copper)
+        {
             BlockList.blockOreCopper = registerBlock("copperore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockCopper = registerBlock("copperblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreCopper = registerBlock("deepslatecopperore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.CrimsonSteel)
+        {
             BlockList.blockOreCrimsonSteel = registerBlock("crimsonsteelore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockCrimsonSteel = registerBlock("crimsonsteelblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreCrimsonSteel = registerBlock("deepslatecrimsonsteelore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.DeepIron)
+        {
             BlockList.blockOreDeepIron = registerBlock("deepironore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepIron = registerBlock("deepironblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreDeepIron = registerBlock("deepslatedeepironore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Desichalkos)
+        {
             BlockList.blockOreDesichalkos = registerBlock("desichalkosore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDesichalkos = registerBlock("desichalkosblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreDesichalkos = registerBlock("deepslatedesichalkosore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Eximite)
+        {
             BlockList.blockOreEximite = registerBlock("eximiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockEximite = registerBlock("eximiteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreEximite = registerBlock("deepslateeximiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Gallium)
+        {
             BlockList.blockOreGallium = registerBlock("galliumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockGallium = registerBlock("galliumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreGallium = registerBlock("deepslategalliumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Garnet)
+        {
             BlockList.blockOreGarnet = registerBlock("garnetore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockGarnet = registerBlock("garnetblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreGarnet = registerBlock("deepslategarnetore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreGarnet = registerBlock("endergarnetore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Haderoth)
+        {
             BlockList.blockOreHaderoth = registerBlock("haderothore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockHaderoth = registerBlock("haderothblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreHaderoth = registerBlock("deepslatehaderothore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Hepatizon)
+        {
             BlockList.blockOreHepatizon = registerBlock("hepatizonore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockHepatizon = registerBlock("hepatizonblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreHepatizon = registerBlock("deepslatehepatizonore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Ignatius)
+        {
             BlockList.blockOreIgnatius = registerBlock("ignatiusore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockIgnatius = registerBlock("ignatiusblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Indium)
+        {
             BlockList.blockOreIndium = registerBlock("indiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockIndium = registerBlock("indiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreIndium = registerBlock("deepslateindiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Infuscolium)
+        {
             BlockList.blockOreInfuscolium = registerBlock("infuscoliumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockInfuscolium = registerBlock("infuscoliumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreInfuscolium = registerBlock("deepslateinfuscoliumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Inolashite)
+        {
             BlockList.blockOreInolashite = registerBlock("inolashiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockInolashite = registerBlock("inolashiteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreInolashite = registerBlock("deepslateinolashiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Iolite)
+        {
             BlockList.blockOreIolite = registerBlock("ioliteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockIolite = registerBlock("ioliteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreIolite = registerBlock("deepslateioliteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreIolite = registerBlock("enderioliteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Iridium)
+        {
             BlockList.blockOreIridium = registerBlock("iridiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockIridium = registerBlock("iridiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreIridium = registerBlock("deepslateiridiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Jade)
+        {
             BlockList.blockOreJade = registerBlock("jadeore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockJade = registerBlock("jadeblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreJade = registerBlock("deepslatejadeore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreJade = registerBlock("enderjadeore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Jasper)
+        {
             BlockList.blockOreJasper = registerBlock("jasperore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockJasper = registerBlock("jasperblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreJasper = registerBlock("deepslatejasperore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreJasper = registerBlock("enderjasperore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Kalendrite)
+        {
             BlockList.blockOreKalendrite = registerBlock("kalendriteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockKalendrite = registerBlock("kalendriteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Kryptonite)
+        {
             BlockList.blockOreKryptonite = registerBlock("kryptoniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockKryptonite = registerBlock("kryptoniteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreKryptonite = registerBlock("deepslatekryptoniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreKryptonite = registerBlock("enderkryptoniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Kyanite)
+        {
             BlockList.blockOreKyanite = registerBlock("kyaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockKyanite = registerBlock("kyaniteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreKyanite = registerBlock("deepslatekyaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreKyanite = registerBlock("enderkyaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Lead)
+        {
             BlockList.blockOreLead = registerBlock("leadore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockLead = registerBlock("leadblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreLead = registerBlock("deepslateleadore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Lemurite)
+        {
             BlockList.blockOreLemurite = registerBlock("lemuriteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockLemurite = registerBlock("lemuriteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Malachite)
+        {
             BlockList.blockOreMalachite = registerBlock("malachiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockMalachite = registerBlock("malachiteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreMalachite = registerBlock("deepslatemalachiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreMalachite = registerBlock("endermalachiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Manganese)
+        {
             BlockList.blockOreManganese = registerBlock("manganeseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockManganese = registerBlock("manganeseblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreManganese = registerBlock("deepslatemanganeseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Meutoite)
+        {
             BlockList.blockOreMeutoite = registerBlock("meutoiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockMeutoite = registerBlock("meutoiteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreMeutoite = registerBlock("deepslatemeutoiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Midasium)
+        {
             BlockList.blockOreMidasium = registerBlock("midasiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockMidasium = registerBlock("midasiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Mithril)
+        {
             BlockList.blockOreMithril = registerBlock("mithrilore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockMithril = registerBlock("mithrilblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreMithril = registerBlock("deepslatemithrilore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Molybdenum)
+        {
             BlockList.blockOreMolybdenum = registerBlock("molybdenumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockMolybdenum = registerBlock("molybdenumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreMolybdenum = registerBlock("deepslatemolybdenumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Neodymium)
+        {
             BlockList.blockOreNeodymium = registerBlock("neodymiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockNeodymium = registerBlock("neodymiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreNeodymium = registerBlock("deepslateneodymiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Neptunium)
+        {
             BlockList.blockOreNeptunium = registerBlock("neptuniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockNeptunium = registerBlock("neptuniumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreNeptunium = registerBlock("deepslateneptuniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Nickel)
+        {
             BlockList.blockOreNickel = registerBlock("nickelore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockNickel = registerBlock("nickelblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreNickel = registerBlock("deepslatenickelore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Niobium)
+        {
             BlockList.blockOreNiobium = registerBlock("niobiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockNiobium = registerBlock("niobiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreNiobium = registerBlock("deepslateniobiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Onyx)
+        {
             BlockList.blockOreOnyx = registerBlock("onyxore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockOnyx = registerBlock("onyxblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreOnyx = registerBlock("deepslateonyxore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreOnyx = registerBlock("enderonyxore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Opal)
+        {
             BlockList.blockOreOpal = registerBlock("opalore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockOpal = registerBlock("opalblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreOpal = registerBlock("deepslateopalore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreOpal = registerBlock("enderopalore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Orichalcum)
+        {
             BlockList.blockOreOrichalcum = registerBlock("orichalcumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockOrichalcum = registerBlock("orichalcumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreOrichalcum = registerBlock("deepslateorichalcumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Osmium)
+        {
             BlockList.blockOreOsmium = registerBlock("osmiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockOsmium = registerBlock("osmiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreOsmium = registerBlock("deepslateosmiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Oureclase)
+        {
             BlockList.blockOreOureclase = registerBlock("oureclaseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockOureclase = registerBlock("oureclaseblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreOureclase = registerBlock("deepslateoureclaseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Palladium)
+        {
             BlockList.blockOrePalladium = registerBlock("palladiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockPalladium = registerBlock("palladiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOrePalladium = registerBlock("deepslatepalladiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Peridot)
+        {
             BlockList.blockOrePeridot = registerBlock("peridotore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockPeridot = registerBlock("peridotblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOrePeridot = registerBlock("deepslateperidotore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOrePeridot = registerBlock("enderperidotore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Phoenixite)
+        {
             BlockList.blockOrePhoenixite = registerBlock("phoenixiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockPhoenixite = registerBlock("phoenixiteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOrePhoenixite = registerBlock("deepslatephoenixiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOrePhoenixite = registerBlock("enderphoenixiteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Platinum)
+        {
             BlockList.blockOrePlatinum = registerBlock("platinumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockPlatinum = registerBlock("platinumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOrePlatinum = registerBlock("deepslateplatinumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Plutonium)
+        {
             BlockList.blockOrePlutonium = registerBlock("plutoniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockPlutonium = registerBlock("plutoniumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOrePlutonium = registerBlock("deepslateplutoniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Polonium)
+        {
             BlockList.blockOrePolonium = registerBlock("poloniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockPolonium = registerBlock("poloniumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOrePolonium = registerBlock("deepslatepoloniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Promethium)
+        {
             BlockList.blockOrePromethium = registerBlock("promethiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockPromethium = registerBlock("promethiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOrePromethium = registerBlock("deepslatepromethiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Quartz)
+        {
             BlockList.blockOreQuartz = registerBlock("quartzore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockQuartz = registerBlock("quartzblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreQuartz = registerBlock("deepslatequartzore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreQuartz = registerBlock("enderquartzore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Rhenium)
+        {
             BlockList.blockOreRhenium = registerBlock("rheniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockRhenium = registerBlock("rheniumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreRhenium = registerBlock("deepslaterheniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Rhodium)
+        {
             BlockList.blockOreRhodium = registerBlock("rhodiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockRhodium = registerBlock("rhodiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreRhodium = registerBlock("deepslaterhodiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Rubracium)
+        {
             BlockList.blockOreRubracium = registerBlock("rubraciumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockRubracium = registerBlock("rubraciumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreRubracium = registerBlock("deepslaterubraciumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Ruby)
+        {
             BlockList.blockOreRuby = registerBlock("rubyore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockRuby = registerBlock("rubyblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreRuby = registerBlock("deepslaterubyore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreRuby = registerBlock("enderrubyore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Ruthenium)
+        {
             BlockList.blockOreRuthenium = registerBlock("rutheniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockRuthenium = registerBlock("rutheniumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreRuthenium = registerBlock("deepslaterutheniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Sanguinite)
+        {
             BlockList.blockOreSanguinite = registerBlock("sanguiniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockSanguinite = registerBlock("sanguiniteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Sapphire)
+        {
             BlockList.blockOreSapphire = registerBlock("sapphireore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockSapphire = registerBlock("sapphireblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreSapphire = registerBlock("deepslatesapphireore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreSapphire = registerBlock("endersapphireore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.ShadowIron)
+        {
             BlockList.blockOreShadowIron = registerBlock("shadowironore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockShadowIron = registerBlock("shadowironblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Silver)
+        {
             BlockList.blockOreSilver = registerBlock("silverore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockSilver = registerBlock("silverblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreSilver = registerBlock("deepslatesilverore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Spinel)
+        {
             BlockList.blockOreSpinel = registerBlock("spinelore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockSpinel = registerBlock("spinelblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreSpinel = registerBlock("deepslatespinelore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreSpinel = registerBlock("enderspinelore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Sugilite)
+        {
             BlockList.blockOreSugilite = registerBlock("sugiliteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockSugilite = registerBlock("sugiliteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreSugilite = registerBlock("deepslatesugiliteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreSugilite = registerBlock("endersugiliteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Tantalum)
+        {
             BlockList.blockOreTantalum = registerBlock("tantalumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTantalum = registerBlock("tantalumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTantalum = registerBlock("deepslatetantalumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Tanzanite)
+        {
             BlockList.blockOreTanzanite = registerBlock("tanzaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTanzanite = registerBlock("tanzaniteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTanzanite = registerBlock("deepslatetanzaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreTanzanite = registerBlock("endertanzaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Tartarite)
+        {
             BlockList.blockOreTartarite = registerBlock("tartariteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTartarite = registerBlock("tartariteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTartarite = registerBlock("deepslatetartariteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Technetium)
+        {
             BlockList.blockOreTechnetium = registerBlock("technetiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTechnetium = registerBlock("technetiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTechnetium = registerBlock("deepslatetechnetiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Thallium)
+        {
             BlockList.blockOreThallium = registerBlock("thalliumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockThallium = registerBlock("thalliumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreThallium = registerBlock("deepslatethalliumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Tin)
+        {
             BlockList.blockOreTin = registerBlock("tinore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTin = registerBlock("tinblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTin = registerBlock("deepslatetinore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Titanium)
+        {
             BlockList.blockOreTitanium = registerBlock("titaniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTitanium = registerBlock("titaniumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTitanium = registerBlock("deepslatetitaniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Topaz)
+        {
             BlockList.blockOreTopaz = registerBlock("topazore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTopaz = registerBlock("topazblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTopaz = registerBlock("deepslatetopazore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreTopaz = registerBlock("endertopazore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Tourmaline)
+        {
             BlockList.blockOreTourmaline = registerBlock("tourmalineore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTourmaline = registerBlock("tourmalineblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTourmaline = registerBlock("deepslatetourmalineore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreTourmaline = registerBlock("endertourmalineore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Tritium)
+        {
             BlockList.blockOreTritium = registerBlock("tritiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTritium = registerBlock("tritiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTritium = registerBlock("deepslatetritiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Tungsten)
+        {
             BlockList.blockOreTungsten = registerBlock("tungstenore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTungsten = registerBlock("tungstenblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTungsten = registerBlock("deepslatetungstenore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Turquoise)
+        {
             BlockList.blockOreTurquoise = registerBlock("turquoiseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockTurquoise = registerBlock("turquoiseblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreTurquoise = registerBlock("deepslateturquoiseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
             BlockList.blockEnderOreTurquoise = registerBlock("enderturquoiseore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Unobtainium)
+        {
             BlockList.blockOreUnobtainium = registerBlock("unobtainiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockUnobtainium = registerBlock("unobtainiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreUnobtainium = registerBlock("deepslateunobtainiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Uranium)
+        {
             BlockList.blockOreUranium = registerBlock("uraniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockUranium = registerBlock("uraniumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreUranium = registerBlock("deepslateuraniumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Vanadium)
+        {
             BlockList.blockOreVanadium = registerBlock("vanadiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockVanadium = registerBlock("vanadiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreVanadium = registerBlock("deepslatevanadiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Vibranium)
+        {
             BlockList.blockOreVibranium = registerBlock("vibraniumore",properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockVibranium = registerBlock("vibraniumblock",properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreVibranium = registerBlock("deepslatevibraniumore",properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Vulcanite)
+        {
             BlockList.blockOreVulcanite = registerBlock("vulcaniteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockVulcanite = registerBlock("vulcaniteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Vyroxeres)
+        {
             BlockList.blockOreVyroxeres = registerBlock("vyroxeresore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockVyroxeres = registerBlock("vyroxeresblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
+        }
+        if(ExOresConfig.Yellorite)
+        {
             BlockList.blockOreYellorite = registerBlock("yelloriteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockYellorite = registerBlock("yelloriteblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreYellorite = registerBlock("deepslateyelloriteore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Zinc)
+        {
             BlockList.blockOreZinc = registerBlock("zincore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockZinc = registerBlock("zincblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreZinc = registerBlock("deepslatezincore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
+        if(ExOresConfig.Zirconium)
+        {
             BlockList.blockOreZirconium = registerBlock("zirconiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockZirconium = registerBlock("zirconiumblock", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F)));
             BlockList.blockDeepslateOreZirconium = registerBlock("deepslatezirconiumore", properties -> new BlockEXOre(properties.strength(1.5F).explosionResistance(1.5F).sound(SoundType.DEEPSLATE)));
+        }
     }
     public static void registerItems()
     {
-        ItemList.itemIngotAdamantine = ITEMS.registerItem("adamantineingot", ItemEXOre::new);
+        if(ExOresConfig.Adamantine)
+        {
+            ItemList.itemIngotAdamantine = ITEMS.registerItem("adamantineingot", ItemEXOre::new);
             ItemList.itemDustAdamantine = ITEMS.registerItem("adamantinedust", ItemEXOre::new);
             ItemList.itemShardAdamantine = ITEMS.registerItem("adamantineshard", ItemEXOre::new);
             ItemList.itemClumpAdamantine = ITEMS.registerItem("adamantineclump", ItemEXOre::new);
             ItemList.itemDirtyDustAdamantine = ITEMS.registerItem("adamantinedirtydust", ItemEXOre::new);
             ItemList.itemRawAdamantine = ITEMS.registerItem("rawadamantine", ItemEXOre::new);
+        }
+        if(ExOresConfig.Agate)
+        {
             ItemList.itemGemAgate = ITEMS.registerItem("agate", ItemEXOre::new);
+        }
+        if(ExOresConfig.Aldourite)
+        {
             ItemList.itemIngotAldourite = ITEMS.registerItem("aldouriteingot", ItemEXOre::new);
             ItemList.itemDustAldourite = ITEMS.registerItem("aldouritedust", ItemEXOre::new);
             ItemList.itemShardAldourite = ITEMS.registerItem("aldouriteshard", ItemEXOre::new);
             ItemList.itemClumpAldourite = ITEMS.registerItem("aldouriteclump", ItemEXOre::new);
             ItemList.itemDirtyDustAldourite = ITEMS.registerItem("aldouritedirtydust", ItemEXOre::new);
             ItemList.itemRawAldourite = ITEMS.registerItem("rawaldourite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Aluminum)
+        {
             ItemList.itemIngotAluminum = ITEMS.registerItem("aluminumingot", ItemEXOre::new);
             ItemList.itemDustAluminum = ITEMS.registerItem("aluminumdust", ItemEXOre::new);
             ItemList.itemShardAluminum = ITEMS.registerItem("aluminumshard", ItemEXOre::new);
             ItemList.itemClumpAluminum = ITEMS.registerItem("aluminumclump", ItemEXOre::new);
             ItemList.itemDirtyDustAluminum = ITEMS.registerItem("aluminumdirtydust", ItemEXOre::new);
             ItemList.itemRawAluminum = ITEMS.registerItem("rawaluminum", ItemEXOre::new);
+        }
+        if(ExOresConfig.Americium)
+        {
             ItemList.itemIngotAmericium = ITEMS.registerItem("americiumingot", ItemEXOre::new);
             ItemList.itemDustAmericium = ITEMS.registerItem("americiumdust", ItemEXOre::new);
             ItemList.itemShardAmericium = ITEMS.registerItem("americiumshard", ItemEXOre::new);
             ItemList.itemClumpAmericium = ITEMS.registerItem("americiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustAmericium = ITEMS.registerItem("americiumdirtydust", ItemEXOre::new);
             ItemList.itemRawAmericium = ITEMS.registerItem("rawamericium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Amethyst)
+        {
             ItemList.itemGemAmethyst = ITEMS.registerItem("amethyst", ItemEXOre::new);
+        }
+        if(ExOresConfig.Ametrine)
+        {
             ItemList.itemGemAmetrine = ITEMS.registerItem("ametrine", ItemEXOre::new);
+        }
+        if(ExOresConfig.Amordrine)
+        {
             ItemList.itemIngotAmordrine = ITEMS.registerItem("amordrineingot", ItemEXOre::new);
             ItemList.itemDustAmordrine = ITEMS.registerItem("amordrinedust", ItemEXOre::new);
             ItemList.itemShardAmordrine = ITEMS.registerItem("amordrineshard", ItemEXOre::new);
             ItemList.itemClumpAmordrine = ITEMS.registerItem("amordrineclump", ItemEXOre::new);
             ItemList.itemDirtyDustAmordrine = ITEMS.registerItem("amordrinedirtydust", ItemEXOre::new);
             ItemList.itemRawAmordrine = ITEMS.registerItem("rawamordrine", ItemEXOre::new);
+        }
+        if(ExOresConfig.Angmallen)
+        {
             ItemList.itemIngotAngmallen = ITEMS.registerItem("angmalleningot", ItemEXOre::new);
             ItemList.itemDustAngmallen = ITEMS.registerItem("angmallendust", ItemEXOre::new);
             ItemList.itemShardAngmallen = ITEMS.registerItem("angmallenshard", ItemEXOre::new);
             ItemList.itemClumpAngmallen = ITEMS.registerItem("angmallenclump", ItemEXOre::new);
             ItemList.itemDirtyDustAngmallen = ITEMS.registerItem("angmallendirtydust", ItemEXOre::new);
             ItemList.itemRawAngmallen = ITEMS.registerItem("rawangmallen", ItemEXOre::new);
+        }
+        if(ExOresConfig.Aquamarine)
+        {
             ItemList.itemGemAquamarine = ITEMS.registerItem("aquamarine", ItemEXOre::new);
+        }
+        if(ExOresConfig.AstralSilver)
+        {
             ItemList.itemIngotAstralSilver = ITEMS.registerItem("astralsilveringot", ItemEXOre::new);
             ItemList.itemDustAstralSilver = ITEMS.registerItem("astralsilverdust", ItemEXOre::new);
             ItemList.itemShardAstralSilver = ITEMS.registerItem("astralsilvershard", ItemEXOre::new);
             ItemList.itemClumpAstralSilver = ITEMS.registerItem("astralsilverclump", ItemEXOre::new);
             ItemList.itemDirtyDustAstralSilver = ITEMS.registerItem("astralsilverdirtydust", ItemEXOre::new);
             ItemList.itemRawAstralSilver = ITEMS.registerItem("rawastralsilver", ItemEXOre::new);
+        }
+        if(ExOresConfig.Atlarus)
+        {
             ItemList.itemIngotAtlarus = ITEMS.registerItem("atlarusingot", ItemEXOre::new);
             ItemList.itemDustAtlarus = ITEMS.registerItem("atlarusdust", ItemEXOre::new);
             ItemList.itemShardAtlarus = ITEMS.registerItem("atlarusshard", ItemEXOre::new);
             ItemList.itemClumpAtlarus = ITEMS.registerItem("atlarusclump", ItemEXOre::new);
             ItemList.itemDirtyDustAtlarus = ITEMS.registerItem("atlarusdirtydust", ItemEXOre::new);
             ItemList.itemRawAtlarus = ITEMS.registerItem("rawatlarus", ItemEXOre::new);
+        }
+        if(ExOresConfig.AzureSilver)
+        {
             ItemList.itemIngotAzureSilver = ITEMS.registerItem("azuresilveringot", ItemEXOre::new);
             ItemList.itemDustAzureSilver = ITEMS.registerItem("azuresilverdust", ItemEXOre::new);
             ItemList.itemShardAzureSilver = ITEMS.registerItem("azuresilvershard", ItemEXOre::new);
             ItemList.itemClumpAzureSilver = ITEMS.registerItem("azuresilverclump", ItemEXOre::new);
             ItemList.itemDirtyDustAzureSilver = ITEMS.registerItem("azuresilverdirtydust", ItemEXOre::new);
             ItemList.itemRawAzureSilver = ITEMS.registerItem("rawazuresilver", ItemEXOre::new);
+        }
+        if(ExOresConfig.Bismuth)
+        {
             ItemList.itemIngotBismuth = ITEMS.registerItem("bismuthingot", ItemEXOre::new);
             ItemList.itemDustBismuth = ITEMS.registerItem("bismuthdust", ItemEXOre::new);
             ItemList.itemShardBismuth = ITEMS.registerItem("bismuthshard", ItemEXOre::new);
             ItemList.itemClumpBismuth = ITEMS.registerItem("bismuthclump", ItemEXOre::new);
             ItemList.itemDirtyDustBismuth = ITEMS.registerItem("bismuthdirtydust", ItemEXOre::new);
             ItemList.itemRawBismuth = ITEMS.registerItem("rawbismuth", ItemEXOre::new);
+        }
+        if(ExOresConfig.BlackSteel)
+        {
             ItemList.itemIngotBlackSteel = ITEMS.registerItem("blacksteelingot", ItemEXOre::new);
             ItemList.itemDustBlackSteel = ITEMS.registerItem("blacksteeldust", ItemEXOre::new);
             ItemList.itemShardBlackSteel = ITEMS.registerItem("blacksteelshard", ItemEXOre::new);
             ItemList.itemClumpBlackSteel = ITEMS.registerItem("blacksteelclump", ItemEXOre::new);
             ItemList.itemDirtyDustBlackSteel = ITEMS.registerItem("blacksteeldirtydust", ItemEXOre::new);
             ItemList.itemRawBlackSteel = ITEMS.registerItem("rawblacksteel", ItemEXOre::new);
+        }
+        if(ExOresConfig.Cadmium)
+        {
             ItemList.itemIngotCadmium = ITEMS.registerItem("cadmiumingot", ItemEXOre::new);
             ItemList.itemDustCadmium = ITEMS.registerItem("cadmiumdust", ItemEXOre::new);
             ItemList.itemShardCadmium = ITEMS.registerItem("cadmiumshard", ItemEXOre::new);
             ItemList.itemClumpCadmium = ITEMS.registerItem("cadmiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustCadmium = ITEMS.registerItem("cadmiumdirtydust", ItemEXOre::new);
             ItemList.itemRawCadmium = ITEMS.registerItem("rawcadmium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Carmot)
+        {
             ItemList.itemIngotCarmot = ITEMS.registerItem("carmotingot", ItemEXOre::new);
             ItemList.itemDustCarmot = ITEMS.registerItem("carmotdust", ItemEXOre::new);
             ItemList.itemShardCarmot = ITEMS.registerItem("carmotshard", ItemEXOre::new);
             ItemList.itemClumpCarmot = ITEMS.registerItem("carmotclump", ItemEXOre::new);
             ItemList.itemDirtyDustCarmot = ITEMS.registerItem("carmotdirtydust", ItemEXOre::new);
             ItemList.itemRawCarmot = ITEMS.registerItem("rawcarmot", ItemEXOre::new);
+        }
+        if(ExOresConfig.Celenegil)
+        {
             ItemList.itemIngotCelenegil = ITEMS.registerItem("celenegilingot", ItemEXOre::new);
             ItemList.itemDustCelenegil = ITEMS.registerItem("celenegildust", ItemEXOre::new);
             ItemList.itemShardCelenegil = ITEMS.registerItem("celenegilshard", ItemEXOre::new);
             ItemList.itemClumpCelenegil = ITEMS.registerItem("celenegilclump", ItemEXOre::new);
             ItemList.itemDirtyDustCelenegil = ITEMS.registerItem("celenegildirtydust", ItemEXOre::new);
             ItemList.itemRawCelenegil = ITEMS.registerItem("rawcelenegil", ItemEXOre::new);
+        }
+        if(ExOresConfig.Ceruclase)
+        {
             ItemList.itemIngotCeruclase = ITEMS.registerItem("ceruclaseingot", ItemEXOre::new);
             ItemList.itemDustCeruclase = ITEMS.registerItem("ceruclasedust", ItemEXOre::new);
             ItemList.itemShardCeruclase = ITEMS.registerItem("ceruclaseshard", ItemEXOre::new);
             ItemList.itemClumpCeruclase = ITEMS.registerItem("ceruclaseclump", ItemEXOre::new);
             ItemList.itemDirtyDustCeruclase = ITEMS.registerItem("ceruclasedirtydust", ItemEXOre::new);
             ItemList.itemRawCeruclase = ITEMS.registerItem("rawceruclase", ItemEXOre::new);
+        }
+        if(ExOresConfig.Chromium)
+        {
             ItemList.itemIngotChromium = ITEMS.registerItem("chromiumingot", ItemEXOre::new);
             ItemList.itemDustChromium = ITEMS.registerItem("chromiumdust", ItemEXOre::new);
             ItemList.itemShardChromium = ITEMS.registerItem("chromiumshard", ItemEXOre::new);
             ItemList.itemClumpChromium = ITEMS.registerItem("chromiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustChromium = ITEMS.registerItem("chromiumdirtydust", ItemEXOre::new);
             ItemList.itemRawChromium = ITEMS.registerItem("rawchromium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Chrysocolla)
+        {
             ItemList.itemGemChrysocolla = ITEMS.registerItem("chrysocolla", ItemEXOre::new);
+        }
+        if(ExOresConfig.Citrine)
+        {
             ItemList.itemGemCitrine = ITEMS.registerItem("citrine", ItemEXOre::new);
+        }
+        if(ExOresConfig.Cobalt)
+        {
             ItemList.itemIngotCobalt = ITEMS.registerItem("cobaltingot", ItemEXOre::new);
             ItemList.itemDustCobalt = ITEMS.registerItem("cobaltdust", ItemEXOre::new);
             ItemList.itemShardCobalt = ITEMS.registerItem("cobaltshard", ItemEXOre::new);
             ItemList.itemClumpCobalt = ITEMS.registerItem("cobaltclump", ItemEXOre::new);
             ItemList.itemDirtyDustCobalt = ITEMS.registerItem("cobaltdirtydust", ItemEXOre::new);
             ItemList.itemRawCobalt = ITEMS.registerItem("rawcobalt", ItemEXOre::new);
+        }
+        if(ExOresConfig.Copper)
+        {
             ItemList.itemIngotCopper = ITEMS.registerItem("copperingot", ItemEXOre::new);
             ItemList.itemDustCopper = ITEMS.registerItem("copperdust", ItemEXOre::new);
             ItemList.itemShardCopper = ITEMS.registerItem("coppershard", ItemEXOre::new);
             ItemList.itemClumpCopper = ITEMS.registerItem("copperclump", ItemEXOre::new);
             ItemList.itemDirtyDustCopper = ITEMS.registerItem("copperdirtydust", ItemEXOre::new);
             ItemList.itemRawCopper = ITEMS.registerItem("rawcopper", ItemEXOre::new);
+        }
+        if(ExOresConfig.CrimsonSteel)
+        {
             ItemList.itemIngotCrimsonSteel = ITEMS.registerItem("crimsonsteelingot", ItemEXOre::new);
             ItemList.itemDustCrimsonSteel = ITEMS.registerItem("crimsonsteeldust", ItemEXOre::new);
             ItemList.itemShardCrimsonSteel = ITEMS.registerItem("crimsonsteelshard", ItemEXOre::new);
             ItemList.itemClumpCrimsonSteel = ITEMS.registerItem("crimsonsteelclump", ItemEXOre::new);
             ItemList.itemDirtyDustCrimsonSteel = ITEMS.registerItem("crimsonsteeldirtydust", ItemEXOre::new);
             ItemList.itemRawCrimsonSteel = ITEMS.registerItem("rawcrimsonsteel", ItemEXOre::new);
+        }
+        if(ExOresConfig.DeepIron)
+        {
             ItemList.itemIngotDeepIron = ITEMS.registerItem("deepironingot", ItemEXOre::new);
             ItemList.itemDustDeepIron = ITEMS.registerItem("deepirondust", ItemEXOre::new);
             ItemList.itemShardDeepIron = ITEMS.registerItem("deepironshard", ItemEXOre::new);
             ItemList.itemClumpDeepIron = ITEMS.registerItem("deepironclump", ItemEXOre::new);
             ItemList.itemDirtyDustDeepIron = ITEMS.registerItem("deepirondirtydust", ItemEXOre::new);
             ItemList.itemRawDeepIron = ITEMS.registerItem("rawdeepiron", ItemEXOre::new);
+        }
+        if(ExOresConfig.Desichalkos)
+        {
             ItemList.itemIngotDesichalkos = ITEMS.registerItem("desichalkosingot", ItemEXOre::new);
             ItemList.itemDustDesichalkos = ITEMS.registerItem("desichalkosdust", ItemEXOre::new);
             ItemList.itemShardDesichalkos = ITEMS.registerItem("desichalkosshard", ItemEXOre::new);
             ItemList.itemClumpDesichalkos = ITEMS.registerItem("desichalkosclump", ItemEXOre::new);
             ItemList.itemDirtyDustDesichalkos = ITEMS.registerItem("desichalkosdirtydust", ItemEXOre::new);
             ItemList.itemRawDesichalkos = ITEMS.registerItem("rawdesichalkos", ItemEXOre::new);
+        }
+        if(ExOresConfig.Eximite)
+        {
             ItemList.itemIngotEximite = ITEMS.registerItem("eximiteingot", ItemEXOre::new);
             ItemList.itemDustEximite = ITEMS.registerItem("eximitedust", ItemEXOre::new);
             ItemList.itemShardEximite = ITEMS.registerItem("eximiteshard", ItemEXOre::new);
             ItemList.itemClumpEximite = ITEMS.registerItem("eximiteclump", ItemEXOre::new);
             ItemList.itemDirtyDustEximite = ITEMS.registerItem("eximitedirtydust", ItemEXOre::new);
             ItemList.itemRawEximite = ITEMS.registerItem("raweximite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Gallium)
+        {
             ItemList.itemIngotGallium = ITEMS.registerItem("galliumingot", ItemEXOre::new);
             ItemList.itemDustGallium = ITEMS.registerItem("galliumdust", ItemEXOre::new);
             ItemList.itemShardGallium = ITEMS.registerItem("galliumshard", ItemEXOre::new);
             ItemList.itemClumpGallium = ITEMS.registerItem("galliumclump", ItemEXOre::new);
             ItemList.itemDirtyDustGallium = ITEMS.registerItem("galliumdirtydust", ItemEXOre::new);
             ItemList.itemRawGallium = ITEMS.registerItem("rawgallium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Garnet)
+        {
             ItemList.itemGemGarnet = ITEMS.registerItem("garnet", ItemEXOre::new);
+        }
+        if(ExOresConfig.Haderoth)
+        {
             ItemList.itemIngotHaderoth = ITEMS.registerItem("haderothingot", ItemEXOre::new);
             ItemList.itemDustHaderoth = ITEMS.registerItem("haderothdust", ItemEXOre::new);
             ItemList.itemShardHaderoth = ITEMS.registerItem("haderothshard", ItemEXOre::new);
             ItemList.itemClumpHaderoth = ITEMS.registerItem("haderothclump", ItemEXOre::new);
             ItemList.itemDirtyDustHaderoth = ITEMS.registerItem("haderothdirtydust", ItemEXOre::new);
             ItemList.itemRawHaderoth = ITEMS.registerItem("rawhaderoth", ItemEXOre::new);
+        }
+        if(ExOresConfig.Hepatizon)
+        {
             ItemList.itemIngotHepatizon = ITEMS.registerItem("hepatizoningot", ItemEXOre::new);
             ItemList.itemDustHepatizon = ITEMS.registerItem("hepatizondust", ItemEXOre::new);
             ItemList.itemShardHepatizon = ITEMS.registerItem("hepatizonshard", ItemEXOre::new);
             ItemList.itemClumpHepatizon = ITEMS.registerItem("hepatizonclump", ItemEXOre::new);
             ItemList.itemDirtyDustHepatizon = ITEMS.registerItem("hepatizondirtydust", ItemEXOre::new);
             ItemList.itemRawHepatizon = ITEMS.registerItem("rawhepatizon", ItemEXOre::new);
+        }
+        if(ExOresConfig.Ignatius)
+        {
             ItemList.itemIngotIgnatius = ITEMS.registerItem("ignatiusingot", ItemEXOre::new);
             ItemList.itemDustIgnatius = ITEMS.registerItem("ignatiusdust", ItemEXOre::new);
             ItemList.itemShardIgnatius = ITEMS.registerItem("ignatiusshard", ItemEXOre::new);
             ItemList.itemClumpIgnatius = ITEMS.registerItem("ignatiusclump", ItemEXOre::new);
             ItemList.itemDirtyDustIgnatius = ITEMS.registerItem("ignatiusdirtydust", ItemEXOre::new);
             ItemList.itemRawIgnatius = ITEMS.registerItem("rawignatius", ItemEXOre::new);
+        }
+        if(ExOresConfig.Indium)
+        {
             ItemList.itemIngotIndium = ITEMS.registerItem("indiumingot", ItemEXOre::new);
             ItemList.itemDustIndium = ITEMS.registerItem("indiumdust", ItemEXOre::new);
             ItemList.itemShardIndium = ITEMS.registerItem("indiumshard", ItemEXOre::new);
             ItemList.itemClumpIndium = ITEMS.registerItem("indiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustIndium = ITEMS.registerItem("indiumdirtydust", ItemEXOre::new);
             ItemList.itemRawIndium = ITEMS.registerItem("rawindium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Infuscolium)
+        {
             ItemList.itemIngotInfuscolium = ITEMS.registerItem("infuscoliumingot", ItemEXOre::new);
             ItemList.itemDustInfuscolium = ITEMS.registerItem("infuscoliumdust", ItemEXOre::new);
             ItemList.itemShardInfuscolium = ITEMS.registerItem("infuscoliumshard", ItemEXOre::new);
             ItemList.itemClumpInfuscolium = ITEMS.registerItem("infuscoliumclump", ItemEXOre::new);
             ItemList.itemDirtyDustInfuscolium = ITEMS.registerItem("infuscoliumdirtydust", ItemEXOre::new);
             ItemList.itemRawInfuscolium = ITEMS.registerItem("rawinfuscolium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Inolashite)
+        {
             ItemList.itemIngotInolashite = ITEMS.registerItem("inolashiteingot", ItemEXOre::new);
             ItemList.itemDustInolashite = ITEMS.registerItem("inolashitedust", ItemEXOre::new);
             ItemList.itemShardInolashite = ITEMS.registerItem("inolashiteshard", ItemEXOre::new);
             ItemList.itemClumpInolashite = ITEMS.registerItem("inolashiteclump", ItemEXOre::new);
             ItemList.itemDirtyDustInolashite = ITEMS.registerItem("inolashitedirtydust", ItemEXOre::new);
             ItemList.itemRawInolashite = ITEMS.registerItem("rawinolashite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Iolite)
+        {
             ItemList.itemGemIolite = ITEMS.registerItem("iolite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Iridium)
+        {
             ItemList.itemIngotIridium = ITEMS.registerItem("iridiumingot", ItemEXOre::new);
             ItemList.itemDustIridium = ITEMS.registerItem("iridiumdust", ItemEXOre::new);
             ItemList.itemShardIridium = ITEMS.registerItem("iridiumshard", ItemEXOre::new);
             ItemList.itemClumpIridium = ITEMS.registerItem("iridiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustIridium = ITEMS.registerItem("iridiumdirtydust", ItemEXOre::new);
             ItemList.itemRawIridium = ITEMS.registerItem("rawiridium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Jade)
+        {
             ItemList.itemGemJade = ITEMS.registerItem("jade", ItemEXOre::new);
+        }
+        if(ExOresConfig.Jasper)
+        {
             ItemList.itemGemJasper = ITEMS.registerItem("jasper", ItemEXOre::new);
+        }
+        if(ExOresConfig.Kalendrite)
+        {
             ItemList.itemIngotKalendrite = ITEMS.registerItem("kalendriteingot", ItemEXOre::new);
             ItemList.itemDustKalendrite = ITEMS.registerItem("kalendritedust", ItemEXOre::new);
             ItemList.itemShardKalendrite = ITEMS.registerItem("kalendriteshard", ItemEXOre::new);
             ItemList.itemClumpKalendrite = ITEMS.registerItem("kalendriteclump", ItemEXOre::new);
             ItemList.itemDirtyDustKalendrite = ITEMS.registerItem("kalendritedirtydust", ItemEXOre::new);
             ItemList.itemRawKalendrite = ITEMS.registerItem("rawkalendrite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Kryptonite)
+        {
             ItemList.itemGemKryptonite = ITEMS.registerItem("kryptonite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Kyanite)
+        {
             ItemList.itemGemKyanite = ITEMS.registerItem("kyanite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Lead)
+        {
             ItemList.itemIngotLead = ITEMS.registerItem("leadingot", ItemEXOre::new);
             ItemList.itemDustLead = ITEMS.registerItem("leaddust", ItemEXOre::new);
             ItemList.itemShardLead = ITEMS.registerItem("leadshard", ItemEXOre::new);
             ItemList.itemClumpLead = ITEMS.registerItem("leadclump", ItemEXOre::new);
             ItemList.itemDirtyDustLead = ITEMS.registerItem("leaddirtydust", ItemEXOre::new);
             ItemList.itemRawLead = ITEMS.registerItem("rawlead", ItemEXOre::new);
+        }
+        if(ExOresConfig.Lemurite)
+        {
             ItemList.itemIngotLemurite = ITEMS.registerItem("lemuriteingot", ItemEXOre::new);
             ItemList.itemDustLemurite = ITEMS.registerItem("lemuritedust", ItemEXOre::new);
             ItemList.itemShardLemurite = ITEMS.registerItem("lemuriteshard", ItemEXOre::new);
             ItemList.itemClumpLemurite = ITEMS.registerItem("lemuriteclump", ItemEXOre::new);
             ItemList.itemDirtyDustLemurite = ITEMS.registerItem("lemuritedirtydust", ItemEXOre::new);
             ItemList.itemRawLemurite = ITEMS.registerItem("rawlemurite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Malachite)
+        {
             ItemList.itemGemMalachite = ITEMS.registerItem("malachite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Manganese)
+        {
             ItemList.itemIngotManganese = ITEMS.registerItem("manganeseingot", ItemEXOre::new);
             ItemList.itemDustManganese = ITEMS.registerItem("manganesedust", ItemEXOre::new);
             ItemList.itemShardManganese = ITEMS.registerItem("manganeseshard", ItemEXOre::new);
             ItemList.itemClumpManganese = ITEMS.registerItem("manganeseclump", ItemEXOre::new);
             ItemList.itemDirtyDustManganese = ITEMS.registerItem("manganesedirtydust", ItemEXOre::new);
             ItemList.itemRawManganese = ITEMS.registerItem("rawmanganese", ItemEXOre::new);
+        }
+        if(ExOresConfig.Meutoite)
+        {
             ItemList.itemIngotMeutoite = ITEMS.registerItem("meutoiteingot", ItemEXOre::new);
             ItemList.itemDustMeutoite = ITEMS.registerItem("meutoitedust", ItemEXOre::new);
             ItemList.itemShardMeutoite = ITEMS.registerItem("meutoiteshard", ItemEXOre::new);
             ItemList.itemClumpMeutoite = ITEMS.registerItem("meutoiteclump", ItemEXOre::new);
             ItemList.itemDirtyDustMeutoite = ITEMS.registerItem("meutoitedirtydust", ItemEXOre::new);
             ItemList.itemRawMeutoite = ITEMS.registerItem("rawmeutoite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Midasium)
+        {
             ItemList.itemIngotMidasium = ITEMS.registerItem("midasiumingot", ItemEXOre::new);
             ItemList.itemDustMidasium = ITEMS.registerItem("midasiumdust", ItemEXOre::new);
             ItemList.itemShardMidasium = ITEMS.registerItem("midasiumshard", ItemEXOre::new);
             ItemList.itemClumpMidasium = ITEMS.registerItem("midasiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustMidasium = ITEMS.registerItem("midasiumdirtydust", ItemEXOre::new);
             ItemList.itemRawMidasium = ITEMS.registerItem("rawmidasium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Mithril)
+        {
             ItemList.itemIngotMithril = ITEMS.registerItem("mithrilingot", ItemEXOre::new);
             ItemList.itemDustMithril = ITEMS.registerItem("mithrildust", ItemEXOre::new);
             ItemList.itemShardMithril = ITEMS.registerItem("mithrilshard", ItemEXOre::new);
             ItemList.itemClumpMithril = ITEMS.registerItem("mithrilclump", ItemEXOre::new);
             ItemList.itemDirtyDustMithril = ITEMS.registerItem("mithrildirtydust", ItemEXOre::new);
             ItemList.itemRawMithril = ITEMS.registerItem("rawmithril", ItemEXOre::new);
+        }
+        if(ExOresConfig.Molybdenum)
+        {
             ItemList.itemIngotMolybdenum = ITEMS.registerItem("molybdenumingot", ItemEXOre::new);
             ItemList.itemDustMolybdenum = ITEMS.registerItem("molybdenumdust", ItemEXOre::new);
             ItemList.itemShardMolybdenum = ITEMS.registerItem("molybdenumshard", ItemEXOre::new);
             ItemList.itemClumpMolybdenum = ITEMS.registerItem("molybdenumclump", ItemEXOre::new);
             ItemList.itemDirtyDustMolybdenum = ITEMS.registerItem("molybdenumdirtydust", ItemEXOre::new);
             ItemList.itemRawMolybdenum = ITEMS.registerItem("rawmolybdenum", ItemEXOre::new);
+        }
+        if(ExOresConfig.Neodymium)
+        {
             ItemList.itemIngotNeodymium = ITEMS.registerItem("neodymiumingot", ItemEXOre::new);
             ItemList.itemDustNeodymium = ITEMS.registerItem("neodymiumdust", ItemEXOre::new);
             ItemList.itemShardNeodymium = ITEMS.registerItem("neodymiumshard", ItemEXOre::new);
             ItemList.itemClumpNeodymium = ITEMS.registerItem("neodymiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustNeodymium = ITEMS.registerItem("neodymiumdirtydust", ItemEXOre::new);
             ItemList.itemRawNeodymium = ITEMS.registerItem("rawneodymium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Neptunium)
+        {
             ItemList.itemIngotNeptunium = ITEMS.registerItem("neptuniumingot", ItemEXOre::new);
             ItemList.itemDustNeptunium = ITEMS.registerItem("neptuniumdust", ItemEXOre::new);
             ItemList.itemShardNeptunium = ITEMS.registerItem("neptuniumshard", ItemEXOre::new);
             ItemList.itemClumpNeptunium = ITEMS.registerItem("neptuniumclump", ItemEXOre::new);
             ItemList.itemDirtyDustNeptunium = ITEMS.registerItem("neptuniumdirtydust", ItemEXOre::new);
             ItemList.itemRawNeptunium = ITEMS.registerItem("rawneptunium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Nickel)
+        {
             ItemList.itemIngotNickel = ITEMS.registerItem("nickelingot", ItemEXOre::new);
             ItemList.itemDustNickel = ITEMS.registerItem("nickeldust", ItemEXOre::new);
             ItemList.itemShardNickel = ITEMS.registerItem("nickelshard", ItemEXOre::new);
             ItemList.itemClumpNickel = ITEMS.registerItem("nickelclump", ItemEXOre::new);
             ItemList.itemDirtyDustNickel = ITEMS.registerItem("nickeldirtydust", ItemEXOre::new);
             ItemList.itemRawNickel = ITEMS.registerItem("rawnickel", ItemEXOre::new);
+        }
+        if(ExOresConfig.Niobium)
+        {
             ItemList.itemIngotNiobium = ITEMS.registerItem("niobiumingot", ItemEXOre::new);
             ItemList.itemDustNiobium = ITEMS.registerItem("niobiumdust", ItemEXOre::new);
             ItemList.itemShardNiobium = ITEMS.registerItem("niobiumshard", ItemEXOre::new);
             ItemList.itemClumpNiobium = ITEMS.registerItem("niobiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustNiobium = ITEMS.registerItem("niobiumdirtydust", ItemEXOre::new);
             ItemList.itemRawNiobium = ITEMS.registerItem("rawniobium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Onyx)
+        {
             ItemList.itemGemOnyx = ITEMS.registerItem("onyx", ItemEXOre::new);
+        }
+        if(ExOresConfig.Opal)
+        {
             ItemList.itemGemOpal = ITEMS.registerItem("opal", ItemEXOre::new);
+        }
+        if(ExOresConfig.Orichalcum)
+        {
             ItemList.itemIngotOrichalcum = ITEMS.registerItem("orichalcumingot", ItemEXOre::new);
             ItemList.itemDustOrichalcum = ITEMS.registerItem("orichalcumdust", ItemEXOre::new);
             ItemList.itemShardOrichalcum = ITEMS.registerItem("orichalcumshard", ItemEXOre::new);
             ItemList.itemClumpOrichalcum = ITEMS.registerItem("orichalcumclump", ItemEXOre::new);
             ItemList.itemDirtyDustOrichalcum = ITEMS.registerItem("orichalcumdirtydust", ItemEXOre::new);
             ItemList.itemRawOrichalcum = ITEMS.registerItem("raworichalcum", ItemEXOre::new);
+        }
+        if(ExOresConfig.Osmium)
+        {
             ItemList.itemIngotOsmium = ITEMS.registerItem("osmiumingot", ItemEXOre::new);
             ItemList.itemDustOsmium = ITEMS.registerItem("osmiumdust", ItemEXOre::new);
             ItemList.itemShardOsmium = ITEMS.registerItem("osmiumshard", ItemEXOre::new);
             ItemList.itemClumpOsmium = ITEMS.registerItem("osmiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustOsmium = ITEMS.registerItem("osmiumdirtydust", ItemEXOre::new);
             ItemList.itemRawOsmium = ITEMS.registerItem("rawosmium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Oureclase)
+        {
             ItemList.itemIngotOureclase = ITEMS.registerItem("oureclaseingot", ItemEXOre::new);
             ItemList.itemDustOureclase = ITEMS.registerItem("oureclasedust", ItemEXOre::new);
             ItemList.itemShardOureclase = ITEMS.registerItem("oureclaseshard", ItemEXOre::new);
             ItemList.itemClumpOureclase = ITEMS.registerItem("oureclaseclump", ItemEXOre::new);
             ItemList.itemDirtyDustOureclase = ITEMS.registerItem("oureclasedirtydust", ItemEXOre::new);
             ItemList.itemRawOureclase = ITEMS.registerItem("rawoureclase", ItemEXOre::new);
+        }
+        if(ExOresConfig.Palladium)
+        {
             ItemList.itemIngotPalladium = ITEMS.registerItem("palladiumingot", ItemEXOre::new);
             ItemList.itemDustPalladium = ITEMS.registerItem("palladiumdust", ItemEXOre::new);
             ItemList.itemShardPalladium = ITEMS.registerItem("palladiumshard", ItemEXOre::new);
             ItemList.itemClumpPalladium = ITEMS.registerItem("palladiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustPalladium = ITEMS.registerItem("palladiumdirtydust", ItemEXOre::new);
             ItemList.itemRawPalladium = ITEMS.registerItem("rawpalladium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Peridot)
+        {
             ItemList.itemGemPeridot = ITEMS.registerItem("peridot", ItemEXOre::new);
+        }
+        if(ExOresConfig.Phoenixite)
+        {
             ItemList.itemGemPhoenixite = ITEMS.registerItem("phoenixite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Platinum)
+        {
             ItemList.itemIngotPlatinum = ITEMS.registerItem("platinumingot", ItemEXOre::new);
             ItemList.itemDustPlatinum = ITEMS.registerItem("platinumdust", ItemEXOre::new);
             ItemList.itemShardPlatinum = ITEMS.registerItem("platinumshard", ItemEXOre::new);
             ItemList.itemClumpPlatinum = ITEMS.registerItem("platinumclump", ItemEXOre::new);
             ItemList.itemDirtyDustPlatinum = ITEMS.registerItem("platinumdirtydust", ItemEXOre::new);
             ItemList.itemRawPlatinum = ITEMS.registerItem("rawplatinum", ItemEXOre::new);
+        }
+        if(ExOresConfig.Plutonium)
+        {
             ItemList.itemIngotPlutonium = ITEMS.registerItem("plutoniumingot", ItemEXOre::new);
             ItemList.itemDustPlutonium = ITEMS.registerItem("plutoniumdust", ItemEXOre::new);
             ItemList.itemShardPlutonium = ITEMS.registerItem("plutoniumshard", ItemEXOre::new);
             ItemList.itemClumpPlutonium = ITEMS.registerItem("plutoniumclump", ItemEXOre::new);
             ItemList.itemDirtyDustPlutonium = ITEMS.registerItem("plutoniumdirtydust", ItemEXOre::new);
             ItemList.itemRawPlutonium = ITEMS.registerItem("rawplutonium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Polonium)
+        {
             ItemList.itemIngotPolonium = ITEMS.registerItem("poloniumingot", ItemEXOre::new);
             ItemList.itemDustPolonium = ITEMS.registerItem("poloniumdust", ItemEXOre::new);
             ItemList.itemShardPolonium = ITEMS.registerItem("poloniumshard", ItemEXOre::new);
             ItemList.itemClumpPolonium = ITEMS.registerItem("poloniumclump", ItemEXOre::new);
             ItemList.itemDirtyDustPolonium = ITEMS.registerItem("poloniumdirtydust", ItemEXOre::new);
             ItemList.itemRawPolonium = ITEMS.registerItem("rawpolonium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Promethium)
+        {
             ItemList.itemIngotPromethium = ITEMS.registerItem("promethiumingot", ItemEXOre::new);
             ItemList.itemDustPromethium = ITEMS.registerItem("promethiumdust", ItemEXOre::new);
             ItemList.itemShardPromethium = ITEMS.registerItem("promethiumshard", ItemEXOre::new);
             ItemList.itemClumpPromethium = ITEMS.registerItem("promethiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustPromethium = ITEMS.registerItem("promethiumdirtydust", ItemEXOre::new);
             ItemList.itemRawPromethium = ITEMS.registerItem("rawpromethium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Quartz)
+        {
             ItemList.itemGemQuartz = ITEMS.registerItem("quartz", ItemEXOre::new);
+        }
+        if(ExOresConfig.Rhenium)
+        {
             ItemList.itemIngotRhenium = ITEMS.registerItem("rheniumingot", ItemEXOre::new);
             ItemList.itemDustRhenium = ITEMS.registerItem("rheniumdust", ItemEXOre::new);
             ItemList.itemShardRhenium = ITEMS.registerItem("rheniumshard", ItemEXOre::new);
             ItemList.itemClumpRhenium = ITEMS.registerItem("rheniumclump", ItemEXOre::new);
             ItemList.itemDirtyDustRhenium = ITEMS.registerItem("rheniumdirtydust", ItemEXOre::new);
             ItemList.itemRawRhenium = ITEMS.registerItem("rawrhenium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Rhodium)
+        {
             ItemList.itemIngotRhodium = ITEMS.registerItem("rhodiumingot", ItemEXOre::new);
             ItemList.itemDustRhodium = ITEMS.registerItem("rhodiumdust", ItemEXOre::new);
             ItemList.itemShardRhodium = ITEMS.registerItem("rhodiumshard", ItemEXOre::new);
             ItemList.itemClumpRhodium = ITEMS.registerItem("rhodiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustRhodium = ITEMS.registerItem("rhodiumdirtydust", ItemEXOre::new);
             ItemList.itemRawRhodium = ITEMS.registerItem("rawrhodium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Rubracium)
+        {
             ItemList.itemIngotRubracium = ITEMS.registerItem("rubraciumingot", ItemEXOre::new);
             ItemList.itemDustRubracium = ITEMS.registerItem("rubraciumdust", ItemEXOre::new);
             ItemList.itemShardRubracium = ITEMS.registerItem("rubraciumshard", ItemEXOre::new);
             ItemList.itemClumpRubracium = ITEMS.registerItem("rubraciumclump", ItemEXOre::new);
             ItemList.itemDirtyDustRubracium = ITEMS.registerItem("rubraciumdirtydust", ItemEXOre::new);
             ItemList.itemRawRubracium = ITEMS.registerItem("rawrubracium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Ruby)
+        {
             ItemList.itemGemRuby = ITEMS.registerItem("ruby", ItemEXOre::new);
+        }
+        if(ExOresConfig.Ruthenium)
+        {
             ItemList.itemIngotRuthenium = ITEMS.registerItem("rutheniumingot", ItemEXOre::new);
             ItemList.itemDustRuthenium = ITEMS.registerItem("rutheniumdust", ItemEXOre::new);
             ItemList.itemShardRuthenium = ITEMS.registerItem("rutheniumshard", ItemEXOre::new);
             ItemList.itemClumpRuthenium = ITEMS.registerItem("rutheniumclump", ItemEXOre::new);
             ItemList.itemDirtyDustRuthenium = ITEMS.registerItem("rutheniumdirtydust", ItemEXOre::new);
             ItemList.itemRawRuthenium = ITEMS.registerItem("rawruthenium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Sanguinite)
+        {
             ItemList.itemIngotSanguinite = ITEMS.registerItem("sanguiniteingot", ItemEXOre::new);
             ItemList.itemDustSanguinite = ITEMS.registerItem("sanguinitedust", ItemEXOre::new);
             ItemList.itemShardSanguinite = ITEMS.registerItem("sanguiniteshard", ItemEXOre::new);
             ItemList.itemClumpSanguinite = ITEMS.registerItem("sanguiniteclump", ItemEXOre::new);
             ItemList.itemDirtyDustSanguinite = ITEMS.registerItem("sanguinitedirtydust", ItemEXOre::new);
             ItemList.itemRawSanguinite = ITEMS.registerItem("rawsanguinite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Sapphire)
+        {
             ItemList.itemGemSapphire = ITEMS.registerItem("sapphire", ItemEXOre::new);
+        }
+        if(ExOresConfig.ShadowIron)
+        {
             ItemList.itemIngotShadowIron = ITEMS.registerItem("shadowironingot", ItemEXOre::new);
             ItemList.itemDustShadowIron = ITEMS.registerItem("shadowirondust", ItemEXOre::new);
             ItemList.itemShardShadowIron = ITEMS.registerItem("shadowironshard", ItemEXOre::new);
             ItemList.itemClumpShadowIron = ITEMS.registerItem("shadowironclump", ItemEXOre::new);
             ItemList.itemDirtyDustShadowIron = ITEMS.registerItem("shadowirondirtydust", ItemEXOre::new);
             ItemList.itemRawShadowIron = ITEMS.registerItem("rawshadowiron", ItemEXOre::new);
+        }
+        if(ExOresConfig.Silver)
+        {
             ItemList.itemIngotSilver = ITEMS.registerItem("silveringot", ItemEXOre::new);
             ItemList.itemDustSilver = ITEMS.registerItem("silverdust", ItemEXOre::new);
             ItemList.itemShardSilver = ITEMS.registerItem("silvershard", ItemEXOre::new);
             ItemList.itemClumpSilver = ITEMS.registerItem("silverclump", ItemEXOre::new);
             ItemList.itemDirtyDustSilver = ITEMS.registerItem("silverdirtydust", ItemEXOre::new);
             ItemList.itemRawSilver = ITEMS.registerItem("rawsilver", ItemEXOre::new);
+        }
+        if(ExOresConfig.Spinel)
+        {
             ItemList.itemGemSpinel = ITEMS.registerItem("spinel", ItemEXOre::new);
+        }
+        if(ExOresConfig.Sugilite)
+        {
             ItemList.itemGemSugilite = ITEMS.registerItem("sugilite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Tantalum)
+        {
             ItemList.itemIngotTantalum = ITEMS.registerItem("tantalumingot", ItemEXOre::new);
             ItemList.itemDustTantalum = ITEMS.registerItem("tantalumdust", ItemEXOre::new);
             ItemList.itemShardTantalum = ITEMS.registerItem("tantalumshard", ItemEXOre::new);
             ItemList.itemClumpTantalum = ITEMS.registerItem("tantalumclump", ItemEXOre::new);
             ItemList.itemDirtyDustTantalum = ITEMS.registerItem("tantalumdirtydust", ItemEXOre::new);
             ItemList.itemRawTantalum = ITEMS.registerItem("rawtantalum", ItemEXOre::new);
+        }
+        if(ExOresConfig.Tanzanite)
+        {
             ItemList.itemGemTanzanite = ITEMS.registerItem("tanzanite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Tartarite)
+        {
             ItemList.itemIngotTartarite = ITEMS.registerItem("tartariteingot", ItemEXOre::new);
             ItemList.itemDustTartarite = ITEMS.registerItem("tartaritedust", ItemEXOre::new);
             ItemList.itemShardTartarite = ITEMS.registerItem("tartariteshard", ItemEXOre::new);
             ItemList.itemClumpTartarite = ITEMS.registerItem("tartariteclump", ItemEXOre::new);
             ItemList.itemDirtyDustTartarite = ITEMS.registerItem("tartaritedirtydust", ItemEXOre::new);
             ItemList.itemRawTartarite = ITEMS.registerItem("rawtartarite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Technetium)
+        {
             ItemList.itemIngotTechnetium = ITEMS.registerItem("technetiumingot", ItemEXOre::new);
             ItemList.itemDustTechnetium = ITEMS.registerItem("technetiumdust", ItemEXOre::new);
             ItemList.itemShardTechnetium = ITEMS.registerItem("technetiumshard", ItemEXOre::new);
             ItemList.itemClumpTechnetium = ITEMS.registerItem("technetiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustTechnetium = ITEMS.registerItem("technetiumdirtydust", ItemEXOre::new);
             ItemList.itemRawTechnetium = ITEMS.registerItem("rawtechnetium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Thallium)
+        {
             ItemList.itemIngotThallium = ITEMS.registerItem("thalliumingot", ItemEXOre::new);
             ItemList.itemDustThallium = ITEMS.registerItem("thalliumdust", ItemEXOre::new);
             ItemList.itemShardThallium = ITEMS.registerItem("thalliumshard", ItemEXOre::new);
             ItemList.itemClumpThallium = ITEMS.registerItem("thalliumclump", ItemEXOre::new);
             ItemList.itemDirtyDustThallium = ITEMS.registerItem("thalliumdirtydust", ItemEXOre::new);
             ItemList.itemRawThallium = ITEMS.registerItem("rawthallium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Tin)
+        {
             ItemList.itemIngotTin = ITEMS.registerItem("tiningot", ItemEXOre::new);
             ItemList.itemDustTin = ITEMS.registerItem("tindust", ItemEXOre::new);
             ItemList.itemShardTin = ITEMS.registerItem("tinshard", ItemEXOre::new);
             ItemList.itemClumpTin = ITEMS.registerItem("tinclump", ItemEXOre::new);
             ItemList.itemDirtyDustTin = ITEMS.registerItem("tindirtydust", ItemEXOre::new);
             ItemList.itemRawTin = ITEMS.registerItem("rawtin", ItemEXOre::new);
+        }
+        if(ExOresConfig.Titanium)
+        {
             ItemList.itemIngotTitanium = ITEMS.registerItem("titaniumingot", ItemEXOre::new);
             ItemList.itemDustTitanium = ITEMS.registerItem("titaniumdust", ItemEXOre::new);
             ItemList.itemShardTitanium = ITEMS.registerItem("titaniumshard", ItemEXOre::new);
             ItemList.itemClumpTitanium = ITEMS.registerItem("titaniumclump", ItemEXOre::new);
             ItemList.itemDirtyDustTitanium = ITEMS.registerItem("titaniumdirtydust", ItemEXOre::new);
             ItemList.itemRawTitanium = ITEMS.registerItem("rawtitanium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Topaz)
+        {
             ItemList.itemGemTopaz = ITEMS.registerItem("topaz", ItemEXOre::new);
+        }
+        if(ExOresConfig.Tourmaline)
+        {
             ItemList.itemGemTourmaline = ITEMS.registerItem("tourmaline", ItemEXOre::new);
+        }
+        if(ExOresConfig.Tritium)
+        {
             ItemList.itemIngotTritium = ITEMS.registerItem("tritiumingot", ItemEXOre::new);
             ItemList.itemDustTritium = ITEMS.registerItem("tritiumdust", ItemEXOre::new);
             ItemList.itemShardTritium = ITEMS.registerItem("tritiumshard", ItemEXOre::new);
             ItemList.itemClumpTritium = ITEMS.registerItem("tritiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustTritium = ITEMS.registerItem("tritiumdirtydust", ItemEXOre::new);
             ItemList.itemRawTritium = ITEMS.registerItem("rawtritium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Tungsten)
+        {
             ItemList.itemIngotTungsten = ITEMS.registerItem("tungsteningot", ItemEXOre::new);
             ItemList.itemDustTungsten = ITEMS.registerItem("tungstendust", ItemEXOre::new);
             ItemList.itemShardTungsten = ITEMS.registerItem("tungstenshard", ItemEXOre::new);
             ItemList.itemClumpTungsten = ITEMS.registerItem("tungstenclump", ItemEXOre::new);
             ItemList.itemDirtyDustTungsten = ITEMS.registerItem("tungstendirtydust", ItemEXOre::new);
             ItemList.itemRawTungsten = ITEMS.registerItem("rawtungsten", ItemEXOre::new);
+        }
+        if(ExOresConfig.Turquoise)
+        {
             ItemList.itemGemTurquoise = ITEMS.registerItem("turquoise", ItemEXOre::new);
+        }
+        if(ExOresConfig.Unobtainium)
+        {
             ItemList.itemIngotUnobtainium = ITEMS.registerItem("unobtainiumingot", ItemEXOre::new);
             ItemList.itemDustUnobtainium = ITEMS.registerItem("unobtainiumdust", ItemEXOre::new);
             ItemList.itemShardUnobtainium = ITEMS.registerItem("unobtainiumshard", ItemEXOre::new);
             ItemList.itemClumpUnobtainium = ITEMS.registerItem("unobtainiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustUnobtainium = ITEMS.registerItem("unobtainiumdirtydust", ItemEXOre::new);
             ItemList.itemRawUnobtainium = ITEMS.registerItem("rawunobtainium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Uranium)
+        {
             ItemList.itemIngotUranium = ITEMS.registerItem("uraniumingot", ItemEXOre::new);
             ItemList.itemDustUranium = ITEMS.registerItem("uraniumdust", ItemEXOre::new);
             ItemList.itemShardUranium = ITEMS.registerItem("uraniumshard", ItemEXOre::new);
             ItemList.itemClumpUranium = ITEMS.registerItem("uraniumclump", ItemEXOre::new);
             ItemList.itemDirtyDustUranium = ITEMS.registerItem("uraniumdirtydust", ItemEXOre::new);
             ItemList.itemRawUranium = ITEMS.registerItem("rawuranium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Vanadium)
+        {
             ItemList.itemIngotVanadium = ITEMS.registerItem("vanadiumingot", ItemEXOre::new);
             ItemList.itemDustVanadium = ITEMS.registerItem("vanadiumdust", ItemEXOre::new);
             ItemList.itemShardVanadium = ITEMS.registerItem("vanadiumshard", ItemEXOre::new);
             ItemList.itemClumpVanadium = ITEMS.registerItem("vanadiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustVanadium = ITEMS.registerItem("vanadiumdirtydust", ItemEXOre::new);
             ItemList.itemRawVanadium = ITEMS.registerItem("rawvanadium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Vibranium)
+        {
             ItemList.itemIngotVibranium = ITEMS.registerItem("vibraniumingot", ItemEXOre::new);
             ItemList.itemDustVibranium = ITEMS.registerItem("vibraniumdust", ItemEXOre::new);
             ItemList.itemShardVibranium = ITEMS.registerItem("vibraniumshard", ItemEXOre::new);
             ItemList.itemClumpVibranium = ITEMS.registerItem("vibraniumclump", ItemEXOre::new);
             ItemList.itemDirtyDustVibranium = ITEMS.registerItem("vibraniumdirtydust", ItemEXOre::new);
             ItemList.itemRawVibranium = ITEMS.registerItem("rawvibranium", ItemEXOre::new);
+        }
+        if(ExOresConfig.Vulcanite)
+        {
             ItemList.itemIngotVulcanite = ITEMS.registerItem("vulcaniteingot", ItemEXOre::new);
             ItemList.itemDustVulcanite = ITEMS.registerItem("vulcanitedust", ItemEXOre::new);
             ItemList.itemShardVulcanite = ITEMS.registerItem("vulcaniteshard", ItemEXOre::new);
             ItemList.itemClumpVulcanite = ITEMS.registerItem("vulcaniteclump", ItemEXOre::new);
             ItemList.itemDirtyDustVulcanite = ITEMS.registerItem("vulcanitedirtydust", ItemEXOre::new);
             ItemList.itemRawVulcanite = ITEMS.registerItem("rawvulcanite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Vyroxeres)
+        {
             ItemList.itemIngotVyroxeres = ITEMS.registerItem("vyroxeresingot", ItemEXOre::new);
             ItemList.itemDustVyroxeres = ITEMS.registerItem("vyroxeresdust", ItemEXOre::new);
             ItemList.itemShardVyroxeres = ITEMS.registerItem("vyroxeresshard", ItemEXOre::new);
             ItemList.itemClumpVyroxeres = ITEMS.registerItem("vyroxeresclump", ItemEXOre::new);
             ItemList.itemDirtyDustVyroxeres = ITEMS.registerItem("vyroxeresdirtydust", ItemEXOre::new);
             ItemList.itemRawVyroxeres = ITEMS.registerItem("rawvyroxeres", ItemEXOre::new);
+        }
+        if(ExOresConfig.Yellorite)
+        {
             ItemList.itemIngotYellorite = ITEMS.registerItem("yelloriteingot", ItemEXOre::new);
             ItemList.itemDustYellorite = ITEMS.registerItem("yelloritedust", ItemEXOre::new);
             ItemList.itemShardYellorite = ITEMS.registerItem("yelloriteshard", ItemEXOre::new);
             ItemList.itemClumpYellorite = ITEMS.registerItem("yelloriteclump", ItemEXOre::new);
             ItemList.itemDirtyDustYellorite = ITEMS.registerItem("yelloritedirtydust", ItemEXOre::new);
             ItemList.itemRawYellorite = ITEMS.registerItem("rawyellorite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Zinc)
+        {
             ItemList.itemIngotZinc = ITEMS.registerItem("zincingot", ItemEXOre::new);
             ItemList.itemDustZinc = ITEMS.registerItem("zincdust", ItemEXOre::new);
             ItemList.itemShardZinc = ITEMS.registerItem("zincshard", ItemEXOre::new);
             ItemList.itemClumpZinc = ITEMS.registerItem("zincclump", ItemEXOre::new);
             ItemList.itemDirtyDustZinc = ITEMS.registerItem("zincdirtydust", ItemEXOre::new);
             ItemList.itemRawZinc = ITEMS.registerItem("rawzinc", ItemEXOre::new);
+        }
+        if(ExOresConfig.Zirconium)
+        {
             ItemList.itemIngotZirconium = ITEMS.registerItem("zirconiumingot", ItemEXOre::new);
             ItemList.itemDustZirconium = ITEMS.registerItem("zirconiumdust", ItemEXOre::new);
             ItemList.itemShardZirconium = ITEMS.registerItem("zirconiumshard", ItemEXOre::new);
             ItemList.itemClumpZirconium = ITEMS.registerItem("zirconiumclump", ItemEXOre::new);
             ItemList.itemDirtyDustZirconium = ITEMS.registerItem("zirconiumdirtydust", ItemEXOre::new);
             ItemList.itemRawZirconium = ITEMS.registerItem("rawzirconium", ItemEXOre::new);
+        }
     }
     private static <T extends Block> void registerBlockItem(String name,DeferredBlock<T> block)
     {
