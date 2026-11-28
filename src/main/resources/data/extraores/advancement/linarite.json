@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:kyanite",
+  "criteria": {
+    "linarite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:linarite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.linarite.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:linariteore"
+    },
+    "title": {
+      "translate": "extraores.linarite"
+    }
+  },
+  "requirements": [
+    [
+      "linarite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

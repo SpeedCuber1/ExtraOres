@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:alexandrite",
+  "criteria": {
+    "amber": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:amber"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.amber.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:amberore"
+    },
+    "title": {
+      "translate": "extraores.amber"
+    }
+  },
+  "requirements": [
+    [
+      "amber"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,6 +1,7 @@
 package com.tylerh.extraores.Data;
 
 import com.tylerh.extraores.Data.Advancements.ExOreAdvancementProvider;
+import com.tylerh.extraores.Data.Lang.ExOreLangProvider;
 import com.tylerh.extraores.Data.Loot_Tables.ExOreLootTableProvider;
 import com.tylerh.extraores.Data.Recipes.ExOreRecipe;
 import com.tylerh.extraores.Data.Rendering.ExOreBlockstateProvider;
@@ -24,12 +25,13 @@ public class EXOreDataGen
         var existingFileHelper = event.getExistingFileHelper();
         var lookupProvider = event.getLookupProvider();
         generator.addProvider(true, ExOreLootTableProvider.create(packOutput,lookupProvider));
-        generator.addProvider(true,new ExOreAdvancementProvider(packOutput,lookupProvider,existingFileHelper));
         generator.addProvider(true,new ExOreRecipe(packOutput,lookupProvider));
+        generator.addProvider(true,new ExOreAdvancementProvider(packOutput,lookupProvider,existingFileHelper));
+        generator.addProvider(true,new ExOreLangProvider(packOutput));
         generator.addProvider(true,new ExOreBlockTag(packOutput,lookupProvider,existingFileHelper));
         generator.addProvider(true,new ExOreItemTag(packOutput,lookupProvider,existingFileHelper));
+        generator.addProvider(true,new ExOreWorldGenProvider(packOutput,lookupProvider));
         generator.addProvider(true,new ExOreBlockstateProvider(packOutput,existingFileHelper));
         generator.addProvider(true,new ExOreItemModelProvider(packOutput,existingFileHelper));
-        generator.addProvider(true,new ExOreWorldGenProvider(packOutput,lookupProvider));
     }
 }

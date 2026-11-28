@@ -10,7 +10,9 @@ public class ItemTagList
     public static final TagKey<Item> oreAdamantine = tag("c","ores/adamantine");
     public static final TagKey<Item> oreAgate = tag("c","ores/agate");
     public static final TagKey<Item> oreAldourite = tag("c","ores/aldourite");
+    public static final TagKey<Item> oreAlexandrite = tag("c","ores/alexandrite");
     public static final TagKey<Item> oreAluminum = tag("c","ores/aluminum");
+    public static final TagKey<Item> oreAmber = tag("c","ores/amber");
     public static final TagKey<Item> oreAmericium = tag("c","ores/americium");
     public static final TagKey<Item> oreAmethyst = tag("c","ores/amethyst");
     public static final TagKey<Item> oreAmetrine = tag("c","ores/ametrine");
@@ -24,6 +26,7 @@ public class ItemTagList
     public static final TagKey<Item> oreBlackSteel = tag("c","ores/blacksteel");
     public static final TagKey<Item> oreCadmium = tag("c","ores/cadmium");
     public static final TagKey<Item> oreCarmot = tag("c","ores/carmot");
+    public static final TagKey<Item> oreCarnelian = tag("c","ores/carnelian");
     public static final TagKey<Item> oreCelenegil = tag("c","ores/celenegil");
     public static final TagKey<Item> oreCeruclase = tag("c","ores/ceruclase");
     public static final TagKey<Item> oreChromium = tag("c","ores/chromium");
@@ -38,6 +41,7 @@ public class ItemTagList
     public static final TagKey<Item> oreGallium = tag("c","ores/gallium");
     public static final TagKey<Item> oreGarnet = tag("c","ores/garnet");
     public static final TagKey<Item> oreHaderoth = tag("c","ores/haderoth");
+    public static final TagKey<Item> oreHeliodor = tag("c","ores/heliodor");
     public static final TagKey<Item> oreHepatizon = tag("c","ores/hepatizon");
     public static final TagKey<Item> oreIgnatius = tag("c","ores/ignatius");
     public static final TagKey<Item> oreIndium = tag("c","ores/indium");
@@ -52,11 +56,13 @@ public class ItemTagList
     public static final TagKey<Item> oreKyanite = tag("c","ores/kyanite");
     public static final TagKey<Item> oreLead = tag("c","ores/lead");
     public static final TagKey<Item> oreLemurite = tag("c","ores/lemurite");
+    public static final TagKey<Item> oreLinarite = tag("c","ores/linarite");
     public static final TagKey<Item> oreMalachite = tag("c","ores/malachite");
     public static final TagKey<Item> oreManganese = tag("c","ores/manganese");
     public static final TagKey<Item> oreMeutoite = tag("c","ores/meutoite");
     public static final TagKey<Item> oreMidasium = tag("c","ores/midasium");
     public static final TagKey<Item> oreMithril = tag("c","ores/mithril");
+    public static final TagKey<Item> oreMoissanite = tag("c","ores/moissanite");
     public static final TagKey<Item> oreMolybdenum = tag("c","ores/molybdenum");
     public static final TagKey<Item> oreNeodymium = tag("c","ores/neodymium");
     public static final TagKey<Item> oreNeptunium = tag("c","ores/neptunium");
@@ -77,15 +83,20 @@ public class ItemTagList
     public static final TagKey<Item> oreQuartz = tag("c","ores/quartz");
     public static final TagKey<Item> oreRhenium = tag("c","ores/rhenium");
     public static final TagKey<Item> oreRhodium = tag("c","ores/rhodium");
+    public static final TagKey<Item> oreRhodonite = tag("c","ores/rhodonite");
+    public static final TagKey<Item> oreRubelite = tag("c","ores/rubelite");
     public static final TagKey<Item> oreRubracium = tag("c","ores/rubracium");
     public static final TagKey<Item> oreRuby = tag("c","ores/ruby");
     public static final TagKey<Item> oreRuthenium = tag("c","ores/ruthenium");
     public static final TagKey<Item> oreSanguinite = tag("c","ores/sanguinite");
     public static final TagKey<Item> oreSapphire = tag("c","ores/sapphire");
+    public static final TagKey<Item> oreSerpentine = tag("c","ores/serpentine");
     public static final TagKey<Item> oreShadowIron = tag("c","ores/shadowiron");
     public static final TagKey<Item> oreSilver = tag("c","ores/silver");
+    public static final TagKey<Item> oreSphene = tag("c","ores/sphene");
     public static final TagKey<Item> oreSpinel = tag("c","ores/spinel");
     public static final TagKey<Item> oreSugilite = tag("c","ores/sugilite");
+    public static final TagKey<Item> oreTaaffeite = tag("c","ores/taaffeite");
     public static final TagKey<Item> oreTantalum = tag("c","ores/tantalum");
     public static final TagKey<Item> oreTanzanite = tag("c","ores/tanzanite");
     public static final TagKey<Item> oreTartarite = tag("c","ores/tartarite");
@@ -107,13 +118,16 @@ public class ItemTagList
     public static final TagKey<Item> oreYellorite = tag("c","ores/yellorite");
     public static final TagKey<Item> oreYellorium = tag("c","ores/yellorium");
     public static final TagKey<Item> oreZinc = tag("c","ores/zinc");
+    public static final TagKey<Item> oreZircon = tag("c","ores/zircon");
     public static final TagKey<Item> oreZirconium = tag("c","ores/zirconium");
     //Blocks
     public static final TagKey<Item> STORAGE_BLOCKS = tag("c","storage_blocks");
     public static final TagKey<Item> blockAdamantine = tag("c","storage_blocks/adamantine");
     public static final TagKey<Item> blockAgate = tag("c","storage_blocks/agate");
     public static final TagKey<Item> blockAldourite = tag("c","storage_blocks/aldourite");
+    public static final TagKey<Item> blockAlexandrite = tag("c","storage_blocks/alexandrite");
     public static final TagKey<Item> blockAluminum = tag("c","storage_blocks/aluminum");
+    public static final TagKey<Item> blockAmber = tag("c","storage_blocks/amber");
     public static final TagKey<Item> blockAmericium = tag("c","storage_blocks/americium");
     public static final TagKey<Item> blockAmethyst = tag("c","storage_blocks/amethyst");
     public static final TagKey<Item> blockAmetrine = tag("c","storage_blocks/ametrine");
@@ -127,6 +141,7 @@ public class ItemTagList
     public static final TagKey<Item> blockBlackSteel = tag("c","storage_blocks/blacksteel");
     public static final TagKey<Item> blockCadmium = tag("c","storage_blocks/cadmium");
     public static final TagKey<Item> blockCarmot = tag("c","storage_blocks/carmot");
+    public static final TagKey<Item> blockCarnelian = tag("c","storage_blocks/carnelian");
     public static final TagKey<Item> blockCelenegil = tag("c","storage_blocks/celenegil");
     public static final TagKey<Item> blockCeruclase = tag("c","storage_blocks/ceruclase");
     public static final TagKey<Item> blockChromium = tag("c","storage_blocks/chromium");
@@ -141,12 +156,13 @@ public class ItemTagList
     public static final TagKey<Item> blockGallium = tag("c","storage_blocks/gallium");
     public static final TagKey<Item> blockGarnet = tag("c","storage_blocks/garnet");
     public static final TagKey<Item> blockHaderoth = tag("c","storage_blocks/haderoth");
+    public static final TagKey<Item> blockHeliodor = tag("c","storage_blocks/heliodor");
     public static final TagKey<Item> blockHepatizon = tag("c","storage_blocks/hepatizon");
     public static final TagKey<Item> blockIgnatius = tag("c","storage_blocks/ignatius");
     public static final TagKey<Item> blockIndium = tag("c","storage_blocks/indium");
     public static final TagKey<Item> blockInfuscolium = tag("c","storage_blocks/infuscolium");
     public static final TagKey<Item> blockInolashite = tag("c","storage_blocks/inolashite");
-    public static final TagKey<Item> blockIolite = tag("c","storage_blocks/iolite");
+    public static final TagKey<Item> blockIolite = tag("c","storage_blocks/iollite");
     public static final TagKey<Item> blockIridium = tag("c","storage_blocks/iridium");
     public static final TagKey<Item> blockJade = tag("c","storage_blocks/jade");
     public static final TagKey<Item> blockJasper = tag("c","storage_blocks/jasper");
@@ -155,11 +171,13 @@ public class ItemTagList
     public static final TagKey<Item> blockKyanite = tag("c","storage_blocks/kyanite");
     public static final TagKey<Item> blockLead = tag("c","storage_blocks/lead");
     public static final TagKey<Item> blockLemurite = tag("c","storage_blocks/lemurite");
+    public static final TagKey<Item> blockLinarite = tag("c","storage_blocks/linarite");
     public static final TagKey<Item> blockMalachite = tag("c","storage_blocks/malachite");
     public static final TagKey<Item> blockManganese = tag("c","storage_blocks/manganese");
     public static final TagKey<Item> blockMeutoite = tag("c","storage_blocks/meutoite");
     public static final TagKey<Item> blockMidasium = tag("c","storage_blocks/midasium");
     public static final TagKey<Item> blockMithril = tag("c","storage_blocks/mithril");
+    public static final TagKey<Item> blockMoissanite = tag("c","storage_blocks/moissanite");
     public static final TagKey<Item> blockMolybdenum = tag("c","storage_blocks/molybdenum");
     public static final TagKey<Item> blockNeodymium = tag("c","storage_blocks/neodymium");
     public static final TagKey<Item> blockNeptunium = tag("c","storage_blocks/neptunium");
@@ -180,15 +198,20 @@ public class ItemTagList
     public static final TagKey<Item> blockQuartz = tag("c","storage_blocks/quartz");
     public static final TagKey<Item> blockRhenium = tag("c","storage_blocks/rhenium");
     public static final TagKey<Item> blockRhodium = tag("c","storage_blocks/rhodium");
+    public static final TagKey<Item> blockRhodonite = tag("c","storage_blocks/rhodonite");
+    public static final TagKey<Item> blockRubelite = tag("c","storage_blocks/rubelite");
     public static final TagKey<Item> blockRubracium = tag("c","storage_blocks/rubracium");
     public static final TagKey<Item> blockRuby = tag("c","storage_blocks/ruby");
     public static final TagKey<Item> blockRuthenium = tag("c","storage_blocks/ruthenium");
     public static final TagKey<Item> blockSanguinite = tag("c","storage_blocks/sanguinite");
     public static final TagKey<Item> blockSapphire = tag("c","storage_blocks/sapphire");
+    public static final TagKey<Item> blockSerpentine = tag("c","storage_blocks/serpentine");
     public static final TagKey<Item> blockShadowIron = tag("c","storage_blocks/shadowiron");
     public static final TagKey<Item> blockSilver = tag("c","storage_blocks/silver");
+    public static final TagKey<Item> blockSphene = tag("c","storage_blocks/sphene");
     public static final TagKey<Item> blockSpinel = tag("c","storage_blocks/spinel");
     public static final TagKey<Item> blockSugilite = tag("c","storage_blocks/sugilite");
+    public static final TagKey<Item> blockTaaffeite = tag("c","storage_blocks/taaffeite");
     public static final TagKey<Item> blockTantalum = tag("c","storage_blocks/tantalum");
     public static final TagKey<Item> blockTanzanite = tag("c","storage_blocks/tanzanite");
     public static final TagKey<Item> blockTartarite = tag("c","storage_blocks/tartarite");
@@ -210,6 +233,7 @@ public class ItemTagList
     public static final TagKey<Item> blockYellorite = tag("c","storage_blocks/yellorite");
     public static final TagKey<Item> blockYellorium = tag("c","storage_blocks/yellorium");
     public static final TagKey<Item> blockZinc = tag("c","storage_blocks/zinc");
+    public static final TagKey<Item> blockZircon = tag("c","storage_blocks/zircon");
     public static final TagKey<Item> blockZirconium = tag("c","storage_blocks/zirconium");
     //Ingots
     public static final TagKey<Item> INGOTS = tag("c","ingots");
@@ -672,31 +696,43 @@ public class ItemTagList
     //Gems
     public static final TagKey<Item> GEMS = tag("c","gems");
     public static final TagKey<Item> gemAgate = tag("c","gems/agate");
+    public static final TagKey<Item> gemAlexandrite = tag("c","gems/alexandrite");
+    public static final TagKey<Item> gemAmber = tag("c","gems/amber");
     public static final TagKey<Item> gemAmethyst = tag("c","gems/amethyst");
     public static final TagKey<Item> gemAmetrine = tag("c","gems/ametrine");
     public static final TagKey<Item> gemAquamarine = tag("c","gems/aquamarine");
+    public static final TagKey<Item> gemCarnelian = tag("c","gems/carnelian");
     public static final TagKey<Item> gemChrysocolla = tag("c","gems/chrysocolla");
     public static final TagKey<Item> gemCitrine = tag("c","gems/citrine");
     public static final TagKey<Item> gemGarnet = tag("c","gems/garnet");
+    public static final TagKey<Item> gemHeliodor = tag("c","gems/heliodor");
     public static final TagKey<Item> gemIolite = tag("c","gems/iolite");
     public static final TagKey<Item> gemJade = tag("c","gems/jade");
     public static final TagKey<Item> gemJasper = tag("c","gems/jasper");
     public static final TagKey<Item> gemKryptonite = tag("c","gems/kyptonite");
     public static final TagKey<Item> gemKyanite = tag("c","gems/kyanite");
+    public static final TagKey<Item> gemLinarite = tag("c","gems/linarite");
     public static final TagKey<Item> gemMalachite = tag("c","gems/malachite");
+    public static final TagKey<Item> gemMoissanite = tag("c","gems/moissanite");
     public static final TagKey<Item> gemOnyx = tag("c","gems/onyx");
     public static final TagKey<Item> gemOpal = tag("c","gems/opal");
     public static final TagKey<Item> gemPeridot = tag("c","gems/peridot");
     public static final TagKey<Item> gemPhoenixite = tag("c","gems/phoenixite");
     public static final TagKey<Item> gemQuartz = tag("c","gems/quartz");
+    public static final TagKey<Item> gemRhodonite = tag("c","gems/rhodonite");
+    public static final TagKey<Item> gemRubelite = tag("c","gems/rubelite");
     public static final TagKey<Item> gemRuby = tag("c","gems/ruby");
     public static final TagKey<Item> gemSapphire = tag("c","gems/sapphire");
+    public static final TagKey<Item> gemSerpentine = tag("c","gems/serpentine");
+    public static final TagKey<Item> gemSphene = tag("c","gems/sphene");
     public static final TagKey<Item> gemSpinel = tag("c","gems/spinel");
     public static final TagKey<Item> gemSugilite = tag("c","gems/sugilite");
+    public static final TagKey<Item> gemTaaffeite = tag("c","gems/taaffeite");
     public static final TagKey<Item> gemTanzanite = tag("c","gems/tanzanite");
     public static final TagKey<Item> gemTopaz = tag("c","gems/topaz");
     public static final TagKey<Item> gemTourmaline = tag("c","gems/tourmaline");
     public static final TagKey<Item> gemTurquoise = tag("c","gems/turquoise");
+    public static final TagKey<Item> gemZircon = tag("c","gems/zircon");
     
     private static TagKey<Item> tag(String modid, String name)
     {

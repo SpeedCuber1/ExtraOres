@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:malachite",
+  "criteria": {
+    "moissanite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:moissanite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.moissanite.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:moissaniteore"
+    },
+    "title": {
+      "translate": "extraores.moissanite"
+    }
+  },
+  "requirements": [
+    [
+      "moissanite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

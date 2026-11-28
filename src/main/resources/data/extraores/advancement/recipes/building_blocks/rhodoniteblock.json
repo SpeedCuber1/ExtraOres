@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:rhodoniteblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "rhodoniteblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rhodoniteblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "rhodoniteblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:rhodoniteblock"
+    ]
+  }
+}

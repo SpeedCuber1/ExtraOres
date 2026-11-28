@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:rhodonite",
+  "criteria": {
+    "rubelite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:rubelite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.rubelite.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:rubeliteore"
+    },
+    "title": {
+      "translate": "extraores.rubelite"
+    }
+  },
+  "requirements": [
+    [
+      "rubelite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

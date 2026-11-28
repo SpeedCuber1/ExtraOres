@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "amber": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:amber"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:amber"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "amber"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:amber"
+    ]
+  }
+}

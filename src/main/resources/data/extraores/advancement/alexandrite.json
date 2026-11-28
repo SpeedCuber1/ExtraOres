@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:agate",
+  "criteria": {
+    "alexandrite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:alexandrite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.alexandrite.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:alexandriteore"
+    },
+    "title": {
+      "translate": "extraores.alexandrite"
+    }
+  },
+  "requirements": [
+    [
+      "alexandrite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

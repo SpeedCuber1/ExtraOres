@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:sphene"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "sphene": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:sphene"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "sphene"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:sphene"
+    ]
+  }
+}

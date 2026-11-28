@@ -8,7 +8,9 @@ public class ExOresConfig
     private static final ModConfigSpec.BooleanValue registerAdamantine = BUILDER.comment("Enable/Disable Adamantine").define("Adamantine",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerAgate = BUILDER.comment("Enable/Disable Agate").define("Agate",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerAldourite = BUILDER.comment("Enable/Disable Aldourite").define("Aldourite",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerAlexandrite = BUILDER.comment("Enable/Disable Alexandrite").define("Alexandrite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerAluminum = BUILDER.comment("Enable/Disable Aluminum").define("Aluminum",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerAmber = BUILDER.comment("Enable/Disable Amber").define("Amber",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerAmericium = BUILDER.comment("Enable/Disable Americium").define("Americium",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerAmethyst = BUILDER.comment("Enable/Disable Amethyst").define("Amethyst",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerAmetrine = BUILDER.comment("Enable/Disable Ametrine").define("Ametrine",ModInfo.GUI_DEFAULT_VALUE);
@@ -22,6 +24,7 @@ public class ExOresConfig
     private static final ModConfigSpec.BooleanValue registerBlackSteel = BUILDER.comment("Enable/Disable Black Steel").define("Black_Steel",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerCadmium = BUILDER.comment("Enable/Disable Cadmium").define("Cadmium",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerCarmot = BUILDER.comment("Enable/Disable Carmot").define("Carmot",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerCarnelian = BUILDER.comment("Enable/Disable Carnelian").define("Carnelian",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerCelenegil = BUILDER.comment("Enable/Disable Celenegil").define("Celenegil",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerCeruclase = BUILDER.comment("Enable/Disable Ceruclase").define("Ceruclase",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerChromium = BUILDER.comment("Enable/Disable Chromium").define("Chromium",ModInfo.GUI_DEFAULT_VALUE);
@@ -36,6 +39,7 @@ public class ExOresConfig
     private static final ModConfigSpec.BooleanValue registerGallium = BUILDER.comment("Enable/Disable Gallium").define("Gallium",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerGarnet = BUILDER.comment("Enable/Disable Garnet").define("Garnet",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerHaderoth = BUILDER.comment("Enable/Disable Haderoth").define("Haderoth",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerHeliodor = BUILDER.comment("Enable/Disable Heliodor").define("Heliodor",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerHepatizon = BUILDER.comment("Enable/Disable Hepatizon").define("Hepatizon",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerIgnatius = BUILDER.comment("Enable/Disable Ignatius").define("Ignatius",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerIndium = BUILDER.comment("Enable/Disable Indium").define("Indium",ModInfo.GUI_DEFAULT_VALUE);
@@ -50,11 +54,13 @@ public class ExOresConfig
     private static final ModConfigSpec.BooleanValue registerKyanite = BUILDER.comment("Enable/Disable Kyanite").define("Kyanite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerLead = BUILDER.comment("Enable/Disable Lead").define("Lead",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerLemurite = BUILDER.comment("Enable/Disable Lemurite").define("Lemurite",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerLinarite = BUILDER.comment("Enable/Disable Linarite").define("Linarite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerMalachite = BUILDER.comment("Enable/Disable Malachite").define("Malachite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerManganese = BUILDER.comment("Enable/Disable Manganese").define("Manganese",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerMeutoite = BUILDER.comment("Enable/Disable Meutoite").define("Meutoite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerMidasium = BUILDER.comment("Enable/Disable Midasium").define("Midasium",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerMithril = BUILDER.comment("Enable/Disable Mithril").define("Mithril",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerMoissanite = BUILDER.comment("Enable/Disable Moissanite").define("Moissanite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerMolybdenum = BUILDER.comment("Enable/Disable Molybdenum").define("Molybdenum",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerNeodymium = BUILDER.comment("Enable/Disable Neodymium").define("Neodymium",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerNeptunium = BUILDER.comment("Enable/Disable Neptunium").define("Neptunium",ModInfo.GUI_DEFAULT_VALUE);
@@ -75,15 +81,20 @@ public class ExOresConfig
     private static final ModConfigSpec.BooleanValue registerQuartz = BUILDER.comment("Enable/Disable Quartz").define("Quartz",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerRhenium = BUILDER.comment("Enable/Disable Rhenium").define("Rhenium",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerRhodium = BUILDER.comment("Enable/Disable Rhodium").define("Rhodium",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerRhodonite = BUILDER.comment("Enable/Disable Rhodonite").define("Rhodonite",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerRubelite = BUILDER.comment("Enable/Disable Rubelite").define("Rubelite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerRubracium = BUILDER.comment("Enable/Disable Rubracium").define("Rubracium",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerRuby = BUILDER.comment("Enable/Disable Ruby").define("Ruby",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerRuthenium = BUILDER.comment("Enable/Disable Ruthenium").define("Ruthenium",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerSanguinite = BUILDER.comment("Enable/Disable Sanguinite").define("Sanguinite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerSapphire = BUILDER.comment("Enable/Disable Sapphire").define("Sapphire",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerSerpentine = BUILDER.comment("Enable/Disable Serpentine").define("Serpentine",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerShadowIron = BUILDER.comment("Enable/Disable Shadow Iron").define("Shadow_Iron",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerSilver = BUILDER.comment("Enable/Disable Silver").define("Silver",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerSphene = BUILDER.comment("Enable/Disable Sphene").define("Sphene",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerSpinel = BUILDER.comment("Enable/Disable Spinel").define("Spinel",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerSugilite = BUILDER.comment("Enable/Disable Sugilite").define("Sugilite",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerTaaffeite = BUILDER.comment("Enable/Disable Taaffeite").define("Taaffeite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerTantalum = BUILDER.comment("Enable/Disable Tantalum").define("Tantalum",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerTanzanite = BUILDER.comment("Enable/Disable Tanzanite").define("Tanzanite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerTartarite = BUILDER.comment("Enable/Disable Tartarite").define("Tartarite",ModInfo.GUI_DEFAULT_VALUE);
@@ -104,12 +115,15 @@ public class ExOresConfig
     private static final ModConfigSpec.BooleanValue registerVyroxeres = BUILDER.comment("Enable/Disable Vyroxeres").define("Vyroxeres",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerYellorite = BUILDER.comment("Enable/Disable Yellorite").define("Yellorite",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerZinc = BUILDER.comment("Enable/Disable Zinc").define("Zinc",ModInfo.GUI_DEFAULT_VALUE);
+    private static final ModConfigSpec.BooleanValue registerZircon = BUILDER.comment("Enable/Disable Zircon").define("Zircon",ModInfo.GUI_DEFAULT_VALUE);
     private static final ModConfigSpec.BooleanValue registerZirconium = BUILDER.comment("Enable/Disable Zirconium").define("Zirconium",ModInfo.GUI_DEFAULT_VALUE);
     public static final ModConfigSpec SPEC = BUILDER.build();
     public static boolean Adamantine;
     public static boolean Agate;
     public static boolean Aldourite;
+    public static boolean Alexandrite;
     public static boolean Aluminum;
+    public static boolean Amber;
     public static boolean Americium;
     public static boolean Amethyst;
     public static boolean Ametrine;
@@ -123,6 +137,7 @@ public class ExOresConfig
     public static boolean BlackSteel;
     public static boolean Cadmium;
     public static boolean Carmot;
+    public static boolean Carnelian;
     public static boolean Celenegil;
     public static boolean Ceruclase;
     public static boolean Chromium;
@@ -137,6 +152,7 @@ public class ExOresConfig
     public static boolean Gallium;
     public static boolean Garnet;
     public static boolean Haderoth;
+    public static boolean Heliodor;
     public static boolean Hepatizon;
     public static boolean Ignatius;
     public static boolean Indium;
@@ -151,11 +167,13 @@ public class ExOresConfig
     public static boolean Kyanite;
     public static boolean Lead;
     public static boolean Lemurite;
+    public static boolean Linarite;
     public static boolean Malachite;
     public static boolean Manganese;
     public static boolean Meutoite;
     public static boolean Midasium;
     public static boolean Mithril;
+    public static boolean Moissanite;
     public static boolean Molybdenum;
     public static boolean Neodymium;
     public static boolean Neptunium;
@@ -176,15 +194,20 @@ public class ExOresConfig
     public static boolean Quartz;
     public static boolean Rhenium;
     public static boolean Rhodium;
+    public static boolean Rhodonite;
+    public static boolean Rubelite;
     public static boolean Rubracium;
     public static boolean Ruby;
     public static boolean Ruthenium;
     public static boolean Sanguinite;
     public static boolean Sapphire;
+    public static boolean Serpentine;
     public static boolean ShadowIron;
     public static boolean Silver;
+    public static boolean Sphene;
     public static boolean Spinel;
     public static boolean Sugilite;
+    public static boolean Taaffeite;
     public static boolean Tantalum;
     public static boolean Tanzanite;
     public static boolean Tartarite;
@@ -205,14 +228,16 @@ public class ExOresConfig
     public static boolean Vyroxeres;
     public static boolean Yellorite;
     public static boolean Zinc;
+    public static boolean Zircon;
     public static boolean Zirconium;
     public static void initConfig()
     {
-        //Adamantine = registerAdamantine.get();
         Adamantine = registerAdamantine.get();
         Agate = registerAgate.get();
         Aldourite = registerAldourite.get();
+        Alexandrite = registerAlexandrite.get();
         Aluminum = registerAluminum.get();
+        Amber = registerAmber.get();
         Americium = registerAmericium.get();
         Amethyst = registerAmethyst.get();
         Ametrine = registerAmetrine.get();
@@ -226,6 +251,7 @@ public class ExOresConfig
         BlackSteel = registerBlackSteel.get();
         Cadmium = registerCadmium.get();
         Carmot = registerCarmot.get();
+        Carnelian = registerCarnelian.get();
         Celenegil = registerCelenegil.get();
         Ceruclase = registerCeruclase.get();
         Chromium = registerChromium.get();
@@ -240,6 +266,7 @@ public class ExOresConfig
         Gallium = registerGallium.get();
         Garnet = registerGarnet.get();
         Haderoth = registerHaderoth.get();
+        Heliodor = registerHeliodor.get();
         Hepatizon = registerHepatizon.get();
         Ignatius = registerIgnatius.get();
         Indium = registerIndium.get();
@@ -254,11 +281,13 @@ public class ExOresConfig
         Kyanite = registerKyanite.get();
         Lead = registerLead.get();
         Lemurite = registerLemurite.get();
+        Linarite = registerLinarite.get();
         Malachite = registerMalachite.get();
         Manganese = registerManganese.get();
         Meutoite = registerMeutoite.get();
         Midasium = registerMidasium.get();
         Mithril = registerMithril.get();
+        Moissanite = registerMoissanite.get();
         Molybdenum = registerMolybdenum.get();
         Neodymium = registerNeodymium.get();
         Neptunium = registerNeptunium.get();
@@ -279,15 +308,20 @@ public class ExOresConfig
         Quartz = registerQuartz.get();
         Rhenium = registerRhenium.get();
         Rhodium = registerRhodium.get();
+        Rhodonite = registerRhodonite.get();
+        Rubelite = registerRubelite.get();
         Rubracium = registerRubracium.get();
         Ruby = registerRuby.get();
         Ruthenium = registerRuthenium.get();
         Sanguinite = registerSanguinite.get();
         Sapphire = registerSapphire.get();
+        Serpentine = registerSerpentine.get();
         ShadowIron = registerShadowIron.get();
         Silver = registerSilver.get();
+        Sphene = registerSphene.get();
         Spinel = registerSpinel.get();
         Sugilite = registerSugilite.get();
+        Taaffeite = registerTaaffeite.get();
         Tantalum = registerTantalum.get();
         Tanzanite = registerTanzanite.get();
         Tartarite = registerTartarite.get();
@@ -308,6 +342,7 @@ public class ExOresConfig
         Vyroxeres = registerVyroxeres.get();
         Yellorite = registerYellorite.get();
         Zinc = registerZinc.get();
+        Zircon = registerZircon.get();
         Zirconium = registerZirconium.get();
         
     }

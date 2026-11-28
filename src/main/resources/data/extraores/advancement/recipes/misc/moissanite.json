@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:moissanite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "moissanite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:moissanite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "moissanite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:moissanite"
+    ]
+  }
+}

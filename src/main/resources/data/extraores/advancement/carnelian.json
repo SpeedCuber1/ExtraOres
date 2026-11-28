@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:aquamarine",
+  "criteria": {
+    "carnelian": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:carnelian"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.carnelian.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:carnelianore"
+    },
+    "title": {
+      "translate": "extraores.carnelian"
+    }
+  },
+  "requirements": [
+    [
+      "carnelian"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

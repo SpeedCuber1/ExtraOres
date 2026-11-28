@@ -1,0 +1,34 @@
+{
+  "parent": "extraores:serpentine",
+  "criteria": {
+    "sphene": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:sphene"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "extraores.sphene.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "extraores:spheneore"
+    },
+    "title": {
+      "translate": "extraores.sphene"
+    }
+  },
+  "requirements": [
+    [
+      "sphene"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

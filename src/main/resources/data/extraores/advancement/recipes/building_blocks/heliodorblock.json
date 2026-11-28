@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "extraores:heliodorblock"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "heliodorblock": {
+      "conditions": {
+        "items": [
+          {
+            "items": "extraores:heliodorblock"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "heliodorblock"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "extraores:heliodorblock"
+    ]
+  }
+}

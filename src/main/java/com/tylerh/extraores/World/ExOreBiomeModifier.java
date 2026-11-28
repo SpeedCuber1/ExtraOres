@@ -44,10 +44,34 @@ public class ExOreBiomeModifier
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureAldourite)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
+        BiomeModifierList.modifierAlexandrite = registerKey("alexandriteore");
+        context.register(BiomeModifierList.modifierAlexandrite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureAlexandrite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierAlexandrite = registerKey("endalexandriteore");
+        context.register(BiomeModifierList.modifierAlexandrite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureAlexandrite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
         BiomeModifierList.modifierAluminum = registerKey("aluminumore");
         context.register(BiomeModifierList.modifierAluminum,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureAluminum)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierAmber = registerKey("amberore");
+        context.register(BiomeModifierList.modifierAmber,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureAmber)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierAmber = registerKey("endamberore");
+        context.register(BiomeModifierList.modifierAmber,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureAmber)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         BiomeModifierList.modifierAmericium = registerKey("americiumore");
@@ -143,6 +167,18 @@ public class ExOreBiomeModifier
         context.register(BiomeModifierList.modifierCarmot,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureCarmot)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierCarnelian = registerKey("carnelianore");
+        context.register(BiomeModifierList.modifierCarnelian,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureCarnelian)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierCarnelian = registerKey("endcarnelianore");
+        context.register(BiomeModifierList.modifierCarnelian,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureCarnelian)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         BiomeModifierList.modifierCelenegil = registerKey("celenegilore");
@@ -245,6 +281,18 @@ public class ExOreBiomeModifier
         context.register(BiomeModifierList.modifierHaderoth,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureHaderoth)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierHeliodor = registerKey("heliodorore");
+        context.register(BiomeModifierList.modifierHeliodor,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureHeliodor)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierHeliodor = registerKey("endheliodorore");
+        context.register(BiomeModifierList.modifierHeliodor,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureHeliodor)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         BiomeModifierList.modifierHepatizon = registerKey("hepatizonore");
@@ -355,6 +403,18 @@ public class ExOreBiomeModifier
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureLemurite)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
+        BiomeModifierList.modifierLinarite = registerKey("linariteore");
+        context.register(BiomeModifierList.modifierLinarite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureLinarite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierLinarite = registerKey("endlinariteore");
+        context.register(BiomeModifierList.modifierLinarite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureLinarite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
         BiomeModifierList.modifierMalachite = registerKey("malachiteore");
         context.register(BiomeModifierList.modifierMalachite,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
@@ -389,6 +449,18 @@ public class ExOreBiomeModifier
         context.register(BiomeModifierList.modifierMithril,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureMithril)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierMoissanite = registerKey("moissaniteore");
+        context.register(BiomeModifierList.modifierMoissanite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureMoissanite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierMoissanite = registerKey("endmoissaniteore");
+        context.register(BiomeModifierList.modifierMoissanite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureMoissanite)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         BiomeModifierList.modifierMolybdenum = registerKey("molybdenumore");
@@ -541,6 +613,30 @@ public class ExOreBiomeModifier
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureRhodium)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
+        BiomeModifierList.modifierRhodonite = registerKey("rhodoniteore");
+        context.register(BiomeModifierList.modifierRhodonite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureRhodonite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierRhodonite = registerKey("endrhodoniteore");
+        context.register(BiomeModifierList.modifierRhodonite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureRhodonite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierRubelite = registerKey("rubeliteore");
+        context.register(BiomeModifierList.modifierRubelite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureRubelite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierRubelite = registerKey("endrubeliteore");
+        context.register(BiomeModifierList.modifierRubelite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureRubelite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
         BiomeModifierList.modifierRubracium = registerKey("rubraciumore");
         context.register(BiomeModifierList.modifierRubracium,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
@@ -583,6 +679,18 @@ public class ExOreBiomeModifier
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureSapphire)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
+        BiomeModifierList.modifierSerpentine = registerKey("serpentineore");
+        context.register(BiomeModifierList.modifierSerpentine,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureSerpentine)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierSerpentine = registerKey("endserpentineore");
+        context.register(BiomeModifierList.modifierSerpentine,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureSerpentine)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
         BiomeModifierList.modifierShadowIron = registerKey("shadowironore");
         context.register(BiomeModifierList.modifierShadowIron,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
@@ -593,6 +701,18 @@ public class ExOreBiomeModifier
         context.register(BiomeModifierList.modifierSilver,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureSilver)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierSphene = registerKey("spheneore");
+        context.register(BiomeModifierList.modifierSphene,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureSphene)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierSphene = registerKey("endspheneore");
+        context.register(BiomeModifierList.modifierSphene,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureSphene)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         BiomeModifierList.modifierSpinel = registerKey("spinelore");
@@ -617,6 +737,18 @@ public class ExOreBiomeModifier
         context.register(BiomeModifierList.modifierSugilite,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureSugilite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierTaaffeite = registerKey("taaffeiteore");
+        context.register(BiomeModifierList.modifierTaaffeite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureTaaffeite)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierTaaffeite = registerKey("endtaaffeiteore");
+        context.register(BiomeModifierList.modifierTaaffeite,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureTaaffeite)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         BiomeModifierList.modifierTantalum = registerKey("tantalumore");
@@ -761,6 +893,18 @@ public class ExOreBiomeModifier
         context.register(BiomeModifierList.modifierZinc,new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureZinc)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierZircon = registerKey("zirconore");
+        context.register(BiomeModifierList.modifierZircon,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureZircon)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        BiomeModifierList.modifierZircon = registerKey("endzirconore");
+        context.register(BiomeModifierList.modifierZircon,new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatureList.placedFeatureZircon)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         BiomeModifierList.modifierZirconium = registerKey("zirconiumore");

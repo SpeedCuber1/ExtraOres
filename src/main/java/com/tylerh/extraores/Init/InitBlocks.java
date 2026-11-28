@@ -41,11 +41,25 @@ public class InitBlocks
             BlockList.blockOreAldourite = register("aldouriteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAldourite = register("aldouriteblock", () -> new BlockEXOre(1.5F,1.5F));
         }
+        if(ExOresConfig.Alexandrite)
+        {
+            BlockList.blockOreAlexandrite = register("alexandriteore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockAlexandrite = register("alexandriteblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreAlexandrite = register("deepslatealexandriteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreAlexandrite = register("enderalexandriteore", () -> new BlockEXOre(1.5F,1.5F));
+        }
         if(ExOresConfig.Aluminum)
         {
             BlockList.blockOreAluminum = register("aluminumore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockAluminum = register("aluminumblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreAluminum = register("deepslatealuminumore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Amber)
+        {
+            BlockList.blockOreAmber = register("amberore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockAmber = register("amberblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreAmber = register("deepslateamberore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreAmber = register("enderamberore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ExOresConfig.Americium)
         {
@@ -127,6 +141,13 @@ public class InitBlocks
             BlockList.blockOreCarmot = register("carmotore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockCarmot = register("carmotblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreCarmot = register("deepslatecarmotore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Carnelian)
+        {
+            BlockList.blockOreCarnelian = register("carnelianore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockCarnelian = register("carnelianblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreCarnelian = register("deepslatecarnelianore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreCarnelian = register("endercarnelianore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ExOresConfig.Celenegil)
         {
@@ -214,6 +235,13 @@ public class InitBlocks
             BlockList.blockHaderoth = register("haderothblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreHaderoth = register("deepslatehaderothore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
         }
+        if(ExOresConfig.Heliodor)
+        {
+            BlockList.blockOreHeliodor = register("heliodorore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockHeliodor = register("heliodorblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreHeliodor = register("deepslateheliodorore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreHeliodor = register("enderheliodorore", () -> new BlockEXOre(1.5F,1.5F));
+        }
         if(ExOresConfig.Hepatizon)
         {
             BlockList.blockOreHepatizon = register("hepatizonore", () -> new BlockEXOre(1.5F,1.5F));
@@ -300,6 +328,13 @@ public class InitBlocks
             BlockList.blockOreLemurite = register("lemuriteore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockLemurite = register("lemuriteblock", () -> new BlockEXOre(1.5F,1.5F));
         }
+        if(ExOresConfig.Linarite)
+        {
+            BlockList.blockOreLinarite = register("linariteore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockLinarite = register("linariteblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreLinarite = register("deepslatelinariteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreLinarite = register("enderlinariteore", () -> new BlockEXOre(1.5F,1.5F));
+        }
         if(ExOresConfig.Malachite)
         {
             BlockList.blockOreMalachite = register("malachiteore", () -> new BlockEXOre(1.5F,1.5F));
@@ -329,6 +364,13 @@ public class InitBlocks
             BlockList.blockOreMithril = register("mithrilore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockMithril = register("mithrilblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreMithril = register("deepslatemithrilore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Moissanite)
+        {
+            BlockList.blockOreMoissanite = register("moissaniteore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockMoissanite = register("moissaniteblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreMoissanite = register("deepslatemoissaniteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreMoissanite = register("endermoissaniteore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ExOresConfig.Molybdenum)
         {
@@ -455,6 +497,20 @@ public class InitBlocks
             BlockList.blockRhodium = register("rhodiumblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreRhodium = register("deepslaterhodiumore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
         }
+        if(ExOresConfig.Rhodonite)
+        {
+            BlockList.blockOreRhodonite = register("rhodoniteore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockRhodonite = register("rhodoniteblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreRhodonite = register("deepslaterhodoniteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreRhodonite = register("enderrhodoniteore", () -> new BlockEXOre(1.5F,1.5F));
+        }
+        if(ExOresConfig.Rubelite)
+        {
+            BlockList.blockOreRubelite = register("rubeliteore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockRubelite = register("rubeliteblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreRubelite = register("deepslaterubeliteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreRubelite = register("enderrubeliteore", () -> new BlockEXOre(1.5F,1.5F));
+        }
         if(ExOresConfig.Rubracium)
         {
             BlockList.blockOreRubracium = register("rubraciumore", () -> new BlockEXOre(1.5F,1.5F));
@@ -486,6 +542,13 @@ public class InitBlocks
             BlockList.blockDeepslateOreSapphire = register("deepslatesapphireore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
             BlockList.blockEnderOreSapphire = register("endersapphireore", () -> new BlockEXOre(1.5F,1.5F));
         }
+        if(ExOresConfig.Serpentine)
+        {
+            BlockList.blockOreSerpentine = register("serpentineore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockSerpentine = register("serpentineblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreSerpentine = register("deepslateserpentineore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreSerpentine = register("enderserpentineore", () -> new BlockEXOre(1.5F,1.5F));
+        }
         if(ExOresConfig.ShadowIron)
         {
             BlockList.blockOreShadowIron = register("shadowironore", () -> new BlockEXOre(1.5F,1.5F));
@@ -496,6 +559,13 @@ public class InitBlocks
             BlockList.blockOreSilver = register("silverore", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockSilver = register("silverblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreSilver = register("deepslatesilverore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+        }
+        if(ExOresConfig.Sphene)
+        {
+            BlockList.blockOreSphene = register("spheneore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockSphene = register("spheneblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreSphene = register("deepslatespheneore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreSphene = register("enderspheneore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ExOresConfig.Spinel)
         {
@@ -510,6 +580,13 @@ public class InitBlocks
             BlockList.blockSugilite = register("sugiliteblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreSugilite = register("deepslatesugiliteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
             BlockList.blockEnderOreSugilite = register("endersugiliteore", () -> new BlockEXOre(1.5F,1.5F));
+        }
+        if(ExOresConfig.Taaffeite)
+        {
+            BlockList.blockOreTaaffeite = register("taaffeiteore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockTaaffeite = register("taaffeiteblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreTaaffeite = register("deepslatetaaffeiteore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreTaaffeite = register("endertaaffeiteore", () -> new BlockEXOre(1.5F,1.5F));
         }
         if(ExOresConfig.Tantalum)
         {
@@ -633,6 +710,13 @@ public class InitBlocks
             BlockList.blockZinc = register("zincblock", () -> new BlockEXOre(1.5F,1.5F));
             BlockList.blockDeepslateOreZinc = register("deepslatezincore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
         }
+        if(ExOresConfig.Zircon)
+        {
+            BlockList.blockOreZircon = register("zirconore", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockZircon = register("zirconblock", () -> new BlockEXOre(1.5F,1.5F));
+            BlockList.blockDeepslateOreZircon = register("deepslatezirconore", () -> new BlockEXOre(1.5F,1.5F,SoundType.DEEPSLATE));
+            BlockList.blockEnderOreZircon = register("enderzirconore", () -> new BlockEXOre(1.5F,1.5F));
+        }
         if(ExOresConfig.Zirconium)
         {
             BlockList.blockOreZirconium = register("zirconiumore", () -> new BlockEXOre(1.5F,1.5F));
@@ -664,6 +748,10 @@ public class InitBlocks
             ItemList.itemDirtyDustAldourite = ITEMS.register("aldouritedirtydust", ItemEXOre::new);
             ItemList.itemRawAldourite = ITEMS.register("rawaldourite", ItemEXOre::new);
         }
+        if(ExOresConfig.Alexandrite)
+        {
+            ItemList.itemGemAlexandrite = ITEMS.register("alexandrite", ItemEXOre::new);
+        }
         if(ExOresConfig.Aluminum)
         {
             ItemList.itemIngotAluminum = ITEMS.register("aluminumingot", ItemEXOre::new);
@@ -672,6 +760,10 @@ public class InitBlocks
             ItemList.itemClumpAluminum = ITEMS.register("aluminumclump", ItemEXOre::new);
             ItemList.itemDirtyDustAluminum = ITEMS.register("aluminumdirtydust", ItemEXOre::new);
             ItemList.itemRawAluminum = ITEMS.register("rawaluminum", ItemEXOre::new);
+        }
+        if(ExOresConfig.Amber)
+        {
+            ItemList.itemGemAmber = ITEMS.register("amber", ItemEXOre::new);
         }
         if(ExOresConfig.Americium)
         {
@@ -774,6 +866,10 @@ public class InitBlocks
             ItemList.itemClumpCarmot = ITEMS.register("carmotclump", ItemEXOre::new);
             ItemList.itemDirtyDustCarmot = ITEMS.register("carmotdirtydust", ItemEXOre::new);
             ItemList.itemRawCarmot = ITEMS.register("rawcarmot", ItemEXOre::new);
+        }
+        if(ExOresConfig.Carnelian)
+        {
+            ItemList.itemGemCarnelian = ITEMS.register("carnelian", ItemEXOre::new);
         }
         if(ExOresConfig.Celenegil)
         {
@@ -886,6 +982,10 @@ public class InitBlocks
             ItemList.itemDirtyDustHaderoth = ITEMS.register("haderothdirtydust", ItemEXOre::new);
             ItemList.itemRawHaderoth = ITEMS.register("rawhaderoth", ItemEXOre::new);
         }
+        if(ExOresConfig.Heliodor)
+        {
+            ItemList.itemGemHeliodor = ITEMS.register("heliodor", ItemEXOre::new);
+        }
         if(ExOresConfig.Hepatizon)
         {
             ItemList.itemIngotHepatizon = ITEMS.register("hepatizoningot", ItemEXOre::new);
@@ -987,6 +1087,10 @@ public class InitBlocks
             ItemList.itemDirtyDustLemurite = ITEMS.register("lemuritedirtydust", ItemEXOre::new);
             ItemList.itemRawLemurite = ITEMS.register("rawlemurite", ItemEXOre::new);
         }
+        if(ExOresConfig.Linarite)
+        {
+            ItemList.itemGemLinarite = ITEMS.register("linarite", ItemEXOre::new);
+        }
         if(ExOresConfig.Malachite)
         {
             ItemList.itemGemMalachite = ITEMS.register("malachite", ItemEXOre::new);
@@ -1026,6 +1130,10 @@ public class InitBlocks
             ItemList.itemClumpMithril = ITEMS.register("mithrilclump", ItemEXOre::new);
             ItemList.itemDirtyDustMithril = ITEMS.register("mithrildirtydust", ItemEXOre::new);
             ItemList.itemRawMithril = ITEMS.register("rawmithril", ItemEXOre::new);
+        }
+        if(ExOresConfig.Moissanite)
+        {
+            ItemList.itemGemMoissanite = ITEMS.register("moissanite", ItemEXOre::new);
         }
         if(ExOresConfig.Molybdenum)
         {
@@ -1182,6 +1290,14 @@ public class InitBlocks
             ItemList.itemDirtyDustRhodium = ITEMS.register("rhodiumdirtydust", ItemEXOre::new);
             ItemList.itemRawRhodium = ITEMS.register("rawrhodium", ItemEXOre::new);
         }
+        if(ExOresConfig.Rhodonite)
+        {
+            ItemList.itemGemRhodonite = ITEMS.register("rhodonite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Rubelite)
+        {
+            ItemList.itemGemRubelite = ITEMS.register("rubelite", ItemEXOre::new);
+        }
         if(ExOresConfig.Rubracium)
         {
             ItemList.itemIngotRubracium = ITEMS.register("rubraciumingot", ItemEXOre::new);
@@ -1217,6 +1333,10 @@ public class InitBlocks
         {
             ItemList.itemGemSapphire = ITEMS.register("sapphire", ItemEXOre::new);
         }
+        if(ExOresConfig.Serpentine)
+        {
+            ItemList.itemGemSerpentine = ITEMS.register("serpentine", ItemEXOre::new);
+        }
         if(ExOresConfig.ShadowIron)
         {
             ItemList.itemIngotShadowIron = ITEMS.register("shadowironingot", ItemEXOre::new);
@@ -1235,6 +1355,10 @@ public class InitBlocks
             ItemList.itemDirtyDustSilver = ITEMS.register("silverdirtydust", ItemEXOre::new);
             ItemList.itemRawSilver = ITEMS.register("rawsilver", ItemEXOre::new);
         }
+        if(ExOresConfig.Sphene)
+        {
+            ItemList.itemGemSphene = ITEMS.register("sphene", ItemEXOre::new);
+        }
         if(ExOresConfig.Spinel)
         {
             ItemList.itemGemSpinel = ITEMS.register("spinel", ItemEXOre::new);
@@ -1242,6 +1366,10 @@ public class InitBlocks
         if(ExOresConfig.Sugilite)
         {
             ItemList.itemGemSugilite = ITEMS.register("sugilite", ItemEXOre::new);
+        }
+        if(ExOresConfig.Taaffeite)
+        {
+            ItemList.itemGemTaaffeite = ITEMS.register("taaffeite", ItemEXOre::new);
         }
         if(ExOresConfig.Tantalum)
         {
@@ -1402,6 +1530,10 @@ public class InitBlocks
             ItemList.itemClumpZinc = ITEMS.register("zincclump", ItemEXOre::new);
             ItemList.itemDirtyDustZinc = ITEMS.register("zincdirtydust", ItemEXOre::new);
             ItemList.itemRawZinc = ITEMS.register("rawzinc", ItemEXOre::new);
+        }
+        if(ExOresConfig.Zircon)
+        {
+            ItemList.itemGemZircon = ITEMS.register("zircon", ItemEXOre::new);
         }
         if(ExOresConfig.Zirconium)
         {

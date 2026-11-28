@@ -1,5 +1,5 @@
 {
-  "parent": "extraores:agate",
+  "parent": "minecraft:extraores.amber",
   "criteria": {
     "amethyst": {
       "conditions": {
