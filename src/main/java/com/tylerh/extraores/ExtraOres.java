@@ -187,7 +187,7 @@ public class ExtraOres
         event.accept(BlockList.blockDeepslateOreGallium.get().asItem());
         event.accept(BlockList.blockDeepslateOreGarnet.get().asItem());
         event.accept(BlockList.blockDeepslateOreHaderoth.get().asItem());
-        event.accept(BlockList.blockOreHeliodor.get().asItem());
+        event.accept(BlockList.blockDeepslateOreHeliodor.get().asItem());
         event.accept(BlockList.blockDeepslateOreHepatizon.get().asItem());
         event.accept(BlockList.blockDeepslateOreIndium.get().asItem());
         event.accept(BlockList.blockDeepslateOreInfuscolium.get().asItem());
