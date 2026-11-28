@@ -47,12 +47,26 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(netherReplaceables,BlockList.blockOreAldourite.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureAldourite,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureAlexandrite = registerKey("alexandriteore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreAlexandrite.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAlexandrite.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreAlexandrite.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureAlexandrite,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureAluminum = registerKey("aluminumore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreAluminum.get().defaultBlockState()),
                     OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAluminum.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureAluminum,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureAmber = registerKey("amberore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreAmber.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreAmber.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreAmber.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureAmber,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureAmericium = registerKey("americiumore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreAmericium.get().defaultBlockState()),
@@ -134,6 +148,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreCarmot.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureCarmot,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureCarnelian = registerKey("carnelianore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreCarnelian.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreCarnelian.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreCarnelian.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureCarnelian,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureCelenegil = registerKey("celenegilore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreCelenegil.get().defaultBlockState()),
@@ -220,6 +241,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreHaderoth.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureHaderoth,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureHeliodor = registerKey("heliodorore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreHeliodor.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreHeliodor.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreHeliodor.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureHeliodor,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureHepatizon = registerKey("hepatizonore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreHepatizon.get().defaultBlockState()),
@@ -306,6 +334,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(netherReplaceables,BlockList.blockOreLemurite.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureLemurite,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureLinarite = registerKey("linariteore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreLinarite.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreLinarite.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreLinarite.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureLinarite,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureMalachite = registerKey("malachiteore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreMalachite.get().defaultBlockState()),
@@ -336,6 +371,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreMithril.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureMithril,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureMoissanite = registerKey("moissaniteore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreMoissanite.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreMoissanite.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreMoissanite.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureMoissanite,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureMolybdenum = registerKey("molybdenumore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreMolybdenum.get().defaultBlockState()),
@@ -462,6 +504,20 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreRhodium.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureRhodium,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureRhodonite = registerKey("rhodoniteore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreRhodonite.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreRhodonite.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreRhodonite.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureRhodonite,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureRubelite = registerKey("rubeliteore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreRubelite.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreRubelite.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreRubelite.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureRubelite,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureRubracium = registerKey("rubraciumore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreRubracium.get().defaultBlockState()),
@@ -493,6 +549,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(endReplaceables,BlockList.blockEnderOreSapphire.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureSapphire,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureSerpentine = registerKey("serpentineore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreSerpentine.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreSerpentine.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreSerpentine.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureSerpentine,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureShadowIron = registerKey("shadowironore");
             target = List.of(
                     OreConfiguration.target(netherReplaceables,BlockList.blockOreShadowIron.get().defaultBlockState())
@@ -504,6 +567,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreSilver.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureSilver,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureSphene = registerKey("spheneore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreSphene.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreSphene.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreSphene.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureSphene,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureSpinel = registerKey("spinelore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreSpinel.get().defaultBlockState()),
@@ -518,6 +588,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(endReplaceables,BlockList.blockEnderOreSugilite.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureSugilite,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureTaaffeite = registerKey("taaffeiteore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreTaaffeite.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreTaaffeite.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreTaaffeite.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureTaaffeite,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureTantalum = registerKey("tantalumore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreTantalum.get().defaultBlockState()),
@@ -640,6 +717,13 @@ public class ExOreConfiguredFeature
                     OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreZinc.get().defaultBlockState())
             );
             register(context,ConfiguredFeatureList.featureZinc,Feature.ORE,new OreConfiguration(target,size));
+        ConfiguredFeatureList.featureZircon = registerKey("zirconore");
+        target = List.of(
+                OreConfiguration.target(stoneReplaceables, BlockList.blockOreZircon.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables,BlockList.blockDeepslateOreZircon.get().defaultBlockState()),
+                OreConfiguration.target(endReplaceables,BlockList.blockEnderOreZircon.get().defaultBlockState())
+        );
+        register(context,ConfiguredFeatureList.featureZircon,Feature.ORE,new OreConfiguration(target,size));
             ConfiguredFeatureList.featureZirconium = registerKey("zirconiumore");
             target = List.of(
                     OreConfiguration.target(stoneReplaceables, BlockList.blockOreZirconium.get().defaultBlockState()),
